@@ -1,0 +1,10 @@
+[
+  {
+    "id": "example-metric",
+    "title": "Example Metric",
+    "type": "metric",
+    "description": "Replace or remove this example. Add your own artifacts here.",
+    "data": { "value": 0, "unit": "items" },
+    "updated_at": "2025-01-01T00:00:00Z"
+  }
+]
