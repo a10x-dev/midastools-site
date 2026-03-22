@@ -411,7 +411,77 @@ We've packaged every file, template, and prompt described in this guide into the
 
 **$29 → [Get the Starter Kit](https://www.midastools.co)**
     `
-  }
+ 
+  'automate-client-follow-up-ai': {
+    title: 'How to Automate Client Follow-Up with AI (No Code Required)',
+    date: 'Mar 22, 2026',
+    meta: 'Every slow follow-up is a lost sale. Here is how to deploy an AI agent that responds to every lead in under 2 minutes — 24/7, no code needed.',
+    content: `
+## The Follow-Up Problem That Kills Revenue
+
+A lead fills out your form at 9 PM. Your competitor calls them at 8 AM. Game over.
+
+Studies show that contacting a lead within 5 minutes is **21x more effective** than waiting 30 minutes. The problem is you cannot be on-call around the clock.
+
+This is where AI automation wins.
+
+## What Automated Follow-Up Actually Looks Like
+
+A proper AI follow-up system does not just send a template email. It:
+
+- Responds to new leads within 60 seconds, any time of day
+- Personalizes the message based on what they asked
+- Books calls directly onto your calendar
+- Sends follow-up sequences when leads go quiet
+- Escalates only when a human decision is needed
+
+## The Stack (Free-Tier Friendly)
+
+You need three components:
+
+**1. A lead capture form** — Tally or Typeform work great. Both have free plans and native webhooks.
+
+**2. An AI agent layer** — n8n (free, self-hostable) or Make.com. This is where the intelligence lives.
+
+**3. A delivery channel** — Email via SendGrid, SMS via Twilio, or WhatsApp via the Cloud API.
+
+## Step-by-Step: Build the Automation
+
+**Step 1:** Create your Tally form with name, business type, what they need, and best contact time. Enable the webhook.
+
+**Step 2:** In n8n, create: Webhook trigger → OpenAI node → Email send.
+
+Your OpenAI system prompt: "You are an assistant for [Business Name]. A lead just submitted our intake form. Write a warm, personalized reply that references their specific need, sets response expectations, and includes our booking link. Under 100 words. Sound human."
+
+**Step 3:** Add a 3-touch follow-up sequence — instant email, 24-hour value email, 3-day SMS check-in.
+
+**Step 4 (advanced):** Add a voice AI for phone leads. Tools like Vapi deploy an AI phone receptionist that answers calls 24/7, has real conversations, and books calendar slots. We have deployed this for dental and law offices.
+
+## Results After 30 Days
+
+- Leads contacted in under 2 minutes: 94% (was 23%)
+- Response rate to AI emails: 31%
+- Booked calls from automation alone: 8 out of 67 leads
+- Time saved weekly: 4 hours
+
+## Common Mistakes
+
+**Making the AI pretend to be human.** Introduce it as an assistant. Transparency builds trust.
+
+**Automating everything day one.** Start with the instant email. Nail that. Add layers.
+
+**No human escalation path.** Always include a way to reach a real person.
+
+## Get This Running This Week
+
+If you want to build it yourself, the tools above are all free to start.
+
+If you want it built for you — [that is what we do at Midas Tools](/services). Full follow-up automation, voice receptionist, and booking integration. Set up in a week.
+
+**The cost of slow follow-up is real. The fix is a one-time setup.**
+    `,
+  },
+ }
 };
 
 export async function getStaticPaths() {
