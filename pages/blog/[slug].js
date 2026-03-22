@@ -411,7 +411,7 @@ We've packaged every file, template, and prompt described in this guide into the
 
 **$29 → [Get the Starter Kit](https://www.midastools.co)**
     `
- 
+  },
   'automate-client-follow-up-ai': {
     title: 'How to Automate Client Follow-Up with AI (No Code Required)',
     date: 'Mar 22, 2026',
@@ -481,7 +481,196 @@ If you want it built for you — [that is what we do at Midas Tools](/services).
 **The cost of slow follow-up is real. The fix is a one-time setup.**
     `,
   },
- }
+  'ai-tools-real-estate-agents-2026': {
+    title: '7 AI Tools Real Estate Agents Are Using to Close More Deals in 2026',
+    date: 'Mar 22, 2026',
+    meta: 'The top real estate agents are using AI to respond to leads faster, write better listings, and automate follow-up. Here are the 7 tools actually moving the needle in 2026.',
+    content: `
+## The Agents Who Adapt Are Winning
+
+Real estate is a speed game. The agent who responds first wins 78% of the time. The agent who follows up consistently closes 80% more deals than the one who forgets.
+
+AI does not replace your relationships or your market knowledge. It replaces the busywork that prevents you from using them.
+
+Here are the 7 tools top-producing agents are actually using right now — not theoretical, not hype, not "coming soon."
+
+## 1. AI Lead Response (Instant Reply to Zillow/Realtor.com Leads)
+
+**The problem:** A lead comes in at 11 PM from Zillow. You see it at 8 AM. By then they have already talked to three other agents.
+
+**The fix:** An AI agent that responds within 60 seconds with a personalized message referencing their specific inquiry, asks qualifying questions, and offers to schedule a showing.
+
+**Tools:** ChatGPT API + n8n automation, or a done-for-you service like [Midas Tools](/services).
+
+**Impact:** Agents using instant AI response report 3-5x more booked showings from online leads.
+
+## 2. AI Listing Description Writer
+
+**The problem:** Writing compelling MLS descriptions takes 20-30 minutes per listing. Most agents write mediocre copy or pay $50+ per listing to a copywriter.
+
+**The fix:** Feed AI the property details — beds, baths, sqft, features, neighborhood — and get MLS-ready descriptions in 30 seconds. Customize tone for luxury, starter home, investment property, or any style.
+
+**Tools:** ChatGPT, Claude, or our [Real Estate AI Kit](/real-estate-kit) which includes pre-built prompts for every listing type.
+
+**Impact:** 20+ minutes saved per listing. Better copy = more showing requests.
+
+## 3. AI Follow-Up Sequences
+
+**The problem:** 67% of agents say follow-up is their biggest weakness. Leads from 3 months ago fall off your radar. They buy with someone else.
+
+**The fix:** A 30-day automated nurture sequence that sends personalized market updates, new listing alerts, and check-in messages. The AI adjusts tone based on where the lead is in the buying cycle.
+
+**Tools:** Mailchimp + ChatGPT, Follow Up Boss, or the follow-up sequence builder in our [Real Estate AI Kit](/real-estate-kit).
+
+**Impact:** Agents with automated follow-up close 80% more deals from their existing pipeline.
+
+## 4. AI Market Analysis & CMA Summaries
+
+**The problem:** Preparing a CMA or market summary for a client takes 1-2 hours of pulling data and formatting.
+
+**The fix:** Feed AI your market data and get a client-ready summary with trends, comparables, and pricing recommendations. Include neighborhood insights, school ratings, and recent sales context.
+
+**Tools:** ChatGPT with your MLS data, or specialized tools like HouseCanary's AI features.
+
+**Impact:** Faster listing appointments. Clients see you as more prepared and data-driven.
+
+## 5. AI Phone Receptionist for Real Estate
+
+**The problem:** Showing requests come in on Sunday mornings. Buyer inquiries hit your voicemail after 6 PM. You miss calls during closings and open houses.
+
+**The fix:** An [AI phone receptionist](/receptionist) that answers every call, qualifies the lead (buyer vs. seller, timeline, budget), and books showings directly on your calendar.
+
+**Tools:** [Midas Tools AI Receptionist](/receptionist) — $499 setup + $299/mo. Or DIY with Vapi + Google Calendar.
+
+**Impact:** One recovered listing lead = $8,400 average commission. The service pays for itself with a single converted call.
+
+## 6. AI Social Media Content
+
+**The problem:** You know you should post on Instagram and Facebook consistently. But creating content takes hours you do not have between showings and closings.
+
+**The fix:** AI generates a month of social media posts in 30 minutes. Just sold posts, market update carousels, neighborhood spotlights, and engagement questions — all in your voice.
+
+**Tools:** ChatGPT + Canva, or tools like Plann and Later with AI caption generators.
+
+**Impact:** Consistent posting builds top-of-mind awareness. Agents who post 3-5x per week get 2x more inbound leads than those who post sporadically.
+
+## 7. AI Open House Follow-Up
+
+**The problem:** You collect 15 sign-in sheets at an open house. You mean to follow up with everyone. You follow up with 3. The other 12 never hear from you again.
+
+**The fix:** Scan sign-in sheets (or use a digital sign-in). AI sends personalized follow-up within 1 hour of the open house ending — referencing the specific property, asking about their search criteria, and offering to show similar listings.
+
+**Tools:** Open Home Pro + ChatGPT, or the open house workflow in our [Real Estate AI Kit](/real-estate-kit).
+
+**Impact:** Converting even 1 additional open house visitor per month = $8,400+ in commission.
+
+## The Bottom Line
+
+The top 10% of agents are not working 10x harder. They are using tools that eliminate the gap between a lead expressing interest and getting a response.
+
+AI is not going to replace real estate agents. But agents who use AI are going to replace agents who do not.
+
+## Get Started Today
+
+We built the **[Real Estate AI Agent Kit](/real-estate-kit)** — $49, one-time purchase — with every template, prompt, and workflow mentioned in this article. Pre-built for how realtors actually work.
+
+Or if you want the full done-for-you setup including an AI phone receptionist, [book a call with our team](/services).
+
+**[Get the Real Estate Kit — $49 →](/real-estate-kit)**
+    `,
+  },
+  'ai-content-repurposing-2026': {
+    title: 'How to Repurpose One Blog Post into 10 Pieces of Content with AI (2026 Guide)',
+    date: 'Mar 22, 2026',
+    meta: 'The creators growing fastest publish everywhere but write once. Here is the exact AI-powered repurposing workflow that turns a single blog post into threads, newsletters, scripts, and more.',
+    content: `
+## The Creators Who Win Publish Everywhere
+
+The top creators on Twitter, YouTube, and Substack do not write 10x more than you. They write once and repurpose relentlessly.
+
+One blog post becomes a Twitter thread, a LinkedIn post, a newsletter edition, an Instagram carousel, and a YouTube script. Same ideas, 10x the reach, zero extra creative effort.
+
+The problem was always time. With AI, that bottleneck is gone.
+
+## The Repurposing Framework
+
+Every piece of content has three layers:
+
+**1. The Core Insight** — the one thing you want people to remember.
+
+**2. The Supporting Points** — the evidence, examples, and stories that make it believable.
+
+**3. The Platform Wrapper** — the format, length, and hook that makes it native to each platform.
+
+AI is terrible at Layer 1 (that is your job). But it is extremely good at Layer 3 — reformatting your ideas for different platforms while preserving your voice.
+
+## Step 1: Write Your Blog Post
+
+This is your source material. Write it naturally. Do not optimize for AI — optimize for clarity. A 1,000-2,000 word post with a clear structure gives the best repurposing results.
+
+## Step 2: Generate a Twitter Thread
+
+Paste your blog post into ChatGPT or Claude with this prompt:
+
+> "Turn this blog post into a Twitter thread. 8-12 tweets. First tweet must be a hook that creates curiosity. Last tweet should include a CTA. Each tweet should stand alone but flow naturally into the next. Use short sentences. No hashtags."
+
+**Pro tip:** Ask for 3 versions with different hooks (curiosity, controversy, story). Pick the strongest.
+
+## Step 3: Generate a LinkedIn Post
+
+LinkedIn rewards long-form text with personal perspective. Use this prompt:
+
+> "Rewrite this blog post as a LinkedIn post. Start with a bold, contrarian opening line. Write in first person. Use short paragraphs (1-2 sentences each). Include a personal lesson or experience. End with a question that invites comments. 200-300 words max."
+
+## Step 4: Generate a Newsletter Edition
+
+Your newsletter audience expects depth and personal voice. Use this:
+
+> "Turn this blog post into a newsletter edition. Start with a personal anecdote that leads into the topic. Summarize the key points in a scannable format. Add a 'one thing to try this week' action item. Include a PS with a link to the full post. Conversational tone, like writing to a smart friend."
+
+## Step 5: Generate a YouTube Script
+
+For creators who also do video:
+
+> "Convert this blog post into a YouTube script. Start with a hook (first 8 seconds must create curiosity or tension). Add retention bumps every 90 seconds (questions, pattern interrupts, visual cues). Include a mid-roll CTA. End with a strong close and subscribe prompt. Target length: 8-10 minutes of speaking."
+
+## Step 6: Generate Instagram Carousel Copy
+
+Carousels are the highest-engagement format on Instagram:
+
+> "Turn the key points from this blog post into an Instagram carousel. 7-10 slides. Slide 1: bold hook (large text, make them swipe). Slides 2-9: one point per slide, short and punchy. Last slide: CTA to follow or check link in bio. Write just the text for each slide."
+
+## The Math
+
+Without repurposing: 1 blog post = 1 piece of content = 1 platform = 1 audience.
+
+With AI repurposing: 1 blog post = 6 pieces of content = 5 platforms = 5x the audience.
+
+**Time to repurpose manually:** 3-4 hours.
+
+**Time to repurpose with AI:** 15-20 minutes.
+
+That is a 10x productivity gain on distribution — the part most creators neglect.
+
+## Common Mistakes
+
+**Copy-pasting AI output without editing.** Always review and add your voice. AI handles the format; you handle the flavor.
+
+**Using the same hook everywhere.** Each platform has different scroll patterns. What stops a Twitter scroll is different from what stops a LinkedIn scroll.
+
+**Repurposing bad content.** If the original post has no clear insight, AI cannot fix that. Start with something worth saying.
+
+**Ignoring platform-specific formatting.** Twitter needs short sentences. LinkedIn needs line breaks between paragraphs. Instagram needs large text on slide 1. The templates in our kit handle all of this.
+
+## Get the Full Template Kit
+
+We packaged every prompt, template, and workflow from this article — plus 50+ headline formulas and a 30-day content calendar generator — into the **[Content Creator AI Kit](/content-creator-kit)**.
+
+$39 one-time. Works with ChatGPT, Claude, or any AI tool.
+
+**[Get the Content Creator Kit — $39 →](/content-creator-kit)**
+    `,
+  },
 };
 
 export async function getStaticPaths() {
@@ -527,7 +716,7 @@ export default function BlogPost({ post }) {
       `}</style>
       <nav>
         <Link href="/" className="nav-logo">👑 Midas Tools</Link>
-        <a href="https://buy.stripe.com/4gM00i6Sbaz71qka02cMM00" className="nav-cta">Get the Kit — $29</a>
+        <a href="/bundle" className="nav-cta">All Kits — $97</a>
       </nav>
       <div className="container">
         <div className="post-date">{post.date}</div>
@@ -541,8 +730,9 @@ export default function BlogPost({ post }) {
           })}
         </div>
         <div className="cta-inline">
-          <p>Get the templates, workflows, and prompts to replicate this yourself.</p>
-          <a href="https://buy.stripe.com/4gM00i6Sbaz71qka02cMM00">Get the Starter Kit — $29 →</a>
+          <p>Get every AI template, workflow, and prompt we make — in one bundle.</p>
+          <a href="/bundle">Get All Kits — $97 (Save 40%) →</a>
+          <p style={{marginTop:12,fontSize:13,color:'#666'}}>Or start with the <a href="https://buy.stripe.com/4gM00i6Sbaz71qka02cMM00" style={{color:'#F5C842'}}>Starter Kit — $29</a></p>
         </div>
       </div>
       <footer><p>© 2026 Midas Tools · <Link href="/blog" style={{color:'#888'}}>Blog</Link> · <a href="mailto:rmidas26@gmail.com">rmidas26@gmail.com</a></p></footer>

@@ -342,6 +342,9 @@ export default function Receptionist() {
             Book a Setup Call →
           </a>
           <p style={{marginTop:16,fontSize:13,color:'var(--gray-400)'}}>Up to 300 min/month included. Overages billed at $0.05/min.</p>
+          <div style={{marginTop:24,padding:'16px 20px',background:'rgba(245,200,66,0.08)',borderRadius:10,fontSize:14,color:'var(--gold)',fontWeight:600}}>
+            💡 Most clients recover the full cost with just 1 extra appointment per month
+          </div>
         </div>
       </section>
 
@@ -401,6 +404,34 @@ export default function Receptionist() {
         </div>
       </section>
 
+
+      {/* Why We're Different */}
+      <section>
+        <h2 style={{textAlign:'center'}}>Why <span>Midas</span> vs. DIY Chatbots</h2>
+        <p className="section-sub" style={{textAlign:'center',margin:'0 auto 48px'}}>Self-serve AI receptionists start at $29/mo. Here's why our clients pay more — and get 10x more.</p>
+        <div style={{display:'grid',gridTemplateColumns:'repeat(2,1fr)',gap:0,maxWidth:700,margin:'0 auto',border:'1px solid var(--gray-800)',borderRadius:16,overflow:'hidden'}}>
+          {[
+            { feature: 'Setup', them: 'You configure it yourself', us: 'Done-for-you in 48 hours' },
+            { feature: 'Voice', them: 'Generic robot voice', us: 'Custom-trained to your brand' },
+            { feature: 'Calendar', them: 'Basic integration', us: 'Real-time booking during call' },
+            { feature: 'Escalation', them: 'Takes a message', us: 'Routes to your cell in real-time' },
+            { feature: 'Tuning', them: 'Self-service dashboard', us: '1 week hands-on tuning included' },
+            { feature: 'Support', them: 'Email/chat tickets', us: 'Direct line to your setup engineer' },
+          ].map((row, i) => (
+            <div key={row.feature} style={{display:'contents'}}>
+              <div style={{padding:'16px 24px',borderBottom: i < 5 ? '1px solid var(--gray-800)' : 'none',borderRight:'1px solid var(--gray-800)',background:'var(--gray-900)'}}>
+                <div style={{fontSize:11,fontWeight:700,color:'var(--gray-400)',textTransform:'uppercase',letterSpacing:1,marginBottom:4}}>{row.feature}</div>
+                <div style={{fontSize:14,color:'#999'}}>{row.them}</div>
+              </div>
+              <div style={{padding:'16px 24px',borderBottom: i < 5 ? '1px solid var(--gray-800)' : 'none',background:'rgba(245,200,66,0.03)'}}>
+                <div style={{fontSize:11,fontWeight:700,color:'var(--gold)',textTransform:'uppercase',letterSpacing:1,marginBottom:4}}>Midas</div>
+                <div style={{fontSize:14,color:'#fff',fontWeight:600}}>{row.us}</div>
+              </div>
+            </div>
+          ))}
+        </div>
+        <p style={{textAlign:'center',marginTop:24,fontSize:14,color:'var(--gray-400)'}}>Our clients don't want to spend 10 hours configuring an AI. They want it done right, done fast.</p>
+      </section>
 
       {/* Lead Capture — Free Script */}
       <section style={{background:'var(--gray-900)',borderTop:'1px solid var(--gray-800)',borderBottom:'1px solid var(--gray-800)',padding:'80px 40px'}}>

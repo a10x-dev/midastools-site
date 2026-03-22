@@ -88,6 +88,7 @@ export default function Services() {
         <a href="/" className="nav-logo">👑 Midas Tools</a>
         <div className="nav-links">
           <a href="/" className="nav-link">Starter Kit</a>
+          <a href="/bundle" className="nav-link">All Kits — $97</a>
           <a href="/blog" className="nav-link">Blog</a>
           <a href="#pricing" className="nav-cta">Book a Free Call</a>
         </div>

@@ -1,10 +1,57 @@
 [
   {
-    "id": "example-metric",
-    "title": "Example Metric",
+    "id": "site-pages",
+    "title": "Site Pages",
     "type": "metric",
-    "description": "Replace or remove this example. Add your own artifacts here.",
-    "data": { "value": 0, "unit": "items" },
-    "updated_at": "2025-01-01T00:00:00Z"
+    "description": "Total number of live pages on midastools-site",
+    "data": { "value": 13, "unit": "pages" },
+    "updated_at": "2026-03-22T22:00:00Z"
+  },
+  {
+    "id": "blog-posts",
+    "title": "Blog Posts",
+    "type": "metric",
+    "description": "Total blog posts published",
+    "data": { "value": 24, "unit": "posts" },
+    "updated_at": "2026-03-22T22:00:00Z"
+  },
+  {
+    "id": "product-tiers",
+    "title": "Product Tiers",
+    "type": "metric",
+    "description": "Number of active product/service offerings",
+    "data": { "value": 10, "unit": "products" },
+    "updated_at": "2026-03-22T22:00:00Z"
+  },
+  {
+    "id": "products-shipped",
+    "title": "Products Shipped Today",
+    "type": "checklist",
+    "description": "New products built and shipped this session",
+    "data": [
+      { "label": "Real Estate AI Agent Kit ($49) — landing page + blog", "done": true },
+      { "label": "Content Creator AI Kit ($39) — landing page + blog", "done": true },
+      { "label": "Freelancer Automation Kit ($39) — landing page", "done": false },
+      { "label": "Bundle: All Kits ($97)", "done": false }
+    ],
+    "updated_at": "2026-03-22T22:00:00Z"
+  },
+  {
+    "id": "session-summary",
+    "title": "Day 0 Session Summary",
+    "type": "checklist",
+    "description": "Everything shipped on Day 0",
+    "data": [
+      { "label": "Baseline assessment", "done": true },
+      { "label": "GA4 analytics infrastructure", "done": true },
+      { "label": "Homepage improvements (social proof, trust, banner)", "done": true },
+      { "label": "Receptionist competitive comparison table", "done": true },
+      { "label": "Market research (Gumroad/Reddit/HN)", "done": true },
+      { "label": "Real Estate AI Kit page + blog post", "done": true },
+      { "label": "Content Creator AI Kit page + blog post", "done": true },
+      { "label": "Fixed blog [slug].js syntax bug", "done": true },
+      { "label": "Schedule entries added", "done": true }
+    ],
+    "updated_at": "2026-03-22T22:00:00Z"
   }
 ]

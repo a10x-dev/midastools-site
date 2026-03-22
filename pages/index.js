@@ -105,7 +105,7 @@ export default function Home() {
       `}</style>
 
       <div style={{background:'linear-gradient(90deg, rgba(245,200,66,0.15) 0%, rgba(245,200,66,0.05) 100%)',borderBottom:'1px solid rgba(245,200,66,0.3)',padding:'12px 40px',textAlign:'center',fontSize:14,fontWeight:600}}>
-        <a href="/receptionist" style={{color:'var(--gold)',textDecoration:'none'}}>📞 NEW: AI Phone Receptionist — Answer every call 24/7 for $299/mo → <span style={{textDecoration:'underline'}}>See How It Works</span></a>
+        <a href="/real-estate-kit" style={{color:'var(--gold)',textDecoration:'none'}}>🏡 NEW: AI Agent Kit for Real Estate — Automate leads & follow-ups for $49 → <span style={{textDecoration:'underline'}}>Get It Now</span></a>
       </div>
 
       <nav>
@@ -114,8 +114,7 @@ export default function Home() {
           <a href="/services" className="nav-link">AI Services</a>
           <a href="/blog" className="nav-link">Blog</a>
           <a href="/receptionist" className="nav-link">AI Receptionist</a>
-          <a href="/ai-audit" className="nav-link">AI Audit — $997</a>
-          <a href="#buy" className="nav-cta">Get the Kit — $29</a>
+          <a href="/bundle" className="nav-cta">All Kits — $97</a>
         </div>
       </nav>
 
@@ -125,6 +124,20 @@ export default function Home() {
         <p className="hero-sub">The exact templates, workflows, and prompts to deploy an AI agent that manages your email, monitors revenue, publishes content, and runs your business 24/7 — for under $50/month total.</p>
         <a href={STRIPE_URL} className="btn-primary">Get the Starter Kit →</a>
         <p className="price-tag"><strong>$29 one-time</strong> · Instant download · 30-day money-back guarantee</p>
+
+        {/* Social Proof Bar */}
+        <div style={{display:'flex',justifyContent:'center',gap:32,marginTop:40,flexWrap:'wrap'}}>
+          {[
+            { num: '247K+', label: 'OpenClaw GitHub Stars' },
+            { num: '$14,718', label: 'Earned by Felix in 3 Weeks' },
+            { num: '24/7', label: 'Autonomous Operation' },
+          ].map(s => (
+            <div key={s.label} style={{textAlign:'center'}}>
+              <div style={{fontSize:24,fontWeight:900,color:'var(--gold)',letterSpacing:-1}}>{s.num}</div>
+              <div style={{fontSize:12,color:'var(--gray-400)',fontWeight:500,marginTop:2}}>{s.label}</div>
+            </div>
+          ))}
+        </div>
       </div>
 
       <div style={{ maxWidth: 820, margin: '0 auto', padding: '0 40px' }}>
@@ -184,7 +197,7 @@ export default function Home() {
         <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(220px,1fr))',gap:20}}>
           {[
             { badge:'Most Popular', price:'$29', label:'one-time', name:'Starter Kit', desc:'Templates, workflows, and prompts to deploy your agent yourself.', href:'https://buy.stripe.com/4gM00i6Sbaz71qka02cMM00', cta:'Get the Kit →' },
-            { badge:'Best Value', price:'$49', label:'/month', name:'Midas Pro', desc:'Weekly new templates, prompts, and workflows. Cancel anytime.', href:'https://buy.stripe.com/cNi9AS90j9v37OI3BEcMM02', cta:'Join Pro →' },
+            { badge:'Best Value', price:'$97', label:'one-time', name:'All Kits Bundle', desc:'Starter Kit + Real Estate Kit + Content Creator Kit + all future kits free. Save 40%.', href:'/bundle', cta:'Get the Bundle →' },
             { badge:'Hands-Off', price:'$299', label:'one-time', name:'Done For You', desc:'We configure your entire agent and launch your first product.', href:'/done-for-you', cta:'Get Setup →' },
           ].map(p => (
             <div key={p.name} style={{background:'var(--gray-900)',border:'1px solid var(--gray-800)',borderRadius:14,padding:28,display:'flex',flexDirection:'column',gap:12}}>
@@ -224,6 +237,13 @@ export default function Home() {
         <p>One-time payment. Instant download. 30-day money-back guarantee.</p>
         <a href={STRIPE_URL} className="btn-primary">Get the Starter Kit →</a>
         <p style={{ marginTop: 16, fontSize: 13, color: 'var(--gray-400)' }}>Secure checkout via Stripe · ZIP file · Instant delivery to your email</p>
+
+        {/* Trust Signals */}
+        <div style={{display:'flex',justifyContent:'center',gap:24,marginTop:32,flexWrap:'wrap'}}>
+          {['🔒 Secure Checkout', '⚡ Instant Download', '💰 30-Day Refund', '🚫 No Subscription'].map(t => (
+            <span key={t} style={{fontSize:13,color:'var(--gray-400)',fontWeight:500}}>{t}</span>
+          ))}
+        </div>
       </div>
 
       <section style={{ paddingTop: 0 }}>

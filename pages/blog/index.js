@@ -2,6 +2,8 @@ import Head from 'next/head';
 import Link from 'next/link';
 
 const posts = [
+  { slug: 'ai-content-repurposing-2026', title: 'How to Repurpose One Blog Post into 10 Pieces of Content with AI (2026 Guide)', date: 'Mar 22, 2026', desc: 'The creators growing fastest publish everywhere but write once. Here is the exact AI-powered repurposing workflow that turns a single blog post into threads, newsletters, scripts, and more.' },
+  { slug: 'ai-tools-real-estate-agents-2026', title: '7 AI Tools Real Estate Agents Are Using to Close More Deals in 2026', date: 'Mar 22, 2026', desc: 'The top agents are using AI to respond to leads faster, write better listings, and automate follow-up. Here are the 7 tools actually moving the needle — with real impact numbers.' },
   { slug: 'vapi-vs-bland-vs-retell', title: 'Vapi vs Bland AI vs Retell AI: Which Voice AI Platform Should You Use? (2026)', date: 'Feb 26, 2026', desc: 'Honest comparison after deploying all three for clients. Feature table, pricing, latency, HIPAA compliance, and a clear decision framework.', external: 'https://dev.to/midastools/vapi-vs-bland-ai-vs-retell-ai-which-voice-ai-platform-should-you-use-2026-2n9n' },
   { slug: 'vapi-voice-agent-guide', title: 'How to Build a Vapi Voice Agent from Scratch (Complete 2026 Guide)', date: 'Feb 26, 2026', desc: 'Complete hands-on guide: assistant config, FastAPI tool server, phone number setup, webhook handling, and cost breakdown. Working code for a dental receptionist.', external: 'https://dev.to/midastools/how-to-build-a-vapi-voice-agent-from-scratch-complete-2026-guide-52jb' },
   { slug: 'chatgpt-small-business', title: 'How to Use ChatGPT for Your Small Business (10 Practical Use Cases)', date: 'Feb 26, 2026', desc: '10 specific, prompt-included ChatGPT use cases for small businesses — writing, content repurposing, review responses, data analysis, job posts, and social media batching.', external: 'https://dev.to/midastools/how-to-use-chatgpt-for-your-small-business-10-practical-use-cases-that-save-real-time-2nk3' },
@@ -54,7 +56,7 @@ export default function Blog() {
       `}</style>
       <nav>
         <Link href="/" className="nav-logo">👑 Midas Tools</Link>
-        <a href="https://buy.stripe.com/4gM00i6Sbaz71qka02cMM00" className="nav-cta">Get the Kit — $29</a>
+        <a href="/bundle" className="nav-cta">All Kits — $97</a>
       </nav>
       <div className="container">
         <div className="label">Blog</div>
