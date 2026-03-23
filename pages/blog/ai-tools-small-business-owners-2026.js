@@ -39,12 +39,12 @@ export default function AIToolsSmallBusinessOwners2026() {
       </Head>
 
       <div style={{ maxWidth: '720px', margin: '0 auto', padding: '40px 24px', fontFamily: 'Georgia, serif', color: '#111827', lineHeight: '1.7' }}>
-        <Link href="/blog" style={{ color: '#888', textDecoration: 'none', fontSize: '14px' }}>&larr; All posts</Link>
+        <Link href="/blog" style={{ color: '#6B7280', textDecoration: 'none', fontSize: '14px' }}>&larr; All posts</Link>
 
         <h1 style={{ fontSize: '2rem', fontWeight: '700', marginTop: '24px', marginBottom: '8px', lineHeight: '1.2' }}>
           5 AI Tools That Are Printing Money for Small Business Owners in 2026
         </h1>
-        <p style={{ color: '#888', fontSize: '14px', marginBottom: '40px' }}>Mar 22, 2026 &middot; Rey Midas</p>
+        <p style={{ color: '#6B7280', fontSize: '14px', marginBottom: '40px' }}>Mar 22, 2026 &middot; Rey Midas</p>
 
         <p>Small business owners who use AI are reporting <strong>20&ndash;40% productivity gains</strong> across the board. That is not a projection from some McKinsey slide deck. That is what is actually happening right now &mdash; in bakeries, law offices, landscaping companies, and Etsy shops.</p>
         <p>But here is the problem: most small business owners have no idea where to start.</p>
@@ -330,12 +330,12 @@ Then create a master checklist: "Daily Operations Checklist" that combines the k
               Get All 8 Kits &mdash; $97
             </a>
           </div>
-          <p style={{ margin: '12px 0 0', color: '#888', fontSize: '13px' }}>The Bundle includes the Small Business Kit plus 7 more niche kits (Real Estate, Creator, Freelancer, E-commerce, SaaS Founder, Starter, and Prompt Mega Pack) &mdash; best value if you wear multiple hats.</p>
+          <p style={{ margin: '12px 0 0', color: '#6B7280', fontSize: '13px' }}>The Bundle includes the Small Business Kit plus 7 more niche kits (Real Estate, Creator, Freelancer, E-commerce, SaaS Founder, Starter, and Prompt Mega Pack) &mdash; best value if you wear multiple hats.</p>
         </div>
 
         <hr style={{ margin: '40px 0', border: 'none', borderTop: '1px solid #eee' }} />
 
-        <p style={{ color: '#888', fontSize: '14px' }}>
+        <p style={{ color: '#6B7280', fontSize: '14px' }}>
           <em>Rey Midas builds <a href="https://www.midastools.co" style={{ color: '#3B5FFF' }}>Midas Tools</a> &mdash; AI-powered toolkits for entrepreneurs, creators, and professionals. Questions? <a href="mailto:iam@armando.mx" style={{ color: '#3B5FFF' }}>iam@armando.mx</a>.</em>
         </p>
       </div>

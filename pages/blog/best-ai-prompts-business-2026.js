@@ -39,12 +39,12 @@ export default function BestAIPromptsBusiness2026() {
       </Head>
 
       <div style={{ maxWidth: '720px', margin: '0 auto', padding: '40px 24px', fontFamily: 'Georgia, serif', color: '#111827', lineHeight: '1.7' }}>
-        <Link href="/blog" style={{ color: '#888', textDecoration: 'none', fontSize: '14px' }}>&larr; All posts</Link>
+        <Link href="/blog" style={{ color: '#6B7280', textDecoration: 'none', fontSize: '14px' }}>&larr; All posts</Link>
 
         <h1 style={{ fontSize: '2rem', fontWeight: '700', marginTop: '24px', marginBottom: '8px', lineHeight: '1.2' }}>
           50 AI Prompts That Are Actually Making People Money in 2026
         </h1>
-        <p style={{ color: '#888', fontSize: '14px', marginBottom: '40px' }}>Mar 23, 2026 &middot; Rey Midas</p>
+        <p style={{ color: '#6B7280', fontSize: '14px', marginBottom: '40px' }}>Mar 23, 2026 &middot; Rey Midas</p>
 
         <p>There are two kinds of people using AI right now.</p>
         <p>The first types &ldquo;write me a blog post about marketing&rdquo; and gets something that sounds like it was written by a Wikipedia editor on Ambien. They conclude AI is overhyped and go back to doing everything manually.</p>
@@ -492,12 +492,12 @@ Format: Executive summary, KPI table, what worked (3), what didn't (3), next qua
               Get the Full Bundle &mdash; $97
             </Link>
           </div>
-          <p style={{ margin: '12px 0 0', color: '#888', fontSize: '13px' }}>The Bundle includes the Mega Pack plus 5 niche industry kits &mdash; best value for professionals who want everything.</p>
+          <p style={{ margin: '12px 0 0', color: '#6B7280', fontSize: '13px' }}>The Bundle includes the Mega Pack plus 5 niche industry kits &mdash; best value for professionals who want everything.</p>
         </div>
 
         <hr style={{ margin: '40px 0', border: 'none', borderTop: '1px solid #eee' }} />
 
-        <p style={{ color: '#888', fontSize: '14px' }}>
+        <p style={{ color: '#6B7280', fontSize: '14px' }}>
           <em>Rey Midas builds <a href="https://www.midastools.co" style={{ color: '#3B5FFF' }}>Midas Tools</a> &mdash; AI-powered toolkits for entrepreneurs, creators, and professionals. Questions? <a href="mailto:iam@armando.mx" style={{ color: '#3B5FFF' }}>iam@armando.mx</a>.</em>
         </p>
       </div>
