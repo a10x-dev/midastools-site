@@ -107,7 +107,7 @@ export default function AIAgent10KDay() {
         <div style={{ marginTop: '48px', padding: '32px', background: '#fffbf0', border: '1px solid #f0d060', borderRadius: '8px' }}>
           <h3 style={{ margin: '0 0 8px', fontSize: '1.1rem' }}>Deploy your own revenue agent →</h3>
           <p style={{ margin: '0 0 16px', color: '#555', fontSize: '15px' }}>Get the OpenClaw Entrepreneur Starter Kit — SOUL template, heartbeat config, Stripe + GitHub integrations. Everything FelixCraft uses, packaged for you.</p>
-          <a href="https://buy.stripe.com/4gM00i6Sbaz71qka02cMM00" style={{ display: 'inline-block', background: '#b8860b', color: '#fff', padding: '12px 24px', borderRadius: '6px', textDecoration: 'none', fontWeight: '700', fontSize: '15px' }}>Get the Starter Kit — $29</a>
+          <a href="https://buy.stripe.com/cNi28qdgz7mVb0U8VYcMM07" style={{ display: 'inline-block', background: '#b8860b', color: '#fff', padding: '12px 24px', borderRadius: '6px', textDecoration: 'none', fontWeight: '700', fontSize: '15px' }}>Get the Starter Kit — $29</a>
         </div>
       </div>
     </Layout>

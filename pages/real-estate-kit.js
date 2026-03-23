@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { useState } from 'react';
 import Layout from '../components/Layout';
 
-const STRIPE_URL = 'https://buy.stripe.com/4gM00i6Sbaz71qka02cMM00'; // TODO: Replace with real estate kit Stripe link
+const STRIPE_URL = 'https://buy.stripe.com/fZueVcb8r6iR5GAfkmcMM08';
 
 export default function RealEstateKit() {
   const [email, setEmail] = useState('');
@@ -139,11 +139,11 @@ export default function RealEstateKit() {
               <div style={{fontSize:12,fontWeight:700,color:'var(--gold)',textTransform:'uppercase',letterSpacing:1.5,marginBottom:12}}>{c.scenario}</div>
               <div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:20}}>
                 <div>
-                  <div style={{fontSize:11,fontWeight:700,color:'#ff6b6b',marginBottom:8,letterSpacing:0.5}}>WITHOUT THE KIT</div>
+                  <div style={{fontSize:11,fontWeight:700,color:'var(--gray-400)',marginBottom:8,letterSpacing:0.5}}>BEFORE</div>
                   <div style={{fontSize:14,color:'var(--gray-400)',lineHeight:1.6}}>{c.before}</div>
                 </div>
                 <div>
-                  <div style={{fontSize:11,fontWeight:700,color:'#51cf66',marginBottom:8,letterSpacing:0.5}}>WITH THE KIT</div>
+                  <div style={{fontSize:11,fontWeight:700,color:'var(--gold)',marginBottom:8,letterSpacing:0.5}}>AFTER</div>
                   <div style={{fontSize:14,color:'var(--gray-200)',lineHeight:1.6}}>{c.after}</div>
                 </div>
               </div>
@@ -207,9 +207,9 @@ export default function RealEstateKit() {
       {/* Bundle Upsell */}
       <section style={{paddingTop:0}}>
         <div style={{background:'rgba(245,200,66,0.04)',border:'1px solid rgba(245,200,66,0.15)',borderRadius:16,padding:32,textAlign:'center'}}>
-          <div style={{fontSize:12,fontWeight:700,color:'var(--gold)',textTransform:'uppercase',letterSpacing:1.5,marginBottom:8}}>Save 40%</div>
-          <p style={{fontSize:20,fontWeight:800,marginBottom:8}}>Get all 3 AI kits for $97</p>
-          <p style={{color:'var(--gray-400)',fontSize:15,marginBottom:20,lineHeight:1.6}}>This kit + Starter Kit + Content Creator Kit &mdash; plus every future kit free.</p>
+          <div style={{fontSize:12,fontWeight:700,color:'var(--gold)',textTransform:'uppercase',letterSpacing:1.5,marginBottom:8}}>Save 50%+</div>
+          <p style={{fontSize:20,fontWeight:800,marginBottom:8}}>Get all 4 AI kits for $97</p>
+          <p style={{color:'var(--gray-400)',fontSize:15,marginBottom:20,lineHeight:1.6}}>This kit + Starter Kit + Content Creator Kit + Freelancer Kit &mdash; plus every future kit free.</p>
           <Link href="/bundle" style={{color:'var(--gold)',fontWeight:700,fontSize:15,textDecoration:'none'}}>
             See the Bundle &rarr;
           </Link>

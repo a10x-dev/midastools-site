@@ -2,16 +2,16 @@ import Head from 'next/head';
 import Link from 'next/link';
 import Layout from '../components/Layout';
 
-const STRIPE_URL = 'https://buy.stripe.com/4gM00i6Sbaz71qka02cMM00'; // TODO: Replace with bundle Stripe link
+const STRIPE_URL = 'https://buy.stripe.com/bJe7sK0tNdLjgle0pscMM0b';
 
 export default function Bundle() {
   return (
     <Layout>
       <Head>
-        <title>AI Toolkit Bundle — All Kits for $97 (Save 40%) | Midas Tools</title>
-        <meta name="description" content="Get every Midas Tools AI kit in one bundle: Starter Kit, Real Estate Kit, Content Creator Kit — plus all future kits free. $97 one-time, save 40%." />
+        <title>AI Toolkit Bundle — All 4 Kits for $97 | Midas Tools</title>
+        <meta name="description" content="Get every Midas Tools AI kit in one bundle: Starter Kit, Real Estate Kit, Content Creator Kit, Freelancer Kit — plus all future kits free. $97 one-time." />
         <meta property="og:title" content="AI Toolkit Bundle — All Kits for $97 | Midas Tools" />
-        <meta property="og:description" content="Every AI kit we make. One price. $97 one-time — save 40% vs buying separately. Includes all future kits free." />
+        <meta property="og:description" content="Every AI kit we make. One price. $97 one-time — save 38% vs buying separately. Includes all future kits free." />
         <meta property="og:url" content="https://www.midastools.co/bundle" />
         <meta property="og:image" content="https://www.midastools.co/og-image.png" />
         <meta name="twitter:card" content="summary_large_image" />
@@ -25,9 +25,10 @@ export default function Bundle() {
         h1 span { color: var(--gold); }
         h2 { font-size: clamp(26px,4vw,40px); font-weight: 900; letter-spacing: -1px; margin-bottom: 16px; }
         h2 span { color: var(--gold); }
-        .kits-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; margin-bottom: 48px; }
+        .kits-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 16px; margin-bottom: 48px; }
         .kit-card { background: var(--gray-900); border: 1px solid var(--gray-800); border-radius: 16px; padding: 28px; display: flex; flex-direction: column; transition: border-color 0.2s; }
         .kit-card:hover { border-color: var(--gray-700); }
+        .kit-icon { width: 40px; height: 40px; border-radius: 10px; background: rgba(245,200,66,0.08); border: 1px solid rgba(245,200,66,0.12); display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 800; color: var(--gold); margin-bottom: 16px; letter-spacing: -0.5px; }
         @media(max-width:700px) {
           section { padding: 60px 20px; }
           .kits-grid { grid-template-columns: 1fr; }
@@ -36,16 +37,15 @@ export default function Bundle() {
 
       {/* Hero */}
       <section style={{textAlign:'center',paddingBottom:40}}>
-        <div className="badge" style={{marginBottom:32}}>Save 40% — Limited Bundle</div>
+        <div className="badge" style={{marginBottom:32}}>Complete AI Toolkit</div>
         <h1>Every AI Kit.<br /><span>One Price. $97.</span></h1>
         <p style={{fontSize:18,color:'var(--gray-400)',maxWidth:560,margin:'0 auto 16px',lineHeight:1.7}}>
           Get every Midas Tools AI kit — plus all future kits we release — for one flat price. No subscriptions. No upsells.
         </p>
 
-        <div style={{display:'inline-flex',alignItems:'center',gap:16,marginBottom:40}}>
-          <span style={{fontSize:22,color:'var(--gray-400)',textDecoration:'line-through',fontWeight:700}}>$167</span>
+        <div style={{display:'inline-flex',alignItems:'baseline',gap:16,marginBottom:40}}>
+          <span style={{fontSize:22,color:'var(--gray-400)',textDecoration:'line-through',fontWeight:700}}>$156</span>
           <span style={{fontSize:48,fontWeight:900,color:'var(--gold)',letterSpacing:-2}}>$97</span>
-          <span style={{background:'rgba(81,207,102,0.12)',border:'1px solid rgba(81,207,102,0.2)',color:'#51cf66',padding:'4px 12px',borderRadius:100,fontSize:13,fontWeight:700}}>SAVE $70</span>
         </div>
 
         <div style={{display:'block'}}>
@@ -57,34 +57,40 @@ export default function Bundle() {
       {/* What's Included */}
       <section style={{paddingTop:0}}>
         <div className="section-label">What's Included</div>
-        <h2>3 complete kits + lifetime updates</h2>
+        <h2>4 complete kits + lifetime updates</h2>
         <p style={{color:'var(--gray-400)',fontSize:16,marginBottom:48,lineHeight:1.7}}>Everything you need to automate your business, your content, and your client pipeline.</p>
 
         <div className="kits-grid">
           {[
             {
-              icon: '\u{1F680}', name: 'OpenClaw Starter Kit', price: '$29',
+              abbr: 'SK', name: 'OpenClaw Starter Kit', price: '$29',
               desc: 'Deploy your AI entrepreneur. SOUL.md templates, heartbeat system, product launch prompts, revenue ops playbook.',
               link: '/',
               items: ['5 SOUL.md templates', 'Heartbeat workflow system', 'Product launch prompts', 'Revenue ops playbook', 'Complete setup guide'],
             },
             {
-              icon: '\u{1F3E1}', name: 'Real Estate AI Kit', price: '$49',
+              abbr: 'RE', name: 'Real Estate AI Kit', price: '$49',
               desc: 'Automate leads, listings, and follow-ups. Built specifically for agents and brokers.',
               link: '/real-estate-kit',
               items: ['Instant lead response templates', 'Listing description generator', '30-day follow-up sequences', 'Market analysis prompts', 'Open house workflows'],
             },
             {
-              icon: '\u{270D}\uFE0F', name: 'Content Creator Kit', price: '$39',
+              abbr: 'CC', name: 'Content Creator Kit', price: '$39',
               desc: 'Turn one piece of content into 10. Repurposing engine for every platform.',
               link: '/content-creator-kit',
               items: ['Content repurposing engine', 'Twitter thread generator', 'YouTube script builder', 'Newsletter writer', '30-day content calendar'],
             },
+            {
+              abbr: 'FL', name: 'Freelancer Automation Kit', price: '$39',
+              desc: 'Win more clients, automate invoices, and protect your margins. Built for service-based freelancers.',
+              link: '/freelancer-kit',
+              items: ['Client proposal generator', 'Invoice & payment chaser', 'Client onboarding system', 'Scope creep protector', 'Rate calculator & scripts'],
+            },
           ].map(kit => (
             <div key={kit.name} className="kit-card">
-              <div style={{fontSize:28,marginBottom:12}}>{kit.icon}</div>
+              <div className="kit-icon">{kit.abbr}</div>
               <div style={{fontSize:17,fontWeight:800,marginBottom:4}}>{kit.name}</div>
-              <div style={{fontSize:13,color:'var(--gray-400)',textDecoration:'line-through',marginBottom:12}}>{kit.price} individually</div>
+              <div style={{fontSize:13,color:'var(--gray-400)',marginBottom:12}}>{kit.price} individually</div>
               <div style={{fontSize:14,color:'var(--gray-400)',lineHeight:1.6,marginBottom:16,flex:1}}>{kit.desc}</div>
               <ul style={{listStyle:'none',marginBottom:16}}>
                 {kit.items.map(item => (
@@ -120,13 +126,14 @@ export default function Bundle() {
               { label: 'Starter Kit', ind: '$29', bun: '\u2713' },
               { label: 'Real Estate Kit', ind: '$49', bun: '\u2713' },
               { label: 'Content Creator Kit', ind: '$39', bun: '\u2713' },
-              { label: 'Future kits', ind: 'Extra cost', bun: 'Free' },
-              { label: 'Total', ind: '$117+', bun: '$97' },
+              { label: 'Freelancer Kit', ind: '$39', bun: '\u2713' },
+              { label: 'Future kits', ind: 'Extra cost', bun: 'Included' },
+              { label: 'Total', ind: '$156+', bun: '$97' },
             ].map((row, i) => (
               <div key={row.label} style={{display:'contents'}}>
-                <div style={{padding:'12px 20px',borderBottom: i < 4 ? '1px solid var(--gray-800)' : 'none',borderRight:'1px solid var(--gray-800)',fontSize:14,fontWeight: row.label === 'Total' ? 800 : 400}}>{row.label}</div>
-                <div style={{padding:'12px 20px',borderBottom: i < 4 ? '1px solid var(--gray-800)' : 'none',borderRight:'1px solid var(--gray-800)',fontSize:14,textAlign:'center',color:'var(--gray-400)'}}>{row.ind}</div>
-                <div style={{padding:'12px 20px',borderBottom: i < 4 ? '1px solid var(--gray-800)' : 'none',background:'rgba(245,200,66,0.02)',fontSize:14,textAlign:'center',color: row.label === 'Total' ? 'var(--gold)' : '#fff',fontWeight: row.label === 'Total' ? 900 : 600}}>{row.bun}</div>
+                <div style={{padding:'12px 20px',borderBottom: i < 5 ? '1px solid var(--gray-800)' : 'none',borderRight:'1px solid var(--gray-800)',fontSize:14,fontWeight: row.label === 'Total' ? 800 : 400}}>{row.label}</div>
+                <div style={{padding:'12px 20px',borderBottom: i < 5 ? '1px solid var(--gray-800)' : 'none',borderRight:'1px solid var(--gray-800)',fontSize:14,textAlign:'center',color:'var(--gray-400)'}}>{row.ind}</div>
+                <div style={{padding:'12px 20px',borderBottom: i < 5 ? '1px solid var(--gray-800)' : 'none',background:'rgba(245,200,66,0.02)',fontSize:14,textAlign:'center',color: row.label === 'Total' ? 'var(--gold)' : '#fff',fontWeight: row.label === 'Total' ? 900 : 600}}>{row.bun}</div>
               </div>
             ))}
           </div>
@@ -138,17 +145,18 @@ export default function Bundle() {
         <div style={{background:'var(--gray-900)',border:'2px solid rgba(245,200,66,0.4)',borderRadius:20,padding:48,textAlign:'center',maxWidth:520,margin:'0 auto'}}>
           <div className="badge" style={{marginBottom:20}}>Best Value</div>
           <h2 style={{marginBottom:8}}>The Complete AI Toolkit</h2>
-          <div style={{display:'flex',alignItems:'center',justifyContent:'center',gap:16,margin:'16px 0 4px'}}>
-            <span style={{fontSize:24,color:'var(--gray-400)',textDecoration:'line-through',fontWeight:700}}>$167</span>
+          <div style={{display:'flex',alignItems:'baseline',justifyContent:'center',gap:16,margin:'16px 0 4px'}}>
+            <span style={{fontSize:24,color:'var(--gray-400)',textDecoration:'line-through',fontWeight:700}}>$156</span>
             <span style={{fontSize:48,fontWeight:900,color:'var(--gold)'}}>$97</span>
           </div>
-          <div style={{color:'var(--gray-400)',fontSize:15,marginBottom:32}}>One-time payment &middot; All 3 kits + future kits free</div>
+          <div style={{color:'var(--gray-400)',fontSize:15,marginBottom:32}}>One-time payment &middot; All 4 kits + future kits free</div>
           <ul style={{listStyle:'none',textAlign:'left',marginBottom:32}}>
             {[
               'OpenClaw Entrepreneur Starter Kit ($29 value)',
               'Real Estate AI Agent Kit ($49 value)',
               'Content Creator AI Kit ($39 value)',
-              'All future niche kits — free forever',
+              'Freelancer Automation Kit ($39 value)',
+              'All future niche kits — included free',
               'Lifetime updates on all products',
               '30-day money-back guarantee',
             ].map(item => (
@@ -169,9 +177,9 @@ export default function Bundle() {
         <h2>Questions</h2>
         <div style={{display:'flex',flexDirection:'column',gap:24}}>
           {[
-            { q: 'What exactly do I get?', a: 'Three complete AI kits (Starter, Real Estate, Content Creator) delivered as a ZIP file. Each kit contains text-based templates, prompts, and workflows you use with ChatGPT, Claude, or any AI tool. No software to install.' },
-            { q: 'What are "future kits"?', a: 'We release new niche AI kits regularly (Freelancer Kit, E-commerce Kit, etc.). Bundle buyers get every new kit automatically at no extra cost, delivered to the same email.' },
-            { q: 'Do I need all three kits?', a: 'If you only need one specific kit, buy it individually. The bundle makes sense if you want the Starter Kit plus at least one niche kit — or if you want access to every future kit we release.' },
+            { q: 'What exactly do I get?', a: 'Four complete AI kits (Starter, Real Estate, Content Creator, Freelancer) delivered as a ZIP file. Each kit contains text-based templates, prompts, and workflows you use with ChatGPT, Claude, or any AI tool. No software to install.' },
+            { q: 'What are "future kits"?', a: 'We release new niche AI kits regularly (E-commerce Kit, Small Business Kit, etc.). Bundle buyers get every new kit automatically at no extra cost, delivered to the same email.' },
+            { q: 'Do I need all four kits?', a: 'If you only need one specific kit, buy it individually. The bundle makes sense if you want the Starter Kit plus at least one niche kit — or if you want access to every future kit we release.' },
             { q: 'Can I share this with my team?', a: 'The license is for one person. For team licenses, email iam@armando.mx and we will set up a custom plan.' },
             { q: 'What if it doesn\'t work for me?', a: '30-day full refund, no questions asked. Email iam@armando.mx.' },
           ].map(f => (

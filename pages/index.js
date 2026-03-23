@@ -2,7 +2,7 @@ import Head from 'next/head';
 import { useState } from 'react';
 import Layout from '../components/Layout';
 
-const STRIPE_URL = 'https://buy.stripe.com/4gM00i6Sbaz71qka02cMM00';
+const STRIPE_URL = 'https://buy.stripe.com/cNi28qdgz7mVb0U8VYcMM07';
 
 function FAQItem({ q, a }) {
   const [open, setOpen] = useState(false);
@@ -94,16 +94,14 @@ export default function Home() {
         .stat-num { font-size: 28px; font-weight: 900; color: var(--gold); letter-spacing: -1px; }
         .stat-label { font-size: 12px; color: var(--gray-400); font-weight: 500; margin-top: 4px; }
 
-        /* Featured / social proof */
-        .featured-bar { background: var(--gray-900); border-top: 1px solid var(--gray-800); border-bottom: 1px solid var(--gray-800); padding: 20px 40px; text-align: center; }
-        .featured-label { font-size: 11px; color: var(--gray-400); text-transform: uppercase; letter-spacing: 2px; font-weight: 600; margin-bottom: 12px; }
-        .featured-logos { display: flex; justify-content: center; align-items: center; gap: 40px; flex-wrap: wrap; }
-        .featured-logo { font-size: 15px; font-weight: 700; color: var(--gray-700); letter-spacing: -0.5px; transition: color 0.2s; }
-        .featured-logo:hover { color: var(--gray-400); }
+        /* Technology bar */
+        .tech-bar { border-top: 1px solid var(--gray-800); border-bottom: 1px solid var(--gray-800); padding: 20px 40px; text-align: center; }
+        .tech-label { font-size: 11px; color: var(--gray-400); text-transform: uppercase; letter-spacing: 2px; font-weight: 600; margin-bottom: 12px; }
+        .tech-logos { display: flex; justify-content: center; align-items: center; gap: 40px; flex-wrap: wrap; }
+        .tech-logo { font-size: 14px; font-weight: 600; color: var(--gray-700); letter-spacing: -0.3px; }
 
         .proof-card { background: var(--gray-900); border: 1px solid var(--gray-800); border-radius: 16px; padding: 40px; max-width: 680px; margin: 0 auto 0; text-align: left; position: relative; }
-        .proof-card::before { content: '\u201C'; position: absolute; top: 12px; left: 20px; font-size: 72px; color: rgba(245,200,66,0.1); font-family: Georgia, serif; line-height: 1; }
-        .proof-quote { font-size: 16px; line-height: 1.7; color: var(--gray-200); margin-bottom: 20px; }
+        .proof-quote { font-size: 16px; line-height: 1.7; color: var(--gray-200); margin-bottom: 20px; font-style: italic; }
         .proof-author { font-size: 14px; color: var(--gray-400); font-weight: 600; }
         .proof-author span { color: var(--gold); }
 
@@ -121,7 +119,8 @@ export default function Home() {
         .kit-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; margin-bottom: 48px; }
         .kit-card { background: var(--gray-900); border: 1px solid var(--gray-800); border-radius: 14px; padding: 28px; transition: border-color 0.2s ease; }
         .kit-card:hover { border-color: var(--gray-700); }
-        .kit-icon { font-size: 24px; margin-bottom: 14px; width: 44px; height: 44px; background: rgba(245,200,66,0.08); border-radius: 10px; display: flex; align-items: center; justify-content: center; }
+        .kit-icon { width: 44px; height: 44px; background: rgba(245,200,66,0.08); border: 1px solid rgba(245,200,66,0.12); border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-bottom: 14px; }
+        .kit-icon svg { width: 20px; height: 20px; }
         .kit-title { font-size: 16px; font-weight: 700; margin-bottom: 8px; }
         .kit-desc { font-size: 14px; color: var(--gray-400); line-height: 1.6; }
 
@@ -159,7 +158,7 @@ export default function Home() {
 
         /* Guarantee box */
         .guarantee { display: flex; gap: 20px; align-items: flex-start; background: rgba(245,200,66,0.03); border: 1px solid rgba(245,200,66,0.1); border-radius: 14px; padding: 28px; margin-top: 48px; }
-        .guarantee-icon { font-size: 32px; flex-shrink: 0; }
+        .guarantee-icon { flex-shrink: 0; width: 44px; height: 44px; border-radius: 10px; background: rgba(245,200,66,0.08); border: 1px solid rgba(245,200,66,0.15); display: flex; align-items: center; justify-content: center; }
         .guarantee h4 { font-size: 16px; font-weight: 800; margin-bottom: 6px; }
         .guarantee p { font-size: 14px; color: var(--gray-400); line-height: 1.6; }
 
@@ -171,7 +170,7 @@ export default function Home() {
           .stat-num { font-size: 22px; }
           .cred-bar { gap: 20px; }
           .results-grid { grid-template-columns: 1fr; }
-          .featured-logos { gap: 24px; }
+          .tech-logos { gap: 24px; }
           .founder-section { flex-direction: column; text-align: center; }
         }
       `}</style>
@@ -179,14 +178,14 @@ export default function Home() {
       {/* Announcement bar */}
       <div style={{ background: 'linear-gradient(90deg, rgba(245,200,66,0.06), rgba(245,200,66,0.12), rgba(245,200,66,0.06))', borderBottom: '1px solid var(--gray-800)', padding: '10px 40px', textAlign: 'center', fontSize: 13, fontWeight: 500 }}>
         <a href="/bundle" style={{ color: 'var(--gray-200)', textDecoration: 'none' }}>
-          New: All Kits Bundle — get every AI kit for $97 (save 40%)
-          <span style={{ color: 'var(--gold)', fontWeight: 700, marginLeft: 8 }}>Grab the deal &rarr;</span>
+          New: All Kits Bundle — 4 AI kits for $97
+          <span style={{ color: 'var(--gold)', fontWeight: 700, marginLeft: 8 }}>View bundle &rarr;</span>
         </a>
       </div>
 
       {/* Hero */}
       <div className="home-hero">
-        <div className="badge" style={{ marginBottom: 32 }}>Trusted by entrepreneurs worldwide</div>
+        <div className="badge" style={{ marginBottom: 32 }}>AI Automation Kits for Entrepreneurs</div>
         <h1>Deploy AI That<br /><span>Runs Your Business</span><br />While You Sleep</h1>
         <p className="hero-sub">
           Battle-tested templates, workflows, and prompts to launch AI agents that manage email, generate revenue, publish content, and operate your business 24/7.
@@ -201,8 +200,8 @@ export default function Home() {
 
         <div className="stats-bar">
           {[
-            { num: '$14,718', label: 'Earned in 3 Weeks' },
-            { num: '247K+', label: 'OpenClaw Stars on GitHub' },
+            { num: '$14,718', label: 'Agent Revenue in 3 Weeks' },
+            { num: '4', label: 'Niche AI Kits Available' },
             { num: '24/7', label: 'Autonomous Operation' },
           ].map(s => (
             <div key={s.label} className="stat-item">
@@ -213,14 +212,15 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Featured / As Seen In */}
-      <div className="featured-bar">
-        <div className="featured-label">As referenced in</div>
-        <div className="featured-logos">
-          <span className="featured-logo">Lex Fridman Podcast</span>
-          <span className="featured-logo">X / Twitter Viral</span>
-          <span className="featured-logo">GitHub Trending</span>
-          <span className="featured-logo">Hacker News</span>
+      {/* Technology bar — honest credibility */}
+      <div className="tech-bar">
+        <div className="tech-label">Works with</div>
+        <div className="tech-logos">
+          <span className="tech-logo">ChatGPT</span>
+          <span className="tech-logo">Claude</span>
+          <span className="tech-logo">Gemini</span>
+          <span className="tech-logo">OpenClaw</span>
+          <span className="tech-logo">Any LLM</span>
         </div>
       </div>
 
@@ -232,7 +232,7 @@ export default function Home() {
 
         <div className="proof-card">
           <p className="proof-quote">"In those two and a half weeks, he's earned $14,718. Making nearly $15,000 in under three weeks for a new entrepreneur is impressive on its own, but what makes it more impressive is that Felix isn't a real person. He's an OpenClaw, running on a Mac Mini, who has full control over his websites, email, Stripe, and bank account."</p>
-          <p className="proof-author">&mdash; <span>Nat Eliason</span>, Entrepreneur & Author &middot; 230,000+ views on X</p>
+          <p className="proof-author">&mdash; <span>Nat Eliason</span>, Entrepreneur &amp; Author</p>
         </div>
 
         <div className="results-grid">
@@ -261,15 +261,17 @@ export default function Home() {
         <p className="section-sub">Skip the weeks of trial and error. Get the exact files that make an AI entrepreneur actually work.</p>
         <div className="kit-grid">
           {[
-            { icon: '\u{1F9E0}', title: '5 SOUL.md Templates', desc: 'Pre-built identity files for entrepreneur, content creator, SaaS builder, community manager, and service business.' },
-            { icon: '\u{1F493}', title: 'Heartbeat Workflow System', desc: 'Makes your agent proactively check emails, monitor revenue, track tasks — and alert you when something needs attention.' },
-            { icon: '\u{1F4CB}', title: 'Daily Review Template', desc: 'The exact morning report structure: revenue stats, open blockers, and the top 5 priorities — ready every morning.' },
-            { icon: '\u{1F680}', title: 'Product Launch Prompts', desc: 'Word-for-word prompts to tell your agent to create and launch a digital product overnight — the same approach Felix used.' },
-            { icon: '\u{1F4B0}', title: 'Revenue Ops Playbook', desc: 'How to give your agent access to Stripe, email, and hosting safely. The minimal permission set for running a real business.' },
-            { icon: '\u{1F4D6}', title: 'Complete Setup Guide', desc: 'Step-by-step: zero to a deployed, revenue-focused OpenClaw agent with exact tools, accounts, and configurations.' },
+            { abbr: 'SM', title: '5 SOUL.md Templates', desc: 'Pre-built identity files for entrepreneur, content creator, SaaS builder, community manager, and service business.' },
+            { abbr: 'HB', title: 'Heartbeat Workflow System', desc: 'Makes your agent proactively check emails, monitor revenue, track tasks — and alert you when something needs attention.' },
+            { abbr: 'DR', title: 'Daily Review Template', desc: 'The exact morning report structure: revenue stats, open blockers, and the top 5 priorities — ready every morning.' },
+            { abbr: 'PL', title: 'Product Launch Prompts', desc: 'Word-for-word prompts to tell your agent to create and launch a digital product overnight — the same approach Felix used.' },
+            { abbr: 'RO', title: 'Revenue Ops Playbook', desc: 'How to give your agent access to Stripe, email, and hosting safely. The minimal permission set for running a real business.' },
+            { abbr: 'SG', title: 'Complete Setup Guide', desc: 'Step-by-step: zero to a deployed, revenue-focused OpenClaw agent with exact tools, accounts, and configurations.' },
           ].map((item) => (
             <div className="kit-card" key={item.title}>
-              <div className="kit-icon">{item.icon}</div>
+              <div className="kit-icon">
+                <span style={{ fontSize: 13, fontWeight: 800, color: 'var(--gold)', letterSpacing: -0.5 }}>{item.abbr}</span>
+              </div>
               <div className="kit-title">{item.title}</div>
               <div className="kit-desc">{item.desc}</div>
             </div>
@@ -298,7 +300,9 @@ export default function Home() {
 
         {/* Guarantee */}
         <div className="guarantee">
-          <div className="guarantee-icon">&#x1F6E1;&#xFE0F;</div>
+          <div className="guarantee-icon">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 1L12.5 4H17V8.5L20 11L17 13.5V18H12.5L10 21L7.5 18H3V13.5L0 11L3 8.5V4H7.5L10 1Z" fill="rgba(245,200,66,0.15)" stroke="#F5C842" strokeWidth="1.2"/><path d="M7 11l2 2 4-4" stroke="#F5C842" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
+          </div>
           <div>
             <h4>30-Day Money-Back Guarantee</h4>
             <p>Try everything risk-free. If the kit doesn't help you deploy a working AI agent, email iam@armando.mx and get a full refund — no questions asked, same day.</p>
@@ -314,7 +318,7 @@ export default function Home() {
         <div className="pricing-grid">
           {[
             { label: 'Start Here', price: '$29', term: 'one-time', name: 'Starter Kit', desc: 'Templates, workflows, and prompts to deploy your first AI agent yourself.', href: STRIPE_URL, cta: 'Get the Kit \u2192', featured: false },
-            { label: 'Best Value', price: '$97', term: 'one-time', name: 'All Kits Bundle', desc: 'Starter + Real Estate + Content Creator Kit + all future kits free. Save 40%.', href: '/bundle', cta: 'Get the Bundle \u2192', featured: true },
+            { label: 'Best Value', price: '$97', term: 'one-time', name: 'All Kits Bundle', desc: 'Starter + Real Estate + Content Creator + Freelancer Kit + all future kits free.', href: '/bundle', cta: 'Get the Bundle \u2192', featured: true },
             { label: 'Hands-Off', price: '$299', term: 'one-time', name: 'Done For You', desc: 'We configure your entire AI agent setup and launch your first product for you.', href: '/done-for-you', cta: 'Get Setup \u2192', featured: false },
           ].map(p => (
             <div key={p.name} className={`pricing-card${p.featured ? ' featured' : ''}`}>
@@ -391,7 +395,7 @@ export default function Home() {
       <div className="cta-bottom" id="buy">
         <div className="section-label" style={{ marginBottom: 16 }}>Get Started Today</div>
         <h2>Your AI entrepreneur is<br />one download away</h2>
-        <p>Join thousands of builders using AI to generate real revenue — starting at $29.</p>
+        <p>Join entrepreneurs using AI to generate real revenue — starting at $29.</p>
         <div style={{ display: 'flex', gap: 16, justifyContent: 'center', flexWrap: 'wrap' }}>
           <a href={STRIPE_URL} className="btn-primary">Get the Starter Kit — $29 &rarr;</a>
           <a href="/bundle" className="btn-outline">All Kits — $97</a>

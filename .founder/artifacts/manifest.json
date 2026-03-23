@@ -4,24 +4,24 @@
     "title": "Site Pages",
     "type": "metric",
     "description": "Total number of live pages on midastools-site",
-    "data": { "value": 13, "unit": "pages" },
-    "updated_at": "2026-03-22T22:00:00Z"
+    "data": { "value": 25, "unit": "pages" },
+    "updated_at": "2026-03-22T18:30:00Z"
   },
   {
     "id": "blog-posts",
     "title": "Blog Posts",
     "type": "metric",
     "description": "Total blog posts published",
-    "data": { "value": 24, "unit": "posts" },
-    "updated_at": "2026-03-22T22:00:00Z"
+    "data": { "value": 25, "unit": "posts" },
+    "updated_at": "2026-03-22T18:30:00Z"
   },
   {
     "id": "product-tiers",
     "title": "Product Tiers",
     "type": "metric",
     "description": "Number of active product/service offerings",
-    "data": { "value": 10, "unit": "products" },
-    "updated_at": "2026-03-22T22:00:00Z"
+    "data": { "value": 11, "unit": "products" },
+    "updated_at": "2026-03-22T18:30:00Z"
   },
   {
     "id": "products-shipped",
@@ -31,16 +31,16 @@
     "data": [
       { "label": "Real Estate AI Agent Kit ($49) — landing page + blog", "done": true },
       { "label": "Content Creator AI Kit ($39) — landing page + blog", "done": true },
-      { "label": "Freelancer Automation Kit ($39) — landing page", "done": false },
-      { "label": "Bundle: All Kits ($97)", "done": false }
+      { "label": "Bundle: All Kits ($97) — landing page + comparison table", "done": true },
+      { "label": "Freelancer Automation Kit ($39) — landing page + blog", "done": true }
     ],
-    "updated_at": "2026-03-22T22:00:00Z"
+    "updated_at": "2026-03-22T18:30:00Z"
   },
   {
     "id": "session-summary",
     "title": "Day 0 Session Summary",
     "type": "checklist",
-    "description": "Everything shipped on Day 0",
+    "description": "Everything shipped on Day 0 (Sessions 1-5)",
     "data": [
       { "label": "Baseline assessment", "done": true },
       { "label": "GA4 analytics infrastructure", "done": true },
@@ -49,9 +49,12 @@
       { "label": "Market research (Gumroad/Reddit/HN)", "done": true },
       { "label": "Real Estate AI Kit page + blog post", "done": true },
       { "label": "Content Creator AI Kit page + blog post", "done": true },
+      { "label": "Freelancer Automation Kit page + blog post", "done": true },
+      { "label": "Bundle updated to 4 kits ($156 value)", "done": true },
+      { "label": "Professional trust upgrade (Layout, nav, footer)", "done": true },
       { "label": "Fixed blog [slug].js syntax bug", "done": true },
-      { "label": "Schedule entries added", "done": true }
+      { "label": "All cross-links updated", "done": true }
     ],
-    "updated_at": "2026-03-22T22:00:00Z"
+    "updated_at": "2026-03-22T18:30:00Z"
   }
 ]

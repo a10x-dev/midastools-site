@@ -126,7 +126,7 @@ export default function Post() {
         <div className="cta">
           <h3>Ready to build your AI entrepreneur?</h3>
           <p>Everything you need to configure a revenue-focused OpenClaw agent. $29 one-time.</p>
-          <a href="https://buy.stripe.com/4gM00i6Sbaz71qka02cMM00">Get the Starter Kit →</a>
+          <a href="https://buy.stripe.com/cNi28qdgz7mVb0U8VYcMM07">Get the Starter Kit →</a>
         </div>
 
         <p style={{color:'#555',fontSize:'14px',marginTop:'48px'}}>
