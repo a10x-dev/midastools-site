@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import Link from 'next/link';
 import { useState } from 'react';
+import Layout from '../components/Layout';
 
 const CAL_LINK = 'https://cal.com/manduks/midastools';
 
@@ -66,7 +67,7 @@ function LeadForm() {
 
 export default function Receptionist() {
   return (
-    <>
+    <Layout>
       <Head>
         <title>AI Phone Receptionist for Small Business — Midas Tools</title>
         <meta name="description" content="Deploy a 24/7 AI receptionist that answers calls, books appointments, and never misses a lead — for $499 setup + $299/mo. Dental, law, real estate. Setup in 48 hours." />
@@ -110,18 +111,8 @@ export default function Receptionist() {
         })}</script>
       </Head>
       <style>{`
-        *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-        :root{--gold:#F5C842;--black:#0A0A0A;--gray-900:#111;--gray-800:#1A1A1A;--gray-700:#2A2A2A;--gray-400:#888;--gray-200:#CCC;--white:#fff}
-        html{scroll-behavior:smooth}
-        body{font-family:Inter,sans-serif;background:var(--black);color:var(--white);line-height:1.6;-webkit-font-smoothing:antialiased}
-        nav{display:flex;justify-content:space-between;align-items:center;padding:20px 40px;border-bottom:1px solid var(--gray-800);position:sticky;top:0;background:rgba(10,10,10,0.95);backdrop-filter:blur(10px);z-index:100}
-        .nav-logo{font-size:20px;font-weight:800;color:var(--gold);text-decoration:none}
-        .nav-links{display:flex;gap:24px;align-items:center}
-        .nav-link{color:#aaa;text-decoration:none;font-size:14px;font-weight:500}
-        .nav-link:hover{color:#fff}
-        .nav-cta{background:var(--gold);color:var(--black);padding:10px 24px;border-radius:8px;font-weight:700;font-size:14px;text-decoration:none}
-        .hero{max-width:820px;margin:0 auto;padding:100px 40px 80px;text-align:center}
-        .badge{display:inline-block;background:rgba(245,200,66,0.12);border:1px solid rgba(245,200,66,0.3);color:var(--gold);padding:6px 16px;border-radius:100px;font-size:13px;font-weight:600;margin-bottom:32px}
+        .hero{max-width:820px;margin:0 auto;padding:80px 40px 64px;text-align:center}
+        .badge-rec{display:inline-block;background:rgba(245,200,66,0.08);border:1px solid rgba(245,200,66,0.2);color:var(--gold);padding:6px 16px;border-radius:100px;font-size:12px;font-weight:600;margin-bottom:32px}
         h1{font-size:clamp(34px,5.5vw,62px);font-weight:900;line-height:1.05;letter-spacing:-2px;margin-bottom:24px}
         h1 span{color:var(--gold)}
         .hero-sub{font-size:20px;color:var(--gray-400);max-width:600px;margin:0 auto 48px;line-height:1.6}
@@ -184,19 +175,9 @@ export default function Receptionist() {
         }
       `}</style>
 
-      {/* Nav */}
-      <nav>
-        <Link href="/" className="nav-logo">⚡ Midas Tools</Link>
-        <div className="nav-links">
-          <Link href="/services" className="nav-link">Services</Link>
-          <Link href="/ai-audit" className="nav-link">AI Audit</Link>
-          <a href={CAL_LINK} target="_blank" rel="noopener noreferrer" className="nav-cta">Book a Call</a>
-        </div>
-      </nav>
-
       {/* Hero */}
       <div className="hero">
-        <div className="badge">📞 AI Receptionist — Setup in 48 Hours</div>
+        <div className="badge" style={{marginBottom:32}}>AI Receptionist &mdash; Setup in 48 Hours</div>
         <h1>Your Business <span>Answers Every Call.</span><br />Even at 2 AM.</h1>
         <p className="hero-sub">A 24/7 AI receptionist that answers calls, books appointments, qualifies leads, and escalates emergencies — for less than your monthly coffee budget.</p>
         <a href={CAL_LINK} target="_blank" rel="noopener noreferrer" className="btn-primary">Get Your AI Receptionist →</a>
@@ -451,9 +432,6 @@ export default function Receptionist() {
         <p style={{marginTop:16,fontSize:14,color:'var(--gray-400)'}}>$499 setup · $299/month · No contracts</p>
       </div>
 
-      <footer>
-        <p>© 2026 Midas Tools · <Link href="/" style={{color:'var(--gray-400)'}}>Home</Link> · <Link href="/services" style={{color:'var(--gray-400)'}}>All Services</Link> · <a href="mailto:rmidas26@gmail.com">Contact</a></p>
-      </footer>
-    </>
+    </Layout>
   );
 }

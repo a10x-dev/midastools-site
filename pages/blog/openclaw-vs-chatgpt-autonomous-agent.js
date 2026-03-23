@@ -1,9 +1,10 @@
 import Head from 'next/head';
 import Link from 'next/link';
+import Layout from '../../components/Layout';
 
 export default function Post() {
   return (
-    <>
+    <Layout>
       <Head>
         <title>OpenClaw vs ChatGPT: Why Autonomous Agents Beat Chatbots for Revenue — Midas Tools</title>
         <meta name="description" content="ChatGPT answers questions. OpenClaw agents run businesses. Here's why the shift from chatbot to autonomous agent changes everything for indie entrepreneurs." />
@@ -16,11 +17,9 @@ export default function Post() {
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
       </Head>
       <style>{`
-        *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-        body{background:#0A0A0A;color:#fff;font-family:Inter,sans-serif}
-        .nav{padding:20px 24px;border-bottom:1px solid #1a1a1a;display:flex;align-items:center;gap:12px}
-        .nav a{color:#F5C842;text-decoration:none;font-weight:700;font-size:16px}
-        .nav span{color:#555}
+        .breadcrumb{padding:16px 24px;display:flex;align-items:center;gap:8px;font-size:13px}
+        .breadcrumb a{color:var(--gold);text-decoration:none;font-weight:600}
+        .breadcrumb span{color:var(--gray-400)}
         .container{max-width:720px;margin:0 auto;padding:60px 24px}
         .tag{display:inline-block;background:rgba(245,200,66,0.1);border:1px solid rgba(245,200,66,0.25);border-radius:100px;padding:6px 16px;font-size:12px;font-weight:700;color:#F5C842;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:24px}
         h1{font-size:42px;font-weight:900;line-height:1.1;letter-spacing:-1px;margin-bottom:20px}
@@ -42,13 +41,11 @@ export default function Post() {
         tr:nth-child(even) td{background:#0d0d0d}
       `}</style>
 
-      <nav className="nav">
-        <Link href="/">👑 Midas Tools</Link>
-        <span>›</span>
+      <div className="breadcrumb">
         <Link href="/blog">Blog</Link>
-        <span>›</span>
-        <span style={{color:'#888',fontSize:'14px'}}>OpenClaw vs ChatGPT</span>
-      </nav>
+        <span>&rsaquo;</span>
+        <span>OpenClaw vs ChatGPT</span>
+      </div>
 
       <div className="container">
         <div className="tag">AI Agents</div>
@@ -136,6 +133,6 @@ export default function Post() {
           <Link href="/blog" style={{color:'#F5C842',textDecoration:'none'}}>← Back to Blog</Link>
         </p>
       </div>
-    </>
+    </Layout>
   );
 }

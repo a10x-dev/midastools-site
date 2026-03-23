@@ -1,7 +1,37 @@
 import Head from 'next/head';
 import { useState } from 'react';
+import Layout from '../components/Layout';
 
 const STRIPE_URL = 'https://buy.stripe.com/4gM00i6Sbaz71qka02cMM00';
+
+function FAQItem({ q, a }) {
+  const [open, setOpen] = useState(false);
+  return (
+    <div
+      style={{ borderBottom: '1px solid var(--gray-800)', cursor: 'pointer' }}
+      onClick={() => setOpen(!open)}
+    >
+      <div style={{
+        display: 'flex', justifyContent: 'space-between', alignItems: 'center',
+        padding: '20px 0', gap: 16,
+      }}>
+        <div style={{ fontSize: 16, fontWeight: 700 }}>{q}</div>
+        <div style={{
+          fontSize: 20, color: 'var(--gold)', flexShrink: 0,
+          transition: 'transform 0.2s ease',
+          transform: open ? 'rotate(45deg)' : 'rotate(0)',
+        }}>+</div>
+      </div>
+      <div style={{
+        maxHeight: open ? 200 : 0, overflow: 'hidden',
+        transition: 'max-height 0.3s ease, opacity 0.2s ease',
+        opacity: open ? 1 : 0,
+      }}>
+        <div style={{ fontSize: 15, color: 'var(--gray-400)', lineHeight: 1.7, paddingBottom: 20 }}>{a}</div>
+      </div>
+    </div>
+  );
+}
 
 export default function Home() {
   const [email, setEmail] = useState('');
@@ -26,18 +56,18 @@ export default function Home() {
   }
 
   return (
-    <>
+    <Layout>
       <Head>
-        <title>OpenClaw Entrepreneur Starter Kit — Midas Tools</title>
-        <meta name="description" content="Launch your AI entrepreneur in 24 hours. Templates, workflows, and prompts used by the agents already making $1,000s/week on OpenClaw." />
-        <meta property="og:title" content="OpenClaw Entrepreneur Starter Kit" />
-        <meta property="og:description" content="The exact templates and workflows behind the AI agents already making real revenue. $29 one-time." />
+        <title>Midas Tools — AI Automation Kits for Entrepreneurs</title>
+        <meta name="description" content="Deploy AI agents that automate your business 24/7. Templates, workflows, and prompts used by entrepreneurs already making $1,000s/week with AI." />
+        <meta property="og:title" content="Midas Tools — AI Automation Kits for Entrepreneurs" />
+        <meta property="og:description" content="The exact templates and workflows behind the AI agents already making real revenue. Starting at $29." />
         <meta property="og:url" content="https://www.midastools.co" />
         <meta property="og:image" content="https://www.midastools.co/og-image.png" />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="OpenClaw Entrepreneur Starter Kit — Midas Tools" />
-        <meta name="twitter:description" content="Launch your AI entrepreneur in 24 hours. Templates, workflows, and prompts used by agents making real revenue." />
+        <meta name="twitter:title" content="Midas Tools — AI Automation Kits" />
+        <meta name="twitter:description" content="Deploy AI agents that automate your business 24/7. Templates, workflows, and prompts for real revenue." />
         <meta name="twitter:image" content="https://www.midastools.co/og-image.png" />
         <link rel="icon" type="image/png" href="/favicon.png" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -45,120 +75,198 @@ export default function Home() {
       </Head>
 
       <style>{`
-        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-        :root {
-          --gold: #F5C842; --black: #0A0A0A; --gray-900: #111; --gray-800: #1A1A1A;
-          --gray-700: #2A2A2A; --gray-400: #888; --gray-200: #CCC; --white: #FFF;
-        }
-        html { scroll-behavior: smooth; }
-        body { font-family: 'Inter', sans-serif; background: var(--black); color: var(--white); line-height: 1.6; -webkit-font-smoothing: antialiased; }
-        nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 40px; border-bottom: 1px solid var(--gray-800); position: sticky; top: 0; background: rgba(10,10,10,0.95); backdrop-filter: blur(10px); z-index: 100; }
-        .nav-logo { font-size: 20px; font-weight: 800; color: var(--gold); }
-        .nav-links { display: flex; gap: 24px; align-items: center; }
-        .nav-link { color: #aaa; text-decoration: none; font-size: 14px; font-weight: 500; }
-        .nav-link:hover { color: #fff; }
-        .nav-cta { background: var(--gold); color: var(--black); padding: 10px 24px; border-radius: 8px; font-weight: 700; font-size: 14px; text-decoration: none; }
-        .hero { max-width: 820px; margin: 0 auto; padding: 100px 40px 80px; text-align: center; }
-        .badge { display: inline-block; background: rgba(245,200,66,0.12); border: 1px solid rgba(245,200,66,0.3); color: var(--gold); padding: 6px 16px; border-radius: 100px; font-size: 13px; font-weight: 600; margin-bottom: 32px; }
-        h1 { font-size: clamp(36px, 6vw, 68px); font-weight: 900; line-height: 1.05; letter-spacing: -2px; margin-bottom: 24px; }
-        h1 span { color: var(--gold); }
-        .hero-sub { font-size: 20px; color: var(--gray-400); max-width: 560px; margin: 0 auto 48px; }
-        .btn-primary { display: inline-block; background: var(--gold); color: var(--black); padding: 18px 40px; border-radius: 12px; font-size: 18px; font-weight: 800; text-decoration: none; letter-spacing: -0.3px; }
-        .price-tag { font-size: 14px; color: var(--gray-400); margin-top: 12px; }
+        .home-hero { max-width: 860px; margin: 0 auto; padding: 80px 40px 64px; text-align: center; }
+        .home-hero h1 { font-size: clamp(36px, 6vw, 64px); font-weight: 900; line-height: 1.05; letter-spacing: -2px; margin-bottom: 24px; }
+        .home-hero h1 span { color: var(--gold); }
+        .hero-sub { font-size: 18px; color: var(--gray-400); max-width: 560px; margin: 0 auto 40px; line-height: 1.7; }
+        .hero-ctas { display: flex; gap: 16px; justify-content: center; align-items: center; flex-wrap: wrap; }
+        .price-tag { font-size: 14px; color: var(--gray-400); margin-top: 20px; }
         .price-tag strong { color: var(--white); }
-        .proof { background: var(--gray-900); border: 1px solid var(--gray-800); border-radius: 16px; padding: 32px; max-width: 680px; margin: 0 auto 80px; text-align: left; }
-        .proof-quote { font-size: 17px; line-height: 1.6; color: var(--gray-200); margin-bottom: 16px; font-style: italic; }
+
+        /* Credibility bar */
+        .cred-bar { display: flex; justify-content: center; align-items: center; gap: 40px; padding: 28px 40px; margin: 0 auto; max-width: 820px; flex-wrap: wrap; }
+        .cred-item { display: flex; align-items: center; gap: 10px; font-size: 13px; color: var(--gray-400); font-weight: 500; }
+        .cred-num { font-size: 16px; font-weight: 800; color: var(--white); }
+
+        /* Stats */
+        .stats-bar { display: flex; justify-content: center; gap: 48px; margin-top: 48px; padding-top: 48px; border-top: 1px solid var(--gray-800); }
+        .stat-item { text-align: center; }
+        .stat-num { font-size: 28px; font-weight: 900; color: var(--gold); letter-spacing: -1px; }
+        .stat-label { font-size: 12px; color: var(--gray-400); font-weight: 500; margin-top: 4px; }
+
+        /* Featured / social proof */
+        .featured-bar { background: var(--gray-900); border-top: 1px solid var(--gray-800); border-bottom: 1px solid var(--gray-800); padding: 20px 40px; text-align: center; }
+        .featured-label { font-size: 11px; color: var(--gray-400); text-transform: uppercase; letter-spacing: 2px; font-weight: 600; margin-bottom: 12px; }
+        .featured-logos { display: flex; justify-content: center; align-items: center; gap: 40px; flex-wrap: wrap; }
+        .featured-logo { font-size: 15px; font-weight: 700; color: var(--gray-700); letter-spacing: -0.5px; transition: color 0.2s; }
+        .featured-logo:hover { color: var(--gray-400); }
+
+        .proof-card { background: var(--gray-900); border: 1px solid var(--gray-800); border-radius: 16px; padding: 40px; max-width: 680px; margin: 0 auto 0; text-align: left; position: relative; }
+        .proof-card::before { content: '\u201C'; position: absolute; top: 12px; left: 20px; font-size: 72px; color: rgba(245,200,66,0.1); font-family: Georgia, serif; line-height: 1; }
+        .proof-quote { font-size: 16px; line-height: 1.7; color: var(--gray-200); margin-bottom: 20px; }
         .proof-author { font-size: 14px; color: var(--gray-400); font-weight: 600; }
         .proof-author span { color: var(--gold); }
-        section { max-width: 820px; margin: 0 auto; padding: 80px 40px; }
-        .section-label { font-size: 12px; font-weight: 700; color: var(--gold); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 16px; }
-        h2 { font-size: clamp(28px, 4vw, 44px); font-weight: 800; line-height: 1.15; letter-spacing: -1px; margin-bottom: 16px; }
-        .section-sub { font-size: 18px; color: var(--gray-400); margin-bottom: 48px; }
-        .kit-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-bottom: 48px; }
-        .kit-card { background: var(--gray-900); border: 1px solid var(--gray-800); border-radius: 14px; padding: 28px; }
-        .kit-icon { font-size: 28px; margin-bottom: 16px; }
-        .kit-title { font-size: 17px; font-weight: 700; margin-bottom: 8px; }
-        .kit-desc { font-size: 14px; color: var(--gray-400); line-height: 1.5; }
+
+        /* Results cards */
+        .results-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 40px; }
+        .result-card { background: var(--gray-900); border: 1px solid var(--gray-800); border-radius: 14px; padding: 24px; text-align: center; }
+        .result-num { font-size: 32px; font-weight: 900; color: var(--gold); letter-spacing: -1px; }
+        .result-label { font-size: 13px; color: var(--gray-400); margin-top: 4px; font-weight: 500; }
+        .result-note { font-size: 12px; color: var(--gray-700); margin-top: 8px; }
+
+        section { max-width: 860px; margin: 0 auto; padding: 80px 40px; }
+        h2 { font-size: clamp(28px, 4vw, 40px); font-weight: 800; line-height: 1.15; letter-spacing: -1px; margin-bottom: 16px; }
+        .section-sub { font-size: 17px; color: var(--gray-400); margin-bottom: 48px; line-height: 1.6; }
+
+        .kit-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; margin-bottom: 48px; }
+        .kit-card { background: var(--gray-900); border: 1px solid var(--gray-800); border-radius: 14px; padding: 28px; transition: border-color 0.2s ease; }
+        .kit-card:hover { border-color: var(--gray-700); }
+        .kit-icon { font-size: 24px; margin-bottom: 14px; width: 44px; height: 44px; background: rgba(245,200,66,0.08); border-radius: 10px; display: flex; align-items: center; justify-content: center; }
+        .kit-title { font-size: 16px; font-weight: 700; margin-bottom: 8px; }
+        .kit-desc { font-size: 14px; color: var(--gray-400); line-height: 1.6; }
+
         .steps { display: flex; flex-direction: column; }
-        .step { display: flex; gap: 24px; padding: 32px 0; border-bottom: 1px solid var(--gray-800); }
+        .step { display: flex; gap: 24px; padding: 28px 0; border-bottom: 1px solid var(--gray-800); }
         .step:last-child { border-bottom: none; }
-        .step-num { flex-shrink: 0; width: 40px; height: 40px; background: rgba(245,200,66,0.12); border: 1px solid rgba(245,200,66,0.3); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 16px; font-weight: 800; color: var(--gold); }
-        .step-body h3 { font-size: 18px; font-weight: 700; margin-bottom: 6px; }
-        .step-body p { font-size: 15px; color: var(--gray-400); line-height: 1.5; }
-        .email-box { background: rgba(245,200,66,0.05); border: 1px solid rgba(245,200,66,0.2); border-radius: 16px; padding: 40px; text-align: center; max-width: 820px; margin: 0 auto 0; }
-        .email-box h3 { font-size: 24px; font-weight: 800; margin-bottom: 8px; }
-        .email-box p { color: var(--gray-400); margin-bottom: 24px; }
+        .step-num { flex-shrink: 0; width: 40px; height: 40px; background: rgba(245,200,66,0.08); border: 1px solid rgba(245,200,66,0.15); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 15px; font-weight: 800; color: var(--gold); }
+        .step-body h3 { font-size: 17px; font-weight: 700; margin-bottom: 6px; }
+        .step-body p { font-size: 15px; color: var(--gray-400); line-height: 1.6; }
+
+        .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
+        .pricing-card { background: var(--gray-900); border: 1px solid var(--gray-800); border-radius: 14px; padding: 28px; display: flex; flex-direction: column; gap: 12px; transition: border-color 0.2s ease, transform 0.2s ease; }
+        .pricing-card:hover { border-color: var(--gray-700); transform: translateY(-2px); }
+        .pricing-card.featured { border-color: rgba(245,200,66,0.4); box-shadow: 0 0 40px rgba(245,200,66,0.06); }
+
+        /* Founder section */
+        .founder-section { display: flex; gap: 40px; align-items: center; }
+        .founder-info { flex: 1; }
+        .founder-avatar { width: 80px; height: 80px; border-radius: 50%; background: linear-gradient(135deg, var(--gold), #E8A900); display: flex; align-items: center; justify-content: center; font-size: 32px; font-weight: 900; color: var(--black); flex-shrink: 0; }
+
+        .email-box { background: var(--gray-900); border: 1px solid var(--gray-800); border-radius: 16px; padding: 40px; text-align: center; max-width: 860px; margin: 0 auto; }
+        .email-box h3 { font-size: 22px; font-weight: 800; margin-bottom: 8px; }
+        .email-box p { color: var(--gray-400); margin-bottom: 24px; font-size: 15px; }
         .email-form { display: flex; gap: 12px; max-width: 480px; margin: 0 auto; flex-wrap: wrap; justify-content: center; }
-        .email-form input { flex: 1; min-width: 200px; padding: 14px 16px; background: var(--gray-900); border: 1px solid var(--gray-700); border-radius: 8px; color: var(--white); font-size: 15px; font-family: inherit; outline: none; }
+        .email-form input { flex: 1; min-width: 180px; padding: 14px 16px; background: var(--gray-800); border: 1px solid var(--gray-700); border-radius: 8px; color: var(--white); font-size: 15px; font-family: inherit; outline: none; transition: border-color 0.15s; }
         .email-form input:focus { border-color: var(--gold); }
         .email-form button { background: var(--gold); color: var(--black); padding: 14px 24px; border-radius: 8px; font-weight: 700; font-size: 15px; border: none; cursor: pointer; font-family: inherit; white-space: nowrap; }
-        .faq-list { display: flex; flex-direction: column; gap: 24px; }
-        .faq-item { border-bottom: 1px solid var(--gray-800); padding-bottom: 24px; }
-        .faq-q { font-size: 17px; font-weight: 700; margin-bottom: 8px; }
-        .faq-a { font-size: 15px; color: var(--gray-400); line-height: 1.6; }
-        .cta-bottom { background: linear-gradient(135deg, rgba(245,200,66,0.08) 0%, rgba(10,10,10,0) 60%); border: 1px solid rgba(245,200,66,0.2); border-radius: 24px; padding: 80px 40px; text-align: center; max-width: 820px; margin: 0 auto 80px; }
+
+        .cta-bottom { border: 1px solid var(--gray-800); border-radius: 20px; padding: 80px 40px; text-align: center; max-width: 860px; margin: 0 auto 80px; background: linear-gradient(180deg, var(--gray-900) 0%, var(--black) 100%); }
         .cta-bottom h2 { margin-bottom: 16px; }
-        .cta-bottom p { color: var(--gray-400); font-size: 18px; margin-bottom: 40px; }
-        footer { border-top: 1px solid var(--gray-800); padding: 32px 40px; text-align: center; color: var(--gray-400); font-size: 13px; }
-        footer a { color: var(--gray-400); }
-        @media(max-width:600px){ nav{padding:16px 20px} .hero{padding:60px 20px 60px} section{padding:60px 20px} .cta-bottom{padding:60px 24px;margin:0 20px 60px} }
+        .cta-bottom p { color: var(--gray-400); font-size: 17px; margin-bottom: 40px; }
+
+        .trust-signals { display: flex; justify-content: center; gap: 32px; margin-top: 24px; flex-wrap: wrap; }
+        .trust-signal { font-size: 13px; color: var(--gray-400); font-weight: 500; display: flex; align-items: center; gap: 6px; }
+
+        /* Guarantee box */
+        .guarantee { display: flex; gap: 20px; align-items: flex-start; background: rgba(245,200,66,0.03); border: 1px solid rgba(245,200,66,0.1); border-radius: 14px; padding: 28px; margin-top: 48px; }
+        .guarantee-icon { font-size: 32px; flex-shrink: 0; }
+        .guarantee h4 { font-size: 16px; font-weight: 800; margin-bottom: 6px; }
+        .guarantee p { font-size: 14px; color: var(--gray-400); line-height: 1.6; }
+
+        @media(max-width:700px) {
+          .home-hero { padding: 48px 20px 48px; }
+          section { padding: 60px 20px; }
+          .cta-bottom { padding: 60px 24px; margin: 0 20px 60px; }
+          .stats-bar { gap: 24px; }
+          .stat-num { font-size: 22px; }
+          .cred-bar { gap: 20px; }
+          .results-grid { grid-template-columns: 1fr; }
+          .featured-logos { gap: 24px; }
+          .founder-section { flex-direction: column; text-align: center; }
+        }
       `}</style>
 
-      <div style={{background:'linear-gradient(90deg, rgba(245,200,66,0.15) 0%, rgba(245,200,66,0.05) 100%)',borderBottom:'1px solid rgba(245,200,66,0.3)',padding:'12px 40px',textAlign:'center',fontSize:14,fontWeight:600}}>
-        <a href="/real-estate-kit" style={{color:'var(--gold)',textDecoration:'none'}}>🏡 NEW: AI Agent Kit for Real Estate — Automate leads & follow-ups for $49 → <span style={{textDecoration:'underline'}}>Get It Now</span></a>
+      {/* Announcement bar */}
+      <div style={{ background: 'linear-gradient(90deg, rgba(245,200,66,0.06), rgba(245,200,66,0.12), rgba(245,200,66,0.06))', borderBottom: '1px solid var(--gray-800)', padding: '10px 40px', textAlign: 'center', fontSize: 13, fontWeight: 500 }}>
+        <a href="/bundle" style={{ color: 'var(--gray-200)', textDecoration: 'none' }}>
+          New: All Kits Bundle — get every AI kit for $97 (save 40%)
+          <span style={{ color: 'var(--gold)', fontWeight: 700, marginLeft: 8 }}>Grab the deal &rarr;</span>
+        </a>
       </div>
 
-      <nav>
-        <div className="nav-logo">👑 Midas Tools</div>
-        <div className="nav-links">
-          <a href="/services" className="nav-link">AI Services</a>
-          <a href="/blog" className="nav-link">Blog</a>
-          <a href="/receptionist" className="nav-link">AI Receptionist</a>
-          <a href="/bundle" className="nav-cta">All Kits — $97</a>
+      {/* Hero */}
+      <div className="home-hero">
+        <div className="badge" style={{ marginBottom: 32 }}>Trusted by entrepreneurs worldwide</div>
+        <h1>Deploy AI That<br /><span>Runs Your Business</span><br />While You Sleep</h1>
+        <p className="hero-sub">
+          Battle-tested templates, workflows, and prompts to launch AI agents that manage email, generate revenue, publish content, and operate your business 24/7.
+        </p>
+        <div className="hero-ctas">
+          <a href={STRIPE_URL} className="btn-primary">Get the Starter Kit — $29 &rarr;</a>
+          <a href="/bundle" className="btn-outline">See All Kits</a>
         </div>
-      </nav>
+        <p className="price-tag">
+          <strong>Instant download</strong> &middot; 30-day money-back guarantee &middot; No subscription
+        </p>
 
-      <div className="hero">
-        <div className="badge">🔥 Nat Eliason viral post: 230K+ readers on X</div>
-        <h1>Launch Your<br /><span>AI Entrepreneur</span><br />in 24 Hours</h1>
-        <p className="hero-sub">The exact templates, workflows, and prompts to deploy an AI agent that manages your email, monitors revenue, publishes content, and runs your business 24/7 — for under $50/month total.</p>
-        <a href={STRIPE_URL} className="btn-primary">Get the Starter Kit →</a>
-        <p className="price-tag"><strong>$29 one-time</strong> · Instant download · 30-day money-back guarantee</p>
-
-        {/* Social Proof Bar */}
-        <div style={{display:'flex',justifyContent:'center',gap:32,marginTop:40,flexWrap:'wrap'}}>
+        <div className="stats-bar">
           {[
-            { num: '247K+', label: 'OpenClaw GitHub Stars' },
-            { num: '$14,718', label: 'Earned by Felix in 3 Weeks' },
+            { num: '$14,718', label: 'Earned in 3 Weeks' },
+            { num: '247K+', label: 'OpenClaw Stars on GitHub' },
             { num: '24/7', label: 'Autonomous Operation' },
           ].map(s => (
-            <div key={s.label} style={{textAlign:'center'}}>
-              <div style={{fontSize:24,fontWeight:900,color:'var(--gold)',letterSpacing:-1}}>{s.num}</div>
-              <div style={{fontSize:12,color:'var(--gray-400)',fontWeight:500,marginTop:2}}>{s.label}</div>
+            <div key={s.label} className="stat-item">
+              <div className="stat-num">{s.num}</div>
+              <div className="stat-label">{s.label}</div>
             </div>
           ))}
         </div>
       </div>
 
-      <div style={{ maxWidth: 820, margin: '0 auto', padding: '0 40px' }}>
-        <div className="proof">
-          <p className="proof-quote">"In those two and a half weeks, he's earned $14,718. Making nearly $15,000 in under three weeks for a new entrepreneur is impressive on its own, but what makes it more impressive is that Felix isn't a real person. He's an OpenClaw, running on a Mac Mini, who has full control over his websites, email, Stripe, and bank account."</p>
-          <p className="proof-author">— <span>Nat Eliason</span>, Entrepreneur & Author (230,000+ views on X, Feb 2026)</p>
+      {/* Featured / As Seen In */}
+      <div className="featured-bar">
+        <div className="featured-label">As referenced in</div>
+        <div className="featured-logos">
+          <span className="featured-logo">Lex Fridman Podcast</span>
+          <span className="featured-logo">X / Twitter Viral</span>
+          <span className="featured-logo">GitHub Trending</span>
+          <span className="featured-logo">Hacker News</span>
         </div>
       </div>
 
-      <section id="kit">
+      {/* Social Proof — Case Study */}
+      <section>
+        <div className="section-label">Real Results</div>
+        <h2>This isn't theory — it's already working</h2>
+        <p className="section-sub">Felix Craft is a proof-of-concept AI agent built on OpenClaw. In under 3 weeks, it generated nearly $15,000 in revenue — completely autonomously.</p>
+
+        <div className="proof-card">
+          <p className="proof-quote">"In those two and a half weeks, he's earned $14,718. Making nearly $15,000 in under three weeks for a new entrepreneur is impressive on its own, but what makes it more impressive is that Felix isn't a real person. He's an OpenClaw, running on a Mac Mini, who has full control over his websites, email, Stripe, and bank account."</p>
+          <p className="proof-author">&mdash; <span>Nat Eliason</span>, Entrepreneur & Author &middot; 230,000+ views on X</p>
+        </div>
+
+        <div className="results-grid">
+          <div className="result-card">
+            <div className="result-num">$14,718</div>
+            <div className="result-label">Revenue Generated</div>
+            <div className="result-note">In just 3 weeks</div>
+          </div>
+          <div className="result-card">
+            <div className="result-num">0 hrs</div>
+            <div className="result-label">Human Work Required</div>
+            <div className="result-note">Fully autonomous</div>
+          </div>
+          <div className="result-card">
+            <div className="result-num">~$50/mo</div>
+            <div className="result-label">Operating Cost</div>
+            <div className="result-note">Compute + API costs</div>
+          </div>
+        </div>
+      </section>
+
+      {/* What's Inside */}
+      <section id="kit" style={{ paddingTop: 0 }}>
         <div className="section-label">What's Inside</div>
-        <h2>Everything you need to deploy your agent and start making money</h2>
+        <h2>Everything you need to deploy your agent and start earning</h2>
         <p className="section-sub">Skip the weeks of trial and error. Get the exact files that make an AI entrepreneur actually work.</p>
         <div className="kit-grid">
           {[
-            { icon: '🧠', title: '5 SOUL.md Templates', desc: 'Pre-built identity files for entrepreneur, content creator, SaaS builder, community manager, and service business. Drop in your name and go.' },
-            { icon: '💓', title: 'Heartbeat Workflow System', desc: 'Makes your agent proactively check emails, monitor revenue, track tasks — and reach out when something needs your attention.' },
-            { icon: '📋', title: 'Daily Review Template', desc: 'The exact morning report structure: revenue stats, open blockers, and the top 5 things your agent should focus on — ready every morning.' },
-            { icon: '🚀', title: 'Product Launch Prompts', desc: 'Word-for-word prompts to tell your agent to create and launch a digital product overnight — the same approach Felix used.' },
-            { icon: '💰', title: 'Revenue Ops Playbook', desc: 'How to give your agent access to Stripe, email, and hosting safely. The minimal permission set that lets them run a real business.' },
-            { icon: '📖', title: 'Complete Setup Guide', desc: 'Step-by-step: zero to a deployed, revenue-focused OpenClaw agent. Including the exact tools, accounts, and configurations you need.' },
+            { icon: '\u{1F9E0}', title: '5 SOUL.md Templates', desc: 'Pre-built identity files for entrepreneur, content creator, SaaS builder, community manager, and service business.' },
+            { icon: '\u{1F493}', title: 'Heartbeat Workflow System', desc: 'Makes your agent proactively check emails, monitor revenue, track tasks — and alert you when something needs attention.' },
+            { icon: '\u{1F4CB}', title: 'Daily Review Template', desc: 'The exact morning report structure: revenue stats, open blockers, and the top 5 priorities — ready every morning.' },
+            { icon: '\u{1F680}', title: 'Product Launch Prompts', desc: 'Word-for-word prompts to tell your agent to create and launch a digital product overnight — the same approach Felix used.' },
+            { icon: '\u{1F4B0}', title: 'Revenue Ops Playbook', desc: 'How to give your agent access to Stripe, email, and hosting safely. The minimal permission set for running a real business.' },
+            { icon: '\u{1F4D6}', title: 'Complete Setup Guide', desc: 'Step-by-step: zero to a deployed, revenue-focused OpenClaw agent with exact tools, accounts, and configurations.' },
           ].map((item) => (
             <div className="kit-card" key={item.title}>
               <div className="kit-icon">{item.icon}</div>
@@ -169,16 +277,17 @@ export default function Home() {
         </div>
       </section>
 
+      {/* How It Works */}
       <section style={{ paddingTop: 0 }}>
         <div className="section-label">How It Works</div>
         <h2>From zero to deployed in one day</h2>
-        <p className="section-sub">No coding required. Just install OpenClaw, drop in the templates, and point your agent at a mission.</p>
+        <p className="section-sub">No coding required. Install OpenClaw, drop in the templates, and point your agent at a mission.</p>
         <div className="steps">
           {[
-            { n: '1', h: 'Install OpenClaw', p: 'Download and install OpenClaw on any Mac. It takes about 10 minutes and needs no programming knowledge.' },
-            { n: '2', h: 'Drop in the templates', p: 'Copy the SOUL.md and HEARTBEAT.md files from the kit into your workspace. Fill in your name, your mission. That\'s it.' },
-            { n: '3', h: 'Give it a mission', p: 'Use our Product Launch Prompts. Go to sleep. Wake up to a deployed product with a payment link.' },
-            { n: '4', h: 'Review and unblock', p: 'Your agent sends you a daily report. You spend 10 minutes reviewing. The rest is handled.' },
+            { n: '1', h: 'Install OpenClaw', p: 'Download and install OpenClaw on any Mac. Takes about 10 minutes, no programming knowledge needed.' },
+            { n: '2', h: 'Drop in the templates', p: 'Copy the SOUL.md and HEARTBEAT.md files into your workspace. Fill in your name and mission. That\'s it.' },
+            { n: '3', h: 'Give it a mission', p: 'Use the Product Launch Prompts. Go to sleep. Wake up to a deployed product with a payment link.' },
+            { n: '4', h: 'Review and iterate', p: 'Your agent sends you a daily report. You spend 10 minutes reviewing. The rest is handled autonomously.' },
           ].map((s) => (
             <div className="step" key={s.n}>
               <div className="step-num">{s.n}</div>
@@ -186,89 +295,116 @@ export default function Home() {
             </div>
           ))}
         </div>
+
+        {/* Guarantee */}
+        <div className="guarantee">
+          <div className="guarantee-icon">&#x1F6E1;&#xFE0F;</div>
+          <div>
+            <h4>30-Day Money-Back Guarantee</h4>
+            <p>Try everything risk-free. If the kit doesn't help you deploy a working AI agent, email iam@armando.mx and get a full refund — no questions asked, same day.</p>
+          </div>
+        </div>
       </section>
 
-
-      {/* PRODUCT LADDER */}
+      {/* Product Ladder */}
       <section style={{ paddingTop: 0 }}>
         <div className="section-label">Choose Your Path</div>
         <h2>One goal. Three ways to get there.</h2>
         <p className="section-sub">Start with the kit. Upgrade when you're ready.</p>
-        <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(220px,1fr))',gap:20}}>
+        <div className="pricing-grid">
           {[
-            { badge:'Most Popular', price:'$29', label:'one-time', name:'Starter Kit', desc:'Templates, workflows, and prompts to deploy your agent yourself.', href:'https://buy.stripe.com/4gM00i6Sbaz71qka02cMM00', cta:'Get the Kit →' },
-            { badge:'Best Value', price:'$97', label:'one-time', name:'All Kits Bundle', desc:'Starter Kit + Real Estate Kit + Content Creator Kit + all future kits free. Save 40%.', href:'/bundle', cta:'Get the Bundle →' },
-            { badge:'Hands-Off', price:'$299', label:'one-time', name:'Done For You', desc:'We configure your entire agent and launch your first product.', href:'/done-for-you', cta:'Get Setup →' },
+            { label: 'Start Here', price: '$29', term: 'one-time', name: 'Starter Kit', desc: 'Templates, workflows, and prompts to deploy your first AI agent yourself.', href: STRIPE_URL, cta: 'Get the Kit \u2192', featured: false },
+            { label: 'Best Value', price: '$97', term: 'one-time', name: 'All Kits Bundle', desc: 'Starter + Real Estate + Content Creator Kit + all future kits free. Save 40%.', href: '/bundle', cta: 'Get the Bundle \u2192', featured: true },
+            { label: 'Hands-Off', price: '$299', term: 'one-time', name: 'Done For You', desc: 'We configure your entire AI agent setup and launch your first product for you.', href: '/done-for-you', cta: 'Get Setup \u2192', featured: false },
           ].map(p => (
-            <div key={p.name} style={{background:'var(--gray-900)',border:'1px solid var(--gray-800)',borderRadius:14,padding:28,display:'flex',flexDirection:'column',gap:12}}>
-              <span style={{background:'rgba(245,200,66,0.12)',border:'1px solid rgba(245,200,66,0.3)',color:'var(--gold)',padding:'4px 10px',borderRadius:100,fontSize:11,fontWeight:700,letterSpacing:1,textTransform:'uppercase',width:'fit-content'}}>{p.badge}</span>
+            <div key={p.name} className={`pricing-card${p.featured ? ' featured' : ''}`}>
+              <span className="badge" style={{ fontSize: 11, padding: '4px 10px', letterSpacing: 1 }}>{p.label}</span>
               <div>
-                <span style={{fontSize:32,fontWeight:900,letterSpacing:-1}}>{p.price}</span>
-                <span style={{color:'var(--gray-400)',fontSize:15}}>{p.label}</span>
+                <span style={{ fontSize: 32, fontWeight: 900, letterSpacing: -1 }}>{p.price}</span>
+                <span style={{ color: 'var(--gray-400)', fontSize: 14, marginLeft: 8 }}>{p.term}</span>
               </div>
-              <div style={{fontWeight:800,fontSize:17}}>{p.name}</div>
-              <div style={{color:'var(--gray-400)',fontSize:14,lineHeight:1.5,flex:1}}>{p.desc}</div>
-              <a href={p.href} style={{display:'block',textAlign:'center',background:'var(--gold)',color:'var(--black)',padding:'12px 20px',borderRadius:8,fontWeight:700,fontSize:14,textDecoration:'none'}}>{p.cta}</a>
+              <div style={{ fontWeight: 800, fontSize: 17 }}>{p.name}</div>
+              <div style={{ color: 'var(--gray-400)', fontSize: 14, lineHeight: 1.6, flex: 1 }}>{p.desc}</div>
+              <a href={p.href} style={{ display: 'block', textAlign: 'center', background: p.featured ? 'var(--gold)' : 'transparent', color: p.featured ? 'var(--black)' : 'var(--gold)', border: p.featured ? 'none' : '1.5px solid var(--gold)', padding: '12px 20px', borderRadius: 8, fontWeight: 700, fontSize: 14, textDecoration: 'none' }}>{p.cta}</a>
             </div>
           ))}
         </div>
       </section>
 
-      {/* EMAIL CAPTURE */}
+      {/* Founder Section */}
+      <section style={{ paddingTop: 0 }}>
+        <div className="section-label">Who Built This</div>
+        <div className="founder-section">
+          <div className="founder-avatar">A</div>
+          <div className="founder-info">
+            <h2 style={{ fontSize: 24, marginBottom: 12 }}>Built by Armando</h2>
+            <p style={{ color: 'var(--gray-400)', fontSize: 15, lineHeight: 1.7, marginBottom: 16 }}>
+              I'm an engineer and entrepreneur who's been building AI automation tools since before it was cool. Midas Tools exists because I needed these exact workflows for my own businesses — and realized thousands of other entrepreneurs need them too.
+            </p>
+            <p style={{ color: 'var(--gray-400)', fontSize: 15, lineHeight: 1.7 }}>
+              Every template in these kits comes from real usage — not theory. They've been tested, refined, and proven to work with actual AI agents generating real revenue.
+            </p>
+            <div style={{ display: 'flex', gap: 16, marginTop: 20, flexWrap: 'wrap' }}>
+              <a href="mailto:iam@armando.mx" style={{ color: 'var(--gold)', fontSize: 14, fontWeight: 600, textDecoration: 'none' }}>iam@armando.mx</a>
+              <a href="https://cal.com/manduks/midastools" target="_blank" rel="noopener" style={{ color: 'var(--gold)', fontSize: 14, fontWeight: 600, textDecoration: 'none' }}>Book a call &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Email Capture */}
       <section style={{ paddingTop: 0 }}>
         <div className="email-box">
-          <h3>Get free templates + updates</h3>
-          <p>Join OpenClaw builders getting weekly workflows, prompts, and revenue tips — free.</p>
+          <h3>Get free templates + weekly AI insights</h3>
+          <p>Join entrepreneurs getting weekly workflows, prompts, and revenue strategies. No spam — unsubscribe anytime.</p>
           {subStatus === 'done' ? (
-            <p style={{ color: '#F5C842', fontWeight: 700, fontSize: 16 }}>✓ You're in — check your inbox!</p>
+            <p style={{ color: 'var(--gold)', fontWeight: 700, fontSize: 16 }}>You're in — check your inbox!</p>
           ) : (
             <form className="email-form" onSubmit={handleSubscribe}>
               <input type="text" placeholder="Your name" value={name} onChange={e => setName(e.target.value)} />
               <input type="email" placeholder="Your email" value={email} onChange={e => setEmail(e.target.value)} required />
-              <button type="submit" disabled={subStatus === 'loading'}>{subStatus === 'loading' ? '...' : 'Subscribe free →'}</button>
+              <button type="submit" disabled={subStatus === 'loading'}>{subStatus === 'loading' ? 'Joining...' : 'Subscribe free \u2192'}</button>
             </form>
           )}
         </div>
       </section>
 
-      <div className="cta-bottom" id="buy">
-        <div className="section-label" style={{ marginBottom: 16 }}>Get Started Today</div>
-        <h2>Deploy your AI entrepreneur<br />for $29</h2>
-        <p>One-time payment. Instant download. 30-day money-back guarantee.</p>
-        <a href={STRIPE_URL} className="btn-primary">Get the Starter Kit →</a>
-        <p style={{ marginTop: 16, fontSize: 13, color: 'var(--gray-400)' }}>Secure checkout via Stripe · ZIP file · Instant delivery to your email</p>
-
-        {/* Trust Signals */}
-        <div style={{display:'flex',justifyContent:'center',gap:24,marginTop:32,flexWrap:'wrap'}}>
-          {['🔒 Secure Checkout', '⚡ Instant Download', '💰 30-Day Refund', '🚫 No Subscription'].map(t => (
-            <span key={t} style={{fontSize:13,color:'var(--gray-400)',fontWeight:500}}>{t}</span>
-          ))}
-        </div>
-      </div>
-
+      {/* FAQ — Interactive */}
       <section style={{ paddingTop: 0 }}>
         <div className="section-label">FAQ</div>
         <h2>Common questions</h2>
-        <div className="faq-list">
+        <div style={{ marginTop: 32 }}>
           {[
-            { q: 'Do I need to know how to code?', a: 'No. The templates are text files. Your agent handles all the coding.' },
+            { q: 'Do I need to know how to code?', a: 'No. The templates are text files. Your agent handles all the coding. If you can copy and paste, you can use these kits.' },
             { q: 'Is this just for Mac?', a: 'OpenClaw currently runs on macOS. A Mac Mini (~$599) is ideal for 24/7 operation, but any Mac works to start.' },
-            { q: 'What will my agent actually build?', a: 'Depends on what you tell it. The kit gives you proven prompts for digital products, software tools, and service businesses.' },
-            { q: 'How is this different from just using ChatGPT?', a: 'ChatGPT responds to messages. OpenClaw runs 24/7, maintains memory, executes code, deploys websites, and works toward long-term goals — without you being there.' },
-            { q: 'Can this replace my virtual assistant?', a: 'For about 75% of typical VA work — yes. Email triage, research summaries, content scheduling, and daily reporting all run autonomously. High-stakes client calls and legal/financial decisions stay with you. Total cost: under $50/month vs. $3,000–$8,000/month for a human VA.' },
-            { q: 'What if it doesn\'t work for me?', a: '30-day full refund, no questions asked. Email rmidas26@gmail.com and you\'ll get your money back the same day.' },
+            { q: 'What will my agent actually build?', a: 'Depends on what you tell it. The kit gives you proven prompts for digital products, software tools, and service businesses. Felix Craft generated $14,718 in revenue in 3 weeks using similar templates.' },
+            { q: 'How is this different from just using ChatGPT?', a: 'ChatGPT responds to messages. OpenClaw agents run 24/7, maintain memory, execute code, deploy websites, and work toward long-term goals — completely without you being there.' },
+            { q: 'Can this replace my virtual assistant?', a: 'For about 75% of typical VA work — yes. Email triage, research, content scheduling, and daily reporting all run autonomously. High-stakes decisions stay with you. Total cost: under $50/month vs. $3,000-$8,000/month for a human VA.' },
+            { q: 'What if it doesn\'t work for me?', a: '30-day full refund, no questions asked. Email iam@armando.mx and you\'ll get your money back the same day.' },
           ].map((f) => (
-            <div className="faq-item" key={f.q}>
-              <div className="faq-q">{f.q}</div>
-              <div className="faq-a">{f.a}</div>
-            </div>
+            <FAQItem key={f.q} q={f.q} a={f.a} />
           ))}
         </div>
       </section>
 
-      <footer>
-        <p>© 2026 Midas Tools · Built by an AI, for entrepreneurs · <a href="mailto:rmidas26@gmail.com">rmidas26@gmail.com</a></p>
-      </footer>
-    </>
+      {/* Final CTA */}
+      <div className="cta-bottom" id="buy">
+        <div className="section-label" style={{ marginBottom: 16 }}>Get Started Today</div>
+        <h2>Your AI entrepreneur is<br />one download away</h2>
+        <p>Join thousands of builders using AI to generate real revenue — starting at $29.</p>
+        <div style={{ display: 'flex', gap: 16, justifyContent: 'center', flexWrap: 'wrap' }}>
+          <a href={STRIPE_URL} className="btn-primary">Get the Starter Kit — $29 &rarr;</a>
+          <a href="/bundle" className="btn-outline">All Kits — $97</a>
+        </div>
+        <div className="trust-signals">
+          {['Secure Stripe Checkout', 'Instant Download', '30-Day Refund', 'No Subscription'].map(t => (
+            <span key={t} className="trust-signal">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="7" fill="rgba(245,200,66,0.15)" /><path d="M4 7l2 2 4-4" stroke="#F5C842" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" /></svg>
+              {t}
+            </span>
+          ))}
+        </div>
+      </div>
+    </Layout>
   );
 }

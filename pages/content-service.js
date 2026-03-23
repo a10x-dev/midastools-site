@@ -1,11 +1,12 @@
 import Head from 'next/head';
 import Link from 'next/link';
+import Layout from '../components/Layout';
 
 const STRIPE_URL = 'https://buy.stripe.com/dRm9ASdgzcHfb0U4FIcMM06';
 
 export default function ContentService() {
   return (
-    <>
+    <Layout>
       <Head>
         <title>AI Content Service — Done-For-You Articles, Every Month | Midas Tools</title>
         <link rel="icon" type="image/png" href="/favicon.png" />
@@ -15,13 +16,7 @@ export default function ContentService() {
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
       </Head>
       <style>{`
-        *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-        :root{--gold:#F5C842;--black:#0A0A0A;--gray-900:#111;--gray-800:#1A1A1A;--gray-400:#888;--white:#fff}
-        html{scroll-behavior:smooth}
-        body{font-family:Inter,sans-serif;background:var(--black);color:var(--white);line-height:1.6;-webkit-font-smoothing:antialiased}
-        nav{display:flex;justify-content:space-between;align-items:center;padding:20px 40px;border-bottom:1px solid var(--gray-800);position:sticky;top:0;background:rgba(10,10,10,0.95);backdrop-filter:blur(10px);z-index:100}
-        .nav-logo{font-size:20px;font-weight:800;color:var(--gold);text-decoration:none}
-        .hero{max-width:760px;margin:0 auto;padding:100px 40px 80px;text-align:center}
+        .hero{max-width:760px;margin:0 auto;padding:80px 40px 64px;text-align:center}
         .badge{display:inline-block;background:rgba(245,200,66,0.12);border:1px solid rgba(245,200,66,0.3);color:var(--gold);padding:6px 16px;border-radius:100px;font-size:13px;font-weight:600;margin-bottom:32px}
         h1{font-size:clamp(32px,5vw,58px);font-weight:900;line-height:1.05;letter-spacing:-2px;margin-bottom:24px}
         h1 span{color:var(--gold)}
@@ -48,24 +43,16 @@ export default function ContentService() {
         .cta-box{background:linear-gradient(135deg,rgba(245,200,66,0.08) 0%,rgba(10,10,10,0) 60%);border:1px solid rgba(245,200,66,0.2);border-radius:24px;padding:80px 40px;text-align:center;max-width:760px;margin:0 auto 80px}
         .cta-box h2{margin-bottom:16px}
         .cta-box p{color:var(--gray-400);font-size:18px;margin-bottom:40px}
-        footer{border-top:1px solid var(--gray-800);padding:32px 40px;text-align:center;color:var(--gray-400);font-size:13px}
-        footer a{color:var(--gray-400)}
         @media(max-width:600px){
-          nav{padding:16px 20px}
-          .hero{padding:60px 20px 60px}
+          .hero{padding:48px 20px}
           section{padding:60px 20px}
           .feature-grid{grid-template-columns:1fr}
           .stat-row{flex-direction:column;gap:24px}
         }
       `}</style>
 
-      <nav>
-        <Link href="/" className="nav-logo">👑 Midas Tools</Link>
-        <a href={STRIPE_URL} style={{background:'var(--gold)',color:'#000',padding:'10px 24px',borderRadius:8,fontWeight:700,fontSize:14,textDecoration:'none'}}>Start Publishing — $299/mo</a>
-      </nav>
-
       <div className="hero">
-        <div className="badge">✍️ Done-For-You Content</div>
+        <div className="badge" style={{marginBottom:32}}>Done-For-You Content</div>
         <h1>10 articles a month.<br /><span>Zero effort</span> from you.</h1>
         <p className="hero-sub">We research, write, and publish 10 SEO-optimized articles every month for your startup. Posted to dev.to, your blog, and wherever your buyers are reading.</p>
         <a href={STRIPE_URL} className="btn">Start Publishing — $299/mo →</a>
@@ -132,9 +119,6 @@ export default function ContentService() {
         <p style={{marginTop:16,fontSize:13,color:'var(--gray-400)'}}>Secure checkout via Stripe · Cancel anytime · First article in 7 days</p>
       </div>
 
-      <footer>
-        <p>© 2026 Midas Tools · <Link href="/" style={{color:'var(--gray-400)'}}>Home</Link> · <a href="mailto:rmidas26@gmail.com">rmidas26@gmail.com</a></p>
-      </footer>
-    </>
+    </Layout>
   );
 }

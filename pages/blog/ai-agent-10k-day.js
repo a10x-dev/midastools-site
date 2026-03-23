@@ -1,9 +1,10 @@
 import Head from 'next/head';
 import Link from 'next/link';
+import Layout from '../../components/Layout';
 
 export default function AIAgent10KDay() {
   return (
-    <>
+    <Layout>
       <Head>
         <title>AI Agents Made $10,000 in a Single Day — Here's the Architecture Behind It | Midas Tools</title>
         <meta name="description" content="FelixCraftAI crossed $10K in a single day and $38K lifetime in 30 days. Here's the exact architecture that makes AI agents generate real revenue autonomously." />
@@ -109,6 +110,6 @@ export default function AIAgent10KDay() {
           <a href="https://buy.stripe.com/4gM00i6Sbaz71qka02cMM00" style={{ display: 'inline-block', background: '#b8860b', color: '#fff', padding: '12px 24px', borderRadius: '6px', textDecoration: 'none', fontWeight: '700', fontSize: '15px' }}>Get the Starter Kit — $29</a>
         </div>
       </div>
-    </>
+    </Layout>
   );
 }

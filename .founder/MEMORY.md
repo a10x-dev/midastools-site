@@ -27,6 +27,7 @@ Your long-term memory. Persists across all sessions. This is your brain — trea
 - **2026-03-22**: Homepage product ladder changed: $29 Starter → $97 Bundle → $299 DFY (replaced Pro subscription as middle tier)
 - **2026-03-22**: All blog CTAs updated to promote bundle ($97) instead of individual kit ($29) — higher AOV play
 - **2026-03-22**: Added competitive comparison table to receptionist page to justify premium pricing
+- **2026-03-22**: MAJOR: Professional trust upgrade — shared Layout component (nav+footer), removed emoji logo → "MIDAS·TOOLS" text mark, consistent nav across all 23 pages, professional 4-column footer with product/service/company links, removed "Built by an AI" footer text, cleaned up gimmicky badges, standardized contact email to iam@armando.mx
 
 ## What Worked
 - Felix Craft case study is strongest social proof ($14,718 in 3 weeks)
@@ -39,6 +40,8 @@ Your long-term memory. Persists across all sessions. This is your brain — trea
 
 ## Important Context
 - Environment vars needed: GMAIL_ADDRESS, GMAIL_APP_PASSWORD, STRIPE_SECRET_KEY, STRIPE_WEBHOOK_SECRET, NEXT_PUBLIC_GA_ID
+- **Shared Layout**: `components/Layout.js` — nav, footer, global styles. All pages use it now.
+- Logo: "MIDAS·TOOLS" text mark (gold/white). No emoji.
 - All CSS is inline with design system vars (--gold: #F5C842, --black: #0A0A0A)
 - Font: Inter (Google Fonts), weights 400-900
 - Mobile breakpoint: max-width 600px or 700px
@@ -46,3 +49,4 @@ Your long-term memory. Persists across all sessions. This is your brain — trea
 - Stripe checkout URLs: buy.stripe.com/4gM00i... (Kit), buy.stripe.com/cNi9AS... (Pro)
 - Need separate Stripe products for RE Kit, Creator Kit, and Bundle
 - External blog posts (dev.to) cannot be edited for internal links
+- Contact email standardized to iam@armando.mx across all pages

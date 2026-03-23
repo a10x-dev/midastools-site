@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Link from 'next/link';
+import Layout from '../../components/Layout';
 
 const posts = {
   'felix-craft-story': {
@@ -685,7 +686,7 @@ export default function BlogPost({ post }) {
   const paragraphs = post.content.trim().split('\n').filter(l => l.trim());
 
   return (
-    <>
+    <Layout>
       <Head>
         <title>{post.title} — Midas Tools</title>
         <link rel="icon" type="image/png" href="/favicon.png" />
@@ -695,11 +696,6 @@ export default function BlogPost({ post }) {
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
       </Head>
       <style>{`
-        *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-        body{font-family:Inter,sans-serif;background:#0A0A0A;color:#fff;-webkit-font-smoothing:antialiased}
-        nav{display:flex;justify-content:space-between;align-items:center;padding:20px 40px;border-bottom:1px solid #1A1A1A;background:rgba(10,10,10,0.95);position:sticky;top:0;z-index:100}
-        .nav-logo{font-size:20px;font-weight:800;color:#F5C842;text-decoration:none}
-        .nav-cta{background:#F5C842;color:#000;padding:10px 24px;border-radius:8px;font-weight:700;font-size:14px;text-decoration:none}
         .container{max-width:680px;margin:0 auto;padding:80px 40px}
         .post-date{font-size:13px;color:#888;margin-bottom:16px}
         h1{font-size:clamp(28px,4vw,44px);font-weight:900;letter-spacing:-1px;margin-bottom:40px;line-height:1.1}
@@ -711,13 +707,7 @@ export default function BlogPost({ post }) {
         .cta-inline{background:rgba(245,200,66,0.08);border:1px solid rgba(245,200,66,0.2);border-radius:12px;padding:32px;text-align:center;margin:48px 0}
         .cta-inline p{color:#888;margin-bottom:16px}
         .cta-inline a{display:inline-block;background:#F5C842;color:#000;padding:14px 32px;border-radius:8px;font-weight:800;text-decoration:none;font-size:16px}
-        footer{border-top:1px solid #1A1A1A;padding:32px 40px;text-align:center;color:#555;font-size:13px}
-        footer a{color:#888}
       `}</style>
-      <nav>
-        <Link href="/" className="nav-logo">👑 Midas Tools</Link>
-        <a href="/bundle" className="nav-cta">All Kits — $97</a>
-      </nav>
       <div className="container">
         <div className="post-date">{post.date}</div>
         <h1>{post.title}</h1>
@@ -735,7 +725,6 @@ export default function BlogPost({ post }) {
           <p style={{marginTop:12,fontSize:13,color:'#666'}}>Or start with the <a href="https://buy.stripe.com/4gM00i6Sbaz71qka02cMM00" style={{color:'#F5C842'}}>Starter Kit — $29</a></p>
         </div>
       </div>
-      <footer><p>© 2026 Midas Tools · <Link href="/blog" style={{color:'#888'}}>Blog</Link> · <a href="mailto:rmidas26@gmail.com">rmidas26@gmail.com</a></p></footer>
-    </>
+    </Layout>
   );
 }

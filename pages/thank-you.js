@@ -27,7 +27,7 @@ export default function ThankYou() {
         .note a { color: #888; }
       `}</style>
       <div className="card">
-        <div className="icon">👑</div>
+        <div style={{fontSize:18,fontWeight:900,marginBottom:24}}><span style={{color:'#F5C842'}}>MIDAS</span>&middot;<span style={{fontWeight:600}}>TOOLS</span></div>
         <h1>You're in.</h1>
         <p className="sub">Your OpenClaw Entrepreneur Starter Kit is ready. A download link is also on its way to your email.</p>
         <div className="download-box">
@@ -45,7 +45,7 @@ export default function ThankYou() {
           <p style={{fontSize:14,fontWeight:700,color:'#F5C842',marginBottom:6}}>Purchased the AI Audit ($997) or Done-For-You ($299)?</p>
           <p style={{fontSize:14,color:'#888',lineHeight:1.5}}>You'll receive a personal email from <strong style={{color:'#ccc'}}>iam@armando.mx</strong> within 1 hour with your next steps and intake form. Check your spam folder if you don't see it.</p>
         </div>
-        <p className="note">Questions? <a href="mailto:rmidas26@gmail.com">rmidas26@gmail.com</a> — we reply within 24h.</p>
+        <p className="note">Questions? <a href="mailto:iam@armando.mx">iam@armando.mx</a> — we reply within 24h.</p>
       </div>
     </>
   );
