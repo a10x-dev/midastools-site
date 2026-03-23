@@ -318,7 +318,7 @@ export default function Home() {
         <div className="pricing-grid">
           {[
             { label: 'Start Here', price: '$29', term: 'one-time', name: 'Starter Kit', desc: 'Templates, workflows, and prompts to deploy your first AI agent yourself.', href: STRIPE_URL, cta: 'Get the Kit \u2192', featured: false },
-            { label: 'Best Value', price: '$97', term: 'one-time', name: 'All Kits Bundle', desc: '5 niche AI kits + all future kits free. Starter, Real Estate, Content Creator, Freelancer, and Small Business.', href: '/bundle', cta: 'Get the Bundle \u2192', featured: true },
+            { label: 'Best Value', price: '$97', term: 'one-time', name: 'All Kits Bundle', desc: '5 niche AI kits + all future kits free. Starter, Real Estate, Content Creator, Freelancer, and Small Business.', href: 'https://buy.stripe.com/bJe7sK0tNdLjgle0pscMM0b', cta: 'Get the Bundle \u2192', featured: true },
           ].map(p => (
             <div key={p.name} className={`pricing-card${p.featured ? ' featured' : ''}`}>
               <span className="badge" style={{ fontSize: 11, padding: '4px 10px', letterSpacing: 1 }}>{p.label}</span>
@@ -397,7 +397,7 @@ export default function Home() {
         <p>Join entrepreneurs using AI to generate real revenue — starting at $29.</p>
         <div style={{ display: 'flex', gap: 16, justifyContent: 'center', flexWrap: 'wrap' }}>
           <a href={STRIPE_URL} className="btn-primary">Get the Starter Kit — $29 &rarr;</a>
-          <a href="/bundle" className="btn-outline">All Kits — $97</a>
+          <a href="https://buy.stripe.com/bJe7sK0tNdLjgle0pscMM0b" className="btn-outline">All Kits — $97</a>
         </div>
         <div className="trust-signals">
           {['Secure Stripe Checkout', 'Instant Download', '30-Day Refund', 'No Subscription'].map(t => (

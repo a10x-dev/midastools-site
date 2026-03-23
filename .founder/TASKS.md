@@ -17,7 +17,6 @@ Build trending products that help people make money. Research daily. Ship fast. 
 
 ### Product Pipeline
 - [ ] Build AI Prompt Mega Pack ($29) — high Gumroad demand signal (prompt packs = $1K+ first 2 months)
-- [ ] Build Small Business AI Kit ($49) — broad appeal, catchall for non-niche buyers
 - [ ] Build E-commerce AI Kit ($39) — product descriptions, email flows, ad copy
 
 ### Content / SEO
@@ -26,10 +25,11 @@ Build trending products that help people make money. Research daily. Ship fast. 
 - [ ] Create comparison pages (Midas Tools vs. individual AI tools)
 
 ### Infrastructure (Needs Founder)
+- [ ] Set Stripe Payment Link success URLs → /thank-you?kit=<type> for each product
 - [ ] Need GA4 analytics (NEXT_PUBLIC_GA_ID env var)
-- [ ] Need Stripe products: RE Kit ($49), Creator Kit ($39), Freelancer Kit ($39), Bundle ($97)
 - [ ] Need Gumroad account for marketplace distribution
 - [ ] Need email marketing tool (ConvertKit/Resend)
+- [ ] Deploy latest changes (git push)
 
 ## Done
 - [x] Baseline assessment completed
@@ -46,8 +46,12 @@ Build trending products that help people make money. Research daily. Ship fast. 
 - [x] Fixed blog/[slug].js syntax bug
 - [x] Added schedule entries
 - [x] Professional trust upgrade (shared Layout, text mark, consistent nav/footer)
+- [x] **CTA CONVERSION FIX** — all 5 product page hero CTAs now go direct to Stripe checkout (Session 9)
+- [x] **ALL KIT ZIPS BUILT** — 4 new kits with real content (10,838 lines total) (Session 9)
+- [x] **WEBHOOK ROUTING** — stripe-webhook.js detects product and sends correct download (Session 9)
+- [x] **THANK-YOU PAGE** — dynamic, shows correct kit + download based on ?kit= param (Session 9)
+- [x] **Small Business AI Kit ($39)** — /small-business-kit + deliverable ZIP (Session 9)
 
 ## Blocked
 - Analytics — need NEXT_PUBLIC_GA_ID env var
-- Stripe products — need checkout links for 4 new products
 - Gumroad — need account

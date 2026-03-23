@@ -27,6 +27,10 @@ Your long-term memory. Persists across all sessions. This is your brain — trea
 - n8n marketplace exists for selling automation templates (affiliate revenue model)
 - 3x more contracts connected to AI/automation in Q3 2025 vs Q3 2023
 
+## Conversion Rules (Founder Mandate)
+- **EVERY CTA on EVERY page must go directly to Stripe checkout** — no scroll-to-section, no intermediate steps. 1 click to buy.
+- All hero CTAs use `href={STRIPE_URL}` not `href="#buy"`
+
 ## Decisions Made
 - **2026-03-22**: Founder directive — build a product machine. Research trending, build fast, sell everywhere.
 - **2026-03-22**: Product strategy = niche AI kits at $39-49, then bundle at $97
@@ -36,6 +40,10 @@ Your long-term memory. Persists across all sessions. This is your brain — trea
 - **2026-03-22**: MAJOR: Professional trust upgrade — shared Layout component (nav+footer), removed emoji logo → "MIDAS·TOOLS" text mark, consistent nav across all 23 pages, professional 4-column footer with product/service/company links, removed "Built by an AI" footer text, cleaned up gimmicky badges, standardized contact email to iam@armando.mx
 - **2026-03-22 (S5)**: Freelancer Kit chosen over AI Prompt Pack or Small Biz Kit — 77% freelancer AI adoption + universal pain points (proposals, invoicing, scope creep) + $47 avg Gumroad price matches our $39
 - **2026-03-22 (S5)**: Bundle now 4 kits ($156 value → $97) — stronger value prop, 38% savings vs individual
+- **2026-03-22 (S9)**: CTA conversion fix — all hero CTAs now go direct to Stripe (was href="#buy" scrolling to section). Founder mandate: every page optimized for conversion, 1 click to buy.
+- **2026-03-22 (S9)**: Built ALL 4 kit ZIPs with real content (10,838 lines). Products are now deliverable.
+- **2026-03-22 (S9)**: Webhook now routes downloads by product — detects kit type via metadata, payment link ID, product name, or amount
+- **2026-03-22 (S9)**: Thank-you page is dynamic — shows correct kit + download link based on ?kit= query param. Bundle shows all 5 downloads.
 
 ## What Worked
 - Felix Craft case study is strongest social proof ($14,718 in 3 weeks)
@@ -54,7 +62,9 @@ Your long-term memory. Persists across all sessions. This is your brain — trea
 - Font: Inter (Google Fonts), weights 400-900
 - Mobile breakpoint: max-width 600px or 700px
 - Blog has mix of hosted posts and external links (dev.to, Medium)
-- Stripe checkout URLs: buy.stripe.com/4gM00i... (Kit), buy.stripe.com/cNi9AS... (Pro)
-- Need separate Stripe products for RE Kit, Creator Kit, Freelancer Kit, and Bundle
+- Stripe checkout URLs defined as STRIPE_URL constant at top of each page file
+- All 6 Stripe products exist. Founder needs to set success URLs to /thank-you?kit=<type>
+- Kit content lives in kit-content/ dir, ZIPs in public/. Use .founder/tools/build-kits.sh to rebuild ZIPs.
+- Webhook routing: stripe-webhook.js detects kit type via session.metadata.kit_type → payment_link → product_name → amount
 - External blog posts (dev.to) cannot be edited for internal links
 - Contact email standardized to iam@armando.mx across all pages

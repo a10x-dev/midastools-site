@@ -1,5 +1,4 @@
 import Head from 'next/head';
-import Link from 'next/link';
 import { useState } from 'react';
 import Layout from '../components/Layout';
 
@@ -62,7 +61,7 @@ export default function FreelancerKit() {
         <p style={{fontSize:18,color:'var(--gray-400)',maxWidth:560,margin:'0 auto 40px',lineHeight:1.7}}>
           AI templates that write proposals, chase invoices, onboard clients, and manage projects — so you spend time on billable work, not busywork.
         </p>
-        <a href="#buy" className="btn-primary">Get the Freelancer Kit &mdash; $39 &rarr;</a>
+        <a href={STRIPE_URL} className="btn-primary">Get the Freelancer Kit &mdash; $39 &rarr;</a>
         <p style={{marginTop:14,fontSize:14,color:'var(--gray-400)'}}>One-time payment &middot; Instant download &middot; 30-day money-back guarantee</p>
       </section>
 
@@ -172,9 +171,9 @@ export default function FreelancerKit() {
           <div style={{fontSize:12,fontWeight:700,color:'var(--gold)',textTransform:'uppercase',letterSpacing:1.5,marginBottom:8}}>Save 50%+</div>
           <p style={{fontSize:20,fontWeight:800,marginBottom:8}}>Get all 5 AI kits for $97</p>
           <p style={{color:'var(--gray-400)',fontSize:15,marginBottom:20,lineHeight:1.6}}>This kit + Starter Kit + Real Estate Kit + Content Creator Kit &mdash; plus every future kit free.</p>
-          <Link href="/bundle" style={{color:'var(--gold)',fontWeight:700,fontSize:15,textDecoration:'none'}}>
-            See the Bundle &rarr;
-          </Link>
+          <a href="https://buy.stripe.com/bJe7sK0tNdLjgle0pscMM0b" style={{color:'var(--gold)',fontWeight:700,fontSize:15,textDecoration:'none'}}>
+            Get the Bundle — $97 &rarr;
+          </a>
         </div>
       </section>
 

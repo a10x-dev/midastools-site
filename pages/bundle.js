@@ -8,10 +8,10 @@ export default function Bundle() {
   return (
     <Layout>
       <Head>
-        <title>AI Toolkit Bundle — All 4 Kits for $97 | Midas Tools</title>
-        <meta name="description" content="Get every Midas Tools AI kit in one bundle: Starter Kit, Real Estate Kit, Content Creator Kit, Freelancer Kit — plus all future kits free. $97 one-time." />
-        <meta property="og:title" content="AI Toolkit Bundle — All Kits for $97 | Midas Tools" />
-        <meta property="og:description" content="Every AI kit we make. One price. $97 one-time — save 38% vs buying separately. Includes all future kits free." />
+        <title>AI Toolkit Bundle — All 5 Kits for $97 | Midas Tools</title>
+        <meta name="description" content="Get every Midas Tools AI kit in one bundle: Starter Kit, Real Estate Kit, Content Creator Kit, Freelancer Kit, Small Business Kit — plus all future kits free. $97 one-time." />
+        <meta property="og:title" content="AI Toolkit Bundle — All 5 Kits for $97 | Midas Tools" />
+        <meta property="og:description" content="Every AI kit we make. One price. $97 one-time — save 50% vs buying separately. Includes all future kits free." />
         <meta property="og:url" content="https://www.midastools.co/bundle" />
         <meta property="og:image" content="https://www.midastools.co/og-image.png" />
         <meta name="twitter:card" content="summary_large_image" />
@@ -49,7 +49,7 @@ export default function Bundle() {
         </div>
 
         <div style={{display:'block'}}>
-          <a href="#buy" className="btn-primary">Get the Full Bundle &mdash; $97 &rarr;</a>
+          <a href={STRIPE_URL} className="btn-primary">Get the Full Bundle &mdash; $97 &rarr;</a>
         </div>
         <p style={{marginTop:14,fontSize:14,color:'var(--gray-400)'}}>One-time payment &middot; Instant download &middot; 30-day money-back guarantee</p>
       </section>

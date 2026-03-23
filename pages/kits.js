@@ -2,36 +2,43 @@ import Head from 'next/head';
 import Link from 'next/link';
 import Layout from '../components/Layout';
 
+const BUNDLE_STRIPE = 'https://buy.stripe.com/bJe7sK0tNdLjgle0pscMM0b';
+
 const kits = [
   {
     name: 'OpenClaw Starter Kit',
     price: '$29',
     desc: 'Templates, workflows, and prompts to deploy your first AI entrepreneur agent.',
     href: '/',
+    stripe: 'https://buy.stripe.com/cNi28qdgz7mVb0U8VYcMM07',
   },
   {
     name: 'Real Estate AI Kit',
     price: '$49',
     desc: 'Lead follow-up, listing descriptions, CMA summaries, and open house workflows for realtors.',
     href: '/real-estate-kit',
+    stripe: 'https://buy.stripe.com/fZueVcb8r6iR5GAfkmcMM08',
   },
   {
     name: 'Content Creator Kit',
     price: '$39',
     desc: 'Repurposing templates, headline formulas, and a 30-day content calendar generator.',
     href: '/content-creator-kit',
+    stripe: 'https://buy.stripe.com/eVq7sK90j36F4CwdcecMM09',
   },
   {
     name: 'Freelancer Automation Kit',
     price: '$39',
     desc: 'Proposal generators, invoice templates, and automated payment chasing sequences.',
     href: '/freelancer-kit',
+    stripe: 'https://buy.stripe.com/7sY3cu7Wfaz71qkfkmcMM0a',
   },
   {
     name: 'Small Business AI Kit',
     price: '$39',
     desc: 'Social media, email marketing, customer service, hiring, and operations templates for any small business.',
     href: '/small-business-kit',
+    stripe: 'https://buy.stripe.com/3cIaEW6SbcHfed6egicMM0c',
   },
 ];
 
@@ -120,7 +127,10 @@ export default function Kits() {
             <div className="kit-price">{kit.price}</div>
             <div className="kit-name">{kit.name}</div>
             <div className="kit-desc">{kit.desc}</div>
-            <Link href={kit.href} className="kit-link">View Kit &rarr;</Link>
+            <div style={{display:'flex',alignItems:'center',gap:16,marginTop:4}}>
+              <a href={kit.stripe} className="btn-primary" style={{fontSize:14,padding:'10px 20px'}}>Buy Now &rarr;</a>
+              <Link href={kit.href} className="kit-link">Details</Link>
+            </div>
           </div>
         ))}
       </div>
@@ -130,7 +140,7 @@ export default function Kits() {
           <div className="badge" style={{ marginBottom: 20 }}>Best Value</div>
           <h2>Get all 5 kits + future kits for <span>$97</span></h2>
           <p>Starter + Real Estate + Content Creator + Freelancer + Small Business Kit — plus every kit we release in the future, free.</p>
-          <Link href="/bundle" className="btn-primary">Get the Bundle — $97 &rarr;</Link>
+          <a href={BUNDLE_STRIPE} className="btn-primary">Get the Bundle — $97 &rarr;</a>
         </div>
       </div>
     </Layout>
