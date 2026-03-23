@@ -3,7 +3,7 @@ import { useState } from 'react';
 import Layout from '../components/Layout';
 
 // TODO: Replace with actual Stripe payment link for E-commerce AI Kit
-const STRIPE_URL = 'https://buy.stripe.com/PLACEHOLDER_ECOMMERCE_KIT';
+const STRIPE_URL = 'https://buy.stripe.com/cNi14mfoH0Yxb0Uc8acMM0e';
 
 export default function EcommerceKit() {
   const [email, setEmail] = useState('');

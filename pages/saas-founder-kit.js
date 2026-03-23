@@ -3,7 +3,7 @@ import { useState } from 'react';
 import Layout from '../components/Layout';
 
 // TODO: Replace with actual Stripe payment link for SaaS Founder Kit
-const STRIPE_URL = 'https://buy.stripe.com/PLACEHOLDER_SAAS_FOUNDER_KIT';
+const STRIPE_URL = 'https://buy.stripe.com/fZudR8dgz8qZ5GAfkmcMM0f';
 
 export default function SaasFounderKit() {
   const [email, setEmail] = useState('');

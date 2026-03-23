@@ -3,7 +3,7 @@ import { useState } from 'react';
 import Layout from '../components/Layout';
 
 // TODO: Founder — create Stripe product "AI Prompt Mega Pack" at $29 and paste Payment Link here
-const STRIPE_URL = 'https://buy.stripe.com/PLACEHOLDER_PROMPT_MEGA_PACK';
+const STRIPE_URL = 'https://buy.stripe.com/4gMbJ0dgz4aJ1qkb46cMM0d';
 
 export default function AIPromptMegaPack() {
   const [email, setEmail] = useState('');

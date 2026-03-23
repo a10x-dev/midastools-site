@@ -114,7 +114,7 @@ Tone: genuine concern, not desperation. Never say "we miss you." Focus on the va
         <div style={{ marginTop: '48px', marginBottom: '48px', padding: '32px', background: '#F0F4FF', border: '1px solid #93B4FF', borderRadius: '8px' }}>
           <h3 style={{ margin: '0 0 8px', fontSize: '1.1rem' }}>Get 135+ SaaS-specific prompts &mdash; ready to use today</h3>
           <p style={{ margin: '0 0 16px', color: '#6B7280', fontSize: '15px' }}>The <strong>SaaS Founder AI Kit</strong> includes templates for launch validation, onboarding sequences, churn prevention, growth marketing, pricing strategies, and customer success &mdash; built for founders going from 0 to $10K MRR. $39 one-time.</p>
-          <a href="https://buy.stripe.com/PLACEHOLDER_SAAS_FOUNDER_KIT" style={{ display: 'inline-block', background: '#3B5FFF', color: '#FFFFFF', padding: '12px 24px', borderRadius: '6px', textDecoration: 'none', fontWeight: '700', fontSize: '15px' }}>
+          <a href="https://buy.stripe.com/fZudR8dgz8qZ5GAfkmcMM0f" style={{ display: 'inline-block', background: '#3B5FFF', color: '#FFFFFF', padding: '12px 24px', borderRadius: '6px', textDecoration: 'none', fontWeight: '700', fontSize: '15px' }}>
             Get the SaaS Founder Kit &mdash; $39
           </a>
         </div>

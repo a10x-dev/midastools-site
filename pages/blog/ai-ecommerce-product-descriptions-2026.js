@@ -160,7 +160,7 @@ Rules: The copy must sound like a human wrote it. If I can tell keywords were in
         <div style={{ marginTop: '48px', padding: '32px', background: '#F0F4FF', border: '1px solid #93B4FF', borderRadius: '8px' }}>
           <h3 style={{ margin: '0 0 8px', fontSize: '1.1rem' }}>Want 30+ more product description prompts?</h3>
           <p style={{ margin: '0 0 16px', color: '#6B7280', fontSize: '15px' }}>The <strong>E-commerce AI Kit</strong> includes every prompt in this article plus templates for Amazon listings, Shopify stores, Etsy shops, email sequences, and ad copy. One download. Every product page on your store, optimized. $39 one-time.</p>
-          <a href="https://buy.stripe.com/PLACEHOLDER_ECOMMERCE_KIT" style={{ display: 'inline-block', background: '#3B5FFF', color: '#fff', padding: '12px 24px', borderRadius: '6px', textDecoration: 'none', fontWeight: '700', fontSize: '15px' }}>
+          <a href="https://buy.stripe.com/cNi14mfoH0Yxb0Uc8acMM0e" style={{ display: 'inline-block', background: '#3B5FFF', color: '#fff', padding: '12px 24px', borderRadius: '6px', textDecoration: 'none', fontWeight: '700', fontSize: '15px' }}>
             Get the E-commerce AI Kit &mdash; $39
           </a>
         </div>
@@ -331,7 +331,7 @@ Then tell me: which variant to test first and why, what metric to track, and how
           <h3 style={{ margin: '0 0 8px', fontSize: '1.1rem' }}>Get the full E-commerce AI Kit</h3>
           <p style={{ margin: '0 0 16px', color: '#6B7280', fontSize: '15px' }}>Every prompt in this article plus 30+ more &mdash; Amazon listing templates, Shopify product pages, Etsy SEO descriptions, email sequences for abandoned carts, ad copy for Facebook and Google Shopping. One kit. Every product page on your store, optimized to convert. $39 one-time.</p>
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px', alignItems: 'center' }}>
-            <a href="https://buy.stripe.com/PLACEHOLDER_ECOMMERCE_KIT" style={{ display: 'inline-block', background: '#3B5FFF', color: '#fff', padding: '12px 24px', borderRadius: '6px', textDecoration: 'none', fontWeight: '700', fontSize: '15px' }}>
+            <a href="https://buy.stripe.com/cNi14mfoH0Yxb0Uc8acMM0e" style={{ display: 'inline-block', background: '#3B5FFF', color: '#fff', padding: '12px 24px', borderRadius: '6px', textDecoration: 'none', fontWeight: '700', fontSize: '15px' }}>
               Get the E-commerce AI Kit &mdash; $39
             </a>
             <a href="https://buy.stripe.com/aEUbJ01xR0YxgligkocMM0g" style={{ display: 'inline-block', background: '#111827', color: '#fff', padding: '12px 24px', borderRadius: '6px', textDecoration: 'none', fontWeight: '700', fontSize: '15px' }}>

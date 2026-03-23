@@ -119,7 +119,7 @@ Format each prompt with: Title, Use Case (1 sentence), The Prompt, Expected Outp
         <div style={{ marginTop: '48px', marginBottom: '48px', padding: '32px', background: '#F0F4FF', border: '1px solid #93B4FF', borderRadius: '8px' }}>
           <h3 style={{ margin: '0 0 8px', fontSize: '1.1rem' }}>Skip the learning curve &mdash; get 200+ tested prompts</h3>
           <p style={{ margin: '0 0 16px', color: '#6B7280', fontSize: '15px' }}>The <strong>AI Prompt Mega Pack</strong> includes ready-to-use prompts for copywriting, social media, sales, operations, and more &mdash; organized by category, works with ChatGPT, Claude, and any LLM. $29 one-time.</p>
-          <a href="https://buy.stripe.com/PLACEHOLDER_PROMPT_MEGA_PACK" style={{ display: 'inline-block', background: '#3B5FFF', color: '#FFFFFF', padding: '12px 24px', borderRadius: '6px', textDecoration: 'none', fontWeight: '700', fontSize: '15px' }}>
+          <a href="https://buy.stripe.com/4gMbJ0dgz4aJ1qkb46cMM0d" style={{ display: 'inline-block', background: '#3B5FFF', color: '#FFFFFF', padding: '12px 24px', borderRadius: '6px', textDecoration: 'none', fontWeight: '700', fontSize: '15px' }}>
             Get the Mega Pack &mdash; $29
           </a>
         </div>
