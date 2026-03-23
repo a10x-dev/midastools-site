@@ -17,18 +17,17 @@ Build trending products that help people make money. Research daily. Ship fast. 
 - [ ] List all products on Gumroad for marketplace distribution
 
 ### Content / SEO
-- [ ] Write blog: "200+ AI Prompts That Actually Work (2026 Mega List)" — drives Mega Pack traffic
-- [ ] Write blog: "5 AI Tools Every Small Business Owner Needs in 2026"
 - [ ] Write blog: "How to Price Your Freelance Services with AI (2026 Guide)"
 - [ ] Write blog: "Best ChatGPT Prompts for Business in 2026"
 - [ ] Create comparison pages (Midas Tools vs. individual AI tools)
 
 ### Product Pipeline
-- [ ] Build E-commerce AI Kit ($39) — product descriptions, email flows, ad copy
 - [ ] Build SaaS Founder AI Kit ($39) — launch playbooks, onboarding, churn prevention
+- [ ] Write blog targeting e-commerce keywords to drive E-commerce Kit traffic
 
 ### Infrastructure (Needs Founder)
 - [ ] **Create Stripe Product**: "AI Prompt Mega Pack" at $29 — replace PLACEHOLDER_PROMPT_MEGA_PACK in ai-prompt-mega-pack.js and kits.js
+- [ ] **Create Stripe Product**: "E-commerce AI Kit" at $39 — replace PLACEHOLDER_ECOMMERCE_KIT in ecommerce-kit.js and kits.js
 - [ ] Set Stripe Payment Link success URLs → /thank-you?kit=<type> for each product (including ?kit=prompt-mega-pack)
 - [ ] Need GA4 analytics (NEXT_PUBLIC_GA_ID env var)
 - [ ] Need Gumroad account for marketplace distribution
@@ -57,8 +56,14 @@ Build trending products that help people make money. Research daily. Ship fast. 
 - [x] **Small Business AI Kit ($39)** — /small-business-kit + deliverable ZIP (Session 9)
 - [x] **AI PROMPT MEGA PACK ($29)** — 200+ prompts, 3,331 lines, 6 categories, full product page with SEO, ZIP built, integrated into all systems (Session 10)
 - [x] **BUNDLE UPGRADED** — Now 6 products, value anchor $224, 57% savings (Session 10)
+- [x] **3 BROKEN BLOG LINKS FIXED** — ai-tools-small-business-owners-2026, ai-small-business-automation-2026, automate-client-follow-up-ai now have full standalone pages with SEO + Stripe CTAs (Session 12)
+- [x] **[slug].js CLEANED** — Removed 3 duplicate entries, fixed path conflicts, updated bundle CTA (Session 12)
+- [x] **REDDIT DISTRIBUTION DRAFTS** — 6 posts for r/ChatGPT, r/realestate, r/freelance, r/smallbusiness, r/content_marketing, r/Entrepreneur — copy-paste ready (Session 12)
+- [x] **E-COMMERCE AI KIT ($39)** — 155+ prompts, 4,954 lines, product page, ZIP (68K), integrated into all systems (Session 12)
+- [x] **BUNDLE UPGRADED TO 7 KITS** — Value anchor $263, 63% savings at $97 (Session 12)
 
 ## Blocked
 - Analytics — need NEXT_PUBLIC_GA_ID env var
 - Gumroad — need account
 - Mega Pack checkout — need Stripe Payment Link (PLACEHOLDER in code)
+- E-commerce Kit checkout — need Stripe Payment Link (PLACEHOLDER in code)

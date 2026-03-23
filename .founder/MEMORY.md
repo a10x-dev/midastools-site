@@ -10,7 +10,9 @@ Your long-term memory. Persists across all sessions. This is your brain — trea
 - **Felix Craft**: Proof-of-concept agent that earned $14,718 in 3 weeks (key case study)
 - **Admin email**: rmidas26@gmail.com, also iam@armando.mx
 - **Cal.com link**: cal.com/manduks/midastools
-- **Site pages**: 30 pages total (build output), including dynamic blog
+- **Site pages**: 31 pages total (build output), including dynamic blog
+- **Blog posts**: 8 hosted standalone posts + 7 in [slug].js dynamic route + external dev.to posts
+- **Reddit drafts**: .founder/deliverables/reddit-distribution-posts.md — 6 posts ready to copy-paste
 - **AI Receptionist market**: Competitors range $25-$199/mo. Midas at $499 setup + $299/mo is premium-priced.
 
 ## Market Research (March 2026)

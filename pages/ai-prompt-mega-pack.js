@@ -264,8 +264,8 @@ export default function AIPromptMegaPack() {
       <section style={{paddingTop:0}}>
         <div style={{background:'rgba(245,200,66,0.04)', border:'1px solid rgba(245,200,66,0.15)', borderRadius:16, padding:32, textAlign:'center'}}>
           <div style={{fontSize:12, fontWeight:700, color:'var(--gold)', textTransform:'uppercase', letterSpacing:1}}>Want Industry-Specific Prompts Too?</div>
-          <p style={{fontSize:20, fontWeight:800, marginBottom:4, marginTop:8}}>Get all 5 AI kits + Mega Pack for $97</p>
-          <p style={{fontSize:14, color:'var(--gray-400)', marginBottom:16}}>Real Estate + Content Creator + Freelancer + Small Business + Starter Kit</p>
+          <p style={{fontSize:20, fontWeight:800, marginBottom:4, marginTop:8}}>Get all 8 AI kits + Mega Pack for $97</p>
+          <p style={{fontSize:14, color:'var(--gray-400)', marginBottom:16}}>Real Estate + Content Creator + Freelancer + Small Business + E-commerce + SaaS Founder + Starter Kit. Save 68%.</p>
           <a href="https://buy.stripe.com/bJe7sK0tNdLjgle0pscMM0b" style={{color:'var(--gold)', fontWeight:700, fontSize:15, textDecoration:'none'}}>
             Get the Bundle — $97 →
           </a>

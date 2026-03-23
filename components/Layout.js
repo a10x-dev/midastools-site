@@ -209,6 +209,8 @@ export default function Layout({ children }) {
         <Link href="/content-creator-kit">Content Creator Kit</Link>
         <Link href="/freelancer-kit">Freelancer Kit</Link>
         <Link href="/small-business-kit">Small Business Kit</Link>
+        <Link href="/ecommerce-kit">E-commerce Kit</Link>
+        <Link href="/saas-founder-kit">SaaS Founder Kit</Link>
         <Link href="/bundle" className="mobile-cta">Get All Kits — $97</Link>
       </div>
 
@@ -232,6 +234,8 @@ export default function Layout({ children }) {
             <Link href="/content-creator-kit">Creator Kit</Link>
             <Link href="/freelancer-kit">Freelancer Kit</Link>
             <Link href="/small-business-kit">Small Business Kit</Link>
+            <Link href="/ecommerce-kit">E-commerce Kit</Link>
+            <Link href="/saas-founder-kit">SaaS Founder Kit</Link>
             <Link href="/bundle">All Kits Bundle</Link>
           </div>
           <div className="footer-col">

@@ -48,6 +48,22 @@ const kits = [
     href: '/small-business-kit',
     stripe: 'https://buy.stripe.com/3cIaEW6SbcHfed6egicMM0c',
   },
+  {
+    name: 'E-commerce AI Kit',
+    price: '$39',
+    desc: 'Product descriptions, email sequences, ad copy, and SEO templates for online stores.',
+    href: '/ecommerce-kit',
+    stripe: 'https://buy.stripe.com/PLACEHOLDER_ECOMMERCE_KIT',
+    badge: 'NEW',
+  },
+  {
+    name: 'SaaS Founder AI Kit',
+    price: '$39',
+    desc: 'Launch playbooks, onboarding sequences, churn prevention, and growth marketing for SaaS builders.',
+    href: '/saas-founder-kit',
+    stripe: 'https://buy.stripe.com/PLACEHOLDER_SAAS_FOUNDER_KIT',
+    badge: 'NEW',
+  },
 ];
 
 export default function Kits() {
@@ -146,8 +162,8 @@ export default function Kits() {
       <div className="bundle-upsell">
         <div className="bundle-box">
           <div className="badge" style={{ marginBottom: 20 }}>Best Value</div>
-          <h2>Get all 6 kits + future kits for <span>$97</span></h2>
-          <p>Prompt Mega Pack + Starter + Real Estate + Content Creator + Freelancer + Small Business Kit — plus every kit we release in the future, free.</p>
+          <h2>Get all 8 kits + future kits for <span>$97</span></h2>
+          <p>Prompt Mega Pack + Starter + Real Estate + Content Creator + Freelancer + Small Business + E-commerce + SaaS Founder Kit — plus every kit we release in the future, free.</p>
           <a href={BUNDLE_STRIPE} className="btn-primary">Get the Bundle — $97 &rarr;</a>
         </div>
       </div>

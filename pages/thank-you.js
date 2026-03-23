@@ -33,6 +33,16 @@ const KITS = {
     file: 'ai-prompt-mega-pack.zip',
     items: ['35+ Copywriting & Sales prompts', '35+ Social Media & Growth prompts', '35+ Content Creation prompts', '35+ Business Operations prompts', '35+ Personal Branding prompts', '35+ Productivity & Automation prompts'],
   },
+  'ecommerce': {
+    name: 'E-commerce AI Kit',
+    file: 'ecommerce-kit.zip',
+    items: ['Product description generator (30+ prompts)', 'Email marketing sequences (25+ templates)', 'Ad copy templates (25+ prompts)', 'Social media for e-commerce (25+ prompts)', 'Customer communication scripts (20+)', 'SEO content strategy (20+ frameworks)'],
+  },
+  'saas-founder': {
+    name: 'SaaS Founder AI Kit',
+    file: 'saas-founder-kit.zip',
+    items: ['Launch playbook & Product Hunt copy (25+ prompts)', 'Onboarding & activation sequences (25+ templates)', 'Churn prevention campaigns (20+ sequences)', 'Growth marketing frameworks (25+ prompts)', 'Customer success scripts (20+)', 'Pricing & positioning copy (20+ prompts)'],
+  },
   'bundle': {
     name: 'Complete AI Toolkit Bundle',
     file: null,
@@ -43,8 +53,10 @@ const KITS = {
       { name: 'Content Creator AI Kit', file: 'content-creator-kit.zip' },
       { name: 'Freelancer AI Kit', file: 'freelancer-kit.zip' },
       { name: 'Small Business AI Kit', file: 'small-business-kit.zip' },
+      { name: 'E-commerce AI Kit', file: 'ecommerce-kit.zip' },
+      { name: 'SaaS Founder AI Kit', file: 'saas-founder-kit.zip' },
     ],
-    items: ['AI Prompt Mega Pack (200+ prompts)', 'OpenClaw Starter Kit', 'Real Estate AI Kit', 'Content Creator AI Kit', 'Freelancer AI Kit', 'Small Business AI Kit', 'All future kits — free, forever'],
+    items: ['AI Prompt Mega Pack (200+ prompts)', 'OpenClaw Starter Kit', 'Real Estate AI Kit', 'Content Creator AI Kit', 'Freelancer AI Kit', 'Small Business AI Kit', 'E-commerce AI Kit', 'SaaS Founder AI Kit', 'All future kits — free, forever'],
   },
 };
 
@@ -112,7 +124,7 @@ export default function ThankYou() {
 
         {!isBundle && (
           <div style={{background:'rgba(245,200,66,0.06)',border:'1px solid rgba(245,200,66,0.2)',borderRadius:12,padding:'20px 24px',marginBottom:24,textAlign:'left'}}>
-            <p style={{fontSize:14,fontWeight:700,color:'var(--gold)',marginBottom:6}}>Want all 5 kits? Save 50%</p>
+            <p style={{fontSize:14,fontWeight:700,color:'var(--gold)',marginBottom:6}}>Want all 8 kits? Save 68%</p>
             <p style={{fontSize:14,color:'var(--gray-400)',lineHeight:1.5}}>Get the <a href="https://buy.stripe.com/bJe7sK0tNdLjgle0pscMM0b" style={{color:'var(--gold)',fontWeight:700}}>Complete Bundle for $97</a> — includes every kit plus all future releases free.</p>
           </div>
         )}

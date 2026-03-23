@@ -224,8 +224,8 @@ export default function SmallBusinessKit() {
       <section style={{paddingTop:0}}>
         <div style={{background:'rgba(245,200,66,0.04)',border:'1px solid rgba(245,200,66,0.15)',borderRadius:16,padding:32,textAlign:'center'}}>
           <div style={{fontSize:12,fontWeight:700,color:'var(--gold)',textTransform:'uppercase',letterSpacing:1.5,marginBottom:8}}>Best Value</div>
-          <p style={{fontSize:20,fontWeight:800,marginBottom:8}}>Get all 5 AI kits for $97</p>
-          <p style={{color:'var(--gray-400)',fontSize:15,marginBottom:20,lineHeight:1.6}}>This kit + Starter Kit + Real Estate Kit + Content Creator Kit + Freelancer Kit &mdash; plus every future kit free.</p>
+          <p style={{fontSize:20,fontWeight:800,marginBottom:8}}>Get all 8 AI kits for $97</p>
+          <p style={{color:'var(--gray-400)',fontSize:15,marginBottom:20,lineHeight:1.6}}>This kit + 7 more niche AI kits &mdash; plus every future kit free. Save 68%.</p>
           <a href="https://buy.stripe.com/bJe7sK0tNdLjgle0pscMM0b" style={{color:'var(--gold)',fontWeight:700,fontSize:15,textDecoration:'none'}}>
             Get the Bundle — $97 &rarr;
           </a>

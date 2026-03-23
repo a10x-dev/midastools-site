@@ -318,7 +318,7 @@ export default function Home() {
         <div className="pricing-grid">
           {[
             { label: 'Start Here', price: '$29', term: 'one-time', name: 'Starter Kit', desc: 'Templates, workflows, and prompts to deploy your first AI agent yourself.', href: STRIPE_URL, cta: 'Get the Kit \u2192', featured: false },
-            { label: 'Best Value', price: '$97', term: 'one-time', name: 'All Kits Bundle', desc: '6 AI kits + all future kits free. Prompt Mega Pack, Starter, Real Estate, Content Creator, Freelancer, and Small Business.', href: 'https://buy.stripe.com/bJe7sK0tNdLjgle0pscMM0b', cta: 'Get the Bundle \u2192', featured: true },
+            { label: 'Best Value', price: '$97', term: 'one-time', name: 'All Kits Bundle', desc: '8 AI kits + all future kits free. Save 68% vs buying separately.', href: 'https://buy.stripe.com/aEUbJ01xR0YxgligkocMM0g', cta: 'Get the Bundle \u2192', featured: true },
           ].map(p => (
             <div key={p.name} className={`pricing-card${p.featured ? ' featured' : ''}`}>
               <span className="badge" style={{ fontSize: 11, padding: '4px 10px', letterSpacing: 1 }}>{p.label}</span>

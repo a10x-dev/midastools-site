@@ -8,10 +8,10 @@ export default function Bundle() {
   return (
     <Layout>
       <Head>
-        <title>AI Toolkit Bundle — All 5 Kits for $97 | Midas Tools</title>
-        <meta name="description" content="Get every Midas Tools AI kit in one bundle: Starter Kit, Real Estate Kit, Content Creator Kit, Freelancer Kit, Small Business Kit — plus all future kits free. $97 one-time." />
-        <meta property="og:title" content="AI Toolkit Bundle — All 5 Kits for $97 | Midas Tools" />
-        <meta property="og:description" content="Every AI kit we make. One price. $97 one-time — save 50% vs buying separately. Includes all future kits free." />
+        <title>AI Toolkit Bundle — All 8 Kits for $97 | Midas Tools</title>
+        <meta name="description" content="Get every Midas Tools AI kit in one bundle: Prompt Mega Pack, Starter Kit, Real Estate, Content Creator, Freelancer, Small Business, E-commerce, and SaaS Founder Kit — plus all future kits free. $97 one-time. Save 68%." />
+        <meta property="og:title" content="AI Toolkit Bundle — All 8 Kits for $97 | Midas Tools" />
+        <meta property="og:description" content="Every AI kit we make. One price. $97 one-time — save 68% vs buying separately. Includes all future kits free." />
         <meta property="og:url" content="https://www.midastools.co/bundle" />
         <meta property="og:image" content="https://www.midastools.co/og-image.png" />
         <meta name="twitter:card" content="summary_large_image" />
@@ -57,7 +57,7 @@ export default function Bundle() {
       {/* What's Included */}
       <section style={{paddingTop:0}}>
         <div className="section-label">What's Included</div>
-        <h2>6 complete kits + lifetime updates</h2>
+        <h2>8 complete kits + lifetime updates</h2>
         <p style={{color:'var(--gray-400)',fontSize:16,marginBottom:48,lineHeight:1.7}}>Everything you need to automate your business, your content, and your client pipeline.</p>
 
         <div className="kits-grid">
@@ -97,6 +97,18 @@ export default function Bundle() {
               desc: 'Automate social media, email marketing, customer service, hiring, and daily operations for any small business.',
               link: '/small-business-kit',
               items: ['Social media content engine', 'Email marketing templates', 'Customer service scripts', 'Hiring & HR templates', 'Sales follow-up sequences'],
+            },
+            {
+              abbr: 'EC', name: 'E-commerce AI Kit', price: '$39',
+              desc: 'Product descriptions, email flows, ad copy, and SEO templates for online stores and DTC brands.',
+              link: '/ecommerce-kit',
+              items: ['Product description generator', 'Email marketing sequences', 'Ad copy templates', 'Social media for e-commerce', 'SEO content strategy'],
+            },
+            {
+              abbr: 'SF', name: 'SaaS Founder AI Kit', price: '$39',
+              desc: 'Launch playbooks, onboarding sequences, churn prevention, and growth marketing for SaaS builders.',
+              link: '/saas-founder-kit',
+              items: ['Launch playbook & Product Hunt copy', 'Onboarding & activation emails', 'Churn prevention sequences', 'Growth marketing frameworks', 'Pricing & positioning copy'],
             },
           ].map(kit => (
             <div key={kit.name} className="kit-card">
@@ -140,8 +152,10 @@ export default function Bundle() {
               { label: 'Content Creator Kit', ind: '$39', bun: '\u2713' },
               { label: 'Freelancer Kit', ind: '$39', bun: '\u2713' },
               { label: 'Small Business Kit', ind: '$39', bun: '\u2713' },
+              { label: 'E-commerce Kit', ind: '$39', bun: '\u2713' },
+              { label: 'SaaS Founder Kit', ind: '$39', bun: '\u2713' },
               { label: 'Future kits', ind: 'Extra cost', bun: 'Included' },
-              { label: 'Total', ind: '$224+', bun: '$97' },
+              { label: 'Total', ind: '$302+', bun: '$97' },
             ].map((row, i) => (
               <div key={row.label} style={{display:'contents'}}>
                 <div style={{padding:'12px 20px',borderBottom: i < 6 ? '1px solid var(--gray-800)' : 'none',borderRight:'1px solid var(--gray-800)',fontSize:14,fontWeight: row.label === 'Total' ? 800 : 400}}>{row.label}</div>
@@ -159,10 +173,10 @@ export default function Bundle() {
           <div className="badge" style={{marginBottom:20}}>Best Value</div>
           <h2 style={{marginBottom:8}}>The Complete AI Toolkit</h2>
           <div style={{display:'flex',alignItems:'baseline',justifyContent:'center',gap:16,margin:'16px 0 4px'}}>
-            <span style={{fontSize:24,color:'var(--gray-400)',textDecoration:'line-through',fontWeight:700}}>$224</span>
+            <span style={{fontSize:24,color:'var(--gray-400)',textDecoration:'line-through',fontWeight:700}}>$302</span>
             <span style={{fontSize:48,fontWeight:900,color:'var(--gold)'}}>$97</span>
           </div>
-          <div style={{color:'var(--gray-400)',fontSize:15,marginBottom:32}}>One-time payment &middot; All 6 kits + future kits free</div>
+          <div style={{color:'var(--gray-400)',fontSize:15,marginBottom:32}}>One-time payment &middot; All 8 kits + future kits free</div>
           <ul style={{listStyle:'none',textAlign:'left',marginBottom:32}}>
             {[
               'AI Prompt Mega Pack ($29 value)',
@@ -171,6 +185,8 @@ export default function Bundle() {
               'Content Creator AI Kit ($39 value)',
               'Freelancer Automation Kit ($39 value)',
               'Small Business AI Kit ($39 value)',
+              'E-commerce AI Kit ($39 value)',
+              'SaaS Founder AI Kit ($39 value)',
               'All future niche kits — included free',
               'Lifetime updates on all products',
               '30-day money-back guarantee',

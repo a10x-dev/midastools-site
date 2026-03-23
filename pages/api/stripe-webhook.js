@@ -98,6 +98,34 @@ const KIT_MAP = {
       'Pro tips & best practices for each category',
     ],
   },
+  'ecommerce': {
+    name: 'E-commerce AI Kit',
+    file: 'ecommerce-kit.zip',
+    subject: 'Your E-commerce AI Kit is ready',
+    items: [
+      'Product description generator (30+ prompts for every format)',
+      'Email marketing sequences (welcome, abandoned cart, win-back)',
+      'Ad copy templates (Facebook, Google, TikTok, Pinterest)',
+      'Social media for e-commerce (product posts, UGC, stories)',
+      'Customer communication scripts (orders, returns, reviews)',
+      'SEO content strategy (collection pages, buying guides, meta tags)',
+      'Complete setup guide',
+    ],
+  },
+  'saas-founder': {
+    name: 'SaaS Founder AI Kit',
+    file: 'saas-founder-kit.zip',
+    subject: 'Your SaaS Founder AI Kit is ready',
+    items: [
+      'Launch playbook & Product Hunt copy (25+ prompts)',
+      'Onboarding & activation email sequences (25+ templates)',
+      'Churn prevention campaigns (20+ sequences)',
+      'Growth marketing frameworks (25+ prompts)',
+      'Customer success scripts (20+ templates)',
+      'Pricing & positioning copy (20+ prompts)',
+      'Complete setup guide',
+    ],
+  },
   'bundle': {
     name: 'All Kits Bundle',
     file: null, // Multiple files
@@ -108,6 +136,8 @@ const KIT_MAP = {
       'Content Creator AI Kit (repurposing + scripts + calendar)',
       'Freelancer AI Kit (proposals + invoicing + onboarding)',
       'Small Business AI Kit (social + email + operations)',
+      'E-commerce AI Kit (product descriptions + email + ads)',
+      'SaaS Founder AI Kit (launch + onboarding + churn prevention)',
       'All future kits — free, forever',
     ],
     files: [
@@ -117,6 +147,8 @@ const KIT_MAP = {
       { name: 'Content Creator AI Kit', file: 'content-creator-kit.zip' },
       { name: 'Freelancer AI Kit', file: 'freelancer-kit.zip' },
       { name: 'Small Business AI Kit', file: 'small-business-kit.zip' },
+      { name: 'E-commerce AI Kit', file: 'ecommerce-kit.zip' },
+      { name: 'SaaS Founder AI Kit', file: 'saas-founder-kit.zip' },
     ],
   },
 };
@@ -155,6 +187,8 @@ function detectKit(session) {
   if (productName.includes('content creator') || productName.includes('creator')) return KIT_MAP['content-creator'];
   if (productName.includes('freelancer')) return KIT_MAP['freelancer'];
   if (productName.includes('small business')) return KIT_MAP['small-business'];
+  if (productName.includes('e-commerce') || productName.includes('ecommerce')) return KIT_MAP['ecommerce'];
+  if (productName.includes('saas') || productName.includes('founder kit')) return KIT_MAP['saas-founder'];
   if (productName.includes('bundle') || productName.includes('all kits')) return KIT_MAP['bundle'];
 
   // Check amount as last resort
