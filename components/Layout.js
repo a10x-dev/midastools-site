@@ -203,6 +203,7 @@ export default function Layout({ children }) {
         <Link href="/">Home</Link>
         <Link href="/kits">Kits</Link>
         <Link href="/blog">Blog</Link>
+        <Link href="/ai-prompt-mega-pack">Prompt Mega Pack</Link>
         <Link href="/">Starter Kit</Link>
         <Link href="/real-estate-kit">Real Estate Kit</Link>
         <Link href="/content-creator-kit">Content Creator Kit</Link>
@@ -225,6 +226,7 @@ export default function Layout({ children }) {
           </div>
           <div className="footer-col">
             <h4>Products</h4>
+            <Link href="/ai-prompt-mega-pack">Prompt Mega Pack</Link>
             <Link href="/">Starter Kit</Link>
             <Link href="/real-estate-kit">Real Estate Kit</Link>
             <Link href="/content-creator-kit">Creator Kit</Link>

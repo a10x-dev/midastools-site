@@ -28,17 +28,23 @@ const KITS = {
     file: 'small-business-kit.zip',
     items: ['Social media content engine', 'Email marketing templates', 'Customer service scripts', 'Hiring & HR template library', 'Business operations prompts', 'Sales & lead follow-up sequences'],
   },
+  'prompt-mega-pack': {
+    name: 'AI Prompt Mega Pack',
+    file: 'ai-prompt-mega-pack.zip',
+    items: ['35+ Copywriting & Sales prompts', '35+ Social Media & Growth prompts', '35+ Content Creation prompts', '35+ Business Operations prompts', '35+ Personal Branding prompts', '35+ Productivity & Automation prompts'],
+  },
   'bundle': {
     name: 'Complete AI Toolkit Bundle',
     file: null,
     files: [
+      { name: 'AI Prompt Mega Pack', file: 'ai-prompt-mega-pack.zip' },
       { name: 'OpenClaw Starter Kit', file: 'openclaw-starter-kit.zip' },
       { name: 'Real Estate AI Kit', file: 'real-estate-kit.zip' },
       { name: 'Content Creator AI Kit', file: 'content-creator-kit.zip' },
       { name: 'Freelancer AI Kit', file: 'freelancer-kit.zip' },
       { name: 'Small Business AI Kit', file: 'small-business-kit.zip' },
     ],
-    items: ['OpenClaw Starter Kit', 'Real Estate AI Kit', 'Content Creator AI Kit', 'Freelancer AI Kit', 'Small Business AI Kit', 'All future kits — free, forever'],
+    items: ['AI Prompt Mega Pack (200+ prompts)', 'OpenClaw Starter Kit', 'Real Estate AI Kit', 'Content Creator AI Kit', 'Freelancer AI Kit', 'Small Business AI Kit', 'All future kits — free, forever'],
   },
 };
 

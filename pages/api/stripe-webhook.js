@@ -84,6 +84,20 @@ const KIT_MAP = {
       'Complete setup guide',
     ],
   },
+  'prompt-mega-pack': {
+    name: 'AI Prompt Mega Pack',
+    file: 'ai-prompt-mega-pack.zip',
+    subject: 'Your AI Prompt Mega Pack is ready',
+    items: [
+      '35+ Copywriting & Sales prompts (headlines, sales pages, email sequences, ads)',
+      '35+ Social Media prompts (threads, carousels, TikTok scripts, content calendars)',
+      '35+ Content Creation prompts (blogs, YouTube scripts, newsletters, SEO)',
+      '35+ Business Operations prompts (emails, SOPs, hiring, customer service)',
+      '35+ Personal Branding prompts (LinkedIn, resumes, thought leadership, pitches)',
+      '35+ Productivity prompts (decision frameworks, automation, goal tracking)',
+      'Pro tips & best practices for each category',
+    ],
+  },
   'bundle': {
     name: 'All Kits Bundle',
     file: null, // Multiple files
@@ -97,6 +111,7 @@ const KIT_MAP = {
       'All future kits — free, forever',
     ],
     files: [
+      { name: 'AI Prompt Mega Pack', file: 'ai-prompt-mega-pack.zip' },
       { name: 'OpenClaw Starter Kit', file: 'openclaw-starter-kit.zip' },
       { name: 'Real Estate AI Kit', file: 'real-estate-kit.zip' },
       { name: 'Content Creator AI Kit', file: 'content-creator-kit.zip' },
@@ -135,6 +150,7 @@ function detectKit(session) {
 
   // Check product/line item name as fallback
   const productName = (session.metadata?.product_name || '').toLowerCase();
+  if (productName.includes('prompt') || productName.includes('mega pack')) return KIT_MAP['prompt-mega-pack'];
   if (productName.includes('real estate')) return KIT_MAP['real-estate'];
   if (productName.includes('content creator') || productName.includes('creator')) return KIT_MAP['content-creator'];
   if (productName.includes('freelancer')) return KIT_MAP['freelancer'];

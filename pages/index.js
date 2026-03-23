@@ -178,7 +178,7 @@ export default function Home() {
       {/* Announcement bar */}
       <div style={{ background: 'linear-gradient(90deg, rgba(245,200,66,0.06), rgba(245,200,66,0.12), rgba(245,200,66,0.06))', borderBottom: '1px solid var(--gray-800)', padding: '10px 40px', textAlign: 'center', fontSize: 13, fontWeight: 500 }}>
         <a href="/bundle" style={{ color: 'var(--gray-200)', textDecoration: 'none' }}>
-          New: All Kits Bundle — 5 AI kits for $97
+          New: All Kits Bundle — 6 AI kits for $97
           <span style={{ color: 'var(--gold)', fontWeight: 700, marginLeft: 8 }}>View bundle &rarr;</span>
         </a>
       </div>
@@ -318,7 +318,7 @@ export default function Home() {
         <div className="pricing-grid">
           {[
             { label: 'Start Here', price: '$29', term: 'one-time', name: 'Starter Kit', desc: 'Templates, workflows, and prompts to deploy your first AI agent yourself.', href: STRIPE_URL, cta: 'Get the Kit \u2192', featured: false },
-            { label: 'Best Value', price: '$97', term: 'one-time', name: 'All Kits Bundle', desc: '5 niche AI kits + all future kits free. Starter, Real Estate, Content Creator, Freelancer, and Small Business.', href: 'https://buy.stripe.com/bJe7sK0tNdLjgle0pscMM0b', cta: 'Get the Bundle \u2192', featured: true },
+            { label: 'Best Value', price: '$97', term: 'one-time', name: 'All Kits Bundle', desc: '6 AI kits + all future kits free. Prompt Mega Pack, Starter, Real Estate, Content Creator, Freelancer, and Small Business.', href: 'https://buy.stripe.com/bJe7sK0tNdLjgle0pscMM0b', cta: 'Get the Bundle \u2192', featured: true },
           ].map(p => (
             <div key={p.name} className={`pricing-card${p.featured ? ' featured' : ''}`}>
               <span className="badge" style={{ fontSize: 11, padding: '4px 10px', letterSpacing: 1 }}>{p.label}</span>

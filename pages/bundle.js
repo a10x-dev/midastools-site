@@ -44,7 +44,7 @@ export default function Bundle() {
         </p>
 
         <div style={{display:'inline-flex',alignItems:'baseline',gap:16,marginBottom:40}}>
-          <span style={{fontSize:22,color:'var(--gray-400)',textDecoration:'line-through',fontWeight:700}}>$195</span>
+          <span style={{fontSize:22,color:'var(--gray-400)',textDecoration:'line-through',fontWeight:700}}>$224</span>
           <span style={{fontSize:48,fontWeight:900,color:'var(--gold)',letterSpacing:-2}}>$97</span>
         </div>
 
@@ -57,11 +57,17 @@ export default function Bundle() {
       {/* What's Included */}
       <section style={{paddingTop:0}}>
         <div className="section-label">What's Included</div>
-        <h2>5 complete kits + lifetime updates</h2>
+        <h2>6 complete kits + lifetime updates</h2>
         <p style={{color:'var(--gray-400)',fontSize:16,marginBottom:48,lineHeight:1.7}}>Everything you need to automate your business, your content, and your client pipeline.</p>
 
         <div className="kits-grid">
           {[
+            {
+              abbr: 'MP', name: 'AI Prompt Mega Pack', price: '$29',
+              desc: '200+ battle-tested AI prompts for copywriting, social media, content creation, business operations, personal branding, and productivity.',
+              link: '/ai-prompt-mega-pack',
+              items: ['35+ copywriting & sales prompts', '35+ social media prompts', '35+ content creation prompts', '35+ business & ops prompts', '35+ branding & career prompts', '35+ productivity prompts'],
+            },
             {
               abbr: 'SK', name: 'OpenClaw Starter Kit', price: '$29',
               desc: 'Deploy your AI entrepreneur. SOUL.md templates, heartbeat system, product launch prompts, revenue ops playbook.',
@@ -135,7 +141,7 @@ export default function Bundle() {
               { label: 'Freelancer Kit', ind: '$39', bun: '\u2713' },
               { label: 'Small Business Kit', ind: '$39', bun: '\u2713' },
               { label: 'Future kits', ind: 'Extra cost', bun: 'Included' },
-              { label: 'Total', ind: '$195+', bun: '$97' },
+              { label: 'Total', ind: '$224+', bun: '$97' },
             ].map((row, i) => (
               <div key={row.label} style={{display:'contents'}}>
                 <div style={{padding:'12px 20px',borderBottom: i < 6 ? '1px solid var(--gray-800)' : 'none',borderRight:'1px solid var(--gray-800)',fontSize:14,fontWeight: row.label === 'Total' ? 800 : 400}}>{row.label}</div>
@@ -153,12 +159,13 @@ export default function Bundle() {
           <div className="badge" style={{marginBottom:20}}>Best Value</div>
           <h2 style={{marginBottom:8}}>The Complete AI Toolkit</h2>
           <div style={{display:'flex',alignItems:'baseline',justifyContent:'center',gap:16,margin:'16px 0 4px'}}>
-            <span style={{fontSize:24,color:'var(--gray-400)',textDecoration:'line-through',fontWeight:700}}>$195</span>
+            <span style={{fontSize:24,color:'var(--gray-400)',textDecoration:'line-through',fontWeight:700}}>$224</span>
             <span style={{fontSize:48,fontWeight:900,color:'var(--gold)'}}>$97</span>
           </div>
-          <div style={{color:'var(--gray-400)',fontSize:15,marginBottom:32}}>One-time payment &middot; All 5 kits + future kits free</div>
+          <div style={{color:'var(--gray-400)',fontSize:15,marginBottom:32}}>One-time payment &middot; All 6 kits + future kits free</div>
           <ul style={{listStyle:'none',textAlign:'left',marginBottom:32}}>
             {[
+              'AI Prompt Mega Pack ($29 value)',
               'OpenClaw Entrepreneur Starter Kit ($29 value)',
               'Real Estate AI Agent Kit ($49 value)',
               'Content Creator AI Kit ($39 value)',

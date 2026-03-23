@@ -12,20 +12,24 @@ Build trending products that help people make money. Research daily. Ship fast. 
 - [ ] Post in r/content_marketing about Content Creator Kit
 - [ ] Post in r/freelance about Freelancer Kit
 - [ ] Post in r/smallbusiness about the bundle
+- [ ] Post in r/ChatGPT about AI Prompt Mega Pack
 - [ ] Set up email nurture sequence for kit buyers
 - [ ] List all products on Gumroad for marketplace distribution
 
-### Product Pipeline
-- [ ] Build AI Prompt Mega Pack ($29) — high Gumroad demand signal (prompt packs = $1K+ first 2 months)
-- [ ] Build E-commerce AI Kit ($39) — product descriptions, email flows, ad copy
-
 ### Content / SEO
+- [ ] Write blog: "200+ AI Prompts That Actually Work (2026 Mega List)" — drives Mega Pack traffic
 - [ ] Write blog: "5 AI Tools Every Small Business Owner Needs in 2026"
 - [ ] Write blog: "How to Price Your Freelance Services with AI (2026 Guide)"
+- [ ] Write blog: "Best ChatGPT Prompts for Business in 2026"
 - [ ] Create comparison pages (Midas Tools vs. individual AI tools)
 
+### Product Pipeline
+- [ ] Build E-commerce AI Kit ($39) — product descriptions, email flows, ad copy
+- [ ] Build SaaS Founder AI Kit ($39) — launch playbooks, onboarding, churn prevention
+
 ### Infrastructure (Needs Founder)
-- [ ] Set Stripe Payment Link success URLs → /thank-you?kit=<type> for each product
+- [ ] **Create Stripe Product**: "AI Prompt Mega Pack" at $29 — replace PLACEHOLDER_PROMPT_MEGA_PACK in ai-prompt-mega-pack.js and kits.js
+- [ ] Set Stripe Payment Link success URLs → /thank-you?kit=<type> for each product (including ?kit=prompt-mega-pack)
 - [ ] Need GA4 analytics (NEXT_PUBLIC_GA_ID env var)
 - [ ] Need Gumroad account for marketplace distribution
 - [ ] Need email marketing tool (ConvertKit/Resend)
@@ -51,7 +55,10 @@ Build trending products that help people make money. Research daily. Ship fast. 
 - [x] **WEBHOOK ROUTING** — stripe-webhook.js detects product and sends correct download (Session 9)
 - [x] **THANK-YOU PAGE** — dynamic, shows correct kit + download based on ?kit= param (Session 9)
 - [x] **Small Business AI Kit ($39)** — /small-business-kit + deliverable ZIP (Session 9)
+- [x] **AI PROMPT MEGA PACK ($29)** — 200+ prompts, 3,331 lines, 6 categories, full product page with SEO, ZIP built, integrated into all systems (Session 10)
+- [x] **BUNDLE UPGRADED** — Now 6 products, value anchor $224, 57% savings (Session 10)
 
 ## Blocked
 - Analytics — need NEXT_PUBLIC_GA_ID env var
 - Gumroad — need account
+- Mega Pack checkout — need Stripe Payment Link (PLACEHOLDER in code)

@@ -5,12 +5,12 @@ Your long-term memory. Persists across all sessions. This is your brain — trea
 ## Key Facts
 - **Project**: Midas Tools — Product building machine. Research trending products, build versions, sell them.
 - **Stack**: Next.js 14.2, React 18, Stripe, Nodemailer/Gmail SMTP, inline CSS
-- **Products**: Starter Kit ($29), Pro ($49/mo), DFY ($299), Real Estate Kit ($49), Content Creator Kit ($39), Freelancer Kit ($39), Bundle ($97), AI Services ($499-$5K), Audit ($997), Content ($299/mo)
+- **Products**: AI Prompt Mega Pack ($29), Starter Kit ($29), Real Estate Kit ($49), Content Creator Kit ($39), Freelancer Kit ($39), Small Business Kit ($39), Bundle ($97), DFY ($299), AI Services ($499-$5K)
 - **OpenClaw**: Open-source AI agent framework with 247K GitHub stars (March 2026), featured on Lex Fridman
 - **Felix Craft**: Proof-of-concept agent that earned $14,718 in 3 weeks (key case study)
 - **Admin email**: rmidas26@gmail.com, also iam@armando.mx
 - **Cal.com link**: cal.com/manduks/midastools
-- **Site pages**: 25 pages total (build output), including dynamic blog
+- **Site pages**: 30 pages total (build output), including dynamic blog
 - **AI Receptionist market**: Competitors range $25-$199/mo. Midas at $499 setup + $299/mo is premium-priced.
 
 ## Market Research (March 2026)
@@ -44,6 +44,9 @@ Your long-term memory. Persists across all sessions. This is your brain — trea
 - **2026-03-22 (S9)**: Built ALL 4 kit ZIPs with real content (10,838 lines). Products are now deliverable.
 - **2026-03-22 (S9)**: Webhook now routes downloads by product — detects kit type via metadata, payment link ID, product name, or amount
 - **2026-03-22 (S9)**: Thank-you page is dynamic — shows correct kit + download link based on ?kit= query param. Bundle shows all 5 downloads.
+- **2026-03-22 (S10)**: AI Prompt Mega Pack ($29) shipped — 200+ prompts, 3,331 lines, 6 categories. Broadest appeal product, lowest price entry point.
+- **2026-03-22 (S10)**: Bundle upgraded to 6 products (now includes Mega Pack). Value anchor $195 → $224. 57% savings.
+- **2026-03-22 (S10)**: Mega Pack added to kits catalog (first position), nav, footer, bundle page, thank-you routing, and webhook delivery.
 
 ## What Worked
 - Felix Craft case study is strongest social proof ($14,718 in 3 weeks)
@@ -63,7 +66,8 @@ Your long-term memory. Persists across all sessions. This is your brain — trea
 - Mobile breakpoint: max-width 600px or 700px
 - Blog has mix of hosted posts and external links (dev.to, Medium)
 - Stripe checkout URLs defined as STRIPE_URL constant at top of each page file
-- All 6 Stripe products exist. Founder needs to set success URLs to /thank-you?kit=<type>
+- All 6 Stripe products exist + Mega Pack needs to be created. Founder needs to set success URLs to /thank-you?kit=<type>
+- **AI Prompt Mega Pack**: Uses PLACEHOLDER_PROMPT_MEGA_PACK in pages/ai-prompt-mega-pack.js and pages/kits.js — founder must create Stripe product and replace
 - Kit content lives in kit-content/ dir, ZIPs in public/. Use .founder/tools/build-kits.sh to rebuild ZIPs.
 - Webhook routing: stripe-webhook.js detects kit type via session.metadata.kit_type → payment_link → product_name → amount
 - External blog posts (dev.to) cannot be edited for internal links

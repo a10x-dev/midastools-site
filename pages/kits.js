@@ -6,6 +6,14 @@ const BUNDLE_STRIPE = 'https://buy.stripe.com/bJe7sK0tNdLjgle0pscMM0b';
 
 const kits = [
   {
+    name: 'AI Prompt Mega Pack',
+    price: '$29',
+    desc: '200+ battle-tested AI prompts for copywriting, social media, content, operations, branding & productivity. Works with any LLM.',
+    href: '/ai-prompt-mega-pack',
+    stripe: 'https://buy.stripe.com/PLACEHOLDER_PROMPT_MEGA_PACK',
+    badge: 'NEW',
+  },
+  {
     name: 'OpenClaw Starter Kit',
     price: '$29',
     desc: 'Templates, workflows, and prompts to deploy your first AI entrepreneur agent.',
@@ -138,8 +146,8 @@ export default function Kits() {
       <div className="bundle-upsell">
         <div className="bundle-box">
           <div className="badge" style={{ marginBottom: 20 }}>Best Value</div>
-          <h2>Get all 5 kits + future kits for <span>$97</span></h2>
-          <p>Starter + Real Estate + Content Creator + Freelancer + Small Business Kit — plus every kit we release in the future, free.</p>
+          <h2>Get all 6 kits + future kits for <span>$97</span></h2>
+          <p>Prompt Mega Pack + Starter + Real Estate + Content Creator + Freelancer + Small Business Kit — plus every kit we release in the future, free.</p>
           <a href={BUNDLE_STRIPE} className="btn-primary">Get the Bundle — $97 &rarr;</a>
         </div>
       </div>
