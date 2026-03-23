@@ -4,7 +4,7 @@
 Build trending products that help people make money. Research daily. Ship fast. Sell everywhere.
 
 ## In Progress
-(nothing — clearing the queue)
+- [ ] Writing blog: "7 ChatGPT Side Hustles Actually Making Money in 2026" (agent building)
 
 ## To Do
 ### Distribution (Highest Priority)
@@ -18,21 +18,16 @@ Build trending products that help people make money. Research daily. Ship fast. 
 
 ### Content / SEO
 - [ ] Write blog: "How to Price Your Freelance Services with AI (2026 Guide)"
-- [ ] Write blog: "Best ChatGPT Prompts for Business in 2026"
 - [ ] Create comparison pages (Midas Tools vs. individual AI tools)
 
-### Product Pipeline
-- [ ] Build SaaS Founder AI Kit ($39) — launch playbooks, onboarding, churn prevention
-- [ ] Write blog targeting e-commerce keywords to drive E-commerce Kit traffic
-
 ### Infrastructure (Needs Founder)
-- [ ] **Create Stripe Product**: "AI Prompt Mega Pack" at $29 — replace PLACEHOLDER_PROMPT_MEGA_PACK in ai-prompt-mega-pack.js and kits.js
-- [ ] **Create Stripe Product**: "E-commerce AI Kit" at $39 — replace PLACEHOLDER_ECOMMERCE_KIT in ecommerce-kit.js and kits.js
-- [ ] Set Stripe Payment Link success URLs → /thank-you?kit=<type> for each product (including ?kit=prompt-mega-pack)
+- [ ] **Create Stripe Product**: "AI Prompt Mega Pack" at $29 → replace PLACEHOLDER_PROMPT_MEGA_PACK in ai-prompt-mega-pack.js and kits.js
+- [ ] **Create Stripe Product**: "E-commerce AI Kit" at $39 → replace PLACEHOLDER_ECOMMERCE_KIT in ecommerce-kit.js and kits.js
+- [ ] **Create Stripe Product**: "SaaS Founder AI Kit" at $39 → replace PLACEHOLDER_SAAS_FOUNDER_KIT in saas-founder-kit.js and kits.js
+- [ ] Set Stripe Payment Link success URLs → /thank-you?kit=<type> for all products
 - [ ] Need GA4 analytics (NEXT_PUBLIC_GA_ID env var)
 - [ ] Need Gumroad account for marketplace distribution
 - [ ] Need email marketing tool (ConvertKit/Resend)
-- [ ] Deploy latest changes (git push)
 
 ## Done
 - [x] Baseline assessment completed
@@ -42,28 +37,27 @@ Build trending products that help people make money. Research daily. Ship fast. 
 - [x] Real Estate AI Agent Kit ($49) — /real-estate-kit + blog post
 - [x] Content Creator AI Kit ($39) — /content-creator-kit + blog post
 - [x] **Freelancer Automation Kit ($39)** — /freelancer-kit + blog post (Session 5)
-- [x] All Kits Bundle ($97) — /bundle with comparison table + cross-links (updated to 4 kits)
+- [x] All Kits Bundle ($97) — /bundle with comparison table + cross-links
 - [x] Cross-linked bundle from all kit pages (upsell sections)
-- [x] Updated homepage product ladder (replaced Pro with Bundle as middle tier)
-- [x] Updated Layout nav/footer with Freelancer Kit links
-- [x] Fixed blog/[slug].js syntax bug
-- [x] Added schedule entries
 - [x] Professional trust upgrade (shared Layout, text mark, consistent nav/footer)
-- [x] **CTA CONVERSION FIX** — all 5 product page hero CTAs now go direct to Stripe checkout (Session 9)
-- [x] **ALL KIT ZIPS BUILT** — 4 new kits with real content (10,838 lines total) (Session 9)
+- [x] **CTA CONVERSION FIX** — all hero CTAs go direct to Stripe checkout (Session 9)
+- [x] **ALL KIT ZIPS BUILT** — real content in every kit (Session 9)
 - [x] **WEBHOOK ROUTING** — stripe-webhook.js detects product and sends correct download (Session 9)
 - [x] **THANK-YOU PAGE** — dynamic, shows correct kit + download based on ?kit= param (Session 9)
 - [x] **Small Business AI Kit ($39)** — /small-business-kit + deliverable ZIP (Session 9)
-- [x] **AI PROMPT MEGA PACK ($29)** — 200+ prompts, 3,331 lines, 6 categories, full product page with SEO, ZIP built, integrated into all systems (Session 10)
-- [x] **BUNDLE UPGRADED** — Now 6 products, value anchor $224, 57% savings (Session 10)
-- [x] **3 BROKEN BLOG LINKS FIXED** — ai-tools-small-business-owners-2026, ai-small-business-automation-2026, automate-client-follow-up-ai now have full standalone pages with SEO + Stripe CTAs (Session 12)
-- [x] **[slug].js CLEANED** — Removed 3 duplicate entries, fixed path conflicts, updated bundle CTA (Session 12)
-- [x] **REDDIT DISTRIBUTION DRAFTS** — 6 posts for r/ChatGPT, r/realestate, r/freelance, r/smallbusiness, r/content_marketing, r/Entrepreneur — copy-paste ready (Session 12)
-- [x] **E-COMMERCE AI KIT ($39)** — 155+ prompts, 4,954 lines, product page, ZIP (68K), integrated into all systems (Session 12)
-- [x] **BUNDLE UPGRADED TO 7 KITS** — Value anchor $263, 63% savings at $97 (Session 12)
+- [x] **AI PROMPT MEGA PACK ($29)** — 200+ prompts, full product page, ZIP built (Session 10)
+- [x] **E-COMMERCE AI KIT ($39)** — 155+ prompts, product page, ZIP (Session 12)
+- [x] **SaaS Founder AI Kit ($39)** — launch playbooks, onboarding, churn prevention (Session 13)
+- [x] **BUNDLE UPGRADED TO 8 KITS** — Value $302, 68% savings at $97
+- [x] **REDDIT DISTRIBUTION DRAFTS** — 6 posts copy-paste ready (Session 12)
+- [x] **FULL SITE REBRAND** — Dark gold → clean white + blue accents, 30+ files, 34 pages (Session 13)
+- [x] **E-commerce blog post** — /blog/ai-ecommerce-product-descriptions-2026 (Session 13)
+- [x] Write blog: "Best ChatGPT Prompts for Business in 2026" — /blog/best-ai-prompts-business-2026
+- [x] Build SaaS Founder AI Kit ($39) — shipped with page, ZIP, bundle integration
+- [x] Write blog targeting e-commerce keywords — /blog/ai-ecommerce-product-descriptions-2026
+- [x] Deploy latest changes (git push) — 4 commits pushed to main
 
 ## Blocked
 - Analytics — need NEXT_PUBLIC_GA_ID env var
 - Gumroad — need account
-- Mega Pack checkout — need Stripe Payment Link (PLACEHOLDER in code)
-- E-commerce Kit checkout — need Stripe Payment Link (PLACEHOLDER in code)
+- 3 products need Stripe Payment Links (Mega Pack, E-commerce Kit, SaaS Founder Kit)

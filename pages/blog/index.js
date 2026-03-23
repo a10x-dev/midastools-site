@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Layout from '../../components/Layout';
 
 const posts = [
+  { slug: 'chatgpt-side-hustle-2026', title: '7 ChatGPT Side Hustles Actually Making Money in 2026 (With Exact Prompts)', date: 'Mar 23, 2026', desc: 'Not theoretical. These are the 7 AI-powered side hustles people are actually earning from right now — with the exact ChatGPT prompts to get started today.' },
   { slug: 'ai-ecommerce-product-descriptions-2026', title: 'How to Write Product Descriptions That Actually Sell (Using AI)', date: 'Mar 23, 2026', desc: 'Most product descriptions are terrible. Here are 6 AI prompts that turn boring feature lists into copy that converts — with before/after examples.' },
   { slug: 'best-ai-prompts-business-2026', title: '50 AI Prompts That Are Actually Making People Money in 2026', date: 'Mar 23, 2026', desc: 'The best AI prompts for business in 2026. Tested prompts for sales emails, social media, content creation, operations, and productivity that save 15+ hours per week.' },
   { slug: 'ai-small-business-automation-2026', title: '9 AI Automations That Save Small Businesses 20+ Hours Per Week', date: 'Mar 22, 2026', desc: 'The specific AI templates and workflows small business owners are using in 2026 to automate social media, email, hiring, customer service, and daily operations.' },
