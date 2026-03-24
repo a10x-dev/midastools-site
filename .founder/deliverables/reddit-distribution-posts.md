@@ -387,6 +387,37 @@ My site is [midastools.co](https://www.midastools.co) if anyone's curious.
 
 ---
 
+## Post 7: r/ChatGPT (Free Prompts Lead Magnet)
+
+**Posting tips:**
+- Use this INSTEAD of Post 1 as the first post — leading with free content converts better on Reddit
+- Best times: Tuesday-Thursday, 9-11am EST
+- This is 100% value-first. The free page captures emails, the funnel does the selling.
+
+---
+
+**Title:** I made a free collection of 5 AI prompts that have genuinely saved me hours of work — sharing here
+
+**Body:**
+
+I've been building AI prompts for about a year now, testing them across real business tasks. Most prompt collections I've seen online are either too generic or behind expensive paywalls.
+
+So I pulled out the 5 prompts I use the most and put them on a free page anyone can grab:
+
+1. **The Revenue Email Generator** — writes sales emails that actually get replies (3 versions: casual, professional, urgent)
+2. **The Instant Content Repurposer** — turns 1 blog post into 5 platform-ready pieces (Twitter thread, LinkedIn post, IG carousel, newsletter, short-form video script)
+3. **The Proposal Writer** — creates professional project proposals in 2 minutes (the "What's NOT Included" section alone has saved me from scope creep dozens of times)
+4. **The Business Strategy Analyzer** — McKinsey-style analysis of any business problem with 3 strategic options + first 3 moves
+5. **The Product Description Converter** — rewrites product descriptions for higher conversions (emotional version + logical version)
+
+Every prompt works in ChatGPT, Claude, or Gemini. Just copy, paste, fill in the brackets.
+
+Free here, no catch: [midastools.co/free-prompts](https://www.midastools.co/free-prompts)
+
+If you want prompts for a specific use case — sales, real estate, freelancing, whatever — drop it in the comments and I'll share what I've got.
+
+---
+
 ## General Reddit Distribution Notes
 
 **Before posting any of these:**
@@ -398,12 +429,13 @@ My site is [midastools.co](https://www.midastools.co) if anyone's curious.
 6. Never edit the post to add more links after it gains traction — mods watch for this
 
 **Posting schedule suggestion:**
-- Week 1: Post 1 (r/ChatGPT) — broadest audience, good test
+- Week 1: Post 7 (r/ChatGPT — FREE PROMPTS) — lowest friction, captures emails, broadest audience
 - Week 2: Post 4 (r/smallbusiness) — high intent audience
 - Week 3: Post 6 (r/Entrepreneur) — journey post builds trust
 - Week 4: Post 2 (r/realestate) — niche test
 - Week 5: Post 3 (r/freelance) — niche test
 - Week 6: Post 5 (r/content_marketing) — niche test
+- Week 7: Post 1 (r/ChatGPT) — follow up with the full 10-prompt post
 
 **If a post blows up:**
 - Pin a comment with "Most-requested prompts from the comments" and include 2-3 more prompts

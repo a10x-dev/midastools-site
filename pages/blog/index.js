@@ -3,6 +3,8 @@ import Link from 'next/link';
 import Layout from '../../components/Layout';
 
 const posts = [
+  { slug: 'chatgpt-tips-tricks-2026', title: '25 ChatGPT Tips and Tricks Most People Don\'t Know in 2026', date: 'Mar 24, 2026', desc: 'Advanced ChatGPT tips, tricks, and hacks for 2026. 25 techniques for better outputs, productivity hacks, and advanced strategies — with copy-paste prompts for each.' },
+  { slug: 'best-free-ai-tools-2026', title: '15 Best Free AI Tools in 2026 (That Are Actually Worth Using)', date: 'Mar 24, 2026', desc: 'The best free AI tools in 2026, tested and ranked. ChatGPT, Claude, Gemini, Perplexity, Canva AI, and 10 more — with honest reviews of what each free tier actually gives you.' },
   { slug: 'ai-tools-by-profession-2026', title: 'AI Tools by Profession: The Complete 2026 Guide (10 Industries)', date: 'Mar 24, 2026', desc: 'The best AI tools for every profession in 2026. Healthcare, teachers, lawyers, accountants, small business, freelancers, real estate, e-commerce, creators, and SaaS — with time savings data for each.' },
   { slug: 'ai-tools-healthcare-2026', title: '7 AI Tools for Healthcare Workers That Reduce Burnout and Save Hours Daily', date: 'Mar 24, 2026', desc: 'The best AI tools for healthcare workers in 2026. Clinical documentation, patient communication, scheduling, and training — with HIPAA-compliant prompt templates.' },
   { slug: 'ai-tools-lawyers-2026', title: '8 AI Tools for Lawyers That Are Changing Legal Practice in 2026', date: 'Mar 24, 2026', desc: 'The best AI tools for lawyers and law firms in 2026. Contract review, legal research, client intake, billing optimization, and document drafting — with exact prompts.' },

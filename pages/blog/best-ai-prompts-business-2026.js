@@ -503,6 +503,21 @@ Format: Executive summary, KPI table, what worked (3), what didn't (3), next qua
           <p style={{ margin: '12px 0 0', color: '#6B7280', fontSize: '13px' }}>The Bundle includes the Mega Pack plus 5 niche industry kits &mdash; best value for professionals who want everything.</p>
         </div>
 
+        <div style={{ marginTop: '32px', padding: '20px 24px', background: '#ECFDF5', border: '1px solid #A7F3D0', borderRadius: '8px' }}>
+          <p style={{ margin: 0, fontSize: '15px', color: '#065F46' }}>
+            <strong>Not ready to buy?</strong> Start with our <Link href="/free-prompts" style={{ color: '#059669', fontWeight: 700 }}>5 free AI prompts</Link> &mdash; no purchase required.
+          </p>
+        </div>
+
+        <hr style={{ margin: '40px 0', border: 'none', borderTop: '1px solid #eee' }} />
+
+        <p style={{ fontSize: '14px', color: '#6B7280' }}><strong>Keep reading:</strong></p>
+        <ul style={{ fontSize: '14px', color: '#6B7280', lineHeight: '2' }}>
+          <li><Link href="/blog/chatgpt-side-hustle-2026" style={{ color: '#3B5FFF' }}>7 ChatGPT Side Hustles Actually Making Money in 2026</Link></li>
+          <li><Link href="/blog/ai-second-income-2026" style={{ color: '#3B5FFF' }}>How to Build a Second Income with AI in 2026</Link></li>
+          <li><Link href="/blog/best-free-ai-tools-2026" style={{ color: '#3B5FFF' }}>15 Best Free AI Tools in 2026</Link></li>
+        </ul>
+
         <hr style={{ margin: '40px 0', border: 'none', borderTop: '1px solid #eee' }} />
 
         <p style={{ color: '#6B7280', fontSize: '14px' }}>

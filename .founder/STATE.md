@@ -1,7 +1,7 @@
 # State
 
 ## Current Status
-Day 2 — Session 15 complete. BUILD PASSES (44 pages). 9 products on site (8 kits + bundle). All Stripe links live. 22 blog posts (19 hosted + externals). Site-wide email capture live. Internal cross-linking done. Sitemap: 34 URLs. All verified building.
+Day 2 — Session 16 complete. BUILD PASSES (47 pages). 9 products on site (8 kits + bundle). All Stripe links live. 24 blog posts (21 hosted + externals). FREE PROMPTS landing page live (/free-prompts). Site-wide email capture live. Internal cross-linking updated. Sitemap: 41 URLs. All verified building.
 
 ## Products Shipped
 | Product | Price | Page | ZIP | Status |
@@ -50,25 +50,29 @@ All pages compile and generate static HTML successfully.
 - **Font**: Inter (loaded globally from _document.js)
 - **Style**: Clean, modern, fun — inspired by Future Founders reference
 
-## This Session (Session 15)
-- **3 NEW BLOG POSTS**:
-  - "9 AI Tools for Teachers That Save 10+ Hours Per Week in 2026" — /blog/ai-tools-teachers-2026 (~2000 words, 9 copy-paste prompts, FAQ schema, time savings table, CTAs to Mega Pack + Bundle)
-  - "How to Build a Second Income with AI in 2026" — /blog/ai-second-income-2026 (~2200 words, 7 methods with income ranges + time requirements, timeline table, CTAs to Mega Pack + Freelancer Kit + Bundle)
-  - "AI Tools vs. Hiring: What to Automate and What Not To" — /blog/ai-tools-vs-hiring-2026 (~1800 words, 10-function comparison table, framework for decision-making, CTAs to Small Biz Kit + Bundle)
-- **BLOG INDEX UPDATED**: 3 new posts added at top (now 16 hosted posts)
-- **SITEMAP UPDATED**: 31 URLs (was 28)
-- **BUILD PASSES**: 41 pages (was 38)
+## This Session (Session 16)
+- **FREE PROMPTS LANDING PAGE**: /free-prompts — 5 battle-tested prompts gated by email capture, with upsell to Mega Pack ($29) + Bundle ($97). Lead magnet funnel.
+- **2 NEW HIGH-TRAFFIC BLOG POSTS**:
+  - "15 Best Free AI Tools in 2026" — /blog/best-free-ai-tools-2026 (targets "best free AI tools 2026" — massive search volume keyword)
+  - "25 ChatGPT Tips and Tricks Most People Don't Know" — /blog/chatgpt-tips-tricks-2026 (targets "ChatGPT tips" — 768M+ monthly searches for ChatGPT)
+- **NAV + FOOTER UPDATED**: "Free Prompts" added to desktop nav, mobile menu, and footer
+- **HOMEPAGE UPDATED**: Secondary CTA "Not ready to buy? Get 5 free AI prompts →" below hero
+- **INTERNAL CROSS-LINKS**: Added /free-prompts links + cross-links to 3 existing high-traffic posts (best-ai-prompts, chatgpt-side-hustle, ai-second-income)
+- **REDDIT POST 7**: New free-prompts-focused Reddit post added to distribution drafts (lowest friction entry point)
+- **BLOG INDEX UPDATED**: 2 new posts added at top (now 21 hosted posts)
+- **SITEMAP UPDATED**: 41 URLs (was 38)
+- **BUILD PASSES**: 47 pages (was 44)
 
 ## Blockers for Founder
-1. Set Stripe Payment Link success URLs to `https://www.midastools.co/thank-you?kit=<kit-type>` for each product
-2. Set NEXT_PUBLIC_GA_ID env var for analytics
-3. **Post Reddit drafts** — ready at .founder/deliverables/reddit-distribution-posts.md
+1. **⚡ POST REDDIT DRAFTS** — Post 7 (free prompts) is ready NOW. This week. .founder/deliverables/reddit-distribution-posts.md
+2. Set Stripe Payment Link success URLs to `https://www.midastools.co/thank-you?kit=<kit-type>` for each product
+3. Set NEXT_PUBLIC_GA_ID env var for analytics
 4. Set up email marketing tool (ConvertKit/Resend) — email capture is live but only notifies via Gmail
 
 ## Next Priorities
-1. **Distribution**: Post Reddit drafts (copy-paste ready) — HIGHEST PRIORITY
+1. **Distribution**: Post Reddit drafts (Post 7 FIRST — free prompts) — HIGHEST PRIORITY
 2. **Gumroad**: List all products on marketplace
-3. **More content**: "AI Tools for Lawyers", "AI Tools for Accountants", "AI Tools for Healthcare"
+3. **More content**: "AI for Students", "AI for Project Managers", "AI for HR/Recruiting"
 4. **QA**: Full visual review of deployed site on mobile
 5. **Email marketing platform**: Connect email capture to ConvertKit/Resend for nurture sequences
-6. **Internal cross-links**: Add links to new posts from existing related posts
+6. **Twitter/X content**: Create a thread from the ChatGPT tips post

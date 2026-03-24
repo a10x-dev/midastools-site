@@ -202,6 +202,9 @@ export default function Home() {
         <p className="price-tag">
           <strong>Instant download</strong> &middot; 30-day money-back guarantee &middot; No subscription
         </p>
+        <p style={{ marginTop: '12px', fontSize: '14px', color: '#6B7280', fontFamily: "'Inter', sans-serif" }}>
+          Not ready to buy? <a href="/free-prompts" style={{ color: '#3B5FFF', fontWeight: 600, textDecoration: 'none' }}>Get 5 free AI prompts &rarr;</a>
+        </p>
 
         <div className="stats-bar">
           {[

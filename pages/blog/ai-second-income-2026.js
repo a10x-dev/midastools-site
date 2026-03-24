@@ -291,13 +291,19 @@ Create:
 
         <hr style={{ margin: '40px 0', border: 'none', borderTop: '1px solid #eee' }} />
 
+        <div style={{ marginTop: '32px', padding: '20px 24px', background: '#ECFDF5', border: '1px solid #A7F3D0', borderRadius: '8px' }}>
+          <p style={{ margin: 0, fontSize: '15px', color: '#065F46' }}>
+            <strong>Start free:</strong> Grab our <Link href="/free-prompts" style={{ color: '#059669', fontWeight: 700 }}>5 free AI prompts</Link> &mdash; the same ones that power many of these income methods.
+          </p>
+        </div>
+
         <h2 style={{ fontSize: '1.4rem', fontWeight: '700', marginTop: '40px' }}>Related Reading</h2>
         <ul style={{ lineHeight: '2' }}>
           <li><Link href="/blog/chatgpt-side-hustle-2026" style={{ color: '#3B5FFF' }}>7 ChatGPT Side Hustles Actually Making Money in 2026</Link></li>
           <li><Link href="/blog/ai-freelancer-automation-2026" style={{ color: '#3B5FFF' }}>7 AI Automations Every Freelancer Needs in 2026</Link></li>
           <li><Link href="/blog/best-ai-prompts-business-2026" style={{ color: '#3B5FFF' }}>50 AI Prompts That Are Actually Making People Money in 2026</Link></li>
           <li><Link href="/blog/ai-tools-small-business-owners-2026" style={{ color: '#3B5FFF' }}>5 AI Tools That Are Printing Money for Small Business Owners</Link></li>
-          <li><Link href="/blog/ai-tools-lawyers-2026" style={{ color: '#3B5FFF' }}>8 AI Tools for Lawyers That Are Changing Legal Practice</Link></li>
+          <li><Link href="/blog/best-free-ai-tools-2026" style={{ color: '#3B5FFF' }}>15 Best Free AI Tools in 2026</Link></li>
         </ul>
       </div>
     </Layout>
