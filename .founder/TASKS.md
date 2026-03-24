@@ -7,17 +7,20 @@ Build trending products that help people make money. Research daily. Ship fast. 
 (nothing)
 
 ## To Do
-### Distribution (Highest Priority)
-- [ ] Post in r/realestate about Real Estate AI Kit
-- [ ] Post in r/content_marketing about Content Creator Kit
-- [ ] Post in r/freelance about Freelancer Kit
-- [ ] Post in r/smallbusiness about the bundle
-- [ ] Post in r/ChatGPT about AI Prompt Mega Pack
+### Distribution (Highest Priority — NEEDS FOUNDER)
+- [ ] **Post Reddit Post 7** (r/ChatGPT — free prompts lead magnet) — FIRST POST THIS WEEK
+- [ ] Post in r/smallbusiness about the bundle (Post 4)
+- [ ] Post in r/Entrepreneur journey post (Post 6)
+- [ ] Post in r/realestate about Real Estate AI Kit (Post 2)
+- [ ] Post in r/freelance about Freelancer Kit (Post 3)
+- [ ] Post in r/content_marketing about Content Creator Kit (Post 5)
 - [ ] List all products on Gumroad for marketplace distribution
 
 ### Content / SEO
+- [ ] Write blog: "AI Tools for Students" (untapped audience)
+- [ ] Write blog: "AI Tools for HR and Recruiting" (high-value niche)
+- [ ] Create Twitter/X thread from ChatGPT Tips post
 - [ ] Create comparison pages (Midas Tools vs. individual AI tools)
-- [ ] Add internal cross-links from existing posts to new posts (lawyers, accountants, healthcare)
 
 ### Infrastructure (Needs Founder)
 - [ ] Set Stripe Payment Link success URLs → /thank-you?kit=<type> for all products
@@ -68,6 +71,15 @@ Build trending products that help people make money. Research daily. Ship fast. 
 - [x] **Blog: AI Tools for Accountants** — /blog/ai-tools-accountants-2026, 7 tools, ROI table, FAQ schema (Session 15)
 - [x] **Internal cross-links** — 5 existing posts linked to 3 new S15 posts (Session 15)
 - [x] **BUILD PASSES** — 43 pages (Session 15)
+- [x] **FREE PROMPTS LANDING PAGE** — /free-prompts, email-gated, 5 prompts, upsell to Mega Pack + Bundle (Session 16)
+- [x] **Blog: Best Free AI Tools 2026** — /blog/best-free-ai-tools-2026, 15 tools, high-volume keyword (Session 16)
+- [x] **Blog: ChatGPT Tips & Tricks** — /blog/chatgpt-tips-tricks-2026, 25 tips, targets ChatGPT keyword (Session 16)
+- [x] **NAV UPDATED** — Free Prompts in nav, footer, mobile menu (Session 16)
+- [x] **HOMEPAGE CTA** — "Get 5 free AI prompts" secondary CTA below hero (Session 16)
+- [x] **CROSS-LINKS** — /free-prompts linked from 3 high-traffic posts + 3 related-reading sections (Session 16)
+- [x] **REDDIT POST 7** — Free prompts post drafted, added to distribution schedule as FIRST post (Session 16)
+- [x] **SITEMAP UPDATED** — 41 URLs (Session 16)
+- [x] **BUILD PASSES + DEPLOYED** — 47 pages, pushed to main (Session 16)
 
 ## Blocked
 - Analytics — need NEXT_PUBLIC_GA_ID env var
