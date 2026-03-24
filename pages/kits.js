@@ -181,7 +181,7 @@ export default function Kits() {
 
       <div style={{ maxWidth: 860, margin: '0 auto', padding: '0 40px 32px', textAlign: 'center' }}>
         <p style={{ fontSize: 15, color: 'var(--text-secondary)' }}>
-          Not sure which kit is right for you? <Link href="/ai-roi-calculator" style={{ color: 'var(--accent)', fontWeight: 700, textDecoration: 'none' }}>Try our free AI ROI Calculator &rarr;</Link>
+          Not sure which kit is right for you? <Link href="/quiz" style={{ color: 'var(--accent)', fontWeight: 700, textDecoration: 'none' }}>Take the 60-second quiz</Link> &middot; <Link href="/ai-roi-calculator" style={{ color: 'var(--accent)', fontWeight: 700, textDecoration: 'none' }}>ROI Calculator &rarr;</Link>
         </p>
       </div>
 

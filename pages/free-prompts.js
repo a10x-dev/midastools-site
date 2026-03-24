@@ -519,6 +519,7 @@ export default function FreePrompts() {
           <Link href="/blog/best-ai-prompts-business-2026">50 AI Prompts That Are Actually Making People Money in 2026</Link>
           <Link href="/blog/chatgpt-side-hustle-2026">7 ChatGPT Side Hustles Actually Making Money in 2026</Link>
           <Link href="/blog/ai-second-income-2026">How to Build a Second Income with AI in 2026</Link>
+          <Link href="/quiz">Not Sure Which Kit? Take the 60-Second Quiz</Link>
           <Link href="/ai-roi-calculator">AI ROI Calculator — See How Much AI Saves You</Link>
           <Link href="/ai-prompt-mega-pack">AI Prompt Mega Pack — Full Product Details</Link>
         </div>
