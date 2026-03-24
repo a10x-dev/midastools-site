@@ -319,6 +319,13 @@ Then create a master checklist: "Daily Operations Checklist" that combines the k
         <p>All five of the capabilities in this article &mdash; social media, email marketing, customer service, hiring, and operations &mdash; come pre-loaded in the <strong>Small Business AI Kit</strong>. Every prompt tested. Every workflow documented. Every template ready to customize with your business details and run immediately.</p>
         <p>You could spend the next month building all of this yourself. Or you could have it running by tonight.</p>
 
+        <h2 style={{ fontSize: '1.4rem', fontWeight: '700', marginTop: '40px' }}>Related Reads</h2>
+        <ul style={{ paddingLeft: '20px', marginBottom: '16px' }}>
+          <li><Link href="/blog/ai-small-business-automation-2026" style={{ color: '#3B5FFF' }}>9 AI Automations That Save Small Businesses 20+ Hours Per Week</Link></li>
+          <li><Link href="/blog/best-ai-prompts-business-2026" style={{ color: '#3B5FFF' }}>50 AI Prompts That Are Actually Making People Money in 2026</Link></li>
+          <li><Link href="/blog/automate-client-follow-up-ai" style={{ color: '#3B5FFF' }}>How to Automate Client Follow-Up with AI (No Code Required)</Link></li>
+        </ul>
+
         <div style={{ marginTop: '48px', padding: '32px', background: '#F0F4FF', border: '1px solid #93B4FF', borderRadius: '8px' }}>
           <h3 style={{ margin: '0 0 8px', fontSize: '1.1rem' }}>Get every tool in this article &mdash; ready to use today</h3>
           <p style={{ margin: '0 0 16px', color: '#6B7280', fontSize: '15px' }}>The <strong>Small Business AI Kit</strong> includes 75+ tested prompts and workflows for marketing, operations, hiring, and customer service. Built specifically for small business owners who do not have time to waste. <strong>$39 one-time.</strong></p>

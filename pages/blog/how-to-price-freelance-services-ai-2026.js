@@ -285,6 +285,13 @@ a notification with advance courtesy.`}
 
         <hr style={{ margin: '40px 0', border: 'none', borderTop: '1px solid #eee' }} />
 
+        <h2 style={{ fontSize: '1.4rem', fontWeight: '700', marginTop: '40px' }}>Related Reads</h2>
+        <ul style={{ paddingLeft: '20px', marginBottom: '16px' }}>
+          <li><Link href="/blog/ai-freelancer-automation-2026" style={{ color: '#3B5FFF' }}>7 AI Automations Every Freelancer Needs in 2026</Link></li>
+          <li><Link href="/blog/automate-client-follow-up-ai" style={{ color: '#3B5FFF' }}>How to Automate Client Follow-Up with AI</Link></li>
+          <li><Link href="/blog/chatgpt-side-hustle-2026" style={{ color: '#3B5FFF' }}>7 ChatGPT Side Hustles Actually Making Money in 2026</Link></li>
+        </ul>
+
         <div style={{ marginTop: '48px', padding: '32px', background: '#F0F4FF', border: '1px solid #93B4FF', borderRadius: '8px' }}>
           <h3 style={{ margin: '0 0 8px', fontSize: '1.1rem' }}>Get every pricing template, prompt, and script &rarr;</h3>
           <p style={{ margin: '0 0 16px', color: '#6B7280', fontSize: '15px' }}>The <strong>Midas Freelancer Kit</strong> includes ready-to-use pricing calculators, value-based proposal templates, three-tier generators, objection response scripts, and rate increase email sequences &mdash; all customizable to your niche and client base. Stop guessing. Start pricing with data.</p>

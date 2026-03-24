@@ -481,6 +481,13 @@ Format: Executive summary, KPI table, what worked (3), what didn't (3), next qua
 
         <hr style={{ margin: '40px 0', border: 'none', borderTop: '1px solid #eee' }} />
 
+        <h2 style={{ fontSize: '1.4rem', fontWeight: '700', marginTop: '40px' }}>Related Reads</h2>
+        <ul style={{ paddingLeft: '20px', marginBottom: '16px' }}>
+          <li><Link href="/blog/chatgpt-side-hustle-2026" style={{ color: '#3B5FFF' }}>7 ChatGPT Side Hustles Actually Making Money in 2026</Link></li>
+          <li><Link href="/blog/best-ai-prompt-packs-2026" style={{ color: '#3B5FFF' }}>7 Best AI Prompt Packs Worth Buying in 2026 (Honest Comparison)</Link></li>
+          <li><Link href="/blog/ai-tools-small-business-owners-2026" style={{ color: '#3B5FFF' }}>5 AI Tools That Are Printing Money for Small Business Owners</Link></li>
+        </ul>
+
         <div style={{ marginTop: '48px', padding: '32px', background: '#F0F4FF', border: '1px solid #93B4FF', borderRadius: '8px' }}>
           <h3 style={{ margin: '0 0 8px', fontSize: '1.1rem' }}>Want all 200+ prompts in one download?</h3>
           <p style={{ margin: '0 0 16px', color: '#6B7280', fontSize: '15px' }}>The <strong>AI Prompt Mega Pack</strong> includes every prompt in this article plus 150 more &mdash; organized by category, ready to customize, works with ChatGPT, Claude, Gemini, and any LLM. $29 one-time.</p>

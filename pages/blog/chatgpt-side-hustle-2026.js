@@ -230,6 +230,13 @@ For each scenario: opening message, 2-3 follow-up questions to qualify the visit
 
         <hr style={{ margin: '40px 0', border: 'none', borderTop: '1px solid #eee' }} />
 
+        <h2 style={{ fontSize: '1.4rem', fontWeight: '700', marginTop: '40px' }}>Related Reads</h2>
+        <ul style={{ paddingLeft: '20px', marginBottom: '16px' }}>
+          <li><Link href="/blog/best-ai-prompts-business-2026" style={{ color: '#3B5FFF' }}>50 AI Prompts That Are Actually Making People Money in 2026</Link></li>
+          <li><Link href="/blog/ai-freelancer-automation-2026" style={{ color: '#3B5FFF' }}>7 AI Automations Every Freelancer Needs in 2026</Link></li>
+          <li><Link href="/blog/best-ai-prompt-packs-2026" style={{ color: '#3B5FFF' }}>7 Best AI Prompt Packs Worth Buying in 2026</Link></li>
+        </ul>
+
         {/* End-article CTA */}
         <div style={{ marginTop: '48px', padding: '32px', background: '#F0F4FF', border: '1px solid #93B4FF', borderRadius: '8px' }}>
           <h3 style={{ margin: '0 0 8px', fontSize: '1.1rem' }}>Ready to start? Get every prompt you need in one kit.</h3>

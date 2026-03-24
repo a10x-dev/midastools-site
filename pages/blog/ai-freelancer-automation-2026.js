@@ -131,6 +131,13 @@ export default function AIFreelancerAutomation2026() {
 
         <hr style={{ margin: '40px 0', border: 'none', borderTop: '1px solid #eee' }} />
 
+        <h2 style={{ fontSize: '1.4rem', fontWeight: '700', marginTop: '40px' }}>Related Reads</h2>
+        <ul style={{ paddingLeft: '20px', marginBottom: '16px' }}>
+          <li><Link href="/blog/how-to-price-freelance-services-ai-2026" style={{ color: '#3B5FFF' }}>How to Price Your Freelance Services with AI in 2026</Link></li>
+          <li><Link href="/blog/automate-client-follow-up-ai" style={{ color: '#3B5FFF' }}>How to Automate Client Follow-Up with AI (No Code Required)</Link></li>
+          <li><Link href="/blog/best-ai-prompts-business-2026" style={{ color: '#3B5FFF' }}>50 AI Prompts That Are Actually Making People Money in 2026</Link></li>
+        </ul>
+
         <div style={{ marginTop: '48px', padding: '32px', background: '#F0F4FF', border: '1px solid #93B4FF', borderRadius: '8px' }}>
           <h3 style={{ margin: '0 0 8px', fontSize: '1.1rem' }}>Get all 7 automations ready to deploy &rarr;</h3>
           <p style={{ margin: '0 0 16px', color: '#6B7280', fontSize: '15px' }}>The <strong>Midas Freelancer Kit</strong> includes every template, sequence, and script mentioned in this article &mdash; proposal generators, payment chasers, onboarding flows, scope creep protectors, rate calculators, communication templates, and lead follow-up sequences. All customizable. All ready to use today.</p>
