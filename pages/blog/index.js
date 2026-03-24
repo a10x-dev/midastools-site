@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Layout from '../../components/Layout';
 
 const posts = [
+  { slug: 'ai-productivity-tools-2026', title: '10 AI Productivity Tools That Actually Save Time in 2026 (Tested)', date: 'Mar 24, 2026', desc: '10 AI productivity tools tested and ranked. Notion AI, ChatGPT, Claude, Perplexity, Otter.ai, and 5 more — with honest pricing, time savings, and 3 copy-paste prompts.' },
   { slug: 'ai-email-templates-2026', title: '21 AI Email Templates That Get Replies (Copy, Paste, Send)', date: 'Mar 24, 2026', desc: '21 ready-to-use AI email templates for cold outreach, client management, internal comms, and follow-ups. Copy, paste, customize, send — cut email time by 60%.' },
   { slug: 'ai-tools-project-managers-2026', title: '8 AI Tools for Project Managers That Eliminate 10+ Hours of Admin Per Week', date: 'Mar 24, 2026', desc: 'The best AI tools for project managers in 2026. Task prioritization, meeting notes, status reports, and scheduling — with 3 copy-paste prompts for common PM tasks.' },
   { slug: 'ai-tools-hr-recruiting-2026', title: '9 AI Tools for HR and Recruiting That Cut Hiring Time in Half (2026)', date: 'Mar 24, 2026', desc: 'The best AI tools for HR and recruiting in 2026. Sourcing, screening, onboarding — with pricing, pro tips, and 3 copy-paste prompts for hiring managers.' },
