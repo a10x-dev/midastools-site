@@ -1,7 +1,7 @@
 # State
 
 ## Current Status
-Day 2 — Session 14 complete. BUILD PASSES (38 pages). 9 products on site (8 kits + bundle). All Stripe links live. 14 blog posts (13 hosted + externals). Site-wide email capture live. Internal cross-linking done (9 posts). All verified live on Vercel.
+Day 2 — Session 15 complete. BUILD PASSES (41 pages). 9 products on site (8 kits + bundle). All Stripe links live. 19 blog posts (16 hosted + externals). Site-wide email capture live. Internal cross-linking done. Sitemap: 31 URLs. All verified building.
 
 ## Products Shipped
 | Product | Price | Page | ZIP | Status |
@@ -16,9 +16,13 @@ Day 2 — Session 14 complete. BUILD PASSES (38 pages). 9 products on site (8 ki
 | SaaS Founder AI Kit | $39 | /saas-founder-kit | saas-founder-kit.zip | ✅ Live |
 | All Kits Bundle | $97 | /bundle | All 8 ZIPs | ✅ Live |
 
-## Blog Posts (12 hosted + externals)
+## Blog Posts (16 hosted + externals)
 | Post | URL | Target Keyword | CTAs |
 |------|-----|----------------|------|
+| AI Tools for Teachers | /blog/ai-tools-teachers-2026 | AI tools for teachers 2026 | Mega Pack, Bundle |
+| Build a Second Income with AI | /blog/ai-second-income-2026 | second income AI 2026, make money with AI | Mega Pack, Freelancer Kit, Bundle |
+| AI Tools vs. Hiring | /blog/ai-tools-vs-hiring-2026 | AI tools vs hiring, AI vs employee cost | Small Biz Kit, Bundle |
+| Best AI Prompt Packs | /blog/best-ai-prompt-packs-2026 | best AI prompt packs 2026 | Mega Pack, Bundle |
 | How to Price Freelance Services | /blog/how-to-price-freelance-services-ai-2026 | freelance pricing strategy AI 2026 | Freelancer Kit, Bundle |
 | AI Tools for SaaS Founders | /blog/ai-saas-founder-tools-2026 | AI tools SaaS founders 2026 | SaaS Kit, Bundle |
 | ChatGPT Side Hustles | /blog/chatgpt-side-hustle-2026 | ChatGPT side hustle 2026 | Mega Pack, Bundle |
@@ -32,7 +36,7 @@ Day 2 — Session 14 complete. BUILD PASSES (38 pages). 9 products on site (8 ki
 | Freelancer Automation | /blog/ai-freelancer-automation-2026 | AI freelancer automation 2026 | Freelancer Kit, Bundle |
 | AI Agent $10K Day | /blog/ai-agent-10k-day | — | Starter Kit |
 
-## Build Output (37 pages)
+## Build Output (41 pages)
 All pages compile and generate static HTML successfully.
 
 ## Design System (Session 13)
@@ -46,12 +50,14 @@ All pages compile and generate static HTML successfully.
 - **Font**: Inter (loaded globally from _document.js)
 - **Style**: Clean, modern, fun — inspired by Future Founders reference
 
-## This Session (Session 14)
-- **EMAIL CAPTURE COMPONENT**: New `components/EmailCapture.js` — site-wide lead magnet ("Get 5 Free AI Prompts That Make Money"), appears on every page except homepage (which has its own), integrated into Layout.js above footer
-- **NEW BLOG POST**: "How to Price Freelance Services with AI in 2026" — /blog/how-to-price-freelance-services-ai-2026, ~1800 words, 5 copy-paste AI prompts, targets freelancer pricing keywords
-- **SITEMAP UPDATED**: 28 URLs (was 12), all product pages + blog posts now indexed
-- **STRIPE LINKS CONFIRMED**: All 3 previously-placeholder products now have real Stripe payment links (wired in Session 13.5)
-- **37 pages building**, up from 36
+## This Session (Session 15)
+- **3 NEW BLOG POSTS**:
+  - "9 AI Tools for Teachers That Save 10+ Hours Per Week in 2026" — /blog/ai-tools-teachers-2026 (~2000 words, 9 copy-paste prompts, FAQ schema, time savings table, CTAs to Mega Pack + Bundle)
+  - "How to Build a Second Income with AI in 2026" — /blog/ai-second-income-2026 (~2200 words, 7 methods with income ranges + time requirements, timeline table, CTAs to Mega Pack + Freelancer Kit + Bundle)
+  - "AI Tools vs. Hiring: What to Automate and What Not To" — /blog/ai-tools-vs-hiring-2026 (~1800 words, 10-function comparison table, framework for decision-making, CTAs to Small Biz Kit + Bundle)
+- **BLOG INDEX UPDATED**: 3 new posts added at top (now 16 hosted posts)
+- **SITEMAP UPDATED**: 31 URLs (was 28)
+- **BUILD PASSES**: 41 pages (was 38)
 
 ## Blockers for Founder
 1. Set Stripe Payment Link success URLs to `https://www.midastools.co/thank-you?kit=<kit-type>` for each product
@@ -60,9 +66,9 @@ All pages compile and generate static HTML successfully.
 4. Set up email marketing tool (ConvertKit/Resend) — email capture is live but only notifies via Gmail
 
 ## Next Priorities
-1. **Distribution**: Post Reddit drafts (copy-paste ready)
+1. **Distribution**: Post Reddit drafts (copy-paste ready) — HIGHEST PRIORITY
 2. **Gumroad**: List all products on marketplace
-3. **Comparison pages**: Midas Tools vs. individual AI tools
-4. **More content**: Target high-volume keywords (e.g., "AI tools for [industry]")
-5. **QA**: Full visual review of deployed site on mobile
-6. **Email marketing platform**: Connect email capture to ConvertKit/Resend for nurture sequences
+3. **More content**: "AI Tools for Lawyers", "AI Tools for Accountants", "AI Tools for Healthcare"
+4. **QA**: Full visual review of deployed site on mobile
+5. **Email marketing platform**: Connect email capture to ConvertKit/Resend for nurture sequences
+6. **Internal cross-links**: Add links to new posts from existing related posts

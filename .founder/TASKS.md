@@ -17,8 +17,10 @@ Build trending products that help people make money. Research daily. Ship fast. 
 
 ### Content / SEO
 - [ ] Create comparison pages (Midas Tools vs. individual AI tools)
-- [ ] Write blog: "AI Tools for Teachers 2026" (high search volume, underserved)
-- [ ] Write blog: "How to Build a Second Income with AI" (evergreen)
+- [ ] Write blog: "AI Tools for Lawyers 2026"
+- [ ] Write blog: "AI Tools for Accountants 2026"
+- [ ] Write blog: "AI Tools for Healthcare Workers 2026"
+- [ ] Add internal cross-links from existing posts to new posts
 
 ### Infrastructure (Needs Founder)
 - [ ] Set Stripe Payment Link success URLs → /thank-you?kit=<type> for all products
@@ -60,6 +62,11 @@ Build trending products that help people make money. Research daily. Ship fast. 
 - [x] **EMAIL CAPTURE COMPONENT** — site-wide lead magnet on all pages except homepage (Session 14)
 - [x] **Blog: Freelance Pricing with AI** — /blog/how-to-price-freelance-services-ai-2026 (Session 14)
 - [x] **SITEMAP UPDATED** — 28 URLs, all products + blog posts indexed (Session 14)
+- [x] **Blog: AI Tools for Teachers** — /blog/ai-tools-teachers-2026, 9 prompts, FAQ schema (Session 15)
+- [x] **Blog: Build a Second Income with AI** — /blog/ai-second-income-2026, 7 methods, income tables (Session 15)
+- [x] **Blog: AI Tools vs. Hiring** — /blog/ai-tools-vs-hiring-2026, comparison table, framework (Session 15)
+- [x] **SITEMAP UPDATED** — 31 URLs (Session 15)
+- [x] **BUILD PASSES** — 41 pages (Session 15)
 
 ## Blocked
 - Analytics — need NEXT_PUBLIC_GA_ID env var
