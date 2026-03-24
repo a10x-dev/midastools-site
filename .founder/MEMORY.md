@@ -10,8 +10,9 @@ Your long-term memory. Persists across all sessions. This is your brain — trea
 - **Felix Craft**: Proof-of-concept agent that earned $14,718 in 3 weeks (key case study)
 - **Admin email**: rmidas26@gmail.com, also iam@armando.mx
 - **Cal.com link**: cal.com/manduks/midastools
-- **Site pages**: 31 pages total (build output), including dynamic blog
-- **Blog posts**: 8 hosted standalone posts + 7 in [slug].js dynamic route + external dev.to posts
+- **Site pages**: 37 pages total (build output), including dynamic blog
+- **Blog posts**: 12 hosted standalone posts + 7 in [slug].js dynamic route + external dev.to posts
+- **Components**: Layout.js (nav+footer+global styles), EmailCapture.js (site-wide lead magnet)
 - **Reddit drafts**: .founder/deliverables/reddit-distribution-posts.md — 6 posts ready to copy-paste
 - **AI Receptionist market**: Competitors range $25-$199/mo. Midas at $499 setup + $299/mo is premium-priced.
 
@@ -50,6 +51,10 @@ Your long-term memory. Persists across all sessions. This is your brain — trea
 - **2026-03-22 (S10)**: Bundle upgraded to 6 products (now includes Mega Pack). Value anchor $195 → $224. 57% savings.
 - **2026-03-22 (S10)**: Mega Pack added to kits catalog (first position), nav, footer, bundle page, thank-you routing, and webhook delivery.
 - **2026-03-23 (S13)**: FULL SITE REBRAND — dark gold/black → clean white + electric blue (#3B5FFF). 30 files updated. Inspired by Future Founders reference. Pill buttons, colorful card accents, dark CTA sections. Pushed to main, Vercel deploying.
+- **2026-03-24 (S14)**: Site-wide EmailCapture component built + integrated into Layout (above footer, hidden on homepage). Lead magnet: "Get 5 Free AI Prompts That Make Money". POSTs to /api/subscribe.
+- **2026-03-24 (S14)**: New blog post: "How to Price Freelance Services with AI" — targets freelance pricing keywords, includes 5 copy-paste prompts, CTA to Freelancer Kit + Bundle.
+- **2026-03-24 (S14)**: Sitemap updated from 12 → 28 URLs. All product pages and blog posts now indexed.
+- **2026-03-24 (S14)**: Confirmed all 3 previously-placeholder Stripe links are now live (Mega Pack, E-commerce Kit, SaaS Founder Kit).
 
 ## What Worked
 - Felix Craft case study is strongest social proof ($14,718 in 3 weeks)
@@ -70,8 +75,9 @@ Your long-term memory. Persists across all sessions. This is your brain — trea
 - Mobile breakpoint: max-width 600px or 700px
 - Blog has mix of hosted posts and external links (dev.to, Medium)
 - Stripe checkout URLs defined as STRIPE_URL constant at top of each page file
-- All 6 Stripe products exist + Mega Pack needs to be created. Founder needs to set success URLs to /thank-you?kit=<type>
-- **AI Prompt Mega Pack**: Uses PLACEHOLDER_PROMPT_MEGA_PACK in pages/ai-prompt-mega-pack.js and pages/kits.js — founder must create Stripe product and replace
+- All 9 Stripe products have live payment links. Founder needs to set success URLs to /thank-you?kit=<type>
+- **EmailCapture component**: `components/EmailCapture.js` — renders on all pages except homepage. Uses styled-jsx, POSTs to /api/subscribe with source: 'site-wide-capture'
+- **Sitemap**: public/sitemap.xml — 28 URLs, updated 2026-03-24
 - Kit content lives in kit-content/ dir, ZIPs in public/. Use .founder/tools/build-kits.sh to rebuild ZIPs.
 - Webhook routing: stripe-webhook.js detects kit type via session.metadata.kit_type → payment_link → product_name → amount
 - External blog posts (dev.to) cannot be edited for internal links

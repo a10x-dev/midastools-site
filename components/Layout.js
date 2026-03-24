@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useState } from 'react';
+import EmailCapture from './EmailCapture';
 
 export const DESIGN = {
   accent: '#3B5FFF',
@@ -229,6 +230,8 @@ export default function Layout({ children }) {
       </div>
 
       <main>{children}</main>
+
+      {router.pathname !== '/' && <EmailCapture />}
 
       <footer className="site-footer">
         <div className="footer-grid">

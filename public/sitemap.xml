@@ -1,75 +1,194 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Homepage -->
   <url>
     <loc>https://www.midastools.co/</loc>
-    <lastmod>2026-02-26</lastmod>
+    <lastmod>2026-03-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
+
+  <!-- Product pages -->
+  <url>
+    <loc>https://www.midastools.co/kits</loc>
+    <lastmod>2026-03-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.midastools.co/bundle</loc>
+    <lastmod>2026-03-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.midastools.co/ai-prompt-mega-pack</loc>
+    <lastmod>2026-03-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.midastools.co/real-estate-kit</loc>
+    <lastmod>2026-03-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.midastools.co/content-creator-kit</loc>
+    <lastmod>2026-03-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.midastools.co/freelancer-kit</loc>
+    <lastmod>2026-03-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.midastools.co/small-business-kit</loc>
+    <lastmod>2026-03-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.midastools.co/ecommerce-kit</loc>
+    <lastmod>2026-03-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.midastools.co/saas-founder-kit</loc>
+    <lastmod>2026-03-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Service pages -->
   <url>
     <loc>https://www.midastools.co/services</loc>
-    <lastmod>2026-02-26</lastmod>
+    <lastmod>2026-03-24</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.95</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.midastools.co/receptionist</loc>
-    <lastmod>2026-02-26</lastmod>
+    <lastmod>2026-03-24</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.95</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.midastools.co/ai-audit</loc>
-    <lastmod>2026-02-25</lastmod>
+    <lastmod>2026-03-24</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.midastools.co/done-for-you</loc>
-    <lastmod>2026-02-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <lastmod>2026-03-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
   </url>
+  <url>
+    <loc>https://www.midastools.co/content-service</loc>
+    <lastmod>2026-03-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Blog index -->
   <url>
     <loc>https://www.midastools.co/blog</loc>
-    <lastmod>2026-02-26</lastmod>
+    <lastmod>2026-03-24</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Blog posts -->
+  <url>
+    <loc>https://www.midastools.co/blog/ai-saas-founder-tools-2026</loc>
+    <lastmod>2026-03-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.midastools.co/blog/validate-startup-idea-24-hours</loc>
-    <lastmod>2026-02-23</lastmod>
+    <loc>https://www.midastools.co/blog/chatgpt-side-hustle-2026</loc>
+    <lastmod>2026-03-24</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.midastools.co/blog/ai-entrepreneur-stack</loc>
-    <lastmod>2026-02-23</lastmod>
+    <loc>https://www.midastools.co/blog/ai-ecommerce-product-descriptions-2026</loc>
+    <lastmod>2026-03-24</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.midastools.co/blog/felix-craft-story</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://www.midastools.co/blog/best-ai-prompts-business-2026</loc>
+    <lastmod>2026-03-24</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.midastools.co/blog/openclaw-vs-chatgpt-autonomous-agent</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://www.midastools.co/blog/ai-tools-small-business-owners-2026</loc>
+    <lastmod>2026-03-24</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.midastools.co/blog/deploy-openclaw-ai-entrepreneur</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://www.midastools.co/blog/ai-small-business-automation-2026</loc>
+    <lastmod>2026-03-24</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.midastools.co/blog/automate-client-follow-up-ai</loc>
+    <lastmod>2026-03-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.midastools.co/blog/ai-tools-real-estate-agents-2026</loc>
+    <lastmod>2026-03-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.midastools.co/blog/ai-content-repurposing-2026</loc>
+    <lastmod>2026-03-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.midastools.co/blog/ai-freelancer-automation-2026</loc>
+    <lastmod>2026-03-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.midastools.co/blog/ai-agent-10k-day</loc>
-    <lastmod>2026-02-24</lastmod>
+    <lastmod>2026-03-24</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.midastools.co/blog/openclaw-vs-chatgpt-autonomous-agent</loc>
+    <lastmod>2026-03-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.midastools.co/blog/how-to-price-freelance-services-ai-2026</loc>
+    <lastmod>2026-03-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Other pages -->
+  <url>
+    <loc>https://www.midastools.co/thank-you</loc>
+    <lastmod>2026-03-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
   </url>
 </urlset>

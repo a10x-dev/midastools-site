@@ -13,21 +13,19 @@ Build trending products that help people make money. Research daily. Ship fast. 
 - [ ] Post in r/freelance about Freelancer Kit
 - [ ] Post in r/smallbusiness about the bundle
 - [ ] Post in r/ChatGPT about AI Prompt Mega Pack
-- [ ] Set up email nurture sequence for kit buyers
 - [ ] List all products on Gumroad for marketplace distribution
 
 ### Content / SEO
-- [ ] Write blog: "How to Price Your Freelance Services with AI (2026 Guide)"
 - [ ] Create comparison pages (Midas Tools vs. individual AI tools)
+- [ ] Write blog: "AI Tools for Teachers 2026" (high search volume, underserved)
+- [ ] Write blog: "How to Build a Second Income with AI" (evergreen)
 
 ### Infrastructure (Needs Founder)
-- [ ] **Create Stripe Product**: "AI Prompt Mega Pack" at $29 → replace PLACEHOLDER_PROMPT_MEGA_PACK in ai-prompt-mega-pack.js and kits.js
-- [ ] **Create Stripe Product**: "E-commerce AI Kit" at $39 → replace PLACEHOLDER_ECOMMERCE_KIT in ecommerce-kit.js and kits.js
-- [ ] **Create Stripe Product**: "SaaS Founder AI Kit" at $39 → replace PLACEHOLDER_SAAS_FOUNDER_KIT in saas-founder-kit.js and kits.js
 - [ ] Set Stripe Payment Link success URLs → /thank-you?kit=<type> for all products
 - [ ] Need GA4 analytics (NEXT_PUBLIC_GA_ID env var)
 - [ ] Need Gumroad account for marketplace distribution
-- [ ] Need email marketing tool (ConvertKit/Resend)
+- [ ] Need email marketing tool (ConvertKit/Resend) — capture is live, nurture is not
+- [ ] Connect EmailCapture to real email platform (currently goes to Gmail only)
 
 ## Done
 - [x] Baseline assessment completed
@@ -58,8 +56,12 @@ Build trending products that help people make money. Research daily. Ship fast. 
 - [x] Build SaaS Founder AI Kit ($39) — shipped with page, ZIP, bundle integration
 - [x] Write blog targeting e-commerce keywords — done
 - [x] Deploy latest changes — 7 commits pushed to main (Session 13)
+- [x] **Stripe links wired** — all 3 placeholder products now have real Stripe payment links (Session 13.5)
+- [x] **EMAIL CAPTURE COMPONENT** — site-wide lead magnet on all pages except homepage (Session 14)
+- [x] **Blog: Freelance Pricing with AI** — /blog/how-to-price-freelance-services-ai-2026 (Session 14)
+- [x] **SITEMAP UPDATED** — 28 URLs, all products + blog posts indexed (Session 14)
 
 ## Blocked
 - Analytics — need NEXT_PUBLIC_GA_ID env var
 - Gumroad — need account
-- 3 products need Stripe Payment Links (Mega Pack, E-commerce Kit, SaaS Founder Kit)
+- Email nurture — need ConvertKit/Resend connected

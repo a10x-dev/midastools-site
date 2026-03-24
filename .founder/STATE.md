@@ -1,24 +1,25 @@
 # State
 
 ## Current Status
-Day 2 — Session 13 complete. REBRAND LIVE. BUILD PASSES (36 pages). 9 products on site (8 kits + bundle). 12 blog posts (11 hosted + externals). 7 commits pushed.
+Day 2 — Session 14 complete. BUILD PASSES (37 pages). 9 products on site (8 kits + bundle). All Stripe links live. 13 blog posts (12 hosted + externals). Site-wide email capture component live.
 
 ## Products Shipped
 | Product | Price | Page | ZIP | Status |
 |---------|-------|------|-----|--------|
-| AI Prompt Mega Pack | $29 | /ai-prompt-mega-pack | ai-prompt-mega-pack.zip (82K) | ⚠️ Needs Stripe link |
+| AI Prompt Mega Pack | $29 | /ai-prompt-mega-pack | ai-prompt-mega-pack.zip (82K) | ✅ Live |
 | OpenClaw Starter Kit | $29 | / | openclaw-starter-kit.zip (16K) | ✅ Live |
 | Real Estate AI Kit | $49 | /real-estate-kit | real-estate-kit.zip (39K) | ✅ Live |
 | Content Creator Kit | $39 | /content-creator-kit | content-creator-kit.zip (41K) | ✅ Live |
 | Freelancer Automation Kit | $39 | /freelancer-kit | freelancer-kit.zip (36K) | ✅ Live |
 | Small Business AI Kit | $39 | /small-business-kit | small-business-kit.zip (42K) | ✅ Live |
-| E-commerce AI Kit | $39 | /ecommerce-kit | ecommerce-kit.zip (68K) | ⚠️ Needs Stripe link |
-| SaaS Founder AI Kit | $39 | /saas-founder-kit | saas-founder-kit.zip | ⚠️ Needs Stripe link |
+| E-commerce AI Kit | $39 | /ecommerce-kit | ecommerce-kit.zip (68K) | ✅ Live |
+| SaaS Founder AI Kit | $39 | /saas-founder-kit | saas-founder-kit.zip | ✅ Live |
 | All Kits Bundle | $97 | /bundle | All 8 ZIPs | ✅ Live |
 
-## Blog Posts (11 hosted + externals)
+## Blog Posts (12 hosted + externals)
 | Post | URL | Target Keyword | CTAs |
 |------|-----|----------------|------|
+| How to Price Freelance Services | /blog/how-to-price-freelance-services-ai-2026 | freelance pricing strategy AI 2026 | Freelancer Kit, Bundle |
 | AI Tools for SaaS Founders | /blog/ai-saas-founder-tools-2026 | AI tools SaaS founders 2026 | SaaS Kit, Bundle |
 | ChatGPT Side Hustles | /blog/chatgpt-side-hustle-2026 | ChatGPT side hustle 2026 | Mega Pack, Bundle |
 | E-commerce Descriptions | /blog/ai-ecommerce-product-descriptions-2026 | AI product descriptions 2026 | E-commerce Kit, Bundle |
@@ -31,7 +32,7 @@ Day 2 — Session 13 complete. REBRAND LIVE. BUILD PASSES (36 pages). 9 products
 | Freelancer Automation | /blog/ai-freelancer-automation-2026 | AI freelancer automation 2026 | Freelancer Kit, Bundle |
 | AI Agent $10K Day | /blog/ai-agent-10k-day | — | Starter Kit |
 
-## Build Output (36 pages)
+## Build Output (37 pages)
 All pages compile and generate static HTML successfully.
 
 ## Design System (Session 13)
@@ -45,24 +46,23 @@ All pages compile and generate static HTML successfully.
 - **Font**: Inter (loaded globally from _document.js)
 - **Style**: Clean, modern, fun — inspired by Future Founders reference
 
-## This Session (Session 13)
-- **FULL SITE REBRAND**: 30+ files updated, dark gold → clean white + blue accents
-- **2 NEW BLOG POSTS**: ChatGPT Side Hustles + AI Tools for SaaS Founders
-- **7 commits pushed to main**, all deployed to Vercel
-- **36 pages building**, up from 34
+## This Session (Session 14)
+- **EMAIL CAPTURE COMPONENT**: New `components/EmailCapture.js` — site-wide lead magnet ("Get 5 Free AI Prompts That Make Money"), appears on every page except homepage (which has its own), integrated into Layout.js above footer
+- **NEW BLOG POST**: "How to Price Freelance Services with AI in 2026" — /blog/how-to-price-freelance-services-ai-2026, ~1800 words, 5 copy-paste AI prompts, targets freelancer pricing keywords
+- **SITEMAP UPDATED**: 28 URLs (was 12), all product pages + blog posts now indexed
+- **STRIPE LINKS CONFIRMED**: All 3 previously-placeholder products now have real Stripe payment links (wired in Session 13.5)
+- **37 pages building**, up from 36
 
 ## Blockers for Founder
-1. **Create 3 Stripe Products**:
-   - "AI Prompt Mega Pack" at $29 → replace PLACEHOLDER_PROMPT_MEGA_PACK in ai-prompt-mega-pack.js and kits.js
-   - "E-commerce AI Kit" at $39 → replace PLACEHOLDER_ECOMMERCE_KIT in ecommerce-kit.js and kits.js
-   - "SaaS Founder AI Kit" at $39 → replace PLACEHOLDER_SAAS_FOUNDER_KIT in saas-founder-kit.js and kits.js
-2. Set Stripe Payment Link success URLs to `https://www.midastools.co/thank-you?kit=<kit-type>` for each product
-3. Set NEXT_PUBLIC_GA_ID env var for analytics
-4. **Post Reddit drafts** — ready at .founder/deliverables/reddit-distribution-posts.md
+1. Set Stripe Payment Link success URLs to `https://www.midastools.co/thank-you?kit=<kit-type>` for each product
+2. Set NEXT_PUBLIC_GA_ID env var for analytics
+3. **Post Reddit drafts** — ready at .founder/deliverables/reddit-distribution-posts.md
+4. Set up email marketing tool (ConvertKit/Resend) — email capture is live but only notifies via Gmail
 
 ## Next Priorities
-1. **Infrastructure**: Email capture → nurture sequences
+1. **Distribution**: Post Reddit drafts (copy-paste ready)
 2. **Gumroad**: List all products on marketplace
 3. **Comparison pages**: Midas Tools vs. individual AI tools
-4. **More content**: "How to Price Freelance Services with AI" blog post
+4. **More content**: Target high-volume keywords (e.g., "AI tools for [industry]")
 5. **QA**: Full visual review of deployed site on mobile
+6. **Email marketing platform**: Connect email capture to ConvertKit/Resend for nurture sequences
