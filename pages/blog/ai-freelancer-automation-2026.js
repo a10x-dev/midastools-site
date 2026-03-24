@@ -136,6 +136,7 @@ export default function AIFreelancerAutomation2026() {
           <li><Link href="/blog/how-to-price-freelance-services-ai-2026" style={{ color: '#3B5FFF' }}>How to Price Your Freelance Services with AI in 2026</Link></li>
           <li><Link href="/blog/automate-client-follow-up-ai" style={{ color: '#3B5FFF' }}>How to Automate Client Follow-Up with AI (No Code Required)</Link></li>
           <li><Link href="/blog/best-ai-prompts-business-2026" style={{ color: '#3B5FFF' }}>50 AI Prompts That Are Actually Making People Money in 2026</Link></li>
+          <li><Link href="/blog/ai-second-income-2026" style={{ color: '#3B5FFF' }}>How to Build a Second Income with AI in 2026</Link></li>
         </ul>
 
         <div style={{ marginTop: '48px', padding: '32px', background: '#F0F4FF', border: '1px solid #93B4FF', borderRadius: '8px' }}>

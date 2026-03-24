@@ -235,6 +235,7 @@ For each scenario: opening message, 2-3 follow-up questions to qualify the visit
           <li><Link href="/blog/best-ai-prompts-business-2026" style={{ color: '#3B5FFF' }}>50 AI Prompts That Are Actually Making People Money in 2026</Link></li>
           <li><Link href="/blog/ai-freelancer-automation-2026" style={{ color: '#3B5FFF' }}>7 AI Automations Every Freelancer Needs in 2026</Link></li>
           <li><Link href="/blog/best-ai-prompt-packs-2026" style={{ color: '#3B5FFF' }}>7 Best AI Prompt Packs Worth Buying in 2026</Link></li>
+          <li><Link href="/blog/ai-second-income-2026" style={{ color: '#3B5FFF' }}>How to Build a Second Income with AI in 2026</Link></li>
         </ul>
 
         {/* End-article CTA */}
