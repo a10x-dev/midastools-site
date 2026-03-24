@@ -407,7 +407,7 @@ Format as a configuration I can plug into [ZAPIER/MAKE/NOTION].`}
           <p style={{ fontSize: '12px', color: '#6B7280', marginTop: '8px', marginBottom: '0' }}>* Per hire or per new client, not recurring weekly</p>
         </div>
 
-        <p>Twenty to thirty hours per week. At $50/hour, that is $1,000&ndash;$1,500 per week in recovered time. Over $50,000 per year. And the cost? A ChatGPT or Claude subscription and an afternoon of setup.</p>
+        <p>Twenty to thirty hours per week. At $50/hour, that is $1,000&ndash;$1,500 per week in recovered time. Over $50,000 per year. And the cost? A ChatGPT or Claude subscription and an afternoon of setup. Curious what these automations would be worth for your specific business? <a href="/ai-roi-calculator" style={{color: '#3B5FFF', fontWeight: 600}}>Run your own numbers with our free AI ROI Calculator</a>.</p>
         <p>The businesses that treat AI as a toy will keep drowning in busywork. The businesses that treat AI as <strong>infrastructure</strong> &mdash; building systems once and letting them run &mdash; will operate at a completely different level.</p>
         <p>Pick one automation from this list. Set it up today. Not next week. Today. Once you feel the first 3 hours come back, you will never go back to doing it manually.</p>
 

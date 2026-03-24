@@ -262,7 +262,7 @@ Create:
           </table>
         </div>
 
-        <p>The key is starting with <strong>one method</strong>, not all seven. Pick the one that matches your skills and time availability. Get to $1,000/month. Then diversify.</p>
+        <p>The key is starting with <strong>one method</strong>, not all seven. Pick the one that matches your skills and time availability. Get to $1,000/month. Then diversify. Not sure which income stream makes the most sense for your situation? <a href="/ai-roi-calculator" style={{color: '#3B5FFF', fontWeight: 600}}>Try our free AI ROI Calculator to estimate your earning potential</a>.</p>
 
         <hr style={{ margin: '40px 0', border: 'none', borderTop: '1px solid #eee' }} />
 

@@ -308,7 +308,7 @@ Then create a master checklist: "Daily Operations Checklist" that combines the k
         </ul>
 
         <p><strong>Total: 15.8 hours per week.</strong> That is two full working days. Every single week.</p>
-        <p>At $50/hour, that is <strong>$41,000 per year</strong> in recovered time. At $100/hour, it is $82,000. And that is before counting the revenue from the email sequences running on autopilot and the customers you did not lose because they got instant support at midnight.</p>
+        <p>At $50/hour, that is <strong>$41,000 per year</strong> in recovered time. At $100/hour, it is $82,000. And that is before counting the revenue from the email sequences running on autopilot and the customers you did not lose because they got instant support at midnight. Want to calculate the ROI for your specific business? <a href="/ai-roi-calculator" style={{color: '#3B5FFF', fontWeight: 600}}>Use our free AI ROI Calculator to see your numbers</a>.</p>
         <p>This is not theoretical. This is what happens when small businesses stop treating AI as a toy and start treating it as a team member.</p>
 
         <hr style={{ margin: '40px 0', border: 'none', borderTop: '1px solid #eee' }} />

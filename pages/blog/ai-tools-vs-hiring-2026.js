@@ -163,7 +163,7 @@ export default function AIToolsVsHiring2026() {
           <li><strong>Would a mistake be catastrophic?</strong> If yes → Human oversight required.</li>
         </ol>
 
-        <p>Most small businesses should automate 4&ndash;6 functions with AI, hire for 2&ndash;3 critical roles, and use the hybrid approach for everything else. That saves $5,000&ndash;15,000/month compared to fully staffing.</p>
+        <p>Most small businesses should automate 4&ndash;6 functions with AI, hire for 2&ndash;3 critical roles, and use the hybrid approach for everything else. That saves $5,000&ndash;15,000/month compared to fully staffing. Want to see the exact numbers for your business? <a href="/ai-roi-calculator" style={{color: '#3B5FFF', fontWeight: 600}}>Use our free AI ROI Calculator to see exactly how much AI could save you</a>.</p>
 
         <hr style={{ margin: '40px 0', border: 'none', borderTop: '1px solid #eee' }} />
 

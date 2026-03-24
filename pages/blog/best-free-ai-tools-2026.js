@@ -268,7 +268,7 @@ Transcript: [PASTE OTTER TRANSCRIPT]`}
         <p><strong>Week 3: Add one automation.</strong> Set up one Zapier workflow or start using HubSpot CRM. Automate one specific process that you do manually every day.</p>
         <p><strong>Week 4: Evaluate and expand.</strong> By now you have a text AI, a creation tool, and an automation. That stack alone will save you 5&ndash;10 hours per week. Only add more tools if you have a specific need that is not being met.</p>
 
-        <p>The goal is not to use the most AI tools. The goal is to save the most time and produce the best work. Three tools used well beat fifteen tools used poorly.</p>
+        <p>The goal is not to use the most AI tools. The goal is to save the most time and produce the best work. Three tools used well beat fifteen tools used poorly. Once you have your stack running, use our <a href="/ai-roi-calculator" style={{color: '#3B5FFF', fontWeight: 600}}>free AI ROI Calculator</a> to put a dollar figure on the time you are saving.</p>
 
         <hr style={{ margin: '40px 0', border: 'none', borderTop: '1px solid #eee' }} />
 
