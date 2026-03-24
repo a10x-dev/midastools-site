@@ -81,8 +81,9 @@ export default function Blog() {
             <div style={{ fontSize: 14, fontWeight: 700, color: 'var(--text)', marginBottom: 4 }}>Free Tools</div>
             <div style={{ fontSize: 13, color: 'var(--text-secondary)' }}>Try before you buy — no account needed.</div>
           </div>
-          <Link href="/ai-roi-calculator" style={{ fontSize: 14, fontWeight: 700, color: 'var(--accent)', textDecoration: 'none' }}>AI ROI Calculator &rarr;</Link>
-          <Link href="/free-prompts" style={{ fontSize: 14, fontWeight: 700, color: 'var(--accent)', textDecoration: 'none' }}>5 Free Prompts &rarr;</Link>
+          <Link href="/quiz" style={{ fontSize: 14, fontWeight: 700, color: 'var(--accent)', textDecoration: 'none' }}>Find Your Kit &rarr;</Link>
+          <Link href="/ai-roi-calculator" style={{ fontSize: 14, fontWeight: 700, color: 'var(--accent)', textDecoration: 'none' }}>ROI Calculator &rarr;</Link>
+          <Link href="/free-prompts" style={{ fontSize: 14, fontWeight: 700, color: 'var(--accent)', textDecoration: 'none' }}>Free Prompts &rarr;</Link>
         </div>
 
         {posts.map(p => (

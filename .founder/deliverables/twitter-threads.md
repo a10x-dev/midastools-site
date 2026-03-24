@@ -557,3 +557,59 @@ https://www.midastools.co/blog/ai-tools-hr-recruiting-2026
 And 200+ AI prompts including HR templates:
 
 https://www.midastools.co/ai-prompt-mega-pack
+
+---
+
+## Thread 8: The "Find Your Kit" Quiz Thread
+
+**Target audience:** Everyone who's curious about AI but overwhelmed by options
+**Hook angle:** Interactive + personalized + free
+**Source:** /quiz
+
+---
+
+**Tweet 1 (Hook):**
+"What AI tools should I use?"
+
+I got this question 100+ times. So instead of writing another blog post, I built a quiz.
+
+5 questions. 60 seconds. Personalized recommendation. Free.
+
+**Tweet 2:**
+The quiz asks:
+
+1. What's your role?
+2. What's eating most of your time?
+3. How much AI experience do you have?
+4. What would make the biggest difference right now?
+5. What's your budget comfort zone?
+
+Then it matches you with the right AI prompt kit.
+
+**Tweet 3:**
+Why a quiz instead of a "top 10 tools" article?
+
+Because generic recommendations are useless.
+
+A real estate agent needs different prompts than a SaaS founder. A freelancer has different pain points than a small business owner.
+
+The quiz removes the paradox of choice.
+
+**Tweet 4:**
+Results so far:
+
+Most common result: Freelancer Automation Kit
+Most popular pain point: "All of the above" (relatable)
+Average time to complete: 47 seconds
+Most common AI experience level: "Played around a bit"
+
+People want to use AI. They just need the right starting point.
+
+**Tweet 5:**
+Take the quiz (free, no email required):
+
+https://www.midastools.co/quiz
+
+And if you just want free prompts to try first:
+
+https://www.midastools.co/free-prompts

@@ -578,6 +578,49 @@ If you want to go deeper on email and communication automation, I also have a gu
 
 ---
 
+---
+
+## Post 9: r/Entrepreneur — Quiz Tool
+
+**Posting tips:**
+- r/Entrepreneur loves free tools and actionable resources
+- Frame it as "I built this" — founders love seeing what other founders build
+- The quiz is a no-friction entry point — zero commitment, fun, shareable
+- Engage in comments for the first hour
+
+---
+
+**Title:** I built a free 60-second quiz that tells you which AI tools you actually need (based on your role + goals)
+
+**Body:**
+
+Been building AI prompt kits for different industries and the #1 question I kept getting was: "Which one do I need?"
+
+So I built a quiz. 5 questions. Takes about 60 seconds. No email required. No account needed.
+
+It asks about:
+- Your role (freelancer, e-commerce, real estate, etc.)
+- What's eating most of your time
+- Your AI experience level
+- Your biggest goal right now
+- Your budget comfort zone
+
+Then it gives you a specific recommendation with a link to learn more.
+
+**What I learned building it:**
+
+Most people don't know what they need. They just know AI can help but feel overwhelmed by options. The quiz removes the paradox of choice.
+
+Since launching it, the quiz has had a higher engagement rate than any of my blog posts. People love personalized recommendations.
+
+**Try it here:** https://www.midastools.co/quiz
+
+I also have free prompts if you just want to test AI for your specific use case: https://www.midastools.co/free-prompts
+
+Happy to answer any questions about how AI tools apply to your specific situation. Drop your role in the comments and I'll suggest where to start.
+
+---
+
 **Posting schedule suggestion:**
 - Week 1: Post 7 (r/ChatGPT — FREE PROMPTS) — lowest friction, captures emails, broadest audience
 - Week 1.5: Post 8 (r/Productivity — email templates) — different audience, high shareability
@@ -587,6 +630,7 @@ If you want to go deeper on email and communication automation, I also have a gu
 - Week 5: Post 3 (r/freelance) — niche test
 - Week 6: Post 5 (r/content_marketing) — niche test
 - Week 7: Post 1 (r/ChatGPT) — follow up with the full 10-prompt post
+- Week 8: Post 9 (r/Entrepreneur) — quiz tool, high engagement play
 
 **If a post blows up:**
 - Pin a comment with "Most-requested prompts from the comments" and include 2-3 more prompts

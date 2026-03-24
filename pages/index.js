@@ -203,7 +203,7 @@ export default function Home() {
           <strong>Instant download</strong> &middot; 30-day money-back guarantee &middot; No subscription
         </p>
         <p style={{ marginTop: '12px', fontSize: '14px', color: '#6B7280', fontFamily: "'Inter', sans-serif" }}>
-          Not ready to buy? <a href="/free-prompts" style={{ color: '#3B5FFF', fontWeight: 600, textDecoration: 'none' }}>Get 5 free AI prompts</a> &middot; <a href="/ai-roi-calculator" style={{ color: '#3B5FFF', fontWeight: 600, textDecoration: 'none' }}>Calculate your AI savings &rarr;</a>
+          Not ready to buy? <a href="/quiz" style={{ color: '#3B5FFF', fontWeight: 600, textDecoration: 'none' }}>Take the quiz</a> &middot; <a href="/free-prompts" style={{ color: '#3B5FFF', fontWeight: 600, textDecoration: 'none' }}>Get 5 free prompts</a> &middot; <a href="/ai-roi-calculator" style={{ color: '#3B5FFF', fontWeight: 600, textDecoration: 'none' }}>Calculate savings &rarr;</a>
         </p>
 
         <div className="stats-bar">
