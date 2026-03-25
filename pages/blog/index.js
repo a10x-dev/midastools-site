@@ -3,6 +3,8 @@ import Link from 'next/link';
 import Layout from '../../components/Layout';
 
 const posts = [
+  { slug: 'how-to-make-money-with-ai-2026', title: 'How to Make Money with AI in 2026: 12 Proven Methods (With Real Examples)', date: 'Mar 25, 2026', desc: '12 proven methods to make money with AI in 2026. Real income examples, tools needed, and step-by-step guides. From selling prompt packs to AI consulting.' },
+  { slug: 'chatgpt-prompts-students-2026', title: '30 ChatGPT Prompts Every Student Needs in 2026 (Study Smarter, Not Harder)', date: 'Mar 25, 2026', desc: 'The best ChatGPT prompts for students. Copy-paste prompts for essays, studying, note-taking, exam prep, and time management.' },
   { slug: 'chatgpt-action-figure-prompt-2026', title: 'How to Create Your Own ChatGPT Action Figure (Best Prompts + Tips)', date: 'Mar 25, 2026', desc: 'The viral trend explained. 15+ copy-paste prompts for action figures, doll boxes, and collectible toys.' },
   { slug: 'chatgpt-image-prompts-2026', title: '50 Viral ChatGPT Image Prompts That Broke the Internet in 2026', date: 'Mar 25, 2026', desc: 'The exact image prompts going viral on social media right now. 50 copy-paste prompts for portraits, products, social media, cinematic art, and trending aesthetic styles.' },
   { slug: 'ai-productivity-tools-2026', title: '10 AI Productivity Tools That Actually Save Time in 2026 (Tested)', date: 'Mar 24, 2026', desc: '10 AI productivity tools tested and ranked. Notion AI, ChatGPT, Claude, Perplexity, Otter.ai, and 5 more — with honest pricing, time savings, and 3 copy-paste prompts.' },
