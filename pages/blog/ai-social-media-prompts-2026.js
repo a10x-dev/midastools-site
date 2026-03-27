@@ -1018,6 +1018,15 @@ For all ads: provide estimated CPC/CPM ranges for [INDUSTRY] and suggest daily b
 
         <hr style={{ margin: '40px 0', border: 'none', borderTop: '1px solid #eee' }} />
 
+        {/* Related Content */}
+        <div style={{ background: 'var(--surface)', borderRadius: 16, padding: 32, margin: '40px 0' }}>
+          <h3 style={{ fontSize: 20, fontWeight: 800, marginBottom: 16 }}>Keep Reading</h3>
+          <div style={{ display: 'grid', gap: 12 }}>
+            <Link href="/blog/best-instagram-hashtags-2026" style={{ color: '#3B5FFF', fontWeight: 600, fontSize: 15, textDecoration: 'none' }}>150+ Best Instagram Hashtags for 2026 (By Niche + Strategy Guide) &rarr;</Link>
+            <Link href="/hashtag-generator" style={{ color: '#3B5FFF', fontWeight: 600, fontSize: 15, textDecoration: 'none' }}>Free AI Hashtag Generator Tool &rarr;</Link>
+          </div>
+        </div>
+
         {/* EMAIL CAPTURE */}
         <EmailCapture />
 

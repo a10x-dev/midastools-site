@@ -352,6 +352,28 @@ export default function SocialMediaKit() {
         </div>
       </section>
 
+      {/* Free Tools & Blog */}
+      <section style={{paddingTop:0}}>
+        <h2 style={{textAlign:'center',marginBottom:32}}>Free Social Media Resources</h2>
+        <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(260px,1fr))',gap:16}}>
+          <a href="/hashtag-generator" style={{background:'linear-gradient(135deg,#EEF2FF,#F0F5FF)',border:'2px solid rgba(59,95,255,0.15)',borderRadius:16,padding:24,textDecoration:'none',color:'inherit'}}>
+            <div style={{fontSize:11,fontWeight:700,color:'var(--accent)',textTransform:'uppercase',marginBottom:6}}>Free Tool</div>
+            <div style={{fontSize:17,fontWeight:700,marginBottom:6}}>AI Hashtag Generator</div>
+            <div style={{fontSize:13,color:'var(--text-secondary)',lineHeight:1.6}}>Generate optimized hashtags for Instagram, TikTok & more. 22 niches.</div>
+          </a>
+          <a href="/blog/best-instagram-hashtags-2026" style={{background:'linear-gradient(135deg,#EEF2FF,#F0F5FF)',border:'2px solid rgba(59,95,255,0.15)',borderRadius:16,padding:24,textDecoration:'none',color:'inherit'}}>
+            <div style={{fontSize:11,fontWeight:700,color:'var(--accent)',textTransform:'uppercase',marginBottom:6}}>Blog</div>
+            <div style={{fontSize:17,fontWeight:700,marginBottom:6}}>150+ Best Instagram Hashtags 2026</div>
+            <div style={{fontSize:13,color:'var(--text-secondary)',lineHeight:1.6}}>Complete guide by niche with strategy tips and mistakes to avoid.</div>
+          </a>
+          <a href="/blog/ai-social-media-prompts-2026" style={{background:'linear-gradient(135deg,#EEF2FF,#F0F5FF)',border:'2px solid rgba(59,95,255,0.15)',borderRadius:16,padding:24,textDecoration:'none',color:'inherit'}}>
+            <div style={{fontSize:11,fontWeight:700,color:'var(--accent)',textTransform:'uppercase',marginBottom:6}}>Blog</div>
+            <div style={{fontSize:17,fontWeight:700,marginBottom:6}}>20 AI Social Media Prompts</div>
+            <div style={{fontSize:13,color:'var(--text-secondary)',lineHeight:1.6}}>Copy-paste prompts for content calendars, captions, viral formulas & more.</div>
+          </a>
+        </div>
+      </section>
+
       {/* Related Products */}
       <section style={{paddingTop:0}}>
         <h2 style={{textAlign:'center',marginBottom:32}}>Related Kits</h2>
