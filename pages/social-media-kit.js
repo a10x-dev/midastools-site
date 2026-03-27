@@ -2,7 +2,7 @@ import Head from 'next/head';
 import { useState } from 'react';
 import Layout from '../components/Layout';
 
-const STRIPE_URL = 'https://buy.stripe.com/PLACEHOLDER_SOCIAL_MEDIA';
+const STRIPE_URL = 'https://buy.stripe.com/6oU5kC6SbdLj4CwegicMM0k';
 
 export default function SocialMediaKit() {
   const [email, setEmail] = useState('');

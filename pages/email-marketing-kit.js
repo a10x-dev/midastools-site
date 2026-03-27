@@ -2,7 +2,7 @@ import Head from 'next/head';
 import { useState } from 'react';
 import Layout from '../components/Layout';
 
-const STRIPE_URL = 'https://buy.stripe.com/PLACEHOLDER_EMAIL_MARKETING';
+const STRIPE_URL = 'https://buy.stripe.com/6oUcN40tN0Yxgle0pscMM0l';
 const BUNDLE_URL = 'https://buy.stripe.com/bJe7sK0tNdLjgle0pscMM0b';
 
 export default function EmailMarketingKit() {

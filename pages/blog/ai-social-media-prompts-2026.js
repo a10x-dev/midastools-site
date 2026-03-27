@@ -3,7 +3,7 @@ import Link from 'next/link';
 import Layout from '../../components/Layout';
 import EmailCapture from '../../components/EmailCapture';
 
-const SOCIAL_MEDIA_KIT_URL = 'https://buy.stripe.com/PLACEHOLDER_SOCIAL_MEDIA';
+const SOCIAL_MEDIA_KIT_URL = 'https://buy.stripe.com/6oU5kC6SbdLj4CwegicMM0k';
 const BUNDLE_URL = 'https://buy.stripe.com/bJe7sK0tNdLjgle0pscMM0b';
 
 export default function AISocialMediaPrompts2026() {

@@ -2,7 +2,7 @@ import Head from 'next/head';
 import { useState } from 'react';
 import Layout from '../components/Layout';
 
-const STRIPE_URL = 'https://buy.stripe.com/PLACEHOLDER_PRESENTATION';
+const STRIPE_URL = 'https://buy.stripe.com/8x228q6Sb36F2uofkmcMM0m';
 const BUNDLE_URL = 'https://buy.stripe.com/bJe7sK0tNdLjgle0pscMM0b';
 
 export default function PresentationKit() {

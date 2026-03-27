@@ -27,6 +27,14 @@ const TOOLS = [
     categories: '6 scoring metrics',
     bg: 'var(--card-amber)',
   },
+  {
+    title: 'AI Hashtag Generator',
+    desc: 'Generate optimized hashtags for Instagram, TikTok, Twitter/X, LinkedIn, and YouTube. 22 niches, 4 styles, platform-specific counts. Copy all with one click.',
+    href: '/hashtag-generator',
+    tag: 'New',
+    categories: '22 niches',
+    bg: 'var(--card-cyan)',
+  },
 ];
 
 const COMING_SOON = [
