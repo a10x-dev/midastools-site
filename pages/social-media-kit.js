@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Link from 'next/link';
 import { useState } from 'react';
 import Layout from '../components/Layout';
 
@@ -400,6 +401,23 @@ export default function SocialMediaKit() {
         </p>
         <a href={STRIPE_URL} className="btn-primary">Get the Social Media Kit &mdash; $39 &rarr;</a>
         <p style={{marginTop:14,fontSize:14,color:'var(--gray-400)'}}>One-time payment &middot; Instant download &middot; 30-day money-back guarantee</p>
+      </section>
+
+      {/* Related Articles */}
+      <section>
+        <h2>Social Media <span>Guides</span></h2>
+        <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(250px,1fr))',gap:16}}>
+          {[
+            { href: '/blog/ai-social-media-prompts-2026', title: 'AI Social Media Prompts That Actually Drive Engagement', desc: 'Stop guessing what to post. Proven prompts for every platform.' },
+            { href: '/blog/best-instagram-hashtags-2026', title: 'Best Instagram Hashtags for 2026', desc: 'The hashtag strategy that gets your content seen by the right audience.' },
+            { href: '/blog/ai-tools-content-creators-2026', title: '10 AI Tools Content Creators Use to 10x Output', desc: 'The exact tools for writing, scheduling, and repurposing at scale.' },
+          ].map(a => (
+            <Link key={a.href} href={a.href} style={{display:'block',padding:24,borderRadius:14,border:'1px solid var(--gray-800)',textDecoration:'none',color:'inherit',transition:'border-color 0.2s'}}>
+              <div style={{fontSize:16,fontWeight:700,marginBottom:8,lineHeight:1.4}}>{a.title}</div>
+              <div style={{fontSize:14,color:'var(--gray-400)',lineHeight:1.6}}>{a.desc}</div>
+            </Link>
+          ))}
+        </div>
       </section>
     </Layout>
   );

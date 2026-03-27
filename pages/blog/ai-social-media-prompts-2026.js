@@ -1044,6 +1044,16 @@ For all ads: provide estimated CPC/CPM ranges for [INDUSTRY] and suggest daily b
           }
         }
       `}</style>
+
+      {/* Product CTA */}
+      <div style={{maxWidth:700,margin:'0 auto 60px',padding:'0 20px'}}>
+        <div style={{background:'linear-gradient(135deg, #EEF2FF 0%, #E0E7FF 100%)',borderRadius:16,padding:32,textAlign:'center'}}>
+          <div style={{fontSize:12,fontWeight:700,color:'#3B5FFF',textTransform:'uppercase',letterSpacing:1.5,marginBottom:8}}>Ready-Made Kit</div>
+          <h3 style={{marginTop:0,fontSize:'1.3rem',color:'#111827'}}>Get 150+ Social Media Prompts — Ready to Use</h3>
+          <p style={{color:'#4B5563',fontSize:15,marginBottom:20,lineHeight:1.6}}>Stop writing prompts from scratch. The AI Social Media Manager Kit includes captions, hooks, content calendars, analytics prompts, and paid ad copy for every platform.</p>
+          <a href="/social-media-kit" style={{display:'inline-block',background:'#3B5FFF',color:'#fff',padding:'14px 32px',borderRadius:100,textDecoration:'none',fontWeight:700,fontSize:15}}>Get the Social Media Kit — $39 →</a>
+        </div>
+      </div>
     </Layout>
   );
 }

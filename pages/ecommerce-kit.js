@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Link from 'next/link';
 import { useState } from 'react';
 import Layout from '../components/Layout';
 
@@ -313,6 +314,23 @@ export default function EcommerceKit() {
               <div style={{fontSize:16,fontWeight:700,marginBottom:8}}>{f.q}</div>
               <div style={{fontSize:15,color:'var(--gray-400)',lineHeight:1.7}}>{f.a}</div>
             </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Related Articles */}
+      <section>
+        <h2>E-commerce <span>Guides</span></h2>
+        <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(250px,1fr))',gap:16}}>
+          {[
+            { href: '/blog/ai-ecommerce-product-descriptions-2026', title: 'AI Product Descriptions That Actually Convert', desc: 'How top Shopify stores use AI to write descriptions that sell.' },
+            { href: '/blog/ai-marketing-tools-2026', title: 'Best AI Marketing Tools for 2026', desc: 'The complete marketing stack for e-commerce brands.' },
+            { href: '/blog/ai-email-templates-2026', title: 'AI Email Templates for 2026', desc: 'Welcome sequences, abandoned cart, and post-purchase emails that drive repeat revenue.' },
+          ].map(a => (
+            <Link key={a.href} href={a.href} style={{display:'block',padding:24,borderRadius:14,border:'1px solid var(--gray-800)',textDecoration:'none',color:'inherit',transition:'border-color 0.2s'}}>
+              <div style={{fontSize:16,fontWeight:700,marginBottom:8,lineHeight:1.4}}>{a.title}</div>
+              <div style={{fontSize:14,color:'var(--gray-400)',lineHeight:1.6}}>{a.desc}</div>
+            </Link>
           ))}
         </div>
       </section>

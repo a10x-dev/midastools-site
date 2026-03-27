@@ -257,6 +257,23 @@ export default function NotionTemplatesKit() {
         <a href={STRIPE_URL} className="btn-primary">Get the Notion Templates Kit &mdash; $39 &rarr;</a>
         <p style={{marginTop:14,fontSize:14,color:'var(--text-secondary)'}}>One-time payment &middot; Instant download &middot; 30-day money-back guarantee</p>
       </section>
+
+      {/* Related Articles */}
+      <section>
+        <h2>Notion & Productivity <span>Guides</span></h2>
+        <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(250px,1fr))',gap:16}}>
+          {[
+            { href: '/blog/notion-templates-business-2026', title: '12 Notion Templates Every Business Needs in 2026', desc: 'The essential templates for project management, CRM, and team ops.' },
+            { href: '/blog/ai-productivity-tools-2026', title: 'Best AI Productivity Tools for 2026', desc: 'The tools that save 10+ hours per week on repetitive work.' },
+            { href: '/blog/ai-tools-project-managers-2026', title: 'AI Tools for Project Managers', desc: 'How PMs are using AI to ship faster and communicate better.' },
+          ].map(a => (
+            <Link key={a.href} href={a.href} style={{display:'block',padding:24,borderRadius:14,border:'1px solid var(--border)',textDecoration:'none',color:'inherit',transition:'border-color 0.2s'}}>
+              <div style={{fontSize:16,fontWeight:700,marginBottom:8,lineHeight:1.4}}>{a.title}</div>
+              <div style={{fontSize:14,color:'var(--text-secondary)',lineHeight:1.6}}>{a.desc}</div>
+            </Link>
+          ))}
+        </div>
+      </section>
     </Layout>
   );
 }

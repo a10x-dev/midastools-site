@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Link from 'next/link';
 import { useState } from 'react';
 import Layout from '../components/Layout';
 
@@ -393,6 +394,23 @@ export default function EmailMarketingKit() {
         </p>
         <a href={STRIPE_URL} className="btn-primary">Get the Email Marketing Kit &mdash; $29 &rarr;</a>
         <p style={{marginTop:14,fontSize:14,color:'var(--gray-400)'}}>One-time payment &middot; Instant download &middot; 30-day money-back guarantee</p>
+      </section>
+
+      {/* Related Articles */}
+      <section>
+        <h2>Email Marketing <span>Guides</span></h2>
+        <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(250px,1fr))',gap:16}}>
+          {[
+            { href: '/blog/ai-email-marketing-prompts-2026', title: '20 AI Prompts That Will Transform Your Email Marketing', desc: 'Copy-paste prompts for welcome sequences, newsletters, and re-engagement campaigns.' },
+            { href: '/blog/ai-email-templates-2026', title: 'Best AI Email Templates for 2026', desc: 'Templates for every email type — cold outreach, follow-ups, and transactional.' },
+            { href: '/blog/cold-email-templates-2026', title: 'Cold Email Templates That Get Replies', desc: 'Proven frameworks that generate 30%+ open rates and real conversations.' },
+          ].map(a => (
+            <Link key={a.href} href={a.href} style={{display:'block',padding:24,borderRadius:14,border:'1px solid var(--gray-800)',textDecoration:'none',color:'inherit',transition:'border-color 0.2s'}}>
+              <div style={{fontSize:16,fontWeight:700,marginBottom:8,lineHeight:1.4}}>{a.title}</div>
+              <div style={{fontSize:14,color:'var(--gray-400)',lineHeight:1.6}}>{a.desc}</div>
+            </Link>
+          ))}
+        </div>
       </section>
     </Layout>
   );

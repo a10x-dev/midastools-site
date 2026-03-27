@@ -278,6 +278,23 @@ export default function RealEstateKit() {
           ))}
         </div>
       </section>
+
+      {/* Related Articles */}
+      <section>
+        <h2>Learn More About <span>AI for Real Estate</span></h2>
+        <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(250px,1fr))',gap:16}}>
+          {[
+            { href: '/blog/ai-prompts-real-estate-agents-2026', title: '20 AI Prompts Every Real Estate Agent Needs in 2026', desc: 'Copy-paste prompts for listings, follow-ups, and lead nurture.' },
+            { href: '/blog/ai-tools-by-profession-2026', title: 'Best AI Tools by Profession', desc: 'How top agents are using AI to close more deals, faster.' },
+            { href: '/blog/best-ai-prompts-business-2026', title: 'Best AI Prompts for Business in 2026', desc: '50+ prompts that save hours across every business function.' },
+          ].map(a => (
+            <Link key={a.href} href={a.href} style={{display:'block',padding:24,borderRadius:14,border:'1px solid var(--gray-800)',textDecoration:'none',color:'inherit',transition:'border-color 0.2s'}}>
+              <div style={{fontSize:16,fontWeight:700,marginBottom:8,lineHeight:1.4}}>{a.title}</div>
+              <div style={{fontSize:14,color:'var(--gray-400)',lineHeight:1.6}}>{a.desc}</div>
+            </Link>
+          ))}
+        </div>
+      </section>
     </Layout>
   );
 }

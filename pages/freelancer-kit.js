@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Link from 'next/link';
 import { useState } from 'react';
 import Layout from '../components/Layout';
 
@@ -225,6 +226,23 @@ export default function FreelancerKit() {
               <div style={{fontSize:16,fontWeight:700,marginBottom:8}}>{f.q}</div>
               <div style={{fontSize:15,color:'var(--gray-400)',lineHeight:1.7}}>{f.a}</div>
             </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Related Articles */}
+      <section>
+        <h2>Freelancer Guides & <span>Resources</span></h2>
+        <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(250px,1fr))',gap:16}}>
+          {[
+            { href: '/blog/ai-freelancer-automation-2026', title: '7 Ways Freelancers Are Using AI to Double Their Income', desc: 'Real automations that save 10+ hours/week on proposals, invoices, and client work.' },
+            { href: '/blog/how-to-price-freelance-services-ai-2026', title: 'How to Price Freelance Services with AI', desc: 'Data-driven pricing strategies that win more clients at higher rates.' },
+            { href: '/blog/automate-client-follow-up-ai', title: 'Automate Client Follow-Ups with AI', desc: 'Never lose a deal to slow response times again.' },
+          ].map(a => (
+            <Link key={a.href} href={a.href} style={{display:'block',padding:24,borderRadius:14,border:'1px solid var(--gray-800)',textDecoration:'none',color:'inherit',transition:'border-color 0.2s'}}>
+              <div style={{fontSize:16,fontWeight:700,marginBottom:8,lineHeight:1.4}}>{a.title}</div>
+              <div style={{fontSize:14,color:'var(--gray-400)',lineHeight:1.6}}>{a.desc}</div>
+            </Link>
           ))}
         </div>
       </section>

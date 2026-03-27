@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Link from 'next/link';
 import { useState } from 'react';
 import Layout from '../components/Layout';
 
@@ -258,6 +259,23 @@ export default function ContentCreatorKit() {
               <div style={{fontSize:16,fontWeight:700,marginBottom:8}}>{f.q}</div>
               <div style={{fontSize:15,color:'var(--gray-400)',lineHeight:1.7}}>{f.a}</div>
             </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Related Articles */}
+      <section>
+        <h2>Content Creator <span>Resources</span></h2>
+        <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(250px,1fr))',gap:16}}>
+          {[
+            { href: '/blog/ai-tools-content-creators-2026', title: '10 AI Tools Content Creators Are Using to 10x Their Output', desc: 'The exact tools top creators use to write, repurpose, and schedule faster.' },
+            { href: '/blog/ai-social-media-prompts-2026', title: 'AI Social Media Prompts That Actually Drive Engagement', desc: 'Stop guessing what to post. These prompts generate scroll-stopping content.' },
+            { href: '/blog/chatgpt-tips-tricks-2026', title: 'ChatGPT Tips & Tricks for 2026', desc: 'Advanced techniques to get 10x better outputs from any AI tool.' },
+          ].map(a => (
+            <Link key={a.href} href={a.href} style={{display:'block',padding:24,borderRadius:14,border:'1px solid var(--gray-800)',textDecoration:'none',color:'inherit',transition:'border-color 0.2s'}}>
+              <div style={{fontSize:16,fontWeight:700,marginBottom:8,lineHeight:1.4}}>{a.title}</div>
+              <div style={{fontSize:14,color:'var(--gray-400)',lineHeight:1.6}}>{a.desc}</div>
+            </Link>
           ))}
         </div>
       </section>

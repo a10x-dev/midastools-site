@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Link from 'next/link';
 import { useState } from 'react';
 import Layout from '../components/Layout';
 
@@ -281,6 +282,23 @@ export default function SmallBusinessKit() {
               <div style={{fontSize:16,fontWeight:700,marginBottom:8}}>{f.q}</div>
               <div style={{fontSize:15,color:'var(--gray-400)',lineHeight:1.7}}>{f.a}</div>
             </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Related Articles */}
+      <section>
+        <h2>Small Business <span>Guides</span></h2>
+        <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(250px,1fr))',gap:16}}>
+          {[
+            { href: '/blog/ai-small-business-automation-2026', title: 'AI Automation for Small Business in 2026', desc: 'How small businesses are saving 20+ hours/week with AI workflows.' },
+            { href: '/blog/ai-tools-small-business-owners-2026', title: 'Best AI Tools for Small Business Owners', desc: 'The complete toolkit for marketing, ops, and customer service.' },
+            { href: '/blog/ai-tools-vs-hiring-2026', title: 'AI Tools vs Hiring: When to Use Each', desc: 'The math behind when AI replaces a hire and when you still need humans.' },
+          ].map(a => (
+            <Link key={a.href} href={a.href} style={{display:'block',padding:24,borderRadius:14,border:'1px solid var(--gray-800)',textDecoration:'none',color:'inherit',transition:'border-color 0.2s'}}>
+              <div style={{fontSize:16,fontWeight:700,marginBottom:8,lineHeight:1.4}}>{a.title}</div>
+              <div style={{fontSize:14,color:'var(--gray-400)',lineHeight:1.6}}>{a.desc}</div>
+            </Link>
           ))}
         </div>
       </section>

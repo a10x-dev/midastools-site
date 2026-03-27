@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Link from 'next/link';
 import { useState } from 'react';
 import Layout from '../components/Layout';
 
@@ -314,6 +315,23 @@ export default function SaasFounderKit() {
               <div style={{fontSize:16,fontWeight:700,marginBottom:8}}>{f.q}</div>
               <div style={{fontSize:15,color:'var(--gray-400)',lineHeight:1.7}}>{f.a}</div>
             </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Related Articles */}
+      <section>
+        <h2>SaaS Founder <span>Resources</span></h2>
+        <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(250px,1fr))',gap:16}}>
+          {[
+            { href: '/blog/ai-saas-founder-tools-2026', title: 'AI Tools Every SaaS Founder Needs in 2026', desc: 'From customer support to churn prediction — the AI stack for modern SaaS.' },
+            { href: '/blog/ai-marketing-tools-2026', title: 'Best AI Marketing Tools for 2026', desc: 'The tools that 10x your marketing output without hiring a team.' },
+            { href: '/blog/ai-agent-10k-day', title: 'How to Build an AI Agent That Makes $10K/Day', desc: 'The playbook behind the most profitable AI agent businesses.' },
+          ].map(a => (
+            <Link key={a.href} href={a.href} style={{display:'block',padding:24,borderRadius:14,border:'1px solid var(--gray-800)',textDecoration:'none',color:'inherit',transition:'border-color 0.2s'}}>
+              <div style={{fontSize:16,fontWeight:700,marginBottom:8,lineHeight:1.4}}>{a.title}</div>
+              <div style={{fontSize:14,color:'var(--gray-400)',lineHeight:1.6}}>{a.desc}</div>
+            </Link>
           ))}
         </div>
       </section>
