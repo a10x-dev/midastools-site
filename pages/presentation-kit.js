@@ -275,7 +275,7 @@ export default function PresentationKit() {
         <div style={{background:'rgba(124,58,237,0.04)',border:'1px solid rgba(124,58,237,0.15)',borderRadius:16,padding:32,textAlign:'center'}}>
           <div style={{fontSize:12,fontWeight:700,color:'#7C3AED',textTransform:'uppercase',letterSpacing:1.5,marginBottom:8}}>Best Value</div>
           <p style={{fontSize:20,fontWeight:800,marginBottom:8}}>Get all 15 AI kits for $97</p>
-          <p style={{color:'var(--gray-400)',fontSize:15,marginBottom:20,lineHeight:1.6}}>This kit + 14 more AI kits &mdash; $535 value. Save 82%.</p>
+          <p style={{color:'var(--text-secondary)',fontSize:15,marginBottom:20,lineHeight:1.6}}>This kit + 14 more AI kits &mdash; $535 value for $97. Save 82%. Plus every future kit free.</p>
           <a href={BUNDLE_URL} style={{color:'#7C3AED',fontWeight:700,fontSize:15,textDecoration:'none'}}>
             Get the Bundle — $97 &rarr;
           </a>

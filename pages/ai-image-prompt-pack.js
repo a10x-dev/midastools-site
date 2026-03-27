@@ -270,7 +270,7 @@ export default function AIImagePromptPack() {
         <div style={{background:'rgba(59,95,255,0.04)', border:'1px solid rgba(59,95,255,0.15)', borderRadius:16, padding:32, textAlign:'center'}}>
           <div style={{fontSize:12, fontWeight:700, color:'var(--gold)', textTransform:'uppercase', letterSpacing:1}}>Want Text Prompts Too?</div>
           <p style={{fontSize:20, fontWeight:800, marginBottom:4, marginTop:8}}>Get all AI kits + prompt packs for $97</p>
-          <p style={{fontSize:14, color:'var(--gray-400)', marginBottom:16}}>Image Pack + Mega Pack + all niche kits. Text and visual prompts in one bundle. Save 79%.</p>
+          <p style={{fontSize:14, color:'var(--text-secondary)', marginBottom:16}}>All 15 AI kits — $535 value for $97. Save 82%. Plus every future kit free.</p>
           <a href="https://buy.stripe.com/bJe7sK0tNdLjgle0pscMM0b" style={{color:'var(--gold)', fontWeight:700, fontSize:15, textDecoration:'none'}}>
             Get the Bundle — $97 →
           </a>

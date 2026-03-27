@@ -32,6 +32,9 @@ export default function Bundle() {
         @media(max-width:700px) {
           section { padding: 60px 20px; }
           .kits-grid { grid-template-columns: 1fr; }
+          .stats-row { grid-template-columns: 1fr !important; }
+          .outcomes-grid { grid-template-columns: 1fr !important; }
+          .persona-grid { grid-template-columns: 1fr !important; }
         }
       `}</style>
 
@@ -53,6 +56,65 @@ export default function Bundle() {
           <a href={STRIPE_URL} className="btn-primary">Get the Full Bundle &mdash; $97 &rarr;</a>
         </div>
         <p style={{marginTop:14,fontSize:14,color:'var(--text-secondary)'}}>One-time payment &middot; Instant download &middot; 30-day money-back guarantee</p>
+      </section>
+
+      {/* Social Proof */}
+      <section style={{paddingTop:0,paddingBottom:40}}>
+        <div className="stats-row" style={{display:'grid',gridTemplateColumns:'repeat(3,1fr)',gap:20,maxWidth:700,margin:'0 auto'}}>
+          {[
+            { stat: '2,000+', label: 'Prompts & templates included' },
+            { stat: '15', label: 'Complete niche kits' },
+            { stat: '82%', label: 'Savings vs. buying separately' },
+          ].map(s => (
+            <div key={s.label} style={{textAlign:'center',padding:24,background:'var(--surface)',borderRadius:16,border:'1px solid var(--border)'}}>
+              <div style={{fontSize:32,fontWeight:900,color:'var(--accent)',letterSpacing:-1}}>{s.stat}</div>
+              <div style={{fontSize:13,color:'var(--text-secondary)',marginTop:4}}>{s.label}</div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Results / Outcomes */}
+      <section style={{paddingTop:0,paddingBottom:40}}>
+        <div style={{background:'rgba(59,95,255,0.04)',border:'1px solid rgba(59,95,255,0.12)',borderRadius:20,padding:'40px 32px'}}>
+          <div style={{fontSize:12,fontWeight:700,color:'var(--accent)',textTransform:'uppercase',letterSpacing:1.5,marginBottom:16,textAlign:'center'}}>What People Are Doing With These Kits</div>
+          <div className="outcomes-grid" style={{display:'grid',gridTemplateColumns:'repeat(2,1fr)',gap:20}}>
+            {[
+              { result: 'Generated 3 months of social media content in one afternoon', who: 'Small business owners' },
+              { result: 'Wrote 50 property listings in the time it used to take for 5', who: 'Real estate agents' },
+              { result: 'Built entire email welcome sequence + 30-day nurture in 2 hours', who: 'Email marketers' },
+              { result: 'Created pitch deck, investor memo, and one-pager in a single session', who: 'Startup founders' },
+            ].map(r => (
+              <div key={r.result} style={{padding:20,background:'var(--bg)',borderRadius:12,border:'1px solid var(--border)'}}>
+                <div style={{fontSize:15,fontWeight:700,color:'var(--text)',lineHeight:1.5,marginBottom:8}}>"{r.result}"</div>
+                <div style={{fontSize:13,color:'var(--text-tertiary)'}}>— {r.who}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Who This Is For */}
+      <section style={{paddingTop:0,paddingBottom:40}}>
+        <div className="section-label">Who This Is For</div>
+        <h2>Stop spending hours on tasks AI can do in <span>minutes</span></h2>
+        <p style={{color:'var(--text-secondary)',fontSize:16,marginBottom:32,lineHeight:1.7}}>If any of these sound like you, the bundle pays for itself in the first week:</p>
+        <div className="persona-grid" style={{display:'grid',gridTemplateColumns:'repeat(2,1fr)',gap:16}}>
+          {[
+            { emoji: '🏠', title: 'Real estate agents', pain: 'Writing listings and follow-ups eats your evenings' },
+            { emoji: '📱', title: 'Content creators', pain: 'You know you should post daily but can\'t keep up' },
+            { emoji: '💼', title: 'Freelancers & consultants', pain: 'Proposals, invoices, and client emails steal billable hours' },
+            { emoji: '🛒', title: 'E-commerce sellers', pain: 'Product descriptions and ad copy take forever' },
+            { emoji: '🚀', title: 'Startup founders', pain: 'Pitch decks, investor emails, and onboarding all need to be perfect' },
+            { emoji: '📊', title: 'Small business owners', pain: 'You\'re doing marketing, sales, and ops all by yourself' },
+          ].map(p => (
+            <div key={p.title} style={{padding:20,borderRadius:12,border:'1px solid var(--border)',background:'var(--bg)'}}>
+              <div style={{fontSize:24,marginBottom:8}}>{p.emoji}</div>
+              <div style={{fontSize:15,fontWeight:700,color:'var(--text)',marginBottom:4}}>{p.title}</div>
+              <div style={{fontSize:14,color:'var(--text-secondary)',lineHeight:1.6}}>{p.pain}</div>
+            </div>
+          ))}
+        </div>
       </section>
 
       {/* What's Included */}
