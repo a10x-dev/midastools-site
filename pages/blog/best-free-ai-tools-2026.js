@@ -296,6 +296,14 @@ Transcript: [PASTE OTTER TRANSCRIPT]`}
           <li><Link href="/social-media-kit" style={{ color: '#3B5FFF' }}>AI Social Media Manager Kit — Content Calendars, Captions &amp; Viral Formulas</Link></li>
         </ul>
 
+        <h2 style={{ fontSize: '1.4rem', fontWeight: '700', marginTop: '40px' }}>Free AI Tools You Can Use Right Now</h2>
+        <ul style={{ paddingLeft: '20px', marginBottom: '16px' }}>
+          <li><Link href="/prompt-generator" style={{ color: '#3B5FFF' }}>AI Prompt Generator — Create expert prompts for any task (8 categories)</Link></li>
+          <li><Link href="/business-name-generator" style={{ color: '#3B5FFF' }}>AI Business Name Generator — 20 brandable names in seconds (16 industries)</Link></li>
+          <li><Link href="/email-subject-line-tester" style={{ color: '#3B5FFF' }}>Email Subject Line Tester — Score your emails before you send</Link></li>
+          <li><Link href="/tools" style={{ color: '#3B5FFF' }}>Browse all free AI tools &rarr;</Link></li>
+        </ul>
+
         <hr style={{ margin: '40px 0', border: 'none', borderTop: '1px solid #eee' }} />
 
         {/* ── FINAL CTA ── */}

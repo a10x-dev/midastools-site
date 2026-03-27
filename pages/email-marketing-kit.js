@@ -328,6 +328,23 @@ export default function EmailMarketingKit() {
         </div>
       </section>
 
+      {/* Free Tool Callout */}
+      <section style={{paddingTop:0}}>
+        <a href="/email-subject-line-tester" style={{
+          display:'block',background:'linear-gradient(135deg, #FFFBEB, #FEF3C7)',border:'2px solid rgba(217,119,6,0.2)',
+          borderRadius:16,padding:'24px 28px',textDecoration:'none',transition:'transform 0.15s',
+        }}>
+          <div style={{display:'flex',justifyContent:'space-between',alignItems:'center',flexWrap:'wrap',gap:12}}>
+            <div>
+              <div style={{fontSize:11,fontWeight:700,color:'#D97706',letterSpacing:1,textTransform:'uppercase',marginBottom:4}}>Free Tool</div>
+              <div style={{fontSize:17,fontWeight:700,color:'var(--text)'}}>Test Your Subject Lines Before You Send</div>
+              <div style={{fontSize:14,color:'var(--text-secondary)',marginTop:4}}>Score for open rate, spam risk, and engagement. Instant results, no signup.</div>
+            </div>
+            <span style={{background:'#D97706',color:'#fff',padding:'10px 20px',borderRadius:100,fontWeight:700,fontSize:14,whiteSpace:'nowrap'}}>Try free &rarr;</span>
+          </div>
+        </a>
+      </section>
+
       {/* Related Products */}
       <section style={{paddingTop:0}}>
         <h2 style={{textAlign:'center',marginBottom:32}}>Related Kits</h2>

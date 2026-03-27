@@ -912,6 +912,26 @@ export default function PromptGenerator() {
         ))}
       </section>
 
+      {/* Cross-promote other free tools */}
+      <section className="related" style={{ paddingBottom: 0 }}>
+        <h2>More Free AI Tools</h2>
+        <div className="related-grid">
+          <Link href="/business-name-generator" className="related-card" style={{ borderColor: 'rgba(59,95,255,0.2)', background: 'rgba(59,95,255,0.03)' }}>
+            <div style={{ fontSize: 10, fontWeight: 700, background: '#FEF3C7', color: '#D97706', padding: '2px 8px', borderRadius: 100, display: 'inline-block', marginBottom: 8 }}>NEW</div>
+            <h3 className="rc-title">AI Business Name Generator</h3>
+            <p className="rc-desc">Get 20 brandable business names instantly. 16 industries, 6 styles.</p>
+          </Link>
+          <Link href="/free-prompts" className="related-card">
+            <h3 className="rc-title">5 Free AI Prompts</h3>
+            <p className="rc-desc">Download 5 battle-tested prompts that actually make money</p>
+          </Link>
+          <Link href="/tools" className="related-card">
+            <h3 className="rc-title">All Free Tools</h3>
+            <p className="rc-desc">Browse our complete collection of free AI tools</p>
+          </Link>
+        </div>
+      </section>
+
       {/* Related Content */}
       <section className="related">
         <h2>Learn More About AI Prompts</h2>

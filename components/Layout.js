@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useState } from 'react';
 import EmailCapture from './EmailCapture';
+import SocialProofToast from './SocialProofToast';
 
 export const DESIGN = {
   accent: '#3B5FFF',
@@ -201,7 +202,7 @@ export default function Layout({ children }) {
           <span className="logo-tools">TOOLS</span>
         </Link>
         <div className="nav-links">
-          <Link href="/prompt-generator" className={`nav-link${path === '/prompt-generator' ? ' active' : ''}`}>Prompt Generator</Link>
+          <Link href="/tools" className={`nav-link${path === '/tools' || path === '/prompt-generator' || path === '/business-name-generator' ? ' active' : ''}`}>Free Tools</Link>
           <Link href="/chatgpt-prompts" className={`nav-link${path === '/chatgpt-prompts' ? ' active' : ''}`}>Prompts</Link>
           <Link href="/kits" className={`nav-link${path === '/kits' ? ' active' : ''}`}>Kits</Link>
           <Link href="/blog" className={`nav-link${path.startsWith('/blog') ? ' active' : ''}`}>Blog</Link>
@@ -218,7 +219,10 @@ export default function Layout({ children }) {
 
       <div className={`mobile-menu${menuOpen ? ' open' : ''}`} onClick={() => setMenuOpen(false)}>
         <Link href="/">Home</Link>
+        <Link href="/tools">Free Tools</Link>
         <Link href="/prompt-generator">Prompt Generator</Link>
+        <Link href="/business-name-generator">Business Name Generator</Link>
+        <Link href="/email-subject-line-tester">Subject Line Tester</Link>
         <Link href="/chatgpt-prompts">ChatGPT Prompts</Link>
         <Link href="/free-prompts">Free Prompts</Link>
         <Link href="/kits">Kits</Link>
@@ -243,6 +247,8 @@ export default function Layout({ children }) {
       <main>{children}</main>
 
       {router.pathname !== '/' && <EmailCapture />}
+
+      <SocialProofToast />
 
       <footer className="site-footer">
         <div className="footer-grid">
@@ -276,6 +282,7 @@ export default function Layout({ children }) {
           <div className="footer-col">
             <h4>Resources</h4>
             <Link href="/prompt-generator">Prompt Generator</Link>
+            <Link href="/business-name-generator">Name Generator</Link>
             <Link href="/chatgpt-prompts">ChatGPT Prompts</Link>
             <Link href="/free-prompts">Free AI Prompts</Link>
             <Link href="/blog">Blog</Link>

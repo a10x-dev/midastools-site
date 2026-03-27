@@ -420,6 +420,7 @@ Format as a configuration I can plug into [ZAPIER/MAKE/NOTION].`}
           <li><Link href="/blog/best-ai-prompts-business-2026" style={{ color: '#3B5FFF' }}>50 AI Prompts That Are Actually Making People Money in 2026</Link></li>
           <li><Link href="/blog/ai-tools-vs-hiring-2026" style={{ color: '#3B5FFF' }}>AI Tools vs. Hiring: What to Automate and What Not To</Link></li>
           <li><Link href="/blog/ai-email-marketing-prompts-2026" style={{ color: '#3B5FFF' }}>20 AI Prompts That Will Transform Your Email Marketing in 2026</Link></li>
+          <li><Link href="/business-name-generator" style={{ color: '#3B5FFF' }}>Free AI Business Name Generator — Perfect for new businesses</Link></li>
         </ul>
 
         <div style={{ marginTop: '48px', padding: '32px', background: '#F0F4FF', border: '1px solid #93B4FF', borderRadius: '8px' }}>

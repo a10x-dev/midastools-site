@@ -180,11 +180,12 @@ export default function Home() {
         }
       `}</style>
 
-      {/* Announcement bar */}
-      <div style={{ background: 'var(--surface)', borderBottom: '1px solid var(--border)', padding: '10px 40px', textAlign: 'center', fontSize: 13, fontWeight: 500 }}>
-        <a href="/bundle" style={{ color: 'var(--text-secondary)', textDecoration: 'none' }}>
-          New: All Kits Bundle — 15 AI kits for $97
-          <span style={{ color: 'var(--accent)', fontWeight: 700, marginLeft: 8 }}>View bundle &rarr;</span>
+      {/* Urgency Banner */}
+      <div style={{ background: 'linear-gradient(90deg, #3B5FFF, #1E3AE0)', padding: '10px 40px', textAlign: 'center', fontSize: 13, fontWeight: 600 }}>
+        <a href="/bundle" style={{ color: '#FFFFFF', textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: 8 }}>
+          <span style={{ background: 'rgba(255,255,255,0.2)', padding: '2px 8px', borderRadius: 4, fontSize: 11, fontWeight: 800, letterSpacing: 0.5 }}>LAUNCH WEEK</span>
+          All 15 AI Kits — $535 value for just $97 (82% off)
+          <span style={{ fontWeight: 800, marginLeft: 4 }}>&rarr;</span>
         </a>
       </div>
 
@@ -203,13 +204,13 @@ export default function Home() {
           <strong>Instant download</strong> &middot; 30-day money-back guarantee &middot; No subscription
         </p>
         <p style={{ marginTop: '12px', fontSize: '14px', color: '#6B7280', fontFamily: "'Inter', sans-serif" }}>
-          Not ready to buy? <a href="/prompt-generator" style={{ color: '#3B5FFF', fontWeight: 600, textDecoration: 'none' }}>Try the free Prompt Generator</a> &middot; <a href="/quiz" style={{ color: '#3B5FFF', fontWeight: 600, textDecoration: 'none' }}>Take the quiz</a> &middot; <a href="/free-prompts" style={{ color: '#3B5FFF', fontWeight: 600, textDecoration: 'none' }}>Get 5 free prompts</a>
+          Not ready to buy? <a href="/tools" style={{ color: '#3B5FFF', fontWeight: 600, textDecoration: 'none' }}>Try our free AI tools</a> &middot; <a href="/quiz" style={{ color: '#3B5FFF', fontWeight: 600, textDecoration: 'none' }}>Take the quiz</a> &middot; <a href="/free-prompts" style={{ color: '#3B5FFF', fontWeight: 600, textDecoration: 'none' }}>Get 5 free prompts</a>
         </p>
 
         <div className="stats-bar">
           {[
             { num: '$14,718', label: 'Agent Revenue in 3 Weeks' },
-            { num: '14', label: 'Niche AI Kits Available' },
+            { num: '15', label: 'Niche AI Kits Available' },
             { num: '24/7', label: 'Autonomous Operation' },
           ].map(s => (
             <div key={s.label} className="stat-item">
@@ -232,26 +233,39 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Free Tool Callout */}
+      {/* Free Tools Section */}
       <section style={{ paddingBottom: 0 }}>
-        <a href="/prompt-generator" style={{
-          display: 'block', background: 'linear-gradient(135deg, #EEF2FF, #F0F5FF)', border: '2px solid rgba(59,95,255,0.15)',
-          borderRadius: 20, padding: '32px 40px', textDecoration: 'none', transition: 'transform 0.15s, box-shadow 0.15s',
-        }}
-          onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-2px)'; e.currentTarget.style.boxShadow = '0 8px 24px rgba(59,95,255,0.12)'; }}
-          onMouseLeave={e => { e.currentTarget.style.transform = ''; e.currentTarget.style.boxShadow = ''; }}
-        >
-          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: 16 }}>
-            <div>
-              <div style={{ fontSize: 12, fontWeight: 700, color: 'var(--accent)', letterSpacing: 1, textTransform: 'uppercase', marginBottom: 8 }}>Free Tool</div>
-              <div style={{ fontSize: 22, fontWeight: 800, color: 'var(--text)', marginBottom: 6 }}>AI Prompt Generator</div>
-              <div style={{ fontSize: 15, color: 'var(--text-secondary)', lineHeight: 1.5 }}>Generate expert-level prompts for sales, content, images, video &amp; more. 8 categories, instant results, 100% free.</div>
-            </div>
-            <div style={{ background: 'var(--accent)', color: '#fff', padding: '12px 28px', borderRadius: 100, fontWeight: 700, fontSize: 15, whiteSpace: 'nowrap', flexShrink: 0 }}>
-              Try it free &rarr;
-            </div>
-          </div>
-        </a>
+        <div className="section-label">Free AI Tools</div>
+        <h2 style={{ marginBottom: 20 }}>Try before you buy</h2>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 16 }}>
+          {[
+            { href: '/prompt-generator', title: 'AI Prompt Generator', desc: 'Generate expert-level prompts for sales, content, images, video & more. 8 categories.', tag: 'Most Popular' },
+            { href: '/business-name-generator', title: 'Business Name Generator', desc: 'Get 20 creative, brandable business names instantly. 16 industries, 6 naming styles.', tag: 'New' },
+            { href: '/email-subject-line-tester', title: 'Email Subject Line Tester', desc: 'Score your subject lines for open rates, spam risk & engagement before you send.', tag: 'New' },
+          ].map(tool => (
+            <a key={tool.href} href={tool.href} style={{
+              display: 'block', background: 'linear-gradient(135deg, #EEF2FF, #F0F5FF)', border: '2px solid rgba(59,95,255,0.15)',
+              borderRadius: 20, padding: '28px 32px', textDecoration: 'none', transition: 'transform 0.15s, box-shadow 0.15s',
+            }}
+              onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-2px)'; e.currentTarget.style.boxShadow = '0 8px 24px rgba(59,95,255,0.12)'; }}
+              onMouseLeave={e => { e.currentTarget.style.transform = ''; e.currentTarget.style.boxShadow = ''; }}
+            >
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: 16 }}>
+                <div>
+                  <div style={{ display: 'flex', gap: 8, alignItems: 'center', marginBottom: 8 }}>
+                    <span style={{ fontSize: 11, fontWeight: 800, color: 'var(--accent)', letterSpacing: 1, textTransform: 'uppercase' }}>Free Tool</span>
+                    <span style={{ fontSize: 10, fontWeight: 700, background: 'var(--accent)', color: '#fff', padding: '2px 8px', borderRadius: 100 }}>{tool.tag}</span>
+                  </div>
+                  <div style={{ fontSize: 20, fontWeight: 800, color: 'var(--text)', marginBottom: 6 }}>{tool.title}</div>
+                  <div style={{ fontSize: 14, color: 'var(--text-secondary)', lineHeight: 1.5 }}>{tool.desc}</div>
+                </div>
+                <div style={{ background: 'var(--accent)', color: '#fff', padding: '10px 20px', borderRadius: 100, fontWeight: 700, fontSize: 14, whiteSpace: 'nowrap', flexShrink: 0, marginTop: 12 }}>
+                  Try free &rarr;
+                </div>
+              </div>
+            </a>
+          ))}
+        </div>
       </section>
 
       {/* Social Proof */}
@@ -347,16 +361,19 @@ export default function Home() {
         <p className="section-sub">Each kit includes ready-to-use prompts, templates, and workflows — or grab them all with the bundle.</p>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(240px, 1fr))', gap: 12 }}>
           {[
+            { name: 'Video Prompt Pack', price: '$29', desc: 'Sora, Runway, Pika prompts', href: '/ai-video-prompt-pack', bg: 'var(--card-cyan)' },
+            { name: 'Image Prompt Pack', price: '$29', desc: 'ChatGPT, Midjourney, DALL-E', href: '/ai-image-prompt-pack', bg: 'var(--card-pink)' },
             { name: 'Prompt Mega Pack', price: '$29', desc: '200+ prompts for any business', href: '/ai-prompt-mega-pack', bg: 'var(--card-amber)' },
-            { name: 'Freelancer Kit', price: '$39', desc: 'Proposals, invoicing, client mgmt', href: '/freelancer-kit', bg: 'var(--card-green)' },
-            { name: 'Content Creator Kit', price: '$39', desc: 'Repurpose, schedule, grow', href: '/content-creator-kit', bg: 'var(--card-purple)' },
-            { name: 'Small Business Kit', price: '$39', desc: 'Operations, hiring, marketing', href: '/small-business-kit', bg: 'var(--card-blue)' },
-            { name: 'E-commerce Kit', price: '$39', desc: 'Listings, ads, customer retention', href: '/ecommerce-kit', bg: 'var(--card-pink)' },
-            { name: 'SaaS Founder Kit', price: '$39', desc: 'Launch, onboard, reduce churn', href: '/saas-founder-kit', bg: 'var(--card-cyan)' },
-            { name: 'Real Estate Kit', price: '$49', desc: 'Leads, listings, follow-ups', href: '/real-estate-kit', bg: 'var(--card-green)' },
+            { name: 'Notion Templates Kit', price: '$39', desc: '150+ Notion templates & systems', href: '/notion-templates-kit', bg: 'var(--card-purple)' },
             { name: 'Social Media Kit', price: '$39', desc: 'Calendars, captions, viral content', href: '/social-media-kit', bg: 'var(--card-cyan)' },
             { name: 'Email Marketing Kit', price: '$29', desc: 'Sequences, newsletters, outreach', href: '/email-marketing-kit', bg: 'var(--card-amber)' },
-            { name: 'Presentation Kit', price: '$29', desc: 'Pitch decks, sales decks, talks', href: '/presentation-kit', bg: 'var(--card-purple)' },
+            { name: 'Content Creator Kit', price: '$39', desc: 'Repurpose, schedule, grow', href: '/content-creator-kit', bg: 'var(--card-green)' },
+            { name: 'Freelancer Kit', price: '$39', desc: 'Proposals, invoicing, client mgmt', href: '/freelancer-kit', bg: 'var(--card-blue)' },
+            { name: 'Small Business Kit', price: '$39', desc: 'Operations, hiring, marketing', href: '/small-business-kit', bg: 'var(--card-green)' },
+            { name: 'E-commerce Kit', price: '$39', desc: 'Listings, ads, customer retention', href: '/ecommerce-kit', bg: 'var(--card-pink)' },
+            { name: 'SaaS Founder Kit', price: '$39', desc: 'Launch, onboard, reduce churn', href: '/saas-founder-kit', bg: 'var(--card-cyan)' },
+            { name: 'Real Estate Kit', price: '$49', desc: 'Leads, listings, follow-ups', href: '/real-estate-kit', bg: 'var(--card-purple)' },
+            { name: 'Presentation Kit', price: '$29', desc: 'Pitch decks, sales decks, talks', href: '/presentation-kit', bg: 'var(--card-amber)' },
             { name: 'Resume & Career Kit', price: '$29', desc: 'Resumes, LinkedIn, interviews', href: '/resume-career-kit', bg: 'var(--card-green)' },
             { name: 'Starter Kit', price: '$29', desc: 'Deploy your AI entrepreneur', href: '/', bg: 'var(--card-blue)' },
           ].map(k => (

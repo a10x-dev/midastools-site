@@ -1346,7 +1346,7 @@ Tone: Warm, celebratory, and genuine. This email should make the customer smile.
         {/* FINAL CTA */}
         <div style={{ marginTop: '48px', padding: '32px', background: '#F0F4FF', border: '1px solid #93B4FF', borderRadius: '8px' }}>
           <h3 style={{ margin: '0 0 8px', fontSize: '1.1rem' }}>Ready to transform your email marketing with AI?</h3>
-          <p style={{ margin: '0 0 16px', color: '#6B7280', fontSize: '15px' }}>The <strong>AI Email Marketing Kit</strong> includes 150+ prompts for welcome sequences, sales campaigns, newsletters, cold outreach, retention flows, and A/B testing frameworks. Every prompt uses proven copywriting frameworks tested with real campaigns. One-time purchase.</p>
+          <p style={{ margin: '0 0 16px', color: '#6B7280', fontSize: '15px' }}>Before you send your next campaign, <Link href="/email-subject-line-tester" style={{ color: '#3B5FFF', fontWeight: 600 }}>test your subject line for free</Link> with our Email Subject Line Tester. Then level up: the <strong>AI Email Marketing Kit</strong> includes 150+ prompts for welcome sequences, sales campaigns, newsletters, cold outreach, retention flows, and A/B testing frameworks. Every prompt uses proven copywriting frameworks tested with real campaigns. One-time purchase.</p>
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px', alignItems: 'center' }}>
             <a href={EMAIL_KIT_URL} style={{ display: 'inline-block', background: '#3B5FFF', color: '#fff', padding: '12px 24px', borderRadius: '6px', textDecoration: 'none', fontWeight: '700', fontSize: '15px' }}>
               Get the Email Marketing Kit

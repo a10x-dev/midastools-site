@@ -238,6 +238,8 @@ For each scenario: opening message, 2-3 follow-up questions to qualify the visit
           <li><Link href="/blog/ai-second-income-2026" style={{ color: '#3B5FFF' }}>How to Build a Second Income with AI in 2026</Link></li>
           <li><Link href="/blog/chatgpt-image-prompts-2026" style={{ color: '#3B5FFF' }}>50 Viral ChatGPT Image Prompts (AI Image Generation Is a Trending Side Hustle)</Link></li>
           <li><Link href="/blog/how-to-make-money-selling-ai-art-2026" style={{ color: '#3B5FFF' }}>How to Make Money Selling AI Art in 2026 (7 Proven Methods)</Link></li>
+          <li><Link href="/business-name-generator" style={{ color: '#3B5FFF' }}>Free AI Business Name Generator — Name your side hustle in seconds</Link></li>
+          <li><Link href="/tools" style={{ color: '#3B5FFF' }}>All Free AI Tools for Entrepreneurs</Link></li>
         </ul>
 
         {/* End-article CTA */}
