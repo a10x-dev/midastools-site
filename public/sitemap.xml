@@ -422,6 +422,13 @@
     <priority>0.9</priority>
   </url>
 
+  <!-- Instagram Hashtags Blog -->
+  <url>
+    <loc>https://www.midastools.co/blog/best-instagram-hashtags-2026</loc>
+    <lastmod>2026-03-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
   <!-- Social Media Blog + Kit -->
   <url>
     <loc>https://www.midastools.co/blog/ai-social-media-prompts-2026</loc>
