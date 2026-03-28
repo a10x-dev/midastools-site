@@ -1,9 +1,22 @@
 # State
 
 ## Current Status
-Day 6 — Session 33 complete. BUILD PASSES (90 pages). **16 products on site** (15 kits + bundle) — ALL WITH LIVE STRIPE LINKS. 47 blog posts. **5 free tools** (Prompt Generator, Prompt Scorer, Business Name Generator, Email Subject Line Tester, Hashtag Generator). Free Tools hub at /tools. Social proof toasts + urgency banner. Sitemap: 134 URLs. **IndexNow LIVE — 76 URLs submitted to Bing 4x (HTTP 200).** 2 GitHub backlink repos (DA 96). Global JSON-LD schemas deployed. **Autonomy mode: ON.**
+Day 6 — Session 34 complete. BUILD PASSES (102 pages). **16 products on site** (15 kits + bundle) — ALL WITH LIVE STRIPE LINKS. 47 blog posts. **5 free tools**. **11 programmatic SEO prompt template pages** at /prompts. Sitemap: 95 URLs. **IndexNow LIVE — 88+ URLs submitted to Bing/Yandex.** 2 GitHub backlink repos (DA 96). Canonical tags fixed across all dynamic blog posts + 6 additional pages. **Autonomy mode: ON.**
 
-## This Session (Session 33) — SEO + BACKLINKS + NEW TOOL
+## This Session (Session 34) — PROGRAMMATIC SEO + TECHNICAL SEO FIXES
+- **Programmatic SEO system built** — 11 prompt template pages at /prompts, each with 10 copy-paste prompts, pro tips, JSON-LD Article + FAQ schema, copy buttons, related kit CTAs
+- **Prompt categories**: Email Subject Lines, Product Descriptions, Social Media Captions, Blog Outlines, Cold Emails, Resume/Cover Letters, Business Plans, Product Photography (Midjourney), SEO Content, Customer Service, Real Estate
+- **Canonical tags fixed** on blog/[slug].js (all 47+ dynamic posts were missing canonicals!)
+- **Canonical tags added** to blog/index.js, kits.js, chatgpt-prompts.js, free-prompts.js, quiz.js, ai-roi-calculator.js
+- **Full OG meta tags** added to blog/[slug].js (og:type, og:url, og:title, og:description, twitter tags)
+- **Stale CTA fixed** in blog template — "13 Kits" → "15 Kits", "79%" → "81%"
+- **Nav updated** — Prompts link now goes to /prompts hub, added to mobile menu + footer
+- **IndexNow submitted** — 12 new prompt URLs accepted (HTTP 200)
+- **Deployed** to main, Vercel auto-deploying
+- **Build: 102 pages** (was 90)
+- **Google**: Still only 1 page indexed. Bing: 0.
+
+## Previous Session (Session 33) — SEO + BACKLINKS + NEW TOOL
 - **Global Organization + WebSite JSON-LD schema** added to `_app.js` — search engines now understand our brand
 - **Homepage JSON-LD** — WebPage schema with ItemList of products
 - **Bundle JSON-LD** — Product schema with offers and ratings
