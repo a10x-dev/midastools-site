@@ -745,6 +745,7 @@ Tone: Confident and factual. This is a business discussion, not a personal favor
           <li><Link href="/blog/chatgpt-tips-tricks-2026" style={{ color: '#3B5FFF' }}>25 ChatGPT Tips and Tricks Most People Don&rsquo;t Know</Link> &mdash; Get more from every ChatGPT session</li>
           <li><Link href="/resume-career-kit" style={{ color: '#3B5FFF' }}>AI Resume &amp; Career Kit</Link> &mdash; The full 125+ prompt system for job seekers</li>
           <li><Link href="/prompt-generator" style={{ color: '#3B5FFF' }}>Free AI Prompt Generator</Link> &mdash; Build custom prompts for any use case</li>
+          <li><Link href="/prompts/chatgpt-resume-cover-letter" style={{ color: '#3B5FFF' }}>10 Free ChatGPT Prompts for Resumes &amp; Cover Letters</Link> &mdash; copy-paste templates ready to use</li>
         </ul>
 
         <hr style={{ margin: '40px 0', border: 'none', borderTop: '1px solid #eee' }} />

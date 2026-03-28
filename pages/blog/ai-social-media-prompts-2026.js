@@ -997,6 +997,7 @@ For all ads: provide estimated CPC/CPM ranges for [INDUSTRY] and suggest daily b
           <li><Link href="/content-creator-kit" style={{ color: '#3B5FFF' }}>Content Creator Kit</Link> &mdash; 150+ prompts for content creation, repurposing, and growth</li>
           <li><Link href="/social-media-kit" style={{ color: '#3B5FFF' }}>AI Social Media Kit</Link> &mdash; The full 150+ prompt system for social media managers</li>
           <li><Link href="/prompt-generator" style={{ color: '#3B5FFF' }}>Free AI Prompt Generator</Link> &mdash; Build custom prompts for any use case</li>
+          <li><Link href="/prompts/chatgpt-social-media-captions" style={{ color: '#3B5FFF' }}>10 Free ChatGPT Prompts for Social Media Captions</Link> &mdash; copy-paste templates ready to use</li>
         </ul>
 
         <hr style={{ margin: '40px 0', border: 'none', borderTop: '1px solid #eee' }} />

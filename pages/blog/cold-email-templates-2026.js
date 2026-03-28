@@ -1134,6 +1134,7 @@ P.S. In case it's useful later — [ONE FINAL RESOURCE — e.g., "here's a free 
           <li><Link href="/email-marketing-kit" style={{ color: '#3B5FFF' }}>Email Marketing Kit (full details)</Link></li>
           <li><Link href="/prompt-generator" style={{ color: '#3B5FFF' }}>Free AI Prompt Generator</Link></li>
           <li><Link href="/tools" style={{ color: '#3B5FFF' }}>All Free Tools</Link></li>
+          <li><Link href="/prompts/chatgpt-cold-email" style={{ color: '#3B5FFF' }}>10 Free ChatGPT Prompts for Cold Email</Link> &mdash; copy-paste templates ready to use</li>
         </ul>
 
         <EmailCapture />

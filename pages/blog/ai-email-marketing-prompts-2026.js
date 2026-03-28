@@ -1339,6 +1339,7 @@ Tone: Warm, celebratory, and genuine. This email should make the customer smile.
           <li><Link href="/blog/ai-resume-prompts-chatgpt-2026" style={{ color: '#3B5FFF' }}>15 ChatGPT Prompts to Write a Perfect Resume in 2026</Link> &mdash; AI prompts for job seekers and career growth</li>
           <li><Link href="/email-marketing-kit" style={{ color: '#3B5FFF' }}>AI Email Marketing Kit</Link> &mdash; The full 150+ prompt system for email marketers</li>
           <li><Link href="/prompt-generator" style={{ color: '#3B5FFF' }}>Free AI Prompt Generator</Link> &mdash; Build custom prompts for any use case</li>
+          <li><Link href="/prompts/chatgpt-email-subject-lines" style={{ color: '#3B5FFF' }}>10 Free ChatGPT Prompts for Email Subject Lines</Link> &mdash; copy-paste templates ready to use</li>
         </ul>
 
         <hr style={{ margin: '40px 0', border: 'none', borderTop: '1px solid #eee' }} />

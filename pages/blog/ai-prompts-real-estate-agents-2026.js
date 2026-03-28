@@ -808,6 +808,7 @@ Tone: Grateful, not desperate. Confident, not begging.`}
           <li><Link href="/real-estate-kit" style={{ color: '#3B5FFF' }}>AI Real Estate Kit</Link> &mdash; The full 150+ prompt system for agents</li>
           <li><Link href="/prompt-generator" style={{ color: '#3B5FFF' }}>Free AI Prompt Generator</Link> &mdash; Build custom prompts for any use case</li>
           <li><Link href="/bundle" style={{ color: '#3B5FFF' }}>All Kits Bundle</Link> &mdash; Every AI toolkit we make, one price</li>
+          <li><Link href="/prompts/chatgpt-real-estate-prompts" style={{ color: '#3B5FFF' }}>10 Free ChatGPT Prompts for Real Estate Agents</Link> &mdash; copy-paste templates ready to use</li>
         </ul>
 
         <hr style={{ margin: '40px 0', border: 'none', borderTop: '1px solid #eee' }} />
