@@ -213,6 +213,7 @@ export default function PromptEnhancer() {
   const [prompt, setPrompt] = useState('');
   const [results, setResults] = useState(null);
   const [copiedIdx, setCopiedIdx] = useState(-1);
+  const [showStickyCta, setShowStickyCta] = useState(false);
   const resultsRef = useRef(null);
 
   const wordCount = prompt.trim() ? prompt.trim().split(/\s+/).length : 0;
@@ -226,6 +227,7 @@ export default function PromptEnhancer() {
     });
     setResults(enhanced);
     setCopiedIdx(-1);
+    setTimeout(() => setShowStickyCta(true), 3000);
     setTimeout(() => {
       resultsRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }, 100);
@@ -952,6 +954,34 @@ export default function PromptEnhancer() {
           </Link>
         </div>
       </section>
+
+      {/* Sticky Bottom CTA */}
+      {showStickyCta && (
+        <div style={{
+          position: 'fixed', bottom: 0, left: 0, right: 0, zIndex: 99,
+          background: 'rgba(17,24,39,0.97)', backdropFilter: 'blur(8px)',
+          padding: '12px 20px', display: 'flex', justifyContent: 'center',
+          alignItems: 'center', gap: 16, flexWrap: 'wrap',
+          borderTop: '1px solid rgba(255,255,255,0.1)',
+        }}>
+          <span style={{ color: '#fff', fontSize: 14, fontWeight: 600 }}>
+            500+ expert prompts ready to copy & paste
+          </span>
+          <a href={STRIPE_MEGA_PACK} style={{
+            background: '#3B5FFF', color: '#fff', padding: '8px 20px',
+            borderRadius: 100, fontSize: 13, fontWeight: 700,
+            textDecoration: 'none', whiteSpace: 'nowrap',
+          }}>
+            Get Mega Pack — $29
+          </a>
+          <button onClick={() => setShowStickyCta(false)} style={{
+            background: 'none', border: 'none', color: '#6B7280',
+            cursor: 'pointer', fontSize: 18, padding: '0 4px', lineHeight: 1,
+          }} aria-label="Close">
+            &times;
+          </button>
+        </div>
+      )}
     </Layout>
   );
 }
