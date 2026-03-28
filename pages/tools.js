@@ -35,6 +35,14 @@ const TOOLS = [
     categories: '22 niches',
     bg: 'var(--card-cyan)',
   },
+  {
+    title: 'AI Prompt Scorer',
+    desc: 'Paste any AI prompt and get an instant quality score (1-100) with specific feedback. Scores specificity, context, role, format, and constraints — plus a rewritten improved version you can copy.',
+    href: '/prompt-scorer',
+    tag: 'New',
+    categories: '5 scoring criteria',
+    bg: 'var(--card-purple)',
+  },
 ];
 
 const COMING_SOON = [

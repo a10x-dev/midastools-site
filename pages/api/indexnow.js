@@ -36,6 +36,7 @@ const URLS = [
   '/business-name-generator',
   '/email-subject-line-tester',
   '/hashtag-generator',
+  '/prompt-scorer',
   // High-value blog posts
   '/blog/chatgpt-image-prompts-2026',
   '/blog/best-midjourney-prompts-2026',
