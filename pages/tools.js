@@ -156,6 +156,33 @@ export default function Tools() {
           </Link>
         ))}
 
+        <div className="coming-section" style={{ marginTop: 48 }}>
+          <h2>Free Prompt Templates</h2>
+          <p>160+ copy-paste prompts organized by use case. No signup required.</p>
+          <div className="coming-grid" style={{ marginBottom: 32 }}>
+            {[
+              { href: '/prompts/chatgpt-coding-prompts', title: 'Coding & Programming', desc: '10 prompts for debugging, code review, refactoring, APIs, and tests.' },
+              { href: '/prompts/chatgpt-email-subject-lines', title: 'Email Subject Lines', desc: '10 prompts for subject lines that get 40%+ open rates.' },
+              { href: '/prompts/chatgpt-social-media-captions', title: 'Social Media Captions', desc: '10 prompts for Instagram, LinkedIn, Twitter/X, and TikTok.' },
+              { href: '/prompts/chatgpt-youtube-video-scripts', title: 'YouTube Video Scripts', desc: '10 prompts for hooks, tutorials, Shorts, and thumbnails.' },
+              { href: '/prompts/chatgpt-cold-email', title: 'Cold Emails', desc: '10 prompts for outreach that actually gets replies.' },
+              { href: '/prompts/chatgpt-product-descriptions', title: 'Product Descriptions', desc: '10 prompts for e-commerce, Etsy, Amazon, and Shopify.' },
+            ].map(t => (
+              <Link key={t.href} href={t.href} style={{ textDecoration: 'none' }}>
+                <div className="coming-card" style={{ opacity: 1, border: '1px solid var(--border)', cursor: 'pointer' }}>
+                  <h3>{t.title} &rarr;</h3>
+                  <p>{t.desc}</p>
+                </div>
+              </Link>
+            ))}
+          </div>
+          <div style={{ textAlign: 'center', marginBottom: 48 }}>
+            <Link href="/prompts" style={{ color: 'var(--accent)', fontWeight: 700, textDecoration: 'none', fontSize: 15 }}>
+              Browse all 16 categories &rarr;
+            </Link>
+          </div>
+        </div>
+
         <div className="coming-section">
           <h2>Coming Soon</h2>
           <p>More free AI tools launching soon. Want to be notified?</p>

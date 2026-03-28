@@ -291,6 +291,37 @@ export default function ChatGPTPrompts() {
         </div>
       </div>
 
+      {/* Prompt Templates */}
+      <div style={{ maxWidth: 860, margin: '0 auto', padding: '0 40px 48px' }}>
+        <h2 style={{ fontSize: 28, fontWeight: 800, marginBottom: 12, textAlign: 'center' }}>Free Copy-Paste Prompt Templates</h2>
+        <p style={{ textAlign: 'center', color: 'var(--text-secondary)', marginBottom: 24, fontSize: 15 }}>
+          160+ ready-to-use prompts organized by use case. No signup needed.
+        </p>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(240px, 1fr))', gap: 12 }}>
+          {[
+            { href: '/prompts/chatgpt-coding-prompts', label: 'Coding & Programming' },
+            { href: '/prompts/chatgpt-email-subject-lines', label: 'Email Subject Lines' },
+            { href: '/prompts/chatgpt-cold-email', label: 'Cold Emails' },
+            { href: '/prompts/chatgpt-resume-cover-letter', label: 'Resumes & Cover Letters' },
+            { href: '/prompts/chatgpt-youtube-video-scripts', label: 'YouTube Scripts' },
+            { href: '/prompts/chatgpt-daily-planning-productivity', label: 'Daily Planning' },
+          ].map(t => (
+            <Link key={t.href} href={t.href} style={{
+              display: 'block', background: 'var(--surface)', border: '1px solid var(--border)',
+              borderRadius: 12, padding: '14px 20px', textDecoration: 'none',
+              fontSize: 14, fontWeight: 600, color: 'var(--text)', transition: 'border-color 0.2s',
+            }}>
+              {t.label} &rarr;
+            </Link>
+          ))}
+        </div>
+        <div style={{ textAlign: 'center', marginTop: 16 }}>
+          <Link href="/prompts" style={{ color: 'var(--accent)', fontWeight: 700, textDecoration: 'none', fontSize: 15 }}>
+            Browse all 16 categories &rarr;
+          </Link>
+        </div>
+      </div>
+
       {/* FAQ */}
       <div className="faq-section">
         <h2>Frequently Asked Questions</h2>

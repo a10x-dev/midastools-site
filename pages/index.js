@@ -291,6 +291,41 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Prompt Templates Section */}
+      <section style={{ paddingBottom: 0 }}>
+        <div className="section-label">Free Prompt Templates</div>
+        <h2 style={{ marginBottom: 8 }}>160+ copy-paste prompts — free, no signup</h2>
+        <p className="section-sub" style={{ marginBottom: 24 }}>Tested with ChatGPT, Claude, and Gemini. Grab a prompt, paste it, get results.</p>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))', gap: 12 }}>
+          {[
+            { href: '/prompts/chatgpt-coding-prompts', label: 'Coding & Programming' },
+            { href: '/prompts/chatgpt-email-subject-lines', label: 'Email Subject Lines' },
+            { href: '/prompts/chatgpt-social-media-captions', label: 'Social Media Captions' },
+            { href: '/prompts/chatgpt-cold-email', label: 'Cold Emails' },
+            { href: '/prompts/chatgpt-youtube-video-scripts', label: 'YouTube Scripts' },
+            { href: '/prompts/chatgpt-seo-content', label: 'SEO Content' },
+            { href: '/prompts/chatgpt-resume-cover-letter', label: 'Resumes & Cover Letters' },
+            { href: '/prompts/chatgpt-business-plan', label: 'Business Plans' },
+          ].map(t => (
+            <a key={t.href} href={t.href} style={{
+              display: 'block', background: 'var(--surface)', border: '1px solid var(--border)',
+              borderRadius: 12, padding: '16px 20px', textDecoration: 'none',
+              fontSize: 14, fontWeight: 600, color: 'var(--text)', transition: 'border-color 0.2s',
+            }}
+              onMouseEnter={e => { e.currentTarget.style.borderColor = 'var(--accent)'; }}
+              onMouseLeave={e => { e.currentTarget.style.borderColor = 'var(--border)'; }}
+            >
+              {t.label} &rarr;
+            </a>
+          ))}
+        </div>
+        <div style={{ textAlign: 'center', marginTop: 20 }}>
+          <a href="/prompts" style={{ color: 'var(--accent)', fontWeight: 700, textDecoration: 'none', fontSize: 15 }}>
+            Browse all 16 categories &rarr;
+          </a>
+        </div>
+      </section>
+
       {/* Social Proof */}
       <section>
         <div className="section-label">Real Results</div>
