@@ -299,6 +299,7 @@ export default function Layout({ children }) {
           <p>&copy; {new Date().getFullYear()} Midas Tools. All rights reserved.</p>
           <div style={{ display: 'flex', gap: 24 }}>
             <a href="mailto:iam@armando.mx">iam@armando.mx</a>
+            <a href="https://www.aitoolzdir.com" target="_blank" rel="noopener">AI Tools Directory</a>
           </div>
         </div>
       </footer>
