@@ -946,6 +946,10 @@ export default function PromptEnhancer() {
             <h3 className="rc-title">All Free Tools</h3>
             <p className="rc-desc">Browse our complete collection of free AI tools for entrepreneurs.</p>
           </Link>
+          <Link href="/blog/how-to-write-better-ai-prompts-2026" className="related-card">
+            <h3 className="rc-title">Prompt Writing Guide</h3>
+            <p className="rc-desc">Learn the CRAFT framework with 10 before-and-after examples that transform your prompts.</p>
+          </Link>
         </div>
       </section>
     </Layout>

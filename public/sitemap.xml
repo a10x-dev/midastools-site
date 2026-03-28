@@ -539,6 +539,13 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+  <!-- Blog: How to Write Better AI Prompts -->
+  <url>
+    <loc>https://www.midastools.co/blog/how-to-write-better-ai-prompts-2026</loc>
+    <lastmod>2026-03-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
   <!-- Prompt Template Pages (Programmatic SEO) -->
   <url>
     <loc>https://www.midastools.co/prompts</loc>
