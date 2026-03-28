@@ -1,9 +1,20 @@
 # State
 
 ## Current Status
-Day 6 — Session 36 complete. BUILD PASSES (111 pages). **16 products on site** (15 kits + bundle) — ALL WITH LIVE STRIPE LINKS. 49 blog posts. **7 free tools** (NEW: AI Image Prompt Builder). **16 programmatic SEO prompt template pages** at /prompts. Sitemap: 139 URLs. **IndexNow LIVE — 111 URLs submitted to Bing/Yandex.** 2 GitHub backlink repos (DA 96). **Autonomy mode: ON.**
+Day 6 — Session 37 complete. BUILD PASSES (113 pages). **16 products on site** (15 kits + bundle) — ALL WITH LIVE STRIPE LINKS. 50 blog posts. **8 free tools** (NEW: AI Prompt Roaster). **16 programmatic SEO prompt template pages** at /prompts. Sitemap: 141 URLs. **IndexNow LIVE.** 2 GitHub backlink repos (DA 96). **Autonomy mode: ON.**
 
-## This Session (Session 36) — VIRAL IMAGE TOOL + GHIBLI SEO
+## This Session (Session 37) — VIRAL PROMPT ROASTER + PROMPT MISTAKES BLOG
+- **AI Prompt Roaster built** — 8th free tool at /prompt-roaster. Paste any prompt → get roasted for 10 "prompt sins" (too vague, no role, no context, no format, no examples, no constraints, overly polite, too short, ALL CAPS, generic opener). Severity ratings: Dumpster Fire 💀 → Actually Decent 👏. Generates fixed expert-level prompt. Twitter sharing + shareable URLs for viral distribution.
+- **Blog post shipped** — "10 AI Prompt Mistakes That Are Ruining Your ChatGPT Output (2026)" with before/after examples for each sin, RACE framework cheat sheet, tool CTAs, JSON-LD Article + FAQ schema.
+- **Integrated across site** — Prompt Roaster added to nav (active state), mobile menu, footer, homepage Free Tools section, tools page.
+- **Cross-linked** from 3 existing blog posts (how-to-write-better-ai-prompts, prompt-engineering-guide, ai-prompt-scorer).
+- **Sitemap updated** — 141 URLs (was 139).
+- **Build: 113 pages** (was 111).
+- **Google**: Still only 1 page indexed. GSC remains #1 blocker.
+- **Slack DM sent** to Armando with ship report + GSC reminder.
+- **Deployed** to main, Vercel auto-deploying.
+
+## Previous Session (Session 36) — VIRAL IMAGE TOOL + GHIBLI SEO
 - **AI Image Prompt Builder built** — 7th free tool at /image-prompt-builder. Visual builder with 12 art styles (Ghibli, Cyberpunk, Hyperrealistic, Oil Painting, 3D Isometric, Comic, Watercolor, Pixel Art, Minimalist, Fantasy, 3D Clay, Vintage). 8 moods, 4 AI platforms (ChatGPT, Midjourney, DALL-E, Stable Diffusion). Platform-specific prompt formatting. Copy + Twitter share buttons.
 - **Ghibli blog post shipped** — "25 Best ChatGPT Ghibli-Style Prompts" targeting the #1 viral AI trend. 25 copy-paste prompts across 6 categories, pro tips, FAQ with schema markup.
 - **Cross-linked Image Prompt Builder** across 4 blog posts (chatgpt-image-prompts, best-midjourney-prompts, chatgpt-action-figure, how-to-make-money-selling-ai-art) + AI Image Prompt Pack product page.
