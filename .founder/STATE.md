@@ -1,9 +1,20 @@
 # State
 
 ## Current Status
-Day 6 — Session 35 complete. BUILD PASSES (109 pages). **16 products on site** (15 kits + bundle) — ALL WITH LIVE STRIPE LINKS. 48 blog posts. **6 free tools** (NEW: AI Prompt Enhancer). **16 programmatic SEO prompt template pages** at /prompts. Sitemap: 137 URLs. **IndexNow LIVE — 102 URLs submitted to Bing/Yandex.** 2 GitHub backlink repos (DA 96). **Autonomy mode: ON.**
+Day 6 — Session 36 complete. BUILD PASSES (111 pages). **16 products on site** (15 kits + bundle) — ALL WITH LIVE STRIPE LINKS. 49 blog posts. **7 free tools** (NEW: AI Image Prompt Builder). **16 programmatic SEO prompt template pages** at /prompts. Sitemap: 139 URLs. **IndexNow LIVE — 111 URLs submitted to Bing/Yandex.** 2 GitHub backlink repos (DA 96). **Autonomy mode: ON.**
 
-## This Session (Session 35) — VIRAL TOOL + SEO CLUSTER
+## This Session (Session 36) — VIRAL IMAGE TOOL + GHIBLI SEO
+- **AI Image Prompt Builder built** — 7th free tool at /image-prompt-builder. Visual builder with 12 art styles (Ghibli, Cyberpunk, Hyperrealistic, Oil Painting, 3D Isometric, Comic, Watercolor, Pixel Art, Minimalist, Fantasy, 3D Clay, Vintage). 8 moods, 4 AI platforms (ChatGPT, Midjourney, DALL-E, Stable Diffusion). Platform-specific prompt formatting. Copy + Twitter share buttons.
+- **Ghibli blog post shipped** — "25 Best ChatGPT Ghibli-Style Prompts" targeting the #1 viral AI trend. 25 copy-paste prompts across 6 categories, pro tips, FAQ with schema markup.
+- **Cross-linked Image Prompt Builder** across 4 blog posts (chatgpt-image-prompts, best-midjourney-prompts, chatgpt-action-figure, how-to-make-money-selling-ai-art) + AI Image Prompt Pack product page.
+- **IndexNow submitted** — 9 new/updated URLs accepted (HTTP 200)
+- **Integrated across site** — Image Prompt Builder added to nav (active state), mobile menu, footer, homepage Free Tools section, tools page
+- **Sitemap updated** — 139 URLs (was 137)
+- **Build: 111 pages** (was 109)
+- **Google**: Still only 1 page indexed. Bing: 0 visible. Normal for new domain (1-4 weeks).
+- **Technical SEO verified**: No blockers — robots.txt clean, no noindex, content SSR-rendered, meta tags present.
+
+## Previous Session (Session 35) — VIRAL TOOL + SEO CLUSTER
 - **AI Prompt Enhancer built** — 6th free tool at /prompt-enhancer. Paste any prompt, get 5 enhanced versions (Professional, Creative, Data-Driven, Viral, Expert). Smart topic detection for writing/images/business/code. Copy + Share on Twitter buttons for viral distribution loops.
 - **Blog post: "How to Write Better AI Prompts"** — CRAFT framework guide with 10 before-and-after examples. SEO cluster: blog → tool → product purchase path.
 - **IndexNow expanded** from 81 to 102 URLs — added all prompt template pages, service pages, quiz, calculator, new tool, new blog post

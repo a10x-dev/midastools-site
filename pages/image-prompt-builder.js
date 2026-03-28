@@ -1,5 +1,6 @@
 import Head from 'next/head';
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
+import { useRouter } from 'next/router';
 import Link from 'next/link';
 import Layout from '../components/Layout';
 
@@ -109,6 +110,7 @@ function buildPrompt({ subject, style, mood, lighting, camera, platform, extra }
 /* ── COMPONENT ─────────────────────────────────────────────── */
 
 export default function ImagePromptBuilder() {
+  const router = useRouter();
   const [subject, setSubject] = useState('');
   const [style, setStyle] = useState('ghibli');
   const [mood, setMood] = useState('dramatic');
@@ -118,14 +120,56 @@ export default function ImagePromptBuilder() {
   const [extra, setExtra] = useState('');
   const [result, setResult] = useState('');
   const [copied, setCopied] = useState(false);
+  const [linkCopied, setLinkCopied] = useState(false);
   const [showAdvanced, setShowAdvanced] = useState(false);
   const resultRef = useRef(null);
+
+  // Load from URL params (enables shareable links)
+  useEffect(() => {
+    if (!router.isReady) return;
+    const q = router.query;
+    if (q.subject) setSubject(q.subject);
+    if (q.style && STYLES.some(s => s.id === q.style)) setStyle(q.style);
+    if (q.mood && MOODS.some(m => m.id === q.mood)) setMood(q.mood);
+    if (q.lighting && LIGHTING.some(l => l.id === q.lighting)) setLighting(q.lighting);
+    if (q.camera && CAMERAS.some(c => c.id === q.camera)) setCamera(q.camera);
+    if (q.platform && PLATFORMS.some(p => p.id === q.platform)) setPlatform(q.platform);
+    if (q.extra) setExtra(q.extra);
+    // Auto-generate if subject came from URL
+    if (q.subject) {
+      setTimeout(() => {
+        const prompt = buildPrompt({
+          subject: q.subject,
+          style: q.style || 'ghibli',
+          mood: q.mood || 'dramatic',
+          lighting: q.lighting || 'golden',
+          camera: q.camera || 'none',
+          platform: q.platform || 'chatgpt',
+          extra: q.extra || ''
+        });
+        setResult(prompt);
+      }, 100);
+    }
+  }, [router.isReady, router.query]);
+
+  const getShareUrl = () => {
+    const params = new URLSearchParams();
+    params.set('subject', subject.trim());
+    params.set('style', style);
+    params.set('mood', mood);
+    params.set('platform', platform);
+    if (lighting !== 'golden') params.set('lighting', lighting);
+    if (camera !== 'none') params.set('camera', camera);
+    if (extra.trim()) params.set('extra', extra.trim());
+    return `https://www.midastools.co/image-prompt-builder?${params.toString()}`;
+  };
 
   const generate = () => {
     if (!subject.trim()) return;
     const prompt = buildPrompt({ subject: subject.trim(), style, mood, lighting, camera, platform, extra: extra.trim() });
     setResult(prompt);
     setCopied(false);
+    setLinkCopied(false);
     setTimeout(() => resultRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' }), 100);
   };
 
@@ -135,8 +179,15 @@ export default function ImagePromptBuilder() {
     setTimeout(() => setCopied(false), 2000);
   };
 
+  const handleCopyLink = () => {
+    navigator.clipboard.writeText(getShareUrl());
+    setLinkCopied(true);
+    setTimeout(() => setLinkCopied(false), 2000);
+  };
+
   const handleTweet = () => {
-    const text = encodeURIComponent(`Just built an amazing AI image prompt with this free tool 🎨🔥\n\nTry it: https://www.midastools.co/image-prompt-builder`);
+    const shareUrl = getShareUrl();
+    const text = encodeURIComponent(`Just built an amazing AI image prompt with this free tool 🎨🔥\n\nTry it: ${shareUrl}`);
     window.open(`https://twitter.com/intent/tweet?text=${text}`, '_blank');
   };
 
@@ -875,6 +926,9 @@ export default function ImagePromptBuilder() {
               <button className={`btn-copy${copied ? ' copied' : ''}`} onClick={handleCopy}>
                 {copied ? '✓ Copied!' : '📋 Copy Prompt'}
               </button>
+              <button className={`btn-copy${linkCopied ? ' copied' : ''}`} onClick={handleCopyLink} style={linkCopied ? {} : { background: '#6B7280' }}>
+                {linkCopied ? '✓ Link Copied!' : '🔗 Copy Share Link'}
+              </button>
               <button className="btn-tweet" onClick={handleTweet}>
                 🐦 Share on Twitter
               </button>
@@ -899,12 +953,17 @@ export default function ImagePromptBuilder() {
             { style: 'fantasy', subject: 'A dragon perched on a mountaintop at dawn', desc: 'Epic Fantasy + Dramatic mood' },
           ].map((ex, i) => (
             <div key={i} className="example-card" onClick={() => {
-              setSubject(ex.subject);
-              setStyle(ex.style);
               const moodMap = { 'Peaceful': 'peaceful', 'Dramatic': 'dramatic', 'Joyful': 'joyful', 'Cozy': 'cozy' };
               const moodWord = ex.desc.split(' + ')[1]?.replace(' mood', '');
-              if (moodMap[moodWord]) setMood(moodMap[moodWord]);
-              setTimeout(() => generate(), 50);
+              const exMood = moodMap[moodWord] || 'dramatic';
+              setSubject(ex.subject);
+              setStyle(ex.style);
+              setMood(exMood);
+              const prompt = buildPrompt({ subject: ex.subject, style: ex.style, mood: exMood, lighting, camera, platform, extra: '' });
+              setResult(prompt);
+              setCopied(false);
+              setLinkCopied(false);
+              setTimeout(() => resultRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' }), 100);
             }}>
               <div className="ex-style">{STYLES.find(s => s.id === ex.style)?.icon} {STYLES.find(s => s.id === ex.style)?.label}</div>
               <div className="ex-subject">{ex.subject}</div>

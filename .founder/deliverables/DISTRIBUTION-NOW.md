@@ -1,7 +1,9 @@
 # DISTRIBUTION NOW — Copy-Paste Social Media Package
 
 > **Armando**: Each post below is copy-paste ready. Total time: ~15 minutes for ALL platforms.
-> This is the #1 thing that unblocks revenue. The site has 109 pages, 6 free tools, 16 products — but 0 traffic.
+> This is the #1 thing that unblocks revenue. The site has 111 pages, 7 free tools, 16 products — but 0 traffic.
+>
+> **NEW (Session 36):** AI Image Prompt Builder — rides the Ghibli/AI image viral trend. Post 5 below.
 
 ---
 
@@ -78,7 +80,36 @@ Full guide with 10 before-and-after examples:
 https://www.midastools.co/blog/how-to-write-better-ai-prompts-2026
 ```
 
-### Post 5: Revenue Story
+### Post 5: AI Image Prompt Builder (🔥 HIGHEST VIRAL POTENTIAL — POST THIS FIRST)
+```
+I built a free AI Image Prompt Builder.
+
+Pick a style (Ghibli, Cyberpunk, Hyperrealistic + 9 more)
+↓
+Describe your image
+↓
+Get a perfect prompt for ChatGPT, Midjourney, or DALL-E
+
+12 styles. 8 moods. Platform-specific formatting.
+
+100% free. No login. No limits.
+
+Try it: https://www.midastools.co/image-prompt-builder
+```
+
+### Post 6: Ghibli Prompts (🔥 TRENDING NOW)
+```
+25 Ghibli-style prompts for ChatGPT that actually look amazing.
+
+Portraits, landscapes, pets, food, fantasy scenes — all copy & paste.
+
+The secret: include specific film references (Spirited Away ≠ Totoro)
+
+Free prompts + a visual prompt builder:
+https://www.midastools.co/blog/chatgpt-ghibli-style-prompts-2026
+```
+
+### Post 7: Revenue Story
 ```
 An AI agent made $14,718 in 3 weeks.
 
