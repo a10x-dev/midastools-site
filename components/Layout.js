@@ -300,6 +300,7 @@ export default function Layout({ children }) {
           <div style={{ display: 'flex', gap: 24 }}>
             <a href="mailto:iam@armando.mx">iam@armando.mx</a>
             <a href="https://www.aitoolzdir.com" target="_blank" rel="noopener">AI Tools Directory</a>
+            <a href="https://submitaitools.org" target="_blank" rel="noopener">Submit AI Tools</a>
           </div>
         </div>
       </footer>
