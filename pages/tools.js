@@ -52,6 +52,14 @@ const TOOLS = [
     bg: 'var(--card-pink)',
   },
   {
+    title: 'AI Prompt Roaster',
+    desc: 'Paste your AI prompt and get brutally honest (but hilarious) feedback on what\'s wrong. Checks 10 common "prompt sins," then generates a fixed expert-level version. Fun, shareable, and actually useful.',
+    href: '/prompt-roaster',
+    tag: '🔥 Viral',
+    categories: '10 prompt sins',
+    bg: 'var(--card-amber)',
+  },
+  {
     title: 'AI Image Prompt Builder',
     desc: 'Build perfect AI image prompts visually. Pick from 12 trending styles (Ghibli, Cyberpunk, Hyperrealistic), set mood & lighting, get copy-paste prompts for ChatGPT, Midjourney, DALL·E & Stable Diffusion.',
     href: '/image-prompt-builder',

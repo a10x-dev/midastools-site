@@ -306,6 +306,8 @@ export default function AIPromptScorer2026() {
           <h2 style={s.h2}>Related Guides</h2>
           <ul style={{ listStyle: 'none', margin: '0 0 48px', padding: 0 }}>
             {[
+              { title: 'AI Prompt Roaster — Get Your Bad Prompts Roasted', href: '/prompt-roaster' },
+              { title: '10 AI Prompt Mistakes Ruining Your ChatGPT Output', href: '/blog/ai-prompt-mistakes-2026' },
               { title: 'Free AI Prompt Generator — Build Perfect Prompts in Seconds', href: '/prompt-generator' },
               { title: 'Free AI Prompt Scorer — Rate Any Prompt 1-100', href: '/prompt-scorer' },
               { title: 'Premium Prompt Kits — Pre-Built, Expert-Tested Prompts', href: '/kits' },

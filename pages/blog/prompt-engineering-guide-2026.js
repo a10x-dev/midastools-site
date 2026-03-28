@@ -609,6 +609,8 @@ For any score below 8, rewrite that section and explain what you changed.`}
               { title: '20 AI Prompts That Will Transform Your Social Media', href: '/blog/ai-social-media-prompts-2026' },
               { title: '20 AI Prompts That Will Transform Your Email Marketing', href: '/blog/ai-email-marketing-prompts-2026' },
               { title: '15 AI Prompts for Better Presentations', href: '/blog/ai-presentation-prompts-2026' },
+              { title: '10 AI Prompt Mistakes That Are Ruining Your ChatGPT Output', href: '/blog/ai-prompt-mistakes-2026' },
+              { title: 'AI Prompt Roaster — Get Your Bad Prompts Roasted', href: '/prompt-roaster' },
               { title: 'Free AI Prompt Generator — Build Custom Prompts Instantly', href: '/prompt-generator' },
             ].map(link => (
               <li key={link.href} style={{ padding: '8px 0' }}>

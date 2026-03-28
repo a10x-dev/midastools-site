@@ -266,6 +266,7 @@ export default function Home() {
             { href: '/hashtag-generator', title: 'AI Hashtag Generator', desc: 'Generate optimized hashtags for Instagram, TikTok, Twitter & more. 22 niches.', tag: 'New' },
             { href: '/prompt-scorer', title: 'AI Prompt Scorer', desc: 'Score any prompt 1-100 with specific feedback. Improve your prompts instantly.', tag: 'New' },
             { href: '/prompt-enhancer', title: 'AI Prompt Enhancer', desc: 'Paste any prompt, get 5 enhanced versions — Professional, Creative, Data-Driven, Viral & Expert.', tag: 'New' },
+            { href: '/prompt-roaster', title: 'AI Prompt Roaster', desc: 'Get your bad prompts hilariously roasted, then get a fixed expert-level version. 10 "prompt sins" detected.', tag: '🔥 Viral' },
             { href: '/image-prompt-builder', title: 'AI Image Prompt Builder', desc: 'Build perfect prompts for ChatGPT, Midjourney & DALL·E. 12 viral styles including Ghibli & Cyberpunk.', tag: '🔥 Trending' },
           ].map(tool => (
             <a key={tool.href} href={tool.href} style={{

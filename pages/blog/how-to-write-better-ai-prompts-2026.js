@@ -666,6 +666,8 @@ Tone: Confident, transparent, forward-looking. Acknowledge challenges but frame 
               { title: 'The Complete AI Prompt Engineering Guide for 2026', href: '/blog/prompt-engineering-guide-2026' },
               { title: 'Best AI Prompts for Business in 2026', href: '/blog/best-ai-prompts-business-2026' },
               { title: '25 ChatGPT Tips and Tricks Most People Don\'t Know', href: '/blog/chatgpt-tips-tricks-2026' },
+              { title: '10 AI Prompt Mistakes That Are Ruining Your ChatGPT Output', href: '/blog/ai-prompt-mistakes-2026' },
+              { title: 'AI Prompt Roaster — Get Your Bad Prompts Roasted (Then Fixed)', href: '/prompt-roaster' },
               { title: 'Free AI Prompt Generator — Build Custom Prompts Instantly', href: '/prompt-generator' },
               { title: '15 ChatGPT Prompts to Write a Perfect Resume', href: '/blog/ai-resume-prompts-chatgpt-2026' },
               { title: '20 AI Prompts That Will Transform Your Social Media', href: '/blog/ai-social-media-prompts-2026' },
