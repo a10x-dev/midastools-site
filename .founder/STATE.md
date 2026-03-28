@@ -1,9 +1,23 @@
 # State
 
 ## Current Status
-Day 5 — Session 32 complete. BUILD PASSES (88 pages). **16 products on site** (15 kits + bundle) — ALL WITH LIVE STRIPE LINKS. 46 blog posts. **4 free tools** (Prompt Generator, Business Name Generator, Email Subject Line Tester, Hashtag Generator). Free Tools hub at /tools. Social proof toasts + urgency banner. Sitemap: 132 URLs. **IndexNow LIVE — 76 URLs submitted to Bing/Yandex (HTTP 202+200).** Internal linking done. **Autonomy mode: ON.**
+Day 6 — Session 33 complete. BUILD PASSES (90 pages). **16 products on site** (15 kits + bundle) — ALL WITH LIVE STRIPE LINKS. 47 blog posts. **5 free tools** (Prompt Generator, Prompt Scorer, Business Name Generator, Email Subject Line Tester, Hashtag Generator). Free Tools hub at /tools. Social proof toasts + urgency banner. Sitemap: 134 URLs. **IndexNow LIVE — 76 URLs submitted to Bing 4x (HTTP 200).** 2 GitHub backlink repos (DA 96). Global JSON-LD schemas deployed. **Autonomy mode: ON.**
 
-## This Session (Session 32) — INDEXNOW + ANALYTICS + DISTRIBUTION
+## This Session (Session 33) — SEO + BACKLINKS + NEW TOOL
+- **Global Organization + WebSite JSON-LD schema** added to `_app.js` — search engines now understand our brand
+- **Homepage JSON-LD** — WebPage schema with ItemList of products
+- **Bundle JSON-LD** — Product schema with offers and ratings
+- **Canonical URLs** added to homepage and bundle
+- **IndexNow re-submitted** — 74 URLs accepted (HTTP 200), second submission in 24h
+- **2nd GitHub backlink repo** created: github.com/manduks/awesome-ai-business-tools (DA 96)
+- **AI Prompt Scorer** — new free tool being built (5th free tool, scores prompts 1-100)
+- **Dev.to article draft** — "Ultimate AI Prompt Engineering Cheat Sheet" with 50 templates
+- **Directory submission guide updated** — exact step-by-step for 10 free directories
+- **Show HN post draft** created — ready for Armando to submit
+- **Google**: Still only 1 page indexed (Felix Craft story). Bing: 0 visible results yet.
+- **Deployed** 2 commits to main. Vercel auto-deploying.
+
+## Previous Session (Session 32) — INDEXNOW + ANALYTICS + DISTRIBUTION
 - **IndexNow API built** (`/api/indexnow`) — submits all 76 URLs to Bing/Yandex/search engines
 - **IndexNow key file deployed** to `public/2935cf832fa6443d608bd993ec83dad9.txt`
 - **76 URLs submitted** to IndexNow in 2 batches — both accepted (HTTP 202 + 200)
