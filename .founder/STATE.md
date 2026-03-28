@@ -3,14 +3,17 @@
 ## Current Status
 Day 5 — Session 32 complete. BUILD PASSES (88 pages). **16 products on site** (15 kits + bundle) — ALL WITH LIVE STRIPE LINKS. 46 blog posts. **4 free tools** (Prompt Generator, Business Name Generator, Email Subject Line Tester, Hashtag Generator). Free Tools hub at /tools. Social proof toasts + urgency banner. Sitemap: 132 URLs. **IndexNow LIVE — 76 URLs submitted to Bing/Yandex (HTTP 202+200).** Internal linking done. **Autonomy mode: ON.**
 
-## This Session (Session 32) — INDEXNOW + AUTONOMY SETUP
+## This Session (Session 32) — INDEXNOW + ANALYTICS + DISTRIBUTION
 - **IndexNow API built** (`/api/indexnow`) — submits all 76 URLs to Bing/Yandex/search engines
 - **IndexNow key file deployed** to `public/2935cf832fa6443d608bd993ec83dad9.txt`
 - **76 URLs submitted** to IndexNow in 2 batches — both accepted (HTTP 202 + 200)
+- **Vercel Analytics + Speed Insights** added to `_app.js` — zero-config, live on deploy
+- **Deploy Hook API** (`/api/deploy-hook`) — auto-reads sitemap and submits all URLs to IndexNow
+- **GitHub free prompts repo** created: github.com/manduks/free-ai-prompts — DA 96 backlink, 21 prompts, all links to midastools.co
+- **Directory research**: TAAFT ($247-497), Futurepedia ($247-497), Toolify ($99) — all paid. Pivoted to free directories.
+- **Free directory submissions** in progress (aitoolsdirectory.com, aixploria, aitools-directory, aitoptools, saashub)
+- **Google sitemap ping is DEPRECATED** (confirmed) — only GSC works for Google
 - **Autonomy requirements documented** in `.founder/deliverables/AUTONOMY_REQUIREMENTS.md`
-- **Google sitemap ping is DEPRECATED** (confirmed via research) — only GSC works for Google
-- **Bing will begin crawling** within hours/days
-- **Armando's INBOX updated** with specific credential requests
 
 ## Products Shipped
 | Product | Price | Page | ZIP | Status |
