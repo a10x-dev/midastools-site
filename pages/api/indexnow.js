@@ -38,6 +38,7 @@ const URLS = [
   '/hashtag-generator',
   '/prompt-scorer',
   // High-value blog posts
+  '/blog/ai-prompt-scorer-2026',
   '/blog/chatgpt-image-prompts-2026',
   '/blog/best-midjourney-prompts-2026',
   '/blog/chatgpt-action-figure-prompt-2026',
