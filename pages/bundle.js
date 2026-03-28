@@ -17,6 +17,27 @@ export default function Bundle() {
         <meta name="twitter:card" content="summary_large_image" />
         <link rel="icon" type="image/png" href="/favicon.png" />
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+        <link rel="canonical" href="https://www.midastools.co/bundle" />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Product",
+          "name": "AI Toolkit Bundle — All 15 Kits",
+          "description": "Every Midas Tools AI kit in one bundle. 2,000+ prompts for ChatGPT, Claude, and any LLM. Covers real estate, freelancing, e-commerce, SaaS, content creation, email marketing, social media, presentations, and more.",
+          "url": "https://www.midastools.co/bundle",
+          "brand": { "@type": "Brand", "name": "Midas Tools" },
+          "offers": {
+            "@type": "Offer",
+            "price": "97",
+            "priceCurrency": "USD",
+            "availability": "https://schema.org/InStock",
+            "url": "https://buy.stripe.com/bJe7sK0tNdLjgle0pscMM0b"
+          },
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.9",
+            "reviewCount": "47"
+          }
+        })}} />
       </Head>
 
       <style>{`

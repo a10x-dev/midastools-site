@@ -72,6 +72,27 @@ export default function Home() {
         <link rel="icon" type="image/png" href="/favicon.png" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+        <link rel="canonical" href="https://www.midastools.co" />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          "name": "Midas Tools — AI Automation Kits for Entrepreneurs",
+          "description": "Deploy AI agents that automate your business 24/7. Templates, workflows, and prompts used by entrepreneurs already making $1,000s/week with AI.",
+          "url": "https://www.midastools.co",
+          "publisher": { "@id": "https://www.midastools.co/#organization" },
+          "mainEntity": {
+            "@type": "ItemList",
+            "name": "AI Prompt Kits",
+            "numberOfItems": 15,
+            "itemListElement": [
+              { "@type": "Product", "name": "AI Toolkit Bundle", "url": "https://www.midastools.co/bundle", "offers": { "@type": "Offer", "price": "97", "priceCurrency": "USD" }},
+              { "@type": "Product", "name": "Real Estate AI Kit", "url": "https://www.midastools.co/real-estate-kit", "offers": { "@type": "Offer", "price": "49", "priceCurrency": "USD" }},
+              { "@type": "Product", "name": "Content Creator Kit", "url": "https://www.midastools.co/content-creator-kit", "offers": { "@type": "Offer", "price": "39", "priceCurrency": "USD" }},
+              { "@type": "Product", "name": "Freelancer Automation Kit", "url": "https://www.midastools.co/freelancer-kit", "offers": { "@type": "Offer", "price": "39", "priceCurrency": "USD" }},
+              { "@type": "Product", "name": "Small Business AI Kit", "url": "https://www.midastools.co/small-business-kit", "offers": { "@type": "Offer", "price": "39", "priceCurrency": "USD" }}
+            ]
+          }
+        })}} />
       </Head>
 
       <style>{`

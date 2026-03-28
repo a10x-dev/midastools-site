@@ -12,6 +12,39 @@ export default function App({ Component, pageProps }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
 
+      {/* Global Organization + WebSite Schema — helps search engines understand our brand */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@graph": [
+              {
+                "@type": "Organization",
+                "@id": "https://www.midastools.co/#organization",
+                "name": "Midas Tools",
+                "url": "https://www.midastools.co",
+                "logo": "https://www.midastools.co/favicon.png",
+                "description": "AI prompt kits that help you make money. 2,000+ copy-paste prompts for ChatGPT, Claude, and any LLM.",
+                "sameAs": ["https://github.com/manduks/free-ai-prompts"]
+              },
+              {
+                "@type": "WebSite",
+                "@id": "https://www.midastools.co/#website",
+                "url": "https://www.midastools.co",
+                "name": "Midas Tools",
+                "publisher": { "@id": "https://www.midastools.co/#organization" },
+                "potentialAction": {
+                  "@type": "SearchAction",
+                  "target": "https://www.midastools.co/blog?q={search_term_string}",
+                  "query-input": "required name=search_term_string"
+                }
+              }
+            ]
+          })
+        }}
+      />
+
       {/* Google Tag Manager */}
       <Script id="gtm" strategy="afterInteractive">
         {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
