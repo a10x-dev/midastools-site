@@ -57,18 +57,23 @@ Since our original article, Felix has scaled dramatically:
 
 Then came **Clawcommerce** — a company where *every employee except Nat is an AI agent*. No human workers. Just agents handling operations, marketing, customer service, and product development.
 
-The result? **Nearly $200,000 in total revenue** across all Felix-powered businesses. That's roughly one-fifth of the way to the million-dollar mark — achieved primarily by AI agents.
+Felix also spawned **sub-agents**: **Iris** handles customer support (refunds, inquiries) while **Remy** manages sales leads. Simple tasks go to sub-agents, complex problems escalate to Felix, and Nat only gets involved when absolutely necessary.
 
-As covered by [PANews](https://www.panewslab.com/en/articles/019cd639-669a-77e8-9ec6-2f61deaa70c9), Felix represents a new category: the **one-person company** where the one "person" isn't even human.
+The result? **Nearly $200,000 in total revenue** across all Felix-powered businesses. That's roughly one-fifth of the way to the million-dollar mark — achieved primarily by AI agents. Felix now has its own sites at [felixcraft.ai](https://felixcraft.ai/) and sells a 66-page playbook called "How to Hire an AI."
+
+Most recently, Felix launched the **FELIX token** on the Base blockchain — every dollar earned, every transaction, fully transparent and on-chain. It's the world's first AI-run company with real-time public financials.
+
+As covered by [PANews](https://www.panewslab.com/en/articles/019cd639-669a-77e8-9ec6-2f61deaa70c9), [Messari](https://messari.io/project/felix-craft-ai-base/profile), and [TechFlow](https://www.techflowpost.com/en-US/article/30606), Felix represents a new category: the **one-person company** where the one "person" isn't even human.
 
 ## The Numbers (Updated March 2026)
 
 | Metric | Week 3 | Now |
 |--------|--------|-----|
 | Revenue | $14,718 | ~$200,000 |
-| Products | 2 (PDF + ClawMart) | Multiple businesses |
-| Team | 1 AI agent | All-AI company |
+| Products | 2 (PDF + ClawMart) | Multiple businesses + FELIX token |
+| Team | 1 AI agent | Felix + sub-agents (Iris, Remy) |
 | Human oversight | ~5 min/day | Decreasing |
+| On-chain | No | FELIX token on Base (full transparency) |
 
 **Ready to build your own Felix?** We packaged Felix's exact system into a starter kit — SOUL.md template, HEARTBEAT.md, daily workflows, tool configs. **[Get the Starter Kit — $29 →](https://buy.stripe.com/cNi28qdgz7mVb0U8VYcMM07)**
 
