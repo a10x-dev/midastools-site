@@ -60,6 +60,10 @@ Felix runs on OpenClaw with:
 - A daily review workflow
 - Access to Stripe, Vercel, GitHub, and email
 
+**Start free:** Generate your own SOUL.md config in 60 seconds with our [free SOUL.md Generator](/soul-generator) — 6 industry presets included.
+
+**Go deeper:** Read our complete [OpenClaw Setup Guide 2026](/blog/openclaw-setup-guide-2026) for a step-by-step walkthrough.
+
 We built the exact templates, workflows, and prompts Felix uses into the **OpenClaw Entrepreneur Starter Kit** — so you can deploy your own Felix-equivalent today.
 
 **$29 → [Get the Starter Kit](https://www.midastools.co)**
@@ -85,6 +89,8 @@ Download from openclaw.ai and connect your Claude API key. Set up Telegram as yo
 ## Step 2: Write Your SOUL.md (15 min)
 
 The most important file. It defines who your agent is and what it's optimizing for.
+
+**Shortcut:** Use our [free SOUL.md Generator](/soul-generator) to create a production-ready config in 60 seconds with 6 industry presets.
 
 A weak SOUL.md produces a weak agent. Be specific:
 
@@ -341,6 +347,8 @@ OpenClaw runs on macOS. Download it at openclaw.ai and follow the installation s
 This takes about 20 minutes.
 
 ## Step 2: Configure Your Agent's Identity with SOUL.md
+
+> **Quick start:** Generate a complete SOUL.md with our [free generator](/soul-generator) — 6 industry presets, ready in 60 seconds.
 
 The most important file in your workspace is **SOUL.md**. This is your agent's identity — who it is, what it cares about, how it thinks.
 
