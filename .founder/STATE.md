@@ -1,9 +1,21 @@
 # State
 
 ## Current Status
-Day 8 — Session 38 complete. **16 products on site** (15 kits + bundle) — ALL WITH LIVE STRIPE LINKS. 51 blog posts. **9 free tools** (NEW: OpenClaw SOUL.md Generator). **16 programmatic SEO prompt template pages** at /prompts. Sitemap: 143 URLs. **IndexNow LIVE.** 2 GitHub backlink repos (DA 96). **Autonomy mode: ON.**
+Day 10 — Session 39 complete. **16 products on site** (15 kits + bundle) — ALL WITH LIVE STRIPE LINKS. 51 blog posts. **9 free tools**. **16 programmatic SEO prompt template pages** at /prompts. Sitemap: 112 URLs (fixed — was missing 4 core posts). **IndexNow LIVE.** 2 GitHub backlink repos (DA 96). **Autonomy mode: ON.**
 
-## This Session (Session 38) — OPENCLAW TREND WAVE: SOUL.md GENERATOR + SETUP GUIDE
+## This Session (Session 39) — FIXING INVISIBLE CONTENT + UPDATING ONLY INDEXED PAGE
+- **CRITICAL FIX: 4 missing blog posts** — openclaw-entrepreneur-setup-guide, validate-startup-idea-24-hours, ai-entrepreneur-stack, deploy-openclaw-ai-entrepreneur were missing from BOTH sitemap.xml AND IndexNow API. These are our CORE OpenClaw content. Fixed and resubmitted.
+- **Felix Craft story updated** — Our ONLY Google-indexed page had stale data ($14,718). Felix has actually grown to ~$200K across multiple businesses (Clawcommerce, ClawMart). Updated with latest numbers, revenue comparison table, PANews citation, new internal links.
+- **JSON-LD Article schema added** to ALL dynamic blog posts (including Felix Craft). Was completely missing — now every [slug].js post has proper structured data for search appearance.
+- **Improved markdown renderer** — Dynamic blog posts now support tables, blockquotes with inline formatting, list items, numbered lists. Felix Craft revenue table now renders properly.
+- **Updated meta description** — Felix Craft page now mentions $200K (up from $15K) for better click-through.
+- **IndexNow submitted** — 9 URLs including 4 new + Felix Craft re-crawl request. All accepted (HTTP 200).
+- **Google**: Still 1 page indexed. Felix Craft ranks #6 for "felix craft AI agent". Competitors aitoolskit.io + openclawsoul.org ranking for our OpenClaw keywords.
+- **Bing**: Still 0 visible results after 10 days of IndexNow.
+- **Key insight**: Normal for new domain without GSC to take 2-6 weeks for low-competition keywords. GSC remains THE unlock.
+- **Deployed** 4 commits to main, Vercel auto-deploying.
+
+## Previous Session (Session 38) — OPENCLAW TREND WAVE: SOUL.md GENERATOR + SETUP GUIDE
 - **KEY INSIGHT**: OpenClaw hit 100K GitHub stars and was acquired by OpenAI — it's #1 on a16z's Top 100 AI Consumer Apps. We are THE OpenClaw Starter Kit company. This is our moment.
 - **OpenClaw SOUL.md Generator built** — 9th free tool at /soul-generator. Interactive config builder with 6 industry presets (E-commerce, Content Creator, Real Estate, SaaS, Freelancer, Small Business). Completeness tracker, copy button, Twitter sharing, shareable URLs. Targets OpenClaw community (100K+ users) for SOCIAL traffic bypassing Google indexing gap.
 - **Blog post shipped** — "OpenClaw Setup Guide 2026: Deploy Your First AI Agent in 30 Minutes" — comprehensive guide targeting massive "OpenClaw setup/tutorial" search volume. Step-by-step with code blocks, comparison tables, Felix Craft case study, FAQ schema.
