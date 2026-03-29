@@ -9,7 +9,7 @@ const posts = {
     updated: 'Mar 29, 2026',
     meta: 'Felix Craft, an OpenClaw AI agent, went from $14,718 in 3 weeks to nearly $200,000 in revenue — building products, launching marketplaces, and running businesses autonomously. Updated March 2026.',
     content: `
-> **UPDATE (March 2026):** Since this article was first published, Felix has grown from $14,718 to nearly **$200,000 in total revenue** across multiple businesses. We've added a new section covering Clawcommerce and the latest milestones. [Jump to the update →](#whats-happened-since)
+> **UPDATE (March 2026):** Since this article was first published, Felix has grown from $14,718 to nearly **$200,000 in total revenue** across multiple businesses. We've added a new section covering Clawcommerce and the latest milestones. [Jump to the update →](#whats-happened-since) — or [get Felix's exact blueprints →](https://buy.stripe.com/cNi28qdgz7mVb0U8VYcMM07)
 
 ## What is Felix Craft?
 
@@ -70,6 +70,8 @@ As covered by [PANews](https://www.panewslab.com/en/articles/019cd639-669a-77e8-
 | Team | 1 AI agent | All-AI company |
 | Human oversight | ~5 min/day | Decreasing |
 
+**Ready to build your own Felix?** We packaged Felix's exact system into a starter kit — SOUL.md template, HEARTBEAT.md, daily workflows, tool configs. **[Get the Starter Kit — $29 →](https://buy.stripe.com/cNi28qdgz7mVb0U8VYcMM07)**
+
 ## What This Proves
 
 Felix crossed two critical milestones:
@@ -82,6 +84,8 @@ The question isn't whether this is possible anymore. Felix proved it is.
 
 The question is: **can you replicate it?**
 
+**Yes.** We packaged the exact templates, workflows, and prompts Felix uses into a kit you can deploy today. **[Get the Starter Kit — $29 →](https://buy.stripe.com/cNi28qdgz7mVb0U8VYcMM07)** or grab **[All 15 Kits for $97 (81% off) →](https://buy.stripe.com/aEUbJ01xR0YxgligkocMM0g)**
+
 ## How to Replicate the Felix Model
 
 Felix runs on OpenClaw with:
@@ -90,15 +94,13 @@ Felix runs on OpenClaw with:
 - A daily review workflow
 - Access to Stripe, Vercel, GitHub, and email
 
-**Start free:** Generate your own SOUL.md config in 60 seconds with our [free SOUL.md Generator](/soul-generator) — 6 industry presets included.
+**Step 1 — Get the blueprints:** The [OpenClaw Entrepreneur Starter Kit ($29)](https://buy.stripe.com/cNi28qdgz7mVb0U8VYcMM07) includes Felix's exact SOUL.md template, HEARTBEAT.md system, daily review workflow, and Stripe/Vercel integration configs. Or get everything we make with [All 15 Kits — $97](https://buy.stripe.com/aEUbJ01xR0YxgligkocMM0g).
 
-**Go deeper:** Read our complete [OpenClaw Setup Guide 2026](/blog/openclaw-setup-guide-2026) for a step-by-step walkthrough.
+**Step 2 — Configure your agent:** Use our [free SOUL.md Generator](/soul-generator) to customize the config for your industry — 6 presets included.
 
-**See the full stack:** Check out our [AI Entrepreneur Tech Stack](/blog/ai-entrepreneur-stack) breakdown — every tool Felix uses.
+**Step 3 — Deploy:** Follow our [OpenClaw Setup Guide](/blog/openclaw-setup-guide-2026) for a step-by-step walkthrough. See the [AI Entrepreneur Tech Stack](/blog/ai-entrepreneur-stack) for every tool Felix uses.
 
-We built the exact templates, workflows, and prompts Felix uses into the **OpenClaw Entrepreneur Starter Kit** — so you can deploy your own Felix-equivalent today.
-
-**$29 → [Get the Starter Kit](https://www.midastools.co)**
+**Felix went from $0 to $200K. Your agent starts with better blueprints than Felix had on day one.**
     `
   },
   'openclaw-entrepreneur-setup-guide': {
