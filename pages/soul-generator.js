@@ -138,12 +138,30 @@ function calculateCompleteness(config) {
   return { score: Math.min(score, 100), checks };
 }
 
+/* ── Readiness Score ───────────────────────────────────── */
+
+const READINESS_LEVELS = [
+  { min: 0,  label: 'Needs More Coffee', emoji: '☕', color: '#EF4444', shareText: 'barely awake' },
+  { min: 30, label: 'Getting There', emoji: '🔧', color: '#F59E0B', shareText: 'under construction' },
+  { min: 50, label: 'Looking Solid', emoji: '💪', color: '#3B82F6', shareText: 'looking solid' },
+  { min: 75, label: 'Almost Ready', emoji: '🎯', color: '#8B5CF6', shareText: 'almost ready to deploy' },
+  { min: 90, label: 'Ready to Ship', emoji: '🚀', color: '#10B981', shareText: 'ready to ship' },
+];
+
+function getReadinessLevel(score) {
+  for (let i = READINESS_LEVELS.length - 1; i >= 0; i--) {
+    if (score >= READINESS_LEVELS[i].min) return READINESS_LEVELS[i];
+  }
+  return READINESS_LEVELS[0];
+}
+
 /* ── Share helpers ──────────────────────────────────────── */
 
-function generateShareUrl(preset, agentName) {
+function generateShareUrl(preset, agentName, score) {
   const params = new URLSearchParams();
   if (preset) params.set('preset', preset);
   if (agentName) params.set('agent', agentName);
+  if (score) params.set('score', score.toString());
   return `https://www.midastools.co/soul-generator?${params.toString()}`;
 }
 
@@ -201,7 +219,7 @@ export default function SoulGenerator() {
   }
 
   function handleCopyLink() {
-    navigator.clipboard.writeText(generateShareUrl(preset, agentName));
+    navigator.clipboard.writeText(generateShareUrl(preset, agentName, completeness));
     setCopiedLink(true);
     setTimeout(() => setCopiedLink(false), 2000);
   }
@@ -221,7 +239,8 @@ export default function SoulGenerator() {
   }
 
   const selectedPreset = PRESETS.find(p => p.id === preset);
-  const shareText = encodeURIComponent(`Just generated my AI agent's SOUL.md config with @MidasTools 🤖\n\nBuild yours free: https://www.midastools.co/soul-generator`);
+  const readiness = getReadinessLevel(completeness);
+  const shareText = encodeURIComponent(`My OpenClaw agent scored "${readiness.label}" ${readiness.emoji} on the SOUL.md Generator\n\nBuild yours free: https://www.midastools.co/soul-generator`);
 
   /* ── FAQ data for JSON-LD ── */
   const faqs = [
@@ -445,9 +464,21 @@ export default function SoulGenerator() {
       {/* ── Result ── */}
       {result && (
         <section className="result-section" ref={resultRef}>
+          {/* Readiness Score Card */}
+          <div className="readiness-card" style={{ borderColor: readiness.color }}>
+            <div className="readiness-emoji">{readiness.emoji}</div>
+            <div className="readiness-score" style={{ color: readiness.color }}>{completeness}/100</div>
+            <div className="readiness-label" style={{ color: readiness.color }}>{readiness.label}</div>
+            <p className="readiness-desc">
+              {completeness >= 90 ? 'Your agent is production-ready. Copy the config below and deploy!' :
+               completeness >= 75 ? 'Almost there! Fill in the remaining fields above for a stronger agent.' :
+               completeness >= 50 ? 'Good start — add more details to make your agent truly autonomous.' :
+               'Your agent needs more definition. Fill in the fields above for better results.'}
+            </p>
+          </div>
+
           <div className="result-header">
-            <h2>🎉 Your SOUL.md is Ready</h2>
-            <p>Copy this configuration and paste it into your OpenClaw setup. Your agent is ready to deploy.</p>
+            <h2>Your SOUL.md Config</h2>
             <div className="result-actions">
               <button className="btn-copy" onClick={handleCopy}>
                 {copied ? '✅ Copied!' : '📋 Copy SOUL.md'}
@@ -458,7 +489,7 @@ export default function SoulGenerator() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                𝕏 Share on Twitter
+                𝕏 Share Score on Twitter
               </a>
               <button className="btn-copy-link" onClick={handleCopyLink}>
                 {copiedLink ? '✅ Link Copied!' : '🔗 Copy Share Link'}
@@ -666,6 +697,18 @@ export default function SoulGenerator() {
         .btn-reset:hover { border-color: #3B5FFF; color: #3B5FFF; }
 
         /* Result */
+        /* Readiness Score Card */
+        .readiness-card {
+          text-align: center; padding: 2rem; border-radius: 16px;
+          background: #FAFBFF; border: 3px solid #3B5FFF;
+          margin-bottom: 2rem; animation: fadeInUp 0.3s ease-out;
+        }
+        .readiness-emoji { font-size: 3rem; margin-bottom: 0.5rem; }
+        .readiness-score { font-size: 3rem; font-weight: 900; line-height: 1; }
+        .readiness-label { font-size: 1.3rem; font-weight: 800; margin-top: 0.25rem; }
+        .readiness-desc { color: #6B7280; font-size: 0.95rem; margin-top: 0.75rem; max-width: 400px; margin-left: auto; margin-right: auto; }
+        @keyframes fadeInUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+
         .result-section { padding-top: 3rem; }
         .result-header { text-align: center; margin-bottom: 1.5rem; }
         .result-header h2 { font-size: 1.8rem; margin-bottom: 0.5rem; }
