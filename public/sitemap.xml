@@ -582,6 +582,33 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+
+  <!-- Core OpenClaw blog posts (dynamic [slug].js — previously missing!) -->
+  <url>
+    <loc>https://www.midastools.co/blog/openclaw-entrepreneur-setup-guide</loc>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.midastools.co/blog/validate-startup-idea-24-hours</loc>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.midastools.co/blog/ai-entrepreneur-stack</loc>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.midastools.co/blog/deploy-openclaw-ai-entrepreneur</loc>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
   <!-- Prompt Template Pages (Programmatic SEO) -->
   <url>
     <loc>https://www.midastools.co/prompts</loc>

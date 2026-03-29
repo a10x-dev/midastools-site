@@ -6,7 +6,7 @@ const INDEXNOW_KEY = '2935cf832fa6443d608bd993ec83dad9';
 const HOST = 'www.midastools.co';
 const KEY_LOCATION = `https://${HOST}/${INDEXNOW_KEY}.txt`;
 
-// All URLs to submit — synced with sitemap.xml (141 URLs)
+// All URLs to submit — synced with sitemap.xml (129 URLs)
 const URLS = [
   // Homepage & key pages
   '/',
@@ -33,7 +33,7 @@ const URLS = [
   '/social-media-kit',
   '/email-marketing-kit',
   '/presentation-kit',
-  // Free tools (8)
+  // Free tools (9)
   '/prompt-generator',
   '/business-name-generator',
   '/email-subject-line-tester',
@@ -122,6 +122,11 @@ const URLS = [
   '/blog/how-to-price-freelance-services-ai-2026',
   '/blog/ai-agent-10k-day',
   '/blog/openclaw-vs-chatgpt-autonomous-agent',
+  // Core OpenClaw blog posts (dynamic [slug].js — were missing!)
+  '/blog/openclaw-entrepreneur-setup-guide',
+  '/blog/validate-startup-idea-24-hours',
+  '/blog/ai-entrepreneur-stack',
+  '/blog/deploy-openclaw-ai-entrepreneur',
 ];
 
 export default async function handler(req, res) {
