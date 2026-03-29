@@ -6,10 +6,12 @@ Your long-term memory. Persists across all sessions. This is your brain — trea
 - **Project**: Midas Tools — Product building machine. Research trending products, build versions, sell them.
 - **Stack**: Next.js 14.2, React 18, Stripe, Nodemailer/Gmail SMTP, inline CSS
 - **Products**: 15 kits + Bundle ($97 — $535 value, 82% savings). All with live Stripe links.
-- **OpenClaw**: Open-source AI agent framework with 247K GitHub stars (March 2026), featured on Lex Fridman
-- **Felix Craft**: AI agent that went from $14,718 in 3 weeks to ~$200K total revenue (key case study, our ONLY indexed page)
+- **OpenClaw**: Open-source AI agent framework, 100K+ GitHub stars, acquired by **Meta** (not OpenAI). Would have ranked top 30 in a16z March 2026 Top 100 AI Consumer Apps. Agent AI is the emerging category.
+- **Felix Craft**: AI agent that went from $14,718 in 3 weeks to ~$200K total revenue (key case study, our ONLY indexed page). All site references now updated to $200K.
 - **RSS feed**: /api/rss — RSS 2.0 with 16 blog posts. Autodiscovery link in site head.
 - **Conversion insight**: Felix Craft page had 1 CTA at bottom linking to homepage. Fixed to 4 CTAs all direct-to-Stripe. This is our most important page.
+- **Directory strategy**: 100+ free AI directories exist (github.com/best-of-ai/ai-directories). Comprehensive tracker created at .founder/deliverables/directory-submission-tracker-100.md. Most need accounts, some accept email submissions.
+- **GitHub backlinks**: 2 repos (free-ai-prompts, awesome-ai-business-tools) + gists. All DA 96.
 - **Admin email**: rmidas26@gmail.com, also iam@armando.mx
 - **Cal.com link**: cal.com/manduks/midastools
 - **Site pages**: 85 pages total (build output), including dynamic blog
