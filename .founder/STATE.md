@@ -12,7 +12,10 @@ Day 8 — Session 38 complete. **16 products on site** (15 kits + bundle) — AL
 - **Sitemap updated** — 143 URLs (was 141).
 - **Google**: Still only 1 page indexed. GSC remains #1 blocker. Slack DM sent with urgency about OpenClaw trend.
 - **Bing**: Still 0 visible results. IndexNow submitted daily.
-- **Deployed** 3 commits to main, Vercel auto-deploying.
+- **Cross-linked soul-generator** from Felix Craft story (ONLY indexed page!) + 2 other OpenClaw posts in [slug].js.
+- **Dev.to article draft** — ready-to-publish SOUL.md Generator article for dev.to (our ONLY indexed channel). File: `.founder/deliverables/devto-article-openclaw-soul-generator.md`
+- **Slack DMs sent** — GSC urgency + dev.to quick-win instructions.
+- **Deployed** 4 commits to main, Vercel auto-deploying.
 
 ## Previous Session (Session 37) — VIRAL PROMPT ROASTER + PROMPT MISTAKES BLOG
 - **AI Prompt Roaster built** — 8th free tool at /prompt-roaster. Paste any prompt → get roasted for 10 "prompt sins". Severity ratings: Dumpster Fire → Actually Decent. Generates fixed expert-level prompt.
