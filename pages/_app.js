@@ -10,6 +10,7 @@ export default function App({ Component, pageProps }) {
     <>
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="alternate" type="application/rss+xml" title="Midas Tools Blog" href="https://www.midastools.co/api/rss" />
       </Head>
 
       {/* Global Organization + WebSite Schema — helps search engines understand our brand */}
