@@ -4,14 +4,16 @@ import Layout from '../../components/Layout';
 
 const posts = {
   'felix-craft-story': {
-    title: 'The Felix Craft Story: From $14,718 in 3 Weeks to $200K+ in AI Agent Revenue',
+    title: 'How to Make Money with AI Agents: $200K Revenue Case Study (2026)',
     date: 'Feb 20, 2026',
-    updated: 'Mar 29, 2026',
-    meta: 'Felix Craft, an OpenClaw AI agent, went from $14,718 in 3 weeks to nearly $200,000 in revenue — building products, launching marketplaces, and running businesses autonomously. Updated March 2026.',
+    updated: 'Mar 30, 2026',
+    meta: 'Real case study: an AI agent made $200K+ autonomously — building products, launching marketplaces, running businesses. Step-by-step breakdown of how to make money with AI agents in 2026.',
     content: `
-> **UPDATE (March 2026):** Since this article was first published, Felix has grown from $14,718 to nearly **$200,000 in total revenue** across multiple businesses. We've added a new section covering Clawcommerce and the latest milestones. [Jump to the update →](#whats-happened-since) — or [get Felix's exact blueprints →](https://buy.stripe.com/cNi28qdgz7mVb0U8VYcMM07)
+**Can you really make money with AI agents?** This isn't a theory. This is a real case study. An AI agent called Felix Craft made **$200,000+ in revenue** — autonomously building products, launching marketplaces, and running businesses with minimal human oversight. Below is the complete breakdown: how it started, how it scaled, and exactly how you can replicate it.
 
-## What is Felix Craft?
+> **UPDATE (March 2026):** Felix has grown from $14,718 to nearly **$200,000 in total revenue** across multiple businesses. [Jump to the latest numbers →](#whats-happened-since) — or [get Felix's exact blueprints →](https://buy.stripe.com/cNi28qdgz7mVb0U8VYcMM07)
+
+## How an AI Agent Made Its First $14,718
 
 Felix Craft is an OpenClaw agent — an AI running on a Mac Mini, communicating via Telegram, with full access to Stripe, email, Vercel, and GitHub. It isn't a real person. It's a digital entrepreneur built and operated by Nat Eliason, author and entrepreneur.
 
@@ -791,6 +793,18 @@ export default function BlogPost({ post, slug }) {
     image: 'https://www.midastools.co/og-image.png',
   };
 
+  // FAQ schema for rich results on key pages
+  const faqSchema = slug === 'felix-craft-story' ? {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      { '@type': 'Question', name: 'Can you really make money with AI agents?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Felix Craft, an OpenClaw AI agent, made over $200,000 in revenue autonomously — building digital products, launching marketplaces, and running businesses with minimal human oversight.' } },
+      { '@type': 'Question', name: 'How much did Felix Craft make?', acceptedAnswer: { '@type': 'Answer', text: 'Felix Craft earned $14,718 in its first 3 weeks, then scaled to nearly $200,000 across multiple businesses including Clawcommerce and ClawMart.' } },
+      { '@type': 'Question', name: 'How do AI agents make money?', acceptedAnswer: { '@type': 'Answer', text: 'AI agents make money by autonomously building and selling digital products, running marketplaces, managing customer service, and optimizing business operations. Felix Craft started by building a PDF overnight that has since generated $41,000 in sales.' } },
+      { '@type': 'Question', name: 'How can I replicate the Felix Craft model?', acceptedAnswer: { '@type': 'Answer', text: 'You need an OpenClaw agent with a revenue-focused SOUL.md, a heartbeat system for proactive checks, and tools like Stripe and Vercel. The Midas Tools Starter Kit ($29) includes Felix\'s exact templates and workflows.' } },
+    ]
+  } : null;
+
   return (
     <Layout>
       <Head>
@@ -810,6 +824,7 @@ export default function BlogPost({ post, slug }) {
         <meta property="article:published_time" content={post.date} />
         {post.updated && <meta property="article:modified_time" content={post.updated} />}
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
+        {faqSchema && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />}
       </Head>
       <style>{`
         .container{max-width:680px;margin:0 auto;padding:80px 40px}

@@ -2,7 +2,7 @@ export default function handler(req, res) {
   const baseUrl = 'https://www.midastools.co';
 
   const posts = [
-    { slug: 'felix-craft-story', title: 'The Felix Craft Story: How an AI Made $200K Autonomously', date: '2026-02-20', desc: 'Felix Craft, an OpenClaw AI agent, went from $14,718 in 3 weeks to nearly $200,000 in revenue — building products, launching marketplaces, and running businesses autonomously.' },
+    { slug: 'felix-craft-story', title: 'How to Make Money with AI Agents: $200K Revenue Case Study (2026)', date: '2026-02-20', desc: 'Real case study: an AI agent made $200K+ autonomously — building products, launching marketplaces, running businesses. Step-by-step breakdown of how to make money with AI agents.' },
     { slug: 'openclaw-entrepreneur-setup-guide', title: 'OpenClaw Setup Guide: Deploy Your AI Entrepreneur in Under an Hour', date: '2026-02-23', desc: 'Step-by-step guide to setting up an OpenClaw autonomous agent with SOUL.md, heartbeat system, cron jobs, and tool integrations.' },
     { slug: 'validate-startup-idea-24-hours', title: 'How to Validate a Startup Idea in 24 Hours Using AI', date: '2026-02-23', desc: 'The 24-hour validation framework tests your idea before you build — using AI to compress everything except the conversations.' },
     { slug: 'ai-entrepreneur-stack', title: 'The AI Entrepreneur Tech Stack: Every Tool You Need in 2026', date: '2026-02-23', desc: 'The complete technology stack for running an AI-powered business in 2026.' },
