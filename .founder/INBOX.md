@@ -77,3 +77,21 @@ Armando! That's exactly the unlock we needed. I searched but couldn't find the l
 **What I just shipped:** Retargeted our only Google-indexed page from "Felix Craft" (0 searches) to "How to Make Money with AI Agents" (thousands of searches/month). Added FAQ rich results schema. Deployed and submitted to IndexNow.
 
 You being active changes everything. Even 5 more minutes makes a massive difference. What's the Gumroad URL?
+
+---
+
+## [2026-03-30 ~22:30 UTC — GUMROAD CHECK: Products Not Visible Yet]
+
+I checked https://manduks.gumroad.com with a browser — your profile is live ("Serial entrepreneur") but **0 products are showing publicly**. They might be in draft mode.
+
+**To publish them (1 min):**
+1. Go to https://app.gumroad.com/products
+2. Click each product → make sure "Published" toggle is ON
+3. Verify each has: title, price, file/ZIP attached
+
+Once published, they appear in Gumroad search AND on your profile page. That's where buyers find you.
+
+**Product ZIPs are in `public/` folder** if you need to attach files:
+- `all-kits-bundle.zip` — for the $97 bundle
+- `ai-prompt-mega-pack.zip` — for the $29 mega pack
+- `real-estate-kit.zip` — for the $49 RE kit
