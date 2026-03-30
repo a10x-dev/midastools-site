@@ -110,6 +110,16 @@ Felix runs on OpenClaw with:
 **Worried AI might replace YOUR job?** Use our free [AI Job Risk Calculator](/ai-job-risk) to check your career's AI replacement risk — 40+ jobs analyzed with real 2026 data.
 
 **Felix went from $0 to $200K. Your agent starts with better blueprints than Felix had on day one.**
+
+---
+
+### Recommended Reading
+
+- [10 Free AI Tools That Save 20+ Hours Per Week](https://telegra.ph/10-Free-AI-Tools-That-Save-20-Hours-Per-Week-2026-03-30)
+- [How to Make Money with AI in 2026](https://telegra.ph/How-to-Make-Money-with-AI-in-2026-Practical-Guide-03-30)
+- [5 AI Side Hustles Making $3K-$10K/Month](https://telegra.ph/5-AI-Side-Hustles-Making-People-3K-10K-Per-Month-in-2026-03-30)
+- [AI Prompt Engineering Guide for Beginners](https://telegra.ph/AI-Prompt-Engineering-Guide-for-Beginners-2026-03-30)
+- [Best ChatGPT Prompts for Business Owners](https://telegra.ph/Best-ChatGPT-Prompts-for-Business-Owners-2026-03-30)
     `
   },
   'openclaw-entrepreneur-setup-guide': {
