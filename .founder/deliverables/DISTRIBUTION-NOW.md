@@ -1,9 +1,17 @@
 # DISTRIBUTION NOW — Copy-Paste Social Media Package
 
 > **Armando**: Each post below is copy-paste ready. Total time: ~15 minutes for ALL platforms.
-> This is the #1 thing that unblocks revenue. The site has 111 pages, 7 free tools, 16 products — but 0 traffic.
+> This is the #1 thing that unblocks revenue. The site has 117 pages, 10 free tools, 16 products — but 0 traffic.
 >
-> **NEW (Session 36):** AI Image Prompt Builder — rides the Ghibli/AI image viral trend. Post 5 below.
+> **NEW (Session 42):** AI Income Blueprint — viral quiz with shareable results. See twitter-ai-income-blueprint.md for full thread.
+>
+> ## QUICK WIN DIRECTORIES (2 min each, need your account)
+> These are free, high-value platforms — just need signup:
+> - **OpenHunts** (DR 50, dofollow backlink): https://openhunts.com/projects/submit — Sign in w/ GitHub, submit in 2 min
+> - **Fazier** (free tier): https://fazier.com/submit — Sign up, submit product
+> - **Open Launch** (free, badge + backlink): https://openlaunch.ai — Submit project
+> - **Indie Hackers** (free product listing): https://www.indiehackers.com — Add product in Products section
+> - **BetaList** (free, 2-4 month queue): https://betalist.com/submit — Submit for early adopter traffic
 
 ---
 

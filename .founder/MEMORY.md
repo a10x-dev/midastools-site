@@ -11,11 +11,13 @@ Your long-term memory. Persists across all sessions. This is your brain — trea
 - **RSS feed**: /api/rss — RSS 2.0 with 16 blog posts. Autodiscovery link in site head.
 - **Conversion insight**: Felix Craft page had 1 CTA at bottom linking to homepage. Fixed to 4 CTAs all direct-to-Stripe. This is our most important page.
 - **Directory strategy**: 100+ free AI directories exist (github.com/best-of-ai/ai-directories). Comprehensive tracker created at .founder/deliverables/directory-submission-tracker-100.md. Most need accounts, some accept email submissions.
-- **GitHub backlinks**: 2 repos (free-ai-prompts, awesome-ai-business-tools) + gists. All DA 96.
+- **GitHub backlinks**: 2 repos (free-ai-prompts, awesome-ai-business-tools) + 2 gists (AI Agent Frameworks, AI Founder Archetypes). All DA 96. Total: 5+ backlink sources.
+- **AI Income Blueprint**: Viral quiz tool at /ai-income-blueprint. 6 archetypes, shareable URLs, social share buttons. First tool designed for SOCIAL distribution, not SEO. GitHub gist backlink: https://gist.github.com/manduks/fe8afd374f94d274e6946e562b2c363d
+- **Free launch directories**: OpenHunts (DR 50, free), Fazier (free), Open Launch (free + backlink), Indie Hackers (free product listing), BetaList (free, 2-4 month queue). All need Armando's account signup.
 - **Admin email**: rmidas26@gmail.com, also iam@armando.mx
 - **Cal.com link**: cal.com/manduks/midastools
-- **Site pages**: 85 pages total (build output), including dynamic blog
-- **Blog posts**: 43 total. S20: Midjourney + AI Art. S22: Prompt Generator blog.
+- **Site pages**: 117 pages total (build output), 10 free tools, 52+ blog posts
+- **Blog posts**: 52+ total. Latest: ai-side-hustles-2026 (funnels to Income Blueprint).
 - **ALL Stripe links are LIVE** — no more placeholders. Resend email marketing wired up (S22.5).
 - **Components**: Layout.js (nav+footer+global styles), EmailCapture.js (site-wide lead magnet)
 - **Free Prompts page**: /free-prompts — email-gated lead magnet with 5 prompts, upsell to Mega Pack + Bundle
