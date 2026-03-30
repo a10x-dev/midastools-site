@@ -101,6 +101,7 @@ export default function AIPromptMegaPack() {
           200+ battle-tested AI prompts for copywriting, social media, content, operations, branding, and productivity. Copy. Paste. Get results.
         </p>
         <a href={STRIPE_URL} className="btn-primary">Get the Mega Pack — $29 →</a>
+        <p style={{marginTop:12,fontSize:14}}><a href="https://manduks.gumroad.com/l/pdcij" target="_blank" rel="noopener noreferrer" style={{color:'var(--text-tertiary)',textDecoration:'underline',textUnderlineOffset:3}}>Also available on Gumroad &rarr;</a></p>
         <p style={{marginTop:14, fontSize:14, color:'var(--gray-400)'}}>
           One-time payment · Instant download · 30-day money-back guarantee
         </p>

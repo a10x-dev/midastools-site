@@ -77,6 +77,7 @@ export default function Bundle() {
           <a href={STRIPE_URL} className="btn-primary">Get the Full Bundle &mdash; $97 &rarr;</a>
         </div>
         <p style={{marginTop:14,fontSize:14,color:'var(--text-secondary)'}}>One-time payment &middot; Instant download &middot; 30-day money-back guarantee</p>
+        <p style={{marginTop:12,fontSize:14}}><a href="https://manduks.gumroad.com/l/iijwf" target="_blank" rel="noopener noreferrer" style={{color:'var(--text-tertiary)',textDecoration:'underline',textUnderlineOffset:3}}>Also available on Gumroad &rarr;</a></p>
       </section>
 
       {/* Social Proof */}

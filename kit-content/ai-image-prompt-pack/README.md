@@ -134,4 +134,16 @@ We'd love to see what you build with these prompts.
 
 ---
 
+---
+
+## Also Available on Gumroad
+
+Like this pack? Check out our other prompt collections:
+
+- [AI Prompt Mega Pack (200+ prompts) — $29](https://manduks.gumroad.com/l/pdcij)
+- [Real Estate AI Kit (40+ prompts) — $49](https://manduks.gumroad.com/l/foxaka)
+- [All Kits Bundle (every kit we make) — $97](https://manduks.gumroad.com/l/iijwf)
+
+---
+
 *Made with care by MidasTools. Go make something beautiful.*

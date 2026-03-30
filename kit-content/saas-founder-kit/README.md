@@ -158,3 +158,13 @@ If you have questions about using this kit, reach out to us at hello@midastools.
 *Midas Tools — SaaS Founder AI Kit v1.0*
 *Copyright 2026 Midas Tools. All rights reserved.*
 *Licensed for personal and business use by the purchaser. Not for resale or redistribution.*
+
+---
+
+## Also Available on Gumroad
+
+Like this kit? Check out our other prompt collections:
+
+- [AI Prompt Mega Pack (200+ prompts) — $29](https://manduks.gumroad.com/l/pdcij)
+- [Real Estate AI Kit (40+ prompts) — $49](https://manduks.gumroad.com/l/foxaka)
+- [All Kits Bundle (every kit we make) — $97](https://manduks.gumroad.com/l/iijwf)

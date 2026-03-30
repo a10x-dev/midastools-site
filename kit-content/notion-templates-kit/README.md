@@ -147,3 +147,13 @@ Visit [midastools.com](https://midastools.com) for guides, tutorials, and update
 This kit is for your personal and business use. You may customize and adapt these templates for your own Notion workspace. You may not resell or redistribute the templates as-is.
 
 Copyright 2026 MidasTools. All rights reserved.
+
+---
+
+## Also Available on Gumroad
+
+Like this kit? Check out our other prompt collections:
+
+- [AI Prompt Mega Pack (200+ prompts) — $29](https://manduks.gumroad.com/l/pdcij)
+- [Real Estate AI Kit (40+ prompts) — $49](https://manduks.gumroad.com/l/foxaka)
+- [All Kits Bundle (every kit we make) — $97](https://manduks.gumroad.com/l/iijwf)

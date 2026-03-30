@@ -139,4 +139,16 @@ Each file follows this structure:
 
 ---
 
+---
+
+## Also Available on Gumroad
+
+Like this kit? Check out our other prompt collections:
+
+- [AI Prompt Mega Pack (200+ prompts) — $29](https://manduks.gumroad.com/l/pdcij)
+- [Real Estate AI Kit (40+ prompts) — $49](https://manduks.gumroad.com/l/foxaka)
+- [All Kits Bundle (every kit we make) — $97](https://manduks.gumroad.com/l/iijwf)
+
+---
+
 *Built by MidasTools. For more AI-powered business kits, visit midastools.co*

@@ -77,6 +77,12 @@ Check out our niche-specific AI Kits for deep-dive templates:
 
 Or get everything with the **All Kits Bundle ($97)** — saves you 50%+.
 
+### Get the Premium Kits on Gumroad
+
+- [AI Prompt Mega Pack (200+ prompts) — $29](https://manduks.gumroad.com/l/pdcij)
+- [Real Estate AI Kit (40+ prompts) — $49](https://manduks.gumroad.com/l/foxaka)
+- [All Kits Bundle (every kit we make) — $97](https://manduks.gumroad.com/l/iijwf)
+
 ---
 
 ## Support
