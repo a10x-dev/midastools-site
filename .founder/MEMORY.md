@@ -14,6 +14,10 @@ Your long-term memory. Persists across all sessions. This is your brain — trea
 - **GitHub backlinks**: 2 repos (free-ai-prompts, awesome-ai-business-tools) + 2 gists (AI Agent Frameworks, AI Founder Archetypes). All DA 96. Total: 5+ backlink sources.
 - **AI Income Blueprint**: Viral quiz tool at /ai-income-blueprint. 6 archetypes, shareable URLs, social share buttons. First tool designed for SOCIAL distribution, not SEO. GitHub gist backlink: https://gist.github.com/manduks/fe8afd374f94d274e6946e562b2c363d
 - **Free launch directories**: OpenHunts (DR 50, free), Fazier (free), Open Launch (free + backlink), Indie Hackers (free product listing), BetaList (free, 2-4 month queue). All need Armando's account signup.
+- **Directory submissions (Session 44)**: 6 SUCCESSFUL autonomous submissions — Neil Patel AI Tools (DA 64), AI Tools Directory, AIToolBoard (×2), AI Valley (×2). Pending review. FutureTools (DA 42) needs manual captcha.
+- **Outreach targets discovered (Session 44)**: Supertools/Rundown AI (rundown.ai/submit, 2M readers), Ben's Bites News (news.bensbites.com, 140K readers), Anshuman Jain at Beebom (anshuman@beebom.com, verified). See OUTREACH-KIT.md.
+- **Competitive landscape for "will AI replace my job"**: 5+ funded competitors — TripleTen, TheGreatDisplacement.ai (Yahoo Finance/Morningstar PR), JobReplacementAI.com, ReplaceMeter, ReplacedByRobot (57K+ occupations). SEO alone won't win here. Need press/newsletter distribution.
+- **Browser agent can submit to directories**: Successfully automated form submissions on sites without Cloudflare/captcha. Most directories blocked by: Cloudflare (TopAI, EasyWithAI, SaaSHub), paid only (TAAFT $49+, Toolify $99+, Futurepedia $247+, Dang.ai), or require login (PoweredByAI, StartupBase).
 - **Admin email**: rmidas26@gmail.com, also iam@armando.mx
 - **Cal.com link**: cal.com/manduks/midastools
 - **Site pages**: 117 pages total (build output), 10 free tools, 52+ blog posts
