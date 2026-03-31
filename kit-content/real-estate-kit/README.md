@@ -145,9 +145,9 @@ Questions about how to use these templates? Email us at support@midastools.com
 
 Like this kit? Check out our other prompt collections:
 
-- [AI Prompt Mega Pack (200+ prompts) — $29](https://manduks.gumroad.com/l/pdcij)
-- [Real Estate AI Kit (40+ prompts) — $49](https://manduks.gumroad.com/l/foxaka)
-- [All Kits Bundle (every kit we make) — $97](https://manduks.gumroad.com/l/iijwf)
+- [AI Prompt Mega Pack (200+ prompts) — $29](https://manduks.gumroad.com/l/pdcjj)
+- [Real Estate AI Kit (40+ prompts) — $49](https://manduks.gumroad.com/l/oxaka)
+- [All Kits Bundle (every kit we make) — $97](https://manduks.gumroad.com/l/iiiwf)
 
 ---
 
