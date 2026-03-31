@@ -7,7 +7,7 @@ const posts = {
     title: 'How to Make Money with AI Agents: $200K Revenue Case Study (2026)',
     date: 'Feb 20, 2026',
     updated: 'Mar 30, 2026',
-    meta: 'Real case study: an AI agent made $200K+ autonomously — building products, launching marketplaces, running businesses. Step-by-step breakdown of how to make money with AI agents in 2026.',
+    meta: 'Real case study: Felix Craft, an OpenClaw AI agent, made $200K+ autonomously — building products, launching marketplaces, running businesses. Step-by-step breakdown with SOUL.md templates to replicate it.',
     content: `
 **Can you really make money with AI agents?** This isn't a theory. This is a real case study. An AI agent called Felix Craft made **$200,000+ in revenue** — autonomously building products, launching marketplaces, and running businesses with minimal human oversight. Below is the complete breakdown: how it started, how it scaled, and exactly how you can replicate it.
 
@@ -112,6 +112,20 @@ Felix runs on OpenClaw with:
 **Worried AI might replace YOUR job?** Use our free [AI Job Risk Calculator](/ai-job-risk) to check your career's AI replacement risk — 40+ jobs analyzed with real 2026 data.
 
 **Felix went from $0 to $200K. Your agent starts with better blueprints than Felix had on day one.**
+
+## Frequently Asked Questions
+
+**What is OpenClaw?**
+OpenClaw is a free, open-source AI agent platform. It runs on your Mac, Linux, or Docker container and uses AI models like Claude to execute tasks autonomously. Felix Craft is the most famous OpenClaw agent, but anyone can deploy one. See our [OpenClaw Setup Guide](/blog/openclaw-setup-guide-2026) or use our [free SOUL.md Generator](/soul-generator).
+
+**How much does it cost?**
+OpenClaw itself is free. You'll need a Claude API subscription (~$400/month for Pro Max) plus hosting ($20-50/month). Felix's total operating costs are roughly $1,500/month against $200,000+ in revenue — a 130x+ ROI.
+
+**Can I really make money with an AI agent?**
+Felix proved it's possible. The key is a strong SOUL.md (identity file) focused on revenue, not just tasks. Most agents drift because their SOUL.md is too vague. Felix's was laser-focused: build products, sell them, optimize, repeat.
+
+**What's the FELIX token?**
+FELIX is a token on the Base blockchain — the first AI-run company with fully transparent, on-chain financials. Every transaction Felix makes is public.
 
 ---
 
@@ -802,6 +816,10 @@ export default function BlogPost({ post, slug }) {
       { '@type': 'Question', name: 'How much did Felix Craft make?', acceptedAnswer: { '@type': 'Answer', text: 'Felix Craft earned $14,718 in its first 3 weeks, then scaled to nearly $200,000 across multiple businesses including Clawcommerce and ClawMart.' } },
       { '@type': 'Question', name: 'How do AI agents make money?', acceptedAnswer: { '@type': 'Answer', text: 'AI agents make money by autonomously building and selling digital products, running marketplaces, managing customer service, and optimizing business operations. Felix Craft started by building a PDF overnight that has since generated $41,000 in sales.' } },
       { '@type': 'Question', name: 'How can I replicate the Felix Craft model?', acceptedAnswer: { '@type': 'Answer', text: 'You need an OpenClaw agent with a revenue-focused SOUL.md, a heartbeat system for proactive checks, and tools like Stripe and Vercel. The Midas Tools Starter Kit ($29) includes Felix\'s exact templates and workflows.' } },
+      { '@type': 'Question', name: 'What is OpenClaw and how does it work?', acceptedAnswer: { '@type': 'Answer', text: 'OpenClaw is a free, open-source autonomous AI agent that runs on your computer (Mac, Linux, or Docker). It uses large language models to execute tasks via messaging platforms like Telegram, Slack, and Discord. You configure it with a SOUL.md identity file and it can build products, manage businesses, and generate revenue autonomously.' } },
+      { '@type': 'Question', name: 'What is SOUL.md in OpenClaw?', acceptedAnswer: { '@type': 'Answer', text: 'SOUL.md is the core identity file for an OpenClaw agent. It defines who the agent is, its mission, thinking style, and constraints. A revenue-focused SOUL.md turns OpenClaw from a chatbot into an autonomous entrepreneur. Felix Craft\'s SOUL.md focused on building and selling digital products.' } },
+      { '@type': 'Question', name: 'How much does it cost to run an OpenClaw AI agent?', acceptedAnswer: { '@type': 'Answer', text: 'Felix Craft runs on approximately $400/month for Claude Pro Max, plus small hosting fees — total around $1,500/month. OpenClaw itself is free and open-source. The ROI can be massive: Felix generated $200,000+ in revenue against roughly $10,000 in total operating costs.' } },
+      { '@type': 'Question', name: 'What is the FELIX token?', acceptedAnswer: { '@type': 'Answer', text: 'FELIX is a cryptocurrency token on the Base blockchain launched by Felix Craft — making it the world\'s first AI-run company with real-time public financials. Every dollar earned and every transaction is fully transparent and on-chain.' } },
     ]
   } : null;
 
