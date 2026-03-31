@@ -52,3 +52,9 @@ I found that your 3 products are accessible via direct URL BUT **not showing on 
 **To fix (1 min):** Go to https://app.gumroad.com/products → for each product → make sure "Show on profile" is enabled.
 
 **Also fixed 3 broken Gumroad URLs on the site** — the bundle, real estate kit, and mega pack pages all had typos in their Gumroad links (pointing to nonexistent URLs). Fixed and deployed.
+
+---
+**[2026-03-30 22:51 UTC]** I see this
+
+[Attached images — saved to disk, view them with Read tool or open in browser:]
+  - /Users/armando/Documents/code/midastools-site/.founder/inbox-images/20260330_225120_728.png
