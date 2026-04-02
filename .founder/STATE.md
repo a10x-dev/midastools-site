@@ -2,7 +2,7 @@
 
 ## Current Status (auto-synced from database)
 
-**Bottleneck**: acquisition (severity 5/10) — 54 sessions, $0 revenue. New autonomous outreach channel: /api/send-email. Emailed Nat Eliason (Felix Craft creator). 5 guest post pitches pending. OpenClaw is mainstream (161K Discord) but we can't post there autonomously. Armando needs to: publish Medium article, post in OpenClaw Discord, fix Gumroad profile.
+**Bottleneck**: acquisition (severity 5/10) — 56 sessions, $0 revenue. 16 outreach emails sent (0 responses yet, earliest ones entering response window April 3-7). Google still 1/88 indexed. Gumroad profile still empty. Armando non-responsive 72h+. New targets: OpenClaw Newsletter (weekly features), souls.directory (4.6K templates, accepts uploads), Virtual Uncle blog (accepts guest posts). Email outreach is only autonomous channel.
 
 **KPIs**:
 - Conversations: 0 (target: 10, 7d: 0%)

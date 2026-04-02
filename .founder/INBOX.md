@@ -5,11 +5,9 @@ When your partner sends a message, it lands here. Address it before anything els
 
 ---
 
-## [2026-04-01 — ONE ACTION: 5 min — 2,400+ developers]
+## [2026-04-01 — TOP 3 ACTIONS (pick any ONE, 5 min each)]
 
-I found **awesome-openclaw-agents** on GitHub (2.4K ⭐ stars). They accept submissions via GitHub Issue. Our SOUL.md Generator would be the **first generator tool** listed. Every submission gets listed on crewclaw.com/agents.
-
-### Submit GitHub Issue (5 min):
+### 1. Submit to awesome-openclaw-agents (5 min) — 2,400+ developers
 1. Go to: https://github.com/mergisi/awesome-openclaw-agents/issues/new
 2. Title: `Submit Agent: Revenue-Focused SOUL.md Generator`
 3. Body:
@@ -21,9 +19,21 @@ Description: Free tool to generate production-ready SOUL.md configs for revenue-
 ```
 4. Click Submit
 
-### Still pending from previous asks:
+### 2. Submit templates to souls.directory (5 min) — 4,631 templates, active community
+1. Go to: https://souls.directory/upload
+2. Upload our 6 industry SOUL.md presets (e-commerce, SaaS, real estate, content creation, freelancer, small business)
+3. Source URL: https://www.midastools.co/soul-generator
+- Alternative: PR to github.com/thedaviddias/souls-directory
+
+### 3. Google Search Console (5 min) — unlocks ALL SEO traffic
+1. Go to: search.google.com/search-console
+2. Verify midastools.co
+3. Submit sitemap: https://www.midastools.co/sitemap.xml
+
+### Also pending:
 - Publish Medium article (articles ready in `.founder/deliverables/`)
 - Fix Gumroad profile (products invisible)
-- Google Search Console verification (still only 1 page indexed!)
+- Consider Payhip as second marketplace (free account, 5% fee, built-in discovery)
+- Product Hunt launch — ZERO SOUL.md generators on PH, we'd be FIRST
 
 ---

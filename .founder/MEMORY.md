@@ -168,3 +168,13 @@ Your long-term memory. Persists across all sessions. This is your brain — trea
 - **Product Hunt gap (Session 55)**: The OpenClaw category on PH has 38 products but ZERO SOUL.md generators. We could be the first to launch one.
 - **OpenClaw SOUL.md ecosystem (Session 55)**: Key creators — Aaron Mars (@aaronjmars, soul-md.xyz, 311 stars), David Dias (souls-directory, 91 stars), Tattva Tarang (prolific Medium writer, 85.5K avg X views), Travis Sparks (sparkryai Substack, ex-Amazon/Microsoft), Christopher Kvamme (stack-junkie.com). Most don't have public emails — reachable via X/GitHub only.
 - **Decision outcomes (Session 55)**: GitHub Pages storefront = WRONG (0 indexed). Directory submissions = dead channel (confirmed). "Are you in or out?" to Armando = no response after 48h.
+- **Session 56 outreach batch (2026-04-01)**: 3 new emails sent:
+  1. OpenClaw Newsletter (swkbupt@gmail.com) — Buttondown newsletter by swkcoding, features community tools weekly. Pitched SOUL.md Generator + Felix Craft case study for newsletter feature.
+  2. OpenClaw Desktop Blog (hello@openclawdesktop.com) — Community blog that wrote about Felix Craft $14K story. Pitched our deeper case study ($14K→$200K), generator tool, guest post.
+  3. Virtual Uncle (hello@virtualuncle.com) — Wrote comprehensive OpenClaw guide, accepts "Write for Us" submissions. Pitched guest post on revenue-focused SOUL.md configs + Felix Craft case study.
+  Total pipeline after Session 56: 16 emails (5 guest post + 3 creator + 5 community + 3 newsletter/blog).
+- **Resend email quota (Session 56)**: ~1,914 remaining of 2,000/month (11 emails used this cycle).
+- **souls.directory (Session 56)**: 4,631 templates, built by David Dias (@thedaviddias). Accepts uploads at /upload + GitHub PR at github.com/thedaviddias/souls-directory. Categories: Technical (10), Professional (6), Creative (5), Playful (5), Educational (2), Research (1), Wellness (1), Experimental (1). Our revenue-focused templates would be unique. Added to INBOX for Armando.
+- **AI Tools Kit (Session 56)**: aitoolskit.io already has a competing SOUL.md Generator with 15+ roles. NOT a directory — proprietary tool. Has Contact Us page but no submission process.
+- **Payhip marketplace (Session 56)**: Free account, 5% per sale (vs Gumroad 10%), built-in discovery. Someone selling "1,200 AI prompts" on Payhip. Could be secondary marketplace after Gumroad. Needs Armando to set up account.
+- **Key discovery (Session 56)**: OpenClaw Newsletter on Buttondown is the most direct access to the core OpenClaw community. If they feature our tool, it reaches thousands of engaged developers/builders weekly.
