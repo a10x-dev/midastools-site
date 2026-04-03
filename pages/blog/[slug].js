@@ -142,6 +142,9 @@ FELIX is a token on the Base blockchain — the first AI-run company with fully 
 - [Best AI Tools for Small Business Owners 2026](https://telegra.ph/Best-AI-Tools-for-Small-Business-Owners-Free-and-Paid-2026-04-02)
 - [OpenClaw vs ChatGPT for Business](https://telegra.ph/OpenClaw-vs-ChatGPT-Why-Autonomous-Agents-Beat-Chatbots-for-Business-04-02)
 - [AI Side Hustle Ideas That Actually Work in 2026](https://telegra.ph/AI-Side-Hustle-Ideas-That-Actually-Work-in-2026-With-Proof-04-02)
+- [10 AI Prompts That Actually Make Money in 2026](https://telegra.ph/10-AI-Prompts-That-Actually-Make-Money-in-2026-With-Examples-04-03)
+- [AI Tools Every Freelancer Needs to 3x Revenue](https://telegra.ph/AI-Tools-Every-Freelancer-Needs-to-3x-Revenue-in-2026-04-03)
+- [How to Build an AI Side Hustle That Pays $3K/Month](https://telegra.ph/How-to-Build-an-AI-Side-Hustle-That-Pays-3K-per-Month-Step-by-Step-04-03)
     `
   },
   'openclaw-entrepreneur-setup-guide': {
