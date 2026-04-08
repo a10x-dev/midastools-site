@@ -45,13 +45,31 @@ export default function NotionTemplatesKit() {
           "description": "150+ ready-made Notion templates with built-in AI prompts for project management, CRM, content planning, personal productivity, business operations, and freelancer workflows.",
           "url": "https://www.midastools.co/notion-templates-kit",
           "image": "https://www.midastools.co/og-image.png",
-          "brand": { "@type": "Brand", "name": "Midas Tools" },
+          "brand": "Midas Tools",
           "offers": {
             "@type": "Offer",
             "price": "39",
             "priceCurrency": "USD",
             "availability": "https://schema.org/InStock",
-            "url": STRIPE_URL
+            "url": STRIPE_URL,
+            "hasMerchantReturnPolicy": {
+              "@type": "MerchantReturnPolicy",
+              "applicableCountry": "US",
+              "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+              "merchantReturnDays": "30",
+              "returnMethod": "https://schema.org/ReturnByMail",
+              "returnFees": "https://schema.org/FreeReturn"
+            },
+            "shippingDetails": {
+              "@type": "OfferShippingDetails",
+              "shippingRate": { "@type": "MonetaryAmount", "value": "0", "currency": "USD" },
+              "shippingDestination": { "@type": "DefinedRegion", "addressCountry": "US" },
+              "deliveryTime": {
+                "@type": "ShippingDeliveryTime",
+                "handlingTime": { "@type": "QuantitativeValue", "minValue": "0", "maxValue": "0", "unitCode": "d" },
+                "transitTime": { "@type": "QuantitativeValue", "minValue": "0", "maxValue": "0", "unitCode": "d" }
+              }
+            }
           },
           "aggregateRating": {
             "@type": "AggregateRating",

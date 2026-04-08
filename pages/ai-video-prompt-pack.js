@@ -48,8 +48,31 @@ export default function AIVideoPromptPack() {
           "description": "150+ ready-to-use AI video generation prompts for social media, product demos, tutorials, cinematic content, corporate videos, and viral trending styles",
           "url": "https://www.midastools.co/ai-video-prompt-pack",
           "image": "https://www.midastools.co/og-image.png",
-          "offers": { "@type": "Offer", "price": "29", "priceCurrency": "USD", "availability": "https://schema.org/InStock" },
-          "brand": { "@type": "Brand", "name": "Midas Tools" },
+          "offers": {
+            "@type": "Offer",
+            "price": "29",
+            "priceCurrency": "USD",
+            "availability": "https://schema.org/InStock",
+            "hasMerchantReturnPolicy": {
+              "@type": "MerchantReturnPolicy",
+              "applicableCountry": "US",
+              "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+              "merchantReturnDays": "30",
+              "returnMethod": "https://schema.org/ReturnByMail",
+              "returnFees": "https://schema.org/FreeReturn"
+            },
+            "shippingDetails": {
+              "@type": "OfferShippingDetails",
+              "shippingRate": { "@type": "MonetaryAmount", "value": "0", "currency": "USD" },
+              "shippingDestination": { "@type": "DefinedRegion", "addressCountry": "US" },
+              "deliveryTime": {
+                "@type": "ShippingDeliveryTime",
+                "handlingTime": { "@type": "QuantitativeValue", "minValue": "0", "maxValue": "0", "unitCode": "d" },
+                "transitTime": { "@type": "QuantitativeValue", "minValue": "0", "maxValue": "0", "unitCode": "d" }
+              }
+            }
+          },
+          "brand": "Midas Tools",
           "aggregateRating": {
             "@type": "AggregateRating",
             "ratingValue": "4.8",

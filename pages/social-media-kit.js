@@ -58,13 +58,31 @@ export default function SocialMediaKit() {
           "description": "150+ AI prompts and templates for social media managers — content calendars, caption hooks, viral formulas, analytics, community management, and paid ad copy for every major platform.",
           "url": "https://www.midastools.co/social-media-kit",
           "image": "https://www.midastools.co/og-image.png",
-          "brand": { "@type": "Brand", "name": "Midas Tools" },
+          "brand": "Midas Tools",
           "offers": {
             "@type": "Offer",
             "price": "39.00",
             "priceCurrency": "USD",
             "availability": "https://schema.org/InStock",
-            "url": STRIPE_URL
+            "url": STRIPE_URL,
+            "hasMerchantReturnPolicy": {
+              "@type": "MerchantReturnPolicy",
+              "applicableCountry": "US",
+              "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+              "merchantReturnDays": "30",
+              "returnMethod": "https://schema.org/ReturnByMail",
+              "returnFees": "https://schema.org/FreeReturn"
+            },
+            "shippingDetails": {
+              "@type": "OfferShippingDetails",
+              "shippingRate": { "@type": "MonetaryAmount", "value": "0", "currency": "USD" },
+              "shippingDestination": { "@type": "DefinedRegion", "addressCountry": "US" },
+              "deliveryTime": {
+                "@type": "ShippingDeliveryTime",
+                "handlingTime": { "@type": "QuantitativeValue", "minValue": "0", "maxValue": "0", "unitCode": "d" },
+                "transitTime": { "@type": "QuantitativeValue", "minValue": "0", "maxValue": "0", "unitCode": "d" }
+              }
+            }
           },
           "aggregateRating": {
             "@type": "AggregateRating",

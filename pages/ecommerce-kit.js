@@ -59,13 +59,31 @@ export default function EcommerceKit() {
           "description": "AI templates for e-commerce: product descriptions, email marketing sequences, ad copy, social media, and SEO content strategy.",
           "url": "https://www.midastools.co/ecommerce-kit",
           "image": "https://www.midastools.co/og-image.png",
-          "brand": { "@type": "Brand", "name": "Midas Tools" },
+          "brand": "Midas Tools",
           "offers": {
             "@type": "Offer",
             "price": "39",
             "priceCurrency": "USD",
             "availability": "https://schema.org/InStock",
-            "url": "https://www.midastools.co/ecommerce-kit"
+            "url": "https://www.midastools.co/ecommerce-kit",
+            "hasMerchantReturnPolicy": {
+              "@type": "MerchantReturnPolicy",
+              "applicableCountry": "US",
+              "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+              "merchantReturnDays": "30",
+              "returnMethod": "https://schema.org/ReturnByMail",
+              "returnFees": "https://schema.org/FreeReturn"
+            },
+            "shippingDetails": {
+              "@type": "OfferShippingDetails",
+              "shippingRate": { "@type": "MonetaryAmount", "value": "0", "currency": "USD" },
+              "shippingDestination": { "@type": "DefinedRegion", "addressCountry": "US" },
+              "deliveryTime": {
+                "@type": "ShippingDeliveryTime",
+                "handlingTime": { "@type": "QuantitativeValue", "minValue": "0", "maxValue": "0", "unitCode": "d" },
+                "transitTime": { "@type": "QuantitativeValue", "minValue": "0", "maxValue": "0", "unitCode": "d" }
+              }
+            }
           },
           "aggregateRating": {
             "@type": "AggregateRating",

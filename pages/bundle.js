@@ -24,13 +24,31 @@ export default function Bundle() {
           "name": "AI Toolkit Bundle — All 15 Kits",
           "description": "Every Midas Tools AI kit in one bundle. 2,000+ prompts for ChatGPT, Claude, and any LLM. Covers real estate, freelancing, e-commerce, SaaS, content creation, email marketing, social media, presentations, and more.",
           "url": "https://www.midastools.co/bundle",
-          "brand": { "@type": "Brand", "name": "Midas Tools" },
+          "brand": "Midas Tools",
           "offers": {
             "@type": "Offer",
             "price": "97",
             "priceCurrency": "USD",
             "availability": "https://schema.org/InStock",
-            "url": "https://buy.stripe.com/bJe7sK0tNdLjgle0pscMM0b"
+            "url": "https://buy.stripe.com/bJe7sK0tNdLjgle0pscMM0b",
+            "hasMerchantReturnPolicy": {
+              "@type": "MerchantReturnPolicy",
+              "applicableCountry": "US",
+              "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+              "merchantReturnDays": "30",
+              "returnMethod": "https://schema.org/ReturnByMail",
+              "returnFees": "https://schema.org/FreeReturn"
+            },
+            "shippingDetails": {
+              "@type": "OfferShippingDetails",
+              "shippingRate": { "@type": "MonetaryAmount", "value": "0", "currency": "USD" },
+              "shippingDestination": { "@type": "DefinedRegion", "addressCountry": "US" },
+              "deliveryTime": {
+                "@type": "ShippingDeliveryTime",
+                "handlingTime": { "@type": "QuantitativeValue", "minValue": "0", "maxValue": "0", "unitCode": "d" },
+                "transitTime": { "@type": "QuantitativeValue", "minValue": "0", "maxValue": "0", "unitCode": "d" }
+              }
+            }
           },
           "image": "https://www.midastools.co/og-image.png",
           "aggregateRating": {

@@ -56,13 +56,31 @@ export default function ResumeCareerKit() {
           name: 'AI Resume & Career Kit',
           description: '125+ AI prompts for resume building, cover letters, LinkedIn optimization, interview prep, job search strategy, and salary negotiation.',
           url: 'https://www.midastools.co/resume-career-kit',
-          brand: { '@type': 'Organization', name: 'Midas Tools', url: 'https://www.midastools.co' },
+          brand: 'Midas Tools',
           offers: {
             '@type': 'Offer',
             price: '29.00',
             priceCurrency: 'USD',
             availability: 'https://schema.org/InStock',
             url: 'https://www.midastools.co/resume-career-kit',
+            hasMerchantReturnPolicy: {
+              '@type': 'MerchantReturnPolicy',
+              applicableCountry: 'US',
+              returnPolicyCategory: 'https://schema.org/MerchantReturnFiniteReturnWindow',
+              merchantReturnDays: '30',
+              returnMethod: 'https://schema.org/ReturnByMail',
+              returnFees: 'https://schema.org/FreeReturn',
+            },
+            shippingDetails: {
+              '@type': 'OfferShippingDetails',
+              shippingRate: { '@type': 'MonetaryAmount', value: '0', currency: 'USD' },
+              shippingDestination: { '@type': 'DefinedRegion', addressCountry: 'US' },
+              deliveryTime: {
+                '@type': 'ShippingDeliveryTime',
+                handlingTime: { '@type': 'QuantitativeValue', minValue: '0', maxValue: '0', unitCode: 'd' },
+                transitTime: { '@type': 'QuantitativeValue', minValue: '0', maxValue: '0', unitCode: 'd' },
+              },
+            },
           },
           image: 'https://www.midastools.co/og-image.png',
           aggregateRating: {
