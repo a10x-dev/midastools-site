@@ -130,6 +130,7 @@ const URLS = [
   '/blog/validate-startup-idea-24-hours',
   '/blog/ai-entrepreneur-stack',
   '/blog/deploy-openclaw-ai-entrepreneur',
+  '/blog/claude-openclaw-pricing-change-2026',
 ];
 
 export default async function handler(req, res) {
