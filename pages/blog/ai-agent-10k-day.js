@@ -109,7 +109,7 @@ export default function AIAgent10KDay() {
           <p style={{ margin: '0 0 16px', color: '#6B7280', fontSize: '15px' }}>Get everything you need — SOUL templates, heartbeat configs, business prompts, automation workflows. From the same playbook Felix Craft used to hit $300K/month.</p>
           <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
             <a href="https://buy.stripe.com/cNi28qdgz7mVb0U8VYcMM07" style={{ display: 'inline-block', background: '#3B5FFF', color: '#fff', padding: '12px 24px', borderRadius: '6px', textDecoration: 'none', fontWeight: '700', fontSize: '15px' }}>Starter Kit — $29</a>
-            <a href="https://buy.stripe.com/aEUbJ01xR0YxgligkocMM0g" style={{ display: 'inline-block', background: '#111827', color: '#fff', padding: '12px 24px', borderRadius: '6px', textDecoration: 'none', fontWeight: '700', fontSize: '15px' }}>All 15 Kits — $97 (82% off)</a>
+            <a href="https://buy.stripe.com/aEUbJ01xR0YxgligkocMM0g" style={{ display: 'inline-block', background: '#111827', color: '#fff', padding: '12px 24px', borderRadius: '6px', textDecoration: 'none', fontWeight: '700', fontSize: '15px' }}>All 16 Kits — $97 (83% off)</a>
           </div>
           <p style={{ margin: '12px 0 0', fontSize: '13px', color: '#6B7280' }}>Instant download · 30-day money-back guarantee · Works with ChatGPT, Claude, Gemini</p>
         </div>

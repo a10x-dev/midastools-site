@@ -975,7 +975,7 @@ export default function AIIncomeBlueprint() {
                   Get {arc.kit.name} — ${arc.kit.price}
                 </a>
                 <a href={STRIPE_BUNDLE} className="cta-secondary">
-                  All 15 Kits — $97 (81% off)
+                  All 16 Kits — $97 (81% off)
                 </a>
               </div>
             </div>

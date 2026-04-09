@@ -18,7 +18,7 @@ const URLS = [
   '/chatgpt-prompts',
   '/quiz',
   '/ai-roi-calculator',
-  // Products (15 kits + 3 prompt packs)
+  // Products (16 kits + 3 prompt packs)
   '/ai-prompt-mega-pack',
   '/ai-image-prompt-pack',
   '/ai-video-prompt-pack',

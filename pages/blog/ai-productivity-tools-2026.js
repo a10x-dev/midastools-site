@@ -839,9 +839,9 @@ Do not start with "I hope this email finds you well." Do not use any corporate f
       {/* Product CTA */}
       <div style={{maxWidth:700,margin:'0 auto 60px',padding:'0 20px'}}>
         <div style={{background:'linear-gradient(135deg, #EEF2FF 0%, #E0E7FF 100%)',borderRadius:16,padding:32,textAlign:'center'}}>
-          <div style={{fontSize:12,fontWeight:700,color:'#3B5FFF',textTransform:'uppercase',letterSpacing:1.5,marginBottom:8}}>Save 82%</div>
-          <h3 style={{marginTop:0,fontSize:'1.3rem',color:'#111827'}}>Get All 15 AI Kits for $97</h3>
-          <p style={{color:'#4B5563',fontSize:15,marginBottom:20,lineHeight:1.6}}>Productivity prompts, business automation, content creation, email marketing, and more. 15 kits, $535 value, one payment.</p>
+          <div style={{fontSize:12,fontWeight:700,color:'#3B5FFF',textTransform:'uppercase',letterSpacing:1.5,marginBottom:8}}>Save 83%</div>
+          <h3 style={{marginTop:0,fontSize:'1.3rem',color:'#111827'}}>Get All 16 AI Kits for $97</h3>
+          <p style={{color:'#4B5563',fontSize:15,marginBottom:20,lineHeight:1.6}}>Productivity prompts, business automation, content creation, email marketing, and more. 16 kits, $564 value, one payment.</p>
           <a href="/bundle" style={{display:'inline-block',background:'#3B5FFF',color:'#fff',padding:'14px 32px',borderRadius:100,textDecoration:'none',fontWeight:700,fontSize:15}}>Get the All-in-One Bundle — $97 →</a>
         </div>
       </div>

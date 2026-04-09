@@ -131,7 +131,7 @@ export default function PromptPage({ template, slug }) {
             Get the {template.relatedKit.name} — {template.relatedKit.price} &rarr;
           </a>
           <span className="cta-alt">
-            Or get <a href={STRIPE_BUNDLE}>all 15 kits for $97 (save 81%)</a>
+            Or get <a href={STRIPE_BUNDLE}>all 16 kits for $97 (save 81%)</a>
           </span>
         </div>
 

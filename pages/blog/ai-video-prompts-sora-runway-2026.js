@@ -445,7 +445,7 @@ export default function AIVideoPromptsSoraRunway2026() {
           {/* Final CTA */}
           <div style={ctaBoxStyle}>
             <p style={{ fontSize: '12px', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '1.5px', color: 'rgba(255,255,255,0.5)', marginBottom: '12px' }}>Full Pack</p>
-            <p style={{ fontSize: '22px', fontWeight: 900, marginBottom: '8px' }}>Get All 150+ AI Video Prompts</p>
+            <p style={{ fontSize: '22px', fontWeight: 900, marginBottom: '8px' }}>Get All 160+ AI Video Prompts</p>
             <p style={{ fontSize: '15px', color: 'rgba(255,255,255,0.6)', marginBottom: '20px', maxWidth: '420px', margin: '0 auto 20px', lineHeight: 1.6 }}>
               Social media, product demos, tutorials, cinematic, corporate, and 25+ viral trending styles. Works with Sora, Runway, Pika, Kling AI, and Luma.
             </p>

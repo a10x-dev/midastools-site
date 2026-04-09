@@ -537,8 +537,8 @@ Format: Executive summary, KPI table, what worked (3), what didn't (3), next qua
       <div style={{maxWidth:700,margin:'0 auto 60px',padding:'0 20px'}}>
         <div style={{background:'linear-gradient(135deg, #EEF2FF 0%, #E0E7FF 100%)',borderRadius:16,padding:32,textAlign:'center'}}>
           <div style={{fontSize:12,fontWeight:700,color:'#3B5FFF',textTransform:'uppercase',letterSpacing:1.5,marginBottom:8}}>Best Value</div>
-          <h3 style={{marginTop:0,fontSize:'1.3rem',color:'#111827'}}>Get 2,000+ Business AI Prompts — All 15 Kits</h3>
-          <p style={{color:'#4B5563',fontSize:15,marginBottom:20,lineHeight:1.6}}>Real estate, freelancing, e-commerce, SaaS, content creation, email marketing, and more. $535 value for $97.</p>
+          <h3 style={{marginTop:0,fontSize:'1.3rem',color:'#111827'}}>Get 2,000+ Business AI Prompts — All 16 Kits</h3>
+          <p style={{color:'#4B5563',fontSize:15,marginBottom:20,lineHeight:1.6}}>Real estate, freelancing, e-commerce, SaaS, content creation, email marketing, and more. $564 value for $97.</p>
           <a href="/bundle" style={{display:'inline-block',background:'#3B5FFF',color:'#fff',padding:'14px 32px',borderRadius:100,textDecoration:'none',fontWeight:700,fontSize:15}}>Get the All-in-One Bundle — $97 →</a>
         </div>
       </div>

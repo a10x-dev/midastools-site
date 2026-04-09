@@ -352,7 +352,7 @@ export default function BusinessNameGenerator() {
               <div className="card-price">Launch + Scale AI &bull; $39</div>
             </Link>
           </div>
-          <a href="/bundle" className="upsell-cta">Get All 15 Kits — $97 (Save 82%) &rarr;</a>
+          <a href="/bundle" className="upsell-cta">Get All 16 Kits — $97 (Save 83%) &rarr;</a>
         </div>
 
         {/* SEO Content */}

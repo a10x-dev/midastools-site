@@ -282,7 +282,7 @@ export default function Tools() {
         <div className="tools-upsell">
           <h2>Ready for the full toolkit?</h2>
           <p>Our premium AI kits include 1,500+ prompts, templates, and workflows for every business need.</p>
-          <a href="/bundle">Get All 15 Kits &mdash; $97 (Save 82%) &rarr;</a>
+          <a href="/bundle">Get All 16 Kits &mdash; $97 (Save 83%) &rarr;</a>
         </div>
       </div>
     </Layout>

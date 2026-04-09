@@ -663,7 +663,7 @@ Tone: Confident, transparent, forward-looking. Acknowledge challenges but frame 
             Want even more? Our{' '}
             <Link href="/ai-prompt-mega-pack" style={{ color: 'var(--accent)', textDecoration: 'none', fontWeight: 600 }}>AI Prompt Mega Pack</Link>{' '}
             includes 500+ prompts across every business category, or{' '}
-            <Link href="/bundle" style={{ color: 'var(--accent)', textDecoration: 'none', fontWeight: 600 }}>get all 15 kits</Link>{' '}
+            <Link href="/bundle" style={{ color: 'var(--accent)', textDecoration: 'none', fontWeight: 600 }}>get all 16 kits</Link>{' '}
             for the complete toolkit.
           </p>
 

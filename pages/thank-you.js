@@ -161,7 +161,7 @@ export default function ThankYou() {
 
         {!isBundle && (
           <div style={{background:'rgba(59,95,255,0.06)',border:'1px solid rgba(59,95,255,0.2)',borderRadius:12,padding:'20px 24px',marginBottom:24,textAlign:'left'}}>
-            <p style={{fontSize:14,fontWeight:700,color:'var(--gold)',marginBottom:6}}>Want all 15 kits? Save 82%</p>
+            <p style={{fontSize:14,fontWeight:700,color:'var(--gold)',marginBottom:6}}>Want all 16 kits? Save 83%</p>
             <p style={{fontSize:14,color:'var(--gray-400)',lineHeight:1.5}}>Get the <a href="https://buy.stripe.com/bJe7sK0tNdLjgle0pscMM0b" style={{color:'var(--gold)',fontWeight:700}}>Complete Bundle for $97</a> — includes every kit plus all future releases free.</p>
           </div>
         )}

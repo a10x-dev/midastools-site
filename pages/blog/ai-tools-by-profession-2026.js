@@ -249,7 +249,7 @@ export default function AIToolsByProfession2026() {
           </a>
         </div>
 
-        <p style={{ textAlign: 'center' }}>Or grab the <strong>All Kits Bundle</strong> — 15 kits for $97 (81% off).</p>
+        <p style={{ textAlign: 'center' }}>Or grab the <strong>All Kits Bundle</strong> — 16 kits for $97 (81% off).</p>
 
         <div style={{ textAlign: 'center', margin: '24px 0' }}>
           <a href={STRIPE_BUNDLE} style={{ display: 'inline-block', background: '#111827', color: '#fff', padding: '14px 32px', borderRadius: '100px', textDecoration: 'none', fontWeight: '700', fontSize: '16px' }}>

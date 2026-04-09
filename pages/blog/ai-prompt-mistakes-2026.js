@@ -253,9 +253,9 @@ export default function AIPromptMistakes2026() {
         <div style={s.cta}>
           <h2 style={{ fontSize: 26, fontWeight: 800, color: '#111827', margin: '0 0 8px' }}>Stop Making Prompt Mistakes. Start Getting Results.</h2>
           <p style={{ fontSize: 16, color: '#6B7280', margin: '0 0 4px', lineHeight: 1.6 }}>
-            Get 15 AI kits with 1,000+ expert prompts, templates, and workflows. All prompt sins pre-eliminated.
+            Get 16 AI kits with 1,000+ expert prompts, templates, and workflows. All prompt sins pre-eliminated.
           </p>
-          <a href={STRIPE_BUNDLE} style={s.ctaBtn}>Get All 15 AI Kits — $97 (81% off)</a>
+          <a href={STRIPE_BUNDLE} style={s.ctaBtn}>Get All 16 AI Kits — $97 (81% off)</a>
           <p style={{ fontSize: 13, color: '#9CA3AF', marginTop: 12 }}>$506 value. Instant download. 30-day money-back guarantee.</p>
         </div>
 

@@ -408,7 +408,7 @@ export default function EmailSubjectLineTester() {
           <p>Our AI Email Marketing Kit includes proven subject line formulas, welcome sequences, cold outreach templates, and newsletter frameworks.</p>
           <div style={{ display: 'flex', gap: 12, justifyContent: 'center', flexWrap: 'wrap' }}>
             <Link href="/email-marketing-kit" className="upsell-cta">Email Marketing Kit &mdash; $29 &rarr;</Link>
-            <a href="/bundle" className="upsell-cta" style={{ background: 'transparent', border: '2px solid rgba(255,255,255,0.3)', color: '#fff' }}>All 15 Kits &mdash; $97 &rarr;</a>
+            <a href="/bundle" className="upsell-cta" style={{ background: 'transparent', border: '2px solid rgba(255,255,255,0.3)', color: '#fff' }}>All 16 Kits &mdash; $97 &rarr;</a>
           </div>
         </div>
 

@@ -362,7 +362,7 @@ integrations:
           <Link href="/blog/openclaw-vs-chatgpt-autonomous-agent">OpenClaw vs ChatGPT: Why Agents Beat Chatbots</Link>
           <Link href="/blog/ai-agent-10k-day">AI Agents Made $10,000 in a Single Day</Link>
           <Link href="/prompt-enhancer">Free AI Prompt Enhancer</Link>
-          <Link href="/bundle">All 15 AI Kits Bundle — $97 (81% off)</Link>
+          <Link href="/bundle">All 16 AI Kits Bundle — $97 (81% off)</Link>
         </div>
       </div>
     </Layout>

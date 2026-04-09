@@ -1104,7 +1104,7 @@ export default function PromptRoaster() {
         <div className="sticky-cta">
           <span className="sticky-text">Skip prompt mistakes forever</span>
           <a href={STRIPE_BUNDLE} className="sticky-btn">
-            Get All 15 AI Kits — $97 (81% off)
+            Get All 16 AI Kits — $97 (81% off)
           </a>
         </div>
       )}

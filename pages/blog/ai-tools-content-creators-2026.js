@@ -459,7 +459,7 @@ Be specific. "Post more consistently" is not useful advice. "Your how-to posts a
           <p style={{ fontWeight: '700', fontSize: '18px', marginBottom: '8px' }}>Content Creator Kit &mdash; 200+ AI Prompts for Creators</p>
           <p style={{ color: '#6B7280', marginBottom: '16px' }}>Blog writing, video scripts, social captions, thumbnails, SEO, newsletters, repurposing &mdash; all in one kit.</p>
           <a href={CREATOR_KIT_URL} style={{ display: 'inline-block', background: '#3B5FFF', color: '#fff', padding: '12px 28px', borderRadius: '100px', fontWeight: 700, textDecoration: 'none', fontSize: '16px' }}>Get the Content Creator Kit &mdash; $39 &rarr;</a>
-          <p style={{ marginTop: '16px', color: '#6B7280', fontSize: '14px' }}>Or get <a href={BUNDLE_URL} style={{ color: '#3B5FFF', fontWeight: 700, textDecoration: 'none' }}>all 15 AI kits for $97</a> (save 82%)</p>
+          <p style={{ marginTop: '16px', color: '#6B7280', fontSize: '14px' }}>Or get <a href={BUNDLE_URL} style={{ color: '#3B5FFF', fontWeight: 700, textDecoration: 'none' }}>all 16 AI kits for $97</a> (save 83%)</p>
         </div>
 
         <hr style={{ margin: '40px 0', border: 'none', borderTop: '1px solid #eee' }} />

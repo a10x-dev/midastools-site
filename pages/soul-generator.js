@@ -604,7 +604,7 @@ export default function SoulGenerator() {
         <div className="sticky-cta">
           <span>🚀 Deploy your agent today</span>
           <a href={STRIPE_BUNDLE} target="_blank" rel="noopener noreferrer">
-            All 15 Kits — $97 <small>(81% off)</small>
+            All 16 Kits — $97 <small>(81% off)</small>
           </a>
         </div>
       )}

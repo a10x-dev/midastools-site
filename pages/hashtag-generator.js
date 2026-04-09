@@ -662,8 +662,8 @@ export default function HashtagGenerator() {
         {/* Bundle upsell */}
         <div className="ht-upsell-dark">
           <h2>Level up your entire AI workflow</h2>
-          <p>Get all 15 AI kits in one bundle: social media, marketing, sales, content creation, business ops, and more. Over 2,000 expert prompts at 82% off.</p>
-          <a href={STRIPE_BUNDLE} className="ht-bundle-cta">Get All 15 Kits — $97 (Save 82%) &rarr;</a>
+          <p>Get all 16 AI kits in one bundle: social media, marketing, sales, content creation, business ops, and more. Over 2,000 expert prompts at 82% off.</p>
+          <a href={STRIPE_BUNDLE} className="ht-bundle-cta">Get All 16 Kits — $97 (Save 83%) &rarr;</a>
         </div>
 
         {/* FAQ */}

@@ -8,10 +8,10 @@ export default function Bundle() {
   return (
     <Layout>
       <Head>
-        <title>AI Toolkit Bundle — All 15 Kits for $97 | Midas Tools</title>
-        <meta name="description" content="Get all 15 AI kits for $97 — prompts, templates & workflows for ChatGPT, Claude, Gemini. Save 82% vs buying separately. 30-day money-back guarantee." />
-        <meta property="og:title" content="AI Toolkit Bundle — All 15 Kits for $97 | Midas Tools" />
-        <meta property="og:description" content="Every AI kit we make. One price. $97 one-time — save 82% vs buying separately. Includes all future kits free." />
+        <title>AI Toolkit Bundle — All 16 Kits for $97 | Midas Tools</title>
+        <meta name="description" content="Get all 16 AI kits for $97 — prompts, templates & workflows for ChatGPT, Claude, Gemini. Save 83% vs buying separately. 30-day money-back guarantee." />
+        <meta property="og:title" content="AI Toolkit Bundle — All 16 Kits for $97 | Midas Tools" />
+        <meta property="og:description" content="Every AI kit we make. One price. $97 one-time — save 83% vs buying separately. Includes all future kits free." />
         <meta property="og:url" content="https://www.midastools.co/bundle" />
         <meta property="og:image" content="https://www.midastools.co/og-image.png" />
         <meta name="twitter:card" content="summary_large_image" />
@@ -21,7 +21,7 @@ export default function Bundle() {
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Product",
-          "name": "AI Toolkit Bundle — All 15 Kits",
+          "name": "AI Toolkit Bundle — All 16 Kits",
           "description": "Every Midas Tools AI kit in one bundle. 2,000+ prompts for ChatGPT, Claude, and any LLM. Covers real estate, freelancing, e-commerce, SaaS, content creation, email marketing, social media, presentations, and more.",
           "url": "https://www.midastools.co/bundle",
           "brand": "Midas Tools",
@@ -108,7 +108,7 @@ export default function Bundle() {
         </p>
 
         <div style={{display:'inline-flex',alignItems:'baseline',gap:16,marginBottom:40}}>
-          <span style={{fontSize:22,color:'var(--text-tertiary)',textDecoration:'line-through',fontWeight:700}}>$535</span>
+          <span style={{fontSize:22,color:'var(--text-tertiary)',textDecoration:'line-through',fontWeight:700}}>$564</span>
           <span style={{fontSize:48,fontWeight:900,color:'var(--accent)',letterSpacing:-2}}>$97</span>
         </div>
 
@@ -124,8 +124,8 @@ export default function Bundle() {
         <div className="stats-row" style={{display:'grid',gridTemplateColumns:'repeat(3,1fr)',gap:20,maxWidth:700,margin:'0 auto'}}>
           {[
             { stat: '2,000+', label: 'Prompts & templates included' },
-            { stat: '15', label: 'Complete niche kits' },
-            { stat: '82%', label: 'Savings vs. buying separately' },
+            { stat: '16', label: 'Complete niche kits' },
+            { stat: '83%', label: 'Savings vs. buying separately' },
           ].map(s => (
             <div key={s.label} style={{textAlign:'center',padding:24,background:'var(--surface)',borderRadius:16,border:'1px solid var(--border)'}}>
               <div style={{fontSize:32,fontWeight:900,color:'var(--accent)',letterSpacing:-1}}>{s.stat}</div>
@@ -181,7 +181,7 @@ export default function Bundle() {
       {/* What's Included */}
       <section style={{paddingTop:0}}>
         <div className="section-label">What's Included</div>
-        <h2>15 complete kits + lifetime updates</h2>
+        <h2>16 complete kits + lifetime updates</h2>
         <p style={{color:'var(--text-secondary)',fontSize:16,marginBottom:48,lineHeight:1.7}}>Everything you need to automate your business, your content, and your client pipeline.</p>
 
         <div className="kits-grid">
@@ -276,6 +276,13 @@ export default function Bundle() {
               link: '/presentation-kit',
               items: ['Pitch deck prompts', 'Sales presentation templates', 'Conference talk outlines', 'Business report frameworks', 'Training & workshop decks', 'Slide design & storytelling'],
             },
+            {
+              abbr: 'CW', name: 'Claude Cowork Mastery Kit', price: '$29', bg: 'var(--card-blue)',
+              desc: '115+ prompts, 10 role playbooks, CLAUDE.md templates, and connector cheatsheets to turn Claude Cowork into your AI coworker.',
+              link: '/claude-cowork-kit',
+              badge: 'NEW',
+              items: ['115+ copy-paste prompts', '10 role playbooks (Marketing, Sales, HR, etc.)', '5 CLAUDE.md context file templates', '5 Global Instructions templates', '5 connector cheatsheets', 'Quick-start setup guide'],
+            },
           ].map(kit => (
             <div key={kit.name} className="kit-card">
               <div className="kit-icon" style={{ background: kit.bg }}>{kit.abbr}</div>
@@ -326,7 +333,7 @@ export default function Bundle() {
               { label: 'Email Marketing Kit', ind: '$29', bun: '\u2713' },
               { label: 'Presentation Kit', ind: '$29', bun: '\u2713' },
               { label: 'Future kits', ind: 'Extra cost', bun: 'Included' },
-              { label: 'Total', ind: '$535+', bun: '$97' },
+              { label: 'Total', ind: '$564+', bun: '$97' },
             ].map((row, i) => (
               <div key={row.label} style={{display:'contents'}}>
                 <div style={{padding:'12px 20px',borderBottom: i < 13 ? '1px solid var(--border)' : 'none',borderRight:'1px solid var(--border)',fontSize:14,fontWeight: row.label === 'Total' ? 800 : 400,color:'var(--text)'}}>{row.label}</div>
@@ -344,10 +351,10 @@ export default function Bundle() {
           <div className="badge" style={{marginBottom:20,background:'rgba(255,255,255,0.1)',borderColor:'rgba(255,255,255,0.2)',color:'#FFFFFF'}}>Best Value</div>
           <h2 style={{marginBottom:8,color:'#FFFFFF'}}>The Complete AI Toolkit</h2>
           <div style={{display:'flex',alignItems:'baseline',justifyContent:'center',gap:16,margin:'16px 0 4px'}}>
-            <span style={{fontSize:24,color:'rgba(255,255,255,0.5)',textDecoration:'line-through',fontWeight:700}}>$535</span>
+            <span style={{fontSize:24,color:'rgba(255,255,255,0.5)',textDecoration:'line-through',fontWeight:700}}>$564</span>
             <span style={{fontSize:48,fontWeight:900,color:'#FFFFFF'}}>$97</span>
           </div>
-          <div style={{color:'rgba(255,255,255,0.6)',fontSize:15,marginBottom:32}}>One-time payment &middot; All 15 kits + future kits free</div>
+          <div style={{color:'rgba(255,255,255,0.6)',fontSize:15,marginBottom:32}}>One-time payment &middot; All 16 kits + future kits free</div>
           <ul style={{listStyle:'none',textAlign:'left',marginBottom:32}}>
             {[
               'AI Video Prompt Pack ($29 value)',

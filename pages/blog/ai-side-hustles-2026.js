@@ -310,9 +310,9 @@ export default function AISideHustles2026() {
           <div style={{ fontSize: 13, fontWeight: 700, color: '#3B5FFF', letterSpacing: 1, marginBottom: 8 }}>LAUNCH FASTER</div>
           <h2 style={{ fontSize: 26, fontWeight: 800, color: '#111827', margin: '0 0 8px' }}>Get All the AI Prompts, Templates & Workflows You Need</h2>
           <p style={{ fontSize: 16, color: '#6B7280', margin: '0 0 4px', lineHeight: 1.6 }}>
-            15 AI kits covering <Link href="/freelancer-kit" style={{ color: '#3B5FFF' }}>freelancing</Link>, <Link href="/ecommerce-kit" style={{ color: '#3B5FFF' }}>e-commerce</Link>, <Link href="/content-creator-kit" style={{ color: '#3B5FFF' }}>content creation</Link>, and more. 1,000+ expert prompts to jumpstart any AI side hustle.
+            16 AI kits covering <Link href="/freelancer-kit" style={{ color: '#3B5FFF' }}>freelancing</Link>, <Link href="/ecommerce-kit" style={{ color: '#3B5FFF' }}>e-commerce</Link>, <Link href="/content-creator-kit" style={{ color: '#3B5FFF' }}>content creation</Link>, and more. 1,000+ expert prompts to jumpstart any AI side hustle.
           </p>
-          <a href={STRIPE_BUNDLE} style={s.ctaBtn}>Get All 15 AI Kits — $97 (81% off)</a>
+          <a href={STRIPE_BUNDLE} style={s.ctaBtn}>Get All 16 AI Kits — $97 (81% off)</a>
           <p style={{ fontSize: 13, color: '#9CA3AF', marginTop: 12 }}>$506 value. Instant download. 30-day money-back guarantee.</p>
         </div>
 
@@ -354,7 +354,7 @@ export default function AISideHustles2026() {
           </p>
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: 12, justifyContent: 'center', marginTop: 16 }}>
             <Link href="/ai-income-blueprint" style={{ ...s.ctaBtn, background: 'white', color: '#3B5FFF', border: '2px solid #3B5FFF' }}>Free AI Income Blueprint</Link>
-            <a href={STRIPE_BUNDLE} style={s.ctaBtn}>Get All 15 AI Kits — $97</a>
+            <a href={STRIPE_BUNDLE} style={s.ctaBtn}>Get All 16 AI Kits — $97</a>
           </div>
           <p style={{ fontSize: 13, color: '#9CA3AF', marginTop: 12 }}>Blueprint is free. Kits have a 30-day money-back guarantee.</p>
         </div>

@@ -615,8 +615,8 @@ Date consumed: [DATE]`}
         {/* ===== POST-ALL-TEMPLATES CTA ===== */}
         <div style={ctaBoxStyle}>
           <p style={{ fontWeight: 700, fontSize: '18px', marginBottom: '8px' }}>Want Every Template + 6 Complete AI Prompt Kits?</p>
-          <p style={{ fontSize: '14px', color: '#4B5563', marginBottom: '16px' }}>The MidasTools Bundle includes the Notion Templates Kit, plus prompt kits for business, marketing, freelancing, real estate, and more. 6 kits, 3,000+ prompts. Save 82% vs. buying separately.</p>
-          <a href={BUNDLE_URL} style={ctaButtonStyle}>Get the Bundle &mdash; $97 (save 82%)</a>
+          <p style={{ fontSize: '14px', color: '#4B5563', marginBottom: '16px' }}>The MidasTools Bundle includes the Notion Templates Kit, plus prompt kits for business, marketing, freelancing, real estate, and more. 6 kits, 3,000+ prompts. Save 83% vs. buying separately.</p>
+          <a href={BUNDLE_URL} style={ctaButtonStyle}>Get the Bundle &mdash; $97 (save 83%)</a>
         </div>
 
         <hr style={hrStyle} />

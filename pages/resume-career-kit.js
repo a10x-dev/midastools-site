@@ -247,9 +247,9 @@ export default function ResumeCareerKit() {
       {/* Bundle Upsell */}
       <section style={{paddingTop:0}}>
         <div style={{background:'rgba(59,95,255,0.04)',border:'1px solid rgba(59,95,255,0.15)',borderRadius:16,padding:32,textAlign:'center'}}>
-          <div style={{fontSize:12,fontWeight:700,color:'var(--gold)',textTransform:'uppercase',letterSpacing:1.5,marginBottom:8}}>Save 82%</div>
-          <p style={{fontSize:20,fontWeight:800,marginBottom:8}}>Get all 15 AI kits for $97</p>
-          <p style={{color:'var(--text-secondary)',fontSize:15,marginBottom:20,lineHeight:1.6}}>This kit + 14 more AI kits &mdash; $535 value for $97. Save 82%. Plus every future kit free.</p>
+          <div style={{fontSize:12,fontWeight:700,color:'var(--gold)',textTransform:'uppercase',letterSpacing:1.5,marginBottom:8}}>Save 83%</div>
+          <p style={{fontSize:20,fontWeight:800,marginBottom:8}}>Get all 16 AI kits for $97</p>
+          <p style={{color:'var(--text-secondary)',fontSize:15,marginBottom:20,lineHeight:1.6}}>This kit + 15 more AI kits &mdash; $564 value for $97. Save 83%. Plus every future kit free.</p>
           <a href={BUNDLE_URL} style={{color:'var(--gold)',fontWeight:700,fontSize:15,textDecoration:'none'}}>
             Get the Bundle &mdash; $97 &rarr;
           </a>
@@ -378,7 +378,7 @@ export default function ResumeCareerKit() {
           {[
             { name: 'Freelancer Kit', desc: 'Win more clients. AI proposals, invoices, and client management.', href: '/freelancer-kit', price: '$39' },
             { name: 'Small Business Kit', desc: 'Social media, email, hiring, and operations — all automated.', href: '/small-business-kit', price: '$39' },
-            { name: 'All 15 Kits Bundle', desc: 'Every kit we make, now and forever. Save 82%.', href: BUNDLE_URL, price: '$97' },
+            { name: 'All 16 Kits Bundle', desc: 'Every kit we make, now and forever. Save 83%.', href: BUNDLE_URL, price: '$97' },
           ].map(p => (
             <a key={p.name} href={p.href} style={{background:'var(--gray-900)',border:'1px solid var(--gray-800)',borderRadius:12,padding:24,textAlign:'center',textDecoration:'none',color:'inherit',transition:'border-color 0.2s'}}>
               <div style={{fontSize:16,fontWeight:700,marginBottom:6}}>{p.name}</div>

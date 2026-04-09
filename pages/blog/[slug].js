@@ -96,7 +96,7 @@ The question isn't whether this is possible anymore. Felix proved it is — with
 
 The question is: **can you replicate it?**
 
-**Yes.** We packaged the exact templates, workflows, and prompts Felix uses into a kit you can deploy today. **[Get the Starter Kit — $29 →](https://buy.stripe.com/cNi28qdgz7mVb0U8VYcMM07)** or grab **[All 15 Kits for $97 (81% off) →](https://buy.stripe.com/aEUbJ01xR0YxgligkocMM0g)** · [Buy on Gumroad →](https://manduks.gumroad.com/l/iiiwf)
+**Yes.** We packaged the exact templates, workflows, and prompts Felix uses into a kit you can deploy today. **[Get the Starter Kit — $29 →](https://buy.stripe.com/cNi28qdgz7mVb0U8VYcMM07)** or grab **[All 16 Kits for $97 (81% off) →](https://buy.stripe.com/aEUbJ01xR0YxgligkocMM0g)** · [Buy on Gumroad →](https://manduks.gumroad.com/l/iiiwf)
 
 ## How to Replicate the Felix Model
 
@@ -106,7 +106,7 @@ Felix runs on OpenClaw with:
 - A daily review workflow
 - Access to Stripe, Vercel, GitHub, and email
 
-**Step 1 — Get the blueprints:** The [OpenClaw Entrepreneur Starter Kit ($29)](https://buy.stripe.com/cNi28qdgz7mVb0U8VYcMM07) includes Felix's exact SOUL.md template, HEARTBEAT.md system, daily review workflow, and Stripe/Vercel integration configs. Or get everything we make with [All 15 Kits — $97](https://buy.stripe.com/aEUbJ01xR0YxgligkocMM0g). Prefer Gumroad? [Get it here →](https://manduks.gumroad.com/l/pdcjj)
+**Step 1 — Get the blueprints:** The [OpenClaw Entrepreneur Starter Kit ($29)](https://buy.stripe.com/cNi28qdgz7mVb0U8VYcMM07) includes Felix's exact SOUL.md template, HEARTBEAT.md system, daily review workflow, and Stripe/Vercel integration configs. Or get everything we make with [All 16 Kits — $97](https://buy.stripe.com/aEUbJ01xR0YxgligkocMM0g). Prefer Gumroad? [Get it here →](https://manduks.gumroad.com/l/pdcjj)
 
 **Step 2 — Configure your agent:** Use our [free SOUL.md Generator](/soul-generator) to customize the config for your industry — 6 presets included.
 
@@ -787,7 +787,7 @@ The people who thrive will be those who adapt fastest. And adapting starts with 
 
 Take our [AI Income Blueprint quiz](/ai-income-blueprint) — 60 seconds to discover your AI founder archetype and matched side hustles. Because the best defense against AI replacing your job is building AI-powered income on the side.
 
-Or grab the [All 15 AI Kits Bundle — $97](https://buy.stripe.com/bJe7sK0tNdLjgle0pscMM0b) and get 500+ prompts, templates, and workflows to make AI work FOR you instead of against you.
+Or grab the [All 16 AI Kits Bundle — $97](https://buy.stripe.com/bJe7sK0tNdLjgle0pscMM0b) and get 500+ prompts, templates, and workflows to make AI work FOR you instead of against you.
     `,
   },
   'viral-chatgpt-image-prompts-2026': {
@@ -939,7 +939,7 @@ Turn yourself into a movie character.
 4. **Add texture** — film grain, canvas, watercolor, holographic foil
 5. **Reference styles** — name specific artists, movies, or aesthetics
 
-**Want 200+ more prompts like these, pre-built and organized by category?** Get the [AI Image Prompt Pack — $29](https://buy.stripe.com/8x24gyccv7mVglegoqcMM0i) or grab [All 15 Kits — $97](https://buy.stripe.com/bJe7sK0tNdLjgle0pscMM0b)
+**Want 200+ more prompts like these, pre-built and organized by category?** Get the [AI Image Prompt Pack — $29](https://buy.stripe.com/8x24gyccv7mVglegoqcMM0i) or grab [All 16 Kits — $97](https://buy.stripe.com/bJe7sK0tNdLjgle0pscMM0b)
 
 **Or build your own prompts visually** with our free [AI Image Prompt Builder](/image-prompt-builder) — 25 styles, mood controls, lighting presets, and platform-specific formatting for ChatGPT, Midjourney, DALL·E, and Stable Diffusion.
 
@@ -1181,7 +1181,7 @@ export default function BlogPost({ post, slug }) {
         </div>
         <div className="cta-inline">
           <p>Get every AI template, workflow, and prompt we make — in one bundle.</p>
-          <a href="https://buy.stripe.com/aEUbJ01xR0YxgligkocMM0g">Get All 16 Kits — $97 (Save 82%) →</a>
+          <a href="https://buy.stripe.com/aEUbJ01xR0YxgligkocMM0g">Get All 16 Kits — $97 (Save 83%) →</a>
           <p style={{marginTop:12,fontSize:13,color:'var(--text-tertiary)'}}>Or start with the <a href="https://buy.stripe.com/cNi28qdgz7mVb0U8VYcMM07" style={{color:'var(--accent)'}}>Starter Kit — $29</a></p>
           <p style={{marginTop:8,fontSize:12,color:'var(--text-tertiary)'}}>Secure Stripe checkout &middot; Instant download &middot; 30-day guarantee</p>
         </div>

@@ -98,7 +98,7 @@ export default function PromptsIndex() {
         <div className="bottom-cta">
           <h2>Want Even More?</h2>
           <p>Get 3,000+ tested prompts, templates, and workflows in the All Kits Bundle.</p>
-          <a href="https://buy.stripe.com/bJe7sK0tNdLjgle0pscMM0b">Get All 15 Kits — $97 (Save 81%) &rarr;</a>
+          <a href="https://buy.stripe.com/bJe7sK0tNdLjgle0pscMM0b">Get All 16 Kits — $97 (Save 81%) &rarr;</a>
         </div>
       </div>
     </Layout>

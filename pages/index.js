@@ -205,7 +205,7 @@ export default function Home() {
       <div style={{ background: 'linear-gradient(90deg, #3B5FFF, #1E3AE0)', padding: '10px 40px', textAlign: 'center', fontSize: 13, fontWeight: 600 }}>
         <a href="/bundle" style={{ color: '#FFFFFF', textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: 8 }}>
           <span style={{ background: 'rgba(255,255,255,0.2)', padding: '2px 8px', borderRadius: 4, fontSize: 11, fontWeight: 800, letterSpacing: 0.5 }}>LAUNCH WEEK</span>
-          All 15 AI Kits — $535 value for just $97 (82% off)
+          All 16 AI Kits — $564 value for just $97 (83% off)
           <span style={{ fontWeight: 800, marginLeft: 4 }}>&rarr;</span>
         </a>
       </div>
@@ -456,7 +456,7 @@ export default function Home() {
         </div>
         <div style={{ textAlign: 'center', marginTop: 24 }}>
           <a href="/bundle" style={{ color: 'var(--accent)', fontSize: 15, fontWeight: 700, textDecoration: 'none' }}>
-            Or get all 15 kits for $97 (save 82%) &rarr;
+            Or get all 16 kits for $97 (save 83%) &rarr;
           </a>
         </div>
       </section>
@@ -469,7 +469,7 @@ export default function Home() {
         <div className="pricing-grid">
           {[
             { label: 'Start Here', price: '$29', term: 'one-time', name: 'Starter Kit', desc: 'Templates, workflows, and prompts to deploy your first AI agent yourself.', href: STRIPE_URL, cta: 'Get the Kit \u2192', featured: false },
-            { label: 'Best Value', price: '$97', term: 'one-time', name: 'All Kits Bundle', desc: '15 AI kits + all future kits free. Save 82% vs buying separately.', href: 'https://buy.stripe.com/aEUbJ01xR0YxgligkocMM0g', cta: 'Get the Bundle \u2192', featured: true },
+            { label: 'Best Value', price: '$97', term: 'one-time', name: 'All Kits Bundle', desc: '16 AI kits + all future kits free. Save 83% vs buying separately.', href: 'https://buy.stripe.com/aEUbJ01xR0YxgligkocMM0g', cta: 'Get the Bundle \u2192', featured: true },
           ].map(p => (
             <div key={p.name} className={`pricing-card${p.featured ? ' featured' : ''}`}>
               <span className="badge" style={{ fontSize: 11, padding: '4px 10px', letterSpacing: 1 }}>{p.label}</span>

@@ -347,7 +347,7 @@ export default function AIJobRisk() {
                 onMouseEnter={(e) => e.target.style.transform = 'translateY(-2px)'}
                 onMouseLeave={(e) => e.target.style.transform = 'none'}
               >
-                Get All 15 AI Kits — $97 (81% off)
+                Get All 16 AI Kits — $97 (81% off)
               </a>
               <p style={{ fontSize: 13, opacity: 0.6, marginTop: 12 }}>500+ prompts, templates & workflows across 15 industries</p>
             </div>
