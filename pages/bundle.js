@@ -9,7 +9,7 @@ export default function Bundle() {
     <Layout>
       <Head>
         <title>AI Toolkit Bundle — All 15 Kits for $97 | Midas Tools</title>
-        <meta name="description" content="Get every Midas Tools AI kit in one bundle: Video Prompt Pack, Image Prompt Pack, Notion Templates, Resume &amp; Career Kit, Email Marketing Kit, Presentation Kit, Prompt Mega Pack, Starter Kit, Real Estate, Content Creator, Freelancer, Small Business, E-commerce, SaaS Founder Kit, and Social Media Kit — plus all future kits free. $97 one-time. Save 82%." />
+        <meta name="description" content="Get all 15 AI kits for $97 — prompts, templates & workflows for ChatGPT, Claude, Gemini. Save 82% vs buying separately. 30-day money-back guarantee." />
         <meta property="og:title" content="AI Toolkit Bundle — All 15 Kits for $97 | Midas Tools" />
         <meta property="og:description" content="Every AI kit we make. One price. $97 one-time — save 82% vs buying separately. Includes all future kits free." />
         <meta property="og:url" content="https://midastools.co/bundle" />

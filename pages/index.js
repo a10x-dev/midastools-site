@@ -59,7 +59,7 @@ export default function Home() {
     <Layout>
       <Head>
         <title>Midas Tools — AI Automation Kits for Entrepreneurs</title>
-        <meta name="description" content="Deploy AI agents that automate your business 24/7. Templates, workflows, and prompts used by entrepreneurs already making $1,000s/week with AI." />
+        <meta name="description" content="Deploy AI agents that automate your business 24/7. Templates, workflows & prompts used by entrepreneurs making $1,000s/week with AI." />
         <meta property="og:title" content="Midas Tools — AI Automation Kits for Entrepreneurs" />
         <meta property="og:description" content="The exact templates and workflows behind the AI agents already making real revenue. Starting at $29." />
         <meta property="og:url" content="https://midastools.co" />

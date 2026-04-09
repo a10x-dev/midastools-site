@@ -10,6 +10,11 @@ const STRIPE_IMAGE_PACK = 'https://buy.stripe.com/8x24gyccv7mVglegoqcMM0i';
 
 const STYLES = [
   { id: 'ghibli', label: 'Studio Ghibli', icon: '🏯', color: '#4ade80', desc: 'Soft watercolor anime style', keywords: 'Studio Ghibli anime style, soft watercolor textures, warm lighting, whimsical atmosphere, hand-painted look' },
+  { id: 'tradingcard', label: 'Trading Card', icon: '🃏', color: '#fbbf24', desc: 'Collectible card game style', keywords: 'trading card game style, holographic foil border, character portrait, stats panel, shiny card stock, collectible card design, embossed text, power level display' },
+  { id: 'actionfigure', label: 'Action Figure', icon: '🧸', color: '#f97316', desc: 'Toy in a blister pack', keywords: 'action figure in plastic blister packaging, toy shelf display, detailed miniature figure, product box art, retail toy packaging, collectible figurine, branded box design' },
+  { id: 'caricature', label: 'Caricature', icon: '😜', color: '#ec4899', desc: 'Exaggerated fun portrait', keywords: 'exaggerated caricature portrait, oversized head, comedic proportions, expressive face, editorial cartoon style, humorous illustration' },
+  { id: 'cinematic', label: 'Cinematic Portrait', icon: '🎬', color: '#8b5cf6', desc: 'Movie-quality portraits', keywords: 'cinematic portrait photography, shallow depth of field, film grain, anamorphic lens flare, professional color grading, movie poster quality, dramatic rim lighting' },
+  { id: 'darkneon', label: 'Dark Neon', icon: '💜', color: '#7c3aed', desc: 'Dark aesthetic with neon', keywords: 'dark aesthetic, neon glow accents, moody atmosphere, black background with neon highlights, vaporwave influence, dramatic contrast, glowing edges' },
   { id: 'hyperreal', label: 'Hyperrealistic', icon: '📸', color: '#60a5fa', desc: 'Photorealistic, ultra-detailed', keywords: 'hyperrealistic photograph, ultra-detailed, 8K resolution, sharp focus, natural lighting, photorealistic skin texture' },
   { id: 'cyberpunk', label: 'Cyberpunk', icon: '🌆', color: '#c084fc', desc: 'Neon-lit futuristic scenes', keywords: 'cyberpunk aesthetic, neon lights, dark futuristic city, holographic elements, rain-slicked streets, cinematic atmosphere' },
   { id: 'oil', label: 'Oil Painting', icon: '🎨', color: '#fb923c', desc: 'Classical fine art style', keywords: 'oil painting style, rich textured brushstrokes, dramatic chiaroscuro lighting, Renaissance composition, gallery-quality fine art' },
@@ -238,8 +243,8 @@ export default function ImagePromptBuilder() {
   return (
     <Layout>
       <Head>
-        <title>AI Image Prompt Builder — Free Tool for ChatGPT, Midjourney & DALL·E | Midas Tools</title>
-        <meta name="description" content="Build perfect AI image prompts in seconds. Choose from 12 viral styles (Ghibli, Cyberpunk, Hyperrealistic), set mood & lighting, get copy-paste prompts for ChatGPT, Midjourney, DALL-E. 100% free." />
+        <title>Free AI Image Prompt Generator — Ghibli, Trading Card, Action Figure & More | Midas Tools</title>
+        <meta name="description" content="Generate viral AI image prompts for ChatGPT, Midjourney & DALL-E. Ghibli, trading card, action figure, cinematic & 15+ styles. Free, no signup." />
         <link rel="canonical" href="https://midastools.co/image-prompt-builder" />
         <meta property="og:title" content="AI Image Prompt Builder — Create Stunning AI Art Prompts Free" />
         <meta property="og:description" content="Pick a style. Describe your idea. Get the perfect prompt. Works with ChatGPT, Midjourney, DALL-E & Stable Diffusion." />

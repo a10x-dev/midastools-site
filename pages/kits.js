@@ -143,7 +143,7 @@ export default function Kits() {
       <Head>
         <title>AI Automation Kits — Midas Tools</title>
         <link rel="canonical" href="https://midastools.co/kits" />
-        <meta name="description" content="Browse every AI automation kit from Midas Tools. Pick your niche or grab them all in one bundle." />
+        <meta name="description" content="Browse 15+ AI automation kits with ready-to-use prompts and templates. Real estate, e-commerce, freelancing, content creation & more. From $29." />
         <meta property="og:title" content="AI Automation Kits — Midas Tools" />
         <meta property="og:description" content="Every kit we make. Pick your niche or grab them all." />
         <meta property="og:url" content="https://midastools.co/kits" />
@@ -153,6 +153,17 @@ export default function Kits() {
         <link rel="icon" type="image/png" href="/favicon.png" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "ItemList",
+          "name": "AI Automation Kits",
+          "itemListElement": kits.map((kit, i) => ({
+            "@type": "ListItem",
+            "position": i + 1,
+            "name": kit.name,
+            "url": `https://midastools.co${kit.href}`
+          }))
+        }) }} />
       </Head>
 
       <style>{`
