@@ -80,7 +80,7 @@ As covered by [Bankless](https://www.bankless.com/podcast/building-a-million-dol
 | Monthly costs | ~$400 | ~$1,500 | ~$1,500 (200x ROI) |
 | Media coverage | None | PANews, TechFlow | Bankless, Mixergy, MEXC |
 
-**Ready to build your own Felix?** We packaged Felix's exact system into a starter kit — SOUL.md template, HEARTBEAT.md, daily workflows, tool configs. **[Get the Starter Kit — $29 →](https://buy.stripe.com/cNi28qdgz7mVb0U8VYcMM07)**
+**Ready to build your own Felix?** We packaged Felix's exact system into a starter kit — SOUL.md template, HEARTBEAT.md, daily workflows, tool configs. **[Get the Starter Kit — $29 →](https://buy.stripe.com/cNi28qdgz7mVb0U8VYcMM07)** · Also on [Gumroad →](https://manduks.gumroad.com/l/pdcjj)
 
 ## What This Proves
 
@@ -94,7 +94,7 @@ The question isn't whether this is possible anymore. Felix proved it is — with
 
 The question is: **can you replicate it?**
 
-**Yes.** We packaged the exact templates, workflows, and prompts Felix uses into a kit you can deploy today. **[Get the Starter Kit — $29 →](https://buy.stripe.com/cNi28qdgz7mVb0U8VYcMM07)** or grab **[All 15 Kits for $97 (81% off) →](https://buy.stripe.com/aEUbJ01xR0YxgligkocMM0g)**
+**Yes.** We packaged the exact templates, workflows, and prompts Felix uses into a kit you can deploy today. **[Get the Starter Kit — $29 →](https://buy.stripe.com/cNi28qdgz7mVb0U8VYcMM07)** or grab **[All 15 Kits for $97 (81% off) →](https://buy.stripe.com/aEUbJ01xR0YxgligkocMM0g)** · [Buy on Gumroad →](https://manduks.gumroad.com/l/iiiwf)
 
 ## How to Replicate the Felix Model
 
@@ -104,7 +104,7 @@ Felix runs on OpenClaw with:
 - A daily review workflow
 - Access to Stripe, Vercel, GitHub, and email
 
-**Step 1 — Get the blueprints:** The [OpenClaw Entrepreneur Starter Kit ($29)](https://buy.stripe.com/cNi28qdgz7mVb0U8VYcMM07) includes Felix's exact SOUL.md template, HEARTBEAT.md system, daily review workflow, and Stripe/Vercel integration configs. Or get everything we make with [All 15 Kits — $97](https://buy.stripe.com/aEUbJ01xR0YxgligkocMM0g).
+**Step 1 — Get the blueprints:** The [OpenClaw Entrepreneur Starter Kit ($29)](https://buy.stripe.com/cNi28qdgz7mVb0U8VYcMM07) includes Felix's exact SOUL.md template, HEARTBEAT.md system, daily review workflow, and Stripe/Vercel integration configs. Or get everything we make with [All 15 Kits — $97](https://buy.stripe.com/aEUbJ01xR0YxgligkocMM0g). Prefer Gumroad? [Get it here →](https://manduks.gumroad.com/l/pdcjj)
 
 **Step 2 — Configure your agent:** Use our [free SOUL.md Generator](/soul-generator) to customize the config for your industry — 6 presets included.
 
