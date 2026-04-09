@@ -790,6 +790,277 @@ Take our [AI Income Blueprint quiz](/ai-income-blueprint) — 60 seconds to disc
 Or grab the [All 15 AI Kits Bundle — $97](https://buy.stripe.com/bJe7sK0tNdLjgle0pscMM0b) and get 500+ prompts, templates, and workflows to make AI work FOR you instead of against you.
     `,
   },
+  'viral-chatgpt-image-prompts-2026': {
+    title: '100+ Viral ChatGPT Image Prompts That Break the Internet (2026)',
+    date: 'Apr 9, 2026',
+    meta: 'Copy-paste these viral ChatGPT image prompts for action figures, Studio Ghibli, Pixar, pet portraits, trading cards & more. Every trending AI image style in one place.',
+    content: `
+**These are the exact prompts going viral on TikTok, Instagram, and X right now.** Every week there's a new AI image trend — action figures in boxes, Studio Ghibli portraits, pet-to-human transformations. Instead of reverse-engineering them yourself, just copy, paste, and customize.
+
+> **Want to build prompts visually?** Use our free [AI Image Prompt Builder](/image-prompt-builder) — 25 styles, mood/lighting controls, optimized for ChatGPT, Midjourney & DALL·E.
+
+## 🔥 Action Figure in Box (Most Viral Trend of 2026)
+
+The biggest AI image trend of the year. Millions of posts. Works best in ChatGPT with DALL·E.
+
+**Prompt 1 — Classic Action Figure:**
+> Create a hyperrealistic photo of an action figure of [YOUR NAME] in sealed retail packaging. The figure is wearing [YOUR OUTFIT]. The box has the name "[YOUR NAME]" in bold across the top. Accessories in the box include: [ITEM 1], [ITEM 2], [ITEM 3]. The background is a toy store shelf. Blister pack packaging with plastic window, cardboard backing, barcode at bottom.
+
+**Prompt 2 — Barbie Box Edition:**
+> Create a photo of a [MAN/WOMAN] styled as a Barbie/Ken doll inside a pink Barbie box. They are wearing [OUTFIT]. The box says "[YOUR NAME] Edition" at the top in the classic Barbie font. Accessories visible in the packaging: [ITEM 1], [ITEM 2], [ITEM 3]. Bright toy store lighting, plastic sheen on box, realistic toy packaging photography.
+
+**Prompt 3 — Professional Edition:**
+> Hyperrealistic product photo of an action figure in retail packaging. The figure is a [JOB TITLE] wearing [WORK OUTFIT]. Box title: "THE [JOB TITLE]." Accessories: laptop, coffee cup, noise-canceling headphones, anxiety medication. Warning label reads: "Runs on caffeine and deadlines." Toy shelf background, professional product photography.
+
+---
+
+## 🏯 Studio Ghibli Style
+
+The style that refuses to die. Soft watercolor, warm lighting, whimsical Studio Ghibli magic.
+
+**Prompt 4 — Ghibli Self-Portrait:**
+> Create a Studio Ghibli anime-style portrait of [DESCRIPTION OF YOURSELF]. Soft watercolor textures, warm golden hour lighting, whimsical atmosphere, hand-painted look. Background is [a cozy countryside / a magical forest / a floating castle]. Hayao Miyazaki art direction, detailed eyes, gentle expression.
+
+**Prompt 5 — Ghibli Scene:**
+> Studio Ghibli anime style scene of [YOUR SCENE — e.g., "a cat cafe on a rainy afternoon"]. Soft watercolor textures, warm lighting through windows, steam rising from tea cups, plants everywhere, cozy atmosphere. Hand-painted quality, Spirited Away color palette, gentle nostalgic feeling.
+
+**Prompt 6 — Ghibli Pet:**
+> Transform this [DOG/CAT] into a Studio Ghibli character. Soft anime style, expressive eyes with light reflections, watercolor fur texture, sitting in a magical garden with floating petals. Warm sunset lighting, Totoro-style environment, hand-painted quality.
+
+---
+
+## 🧒 Pixar / 3D Cartoon Style
+
+Family-friendly, high-quality 3D renders that get massive engagement, especially for pet content.
+
+**Prompt 7 — Pixar Self-Portrait:**
+> Create a Pixar-style 3D animated character of [YOUR DESCRIPTION]. Big expressive eyes, smooth skin, vibrant colors. They're [DOING SOMETHING — working at a desk / cooking / playing guitar]. Background is a detailed Pixar-quality room. Disney animation studio render quality, subsurface scattering on skin, warm studio lighting.
+
+**Prompt 8 — Pixar Pet:**
+> Turn this [DOG/CAT BREED] into a Pixar movie character. 3D animated render, big glossy eyes with light reflections, soft fur texture, playful expression. Background is a colorful living room. Toy Story meets Secret Life of Pets quality. Bright, warm lighting.
+
+---
+
+## 🐕 Pet Portraits (Exploding Trend)
+
+Pet owners are FANATICAL buyers. These prompts turn any pet photo into art.
+
+**Prompt 9 — Renaissance Pet:**
+> Create a Renaissance oil painting portrait of a [DOG/CAT BREED] dressed as [a king / a general / a duchess]. Royal robes, gold crown, ornate frame. Classical painting style, dramatic chiaroscuro lighting, detailed fur and fabric textures, museum-quality fine art. Hanging in a baroque palace.
+
+**Prompt 10 — Pet as Human:**
+> Anthropomorphic portrait of a [BREED] as a [PROFESSION — barista / lawyer / DJ]. Wearing appropriate human clothes. Realistic but slightly cartoonish. Detailed fur texture, human-like posture, holding profession-specific props. Clean studio background, commercial photography quality.
+
+**Prompt 11 — Pet Action Figure:**
+> Hyperrealistic product photo of an action figure of a [BREED] in retail toy packaging. The figure is wearing [a tiny suit / superhero cape / chef hat]. Box says "[PET'S NAME] — Limited Edition." Accessories include: tiny bone, water bowl, squeaky toy. Toy store shelf background.
+
+---
+
+## 💼 LinkedIn Professional Headshot
+
+AI headshots are replacing $200 photography sessions. Save this one.
+
+**Prompt 12 — Corporate Headshot:**
+> Professional corporate headshot photograph of a [MAN/WOMAN], [AGE], [ETHNICITY], [HAIR DESCRIPTION]. Wearing [a navy suit / professional blouse]. Slight confident smile, direct eye contact with camera. Clean gray gradient studio background. Shot with 85mm portrait lens, f/2.8, studio lighting with key light from upper left, fill light from right. Sharp focus on eyes, slight background bokeh. LinkedIn profile photo quality.
+
+**Prompt 13 — Creative Professional:**
+> Professional headshot of a [PERSON DESCRIPTION] in a creative workspace. Wearing [smart casual outfit]. Natural confident expression, looking slightly off-camera. Background is a blurred modern office with plants and bookshelves. Natural window light from the left, warm tones. Editorial portrait quality, 85mm lens, shallow depth of field.
+
+---
+
+## 🃏 Trading Card Style
+
+Holographic, collectible card game aesthetic. Perfect for personal branding.
+
+**Prompt 14 — Character Card:**
+> Create a holographic trading card game card featuring [YOUR NAME/DESCRIPTION]. The card has: a dynamic character portrait at center, holographic foil border with rainbow reflections, stats panel at bottom (STR: [X], INT: [X], CHA: [X], LCK: [X]), card name "[YOUR NAME]" in bold metallic text at top, rarity badge "LEGENDARY" with gold star. Card stock texture visible, slight curve catch lighting. Magic: The Gathering meets Pokémon card aesthetic.
+
+---
+
+## 🐟 Fisheye Anime Selfie
+
+50M+ views on TikTok. The wide-angle distortion makes it pop.
+
+**Prompt 15 — Anime Fisheye:**
+> Fisheye lens anime selfie of [YOUR DESCRIPTION]. Extreme wide-angle distortion with face close to camera, manga art style, colorful urban background (neon signs, cherry blossoms, busy street). Dynamic exaggerated perspective, vibrant colors, expressive eyes. Japanese anime aesthetic, hand holding phone at arm's length, energetic pose.
+
+---
+
+## 🌃 Neo-Noir Cinematic
+
+High engagement on Instagram. Moody, dramatic, eye-catching.
+
+**Prompt 16 — Neo-Noir Portrait:**
+> Neo-noir cinematic portrait of [PERSON DESCRIPTION]. Rain-slicked city street at night, neon signs reflecting in puddles. Harsh directional lighting creating venetian blind shadow patterns across face. Wearing a long coat, collar up. Cigarette smoke optional. 1940s detective atmosphere mixed with cyberpunk neon. Film grain, anamorphic lens flare, Blade Runner meets Sin City aesthetic.
+
+---
+
+## 🏷️ Die-Cut Sticker Style
+
+Clean, cute, and incredibly shareable. Great for brand content.
+
+**Prompt 17 — Sticker Design:**
+> Die-cut sticker design of [SUBJECT — e.g., "a corgi wearing sunglasses"]. White background, bold clean outline, kawaii cute style, flat vibrant colors. Vinyl sticker aesthetic with visible cut line around edges. Simple, bold, and eye-catching. Perfect for laptop sticker or water bottle. No background, clean vector-like edges.
+
+---
+
+## 🕹️ 90s Gaming Room
+
+Highest comment engagement on Instagram. Pure nostalgia.
+
+**Prompt 18 — Retro Gaming Setup:**
+> Detailed photo of a 90s gaming bedroom at night. CRT TV showing [GAME — Mario / Sonic / Zelda], SNES/N64 on the floor, scattered game cartridges, bean bag chair, posters of [90s MOVIES/GAMES] on wood-paneled walls. Lava lamp glowing in corner, LED strip under desk. VHS tapes stacked near TV. Warm tungsten lighting mixed with blue TV glow. Nostalgic, messy, lived-in childhood bedroom. Shot with 35mm film, slight grain.
+
+---
+
+## 🎨 Oil Painting (Highest Save Rate)
+
+Modest likes but 40%+ save rate on Instagram — people collect these.
+
+**Prompt 19 — Classical Oil Portrait:**
+> Classical oil painting portrait of [PERSON/PET/SCENE]. Rich textured brushstrokes visible on canvas. Dramatic chiaroscuro lighting in the style of Rembrandt — strong light from upper left, deep shadows. Gold ornate frame visible at edges. Renaissance composition, museum gallery quality. Canvas texture, oil paint sheen, centuries-old painting aesthetic.
+
+---
+
+## 🎬 Cinematic / Movie Poster
+
+Turn yourself into a movie character.
+
+**Prompt 20 — Movie Poster:**
+> Movie poster for "[YOUR MOVIE TITLE]" starring [YOUR NAME]. [GENRE] film aesthetic. [CHARACTER DESCRIPTION] in a dramatic hero pose. Tagline: "[YOUR TAGLINE]". Cinematic lighting, film grain, professional movie poster composition. Credits text at bottom in standard movie poster font. IMAX format, high contrast, dramatic color grading.
+
+---
+
+## How to Get the Best Results
+
+1. **Be specific** — "a golden retriever" beats "a dog"
+2. **Include lighting** — golden hour, studio, neon, dramatic shadows
+3. **Mention camera** — 85mm, fisheye, aerial, macro changes everything
+4. **Add texture** — film grain, canvas, watercolor, holographic foil
+5. **Reference styles** — name specific artists, movies, or aesthetics
+
+**Want 200+ more prompts like these, pre-built and organized by category?** Get the [AI Image Prompt Pack — $29](https://buy.stripe.com/8x24gyccv7mVglegoqcMM0i) or grab [All 15 Kits — $97](https://buy.stripe.com/bJe7sK0tNdLjgle0pscMM0b)
+
+**Or build your own prompts visually** with our free [AI Image Prompt Builder](/image-prompt-builder) — 25 styles, mood controls, lighting presets, and platform-specific formatting for ChatGPT, Midjourney, DALL·E, and Stable Diffusion.
+
+---
+
+## More Free Tools
+
+- [AI Prompt Generator](/prompt-generator) — 8 categories, instant copy-paste prompts
+- [AI Prompt Enhancer](/prompt-enhancer) — Upgrade any prompt to expert-level
+- [AI Content Detector](/ai-content-detector) — Check if your text sounds AI-generated
+- [AI Image Prompt Builder](/image-prompt-builder) — 25 visual styles
+- [See all free tools](/tools)
+    `,
+  },
+  'claude-cowork-prompts-setup-guide-2026': {
+    title: 'Claude Cowork Setup Guide: 115+ Prompts, CLAUDE.md Templates & Role Playbooks (2026)',
+    date: 'Apr 9, 2026',
+    meta: 'Complete Claude Cowork setup guide with 115+ copy-paste prompts, 10 role playbooks, CLAUDE.md templates, and connector cheatsheets. Set up your AI coworker in 30 minutes.',
+    content: `
+**Claude Cowork is the most powerful AI productivity tool of 2026.** But most people paying $100-200/month for Claude Max barely scratch the surface. They chat with Claude like a search engine instead of deploying it as a full team member.
+
+This guide fixes that. You'll get the exact prompts, CLAUDE.md files, and workflows to turn Claude Cowork from "helpful chatbot" into "indispensable colleague."
+
+> **Want the complete kit?** 115+ prompts, 10 role playbooks, 5 CLAUDE.md templates, 5 connector cheatsheets, and a setup guide — all in one download. [Get the Claude Cowork Mastery Kit — $29](/claude-cowork-kit)
+
+## What Is Claude Cowork?
+
+Claude Cowork launched January 12, 2026 as Anthropic's AI collaboration tool. Available exclusively on Claude Max ($100-200/month), it lets Claude autonomously manage files, execute tasks, and integrate with your tools on macOS.
+
+Think of it as hiring a virtual team member who:
+- Reads and writes files on your computer
+- Connects to Google Drive, GitHub, Slack, and Calendar
+- Follows custom instructions via CLAUDE.md context files
+- Runs workflows and automations you define
+
+## The Problem: Most Users Waste Their Subscription
+
+The average Claude Max subscriber uses Cowork for basic Q&A. That's like buying a Ferrari to drive to the mailbox.
+
+**What they should be doing:** Setting up role-specific CLAUDE.md files, building automated workflows, using connector integrations, and deploying Claude as specialized team members for different functions.
+
+## Step 1: Set Up Your CLAUDE.md File
+
+The CLAUDE.md file is the most important thing in Claude Cowork. It tells Claude who it is, what rules to follow, and what workflows to run.
+
+**Here's a starter template:**
+
+**Role:** Define what Claude's job is (marketing manager, PM, sales rep, etc.)
+**Rules:** Set boundaries (tone, formatting, confidentiality, decision limits)
+**Workflows:** Define slash-command shortcuts for common tasks
+
+> **Try it free:** Our [Claude Cowork Setup Wizard](/cowork-setup-wizard) generates role-specific CLAUDE.md files for 6 roles — just pick your role and copy-paste.
+
+## Step 2: Choose Your Role Playbook
+
+The key insight: **Claude performs dramatically better when given a specific role.** A Claude set up as "Marketing Manager" with marketing-specific context produces 10x better output than Claude with no role context.
+
+**The 10 roles that get the most value from Cowork:**
+
+| Role | Top Use Case | Time Saved/Week |
+|------|-------------|----------------|
+| Marketing Manager | Campaign briefs, content calendars | 8-12 hrs |
+| Sales Rep / BDR | Prospect research, outreach sequences | 6-10 hrs |
+| Product Manager | PRDs, user stories, sprint planning | 8-15 hrs |
+| Executive / Founder | Weekly briefings, investor updates | 5-8 hrs |
+| HR / People Ops | Job descriptions, onboarding | 6-10 hrs |
+| Finance Analyst | Budget summaries, forecast models | 5-8 hrs |
+| Legal / Compliance | Contract review, policy audits | 8-12 hrs |
+| Customer Support | Ticket triage, response templates | 10-15 hrs |
+| Operations Manager | SOPs, process audits, vendor reviews | 6-10 hrs |
+| Content Creator | Blog outlines, SEO, repurposing | 8-12 hrs |
+
+> Each role playbook in the [full kit](/claude-cowork-kit) includes folder structure, Global Instructions template, and 5 tested prompts.
+
+## Step 3: Set Up Connectors
+
+Connectors are what make Cowork powerful beyond chat. The five essential integrations:
+
+1. **Google Drive / Docs** — Pull in documents, summarize meeting notes, draft from templates
+2. **GitHub** — Code review, PR descriptions, documentation generation
+3. **Slack** — Summarize channels, draft messages, compile weekly digests
+4. **Calendar** — Meeting prep, agenda generation, time blocking
+5. **File System** — Organize folders, batch process files, template filling
+
+## 5 Prompts You Can Copy Right Now
+
+**1. Weekly Briefing (Executive):**
+Compile this week's key metrics, wins, blockers, and priorities. Pull from my recent files and conversations. Format as a 1-page executive summary with: metrics table, top 3 wins, top 3 blockers, and next week's priorities. End with a "decisions needed" section.
+
+**2. Competitor Analysis (Marketing):**
+Research [COMPETITOR URL] and create a competitive analysis covering: value proposition, pricing strategy, content marketing approach, social media presence, and product features. Score each area 1-10 relative to our positioning. End with 3 actionable recommendations.
+
+**3. PRD from Notes (Product):**
+Convert these rough notes into a complete PRD: [PASTE NOTES]. Include: executive summary, problem statement, user stories with acceptance criteria, success metrics, technical considerations, out of scope, and open questions.
+
+**4. Outreach Sequence (Sales):**
+Research [COMPANY] and write a 3-email outreach sequence to their [TITLE]. Each email must reference something specific about their company from the last 30 days. Keep each under 120 words. Include LinkedIn message draft.
+
+**5. SOP Generator (Operations):**
+Create a standard operating procedure for: [PROCESS DESCRIPTION]. Include: prerequisites, step-by-step instructions with time estimates, decision points, quality checks, common mistakes, and review schedule.
+
+## The Claude Cowork Legal Plugin
+
+Anthropic's Legal plugin (February 2026) is a game-changer for in-house counsel and small firms. It enables:
+
+- **/review-contract** — Clause-by-clause review against your negotiation playbook with GREEN/YELLOW/RED flags
+- **/triage-nda** — Rapid NDA pre-screening
+- **/vendor-check** — Vendor agreement status verification
+- **/brief** — Contextual legal briefings
+
+The plugin caused what analysts dubbed the "SaaSpocalypse" — a sharp sell-off in legal tech stocks as investors realized Claude could replace entire categories of legal software.
+
+## Why $200/Month Users Need This
+
+You're spending $100-200/month on Claude Max. That subscription gives you the engine. But without the right setup — CLAUDE.md files, role playbooks, connector configurations, and proven prompts — you're leaving 80% of the value on the table.
+
+**The math:** If Cowork saves you 8 hours/week (conservative estimate with proper setup) and your time is worth $50/hour, that's $400/week in value. The subscription pays for itself in the first week.
+
+> **Get the complete toolkit:** 115+ prompts, 10 role playbooks, 5 CLAUDE.md templates, 5 connector cheatsheets, and a setup guide. [Get the Claude Cowork Mastery Kit — $29](/claude-cowork-kit)
+`,
+  },
 };
 
 // Posts for ai-tools-small-business-owners-2026, ai-small-business-automation-2026,
@@ -910,7 +1181,7 @@ export default function BlogPost({ post, slug }) {
         </div>
         <div className="cta-inline">
           <p>Get every AI template, workflow, and prompt we make — in one bundle.</p>
-          <a href="https://buy.stripe.com/aEUbJ01xR0YxgligkocMM0g">Get All 15 Kits — $97 (Save 81%) →</a>
+          <a href="https://buy.stripe.com/aEUbJ01xR0YxgligkocMM0g">Get All 16 Kits — $97 (Save 82%) →</a>
           <p style={{marginTop:12,fontSize:13,color:'var(--text-tertiary)'}}>Or start with the <a href="https://buy.stripe.com/cNi28qdgz7mVb0U8VYcMM07" style={{color:'var(--accent)'}}>Starter Kit — $29</a></p>
           <p style={{marginTop:8,fontSize:12,color:'var(--text-tertiary)'}}>Secure Stripe checkout &middot; Instant download &middot; 30-day guarantee</p>
         </div>

@@ -135,6 +135,15 @@ const kits = [
     badge: 'NEW',
     color: 'var(--card-purple)',
   },
+  {
+    name: 'Claude Cowork Mastery Kit',
+    price: '$29',
+    desc: '115+ prompts, 10 role playbooks, CLAUDE.md templates & connector cheatsheets. Master Claude Cowork in 30 minutes.',
+    href: '/claude-cowork-kit',
+    stripe: 'https://buy.stripe.com/28E3cu90jePn0mg7RUcMM0n',
+    badge: 'TRENDING',
+    color: 'var(--card-blue)',
+  },
 ];
 
 export default function Kits() {
