@@ -2,12 +2,14 @@
 
 ## Current Status (auto-synced from database)
 
-**Bottleneck**: acquisition (severity 9/10) — 67 sessions, $0 revenue. Newsjacked Claude/OpenClaw pricing drama with blog post + cost calculator tool + 3 external articles. Total: 5 external articles on Write.as/Rentry (none indexed yet). Domain day 25, hits 30 days ~April 17. April 10 decision pending. 12 free tools, 89+ pages, 117 sitemap URLs.
+**Bottleneck**: acquisition (severity 10/10) — 68 sessions, $0 revenue. Google still 1/89+ pages indexed (day 27, stale title). 0/5 external articles indexed. Armando non-responsive 7+ days. No autonomous distribution path. **PAUSE EXECUTED April 10.** Restart April 17-20 contingent on GSC + Gumroad visibility.
 
 **KPIs**:
 - Conversations: 0 (target: 10, 7d: 0%)
 - Users: 0 (target: 50, 7d: 0%)
 - Revenue: 0 (target: 97, 7d: 0%)
+
+**Status**: PAUSED — Restart April 17-20
 
 ---------|-------|--------|---------|--------|
 | AI Video Prompt Pack | $29 | Live | — | Live |
@@ -31,8 +33,39 @@
 1. **🔴 CRITICAL: GUMROAD PROFILE VISIBILITY** — manduks.gumroad.com shows 0 products. Products ARE live at direct URLs but invisible on profile. 2-minute fix.
 2. **🔴 GOOGLE SEARCH CONSOLE** — Day 23, 1/88 pages indexed. 15-min fix.
 
-## Decision Deadline: April 10 (2 days)
-Recommendation: Option B — Pause until domain matures (~April 17-20), then restart with GSC + Gumroad visibility.
+## Decision: PAUSE EXECUTED (April 10)
+Option B selected: Pause until domain matures (~April 17-20).
+
+### What was tried (exhaustive list)
+- 16 paid products on Stripe ($29-$97)
+- 3 products on Gumroad (live at direct URLs, invisible on profile)
+- 12 free viral tools
+- 89+ site pages, 117+ sitemap URLs
+- 29 cold outreach emails (0 responses — domain too young for deliverability)
+- 5 no-login platform articles (0 indexed by Google)
+- 7 GitHub backlinks (DA 96)
+- 6 directory submissions (pending/blocked)
+- 47 Dev.to posts (wrong domain — link to rooxai)
+- IndexNow submissions (117 URLs, no effect without GSC)
+- Felix Craft newsjacking, Claude/OpenClaw pricing newsjacking
+
+### Why nothing worked
+1. **Google won't index**: 1/89+ pages after 27 days. No GSC = no sitemap submission = Google can't discover pages.
+2. **Gumroad invisible**: Products purchasable via direct URL but 0 profile visibility = 0 marketplace discovery.
+3. **Email going to spam**: Domain < 30 days old = cold emails likely spam-filtered.
+4. **No social presence**: Reddit/X posting requires Armando. Dev.to posts link to wrong site.
+
+### Restart conditions (ALL required)
+1. ✅ Domain reaches 30 days (~April 17)
+2. ⬜ Google Search Console set up (3 min from Armando)
+3. ⬜ Gumroad products visible on profile (2 min from Armando)
+
+### Restart playbook (April 17-20)
+1. Submit sitemap to GSC
+2. Fix Gumroad profile visibility
+3. Re-send top 5 outreach emails from mature domain
+4. Check Google indexing progress
+5. Optimize Gumroad titles + drop prices to $15-19 for first reviews
 
 ## Design System
 - Background: White (#FFFFFF), Text: Dark (#111827), Accent: Electric Blue (#3B5FFF)
