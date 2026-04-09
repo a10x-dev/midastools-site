@@ -73,7 +73,7 @@ export default function ClaudeOpenClawPricing() {
         <p>On April 4, Anthropic dropped a bomb: <strong>Claude subscriptions no longer cover OpenClaw usage.</strong></p>
         <p>If you're running an AI agent on OpenClaw with Claude as the backbone, your costs just changed dramatically. Some developers are reporting potential increases of <strong>up to 50x</strong> their previous monthly spend.</p>
         <p>DHH called it <a href="https://x.com/dhh" style={{ color: '#3B5FFF' }}>"very customer hostile."</a> The Hacker News thread hit 245+ points. The GitHub Issue got 147+ reactions. And OpenClaw creator Peter Steinberger announced he's joining OpenAI.</p>
-        <p>Here's what actually happened, what it means for autonomous AI agents, and how to keep your agent profitable.</p>
+        <p>Here's what actually happened, what it means for autonomous AI agents, and how to keep your agent profitable. Or skip straight to our <Link href="/openclaw-cost-calculator" style={{ color: '#3B5FFF' }}>free OpenClaw Cost Calculator</Link> to see your new costs.</p>
 
         <hr style={{ margin: '40px 0', border: 'none', borderTop: '1px solid #eee' }} />
 

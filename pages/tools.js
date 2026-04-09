@@ -60,6 +60,14 @@ const TOOLS = [
     bg: 'var(--card-amber)',
   },
   {
+    title: 'OpenClaw Cost Calculator',
+    desc: 'See how the April 2026 Claude pricing change affects your AI agent. Compare models, estimate monthly costs, and find savings with multi-model routing. Updated April 8.',
+    href: '/openclaw-cost-calculator',
+    tag: '🔥 NEW',
+    categories: '5 models · before/after',
+    bg: 'var(--card-amber)',
+  },
+  {
     title: 'OpenClaw SOUL.md Generator',
     desc: 'Build your AI agent\'s complete configuration in 60 seconds. Choose from 6 industry presets (E-commerce, Content Creator, Real Estate, SaaS, Freelancer, Small Business), describe your business, and get a production-ready SOUL.md file.',
     href: '/soul-generator',

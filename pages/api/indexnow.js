@@ -131,6 +131,7 @@ const URLS = [
   '/blog/ai-entrepreneur-stack',
   '/blog/deploy-openclaw-ai-entrepreneur',
   '/blog/claude-openclaw-pricing-change-2026',
+  '/openclaw-cost-calculator',
 ];
 
 export default async function handler(req, res) {
