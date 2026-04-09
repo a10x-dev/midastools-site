@@ -43,13 +43,13 @@ export default function EcommerceKit() {
         <meta name="keywords" content="AI tools for e-commerce, AI product descriptions, e-commerce email templates, AI ad copy, Shopify AI tools, Etsy AI templates" />
         <meta property="og:title" content="E-commerce AI Kit — Product Descriptions, Email Flows & Ad Copy | Midas Tools" />
         <meta property="og:description" content="AI templates that save online sellers 15+ hours per week. Product descriptions, email flows, ad copy, social media & SEO. $39 one-time." />
-        <meta property="og:url" content="https://www.midastools.co/ecommerce-kit" />
-        <meta property="og:image" content="https://www.midastools.co/og-image.png" />
+        <meta property="og:url" content="https://midastools.co/ecommerce-kit" />
+        <meta property="og:image" content="https://midastools.co/og-image.png" />
         <meta property="og:type" content="product" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="E-commerce AI Kit — Midas Tools" />
         <meta name="twitter:description" content="AI templates for product descriptions, email flows, ad copy & more. Built for online sellers. $39 one-time." />
-        <link rel="canonical" href="https://www.midastools.co/ecommerce-kit" />
+        <link rel="canonical" href="https://midastools.co/ecommerce-kit" />
         <link rel="icon" type="image/png" href="/favicon.png" />
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -57,15 +57,15 @@ export default function EcommerceKit() {
           "@type": "Product",
           "name": "E-commerce AI Kit",
           "description": "AI templates for e-commerce: product descriptions, email marketing sequences, ad copy, social media, and SEO content strategy.",
-          "url": "https://www.midastools.co/ecommerce-kit",
-          "image": "https://www.midastools.co/og-image.png",
+          "url": "https://midastools.co/ecommerce-kit",
+          "image": "https://midastools.co/og-image.png",
           "brand": "Midas Tools",
           "offers": {
             "@type": "Offer",
             "price": "39",
             "priceCurrency": "USD",
             "availability": "https://schema.org/InStock",
-            "url": "https://www.midastools.co/ecommerce-kit",
+            "url": "https://midastools.co/ecommerce-kit",
             "hasMerchantReturnPolicy": {
               "@type": "MerchantReturnPolicy",
               "applicableCountry": "US",

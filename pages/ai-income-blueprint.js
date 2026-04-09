@@ -303,17 +303,17 @@ export default function AIIncomeBlueprint() {
         <meta property="og:title" content={metaTitle} />
         <meta property="og:description" content={metaDesc} />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content={`https://www.midastools.co/ai-income-blueprint`} />
+        <meta property="og:url" content={`https://midastools.co/ai-income-blueprint`} />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={metaTitle} />
         <meta name="twitter:description" content={metaDesc} />
-        <link rel="canonical" href="https://www.midastools.co/ai-income-blueprint" />
+        <link rel="canonical" href="https://midastools.co/ai-income-blueprint" />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "WebApplication",
           "name": "AI Income Blueprint",
           "description": metaDesc,
-          "url": "https://www.midastools.co/ai-income-blueprint",
+          "url": "https://midastools.co/ai-income-blueprint",
           "applicationCategory": "BusinessApplication",
           "operatingSystem": "Web",
           "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },

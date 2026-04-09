@@ -9,7 +9,7 @@ const BUNDLE_URL = 'https://buy.stripe.com/bJe7sK0tNdLjgle0pscMM0b';
 export default function ColdEmailTemplates2026() {
   const title = '25 Cold Email Templates That Actually Get Replies in 2026 (Copy & Paste)';
   const description = 'The best cold email templates for 2026. 25 copy-paste templates for B2B sales, freelancer outreach, SaaS partnerships, job seekers, and follow-ups. Real subject lines, real personalization tokens, and proven reply-rate data.';
-  const url = 'https://www.midastools.co/blog/cold-email-templates-2026';
+  const url = 'https://midastools.co/blog/cold-email-templates-2026';
 
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -19,8 +19,8 @@ export default function ColdEmailTemplates2026() {
     url: url,
     datePublished: '2026-03-27',
     dateModified: '2026-03-27',
-    author: { '@type': 'Organization', name: 'Midas Tools Team', url: 'https://www.midastools.co' },
-    publisher: { '@type': 'Organization', name: 'Midas Tools', url: 'https://www.midastools.co' },
+    author: { '@type': 'Organization', name: 'Midas Tools Team', url: 'https://midastools.co' },
+    publisher: { '@type': 'Organization', name: 'Midas Tools', url: 'https://midastools.co' },
     mainEntityOfPage: { '@type': 'WebPage', '@id': url }
   };
 

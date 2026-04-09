@@ -32,13 +32,13 @@ export default function AIImagePromptPack() {
         <meta name="keywords" content="AI image prompts, ChatGPT image prompts, Midjourney prompts, AI art prompts, DALL-E prompts, Stable Diffusion prompts, Leonardo AI prompts, AI photography prompts, AI product photography, AI headshots" />
         <meta property="og:title" content="AI Image Prompt Pack — 150+ Visual AI Prompts" />
         <meta property="og:description" content="150+ battle-tested image generation prompts for social media, brands, products, and content. Works with ChatGPT, Midjourney, DALL-E, and more. $29." />
-        <meta property="og:url" content="https://www.midastools.co/ai-image-prompt-pack" />
-        <meta property="og:image" content="https://www.midastools.co/og-image.png" />
+        <meta property="og:url" content="https://midastools.co/ai-image-prompt-pack" />
+        <meta property="og:image" content="https://midastools.co/og-image.png" />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="AI Image Prompt Pack — 150+ Visual AI Prompts | Midas Tools" />
         <meta name="twitter:description" content="150+ ready-to-use AI image prompts for social media, branding, e-commerce, and content. Works with ChatGPT, Midjourney, DALL-E. $29 one-time." />
-        <link rel="canonical" href="https://www.midastools.co/ai-image-prompt-pack" />
+        <link rel="canonical" href="https://midastools.co/ai-image-prompt-pack" />
         <link rel="icon" type="image/png" href="/favicon.png" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
@@ -48,8 +48,8 @@ export default function AIImagePromptPack() {
           "@type": "Product",
           "name": "AI Image Prompt Pack",
           "description": "150+ ready-to-use AI image generation prompts for social media, branding, e-commerce, content, headshots, and viral aesthetics",
-          "url": "https://www.midastools.co/ai-image-prompt-pack",
-          "image": "https://www.midastools.co/og-image.png",
+          "url": "https://midastools.co/ai-image-prompt-pack",
+          "image": "https://midastools.co/og-image.png",
           "offers": {
             "@type": "Offer",
             "price": "29",

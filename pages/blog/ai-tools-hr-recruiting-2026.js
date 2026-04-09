@@ -9,7 +9,7 @@ const STRIPE_SMALLBIZ = 'https://buy.stripe.com/4gMbJ0dgz4aJ1qkb46cMM0d';
 export default function AIToolsHRRecruiting2026() {
   const title = '9 AI Tools for HR and Recruiting That Cut Hiring Time in Half (2026)';
   const description = 'The best AI tools for HR and recruiting in 2026. From sourcing and screening to onboarding — these 9 tools cut average time-to-hire from 44 days to under 25, and reduce cost-per-hire by 40%.';
-  const url = 'https://www.midastools.co/blog/ai-tools-hr-recruiting-2026';
+  const url = 'https://midastools.co/blog/ai-tools-hr-recruiting-2026';
 
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -19,8 +19,8 @@ export default function AIToolsHRRecruiting2026() {
     url: url,
     datePublished: '2026-03-24',
     dateModified: '2026-03-24',
-    author: { '@type': 'Person', name: 'Rey Midas', url: 'https://www.midastools.co' },
-    publisher: { '@type': 'Organization', name: 'Midas Tools', url: 'https://www.midastools.co' },
+    author: { '@type': 'Person', name: 'Rey Midas', url: 'https://midastools.co' },
+    publisher: { '@type': 'Organization', name: 'Midas Tools', url: 'https://midastools.co' },
     mainEntityOfPage: { '@type': 'WebPage', '@id': url }
   };
 

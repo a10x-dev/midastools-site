@@ -111,7 +111,7 @@ export default function Tools() {
     '@context': 'https://schema.org',
     '@type': 'CollectionPage',
     name: 'Free AI Tools for Entrepreneurs',
-    url: 'https://www.midastools.co/tools',
+    url: 'https://midastools.co/tools',
     description: 'Free AI-powered tools for entrepreneurs and small businesses. Generate prompts, business names, and more — no signup required.',
   };
 
@@ -122,10 +122,10 @@ export default function Tools() {
         <meta name="description" content="Free AI-powered tools for entrepreneurs. AI Prompt Generator, Business Name Generator, and more. No signup required. Generate instantly." />
         <meta property="og:title" content="Free AI Tools for Entrepreneurs | Midas Tools" />
         <meta property="og:description" content="Free AI tools to grow your business. Prompt generator, business name generator, and more coming soon." />
-        <meta property="og:url" content="https://www.midastools.co/tools" />
-        <meta property="og:image" content="https://www.midastools.co/og-image.png" />
+        <meta property="og:url" content="https://midastools.co/tools" />
+        <meta property="og:image" content="https://midastools.co/og-image.png" />
         <meta name="twitter:card" content="summary_large_image" />
-        <link rel="canonical" href="https://www.midastools.co/tools" />
+        <link rel="canonical" href="https://midastools.co/tools" />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       </Head>
 

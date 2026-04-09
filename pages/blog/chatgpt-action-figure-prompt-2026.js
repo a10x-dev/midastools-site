@@ -9,7 +9,7 @@ const IMAGE_PACK_LINK = '/ai-image-prompt-pack';
 export default function ChatGPTActionFigurePrompt2026() {
   const title = 'How to Create Your Own ChatGPT Action Figure (Best Prompts + Tips)';
   const description = 'Create stunning AI action figures with ChatGPT. Copy-paste prompts for action figures, doll boxes, toy packaging, and collectible figures. The viral trend explained.';
-  const url = 'https://www.midastools.co/blog/chatgpt-action-figure-prompt-2026';
+  const url = 'https://midastools.co/blog/chatgpt-action-figure-prompt-2026';
 
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -19,8 +19,8 @@ export default function ChatGPTActionFigurePrompt2026() {
     url: url,
     datePublished: '2026-03-25',
     dateModified: '2026-03-25',
-    author: { '@type': 'Organization', name: 'Midas Tools Team', url: 'https://www.midastools.co' },
-    publisher: { '@type': 'Organization', name: 'Midas Tools', url: 'https://www.midastools.co' },
+    author: { '@type': 'Organization', name: 'Midas Tools Team', url: 'https://midastools.co' },
+    publisher: { '@type': 'Organization', name: 'Midas Tools', url: 'https://midastools.co' },
     mainEntityOfPage: { '@type': 'WebPage', '@id': url }
   };
 

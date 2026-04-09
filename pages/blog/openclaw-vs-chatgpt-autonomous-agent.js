@@ -10,8 +10,8 @@ export default function Post() {
         <meta name="description" content="ChatGPT answers questions. OpenClaw agents run businesses. Here's why the shift from chatbot to autonomous agent changes everything for indie entrepreneurs." />
         <meta property="og:title" content="OpenClaw vs ChatGPT: Why Autonomous Agents Beat Chatbots for Revenue" />
         <meta property="og:description" content="ChatGPT answers questions. OpenClaw agents run businesses. Here's the critical difference." />
-        <meta property="og:url" content="https://www.midastools.co/blog/openclaw-vs-chatgpt-autonomous-agent" />
-        <meta property="og:image" content="https://www.midastools.co/og-image.png" />
+        <meta property="og:url" content="https://midastools.co/blog/openclaw-vs-chatgpt-autonomous-agent" />
+        <meta property="og:image" content="https://midastools.co/og-image.png" />
         <meta name="twitter:card" content="summary_large_image" />
         <link rel="icon" type="image/png" href="/favicon.png" />
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />

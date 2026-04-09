@@ -172,7 +172,7 @@ export default function ImagePromptBuilder() {
     if (lighting !== 'golden') params.set('lighting', lighting);
     if (camera !== 'none') params.set('camera', camera);
     if (extra.trim()) params.set('extra', extra.trim());
-    return `https://www.midastools.co/image-prompt-builder?${params.toString()}`;
+    return `https://midastools.co/image-prompt-builder?${params.toString()}`;
   };
 
   const generate = () => {
@@ -216,12 +216,12 @@ export default function ImagePromptBuilder() {
     "@context": "https://schema.org",
     "@type": "WebApplication",
     "name": "AI Image Prompt Builder",
-    "url": "https://www.midastools.co/image-prompt-builder",
+    "url": "https://midastools.co/image-prompt-builder",
     "description": "Free visual tool to build perfect AI image prompts for ChatGPT, Midjourney, DALL-E, and Stable Diffusion. Choose styles, moods, and lighting to create stunning AI art.",
     "applicationCategory": "DesignApplication",
     "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
     "operatingSystem": "Web",
-    "publisher": { "@id": "https://www.midastools.co/#organization" }
+    "publisher": { "@id": "https://midastools.co/#organization" }
   };
 
   const faqLd = {
@@ -240,10 +240,10 @@ export default function ImagePromptBuilder() {
       <Head>
         <title>AI Image Prompt Builder — Free Tool for ChatGPT, Midjourney & DALL·E | Midas Tools</title>
         <meta name="description" content="Build perfect AI image prompts in seconds. Choose from 12 viral styles (Ghibli, Cyberpunk, Hyperrealistic), set mood & lighting, get copy-paste prompts for ChatGPT, Midjourney, DALL-E. 100% free." />
-        <link rel="canonical" href="https://www.midastools.co/image-prompt-builder" />
+        <link rel="canonical" href="https://midastools.co/image-prompt-builder" />
         <meta property="og:title" content="AI Image Prompt Builder — Create Stunning AI Art Prompts Free" />
         <meta property="og:description" content="Pick a style. Describe your idea. Get the perfect prompt. Works with ChatGPT, Midjourney, DALL-E & Stable Diffusion." />
-        <meta property="og:url" content="https://www.midastools.co/image-prompt-builder" />
+        <meta property="og:url" content="https://midastools.co/image-prompt-builder" />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="AI Image Prompt Builder — Free Tool" />

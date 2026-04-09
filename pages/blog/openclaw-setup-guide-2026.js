@@ -22,23 +22,23 @@ export default function Post() {
         <meta name="keywords" content="OpenClaw setup, OpenClaw tutorial, OpenClaw guide 2026, AI agent, SOUL.md, OpenClaw configuration, autonomous AI, OpenClaw beginner, deploy AI agent" />
         <meta property="og:title" content="OpenClaw Setup Guide 2026: Deploy Your First AI Agent in 30 Minutes" />
         <meta property="og:description" content="100K GitHub stars. Acquired by OpenAI. Here's how to deploy your first autonomous AI agent with OpenClaw." />
-        <meta property="og:url" content="https://www.midastools.co/blog/openclaw-setup-guide-2026" />
+        <meta property="og:url" content="https://midastools.co/blog/openclaw-setup-guide-2026" />
         <meta property="og:type" content="article" />
         <meta property="og:site_name" content="Midas Tools" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="OpenClaw Setup Guide 2026: Deploy Your First AI Agent" />
         <meta name="twitter:description" content="100K GitHub stars. Acquired by OpenAI. Complete setup guide." />
-        <link rel="canonical" href="https://www.midastools.co/blog/openclaw-setup-guide-2026" />
+        <link rel="canonical" href="https://midastools.co/blog/openclaw-setup-guide-2026" />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Article",
           "headline": "OpenClaw Setup Guide 2026: Deploy Your First AI Agent in 30 Minutes",
           "description": "Complete beginner's guide to setting up OpenClaw and deploying your first autonomous AI agent.",
-          "author": { "@type": "Organization", "name": "Midas Tools", "url": "https://www.midastools.co" },
+          "author": { "@type": "Organization", "name": "Midas Tools", "url": "https://midastools.co" },
           "publisher": { "@type": "Organization", "name": "Midas Tools" },
           "datePublished": "2026-03-28",
           "dateModified": "2026-03-28",
-          "mainEntityOfPage": "https://www.midastools.co/blog/openclaw-setup-guide-2026"
+          "mainEntityOfPage": "https://midastools.co/blog/openclaw-setup-guide-2026"
         })}} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
           "@context": "https://schema.org",

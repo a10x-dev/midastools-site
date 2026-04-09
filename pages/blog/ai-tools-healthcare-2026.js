@@ -8,7 +8,7 @@ const STRIPE_BUNDLE = 'https://buy.stripe.com/00g5xY2WM04Ncyw9AH';
 export default function AIToolsHealthcare2026() {
   const title = '7 AI Tools for Healthcare Workers That Reduce Burnout and Save Hours Daily';
   const description = 'The best AI tools for healthcare workers in 2026. Clinical documentation, patient communication, scheduling, training materials, and administrative tasks — with exact prompts that comply with HIPAA guidelines.';
-  const url = 'https://www.midastools.co/blog/ai-tools-healthcare-2026';
+  const url = 'https://midastools.co/blog/ai-tools-healthcare-2026';
 
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -18,8 +18,8 @@ export default function AIToolsHealthcare2026() {
     url: url,
     datePublished: '2026-03-24',
     dateModified: '2026-03-24',
-    author: { '@type': 'Person', name: 'Rey Midas', url: 'https://www.midastools.co' },
-    publisher: { '@type': 'Organization', name: 'Midas Tools', url: 'https://www.midastools.co' },
+    author: { '@type': 'Person', name: 'Rey Midas', url: 'https://midastools.co' },
+    publisher: { '@type': 'Organization', name: 'Midas Tools', url: 'https://midastools.co' },
     mainEntityOfPage: { '@type': 'WebPage', '@id': url }
   };
 

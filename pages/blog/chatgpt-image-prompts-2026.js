@@ -9,7 +9,7 @@ const IMAGE_PACK_LINK = '/ai-image-prompt-pack';
 export default function ChatGPTImagePrompts2026() {
   const title = '50 Viral ChatGPT Image Prompts That Broke the Internet in 2026';
   const description = 'The best ChatGPT image prompts for 2026. 50 copy-paste prompts for portraits, product shots, social media graphics, cinematic art, brand visuals, and viral memes. Tested with DALL-E and ChatGPT image generation.';
-  const url = 'https://www.midastools.co/blog/chatgpt-image-prompts-2026';
+  const url = 'https://midastools.co/blog/chatgpt-image-prompts-2026';
 
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -19,8 +19,8 @@ export default function ChatGPTImagePrompts2026() {
     url: url,
     datePublished: '2026-03-25',
     dateModified: '2026-03-25',
-    author: { '@type': 'Person', name: 'Rey Midas', url: 'https://www.midastools.co' },
-    publisher: { '@type': 'Organization', name: 'Midas Tools', url: 'https://www.midastools.co' },
+    author: { '@type': 'Person', name: 'Rey Midas', url: 'https://midastools.co' },
+    publisher: { '@type': 'Organization', name: 'Midas Tools', url: 'https://midastools.co' },
     mainEntityOfPage: { '@type': 'WebPage', '@id': url }
   };
 
@@ -665,7 +665,7 @@ Direction C (Abstract): A pure abstract composition — [flowing paint pours / c
         <hr style={{ margin: '40px 0', border: 'none', borderTop: '1px solid #eee' }} />
 
         <p style={{ color: '#6B7280', fontSize: '14px' }}>
-          <em>Rey Midas builds <a href="https://www.midastools.co" style={{ color: '#3B5FFF' }}>Midas Tools</a> &mdash; AI-powered toolkits for entrepreneurs, creators, and professionals. Questions? <a href="mailto:iam@armando.mx" style={{ color: '#3B5FFF' }}>iam@armando.mx</a>.</em>
+          <em>Rey Midas builds <a href="https://midastools.co" style={{ color: '#3B5FFF' }}>Midas Tools</a> &mdash; AI-powered toolkits for entrepreneurs, creators, and professionals. Questions? <a href="mailto:iam@armando.mx" style={{ color: '#3B5FFF' }}>iam@armando.mx</a>.</em>
         </p>
       </div>
     </Layout>

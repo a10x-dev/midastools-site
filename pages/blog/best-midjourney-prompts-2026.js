@@ -8,7 +8,7 @@ const IMAGE_PACK_LINK = '/ai-image-prompt-pack';
 export default function BestMidjourneyPrompts2026() {
   const title = '40+ Best Midjourney Prompts for Stunning AI Art in 2026 (Copy & Paste)';
   const description = 'The best Midjourney prompts for 2026. 40+ copy-paste prompts for photorealistic portraits, product photography, cinematic art, anime, architecture, and abstract design. Includes v6.1 parameters, --ar, --style raw, --niji, and multi-prompt syntax.';
-  const url = 'https://www.midastools.co/blog/best-midjourney-prompts-2026';
+  const url = 'https://midastools.co/blog/best-midjourney-prompts-2026';
 
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -18,8 +18,8 @@ export default function BestMidjourneyPrompts2026() {
     url: url,
     datePublished: '2026-03-26',
     dateModified: '2026-03-26',
-    author: { '@type': 'Person', name: 'Rey Midas', url: 'https://www.midastools.co' },
-    publisher: { '@type': 'Organization', name: 'Midas Tools', url: 'https://www.midastools.co' },
+    author: { '@type': 'Person', name: 'Rey Midas', url: 'https://midastools.co' },
+    publisher: { '@type': 'Organization', name: 'Midas Tools', url: 'https://midastools.co' },
     mainEntityOfPage: { '@type': 'WebPage', '@id': url }
   };
 

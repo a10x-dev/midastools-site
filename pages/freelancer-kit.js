@@ -32,19 +32,19 @@ export default function FreelancerKit() {
         <meta name="description" content="AI templates that write proposals, chase invoices, and manage clients. Built for freelancers who want to earn more and admin less. $39 one-time." />
         <meta property="og:title" content="AI Kit for Freelancers — Midas Tools" />
         <meta property="og:description" content="AI templates that write proposals, chase invoices, and manage clients. Built for freelancers who want to earn more and admin less. $39 one-time." />
-        <meta property="og:url" content="https://www.midastools.co/freelancer-kit" />
-        <meta property="og:image" content="https://www.midastools.co/og-image.png" />
+        <meta property="og:url" content="https://midastools.co/freelancer-kit" />
+        <meta property="og:image" content="https://midastools.co/og-image.png" />
         <meta name="twitter:card" content="summary_large_image" />
         <link rel="icon" type="image/png" href="/favicon.png" />
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
-        <link rel="canonical" href="https://www.midastools.co/freelancer-kit" />
+        <link rel="canonical" href="https://midastools.co/freelancer-kit" />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Product",
           "name": "Freelancer Automation AI Kit",
           "description": "AI templates that write proposals, chase invoices, onboard clients, and manage projects. Built for freelancers, consultants, and solopreneurs.",
-          "url": "https://www.midastools.co/freelancer-kit",
-          "image": "https://www.midastools.co/og-image.png",
+          "url": "https://midastools.co/freelancer-kit",
+          "image": "https://midastools.co/og-image.png",
           "brand": "Midas Tools",
           "offers": {
             "@type": "Offer",

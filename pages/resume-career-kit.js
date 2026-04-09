@@ -42,10 +42,10 @@ export default function ResumeCareerKit() {
         <meta name="keywords" content="AI resume builder, AI job search tools, ChatGPT resume prompts, AI interview prep, AI career toolkit, AI cover letter generator, LinkedIn optimization AI, salary negotiation prompts" />
         <meta property="og:title" content="AI Resume & Career Kit — Midas Tools" />
         <meta property="og:description" content="125+ AI prompts to build resumes, ace interviews, optimize LinkedIn, and negotiate higher salaries. $29 one-time." />
-        <meta property="og:url" content="https://www.midastools.co/resume-career-kit" />
-        <meta property="og:image" content="https://www.midastools.co/og-image.png" />
+        <meta property="og:url" content="https://midastools.co/resume-career-kit" />
+        <meta property="og:image" content="https://midastools.co/og-image.png" />
         <meta name="twitter:card" content="summary_large_image" />
-        <link rel="canonical" href="https://www.midastools.co/resume-career-kit" />
+        <link rel="canonical" href="https://midastools.co/resume-career-kit" />
         <link rel="icon" type="image/png" href="/favicon.png" />
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
 
@@ -55,14 +55,14 @@ export default function ResumeCareerKit() {
           '@type': 'Product',
           name: 'AI Resume & Career Kit',
           description: '125+ AI prompts for resume building, cover letters, LinkedIn optimization, interview prep, job search strategy, and salary negotiation.',
-          url: 'https://www.midastools.co/resume-career-kit',
+          url: 'https://midastools.co/resume-career-kit',
           brand: 'Midas Tools',
           offers: {
             '@type': 'Offer',
             price: '29.00',
             priceCurrency: 'USD',
             availability: 'https://schema.org/InStock',
-            url: 'https://www.midastools.co/resume-career-kit',
+            url: 'https://midastools.co/resume-career-kit',
             hasMerchantReturnPolicy: {
               '@type': 'MerchantReturnPolicy',
               applicableCountry: 'US',
@@ -82,7 +82,7 @@ export default function ResumeCareerKit() {
               },
             },
           },
-          image: 'https://www.midastools.co/og-image.png',
+          image: 'https://midastools.co/og-image.png',
           aggregateRating: {
             '@type': 'AggregateRating',
             ratingValue: '4.8',

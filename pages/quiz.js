@@ -175,7 +175,7 @@ export default function Quiz() {
     '@type': 'WebApplication',
     name: 'AI Tools Quiz — What AI Kit Do You Need?',
     description: 'Take this 60-second quiz to find the perfect AI prompt kit for your role, goals, and experience level.',
-    url: 'https://www.midastools.co/quiz',
+    url: 'https://midastools.co/quiz',
     applicationCategory: 'BusinessApplication',
     offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
   };
@@ -184,14 +184,14 @@ export default function Quiz() {
     <Layout>
       <Head>
         <title>What AI Kit Do You Need? Free Quiz — Midas Tools</title>
-        <link rel="canonical" href="https://www.midastools.co/quiz" />
+        <link rel="canonical" href="https://midastools.co/quiz" />
         <link rel="icon" type="image/png" href="/favicon.png" />
         <meta name="description" content="Take this 60-second quiz to find the perfect AI prompt kit for your role. Personalized recommendations based on your goals, experience, and budget." />
         <meta name="twitter:card" content="summary_large_image" />
         <meta property="og:title" content="What AI Kit Do You Need? Free 60-Second Quiz" />
         <meta property="og:description" content="Answer 5 questions. Get a personalized AI toolkit recommendation. Free, no account required." />
-        <meta property="og:image" content="https://www.midastools.co/og-image.png" />
-        <meta property="og:url" content="https://www.midastools.co/quiz" />
+        <meta property="og:image" content="https://midastools.co/og-image.png" />
+        <meta property="og:url" content="https://midastools.co/quiz" />
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       </Head>
@@ -371,7 +371,7 @@ export default function Quiz() {
               <div className="share-row">
                 <a
                   className="share-btn"
-                  href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(`I just took the AI Kit Quiz and got recommended the ${isBundle ? 'All 8 Kits Bundle' : primaryProduct?.name}! Find your perfect AI toolkit:`)}%0A%0Ahttps://www.midastools.co/quiz`}
+                  href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(`I just took the AI Kit Quiz and got recommended the ${isBundle ? 'All 8 Kits Bundle' : primaryProduct?.name}! Find your perfect AI toolkit:`)}%0A%0Ahttps://midastools.co/quiz`}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -379,7 +379,7 @@ export default function Quiz() {
                 </a>
                 <a
                   className="share-btn"
-                  href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent('https://www.midastools.co/quiz')}`}
+                  href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent('https://midastools.co/quiz')}`}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -387,7 +387,7 @@ export default function Quiz() {
                 </a>
                 <button
                   className="share-btn"
-                  onClick={() => { navigator.clipboard?.writeText('https://www.midastools.co/quiz'); }}
+                  onClick={() => { navigator.clipboard?.writeText('https://midastools.co/quiz'); }}
                 >
                   Copy Link
                 </button>

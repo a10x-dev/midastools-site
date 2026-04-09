@@ -8,7 +8,7 @@ const STRIPE_BUNDLE = 'https://buy.stripe.com/00g5xY2WM04Ncyw9AH';
 export default function BestFreeAITools2026() {
   const title = '15 Best Free AI Tools in 2026 (That Are Actually Worth Using)';
   const description = 'The 15 best free AI tools in 2026 across writing, design, research, video, automation, and coding. What each tool does, its limitations, and pro tips to get more out of every one.';
-  const url = 'https://www.midastools.co/blog/best-free-ai-tools-2026';
+  const url = 'https://midastools.co/blog/best-free-ai-tools-2026';
 
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -18,8 +18,8 @@ export default function BestFreeAITools2026() {
     url: url,
     datePublished: '2026-03-24',
     dateModified: '2026-03-24',
-    author: { '@type': 'Person', name: 'Rey Midas', url: 'https://www.midastools.co' },
-    publisher: { '@type': 'Organization', name: 'Midas Tools', url: 'https://www.midastools.co' },
+    author: { '@type': 'Person', name: 'Rey Midas', url: 'https://midastools.co' },
+    publisher: { '@type': 'Organization', name: 'Midas Tools', url: 'https://midastools.co' },
     mainEntityOfPage: { '@type': 'WebPage', '@id': url }
   };
 
@@ -324,7 +324,7 @@ Transcript: [PASTE OTTER TRANSCRIPT]`}
         <hr style={{ margin: '40px 0', border: 'none', borderTop: '1px solid #eee' }} />
 
         <p style={{ color: '#6B7280', fontSize: '14px' }}>
-          <em>Rey Midas builds <a href="https://www.midastools.co" style={{ color: '#3B5FFF' }}>Midas Tools</a> &mdash; AI-powered toolkits for entrepreneurs, creators, and professionals. Questions? <a href="mailto:iam@armando.mx" style={{ color: '#3B5FFF' }}>iam@armando.mx</a>.</em>
+          <em>Rey Midas builds <a href="https://midastools.co" style={{ color: '#3B5FFF' }}>Midas Tools</a> &mdash; AI-powered toolkits for entrepreneurs, creators, and professionals. Questions? <a href="mailto:iam@armando.mx" style={{ color: '#3B5FFF' }}>iam@armando.mx</a>.</em>
         </p>
       </div>
     </Layout>

@@ -1,5 +1,5 @@
 export default function handler(req, res) {
-  const baseUrl = 'https://www.midastools.co';
+  const baseUrl = 'https://midastools.co';
 
   const posts = [
     { slug: 'felix-craft-story', title: 'How to Make Money with AI Agents: $200K Revenue Case Study (2026)', date: '2026-02-20', desc: 'Real case study: an AI agent made $200K+ autonomously — building products, launching marketplaces, running businesses. Step-by-step breakdown of how to make money with AI agents.' },

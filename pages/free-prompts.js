@@ -142,13 +142,13 @@ export default function FreePrompts() {
 
   const title = '5 Free AI Prompts That Actually Make Money';
   const description = 'Get 5 battle-tested AI prompts for sales, content, freelancing, strategy, and e-commerce. Free, no strings attached. Works with ChatGPT, Claude, and Gemini.';
-  const url = 'https://www.midastools.co/free-prompts';
+  const url = 'https://midastools.co/free-prompts';
 
   return (
     <Layout>
       <Head>
         <title>{title} | Midas Tools</title>
-        <link rel="canonical" href="https://www.midastools.co/free-prompts" />
+        <link rel="canonical" href="https://midastools.co/free-prompts" />
         <meta name="description" content={description} />
         <meta name="keywords" content="free AI prompts, ChatGPT prompts free, AI prompts for business, free AI tools, best AI prompts 2026" />
         <meta property="og:title" content={title} />
@@ -166,7 +166,7 @@ export default function FreePrompts() {
           name: title,
           description: description,
           url: url,
-          publisher: { '@type': 'Organization', name: 'Midas Tools', url: 'https://www.midastools.co' },
+          publisher: { '@type': 'Organization', name: 'Midas Tools', url: 'https://midastools.co' },
         })}} />
       </Head>
 

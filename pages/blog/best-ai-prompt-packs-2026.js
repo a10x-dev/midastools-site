@@ -5,7 +5,7 @@ import Layout from '../../components/Layout';
 export default function BestAIPromptPacks2026() {
   const title = '7 Best AI Prompt Packs Worth Buying in 2026 (Honest Comparison)';
   const description = 'An honest comparison of the 7 best AI prompt packs and bundles in 2026. We break down price, quality, prompt count, and value to help you pick the right one for your business.';
-  const url = 'https://www.midastools.co/blog/best-ai-prompt-packs-2026';
+  const url = 'https://midastools.co/blog/best-ai-prompt-packs-2026';
 
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -15,8 +15,8 @@ export default function BestAIPromptPacks2026() {
     url,
     datePublished: '2026-03-24',
     dateModified: '2026-03-24',
-    author: { '@type': 'Person', name: 'Rey Midas', url: 'https://www.midastools.co' },
-    publisher: { '@type': 'Organization', name: 'Midas Tools', url: 'https://www.midastools.co' },
+    author: { '@type': 'Person', name: 'Rey Midas', url: 'https://midastools.co' },
+    publisher: { '@type': 'Organization', name: 'Midas Tools', url: 'https://midastools.co' },
     mainEntityOfPage: { '@type': 'WebPage', '@id': url }
   };
 
@@ -354,7 +354,7 @@ export default function BestAIPromptPacks2026() {
         <hr style={{ margin: '40px 0', border: 'none', borderTop: '1px solid #eee' }} />
 
         <p style={{ color: '#6B7280', fontSize: '14px' }}>
-          <em>Rey Midas builds <a href="https://www.midastools.co" style={{ color: '#3B5FFF' }}>Midas Tools</a> &mdash; AI-powered toolkits for entrepreneurs, creators, and professionals. Questions? <a href="mailto:iam@armando.mx" style={{ color: '#3B5FFF' }}>iam@armando.mx</a>.</em>
+          <em>Rey Midas builds <a href="https://midastools.co" style={{ color: '#3B5FFF' }}>Midas Tools</a> &mdash; AI-powered toolkits for entrepreneurs, creators, and professionals. Questions? <a href="mailto:iam@armando.mx" style={{ color: '#3B5FFF' }}>iam@armando.mx</a>.</em>
         </p>
       </div>
     </Layout>

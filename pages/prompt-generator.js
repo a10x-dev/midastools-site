@@ -293,7 +293,7 @@ export default function PromptGenerator() {
 
   const title = 'Free AI Prompt Generator — Create Perfect Prompts Instantly';
   const description = 'Generate custom AI prompts for sales emails, social media, product descriptions, blog outlines, cold outreach, image generation, video scripts, and business strategy. Free, instant, no signup required.';
-  const url = 'https://www.midastools.co/prompt-generator';
+  const url = 'https://midastools.co/prompt-generator';
 
   return (
     <Layout>
@@ -319,7 +319,7 @@ export default function PromptGenerator() {
           applicationCategory: 'Productivity',
           operatingSystem: 'Web',
           offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
-          publisher: { '@type': 'Organization', name: 'Midas Tools', url: 'https://www.midastools.co' },
+          publisher: { '@type': 'Organization', name: 'Midas Tools', url: 'https://midastools.co' },
         })}} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
           '@context': 'https://schema.org',

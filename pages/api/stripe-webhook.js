@@ -293,14 +293,14 @@ function detectKit(session) {
 
 function buildBundleDownloadLinks(kit) {
   return kit.files.map(f =>
-    `<a href="https://www.midastools.co/${f.file}" style="display:block;background:#F9FAFB;border:1px solid #E5E7EB;border-radius:8px;padding:14px 20px;margin-bottom:8px;color:#3B5FFF;font-weight:700;font-size:15px;text-decoration:none;">
+    `<a href="https://midastools.co/${f.file}" style="display:block;background:#F9FAFB;border:1px solid #E5E7EB;border-radius:8px;padding:14px 20px;margin-bottom:8px;color:#3B5FFF;font-weight:700;font-size:15px;text-decoration:none;">
       ⬇ ${f.name}
     </a>`
   ).join('');
 }
 
 async function sendDownloadEmail(customerEmail, customerName, kit) {
-  const baseUrl = 'https://www.midastools.co';
+  const baseUrl = 'https://midastools.co';
   const isBundle = kit.file === null;
 
   const downloadSection = isBundle

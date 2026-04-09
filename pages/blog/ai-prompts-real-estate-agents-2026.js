@@ -9,7 +9,7 @@ const BUNDLE_URL = 'https://buy.stripe.com/bJe7sK0tNdLjgle0pscMM0b';
 export default function AIPromptsRealEstateAgents2026() {
   const title = '20 AI Prompts Every Real Estate Agent Needs in 2026';
   const description = 'The best AI prompts for real estate agents in 2026. 20 copy-paste ChatGPT prompts for listing descriptions, lead generation, social media, market analysis, and business operations. Close more deals faster.';
-  const url = 'https://www.midastools.co/blog/ai-prompts-real-estate-agents-2026';
+  const url = 'https://midastools.co/blog/ai-prompts-real-estate-agents-2026';
 
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -19,8 +19,8 @@ export default function AIPromptsRealEstateAgents2026() {
     url: url,
     datePublished: '2026-03-27',
     dateModified: '2026-03-27',
-    author: { '@type': 'Person', name: 'Rey Midas', url: 'https://www.midastools.co' },
-    publisher: { '@type': 'Organization', name: 'Midas Tools', url: 'https://www.midastools.co' },
+    author: { '@type': 'Person', name: 'Rey Midas', url: 'https://midastools.co' },
+    publisher: { '@type': 'Organization', name: 'Midas Tools', url: 'https://midastools.co' },
     mainEntityOfPage: { '@type': 'WebPage', '@id': url }
   };
 
@@ -836,7 +836,7 @@ Tone: Grateful, not desperate. Confident, not begging.`}
         <hr style={{ margin: '40px 0', border: 'none', borderTop: '1px solid #eee' }} />
 
         <p style={{ color: '#6B7280', fontSize: '14px' }}>
-          <em>Rey Midas builds <a href="https://www.midastools.co" style={{ color: '#3B5FFF' }}>Midas Tools</a> &mdash; AI-powered toolkits for entrepreneurs, creators, and professionals. Questions? <a href="mailto:iam@armando.mx" style={{ color: '#3B5FFF' }}>iam@armando.mx</a>.</em>
+          <em>Rey Midas builds <a href="https://midastools.co" style={{ color: '#3B5FFF' }}>Midas Tools</a> &mdash; AI-powered toolkits for entrepreneurs, creators, and professionals. Questions? <a href="mailto:iam@armando.mx" style={{ color: '#3B5FFF' }}>iam@armando.mx</a>.</em>
         </p>
       </div>
     </Layout>

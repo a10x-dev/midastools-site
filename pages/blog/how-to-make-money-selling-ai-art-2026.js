@@ -9,7 +9,7 @@ const STRIPE_MEGA_PACK = 'https://buy.stripe.com/6oE8Aa1SIgRFgOQ5kD';
 export default function HowToMakeMoneySellingAiArt2026() {
   const title = 'How to Make Money Selling AI Art in 2026: 7 Proven Methods ($500–$10K/Month)';
   const description = 'Learn how to make money selling AI art in 2026. 7 proven methods including print-on-demand, stock photography, commissions, prompt packs, and more. Real income numbers and copy-paste prompts included.';
-  const url = 'https://www.midastools.co/blog/how-to-make-money-selling-ai-art-2026';
+  const url = 'https://midastools.co/blog/how-to-make-money-selling-ai-art-2026';
 
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -19,8 +19,8 @@ export default function HowToMakeMoneySellingAiArt2026() {
     url: url,
     datePublished: '2026-03-26',
     dateModified: '2026-03-26',
-    author: { '@type': 'Person', name: 'Rey Midas', url: 'https://www.midastools.co' },
-    publisher: { '@type': 'Organization', name: 'Midas Tools', url: 'https://www.midastools.co' },
+    author: { '@type': 'Person', name: 'Rey Midas', url: 'https://midastools.co' },
+    publisher: { '@type': 'Organization', name: 'Midas Tools', url: 'https://midastools.co' },
     mainEntityOfPage: { '@type': 'WebPage', '@id': url }
   };
 

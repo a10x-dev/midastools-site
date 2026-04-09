@@ -186,7 +186,7 @@ function generateFixedPrompt(original, sins) {
 
 function generateShareUrl(score, severityLabel) {
   const params = new URLSearchParams({ score: score.toString(), level: severityLabel });
-  return `https://www.midastools.co/prompt-roaster?${params.toString()}`;
+  return `https://midastools.co/prompt-roaster?${params.toString()}`;
 }
 
 /* ── Social Proof Counter ───────────────────────────────────── */
@@ -246,7 +246,7 @@ export default function PromptRoaster() {
 
   const handleTweet = () => {
     if (!result) return;
-    const text = encodeURIComponent(result.severity.twitterText + ' https://www.midastools.co/prompt-roaster');
+    const text = encodeURIComponent(result.severity.twitterText + ' https://midastools.co/prompt-roaster');
     window.open(`https://twitter.com/intent/tweet?text=${text}`, '_blank');
   };
 
@@ -274,7 +274,7 @@ export default function PromptRoaster() {
 
   const title = 'AI Prompt Roaster — Get Your Bad Prompts Roasted (Then Fixed) | Midas Tools';
   const description = 'Paste your AI prompt and get brutally honest feedback on what\'s wrong with it. Then get a fixed, expert-level version. 100% free, hilarious, and actually useful.';
-  const url = 'https://www.midastools.co/prompt-roaster';
+  const url = 'https://midastools.co/prompt-roaster';
 
   return (
     <Layout>
@@ -300,7 +300,7 @@ export default function PromptRoaster() {
           applicationCategory: 'Entertainment',
           operatingSystem: 'Web',
           offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
-          publisher: { '@type': 'Organization', name: 'Midas Tools', url: 'https://www.midastools.co' },
+          publisher: { '@type': 'Organization', name: 'Midas Tools', url: 'https://midastools.co' },
         })}} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
           '@context': 'https://schema.org',

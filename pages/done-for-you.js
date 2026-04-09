@@ -11,7 +11,7 @@ export default function DoneForYou() {
         <title>Done-For-You OpenClaw Setup — Midas Tools</title>
         <link rel="icon" type="image/png" href="/favicon.png" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta property="og:image" content="https://www.midastools.co/og-image.png" />
+        <meta property="og:image" content="https://midastools.co/og-image.png" />
         <meta name="description" content="We configure your entire OpenClaw agent for you — SOUL.md, heartbeat system, API connections, and first product launch. $299 one-time." />
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
       </Head>

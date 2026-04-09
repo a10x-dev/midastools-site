@@ -43,13 +43,13 @@ export default function EmailMarketingKit() {
         <meta name="keywords" content="AI email marketing, email templates, welcome sequence AI, sales email prompts, newsletter generator, cold outreach templates, email copywriting AI" />
         <meta property="og:title" content="AI Email Marketing Kit — Welcome Sequences, Sales Emails & Newsletter Prompts | Midas Tools" />
         <meta property="og:description" content="125+ AI prompts and templates for email marketing. Welcome sequences, sales emails, newsletters, cold outreach, and subject lines — all for $29 one-time." />
-        <meta property="og:url" content="https://www.midastools.co/email-marketing-kit" />
-        <meta property="og:image" content="https://www.midastools.co/og-image.png" />
+        <meta property="og:url" content="https://midastools.co/email-marketing-kit" />
+        <meta property="og:image" content="https://midastools.co/og-image.png" />
         <meta property="og:type" content="product" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="AI Email Marketing Kit — Midas Tools" />
         <meta name="twitter:description" content="125+ AI prompts for email marketing. Welcome sequences, sales emails, newsletters, cold outreach, and subject lines. $29 one-time." />
-        <link rel="canonical" href="https://www.midastools.co/email-marketing-kit" />
+        <link rel="canonical" href="https://midastools.co/email-marketing-kit" />
         <link rel="icon" type="image/png" href="/favicon.png" />
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -57,8 +57,8 @@ export default function EmailMarketingKit() {
           "@type": "Product",
           "name": "AI Email Marketing Kit",
           "description": "125+ AI prompts and templates for email marketing — welcome sequences, sales emails, newsletter content, cold outreach, retention campaigns, and subject line formulas.",
-          "url": "https://www.midastools.co/email-marketing-kit",
-          "image": "https://www.midastools.co/og-image.png",
+          "url": "https://midastools.co/email-marketing-kit",
+          "image": "https://midastools.co/og-image.png",
           "brand": "Midas Tools",
           "offers": {
             "@type": "Offer",

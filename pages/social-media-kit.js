@@ -42,13 +42,13 @@ export default function SocialMediaKit() {
         <meta name="keywords" content="AI social media manager, social media templates, content calendar AI, caption generator, viral content prompts, social media ad copy templates" />
         <meta property="og:title" content="AI Social Media Manager Kit — Content Calendars, Captions & Viral Formulas | Midas Tools" />
         <meta property="og:description" content="150+ AI prompts and templates for social media managers. Calendars, captions, viral formulas, analytics, and ad copy — all for $39 one-time." />
-        <meta property="og:url" content="https://www.midastools.co/social-media-kit" />
-        <meta property="og:image" content="https://www.midastools.co/og-image.png" />
+        <meta property="og:url" content="https://midastools.co/social-media-kit" />
+        <meta property="og:image" content="https://midastools.co/og-image.png" />
         <meta property="og:type" content="product" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="AI Social Media Manager Kit — Midas Tools" />
         <meta name="twitter:description" content="150+ AI prompts for social media managers. Calendars, captions, viral content, analytics, and paid ads. $39 one-time." />
-        <link rel="canonical" href="https://www.midastools.co/social-media-kit" />
+        <link rel="canonical" href="https://midastools.co/social-media-kit" />
         <link rel="icon" type="image/png" href="/favicon.png" />
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -56,8 +56,8 @@ export default function SocialMediaKit() {
           "@type": "Product",
           "name": "AI Social Media Manager Kit",
           "description": "150+ AI prompts and templates for social media managers — content calendars, caption hooks, viral formulas, analytics, community management, and paid ad copy for every major platform.",
-          "url": "https://www.midastools.co/social-media-kit",
-          "image": "https://www.midastools.co/og-image.png",
+          "url": "https://midastools.co/social-media-kit",
+          "image": "https://midastools.co/og-image.png",
           "brand": "Midas Tools",
           "offers": {
             "@type": "Offer",

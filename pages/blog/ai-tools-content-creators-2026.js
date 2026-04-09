@@ -9,7 +9,7 @@ const BUNDLE_URL = 'https://buy.stripe.com/bJe7sK0tNdLjgle0pscMM0b';
 export default function AIToolsContentCreators2026() {
   const title = '10 AI Tools Content Creators Are Using to 10x Their Output in 2026';
   const description = 'The best AI tools for content creators in 2026. 10 tested tools for writing, video, design, and distribution — with pricing, honest reviews, and copy-paste prompts to get started immediately.';
-  const url = 'https://www.midastools.co/blog/ai-tools-content-creators-2026';
+  const url = 'https://midastools.co/blog/ai-tools-content-creators-2026';
 
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -19,8 +19,8 @@ export default function AIToolsContentCreators2026() {
     url: url,
     datePublished: '2026-03-27',
     dateModified: '2026-03-27',
-    author: { '@type': 'Person', name: 'Rey Midas', url: 'https://www.midastools.co' },
-    publisher: { '@type': 'Organization', name: 'Midas Tools', url: 'https://www.midastools.co' },
+    author: { '@type': 'Person', name: 'Rey Midas', url: 'https://midastools.co' },
+    publisher: { '@type': 'Organization', name: 'Midas Tools', url: 'https://midastools.co' },
     mainEntityOfPage: { '@type': 'WebPage', '@id': url }
   };
 

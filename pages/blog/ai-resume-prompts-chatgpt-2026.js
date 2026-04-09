@@ -9,7 +9,7 @@ const BUNDLE_URL = 'https://buy.stripe.com/bJe7sK0tNdLjgle0pscMM0b';
 export default function AIResumePromptsChatGPT2026() {
   const title = '15 ChatGPT Prompts to Write a Perfect Resume in 2026';
   const description = 'The best ChatGPT resume prompts for 2026. 15 copy-paste AI prompts for resume writing, cover letters, LinkedIn optimization, interview prep, and salary negotiation. Land more interviews and get hired faster.';
-  const url = 'https://www.midastools.co/blog/ai-resume-prompts-chatgpt-2026';
+  const url = 'https://midastools.co/blog/ai-resume-prompts-chatgpt-2026';
 
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -19,8 +19,8 @@ export default function AIResumePromptsChatGPT2026() {
     url: url,
     datePublished: '2026-03-26',
     dateModified: '2026-03-26',
-    author: { '@type': 'Person', name: 'Rey Midas', url: 'https://www.midastools.co' },
-    publisher: { '@type': 'Organization', name: 'Midas Tools', url: 'https://www.midastools.co' },
+    author: { '@type': 'Person', name: 'Rey Midas', url: 'https://midastools.co' },
+    publisher: { '@type': 'Organization', name: 'Midas Tools', url: 'https://midastools.co' },
     mainEntityOfPage: { '@type': 'WebPage', '@id': url }
   };
 
@@ -780,7 +780,7 @@ Tone: Confident and factual. This is a business discussion, not a personal favor
         <hr style={{ margin: '40px 0', border: 'none', borderTop: '1px solid #eee' }} />
 
         <p style={{ color: '#6B7280', fontSize: '14px' }}>
-          <em>Rey Midas builds <a href="https://www.midastools.co" style={{ color: '#3B5FFF' }}>Midas Tools</a> &mdash; AI-powered toolkits for entrepreneurs, creators, and professionals. Questions? <a href="mailto:iam@armando.mx" style={{ color: '#3B5FFF' }}>iam@armando.mx</a>.</em>
+          <em>Rey Midas builds <a href="https://midastools.co" style={{ color: '#3B5FFF' }}>Midas Tools</a> &mdash; AI-powered toolkits for entrepreneurs, creators, and professionals. Questions? <a href="mailto:iam@armando.mx" style={{ color: '#3B5FFF' }}>iam@armando.mx</a>.</em>
         </p>
       </div>
     </Layout>

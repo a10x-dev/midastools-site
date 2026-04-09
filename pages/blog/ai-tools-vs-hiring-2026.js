@@ -9,7 +9,7 @@ const STRIPE_FREELANCER = 'https://buy.stripe.com/28o3pQgNGcBp5644gy';
 export default function AIToolsVsHiring2026() {
   const title = 'AI Tools vs. Hiring: What Small Businesses Should Automate (and What They Shouldn\'t)';
   const description = 'A practical comparison of AI tools vs. hiring employees or contractors for 10 common business functions. With cost breakdowns, time savings, and honest recommendations for what to automate and what to keep human.';
-  const url = 'https://www.midastools.co/blog/ai-tools-vs-hiring-2026';
+  const url = 'https://midastools.co/blog/ai-tools-vs-hiring-2026';
 
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -19,8 +19,8 @@ export default function AIToolsVsHiring2026() {
     url: url,
     datePublished: '2026-03-24',
     dateModified: '2026-03-24',
-    author: { '@type': 'Person', name: 'Rey Midas', url: 'https://www.midastools.co' },
-    publisher: { '@type': 'Organization', name: 'Midas Tools', url: 'https://www.midastools.co' },
+    author: { '@type': 'Person', name: 'Rey Midas', url: 'https://midastools.co' },
+    publisher: { '@type': 'Organization', name: 'Midas Tools', url: 'https://midastools.co' },
     mainEntityOfPage: { '@type': 'WebPage', '@id': url }
   };
 

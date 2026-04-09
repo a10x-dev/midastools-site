@@ -16,7 +16,7 @@ export async function getStaticProps({ params }) {
 }
 
 export default function PromptPage({ template, slug }) {
-  const canonicalUrl = `https://www.midastools.co/prompts/${slug}`;
+  const canonicalUrl = `https://midastools.co/prompts/${slug}`;
 
   return (
     <Layout>
@@ -31,7 +31,7 @@ export default function PromptPage({ template, slug }) {
         <meta property="og:url" content={canonicalUrl} />
         <meta property="og:title" content={template.title} />
         <meta property="og:description" content={template.description} />
-        <meta property="og:image" content="https://www.midastools.co/og-image.png" />
+        <meta property="og:image" content="https://midastools.co/og-image.png" />
         <meta property="og:site_name" content="Midas Tools" />
         <script
           type="application/ld+json"
@@ -42,8 +42,8 @@ export default function PromptPage({ template, slug }) {
               headline: template.h1,
               description: template.description,
               url: canonicalUrl,
-              author: { '@type': 'Organization', name: 'Midas Tools', url: 'https://www.midastools.co' },
-              publisher: { '@type': 'Organization', name: 'Midas Tools', url: 'https://www.midastools.co' },
+              author: { '@type': 'Organization', name: 'Midas Tools', url: 'https://midastools.co' },
+              publisher: { '@type': 'Organization', name: 'Midas Tools', url: 'https://midastools.co' },
               mainEntityOfPage: canonicalUrl,
             }),
           }}

@@ -7,7 +7,7 @@ const BUNDLE_URL = 'https://buy.stripe.com/4gw5mf0Zl1U5aVW5kp';
 export default function ChatGPTPromptsStudents2026() {
   const title = '30 ChatGPT Prompts Every Student Needs in 2026 (Study Smarter, Not Harder)';
   const description = 'The best ChatGPT prompts for students in 2026. Copy-paste prompts for essays, studying, note-taking, exam prep, and time management. Free prompts inside.';
-  const url = 'https://www.midastools.co/blog/chatgpt-prompts-students-2026';
+  const url = 'https://midastools.co/blog/chatgpt-prompts-students-2026';
 
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -17,8 +17,8 @@ export default function ChatGPTPromptsStudents2026() {
     url: url,
     datePublished: '2026-03-25',
     dateModified: '2026-03-25',
-    author: { '@type': 'Organization', name: 'Midas Tools Team', url: 'https://www.midastools.co' },
-    publisher: { '@type': 'Organization', name: 'Midas Tools', url: 'https://www.midastools.co' },
+    author: { '@type': 'Organization', name: 'Midas Tools Team', url: 'https://midastools.co' },
+    publisher: { '@type': 'Organization', name: 'Midas Tools', url: 'https://midastools.co' },
     mainEntityOfPage: { '@type': 'WebPage', '@id': url }
   };
 
@@ -803,7 +803,7 @@ After the mind map, suggest the 3 connections between branches that are most lik
         <hr style={{ margin: '40px 0', border: 'none', borderTop: '1px solid #eee' }} />
 
         <p style={{ color: '#6B7280', fontSize: '14px' }}>
-          <em>The Midas Tools Team builds <a href="https://www.midastools.co" style={{ color: '#3B5FFF' }}>Midas Tools</a> &mdash; AI-powered toolkits for entrepreneurs, creators, and students. Questions? <a href="mailto:iam@armando.mx" style={{ color: '#3B5FFF' }}>iam@armando.mx</a>.</em>
+          <em>The Midas Tools Team builds <a href="https://midastools.co" style={{ color: '#3B5FFF' }}>Midas Tools</a> &mdash; AI-powered toolkits for entrepreneurs, creators, and students. Questions? <a href="mailto:iam@armando.mx" style={{ color: '#3B5FFF' }}>iam@armando.mx</a>.</em>
         </p>
       </div>
     </Layout>

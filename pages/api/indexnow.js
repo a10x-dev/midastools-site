@@ -3,7 +3,7 @@
 // GET /api/indexnow - returns status of last submission
 
 const INDEXNOW_KEY = '2935cf832fa6443d608bd993ec83dad9';
-const HOST = 'www.midastools.co';
+const HOST = 'midastools.co';
 const KEY_LOCATION = `https://${HOST}/${INDEXNOW_KEY}.txt`;
 
 // All URLs to submit — synced with sitemap.xml (129 URLs)

@@ -10,7 +10,7 @@ export default function App({ Component, pageProps }) {
     <>
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="alternate" type="application/rss+xml" title="Midas Tools Blog" href="https://www.midastools.co/api/rss" />
+        <link rel="alternate" type="application/rss+xml" title="Midas Tools Blog" href="https://midastools.co/api/rss" />
       </Head>
 
       {/* Global Organization + WebSite Schema — helps search engines understand our brand */}
@@ -22,22 +22,22 @@ export default function App({ Component, pageProps }) {
             "@graph": [
               {
                 "@type": "Organization",
-                "@id": "https://www.midastools.co/#organization",
+                "@id": "https://midastools.co/#organization",
                 "name": "Midas Tools",
-                "url": "https://www.midastools.co",
-                "logo": "https://www.midastools.co/favicon.png",
+                "url": "https://midastools.co",
+                "logo": "https://midastools.co/favicon.png",
                 "description": "AI prompt kits that help you make money. 2,000+ copy-paste prompts for ChatGPT, Claude, and any LLM.",
                 "sameAs": ["https://github.com/manduks/free-ai-prompts"]
               },
               {
                 "@type": "WebSite",
-                "@id": "https://www.midastools.co/#website",
-                "url": "https://www.midastools.co",
+                "@id": "https://midastools.co/#website",
+                "url": "https://midastools.co",
                 "name": "Midas Tools",
-                "publisher": { "@id": "https://www.midastools.co/#organization" },
+                "publisher": { "@id": "https://midastools.co/#organization" },
                 "potentialAction": {
                   "@type": "SearchAction",
-                  "target": "https://www.midastools.co/blog?q={search_term_string}",
+                  "target": "https://midastools.co/blog?q={search_term_string}",
                   "query-input": "required name=search_term_string"
                 }
               }

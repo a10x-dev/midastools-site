@@ -8,7 +8,7 @@ const STRIPE_BUNDLE = 'https://buy.stripe.com/bJe7sK0tNdLjgle0pscMM0b';
 export default function AIToolsStudents2026() {
   const title = '11 AI Tools Every Student Needs in 2026 (Most Are Free)';
   const description = 'The best AI tools for students in 2026. Study smarter, write better papers, research faster, and crush exams — with copy-paste prompts that actually work for academic tasks.';
-  const url = 'https://www.midastools.co/blog/ai-tools-students-2026';
+  const url = 'https://midastools.co/blog/ai-tools-students-2026';
 
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -18,8 +18,8 @@ export default function AIToolsStudents2026() {
     url: url,
     datePublished: '2026-03-24',
     dateModified: '2026-03-24',
-    author: { '@type': 'Person', name: 'Rey Midas', url: 'https://www.midastools.co' },
-    publisher: { '@type': 'Organization', name: 'Midas Tools', url: 'https://www.midastools.co' },
+    author: { '@type': 'Person', name: 'Rey Midas', url: 'https://midastools.co' },
+    publisher: { '@type': 'Organization', name: 'Midas Tools', url: 'https://midastools.co' },
     mainEntityOfPage: { '@type': 'WebPage', '@id': url }
   };
 

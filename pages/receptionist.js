@@ -73,8 +73,8 @@ export default function Receptionist() {
         <meta name="description" content="Deploy a 24/7 AI receptionist that answers calls, books appointments, and never misses a lead — for $499 setup + $299/mo. Dental, law, real estate. Setup in 48 hours." />
         <meta property="og:title" content="AI Phone Receptionist for Small Business — Midas Tools" />
         <meta property="og:description" content="Your business answers every call, 24/7. AI receptionist that books appointments and captures leads automatically. $499 setup + $299/mo." />
-        <meta property="og:url" content="https://www.midastools.co/receptionist" />
-        <meta property="og:image" content="https://www.midastools.co/og-image.png" />
+        <meta property="og:url" content="https://midastools.co/receptionist" />
+        <meta property="og:image" content="https://midastools.co/og-image.png" />
         <meta name="twitter:card" content="summary_large_image" />
         <link rel="icon" type="image/png" href="/favicon.png" />
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
@@ -84,9 +84,9 @@ export default function Receptionist() {
             {
               "@type": "Service",
               "name": "AI Phone Receptionist for Small Business",
-              "provider": {"@type": "Organization", "name": "Midas Tools", "url": "https://www.midastools.co"},
+              "provider": {"@type": "Organization", "name": "Midas Tools", "url": "https://midastools.co"},
               "description": "24/7 AI phone receptionist that answers calls, books appointments, qualifies leads, and escalates emergencies for small businesses.",
-              "url": "https://www.midastools.co/receptionist",
+              "url": "https://midastools.co/receptionist",
               "offers": {
                 "@type": "Offer",
                 "price": "299",

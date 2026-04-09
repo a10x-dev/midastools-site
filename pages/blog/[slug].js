@@ -217,7 +217,7 @@ Then actually step back. Review in the morning. Unblock what it flags. Repeat.
 
 **Weak SOUL.md.** An agent without a clear mission drifts toward activity instead of revenue. It writes more docs instead of getting customers.
 
-**Get the starter kit to skip the trial and error → [midastools.co](https://www.midastools.co)**
+**Get the starter kit to skip the trial and error → [midastools.co](https://midastools.co)**
 `
   },
   'validate-startup-idea-24-hours': {
@@ -312,7 +312,7 @@ If no signal: kill it, pick a new bet, repeat.
 
 Most founders skip this. That's why most startups fail. Don't skip it.
 
-**The Starter Kit includes a complete validation template and AI prompts for every step → [Get it for $29](https://www.midastools.co)**
+**The Starter Kit includes a complete validation template and AI prompts for every step → [Get it for $29](https://midastools.co)**
 `
   },
   'ai-entrepreneur-stack': {
@@ -405,7 +405,7 @@ Stripe + Vercel + GitHub + Telegram + OpenClaw.
 
 That's it. Everything else is optional. The founders who hit revenue fastest are the ones who stop adding tools and start making sales.
 
-**Get the setup guide and configuration templates for this entire stack → [OpenClaw Starter Kit, $29](https://www.midastools.co)**
+**Get the setup guide and configuration templates for this entire stack → [OpenClaw Starter Kit, $29](https://midastools.co)**
 `
   },
   'deploy-openclaw-ai-entrepreneur': {
@@ -501,7 +501,7 @@ We've packaged every file, template, and prompt described in this guide into the
 - Revenue ops playbook (how to safely connect Stripe, email, hosting)
 - Complete setup guide
 
-**$29 → [Get the Starter Kit](https://www.midastools.co)**
+**$29 → [Get the Starter Kit](https://midastools.co)**
     `
   },
   'ai-tools-real-estate-agents-2026': {
@@ -805,7 +805,7 @@ export async function getStaticProps({ params }) {
 
 export default function BlogPost({ post, slug }) {
   const paragraphs = post.content.trim().split('\n').filter(l => l.trim());
-  const canonicalUrl = `https://www.midastools.co/blog/${slug}`;
+  const canonicalUrl = `https://midastools.co/blog/${slug}`;
 
   const articleSchema = {
     '@context': 'https://schema.org',
@@ -815,10 +815,10 @@ export default function BlogPost({ post, slug }) {
     url: canonicalUrl,
     datePublished: post.date,
     dateModified: post.updated || post.date,
-    author: { '@type': 'Organization', name: 'Midas Tools', url: 'https://www.midastools.co' },
-    publisher: { '@type': 'Organization', name: 'Midas Tools', url: 'https://www.midastools.co' },
+    author: { '@type': 'Organization', name: 'Midas Tools', url: 'https://midastools.co' },
+    publisher: { '@type': 'Organization', name: 'Midas Tools', url: 'https://midastools.co' },
     mainEntityOfPage: { '@type': 'WebPage', '@id': canonicalUrl },
-    image: 'https://www.midastools.co/og-image.png',
+    image: 'https://midastools.co/og-image.png',
   };
 
   // FAQ schema for rich results on key pages
@@ -852,7 +852,7 @@ export default function BlogPost({ post, slug }) {
         <meta property="og:url" content={canonicalUrl} />
         <meta property="og:title" content={post.title} />
         <meta property="og:description" content={post.meta} />
-        <meta property="og:image" content="https://www.midastools.co/og-image.png" />
+        <meta property="og:image" content="https://midastools.co/og-image.png" />
         <meta property="og:site_name" content="Midas Tools" />
         <meta property="article:published_time" content={post.date} />
         {post.updated && <meta property="article:modified_time" content={post.updated} />}

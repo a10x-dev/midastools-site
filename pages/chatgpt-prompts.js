@@ -54,8 +54,8 @@ const articleSchema = {
   headline: 'ChatGPT Prompts: The Complete Collection (500+ Prompts for 2026)',
   description: 'The ultimate collection of ChatGPT prompts for 2026. 500+ prompts for business, students, side hustles, image generation, and every profession.',
   author: { '@type': 'Organization', name: 'Midas Tools' },
-  publisher: { '@type': 'Organization', name: 'Midas Tools', url: 'https://www.midastools.co' },
-  url: 'https://www.midastools.co/chatgpt-prompts',
+  publisher: { '@type': 'Organization', name: 'Midas Tools', url: 'https://midastools.co' },
+  url: 'https://midastools.co/chatgpt-prompts',
   datePublished: '2026-03-25',
   dateModified: '2026-03-25',
 };
@@ -65,13 +65,13 @@ export default function ChatGPTPrompts() {
     <Layout>
       <Head>
         <title>ChatGPT Prompts: The Complete Collection (500+ Prompts for 2026) — Midas Tools</title>
-        <link rel="canonical" href="https://www.midastools.co/chatgpt-prompts" />
+        <link rel="canonical" href="https://midastools.co/chatgpt-prompts" />
         <meta name="description" content="The ultimate collection of ChatGPT prompts for 2026. 500+ prompts for business, students, side hustles, image generation, and every profession. Free prompts included." />
         <meta name="keywords" content="ChatGPT prompts, best ChatGPT prompts 2026, ChatGPT prompt list" />
         <meta property="og:title" content="ChatGPT Prompts: The Complete Collection (500+ Prompts for 2026)" />
         <meta property="og:description" content="500+ tested ChatGPT prompts for business, students, side hustles, image generation, and every profession." />
-        <meta property="og:url" content="https://www.midastools.co/chatgpt-prompts" />
-        <meta property="og:image" content="https://www.midastools.co/og-image.png" />
+        <meta property="og:url" content="https://midastools.co/chatgpt-prompts" />
+        <meta property="og:image" content="https://midastools.co/og-image.png" />
         <meta property="og:type" content="article" />
         <meta name="twitter:card" content="summary_large_image" />
         <link rel="icon" type="image/png" href="/favicon.png" />

@@ -20,13 +20,13 @@ export default function PromptsIndex() {
     <Layout>
       <Head>
         <title>Free AI Prompt Templates — Copy &amp; Paste | Midas Tools</title>
-        <link rel="canonical" href="https://www.midastools.co/prompts" />
+        <link rel="canonical" href="https://midastools.co/prompts" />
         <meta name="description" content="100+ free copy-paste AI prompt templates for email marketing, social media, SEO content, product descriptions, cold outreach, resumes, business plans, and more. Works with ChatGPT, Claude, and Gemini." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.midastools.co/prompts" />
+        <meta property="og:url" content="https://midastools.co/prompts" />
         <meta property="og:title" content="Free AI Prompt Templates — Copy & Paste" />
         <meta property="og:description" content="100+ free copy-paste AI prompt templates for email, social media, SEO, sales, and more." />
-        <meta property="og:image" content="https://www.midastools.co/og-image.png" />
+        <meta property="og:image" content="https://midastools.co/og-image.png" />
         <meta property="og:site_name" content="Midas Tools" />
         <meta name="twitter:card" content="summary_large_image" />
         <script
@@ -37,8 +37,8 @@ export default function PromptsIndex() {
               '@type': 'CollectionPage',
               name: 'Free AI Prompt Templates',
               description: '100+ free copy-paste AI prompt templates for business, marketing, and productivity.',
-              url: 'https://www.midastools.co/prompts',
-              publisher: { '@type': 'Organization', name: 'Midas Tools', url: 'https://www.midastools.co' },
+              url: 'https://midastools.co/prompts',
+              publisher: { '@type': 'Organization', name: 'Midas Tools', url: 'https://midastools.co' },
               mainEntity: {
                 '@type': 'ItemList',
                 numberOfItems: promptTemplates.length,
@@ -46,7 +46,7 @@ export default function PromptsIndex() {
                   '@type': 'ListItem',
                   position: i + 1,
                   name: t.title,
-                  url: `https://www.midastools.co/prompts/${t.slug}`,
+                  url: `https://midastools.co/prompts/${t.slug}`,
                 })),
               },
             }),

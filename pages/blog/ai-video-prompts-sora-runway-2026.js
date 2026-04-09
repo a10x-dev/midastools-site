@@ -8,7 +8,7 @@ const VIDEO_PACK_LINK = '/ai-video-prompt-pack';
 export default function AIVideoPromptsSoraRunway2026() {
   const title = '30+ Best AI Video Prompts for Sora, Runway & Pika in 2026 (Copy & Paste)';
   const description = 'The best AI video generation prompts for 2026. 30+ copy-paste prompts for Sora, Runway Gen-3, Pika Labs, Kling AI, and Luma Dream Machine. Social media, product demos, cinematic, and viral content.';
-  const url = 'https://www.midastools.co/blog/ai-video-prompts-sora-runway-2026';
+  const url = 'https://midastools.co/blog/ai-video-prompts-sora-runway-2026';
 
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -18,8 +18,8 @@ export default function AIVideoPromptsSoraRunway2026() {
     url,
     datePublished: '2026-03-26',
     dateModified: '2026-03-26',
-    author: { '@type': 'Person', name: 'Rey Midas', url: 'https://www.midastools.co' },
-    publisher: { '@type': 'Organization', name: 'Midas Tools', url: 'https://www.midastools.co' },
+    author: { '@type': 'Person', name: 'Rey Midas', url: 'https://midastools.co' },
+    publisher: { '@type': 'Organization', name: 'Midas Tools', url: 'https://midastools.co' },
     mainEntityOfPage: { '@type': 'WebPage', '@id': url }
   };
 
@@ -131,7 +131,7 @@ export default function AIVideoPromptsSoraRunway2026() {
         <meta property="og:description" content={description} />
         <meta property="og:url" content={url} />
         <meta property="og:type" content="article" />
-        <meta property="og:image" content="https://www.midastools.co/og-image.png" />
+        <meta property="og:image" content="https://midastools.co/og-image.png" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={description} />

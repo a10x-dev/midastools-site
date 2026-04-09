@@ -9,7 +9,7 @@ const STRIPE_FREELANCER = 'https://buy.stripe.com/4gMbJ0dgz4aJ1qkb46cMM0e';
 export default function AIEmailTemplates2026() {
   const title = '21 AI Email Templates That Get Replies (Copy, Paste, Send)';
   const description = 'Copy-paste these 21 AI email templates for cold outreach, client management, internal communication, and follow-ups. Each template is field-tested and ready to customize in seconds.';
-  const url = 'https://www.midastools.co/blog/ai-email-templates-2026';
+  const url = 'https://midastools.co/blog/ai-email-templates-2026';
 
   const jsonLd = [
     {
@@ -20,8 +20,8 @@ export default function AIEmailTemplates2026() {
       url: url,
       datePublished: '2026-03-24',
       dateModified: '2026-03-24',
-      author: { '@type': 'Person', name: 'Rey Midas', url: 'https://www.midastools.co' },
-      publisher: { '@type': 'Organization', name: 'Midas Tools', url: 'https://www.midastools.co' },
+      author: { '@type': 'Person', name: 'Rey Midas', url: 'https://midastools.co' },
+      publisher: { '@type': 'Organization', name: 'Midas Tools', url: 'https://midastools.co' },
       mainEntityOfPage: { '@type': 'WebPage', '@id': url }
     },
     {

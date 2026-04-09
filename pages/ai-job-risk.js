@@ -123,7 +123,7 @@ export default function AIJobRisk() {
   const handleShare = (platform) => {
     const job = JOBS[selectedJob];
     const riskLevel = getRiskLevel(job.risk);
-    const url = `https://www.midastools.co/ai-job-risk?r=${encodeResult(selectedJob)}`;
+    const url = `https://midastools.co/ai-job-risk?r=${encodeResult(selectedJob)}`;
     const text = `${riskLevel.emoji} My job (${job.title}) has a ${job.risk}% AI replacement risk. Check yours:`;
 
     if (platform === 'twitter') {
@@ -157,9 +157,9 @@ export default function AIJobRisk() {
         <title>Will AI Replace My Job? Free AI Job Risk Calculator (2026 Data)</title>
         <meta name="description" content="Check your job's AI replacement risk with real data. 40+ jobs analyzed with risk scores, timelines, and actionable advice. Free, instant results." />
         <meta name="keywords" content="will AI replace my job, AI job risk, AI automation risk, jobs AI will replace, AI-proof career, AI job calculator" />
-        <link rel="canonical" href="https://www.midastools.co/ai-job-risk" />
+        <link rel="canonical" href="https://midastools.co/ai-job-risk" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.midastools.co/ai-job-risk" />
+        <meta property="og:url" content="https://midastools.co/ai-job-risk" />
         <meta property="og:title" content="Will AI Replace My Job? Free Risk Calculator" />
         <meta property="og:description" content="Check your job's AI replacement risk score. 40+ jobs analyzed with real 2026 data." />
         <meta name="twitter:card" content="summary_large_image" />
@@ -171,7 +171,7 @@ export default function AIJobRisk() {
           "@type": "WebApplication",
           "name": "AI Job Risk Calculator",
           "description": "Free tool to check your job's AI replacement risk with 2026 data",
-          "url": "https://www.midastools.co/ai-job-risk",
+          "url": "https://midastools.co/ai-job-risk",
           "applicationCategory": "BusinessApplication",
           "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
           "author": { "@type": "Organization", "name": "Midas Tools" }

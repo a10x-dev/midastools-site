@@ -9,7 +9,7 @@ const BUNDLE_URL = 'https://buy.stripe.com/bJe7sK0tNdLjgle0pscMM0b';
 export default function AISocialMediaPrompts2026() {
   const title = '20 AI Prompts That Will Transform Your Social Media in 2026';
   const description = '20 copy-paste AI prompts for social media management in 2026. Content calendars, captions, viral formulas, analytics, community management, and paid ad copy for Instagram, TikTok, LinkedIn, and X/Twitter.';
-  const url = 'https://www.midastools.co/blog/ai-social-media-prompts-2026';
+  const url = 'https://midastools.co/blog/ai-social-media-prompts-2026';
 
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -19,8 +19,8 @@ export default function AISocialMediaPrompts2026() {
     url: url,
     datePublished: '2026-03-26',
     dateModified: '2026-03-26',
-    author: { '@type': 'Person', name: 'Rey Midas', url: 'https://www.midastools.co' },
-    publisher: { '@type': 'Organization', name: 'Midas Tools', url: 'https://www.midastools.co' },
+    author: { '@type': 'Person', name: 'Rey Midas', url: 'https://midastools.co' },
+    publisher: { '@type': 'Organization', name: 'Midas Tools', url: 'https://midastools.co' },
     mainEntityOfPage: { '@type': 'WebPage', '@id': url }
   };
 
@@ -1034,7 +1034,7 @@ For all ads: provide estimated CPC/CPM ranges for [INDUSTRY] and suggest daily b
         <hr style={{ margin: '40px 0', border: 'none', borderTop: '1px solid #eee' }} />
 
         <p style={{ color: '#6B7280', fontSize: '14px' }}>
-          <em>Rey Midas builds <a href="https://www.midastools.co" style={{ color: '#3B5FFF' }}>Midas Tools</a> &mdash; AI-powered toolkits for entrepreneurs, creators, and professionals. Questions? <a href="mailto:iam@armando.mx" style={{ color: '#3B5FFF' }}>iam@armando.mx</a>.</em>
+          <em>Rey Midas builds <a href="https://midastools.co" style={{ color: '#3B5FFF' }}>Midas Tools</a> &mdash; AI-powered toolkits for entrepreneurs, creators, and professionals. Questions? <a href="mailto:iam@armando.mx" style={{ color: '#3B5FFF' }}>iam@armando.mx</a>.</em>
         </p>
       </div>
 

@@ -128,7 +128,7 @@ export default function BusinessNameGenerator() {
     '@context': 'https://schema.org',
     '@type': 'WebApplication',
     name: 'AI Business Name Generator',
-    url: 'https://www.midastools.co/business-name-generator',
+    url: 'https://midastools.co/business-name-generator',
     description: 'Free AI-powered business name generator. Get 20 creative, brandable business names instantly based on your industry and style preferences.',
     applicationCategory: 'BusinessApplication',
     operatingSystem: 'Web',
@@ -142,10 +142,10 @@ export default function BusinessNameGenerator() {
         <meta name="description" content="Generate creative, brandable business names instantly with our free AI business name generator. 16 industries, 6 naming styles, 20 names per generation. No signup required." />
         <meta property="og:title" content="Free AI Business Name Generator | Midas Tools" />
         <meta property="og:description" content="Get 20 creative business name ideas instantly. Choose your industry, pick a style, and generate brandable names for free." />
-        <meta property="og:url" content="https://www.midastools.co/business-name-generator" />
-        <meta property="og:image" content="https://www.midastools.co/og-image.png" />
+        <meta property="og:url" content="https://midastools.co/business-name-generator" />
+        <meta property="og:image" content="https://midastools.co/og-image.png" />
         <meta name="twitter:card" content="summary_large_image" />
-        <link rel="canonical" href="https://www.midastools.co/business-name-generator" />
+        <link rel="canonical" href="https://midastools.co/business-name-generator" />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       </Head>
 

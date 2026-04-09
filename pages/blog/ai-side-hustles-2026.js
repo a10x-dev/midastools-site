@@ -7,7 +7,7 @@ const STRIPE_BUNDLE = 'https://buy.stripe.com/bJe7sK0tNdLjgle0pscMM0b';
 export default function AISideHustles2026() {
   const title = '15 AI Side Hustles That Actually Make Money in 2026 (With Income Data)';
   const description = 'Real AI side hustles with verified income ranges, difficulty ratings, and time to first dollar. From prompt engineering to AI automation agencies — here are the 15 best ways to earn with AI in 2026.';
-  const url = 'https://www.midastools.co/blog/ai-side-hustles-2026';
+  const url = 'https://midastools.co/blog/ai-side-hustles-2026';
 
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -17,8 +17,8 @@ export default function AISideHustles2026() {
     url,
     datePublished: '2026-03-29',
     dateModified: '2026-03-29',
-    author: { '@type': 'Organization', name: 'Midas Tools Team', url: 'https://www.midastools.co' },
-    publisher: { '@type': 'Organization', name: 'Midas Tools', url: 'https://www.midastools.co' },
+    author: { '@type': 'Organization', name: 'Midas Tools Team', url: 'https://midastools.co' },
+    publisher: { '@type': 'Organization', name: 'Midas Tools', url: 'https://midastools.co' },
     mainEntityOfPage: { '@type': 'WebPage', '@id': url }
   };
 

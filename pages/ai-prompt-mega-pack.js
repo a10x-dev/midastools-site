@@ -32,8 +32,8 @@ export default function AIPromptMegaPack() {
         <meta name="description" content="200+ battle-tested AI prompts for copywriting, social media, content creation, business operations, personal branding, and productivity. Works with ChatGPT, Claude, Gemini. $29 one-time." />
         <meta property="og:title" content="AI Prompt Mega Pack — 200+ Ready-to-Use AI Prompts" />
         <meta property="og:description" content="The most comprehensive collection of AI prompts for entrepreneurs, creators, and professionals. 200+ prompts across 6 categories. $29." />
-        <meta property="og:url" content="https://www.midastools.co/ai-prompt-mega-pack" />
-        <meta property="og:image" content="https://www.midastools.co/og-image.png" />
+        <meta property="og:url" content="https://midastools.co/ai-prompt-mega-pack" />
+        <meta property="og:image" content="https://midastools.co/og-image.png" />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
         <link rel="icon" type="image/png" href="/favicon.png" />
@@ -45,8 +45,8 @@ export default function AIPromptMegaPack() {
           "@type": "Product",
           "name": "AI Prompt Mega Pack",
           "description": "200+ battle-tested AI prompts for business, content, and productivity",
-          "url": "https://www.midastools.co/ai-prompt-mega-pack",
-          "image": "https://www.midastools.co/og-image.png",
+          "url": "https://midastools.co/ai-prompt-mega-pack",
+          "image": "https://midastools.co/og-image.png",
           "offers": {
             "@type": "Offer",
             "price": "29",

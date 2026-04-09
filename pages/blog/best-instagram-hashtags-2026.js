@@ -9,7 +9,7 @@ const BUNDLE_URL = 'https://buy.stripe.com/bJe7sK0tNdLjgle0pscMM0b';
 export default function BestInstagramHashtags2026() {
   const title = '150+ Best Instagram Hashtags for 2026 (By Niche + Strategy Guide)';
   const description = 'The ultimate list of 150+ best Instagram hashtags for 2026, organized by niche. Includes hashtag strategy guide, Reels hashtags, banned hashtag list, and expert tips to maximize your reach.';
-  const url = 'https://www.midastools.co/blog/best-instagram-hashtags-2026';
+  const url = 'https://midastools.co/blog/best-instagram-hashtags-2026';
 
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -19,8 +19,8 @@ export default function BestInstagramHashtags2026() {
     url: url,
     datePublished: '2026-03-27',
     dateModified: '2026-03-27',
-    author: { '@type': 'Person', name: 'Rey Midas', url: 'https://www.midastools.co' },
-    publisher: { '@type': 'Organization', name: 'Midas Tools', url: 'https://www.midastools.co' },
+    author: { '@type': 'Person', name: 'Rey Midas', url: 'https://midastools.co' },
+    publisher: { '@type': 'Organization', name: 'Midas Tools', url: 'https://midastools.co' },
     mainEntityOfPage: { '@type': 'WebPage', '@id': url }
   };
 

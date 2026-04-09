@@ -9,8 +9,8 @@ export default function Services() {
         <meta name="description" content="We build custom AI agents for your business in 48 hours. AI receptionist, sales agent, and full automation — so you never miss a lead again." />
         <meta property="og:title" content="AI Automation Services — Midas Tools" />
         <meta property="og:description" content="Custom AI agents for your business. Setup in 48 hours. Never miss a lead again." />
-        <meta property="og:url" content="https://www.midastools.co/services" />
-        <meta property="og:image" content="https://www.midastools.co/og-image.png" />
+        <meta property="og:url" content="https://midastools.co/services" />
+        <meta property="og:image" content="https://midastools.co/og-image.png" />
         <link rel="icon" type="image/png" href="/favicon.png" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />

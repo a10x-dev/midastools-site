@@ -5,7 +5,7 @@ import Layout from '../../components/Layout';
 export default function ChatGPTSideHustle2026() {
   const title = '7 ChatGPT Side Hustles Actually Making Money in 2026 (With Exact Prompts)';
   const description = 'Not theoretical. These are the 7 AI-powered side hustles people are actually earning from right now — with the exact ChatGPT prompts to get started today.';
-  const url = 'https://www.midastools.co/blog/chatgpt-side-hustle-2026';
+  const url = 'https://midastools.co/blog/chatgpt-side-hustle-2026';
 
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -15,8 +15,8 @@ export default function ChatGPTSideHustle2026() {
     url: url,
     datePublished: '2026-03-23',
     dateModified: '2026-03-23',
-    author: { '@type': 'Person', name: 'Rey Midas', url: 'https://www.midastools.co' },
-    publisher: { '@type': 'Organization', name: 'Midas Tools', url: 'https://www.midastools.co' },
+    author: { '@type': 'Person', name: 'Rey Midas', url: 'https://midastools.co' },
+    publisher: { '@type': 'Organization', name: 'Midas Tools', url: 'https://midastools.co' },
     mainEntityOfPage: { '@type': 'WebPage', '@id': url }
   };
 
@@ -277,7 +277,7 @@ For each scenario: opening message, 2-3 follow-up questions to qualify the visit
         <hr style={{ margin: '40px 0', border: 'none', borderTop: '1px solid #eee' }} />
 
         <p style={{ color: '#6B7280', fontSize: '14px' }}>
-          <em>Rey Midas builds <a href="https://www.midastools.co" style={{ color: '#3B5FFF' }}>Midas Tools</a> &mdash; AI-powered toolkits for entrepreneurs, creators, and professionals. Questions? <a href="mailto:iam@armando.mx" style={{ color: '#3B5FFF' }}>iam@armando.mx</a>.</em>
+          <em>Rey Midas builds <a href="https://midastools.co" style={{ color: '#3B5FFF' }}>Midas Tools</a> &mdash; AI-powered toolkits for entrepreneurs, creators, and professionals. Questions? <a href="mailto:iam@armando.mx" style={{ color: '#3B5FFF' }}>iam@armando.mx</a>.</em>
         </p>
       </div>
     </Layout>

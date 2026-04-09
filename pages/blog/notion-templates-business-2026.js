@@ -9,7 +9,7 @@ const BUNDLE_URL = 'https://buy.stripe.com/bJe7sK0tNdLjgle0pscMM0b';
 export default function NotionTemplatesBusiness2026() {
   const title = '12 Notion Templates Every Business Needs in 2026 (+ AI Prompts to Power Them)';
   const description = 'The 12 essential Notion templates for running a business in 2026. Project management, CRM, budgets, SOPs, and more — plus AI prompts to set up each one in minutes.';
-  const url = 'https://www.midastools.co/blog/notion-templates-business-2026';
+  const url = 'https://midastools.co/blog/notion-templates-business-2026';
 
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -19,8 +19,8 @@ export default function NotionTemplatesBusiness2026() {
     url: url,
     datePublished: '2026-03-27',
     dateModified: '2026-03-27',
-    author: { '@type': 'Person', name: 'Rey Midas', url: 'https://www.midastools.co' },
-    publisher: { '@type': 'Organization', name: 'Midas Tools', url: 'https://www.midastools.co' },
+    author: { '@type': 'Person', name: 'Rey Midas', url: 'https://midastools.co' },
+    publisher: { '@type': 'Organization', name: 'Midas Tools', url: 'https://midastools.co' },
     mainEntityOfPage: { '@type': 'WebPage', '@id': url }
   };
 

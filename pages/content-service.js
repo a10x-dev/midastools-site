@@ -11,7 +11,7 @@ export default function ContentService() {
         <title>AI Content Service — Done-For-You Articles, Every Month | Midas Tools</title>
         <link rel="icon" type="image/png" href="/favicon.png" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta property="og:image" content="https://www.midastools.co/og-image.png" />
+        <meta property="og:image" content="https://midastools.co/og-image.png" />
         <meta name="description" content="We publish 10 SEO articles per month for your startup. AI-written, human-reviewed, and posted directly to dev.to, Medium, and your blog. $299/mo." />
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
       </Head>

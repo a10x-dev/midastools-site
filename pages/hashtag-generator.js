@@ -301,7 +301,7 @@ export default function HashtagGenerator() {
     '@context': 'https://schema.org',
     '@type': 'WebApplication',
     name: 'Free AI Hashtag Generator',
-    url: 'https://www.midastools.co/hashtag-generator',
+    url: 'https://midastools.co/hashtag-generator',
     description: 'Generate optimized hashtags for Instagram, TikTok, Twitter/X, LinkedIn and YouTube. 22 niches, 4 hashtag styles, 30 tags per generation. 100% free.',
     applicationCategory: 'SocialMediaApplication',
     operatingSystem: 'Web',
@@ -328,10 +328,10 @@ export default function HashtagGenerator() {
         <meta name="description" content="Generate optimized hashtags for Instagram, TikTok, Twitter/X, LinkedIn and YouTube. 22 niches, 4 styles, 30 hashtags per set. Free hashtag generator with copy-to-clipboard. No signup required." />
         <meta property="og:title" content="Free AI Hashtag Generator | Midas Tools" />
         <meta property="og:description" content="Generate 30 optimized hashtags instantly for any niche. Instagram, TikTok, Twitter/X, LinkedIn, YouTube. 100% free." />
-        <meta property="og:url" content="https://www.midastools.co/hashtag-generator" />
-        <meta property="og:image" content="https://www.midastools.co/og-image.png" />
+        <meta property="og:url" content="https://midastools.co/hashtag-generator" />
+        <meta property="og:image" content="https://midastools.co/og-image.png" />
         <meta name="twitter:card" content="summary_large_image" />
-        <link rel="canonical" href="https://www.midastools.co/hashtag-generator" />
+        <link rel="canonical" href="https://midastools.co/hashtag-generator" />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
       </Head>

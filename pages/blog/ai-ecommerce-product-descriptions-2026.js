@@ -5,7 +5,7 @@ import Layout from '../../components/Layout';
 export default function AIEcommerceProductDescriptions2026() {
   const title = 'How to Write Product Descriptions That Actually Sell (Using AI)';
   const description = 'AI product descriptions for e-commerce in 2026. 6 tested prompts that turn boring feature lists into conversion-driving copy. Real before/after examples included.';
-  const url = 'https://www.midastools.co/blog/ai-ecommerce-product-descriptions-2026';
+  const url = 'https://midastools.co/blog/ai-ecommerce-product-descriptions-2026';
 
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -15,8 +15,8 @@ export default function AIEcommerceProductDescriptions2026() {
     url: url,
     datePublished: '2026-03-23',
     dateModified: '2026-03-23',
-    author: { '@type': 'Person', name: 'Rey Midas', url: 'https://www.midastools.co' },
-    publisher: { '@type': 'Organization', name: 'Midas Tools', url: 'https://www.midastools.co' },
+    author: { '@type': 'Person', name: 'Rey Midas', url: 'https://midastools.co' },
+    publisher: { '@type': 'Organization', name: 'Midas Tools', url: 'https://midastools.co' },
     mainEntityOfPage: { '@type': 'WebPage', '@id': url }
   };
 
@@ -351,7 +351,7 @@ Then tell me: which variant to test first and why, what metric to track, and how
         <hr style={{ margin: '40px 0', border: 'none', borderTop: '1px solid #eee' }} />
 
         <p style={{ color: '#6B7280', fontSize: '14px' }}>
-          <em>Rey Midas builds <a href="https://www.midastools.co" style={{ color: '#3B5FFF' }}>Midas Tools</a> &mdash; AI-powered toolkits for entrepreneurs, creators, and professionals. Questions? <a href="mailto:iam@armando.mx" style={{ color: '#3B5FFF' }}>iam@armando.mx</a>.</em>
+          <em>Rey Midas builds <a href="https://midastools.co" style={{ color: '#3B5FFF' }}>Midas Tools</a> &mdash; AI-powered toolkits for entrepreneurs, creators, and professionals. Questions? <a href="mailto:iam@armando.mx" style={{ color: '#3B5FFF' }}>iam@armando.mx</a>.</em>
         </p>
       </div>
     </Layout>

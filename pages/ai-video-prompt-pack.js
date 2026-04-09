@@ -32,13 +32,13 @@ export default function AIVideoPromptPack() {
         <meta name="keywords" content="AI video prompts, Sora prompts, Runway prompts, Pika prompts, AI video generation, Kling AI prompts, Luma Dream Machine prompts, AI video maker, text to video prompts, video generation prompts" />
         <meta property="og:title" content="AI Video Prompt Pack — 150+ Video Generation Prompts" />
         <meta property="og:description" content="150+ battle-tested video generation prompts for social media, products, tutorials, and cinematic content. Works with Sora, Runway, Pika, Kling AI, and more. $29." />
-        <meta property="og:url" content="https://www.midastools.co/ai-video-prompt-pack" />
-        <meta property="og:image" content="https://www.midastools.co/og-image.png" />
+        <meta property="og:url" content="https://midastools.co/ai-video-prompt-pack" />
+        <meta property="og:image" content="https://midastools.co/og-image.png" />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="AI Video Prompt Pack — 150+ Video Generation Prompts | Midas Tools" />
         <meta name="twitter:description" content="150+ ready-to-use AI video generation prompts for social media, products, tutorials, and cinematic content. Works with Sora, Runway, Pika. $29 one-time." />
-        <link rel="canonical" href="https://www.midastools.co/ai-video-prompt-pack" />
+        <link rel="canonical" href="https://midastools.co/ai-video-prompt-pack" />
         <link rel="icon" type="image/png" href="/favicon.png" />
 
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -46,8 +46,8 @@ export default function AIVideoPromptPack() {
           "@type": "Product",
           "name": "AI Video Prompt Pack",
           "description": "150+ ready-to-use AI video generation prompts for social media, product demos, tutorials, cinematic content, corporate videos, and viral trending styles",
-          "url": "https://www.midastools.co/ai-video-prompt-pack",
-          "image": "https://www.midastools.co/og-image.png",
+          "url": "https://midastools.co/ai-video-prompt-pack",
+          "image": "https://midastools.co/og-image.png",
           "offers": {
             "@type": "Offer",
             "price": "29",

@@ -7,7 +7,7 @@ const STRIPE_MEGA_PACK = 'https://buy.stripe.com/4gw6qrdtgaODdZS4gw';
 export default function HowToWriteBetterAIPrompts2026() {
   const title = 'How to Write Better AI Prompts: The Complete 2026 Guide (With Free Tools)';
   const description = 'Stop getting mediocre AI output. Learn the CRAFT framework, see 10 before-and-after prompt examples, and use free tools to instantly improve your ChatGPT, Claude, and Gemini prompts.';
-  const url = 'https://www.midastools.co/blog/how-to-write-better-ai-prompts-2026';
+  const url = 'https://midastools.co/blog/how-to-write-better-ai-prompts-2026';
 
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -17,8 +17,8 @@ export default function HowToWriteBetterAIPrompts2026() {
     url,
     datePublished: '2026-03-27',
     dateModified: '2026-03-27',
-    author: { '@type': 'Organization', name: 'Midas Tools Team', url: 'https://www.midastools.co' },
-    publisher: { '@type': 'Organization', name: 'Midas Tools', url: 'https://www.midastools.co' },
+    author: { '@type': 'Organization', name: 'Midas Tools Team', url: 'https://midastools.co' },
+    publisher: { '@type': 'Organization', name: 'Midas Tools', url: 'https://midastools.co' },
     mainEntityOfPage: { '@type': 'WebPage', '@id': url }
   };
 
@@ -113,7 +113,7 @@ export default function HowToWriteBetterAIPrompts2026() {
         <meta property="og:description" content={description} />
         <meta property="og:url" content={url} />
         <meta property="og:type" content="article" />
-        <meta property="og:image" content="https://www.midastools.co/og-image.png" />
+        <meta property="og:image" content="https://midastools.co/og-image.png" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={description} />

@@ -5,7 +5,7 @@ import Layout from '../../components/Layout';
 export default function AISmallBusinessAutomation2026() {
   const title = '9 AI Automations That Save Small Businesses 20+ Hours Per Week';
   const description = 'The 9 AI automations small businesses are using in 2026 to save 20+ hours per week. Includes exact prompts, workflows, and templates for social media, email, invoicing, hiring, and more.';
-  const url = 'https://www.midastools.co/blog/ai-small-business-automation-2026';
+  const url = 'https://midastools.co/blog/ai-small-business-automation-2026';
 
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -15,8 +15,8 @@ export default function AISmallBusinessAutomation2026() {
     url: url,
     datePublished: '2026-03-22',
     dateModified: '2026-03-22',
-    author: { '@type': 'Person', name: 'Rey Midas', url: 'https://www.midastools.co' },
-    publisher: { '@type': 'Organization', name: 'Midas Tools', url: 'https://www.midastools.co' },
+    author: { '@type': 'Person', name: 'Rey Midas', url: 'https://midastools.co' },
+    publisher: { '@type': 'Organization', name: 'Midas Tools', url: 'https://midastools.co' },
     mainEntityOfPage: { '@type': 'WebPage', '@id': url }
   };
 
@@ -440,7 +440,7 @@ Format as a configuration I can plug into [ZAPIER/MAKE/NOTION].`}
         <hr style={{ margin: '40px 0', border: 'none', borderTop: '1px solid #eee' }} />
 
         <p style={{ color: '#6B7280', fontSize: '14px' }}>
-          <em>Rey Midas builds <a href="https://www.midastools.co" style={{ color: '#3B5FFF' }}>Midas Tools</a> &mdash; AI-powered toolkits for entrepreneurs, creators, and professionals. Questions? <a href="mailto:iam@armando.mx" style={{ color: '#3B5FFF' }}>iam@armando.mx</a>.</em>
+          <em>Rey Midas builds <a href="https://midastools.co" style={{ color: '#3B5FFF' }}>Midas Tools</a> &mdash; AI-powered toolkits for entrepreneurs, creators, and professionals. Questions? <a href="mailto:iam@armando.mx" style={{ color: '#3B5FFF' }}>iam@armando.mx</a>.</em>
         </p>
       </div>
     </Layout>

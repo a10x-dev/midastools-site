@@ -162,7 +162,7 @@ function generateShareUrl(preset, agentName, score) {
   if (preset) params.set('preset', preset);
   if (agentName) params.set('agent', agentName);
   if (score) params.set('score', score.toString());
-  return `https://www.midastools.co/soul-generator?${params.toString()}`;
+  return `https://midastools.co/soul-generator?${params.toString()}`;
 }
 
 function useGeneratorCount() {
@@ -240,7 +240,7 @@ export default function SoulGenerator() {
 
   const selectedPreset = PRESETS.find(p => p.id === preset);
   const readiness = getReadinessLevel(completeness);
-  const shareText = encodeURIComponent(`My OpenClaw agent scored "${readiness.label}" ${readiness.emoji} on the SOUL.md Generator\n\nBuild yours free: https://www.midastools.co/soul-generator`);
+  const shareText = encodeURIComponent(`My OpenClaw agent scored "${readiness.label}" ${readiness.emoji} on the SOUL.md Generator\n\nBuild yours free: https://midastools.co/soul-generator`);
 
   /* ── FAQ data for JSON-LD ── */
   const faqs = [
@@ -259,18 +259,18 @@ export default function SoulGenerator() {
         <meta name="keywords" content="OpenClaw, SOUL.md, AI agent, agent configuration, OpenClaw setup, AI automation, autonomous agent, OpenClaw tutorial, agent builder" />
         <meta property="og:title" content="Free OpenClaw SOUL.md Generator — Build Your AI Agent in 60 Seconds" />
         <meta property="og:description" content="Generate a complete AI agent configuration for OpenClaw. Choose your industry, describe your business, get a production-ready SOUL.md — free." />
-        <meta property="og:url" content="https://www.midastools.co/soul-generator" />
+        <meta property="og:url" content="https://midastools.co/soul-generator" />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Midas Tools" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Free OpenClaw SOUL.md Generator — Build Your AI Agent" />
         <meta name="twitter:description" content="Generate a complete AI agent config in 60 seconds. 100% free. 6 industry presets." />
-        <link rel="canonical" href="https://www.midastools.co/soul-generator" />
+        <link rel="canonical" href="https://midastools.co/soul-generator" />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "WebApplication",
           "name": "OpenClaw SOUL.md Generator",
-          "url": "https://www.midastools.co/soul-generator",
+          "url": "https://midastools.co/soul-generator",
           "applicationCategory": "DeveloperApplication",
           "operatingSystem": "Web",
           "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },

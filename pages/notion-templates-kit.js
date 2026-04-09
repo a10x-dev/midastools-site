@@ -32,19 +32,19 @@ export default function NotionTemplatesKit() {
         <meta name="description" content="150+ Notion templates for project management, CRM, content calendar, and personal productivity. AI-powered, ready to duplicate. $39 one-time." />
         <meta property="og:title" content="Notion AI Templates — 150+ Ready-Made Templates | Midas Tools" />
         <meta property="og:description" content="150+ Notion templates for project management, CRM, content calendar, and personal productivity. AI-powered. $39 one-time." />
-        <meta property="og:url" content="https://www.midastools.co/notion-templates-kit" />
-        <meta property="og:image" content="https://www.midastools.co/og-image.png" />
+        <meta property="og:url" content="https://midastools.co/notion-templates-kit" />
+        <meta property="og:image" content="https://midastools.co/og-image.png" />
         <meta name="twitter:card" content="summary_large_image" />
         <link rel="icon" type="image/png" href="/favicon.png" />
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
-        <link rel="canonical" href="https://www.midastools.co/notion-templates-kit" />
+        <link rel="canonical" href="https://midastools.co/notion-templates-kit" />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Product",
           "name": "Notion AI Templates Kit",
           "description": "150+ ready-made Notion templates with built-in AI prompts for project management, CRM, content planning, personal productivity, business operations, and freelancer workflows.",
-          "url": "https://www.midastools.co/notion-templates-kit",
-          "image": "https://www.midastools.co/og-image.png",
+          "url": "https://midastools.co/notion-templates-kit",
+          "image": "https://midastools.co/og-image.png",
           "brand": "Midas Tools",
           "offers": {
             "@type": "Offer",

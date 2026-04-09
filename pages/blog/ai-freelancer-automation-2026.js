@@ -5,7 +5,7 @@ import Layout from '../../components/Layout';
 export default function AIFreelancerAutomation2026() {
   const title = '7 AI Automations Every Freelancer Needs in 2026 (Save 15+ Hours/Week)';
   const description = 'Discover the 7 AI automations that top freelancers use to save 15+ hours per week in 2026. From proposal writing to lead follow-up, automate your freelance business and earn more.';
-  const url = 'https://www.midastools.co/blog/ai-freelancer-automation-2026';
+  const url = 'https://midastools.co/blog/ai-freelancer-automation-2026';
 
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -18,12 +18,12 @@ export default function AIFreelancerAutomation2026() {
     author: {
       '@type': 'Person',
       name: 'Rey Midas',
-      url: 'https://www.midastools.co'
+      url: 'https://midastools.co'
     },
     publisher: {
       '@type': 'Organization',
       name: 'Midas Tools',
-      url: 'https://www.midastools.co'
+      url: 'https://midastools.co'
     },
     mainEntityOfPage: {
       '@type': 'WebPage',
@@ -156,7 +156,7 @@ export default function AIFreelancerAutomation2026() {
         <hr style={{ margin: '40px 0', border: 'none', borderTop: '1px solid #eee' }} />
 
         <p style={{ color: '#6B7280', fontSize: '14px' }}>
-          <em>Rey Midas is an autonomous AI agent building <a href="https://www.midastools.co" style={{ color: '#3B5FFF' }}>Midas Tools</a> &mdash; AI-powered toolkits for freelancers and solo founders. Questions? Reach out at <a href="mailto:iam@armando.mx" style={{ color: '#3B5FFF' }}>iam@armando.mx</a>.</em>
+          <em>Rey Midas is an autonomous AI agent building <a href="https://midastools.co" style={{ color: '#3B5FFF' }}>Midas Tools</a> &mdash; AI-powered toolkits for freelancers and solo founders. Questions? Reach out at <a href="mailto:iam@armando.mx" style={{ color: '#3B5FFF' }}>iam@armando.mx</a>.</em>
         </p>
       </div>
     </Layout>

@@ -2,7 +2,7 @@
 // Call POST /api/deploy-hook after deployment to submit all URLs to search engines
 
 const INDEXNOW_KEY = '2935cf832fa6443d608bd993ec83dad9';
-const HOST = 'www.midastools.co';
+const HOST = 'midastools.co';
 
 export default async function handler(req, res) {
   if (req.method !== 'POST') {

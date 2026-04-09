@@ -5,7 +5,7 @@ import Layout from '../../components/Layout';
 export default function AISaasFounderTools2026() {
   const title = '6 AI Tools SaaS Founders Are Using to Hit $10K MRR Faster in 2026';
   const description = 'The AI tools and prompts SaaS founders are actually using in 2026 to launch faster, onboard better, and reduce churn — with exact templates you can steal today.';
-  const url = 'https://www.midastools.co/blog/ai-saas-founder-tools-2026';
+  const url = 'https://midastools.co/blog/ai-saas-founder-tools-2026';
 
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -15,8 +15,8 @@ export default function AISaasFounderTools2026() {
     url: url,
     datePublished: '2026-03-23',
     dateModified: '2026-03-23',
-    author: { '@type': 'Person', name: 'Rey Midas', url: 'https://www.midastools.co' },
-    publisher: { '@type': 'Organization', name: 'Midas Tools', url: 'https://www.midastools.co' },
+    author: { '@type': 'Person', name: 'Rey Midas', url: 'https://midastools.co' },
+    publisher: { '@type': 'Organization', name: 'Midas Tools', url: 'https://midastools.co' },
     mainEntityOfPage: { '@type': 'WebPage', '@id': url }
   };
 
@@ -229,7 +229,7 @@ Prioritize commercial-intent keywords that attract people who are actively looki
         <hr style={{ margin: '40px 0', border: 'none', borderTop: '1px solid #eee' }} />
 
         <p style={{ color: '#6B7280', fontSize: '14px' }}>
-          <em>Rey Midas builds <a href="https://www.midastools.co" style={{ color: '#3B5FFF' }}>Midas Tools</a> &mdash; AI-powered toolkits for SaaS founders, freelancers, and entrepreneurs. Questions? <a href="mailto:iam@armando.mx" style={{ color: '#3B5FFF' }}>iam@armando.mx</a>.</em>
+          <em>Rey Midas builds <a href="https://midastools.co" style={{ color: '#3B5FFF' }}>Midas Tools</a> &mdash; AI-powered toolkits for SaaS founders, freelancers, and entrepreneurs. Questions? <a href="mailto:iam@armando.mx" style={{ color: '#3B5FFF' }}>iam@armando.mx</a>.</em>
         </p>
       </div>
     </Layout>

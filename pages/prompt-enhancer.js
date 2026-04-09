@@ -240,7 +240,7 @@ export default function PromptEnhancer() {
   };
 
   const handleTweet = () => {
-    const tweetText = encodeURIComponent('Just enhanced my AI prompt with @midastools \uD83D\uDD25 Try it free: https://www.midastools.co/prompt-enhancer');
+    const tweetText = encodeURIComponent('Just enhanced my AI prompt with @midastools \uD83D\uDD25 Try it free: https://midastools.co/prompt-enhancer');
     window.open(`https://twitter.com/intent/tweet?text=${tweetText}`, '_blank');
   };
 
@@ -252,7 +252,7 @@ export default function PromptEnhancer() {
 
   const title = 'Free AI Prompt Enhancer \u2014 Upgrade Any ChatGPT Prompt | Midas Tools';
   const description = 'Paste any basic AI prompt and instantly get 5 enhanced versions: Professional, Creative, Data-Driven, Viral, and Expert. 100% free, no signup, no API needed.';
-  const url = 'https://www.midastools.co/prompt-enhancer';
+  const url = 'https://midastools.co/prompt-enhancer';
 
   return (
     <Layout>
@@ -278,7 +278,7 @@ export default function PromptEnhancer() {
           applicationCategory: 'Productivity',
           operatingSystem: 'Web',
           offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
-          publisher: { '@type': 'Organization', name: 'Midas Tools', url: 'https://www.midastools.co' },
+          publisher: { '@type': 'Organization', name: 'Midas Tools', url: 'https://midastools.co' },
         })}} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
           '@context': 'https://schema.org',

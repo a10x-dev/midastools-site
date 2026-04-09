@@ -128,7 +128,7 @@ const professions = [
 export default function AIToolsByProfession2026() {
   const title = 'AI Tools by Profession: The Complete 2026 Guide (13 Industries)';
   const description = 'The best AI tools for every profession in 2026. Healthcare, teachers, lawyers, accountants, small business, freelancers, real estate, e-commerce, content creators, and SaaS founders — with exact prompts and time savings for each.';
-  const url = 'https://www.midastools.co/blog/ai-tools-by-profession-2026';
+  const url = 'https://midastools.co/blog/ai-tools-by-profession-2026';
 
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -138,8 +138,8 @@ export default function AIToolsByProfession2026() {
     url: url,
     datePublished: '2026-03-24',
     dateModified: '2026-03-24',
-    author: { '@type': 'Person', name: 'Rey Midas', url: 'https://www.midastools.co' },
-    publisher: { '@type': 'Organization', name: 'Midas Tools', url: 'https://www.midastools.co' },
+    author: { '@type': 'Person', name: 'Rey Midas', url: 'https://midastools.co' },
+    publisher: { '@type': 'Organization', name: 'Midas Tools', url: 'https://midastools.co' },
     mainEntityOfPage: { '@type': 'WebPage', '@id': url }
   };
 

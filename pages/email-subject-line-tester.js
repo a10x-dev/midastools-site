@@ -188,7 +188,7 @@ export default function EmailSubjectLineTester() {
     '@context': 'https://schema.org',
     '@type': 'WebApplication',
     name: 'AI Email Subject Line Tester',
-    url: 'https://www.midastools.co/email-subject-line-tester',
+    url: 'https://midastools.co/email-subject-line-tester',
     description: 'Free email subject line tester. Score your subject lines for open rate, spam triggers, and emotional appeal. Get actionable tips to improve.',
     applicationCategory: 'BusinessApplication',
     operatingSystem: 'Web',
@@ -202,10 +202,10 @@ export default function EmailSubjectLineTester() {
         <meta name="description" content="Test your email subject lines before you send. Get an instant score for open rate potential, spam risk, and engagement. Free, no signup required." />
         <meta property="og:title" content="Free Email Subject Line Tester | Midas Tools" />
         <meta property="og:description" content="Score your email subject lines for open rate, spam triggers, and engagement. Actionable tips included. Free tool." />
-        <meta property="og:url" content="https://www.midastools.co/email-subject-line-tester" />
-        <meta property="og:image" content="https://www.midastools.co/og-image.png" />
+        <meta property="og:url" content="https://midastools.co/email-subject-line-tester" />
+        <meta property="og:image" content="https://midastools.co/og-image.png" />
         <meta name="twitter:card" content="summary_large_image" />
-        <link rel="canonical" href="https://www.midastools.co/email-subject-line-tester" />
+        <link rel="canonical" href="https://midastools.co/email-subject-line-tester" />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       </Head>
 

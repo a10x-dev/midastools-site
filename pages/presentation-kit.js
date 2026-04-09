@@ -42,13 +42,13 @@ export default function PresentationKit() {
         <meta name="keywords" content="AI presentation prompts, pitch deck AI, sales deck templates, conference talk generator, business presentation AI, slide design prompts, AI pitch deck" />
         <meta property="og:title" content="AI Presentation & Pitch Deck Kit — Pitch Decks, Sales Decks & Conference Talks | Midas Tools" />
         <meta property="og:description" content="125+ AI prompts and templates for presentations. Pitch decks, sales presentations, conference talks, business reports, and slide design — all for $29 one-time." />
-        <meta property="og:url" content="https://www.midastools.co/presentation-kit" />
-        <meta property="og:image" content="https://www.midastools.co/og-image.png" />
+        <meta property="og:url" content="https://midastools.co/presentation-kit" />
+        <meta property="og:image" content="https://midastools.co/og-image.png" />
         <meta property="og:type" content="product" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="AI Presentation & Pitch Deck Kit — Midas Tools" />
         <meta name="twitter:description" content="125+ AI prompts for presentations. Pitch decks, sales presentations, conference talks, business reports, and slide design. $29 one-time." />
-        <link rel="canonical" href="https://www.midastools.co/presentation-kit" />
+        <link rel="canonical" href="https://midastools.co/presentation-kit" />
         <link rel="icon" type="image/png" href="/favicon.png" />
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -56,8 +56,8 @@ export default function PresentationKit() {
           "@type": "Product",
           "name": "AI Presentation & Pitch Deck Kit",
           "description": "125+ AI prompts and templates for presentations — pitch decks, sales presentations, conference talks, business reports, training workshops, and slide design & storytelling.",
-          "url": "https://www.midastools.co/presentation-kit",
-          "image": "https://www.midastools.co/og-image.png",
+          "url": "https://midastools.co/presentation-kit",
+          "image": "https://midastools.co/og-image.png",
           "brand": "Midas Tools",
           "offers": {
             "@type": "Offer",

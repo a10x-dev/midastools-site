@@ -9,7 +9,7 @@ const STRIPE_FREELANCER = 'https://buy.stripe.com/28o3pQgNGcBp5644gy';
 export default function HowToMakeMoneyWithAI2026() {
   const title = 'How to Make Money with AI in 2026: 12 Proven Methods (With Real Examples)';
   const description = 'Learn how to make money with AI in 2026. 12 proven methods with real income examples, tools, and step-by-step guides. Start earning with AI today.';
-  const url = 'https://www.midastools.co/blog/how-to-make-money-with-ai-2026';
+  const url = 'https://midastools.co/blog/how-to-make-money-with-ai-2026';
 
   const faqData = [
     {
@@ -38,8 +38,8 @@ export default function HowToMakeMoneyWithAI2026() {
     url: url,
     datePublished: '2026-03-25',
     dateModified: '2026-03-25',
-    author: { '@type': 'Organization', name: 'Midas Tools Team', url: 'https://www.midastools.co' },
-    publisher: { '@type': 'Organization', name: 'Midas Tools', url: 'https://www.midastools.co' },
+    author: { '@type': 'Organization', name: 'Midas Tools Team', url: 'https://midastools.co' },
+    publisher: { '@type': 'Organization', name: 'Midas Tools', url: 'https://midastools.co' },
     mainEntityOfPage: { '@type': 'WebPage', '@id': url }
   };
 

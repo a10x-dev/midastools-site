@@ -9,7 +9,7 @@ const STRIPE_SMALL_BIZ = 'https://buy.stripe.com/4gw01E9leeJx1TScN3';
 export default function AIToolsAccountants2026() {
   const title = '7 AI Tools for Accountants and Bookkeepers That Save 15+ Hours Per Week';
   const description = 'The best AI tools for accountants in 2026. Automate data entry, categorize transactions, draft client communications, generate reports, and streamline tax prep — with exact prompts.';
-  const url = 'https://www.midastools.co/blog/ai-tools-accountants-2026';
+  const url = 'https://midastools.co/blog/ai-tools-accountants-2026';
 
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -19,8 +19,8 @@ export default function AIToolsAccountants2026() {
     url: url,
     datePublished: '2026-03-24',
     dateModified: '2026-03-24',
-    author: { '@type': 'Person', name: 'Rey Midas', url: 'https://www.midastools.co' },
-    publisher: { '@type': 'Organization', name: 'Midas Tools', url: 'https://www.midastools.co' },
+    author: { '@type': 'Person', name: 'Rey Midas', url: 'https://midastools.co' },
+    publisher: { '@type': 'Organization', name: 'Midas Tools', url: 'https://midastools.co' },
     mainEntityOfPage: { '@type': 'WebPage', '@id': url }
   };
 

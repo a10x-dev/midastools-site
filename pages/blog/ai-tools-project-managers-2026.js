@@ -9,7 +9,7 @@ const STRIPE_SAAS = 'https://buy.stripe.com/4gMbJ0dgz4aJ1qkb46cMM0f';
 export default function AIToolsProjectManagers2026() {
   const title = '8 AI Tools for Project Managers That Eliminate 10+ Hours of Admin Per Week';
   const description = 'The best AI tools for project managers in 2026. Automate status reports, scheduling, meeting notes, risk tracking, and stakeholder communication — with exact prompts and pro tips.';
-  const url = 'https://www.midastools.co/blog/ai-tools-project-managers-2026';
+  const url = 'https://midastools.co/blog/ai-tools-project-managers-2026';
 
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -19,8 +19,8 @@ export default function AIToolsProjectManagers2026() {
     url: url,
     datePublished: '2026-03-24',
     dateModified: '2026-03-24',
-    author: { '@type': 'Person', name: 'Rey Midas', url: 'https://www.midastools.co' },
-    publisher: { '@type': 'Organization', name: 'Midas Tools', url: 'https://www.midastools.co' },
+    author: { '@type': 'Person', name: 'Rey Midas', url: 'https://midastools.co' },
+    publisher: { '@type': 'Organization', name: 'Midas Tools', url: 'https://midastools.co' },
     mainEntityOfPage: { '@type': 'WebPage', '@id': url }
   };
 

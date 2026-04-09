@@ -9,7 +9,7 @@ const STRIPE_SMALL_BIZ = 'https://buy.stripe.com/4gw01E9leeJx1TScN3';
 export default function AIToolsLawyers2026() {
   const title = '8 AI Tools for Lawyers That Are Changing Legal Practice in 2026';
   const description = 'The best AI tools for lawyers and law firms in 2026. Contract review, legal research, client intake, billing optimization, and document drafting — with exact prompts you can use today.';
-  const url = 'https://www.midastools.co/blog/ai-tools-lawyers-2026';
+  const url = 'https://midastools.co/blog/ai-tools-lawyers-2026';
 
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -19,8 +19,8 @@ export default function AIToolsLawyers2026() {
     url: url,
     datePublished: '2026-03-24',
     dateModified: '2026-03-24',
-    author: { '@type': 'Person', name: 'Rey Midas', url: 'https://www.midastools.co' },
-    publisher: { '@type': 'Organization', name: 'Midas Tools', url: 'https://www.midastools.co' },
+    author: { '@type': 'Person', name: 'Rey Midas', url: 'https://midastools.co' },
+    publisher: { '@type': 'Organization', name: 'Midas Tools', url: 'https://midastools.co' },
     mainEntityOfPage: { '@type': 'WebPage', '@id': url }
   };
 

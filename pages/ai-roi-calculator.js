@@ -89,13 +89,13 @@ export default function AIROICalculator() {
 
   const title = 'Free AI ROI Calculator — See How Much AI Saves You';
   const description = 'Calculate your potential ROI from AI automation. Enter your role, tasks, and hourly rate to see exactly how much time and money AI tools can save you per week, month, and year.';
-  const url = 'https://www.midastools.co/ai-roi-calculator';
+  const url = 'https://midastools.co/ai-roi-calculator';
 
   return (
     <Layout>
       <Head>
         <title>{title} | Midas Tools</title>
-        <link rel="canonical" href="https://www.midastools.co/ai-roi-calculator" />
+        <link rel="canonical" href="https://midastools.co/ai-roi-calculator" />
         <meta name="description" content={description} />
         <meta name="keywords" content="AI ROI calculator, AI automation savings, AI tools ROI, how much does AI save, AI productivity calculator 2026" />
         <meta property="og:title" content={title} />
@@ -115,7 +115,7 @@ export default function AIROICalculator() {
           url: url,
           applicationCategory: 'BusinessApplication',
           offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
-          publisher: { '@type': 'Organization', name: 'Midas Tools', url: 'https://www.midastools.co' },
+          publisher: { '@type': 'Organization', name: 'Midas Tools', url: 'https://midastools.co' },
         })}} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
           '@context': 'https://schema.org',

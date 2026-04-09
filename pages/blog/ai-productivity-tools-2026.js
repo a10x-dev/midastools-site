@@ -8,7 +8,7 @@ const STRIPE_BUNDLE = 'https://buy.stripe.com/bJe7sK0tNdLjgle0pscMM0b';
 export default function AIProductivityTools2026() {
   const title = '10 AI Productivity Tools That Actually Save Time in 2026 (Tested)';
   const description = 'The 10 best AI productivity tools in 2026, tested for real time savings. Covers notes, email, calendar, research, writing, and automation — with honest pricing and copy-paste prompts.';
-  const url = 'https://www.midastools.co/blog/ai-productivity-tools-2026';
+  const url = 'https://midastools.co/blog/ai-productivity-tools-2026';
 
   const jsonLd = [
     {
@@ -19,8 +19,8 @@ export default function AIProductivityTools2026() {
       url: url,
       datePublished: '2026-03-24',
       dateModified: '2026-03-24',
-      author: { '@type': 'Person', name: 'Midas Tools Team', url: 'https://www.midastools.co' },
-      publisher: { '@type': 'Organization', name: 'Midas Tools', url: 'https://www.midastools.co' },
+      author: { '@type': 'Person', name: 'Midas Tools Team', url: 'https://midastools.co' },
+      publisher: { '@type': 'Organization', name: 'Midas Tools', url: 'https://midastools.co' },
       mainEntityOfPage: { '@type': 'WebPage', '@id': url }
     },
     {
@@ -73,7 +73,7 @@ export default function AIProductivityTools2026() {
         <meta property="og:description" content={description} />
         <meta property="og:url" content={url} />
         <meta property="og:type" content="article" />
-        <meta property="og:image" content="https://www.midastools.co/og-default.png" />
+        <meta property="og:image" content="https://midastools.co/og-default.png" />
         <meta property="og:site_name" content="Midas Tools" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={title} />

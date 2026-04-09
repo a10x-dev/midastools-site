@@ -43,13 +43,13 @@ export default function SaasFounderKit() {
         <meta name="keywords" content="AI tools for SaaS founders, SaaS launch templates, SaaS onboarding emails, SaaS churn prevention, indie hacker AI tools" />
         <meta property="og:title" content="SaaS Founder AI Kit — Launch, Onboard & Grow Your SaaS | Midas Tools" />
         <meta property="og:description" content="135+ AI prompts and templates built for SaaS founders. Launch, onboard, reduce churn, and grow — all for $39 one-time." />
-        <meta property="og:url" content="https://www.midastools.co/saas-founder-kit" />
-        <meta property="og:image" content="https://www.midastools.co/og-image.png" />
+        <meta property="og:url" content="https://midastools.co/saas-founder-kit" />
+        <meta property="og:image" content="https://midastools.co/og-image.png" />
         <meta property="og:type" content="product" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="SaaS Founder AI Kit — Midas Tools" />
         <meta name="twitter:description" content="135+ AI prompts built for SaaS founders. Launch, onboard, reduce churn, grow. $39 one-time." />
-        <link rel="canonical" href="https://www.midastools.co/saas-founder-kit" />
+        <link rel="canonical" href="https://midastools.co/saas-founder-kit" />
         <link rel="icon" type="image/png" href="/favicon.png" />
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -57,8 +57,8 @@ export default function SaasFounderKit() {
           "@type": "Product",
           "name": "SaaS Founder AI Kit",
           "description": "135+ AI prompts and templates for SaaS founders — launch playbook, onboarding, churn prevention, growth marketing, customer success, and pricing strategies.",
-          "url": "https://www.midastools.co/saas-founder-kit",
-          "image": "https://www.midastools.co/og-image.png",
+          "url": "https://midastools.co/saas-founder-kit",
+          "image": "https://midastools.co/og-image.png",
           "brand": "Midas Tools",
           "offers": {
             "@type": "Offer",

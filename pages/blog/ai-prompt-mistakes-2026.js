@@ -8,7 +8,7 @@ const STRIPE_BUNDLE = 'https://buy.stripe.com/8wM2abdtg5up7BueVa';
 export default function AIPromptMistakes2026() {
   const title = '10 AI Prompt Mistakes That Are Ruining Your ChatGPT Output (2026)';
   const description = 'Most people make the same 10 prompt mistakes every day. Here\'s what they are, why they kill your AI output, and exactly how to fix each one — with before-and-after examples.';
-  const url = 'https://www.midastools.co/blog/ai-prompt-mistakes-2026';
+  const url = 'https://midastools.co/blog/ai-prompt-mistakes-2026';
 
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -18,8 +18,8 @@ export default function AIPromptMistakes2026() {
     url,
     datePublished: '2026-03-28',
     dateModified: '2026-03-28',
-    author: { '@type': 'Organization', name: 'Midas Tools Team', url: 'https://www.midastools.co' },
-    publisher: { '@type': 'Organization', name: 'Midas Tools', url: 'https://www.midastools.co' },
+    author: { '@type': 'Organization', name: 'Midas Tools Team', url: 'https://midastools.co' },
+    publisher: { '@type': 'Organization', name: 'Midas Tools', url: 'https://midastools.co' },
     mainEntityOfPage: { '@type': 'WebPage', '@id': url }
   };
 

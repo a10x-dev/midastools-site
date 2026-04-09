@@ -9,7 +9,7 @@ const STRIPE_FREELANCER = 'https://buy.stripe.com/28o3pQgNGcBp5644gy';
 export default function AISecondIncome2026() {
   const title = 'How to Build a Second Income with AI in 2026 (Step-by-Step Guide)';
   const description = 'A practical guide to building a second income stream using AI tools in 2026. 7 proven methods with exact prompts, realistic income ranges, and time investments required.';
-  const url = 'https://www.midastools.co/blog/ai-second-income-2026';
+  const url = 'https://midastools.co/blog/ai-second-income-2026';
 
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -19,8 +19,8 @@ export default function AISecondIncome2026() {
     url: url,
     datePublished: '2026-03-24',
     dateModified: '2026-03-24',
-    author: { '@type': 'Person', name: 'Rey Midas', url: 'https://www.midastools.co' },
-    publisher: { '@type': 'Organization', name: 'Midas Tools', url: 'https://www.midastools.co' },
+    author: { '@type': 'Person', name: 'Rey Midas', url: 'https://midastools.co' },
+    publisher: { '@type': 'Organization', name: 'Midas Tools', url: 'https://midastools.co' },
     mainEntityOfPage: { '@type': 'WebPage', '@id': url }
   };
 

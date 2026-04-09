@@ -357,7 +357,7 @@ export default function PromptScorer() {
 
   const title = 'Free AI Prompt Scorer — Rate & Improve Your ChatGPT Prompts | Midas Tools';
   const description = 'Score your AI prompts on a 0-100 scale. Get instant feedback on specificity, context, role-setting, format, and constraints. Improve your ChatGPT, Claude, and Gemini prompts for free.';
-  const url = 'https://www.midastools.co/prompt-scorer';
+  const url = 'https://midastools.co/prompt-scorer';
 
   return (
     <Layout>
@@ -383,7 +383,7 @@ export default function PromptScorer() {
           applicationCategory: 'Productivity',
           operatingSystem: 'Web',
           offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
-          publisher: { '@type': 'Organization', name: 'Midas Tools', url: 'https://www.midastools.co' },
+          publisher: { '@type': 'Organization', name: 'Midas Tools', url: 'https://midastools.co' },
         })}} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
           '@context': 'https://schema.org',
@@ -926,7 +926,7 @@ export default function PromptScorer() {
                 <button
                   className="share-btn"
                   onClick={() => {
-                    const text = `My AI prompt scored ${result.total}/100 on the Midas Tools Prompt Scorer! How does yours compare? Try it free: https://www.midastools.co/prompt-scorer`;
+                    const text = `My AI prompt scored ${result.total}/100 on the Midas Tools Prompt Scorer! How does yours compare? Try it free: https://midastools.co/prompt-scorer`;
                     if (navigator.share) {
                       navigator.share({ text });
                     } else {

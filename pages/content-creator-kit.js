@@ -32,19 +32,19 @@ export default function ContentCreatorKit() {
         <meta name="description" content="AI templates and workflows that turn one piece of content into 10. Blog to Twitter threads, YouTube scripts, newsletters — all automated. $39 one-time." />
         <meta property="og:title" content="AI Kit for Content Creators — Midas Tools" />
         <meta property="og:description" content="Turn one piece of content into 10 with AI. Blog to Twitter to LinkedIn to Newsletter to YouTube script. $39 one-time." />
-        <meta property="og:url" content="https://www.midastools.co/content-creator-kit" />
-        <meta property="og:image" content="https://www.midastools.co/og-image.png" />
+        <meta property="og:url" content="https://midastools.co/content-creator-kit" />
+        <meta property="og:image" content="https://midastools.co/og-image.png" />
         <meta name="twitter:card" content="summary_large_image" />
         <link rel="icon" type="image/png" href="/favicon.png" />
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
-        <link rel="canonical" href="https://www.midastools.co/content-creator-kit" />
+        <link rel="canonical" href="https://midastools.co/content-creator-kit" />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Product",
           "name": "Content Creator AI Kit",
           "description": "AI templates and workflows that turn one piece of content into 10. Content repurposing engine, Twitter thread generator, YouTube script builder, newsletter writer, and 30-day content calendar.",
-          "url": "https://www.midastools.co/content-creator-kit",
-          "image": "https://www.midastools.co/og-image.png",
+          "url": "https://midastools.co/content-creator-kit",
+          "image": "https://midastools.co/og-image.png",
           "brand": "Midas Tools",
           "offers": {
             "@type": "Offer",

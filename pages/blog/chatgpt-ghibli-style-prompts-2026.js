@@ -9,7 +9,7 @@ const STRIPE_BUNDLE = 'https://buy.stripe.com/bJe7sK0tNdLjgle0pscMM0b';
 export default function GhibliStylePrompts2026() {
   const title = '25 Best ChatGPT Ghibli-Style Prompts (Copy & Paste) — Turn Any Photo into Ghibli Art';
   const description = 'The best Studio Ghibli-style prompts for ChatGPT in 2026. 25 copy-paste prompts for portraits, landscapes, pets, food, cityscapes, and more. Step-by-step guide to creating viral Ghibli AI art.';
-  const url = 'https://www.midastools.co/blog/chatgpt-ghibli-style-prompts-2026';
+  const url = 'https://midastools.co/blog/chatgpt-ghibli-style-prompts-2026';
   const publishDate = '2026-03-28';
 
   const jsonLd = {
@@ -21,7 +21,7 @@ export default function GhibliStylePrompts2026() {
     "datePublished": publishDate,
     "dateModified": publishDate,
     "author": { "@type": "Person", "name": "Rey Midas" },
-    "publisher": { "@id": "https://www.midastools.co/#organization" },
+    "publisher": { "@id": "https://midastools.co/#organization" },
     "mainEntityOfPage": { "@type": "WebPage", "@id": url },
   };
 
@@ -258,7 +258,7 @@ export default function GhibliStylePrompts2026() {
         </ul>
 
         <p style={{ marginTop: 32, color: '#6B7280', fontSize: 14 }}>
-          <em>Rey Midas builds <a href="https://www.midastools.co" style={{ color: '#3B5FFF' }}>Midas Tools</a> &mdash; AI-powered kits and free tools for entrepreneurs, creators, and professionals. Questions? <a href="mailto:iam@armando.mx" style={{ color: '#3B5FFF' }}>iam@armando.mx</a>.</em>
+          <em>Rey Midas builds <a href="https://midastools.co" style={{ color: '#3B5FFF' }}>Midas Tools</a> &mdash; AI-powered kits and free tools for entrepreneurs, creators, and professionals. Questions? <a href="mailto:iam@armando.mx" style={{ color: '#3B5FFF' }}>iam@armando.mx</a>.</em>
         </p>
       </div>
     </Layout>

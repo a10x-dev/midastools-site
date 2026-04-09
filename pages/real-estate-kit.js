@@ -32,19 +32,19 @@ export default function RealEstateKit() {
         <meta name="description" content="Deploy an AI agent that handles your real estate leads, follow-ups, listing descriptions, and client communication 24/7. Templates + workflows for $49." />
         <meta property="og:title" content="AI Agent Kit for Real Estate — Midas Tools" />
         <meta property="og:description" content="AI agent templates built for realtors. Automate lead follow-up, listing descriptions, and client communication. $49 one-time." />
-        <meta property="og:url" content="https://www.midastools.co/real-estate-kit" />
-        <meta property="og:image" content="https://www.midastools.co/og-image.png" />
+        <meta property="og:url" content="https://midastools.co/real-estate-kit" />
+        <meta property="og:image" content="https://midastools.co/og-image.png" />
         <meta name="twitter:card" content="summary_large_image" />
         <link rel="icon" type="image/png" href="/favicon.png" />
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
-        <link rel="canonical" href="https://www.midastools.co/real-estate-kit" />
+        <link rel="canonical" href="https://midastools.co/real-estate-kit" />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Product",
           "name": "Real Estate AI Kit",
           "description": "AI agent templates built for realtors. Automate lead follow-up, listing descriptions, market analysis, and client communication. 50+ templates and workflows.",
-          "url": "https://www.midastools.co/real-estate-kit",
-          "image": "https://www.midastools.co/og-image.png",
+          "url": "https://midastools.co/real-estate-kit",
+          "image": "https://midastools.co/og-image.png",
           "brand": "Midas Tools",
           "offers": {
             "@type": "Offer",

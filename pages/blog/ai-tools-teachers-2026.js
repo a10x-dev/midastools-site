@@ -8,7 +8,7 @@ const STRIPE_BUNDLE = 'https://buy.stripe.com/00g5xY2WM04Ncyw9AH';
 export default function AIToolsTeachers2026() {
   const title = '9 AI Tools for Teachers That Save 10+ Hours Per Week in 2026';
   const description = 'The best AI tools for teachers in 2026. Create lesson plans, grade faster, generate worksheets, write report card comments, and differentiate instruction — all with copy-paste prompts.';
-  const url = 'https://www.midastools.co/blog/ai-tools-teachers-2026';
+  const url = 'https://midastools.co/blog/ai-tools-teachers-2026';
 
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -18,8 +18,8 @@ export default function AIToolsTeachers2026() {
     url: url,
     datePublished: '2026-03-24',
     dateModified: '2026-03-24',
-    author: { '@type': 'Person', name: 'Rey Midas', url: 'https://www.midastools.co' },
-    publisher: { '@type': 'Organization', name: 'Midas Tools', url: 'https://www.midastools.co' },
+    author: { '@type': 'Person', name: 'Rey Midas', url: 'https://midastools.co' },
+    publisher: { '@type': 'Organization', name: 'Midas Tools', url: 'https://midastools.co' },
     mainEntityOfPage: { '@type': 'WebPage', '@id': url }
   };
 

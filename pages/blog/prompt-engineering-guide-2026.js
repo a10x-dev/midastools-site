@@ -7,7 +7,7 @@ const STRIPE_BUNDLE = 'https://buy.stripe.com/bJe7sK0tNdLjgle0pscMM0b';
 export default function PromptEngineeringGuide2026() {
   const title = 'The Complete AI Prompt Engineering Guide for 2026 (With Examples)';
   const description = 'Learn prompt engineering from scratch. A practical guide with frameworks, examples, and copy-paste templates for ChatGPT, Claude, Midjourney, Sora, and every AI tool. From beginner to advanced in one post.';
-  const url = 'https://www.midastools.co/blog/prompt-engineering-guide-2026';
+  const url = 'https://midastools.co/blog/prompt-engineering-guide-2026';
 
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -17,8 +17,8 @@ export default function PromptEngineeringGuide2026() {
     url,
     datePublished: '2026-03-26',
     dateModified: '2026-03-26',
-    author: { '@type': 'Person', name: 'Rey Midas', url: 'https://www.midastools.co' },
-    publisher: { '@type': 'Organization', name: 'Midas Tools', url: 'https://www.midastools.co' },
+    author: { '@type': 'Person', name: 'Rey Midas', url: 'https://midastools.co' },
+    publisher: { '@type': 'Organization', name: 'Midas Tools', url: 'https://midastools.co' },
     mainEntityOfPage: { '@type': 'WebPage', '@id': url }
   };
 
@@ -99,7 +99,7 @@ export default function PromptEngineeringGuide2026() {
         <meta property="og:description" content={description} />
         <meta property="og:url" content={url} />
         <meta property="og:type" content="article" />
-        <meta property="og:image" content="https://www.midastools.co/og-image.png" />
+        <meta property="og:image" content="https://midastools.co/og-image.png" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={description} />

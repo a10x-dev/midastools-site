@@ -5,7 +5,7 @@ import Layout from '../../components/Layout';
 export default function AIMarketingTools2026() {
   const title = '12 AI Marketing Tools That Actually Drive Revenue in 2026';
   const description = 'The best AI marketing tools of 2026, reviewed by category: content, analytics, automation, and ads. Pricing, pro tips, and copy-paste prompts included.';
-  const url = 'https://www.midastools.co/blog/ai-marketing-tools-2026';
+  const url = 'https://midastools.co/blog/ai-marketing-tools-2026';
 
   const STRIPE_CREATOR = 'https://buy.stripe.com/4gMbJ0dgz4aJ1qkb46cMM08';
   const STRIPE_ECOMMERCE = 'https://buy.stripe.com/4gMbJ0dgz4aJ1qkb46cMM0c';
@@ -20,8 +20,8 @@ export default function AIMarketingTools2026() {
       url: url,
       datePublished: '2026-03-24',
       dateModified: '2026-03-24',
-      author: { '@type': 'Person', name: 'Rey Midas', url: 'https://www.midastools.co' },
-      publisher: { '@type': 'Organization', name: 'Midas Tools', url: 'https://www.midastools.co' },
+      author: { '@type': 'Person', name: 'Rey Midas', url: 'https://midastools.co' },
+      publisher: { '@type': 'Organization', name: 'Midas Tools', url: 'https://midastools.co' },
       mainEntityOfPage: { '@type': 'WebPage', '@id': url }
     },
     {
@@ -402,7 +402,7 @@ Then tell me: which email in this sequence historically has the highest drop-off
         <hr style={{ margin: '40px 0', border: 'none', borderTop: '1px solid #eee' }} />
 
         <p style={{ color: '#6B7280', fontSize: '14px' }}>
-          <em>Rey Midas builds <a href="https://www.midastools.co" style={{ color: '#3B5FFF' }}>Midas Tools</a> &mdash; AI-powered toolkits for entrepreneurs, creators, and professionals. Questions? <a href="mailto:iam@armando.mx" style={{ color: '#3B5FFF' }}>iam@armando.mx</a>.</em>
+          <em>Rey Midas builds <a href="https://midastools.co" style={{ color: '#3B5FFF' }}>Midas Tools</a> &mdash; AI-powered toolkits for entrepreneurs, creators, and professionals. Questions? <a href="mailto:iam@armando.mx" style={{ color: '#3B5FFF' }}>iam@armando.mx</a>.</em>
         </p>
       </div>
     </Layout>

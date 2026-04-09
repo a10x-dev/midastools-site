@@ -32,19 +32,19 @@ export default function SmallBusinessKit() {
         <meta name="description" content="AI templates and workflows that save small business owners 20+ hours per week. Social media, email marketing, customer service, hiring, and operations — all automated. $39 one-time." />
         <meta property="og:title" content="AI Kit for Small Business — Midas Tools" />
         <meta property="og:description" content="Save 20+ hours per week with AI templates built for small business. Social media, email, customer service, hiring. $39 one-time." />
-        <meta property="og:url" content="https://www.midastools.co/small-business-kit" />
-        <meta property="og:image" content="https://www.midastools.co/og-image.png" />
+        <meta property="og:url" content="https://midastools.co/small-business-kit" />
+        <meta property="og:image" content="https://midastools.co/og-image.png" />
         <meta name="twitter:card" content="summary_large_image" />
         <link rel="icon" type="image/png" href="/favicon.png" />
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
-        <link rel="canonical" href="https://www.midastools.co/small-business-kit" />
+        <link rel="canonical" href="https://midastools.co/small-business-kit" />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Product",
           "name": "Small Business AI Kit",
           "description": "AI templates and workflows for small business owners. Social media, email marketing, customer service, hiring, operations, and sales — all automated.",
-          "url": "https://www.midastools.co/small-business-kit",
-          "image": "https://www.midastools.co/og-image.png",
+          "url": "https://midastools.co/small-business-kit",
+          "image": "https://midastools.co/og-image.png",
           "brand": "Midas Tools",
           "offers": {
             "@type": "Offer",

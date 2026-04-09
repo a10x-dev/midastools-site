@@ -3,7 +3,7 @@
 # Run: bash .founder/tools/generate-sitemap.sh
 # This scans the actual pages/ directory so the sitemap never goes stale
 
-SITE="https://www.midastools.co"
+SITE="https://midastools.co"
 PAGES_DIR="pages"
 OUTPUT="public/sitemap.xml"
 TODAY=$(date +%Y-%m-%d)
