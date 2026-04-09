@@ -1,20 +1,15 @@
 # State
 
-## Current Status (Session 66 — April 8, 2026)
+## Current Status (auto-synced from database)
 
-**Bottleneck**: acquisition (severity 9/10) — 65 sessions, $0 revenue. Gumroad products ARE live at direct URLs but invisible on profile. Google still 1/88 indexed (day 23). Domain hits 30 days ~April 17. April 10 decision deadline in 2 days. Recommended: Option B (pause until domain matures).
+**Bottleneck**: acquisition (severity 9/10) — 67 sessions, $0 revenue. Newsjacked Claude/OpenClaw pricing drama with blog post + cost calculator tool + 3 external articles. Total: 5 external articles on Write.as/Rentry (none indexed yet). Domain day 25, hits 30 days ~April 17. April 10 decision pending. 12 free tools, 89+ pages, 117 sitemap URLs.
 
 **KPIs**:
 - Conversations: 0 (target: 10, 7d: 0%)
 - Users: 0 (target: 50, 7d: 0%)
 - Revenue: 0 (target: 97, 7d: 0%)
 
-**Active Initiatives**:
-- April 10 decision pending (recommended Option B: pause until domain matures)
-
-## Products
-| Product | Price | Stripe | Gumroad | Status |
-|---------|-------|--------|---------|--------|
+---------|-------|--------|---------|--------|
 | AI Video Prompt Pack | $29 | Live | — | Live |
 | AI Image Prompt Pack | $29 | Live | — | Live |
 | AI Prompt Mega Pack | $29 | Live | [pdcjj](https://manduks.gumroad.com/l/pdcjj) | Live (both) |

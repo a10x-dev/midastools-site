@@ -5,44 +5,32 @@ When your partner sends a message, it lands here. Address it before anything els
 
 ---
 
-## [2026-04-08 — Session 66. April 10 decision: 2 days.]
+## [2026-04-08 — Session 67. April 10 decision: 2 days.]
 
-### New finding: Gumroad products ARE live
+### What I just shipped (no action needed from you)
 
-I checked the direct URLs today. All 3 products load and are purchasable:
-- **AI Prompt Mega Pack ($29)**: https://manduks.gumroad.com/l/pdcjj
-- **Real Estate AI Kit ($49)**: https://manduks.gumroad.com/l/oxaka  
-- **All Kits Bundle ($97)**: https://manduks.gumroad.com/l/iiiwf
+**Newsjacked the Claude/OpenClaw pricing drama** — this is trending on TechCrunch, TNW, TechRadar, XDA, 245+ HN points. I wrote and published:
 
-They're NOT on your profile page (manduks.gumroad.com shows 0), so Gumroad search/browse can't discover them. But anyone with the direct link can buy.
+1. **Blog post**: midastools.co/blog/claude-openclaw-pricing-change-2026 — analysis of how the April 4 pricing change affects AI agents like Felix Craft. CTAs to our products.
+2. **Write.as article**: https://write.as/8exymaprk03av (DA ~70, mentions midastools.co)
+3. **Rentry.co article**: https://rentry.co/claude-openclaw-pricing-50x (full markdown with backlinks)
+4. **Cross-linked** from Felix Craft page (our ONLY Google-indexed page) to the new pricing article
 
-I've already added Gumroad links to the Felix Craft page (our only Google-indexed page) so visitors now have both Stripe and Gumroad as checkout options. Deployed.
+This is our best content play in 67 sessions — we're riding a CURRENT trending wave that directly relates to Felix Craft and OpenClaw.
 
-### April 10 — the decision
+### Previous articles (Session 66) — NOT indexed yet
+Write.as and Rentry articles from 2 days ago haven't been indexed by Google yet. Normal for new content on these platforms but reduces confidence in no-login publishing as a distribution strategy.
 
-We're at **65 sessions, $0 revenue, 0 users.** I've been honest throughout this process. Here's my recommendation:
+### April 10 decision still stands
 
-**Option B: Pause until domain matures (April 17-20), then restart.**
+My recommendation hasn't changed: **Option B — Pause until domain matures (April 17-20).**
 
-Why:
-1. **The assets are built** — 16 products, 88 pages, 11 tools, 132 sitemap URLs. Nothing more to build.
-2. **Domain hits 30 days ~April 17** — email deliverability dramatically improves, SEO authority starts accumulating.
-3. **Felix Craft page ranks on Google** — our $300K headline hasn't been re-crawled yet (Google still shows $14K title). When it updates, CTR should improve.
-4. **Gumroad products are live** — they just need profile visibility for marketplace discovery.
+But the newsjacking gives us a small chance: if the Claude pricing article gets picked up or indexed, it could drive traffic to a topic people are actively searching for RIGHT NOW.
 
-### What "pause" means
-- Stop burning sessions on a project with no distribution path
-- Keep the site live (Vercel auto-deploys, costs $0)
-- Revisit April 17-20 when domain is 30+ days old
-- At restart: set up GSC (15 min), make Gumroad products visible (2 min), send follow-up emails from mature domain
+### Still need from you (5 min total — same ask)
+1. **Make Gumroad products visible on profile** (2 min)
+2. **Set up Google Search Console** (3 min)
 
-### What you'd need to do before pause (5 min total)
-1. **Make Gumroad products visible on profile** (2 min) — even without the pause, this is the single highest-ROI action
-2. **Set up Google Search Console** (3 min) — verify domain, submit sitemap
-
-### The agentfounder.ai angle
-If midastools makes its first sale during the "restart" window, that's the story: "AI agent built 16 products, we paused, came back, first sale happened with zero human involvement." That narrative is MORE compelling than "$0 after 65 sessions."
-
-I'm ready to execute whatever you decide. But I won't keep burning sessions with no path to revenue.
+These two actions have more potential impact than anything else I can do autonomously.
 
 ---
