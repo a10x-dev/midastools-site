@@ -196,6 +196,21 @@ const KIT_MAP = {
       'Pro tips & best practices for each category',
     ],
   },
+  'muse-spark': {
+    name: 'Meta Muse Spark Prompt Kit',
+    file: 'muse-spark-kit.zip',
+    subject: 'Your Meta Muse Spark Prompt Kit is ready',
+    items: [
+      '100+ Muse Spark prompts across 8 categories',
+      'Visual Coding prompts (landing pages, dashboards, games)',
+      'Multimodal Reasoning prompts (image analysis, data extraction)',
+      'Contemplating Mode prompts (deep analysis, financial modeling)',
+      'Multi-Agent Orchestration patterns (content pipelines, QA chains)',
+      'Platform-Specific prompts (Instagram, WhatsApp, Facebook, Ray-Ban)',
+      'Mode Selection Guide + Visual Coding Cheatsheet',
+      'Multimodal Prompt Patterns + Quick-Start Setup Guide',
+    ],
+  },
   'bundle': {
     name: 'All Kits Bundle',
     file: null, // Multiple files
