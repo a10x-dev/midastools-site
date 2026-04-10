@@ -115,6 +115,22 @@ const TOOLS = [
     categories: '8 styles · 50+ accessories',
     bg: 'var(--card-yellow)',
   },
+  {
+    title: 'AI Ghibli Art Generator',
+    desc: 'Create stunning Studio Ghibli-style AI art. Choose from 8 Miyazaki film styles (Spirited Away, Totoro, Howl\'s Castle), set scenes, moods, and magical elements. The trend that broke ChatGPT — 150M+ users.',
+    href: '/ghibli-prompt-generator',
+    tag: '🔥 VIRAL',
+    categories: '8 film styles · 20 elements',
+    bg: 'var(--card-green)',
+  },
+  {
+    title: 'AI Pet Portrait Generator',
+    desc: 'Turn your pet into a royal portrait, action figure, Ghibli character, trading card, or even imagine them as a human! 12 art styles, 8 backgrounds. The $14B pet portrait trend made free.',
+    href: '/pet-portrait-generator',
+    tag: '🔥 NEW',
+    categories: '12 styles · 8 pets',
+    bg: 'var(--card-purple)',
+  },
 ];
 
 const COMING_SOON = [
@@ -127,7 +143,7 @@ export default function Tools() {
     '@context': 'https://schema.org',
     '@type': 'CollectionPage',
     name: 'Free AI Tools for Entrepreneurs',
-    url: 'https://www.midastools.co/tools',
+    url: 'https://midastools.co/tools',
     description: 'Free AI-powered tools for entrepreneurs and small businesses. Generate prompts, business names, and more — no signup required.',
   };
 
