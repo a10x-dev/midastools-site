@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Layout from '../../components/Layout';
 
 const posts = [
+  { slug: 'claude-code-mastery-guide-2026', title: 'The Ultimate Claude Code CLAUDE.md Guide: Templates, Hooks & Workflows (2026)', date: 'Apr 10, 2026', desc: 'Copy-paste CLAUDE.md templates for React, Python, Go + 10 hook recipes + subagent patterns. The complete Claude Code mastery guide with ready-to-use configs.' },
   { slug: 'claude-managed-agents-2026', title: 'Anthropic Just Launched Claude Managed Agents — What It Means for Your Business', date: 'Apr 9, 2026', desc: 'Anthropic launched Claude Managed Agents in public beta — cloud-hosted AI agents that run for hours, self-evaluate, and coordinate. Notion, Rakuten, Asana, Sentry already using it.' },
   { slug: 'ramp-ai-adoption-playbook-2026', title: 'Ramp Made 99.5% of Employees AI Power Users — Here\'s the Playbook You Can Steal', date: 'Apr 9, 2026', desc: 'Ramp hit 99.5% AI adoption, 84% using coding agents weekly. Non-engineers shipping production code. Their 8-step playbook for rolling out AI across any team.' },
   { slug: 'claude-openclaw-pricing-change-2026', title: 'Claude Just Made OpenClaw 50x More Expensive — What It Means for AI Agents', date: 'Apr 8, 2026', desc: 'Anthropic cut OpenClaw from Claude subscriptions. Costs could jump 50x. Here\'s what it means for AI agents like Felix Craft ($300K/month), and 5 ways to keep your agent profitable.' },

@@ -1,9 +1,9 @@
 import { Resend } from 'resend';
 
 const resend = new Resend(process.env.RESEND_API_KEY);
-const AUDIENCE_ID = '3863f687-ae32-4bba-a056-0f7dcf64bc27';
 const FROM_EMAIL = 'MidasTools <hello@midastools.co>';
 const FOUNDER_EMAIL = 'iam+midas@armando.mx';
+const SUBSCRIBERS_BLOB = 'https://jsonblob.com/api/jsonBlob/019d7730-bd31-79cb-86f4-4b76dac3786b';
 
 export default async function handler(req, res) {
   if (req.method !== 'POST') {
@@ -17,14 +17,22 @@ export default async function handler(req, res) {
   }
 
   try {
-    // 1. Add contact to audience
-    await resend.contacts.create({
-      email,
-      audienceId: AUDIENCE_ID,
-      unsubscribed: false,
-      firstName: '',
-      lastName: '',
-    });
+    // 1. Add contact to subscriber storage (jsonblob — free, no auth)
+    try {
+      const blobRes = await fetch(SUBSCRIBERS_BLOB);
+      const data = await blobRes.json();
+      const existing = data.subscribers || [];
+      if (!existing.find(s => s.email === email)) {
+        existing.push({ email, source: source || 'site', date: new Date().toISOString() });
+        await fetch(SUBSCRIBERS_BLOB, {
+          method: 'PUT',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ subscribers: existing }),
+        });
+      }
+    } catch (blobErr) {
+      console.error('Blob storage error (non-fatal):', blobErr.message);
+    }
 
     // 2. Send welcome email with 5 free prompts
     await resend.emails.send({

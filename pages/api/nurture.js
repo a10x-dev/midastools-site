@@ -5,9 +5,9 @@
 import { Resend } from 'resend';
 
 const resend = new Resend(process.env.RESEND_API_KEY);
-const AUDIENCE_ID = '3863f687-ae32-4bba-a056-0f7dcf64bc27';
 const FROM_EMAIL = 'MidasTools <hello@midastools.co>';
 const SECRET_KEY = process.env.OUTREACH_SECRET || 'mt-outreach-2026';
+const SUBSCRIBERS_BLOB = 'https://jsonblob.com/api/jsonBlob/019d7730-bd31-79cb-86f4-4b76dac3786b';
 
 const BUNDLE_LINK = 'https://buy.stripe.com/bJe7sK0tNdLjgle0pscMM0b';
 const MEGA_PACK_LINK = 'https://buy.stripe.com/4gMbJ0dgz4aJ1qkb46cMM0d';
@@ -163,8 +163,10 @@ export default async function handler(req, res) {
   try {
     // Broadcast mode: send to all contacts in audience
     if (broadcast === 'true') {
-      const contacts = await resend.contacts.list({ audienceId: AUDIENCE_ID });
-      const activeContacts = (contacts.data?.data || []).filter(c => !c.unsubscribed);
+      // Read subscribers from jsonblob storage
+      const blobRes = await fetch(SUBSCRIBERS_BLOB);
+      const blobData = await blobRes.json();
+      const activeContacts = (blobData.subscribers || []).filter(s => !s.unsubscribed);
 
       if (activeContacts.length === 0) {
         return res.status(200).json({ success: true, sent: 0, message: 'No active subscribers' });

@@ -162,6 +162,15 @@ const kits = [
     badge: 'HOT',
     color: 'var(--card-amber)',
   },
+  {
+    name: 'Claude Code Mastery Kit',
+    price: '$39',
+    desc: '80+ CLAUDE.md templates, 10 hook recipes, 8 skill files, subagent patterns & token optimization workflows. Ship 10x faster.',
+    href: '/claude-code-kit',
+    stripe: 'https://buy.stripe.com/8x25kCccv4aJ3ys0pscMM0q',
+    badge: 'HOT',
+    color: 'var(--card-purple)',
+  },
 ];
 
 export default function Kits() {
