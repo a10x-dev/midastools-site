@@ -83,11 +83,11 @@ function getSourceBonus(source) {
   // Default: general business prompts
   return {
     hook: "Here's something exclusive for subscribers",
-    bonus: "3 premium prompts not available anywhere on the site:",
+    bonus: "3 premium prompts not available anywhere on the site. Each one uses a technique that produces dramatically better AI output:",
     prompts: [
-      { title: "Revenue Multiplier Analysis", prompt: "You are a growth strategist who has scaled 50+ businesses past $1M ARR. Analyze my business: [DESCRIBE YOUR BUSINESS, REVENUE, MAIN PRODUCT]. Identify the top 3 revenue multipliers I'm leaving on the table. For each: explain the opportunity, give me the exact first step to capture it this week, and estimate the revenue impact in 90 days. Be brutally specific — no generic advice." },
-      { title: "Competitor Teardown", prompt: "Act as a competitive intelligence analyst. My competitor is [COMPETITOR URL]. Analyze their: pricing strategy (and why it works), messaging angles (what emotions they target), content strategy (what topics drive their traffic), and conversion funnel (how they turn visitors into buyers). Then give me 3 specific ways to position my product [YOUR PRODUCT] to win customers they're losing." },
-      { title: "24-Hour Launch Plan", prompt: "You are a product launch expert. I need to launch [YOUR PRODUCT] in the next 24 hours with zero budget. Create a minute-by-minute launch plan covering: pre-launch buzz (2 hours), launch announcement (channels, copy, timing), first-hour engagement tactics, and post-launch follow-up sequence. Include exact copy I can paste for each platform. Make it scrappy, urgent, and effective." },
+      { title: "The 'Hidden Revenue' Audit", prompt: "I'm going to describe my business, and I want you to find money I'm leaving on the table — but NOT the obvious stuff (raise prices, sell more). I want the non-obvious revenue levers that require zero new customers.\n\nMy business: [DESCRIBE — what you sell, to whom, how much revenue, how you deliver]\n\nAnalyze these 5 hidden revenue zones:\n1. PRICING ARCHITECTURE — Am I accidentally anchoring too low? Could I restructure the same offering into tiers that capture more willingness-to-pay?\n2. BACK-END OFFERS — What could I sell to existing customers that I'm not? What's the natural 'what next?' after they buy from me?\n3. PARTNERSHIP MATH — Who already has my ideal customers' attention? What would a revenue-share deal look like with them?\n4. PACKAGING ARBITRAGE — Am I selling ingredients when I should be selling meals? (e.g. selling prompts vs. selling 'the complete system')\n5. SPEED PREMIUM — What would people pay 2-3x more for if they could get it faster or with done-for-you implementation?\n\nFor each zone: state the opportunity in one sentence, estimate the revenue impact (conservative), and give me the exact first action to take tomorrow morning." },
+      { title: "The 'Objection Destroyer' Sales Script", prompt: "I need to handle sales objections for [YOUR PRODUCT/SERVICE at PRICE]. But I don't want generic rebuttals — I want to understand the psychology behind each objection and disarm it before it's even raised.\n\nFirst, list the 8 most common objections for a product like mine (ranked by how often they kill the sale). For each one:\n- THE REAL OBJECTION: What they say vs. what they actually mean (these are always different)\n- THE REFRAME: A single sentence that shifts their perspective without being pushy\n- THE PROOF POINT: What evidence, story, or demonstration would eliminate this objection permanently?\n- THE PREEMPTIVE STRIKE: How do I address this in my marketing/copy so they never even think it?\n\nThen write a 60-second elevator pitch for my product that preemptively destroys the top 3 objections before anyone can raise them. The pitch should sound conversational, not salesy." },
+      { title: "The 'Content Engine' System Prompt", prompt: "I want to set up a system where I spend 30 minutes per day on content and get 10x the output of someone spending 3 hours. Build me the complete system.\n\nMy niche: [YOUR NICHE]\nMy goal: [LEADS / BRAND / SALES / AUTHORITY]\nPlatforms I'm on: [LIST THEM]\nMy unfair advantage: [WHAT DO YOU KNOW THAT MOST PEOPLE DON'T?]\n\nDesign a system with:\n1. IDEA BANK — 20 content ideas I can execute this month, categorized by platform and format. Each idea should have the hook, the main point, and the CTA pre-written in one sentence each.\n2. THE DAILY WORKFLOW — A step-by-step 30-minute routine: minute 0-10 (create), minute 10-20 (repurpose), minute 20-30 (distribute + engage). Be specific about what tool to use at each step.\n3. THE RECYCLING SYSTEM — How to take my best-performing content and turn it into 5 new pieces without it feeling repetitive.\n4. THE MEASUREMENT CHEAT SHEET — The only 3 metrics I should track (ignore everything else), what 'good' looks like for each, and when to pivot vs. double down.\n\nI don't want theory. I want a system I can start using tomorrow morning at 8am." },
     ],
     cta: { text: "Get 500+ Prompts Like These — $29", link: MEGA_PACK_LINK },
   };
@@ -128,29 +128,30 @@ const emails = {
 
   // Day 2: Quick win — a free prompt they can use RIGHT NOW to get results
   2: {
-    subject: "Use this prompt today — it works in 30 seconds",
+    subject: "Open ChatGPT and paste this (takes 30 seconds)",
     html: (source) => wrapEmail(`
-      <h1 style="font-size:24px;font-weight:700;margin:0 0 16px;">Try this right now (seriously, open ChatGPT)</h1>
-      <p style="font-size:16px;line-height:1.7;color:#374151;">I'm going to give you one prompt. Just one. But it's the single most useful prompt I've ever written.</p>
+      <h1 style="font-size:24px;font-weight:700;margin:0 0 16px;">One prompt. Try it right now.</h1>
+      <p style="font-size:16px;line-height:1.7;color:#374151;">I'm going to give you one prompt. Don't save it for later — open ChatGPT or Claude right now, fill in the brackets, and paste it. You'll have a usable result in 30 seconds.</p>
 
       <div style="background:#111827;border-radius:12px;padding:24px;margin:24px 0;">
-        <p style="font-size:14px;line-height:1.8;color:#E5E7EB;margin:0;font-family:monospace;">
-          You are my executive assistant. I'm going to describe my day, and you're going to:<br/><br/>
-          1. Identify the 3 things that will have the most impact on my goals<br/>
-          2. Create a time-blocked schedule that puts deep work first<br/>
-          3. Write me a "done list" template for tonight<br/>
-          4. Flag anything I should delegate or drop entirely<br/><br/>
-          Here's my day: [PASTE YOUR TO-DO LIST OR DESCRIBE YOUR DAY]
+        <p style="font-size:13px;line-height:1.9;color:#E5E7EB;margin:0;font-family:monospace;">
+          I run [YOUR BUSINESS/ROLE]. Today I need to make progress on [YOUR BIGGEST CURRENT CHALLENGE].<br/><br/>
+          Don't give me generic advice. Instead:<br/><br/>
+          1. Ask me 3 sharp diagnostic questions about my specific situation (things I probably haven't considered)<br/>
+          2. Based on my answers, give me ONE high-leverage action I can complete in under 2 hours today that moves the needle the most<br/>
+          3. Write the actual deliverable for me — the email, the plan, the script, the analysis, whatever it is. Not a template. The real thing, using my specific details.<br/>
+          4. Tell me the ONE thing most people in my position waste time on that I should stop doing immediately<br/><br/>
+          Start with the 3 questions. Wait for my answers before proceeding.
         </p>
       </div>
 
-      <p style="font-size:16px;line-height:1.7;color:#374151;">People who use this prompt tell me it saves them <strong>2-3 hours per day</strong>. Not kidding.</p>
+      <p style="font-size:16px;line-height:1.7;color:#374151;"><strong>Why this works:</strong> Most prompts ask AI to monologue at you. This one forces a conversation — the AI diagnoses before prescribing, so the output is hyper-specific to YOUR situation. No generic advice possible.</p>
 
-      <p style="font-size:16px;line-height:1.7;color:#374151;">Now imagine having 500+ prompts like this — one for every business situation you'll ever face. That's what the Mega Pack is.</p>
+      <p style="font-size:16px;line-height:1.7;color:#374151;">Try it once and you'll never go back to basic prompting.</p>
 
-      ${ctaButton("See All 500+ Prompts — $29", MEGA_PACK_LINK, "Each one tested, each one works in 30 seconds")}
+      ${ctaButton("Get 500+ Prompts This Good — $29", MEGA_PACK_LINK, "Each one designed for specific, actionable results")}
 
-      <p style="font-size:14px;color:#6B7280;line-height:1.6;">Try the prompt. You'll see.<br/>The MidasTools Team</p>
+      <p style="font-size:14px;color:#6B7280;line-height:1.6;">Try it now. Seriously.<br/>The MidasTools Team</p>
     `),
   },
 

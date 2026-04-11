@@ -42,40 +42,45 @@ export default async function handler(req, res) {
       html: `
         <div style="font-family:'Inter',Helvetica,Arial,sans-serif;max-width:600px;margin:0 auto;padding:32px 24px;color:#111827;">
           <h1 style="font-size:24px;font-weight:700;margin:0 0 16px;">Your 5 Free AI Prompts</h1>
-          <p style="font-size:16px;line-height:1.6;color:#374151;">Thanks for joining 1,000+ founders using AI to build faster. Here are your prompts:</p>
+          <p style="font-size:16px;line-height:1.6;color:#374151;">These aren't generic prompts. Each one uses a specific technique that produces dramatically better AI output. Try any of them right now — you'll see the difference immediately.</p>
 
           <div style="background:#F9FAFB;border:1px solid #E5E7EB;border-radius:12px;padding:24px;margin:24px 0;">
-            <h3 style="margin:0 0 12px;font-size:16px;color:#3B5FFF;">Prompt 1: Instant Sales Email</h3>
-            <p style="font-size:14px;line-height:1.6;color:#374151;margin:0;">You are a world-class B2B copywriter. Write a 3-paragraph cold email for [YOUR PRODUCT] targeting [YOUR AUDIENCE]. Lead with their biggest pain point, show how you solve it with a specific result, and end with a soft CTA to book a 15-min call. Keep it under 150 words. No fluff.</p>
+            <h3 style="margin:0 0 4px;font-size:16px;color:#3B5FFF;">Prompt 1: The "Steal My Competitor's Strategy" Analyzer</h3>
+            <p style="font-size:12px;color:#6B7280;margin:0 0 12px;">Technique: Forces AI to think like a strategist, not a summarizer</p>
+            <p style="font-size:14px;line-height:1.6;color:#374151;margin:0;">I want you to reverse-engineer a competitor's business strategy. The competitor is [COMPETITOR NAME/URL]. Analyze their approach across these 5 dimensions and give me specific, actionable takeaways for each:<br/><br/>1. PRICING PSYCHOLOGY — What pricing tricks are they using? (anchoring, decoy pricing, charm pricing, bundling). What does their pricing tell you about who they think their customer is?<br/>2. MESSAGING HIERARCHY — What's the #1 emotion they're targeting on their homepage? What objections are they preemptively handling? Copy the exact phrases that are doing the heavy lifting.<br/>3. CONTENT MOAT — What content are they ranking for? What topics do they own that would be hard to compete with? Where are the gaps they're ignoring?<br/>4. CONVERSION ARCHITECTURE — Map their funnel: how do they take someone from "just browsing" to "credit card out"? Count the steps. Identify the friction points.<br/>5. VULNERABILITY REPORT — Based on all of the above, give me 3 specific ways I could win customers away from them with my product [YOUR PRODUCT/SERVICE].<br/><br/>Be brutally honest. I don't want compliments about my competitor — I want their playbook so I can beat them.</p>
           </div>
 
           <div style="background:#F9FAFB;border:1px solid #E5E7EB;border-radius:12px;padding:24px;margin:24px 0;">
-            <h3 style="margin:0 0 12px;font-size:16px;color:#3B5FFF;">Prompt 2: Social Media Hook Generator</h3>
-            <p style="font-size:14px;line-height:1.6;color:#374151;margin:0;">Generate 10 scroll-stopping hooks for [YOUR TOPIC] on [PLATFORM]. Each hook should be under 15 words, create curiosity or controversy, and make someone stop scrolling. Format: numbered list. Avoid clickbait — make each one deliverable.</p>
+            <h3 style="margin:0 0 4px;font-size:16px;color:#3B5FFF;">Prompt 2: The "Reply-Magnet" Cold Email</h3>
+            <p style="font-size:12px;color:#6B7280;margin:0 0 12px;">Technique: Pattern-interrupt opening + micro-commitment CTA</p>
+            <p style="font-size:14px;line-height:1.6;color:#374151;margin:0;">Write a cold email that gets replies (not just opens). Context:<br/>- I sell: [YOUR PRODUCT/SERVICE]<br/>- Target recipient: [THEIR ROLE, e.g. "VP of Marketing at B2B SaaS companies, 50-200 employees"]<br/>- Their likely biggest frustration right now: [PAIN POINT]<br/><br/>Rules you MUST follow:<br/>- First line must NOT be "I hope this finds you well" or "My name is..." — start with something they've never read before. Use a specific, surprising observation about their company or industry.<br/>- Total length: 4-6 sentences max. Every sentence must earn the next one.<br/>- End with a micro-commitment CTA (not "let's hop on a call" — something easier, like "Worth exploring, or totally off base?")<br/>- Write 3 versions: one that leads with curiosity, one that leads with a number/result, one that leads with a bold claim.<br/>- After the 3 versions, explain which one you'd send first and why.</p>
           </div>
 
           <div style="background:#F9FAFB;border:1px solid #E5E7EB;border-radius:12px;padding:24px;margin:24px 0;">
-            <h3 style="margin:0 0 12px;font-size:16px;color:#3B5FFF;">Prompt 3: Product Description That Converts</h3>
-            <p style="font-size:14px;line-height:1.6;color:#374151;margin:0;">Write a product description for [YOUR PRODUCT] at [PRICE]. Include: a benefit-driven headline, 3 bullet points (feature → benefit format), social proof placeholder, and a clear CTA. Tone: confident, concise, zero jargon. Target audience: [YOUR CUSTOMER].</p>
+            <h3 style="margin:0 0 4px;font-size:16px;color:#3B5FFF;">Prompt 3: The "Money Page" Website Copy</h3>
+            <p style="font-size:12px;color:#6B7280;margin:0 0 12px;">Technique: Objection-first structure that sells by removing doubt</p>
+            <p style="font-size:14px;line-height:1.6;color:#374151;margin:0;">Write the sales page copy for [YOUR PRODUCT] at [PRICE]. But here's the constraint — structure the ENTIRE page around objections, not features.<br/><br/>First, list the 7 most common reasons someone would NOT buy this product (price too high, not sure it works, seen similar things, etc.). Then write a sales page where each section demolishes one objection — without ever sounding defensive.<br/><br/>Format:<br/>- Hero section: The boldest promise you can make that's still true. One sentence. Then a subline that immediately answers "but how?"<br/>- Section 1-7: Each one addresses an objection. Lead with the objection as a subheading ("You're thinking: [objection]"), then destroy it in 2-3 sentences with proof, logic, or reframing.<br/>- Final CTA: A "reason to act now" that isn't fake scarcity<br/><br/>Tone: Confident, direct, slightly irreverent. Like talking to a smart friend, not writing corporate copy. Target audience: [YOUR CUSTOMER].</p>
           </div>
 
           <div style="background:#F9FAFB;border:1px solid #E5E7EB;border-radius:12px;padding:24px;margin:24px 0;">
-            <h3 style="margin:0 0 12px;font-size:16px;color:#3B5FFF;">Prompt 4: Weekly Content Calendar</h3>
-            <p style="font-size:14px;line-height:1.6;color:#374151;margin:0;">Create a 7-day content calendar for [YOUR NICHE] on [PLATFORM]. For each day give: content type (carousel, video, text), topic, hook (first line), and CTA. Mix educational (3), entertaining (2), and promotional (2) posts. Include optimal posting times.</p>
+            <h3 style="margin:0 0 4px;font-size:16px;color:#3B5FFF;">Prompt 4: The "30-Day Profit Sprint" Planner</h3>
+            <p style="font-size:12px;color:#6B7280;margin:0 0 12px;">Technique: Constraint-based planning (forces AI to prioritize ruthlessly)</p>
+            <p style="font-size:14px;line-height:1.6;color:#374151;margin:0;">I need a 30-day action plan to increase revenue for my business. But here's the constraint: I can only spend 2 hours per day on this, and I have $0 budget for ads or tools.<br/><br/>My business: [DESCRIBE — what you sell, current revenue, how you get customers now]<br/><br/>Rules:<br/>- Week 1 must focus ONLY on converting existing leads/traffic/contacts (no new acquisition)<br/>- Week 2: one new distribution channel that costs $0<br/>- Week 3: one offer optimization (pricing, bundling, or upsell)<br/>- Week 4: systematize whatever worked in weeks 1-3<br/><br/>For each day, give me: the ONE task (15-word max), why it matters, and the specific deliverable I should have by end of day.<br/><br/>Do NOT suggest "create content" or "post on social media" unless you specify the EXACT type, topic, platform, and format. Vague advice = useless advice. I want a plan I can execute with zero thinking.</p>
           </div>
 
           <div style="background:#F9FAFB;border:1px solid #E5E7EB;border-radius:12px;padding:24px;margin:24px 0;">
-            <h3 style="margin:0 0 12px;font-size:16px;color:#3B5FFF;">Prompt 5: Business Strategy Brainstorm</h3>
-            <p style="font-size:14px;line-height:1.6;color:#374151;margin:0;">Act as a startup advisor. I run [YOUR BUSINESS] making [REVENUE]. My biggest challenge is [CHALLENGE]. Give me 5 actionable strategies to solve this in the next 30 days. For each: the strategy, why it works, first step to implement today, and expected impact. Be specific, not generic.</p>
+            <h3 style="margin:0 0 4px;font-size:16px;color:#3B5FFF;">Prompt 5: The "Instant Expert" Content System</h3>
+            <p style="font-size:12px;color:#6B7280;margin:0 0 12px;">Technique: Chain-of-thought forcing + format lock</p>
+            <p style="font-size:14px;line-height:1.6;color:#374151;margin:0;">I need to create 1 piece of content that I can repurpose into 10 pieces across platforms. Here's how:<br/><br/>Topic: [YOUR TOPIC]<br/>My expertise level: [beginner/intermediate/expert]<br/>Target audience: [WHO]<br/><br/>Step 1: Write a 500-word "pillar post" — an opinionated take on this topic that includes at least one contrarian viewpoint, one specific data point or example, and one framework the reader can immediately use.<br/><br/>Step 2: From that post, extract and write:<br/>- 3 Twitter/X threads (5 tweets each, hook + value + CTA)<br/>- 2 LinkedIn posts (one story-format, one list-format)<br/>- 1 email newsletter edition (subject line + 3-paragraph body)<br/>- 2 Instagram carousel scripts (slide 1 = hook, slides 2-7 = points, slide 8 = CTA)<br/>- 1 YouTube Shorts / TikTok / Reel script (30 seconds, pattern-interrupt opening)<br/>- 1 Reddit post (authentic tone, no self-promotion, value-first — specify the subreddit)<br/><br/>Each piece must feel native to its platform — not like a copy-paste job. The LinkedIn post should NOT read like a tweet, and the Reddit post should NOT read like an ad.</p>
           </div>
 
           <div style="background:#3B5FFF;border-radius:12px;padding:24px;margin:32px 0;text-align:center;">
-            <p style="color:#FFF;font-size:18px;font-weight:700;margin:0 0 8px;">Want 200+ more prompts like these?</p>
-            <p style="color:rgba(255,255,255,0.85);font-size:14px;margin:0 0 16px;">Our AI Prompt Mega Pack has battle-tested prompts for sales, marketing, ops, and more.</p>
+            <p style="color:#FFF;font-size:18px;font-weight:700;margin:0 0 8px;">These 5 prompts are from our free collection. Want the full arsenal?</p>
+            <p style="color:rgba(255,255,255,0.85);font-size:14px;margin:0 0 16px;">500+ prompts with the same level of detail — for sales, marketing, ops, hiring, content, and more.</p>
             <a href="https://buy.stripe.com/4gMbJ0dgz4aJ1qkb46cMM0d" style="display:inline-block;background:#FFF;color:#3B5FFF;font-weight:700;font-size:16px;padding:12px 32px;border-radius:100px;text-decoration:none;">Get the Mega Pack — $29</a>
           </div>
 
-          <p style="font-size:14px;color:#6B7280;line-height:1.6;">Or grab <a href="https://buy.stripe.com/bJe7sK0tNdLjgle0pscMM0b" style="color:#3B5FFF;">all 19 kits for $97</a> (save 85%).</p>
+          <p style="font-size:14px;color:#6B7280;line-height:1.6;">Or grab <a href="https://buy.stripe.com/bJe7sK0tNdLjgle0pscMM0b" style="color:#3B5FFF;">all 21 kits for $97</a> (save 85%).</p>
 
           <p style="font-size:14px;color:#6B7280;margin-top:32px;">Build something great,<br/>The MidasTools Team</p>
 
