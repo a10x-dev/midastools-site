@@ -1,0 +1,8 @@
+{
+  "crons": [
+    {
+      "path": "/api/nurture?key=mt-outreach-2026&drip=true",
+      "schedule": "17 9 * * *"
+    }
+  ]
+}
