@@ -147,6 +147,14 @@ const TOOLS = [
     categories: '8 styles · 20 accessories',
     bg: 'var(--card-amber)',
   },
+  {
+    title: 'AI Miniature Diorama Generator',
+    desc: 'Create tiny handcrafted-looking worlds — tilt-shift cities, snow globes, dollhouse interiors. 8 styles, 6 lighting modes, 20 details.',
+    href: '/miniature-diorama-generator',
+    tag: '🔥 NEW',
+    categories: '8 styles · 6 lighting',
+    bg: 'var(--card-cyan)',
+  },
 ];
 
 const COMING_SOON = [
