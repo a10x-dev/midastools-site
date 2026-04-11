@@ -621,7 +621,7 @@ export default function Home() {
             { href: '/blog/claude-code-mastery-guide-2026', title: 'Claude Code Mastery Guide', desc: 'The complete guide to building with Claude Code — from setup to advanced workflows.' },
             { href: '/blog/chatgpt-ghibli-style-prompts-2026', title: 'ChatGPT Ghibli Style Prompts', desc: 'How to generate stunning Studio Ghibli-style art with ChatGPT and AI image tools.' },
             { href: '/blog/chatgpt-action-figure-prompt-2026', title: 'AI Action Figure Prompts', desc: 'Create viral action figure and toy box images with these proven prompt templates.' },
-            { href: '/blog/how-to-make-money-with-ai-2026', title: 'How to Make Money with AI in 2026', desc: 'Proven strategies for building income streams using AI tools and automation.' },
+            { href: '/blog/claude-managed-agents-tutorial-2026', title: 'Claude Managed Agents Tutorial', desc: 'Build autonomous AI agents with Anthropic\'s new managed infrastructure — step-by-step with code.' },
           ].map(post => (
             <Link key={post.href} href={post.href} style={{
               display: 'block', background: 'var(--surface)', border: '1px solid var(--border)',

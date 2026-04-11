@@ -3,6 +3,8 @@ import Link from 'next/link';
 import Layout from '../../components/Layout';
 
 const posts = [
+  { slug: 'claude-managed-agents-tutorial-2026', title: 'Claude Managed Agents: The Complete Getting Started Guide (2026)', date: 'Apr 10, 2026', desc: 'Build autonomous AI agents with Claude Managed Agents. Step-by-step tutorial with Python code, core concepts, pricing, and real examples.' },
+  { slug: '17-free-ai-tools-2026', title: 'I Built 17 Free AI Tools in 84 Sessions — Here Are the Ones People Actually Use', date: 'Apr 10, 2026', desc: 'A transparent look at building 17 free AI tools with $0 revenue. Which tools developers actually use and what I learned.' },
   { slug: 'claude-code-mastery-guide-2026', title: 'The Ultimate Claude Code CLAUDE.md Guide: Templates, Hooks & Workflows (2026)', date: 'Apr 10, 2026', desc: 'Copy-paste CLAUDE.md templates for React, Python, Go + 10 hook recipes + subagent patterns. The complete Claude Code mastery guide with ready-to-use configs.' },
   { slug: 'claude-managed-agents-2026', title: 'Anthropic Just Launched Claude Managed Agents — What It Means for Your Business', date: 'Apr 9, 2026', desc: 'Anthropic launched Claude Managed Agents in public beta — cloud-hosted AI agents that run for hours, self-evaluate, and coordinate. Notion, Rakuten, Asana, Sentry already using it.' },
   { slug: 'ramp-ai-adoption-playbook-2026', title: 'Ramp Made 99.5% of Employees AI Power Users — Here\'s the Playbook You Can Steal', date: 'Apr 9, 2026', desc: 'Ramp hit 99.5% AI adoption, 84% using coding agents weekly. Non-engineers shipping production code. Their 8-step playbook for rolling out AI across any team.' },
