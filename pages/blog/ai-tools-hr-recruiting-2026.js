@@ -37,7 +37,7 @@ export default function AIToolsHRRecruiting2026() {
   return (
     <Layout>
       <Head>
-        <title>{title} | Midas Tools</title>
+        <title>{`${title} | Midas Tools`}</title>
         <meta name="description" content={description} />
         <meta name="keywords" content="AI tools HR 2026, AI recruiting tools, AI hiring tools, AI for human resources, AI candidate screening, AI onboarding, AI talent sourcing, HR automation 2026" />
         <meta property="og:title" content={title} />

@@ -84,7 +84,7 @@ export default function AIEmailTemplates2026() {
   return (
     <Layout>
       <Head>
-        <title>{title} | Midas Tools</title>
+        <title>{`${title} | Midas Tools`}</title>
         <meta name="description" content={description} />
         <meta name="keywords" content="AI email templates, ChatGPT email templates, AI cold email, email templates 2026, cold outreach templates, follow-up email templates, business email templates, AI email writing" />
         <meta property="og:title" content={title} />

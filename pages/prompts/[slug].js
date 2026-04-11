@@ -21,7 +21,7 @@ export default function PromptPage({ template, slug }) {
   return (
     <Layout>
       <Head>
-        <title>{template.title} — Midas Tools</title>
+        <title>{`${template.title} — Midas Tools`}</title>
         <link rel="canonical" href={canonicalUrl} />
         <meta name="description" content={template.description} />
         <meta name="twitter:card" content="summary_large_image" />

@@ -59,7 +59,7 @@ export default function AIMarketingTools2026() {
   return (
     <Layout>
       <Head>
-        <title>{title} | Midas Tools</title>
+        <title>{`${title} | Midas Tools`}</title>
         <meta name="description" content={description} />
         <meta name="keywords" content="AI marketing tools 2026, best AI marketing software, AI content marketing, AI advertising tools, marketing automation AI, AI analytics tools, AI email marketing, artificial intelligence marketing" />
         <meta property="og:title" content={title} />

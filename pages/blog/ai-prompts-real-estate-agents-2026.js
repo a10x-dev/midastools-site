@@ -95,7 +95,7 @@ export default function AIPromptsRealEstateAgents2026() {
   return (
     <Layout>
       <Head>
-        <title>{title} | Midas Tools</title>
+        <title>{`${title} | Midas Tools`}</title>
         <meta name="description" content={description} />
         <meta name="keywords" content="AI prompts real estate, ChatGPT real estate agent, AI real estate marketing, real estate listing descriptions AI, ChatGPT prompts realtors, AI tools real estate 2026" />
         <meta property="og:title" content={title} />

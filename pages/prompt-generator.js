@@ -312,7 +312,7 @@ export default function PromptGenerator() {
   return (
     <Layout>
       <Head>
-        <title>{title} | Midas Tools</title>
+        <title>{`${title} | Midas Tools`}</title>
         <meta name="description" content={description} />
         <meta name="keywords" content="AI prompt generator, free prompt generator, ChatGPT prompt maker, AI prompt builder, custom AI prompts, prompt engineering tool, free AI tools 2026" />
         <meta property="og:title" content={title} />

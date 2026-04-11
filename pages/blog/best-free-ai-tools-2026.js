@@ -57,7 +57,7 @@ export default function BestFreeAITools2026() {
   return (
     <Layout>
       <Head>
-        <title>{title} | Midas Tools</title>
+        <title>{`${title} | Midas Tools`}</title>
         <meta name="description" content={description} />
         <meta name="keywords" content="best free AI tools 2026, free AI tools, best AI tools 2026, AI tools for beginners, free AI software, AI tools no cost, best AI apps 2026" />
         <meta property="og:title" content={title} />

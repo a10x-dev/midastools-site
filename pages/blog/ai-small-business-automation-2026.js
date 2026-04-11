@@ -23,7 +23,7 @@ export default function AISmallBusinessAutomation2026() {
   return (
     <Layout>
       <Head>
-        <title>{title} | Midas Tools</title>
+        <title>{`${title} | Midas Tools`}</title>
         <meta name="description" content={description} />
         <meta name="keywords" content="AI automation small business 2026, AI small business tools, automate small business, AI workflows, small business AI, business automation prompts, save time AI" />
         <meta property="og:title" content={title} />

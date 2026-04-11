@@ -95,7 +95,7 @@ export default function AIResumePromptsChatGPT2026() {
   return (
     <Layout>
       <Head>
-        <title>{title} | Midas Tools</title>
+        <title>{`${title} | Midas Tools`}</title>
         <meta name="description" content={description} />
         <meta name="keywords" content="ChatGPT resume prompts, AI resume, ChatGPT resume builder, AI resume writer, best resume prompts, AI cover letter, ChatGPT interview prep, AI salary negotiation, LinkedIn optimization AI, resume prompts 2026" />
         <meta property="og:title" content={title} />

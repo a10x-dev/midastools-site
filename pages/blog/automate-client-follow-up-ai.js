@@ -23,7 +23,7 @@ export default function AutomateClientFollowUpAI() {
   return (
     <Layout>
       <Head>
-        <title>{title} | Midas Tools</title>
+        <title>{`${title} | Midas Tools`}</title>
         <meta name="description" content={description} />
         <meta name="keywords" content="automate client follow-up AI, AI follow-up emails, automated lead response, AI sales follow-up, no-code automation, client follow-up templates, AI email automation, speed to lead" />
         <meta property="og:title" content={title} />

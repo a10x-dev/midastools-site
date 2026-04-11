@@ -23,7 +23,7 @@ export default function AISaasFounderTools2026() {
   return (
     <Layout>
       <Head>
-        <title>{title} | Midas Tools</title>
+        <title>{`${title} | Midas Tools`}</title>
         <meta name="description" content={description} />
         <meta name="keywords" content="AI tools SaaS founders 2026, SaaS launch AI, reduce churn AI, SaaS onboarding templates, indie hacker AI tools, AI for startups 2026, SaaS growth AI prompts" />
         <meta property="og:title" content={title} />

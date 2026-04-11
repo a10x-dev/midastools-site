@@ -105,7 +105,7 @@ export default function AIPresentationPrompts2026() {
   return (
     <Layout>
       <Head>
-        <title>{title} | Midas Tools</title>
+        <title>{`${title} | Midas Tools`}</title>
         <meta name="description" content={description} />
         <meta name="keywords" content="AI presentation prompts, ChatGPT pitch deck, AI slide content, AI presentation maker prompts, best AI prompts for presentations, AI pitch deck prompts, ChatGPT presentation, AI keynote prompts, AI sales deck, ChatGPT slides, AI board meeting deck, presentation AI prompts 2026" />
         <meta property="og:title" content={title} />

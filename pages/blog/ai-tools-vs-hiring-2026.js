@@ -27,7 +27,7 @@ export default function AIToolsVsHiring2026() {
   return (
     <Layout>
       <Head>
-        <title>{title} | Midas Tools</title>
+        <title>{`${title} | Midas Tools`}</title>
         <meta name="description" content={description} />
         <meta name="keywords" content="AI tools vs hiring, should I hire or use AI, AI vs employee cost, AI automation for business, replace employee with AI, AI vs virtual assistant, small business automation 2026" />
         <meta property="og:title" content={title} />

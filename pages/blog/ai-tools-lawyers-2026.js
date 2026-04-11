@@ -37,7 +37,7 @@ export default function AIToolsLawyers2026() {
   return (
     <Layout>
       <Head>
-        <title>{title} | Midas Tools</title>
+        <title>{`${title} | Midas Tools`}</title>
         <meta name="description" content={description} />
         <meta name="keywords" content="AI tools for lawyers 2026, AI for law firms, AI legal research, AI contract review, ChatGPT for lawyers, AI legal drafting, lawyer productivity AI, AI for attorneys" />
         <meta property="og:title" content={title} />

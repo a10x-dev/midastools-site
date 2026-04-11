@@ -37,7 +37,7 @@ export default function AIToolsProjectManagers2026() {
   return (
     <Layout>
       <Head>
-        <title>{title} | Midas Tools</title>
+        <title>{`${title} | Midas Tools`}</title>
         <meta name="description" content={description} />
         <meta name="keywords" content="AI tools project managers 2026, AI project management, best AI PM tools, AI for project managers, AI scheduling tools, AI meeting notes, AI status reports, project management automation" />
         <meta property="og:title" content={title} />

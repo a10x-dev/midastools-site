@@ -146,7 +146,7 @@ export default function AIToolsByProfession2026() {
   return (
     <Layout>
       <Head>
-        <title>{title} | Midas Tools</title>
+        <title>{`${title} | Midas Tools`}</title>
         <meta name="description" content={description} />
         <meta name="keywords" content="AI tools by profession 2026, AI for professionals, best AI tools by industry, AI tools for every job, profession-specific AI, AI tools comparison by career" />
         <meta property="og:title" content={title} />

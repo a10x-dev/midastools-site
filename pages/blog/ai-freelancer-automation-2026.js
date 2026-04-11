@@ -34,7 +34,7 @@ export default function AIFreelancerAutomation2026() {
   return (
     <Layout>
       <Head>
-        <title>{title} | Midas Tools</title>
+        <title>{`${title} | Midas Tools`}</title>
         <meta name="description" content={description} />
         <meta name="keywords" content="AI tools for freelancers 2026, freelancer automation, AI proposal writing, freelance AI tools, automate freelance business, freelancer productivity" />
         <meta property="og:title" content={title} />

@@ -105,7 +105,7 @@ export default function AIEmailMarketingPrompts2026() {
   return (
     <Layout>
       <Head>
-        <title>{title} | Midas Tools</title>
+        <title>{`${title} | Midas Tools`}</title>
         <meta name="description" content={description} />
         <meta name="keywords" content="AI email marketing prompts, ChatGPT email marketing, AI email templates, email marketing AI prompts, best AI prompts for email, AI welcome sequence, AI sales email, ChatGPT newsletter prompts, AI cold email, email copywriting AI, AI email automation prompts 2026" />
         <meta property="og:title" content={title} />

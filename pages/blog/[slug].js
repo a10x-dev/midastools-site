@@ -1348,7 +1348,7 @@ export default function BlogPost({ post, slug }) {
   return (
     <Layout>
       <Head>
-        <title>{post.title} — Midas Tools</title>
+        <title>{`${post.title} — Midas Tools`}</title>
         <link rel="icon" type="image/png" href="/favicon.png" />
         <link rel="canonical" href={canonicalUrl} />
         <meta name="description" content={post.meta} />

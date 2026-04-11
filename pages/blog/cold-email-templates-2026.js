@@ -148,7 +148,7 @@ export default function ColdEmailTemplates2026() {
   return (
     <Layout>
       <Head>
-        <title>{title} | Midas Tools</title>
+        <title>{`${title} | Midas Tools`}</title>
         <meta name="description" content={description} />
         <meta name="keywords" content="cold email templates, cold email examples, cold outreach templates 2026, cold email templates for sales, cold email for freelancers, cold email follow-up, cold email subject lines, B2B cold email, cold email that gets replies, how to write cold emails, best cold emails 2026, cold email scripts, cold outreach examples" />
         <meta property="og:title" content={title} />

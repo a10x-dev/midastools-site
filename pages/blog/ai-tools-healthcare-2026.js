@@ -36,7 +36,7 @@ export default function AIToolsHealthcare2026() {
   return (
     <Layout>
       <Head>
-        <title>{title} | Midas Tools</title>
+        <title>{`${title} | Midas Tools`}</title>
         <meta name="description" content={description} />
         <meta name="keywords" content="AI tools for healthcare 2026, AI for doctors, AI for nurses, AI clinical documentation, healthcare AI, AI medical notes, AI patient communication, reduce clinician burnout AI" />
         <meta property="og:title" content={title} />

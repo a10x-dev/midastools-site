@@ -37,7 +37,7 @@ export default function AIToolsAccountants2026() {
   return (
     <Layout>
       <Head>
-        <title>{title} | Midas Tools</title>
+        <title>{`${title} | Midas Tools`}</title>
         <meta name="description" content={description} />
         <meta name="keywords" content="AI tools for accountants 2026, AI bookkeeping, AI accounting automation, ChatGPT for accountants, AI tax preparation, AI for CPAs, accounting AI tools, bookkeeper AI" />
         <meta property="og:title" content={title} />

@@ -23,7 +23,7 @@ export default function BestAIPromptPacks2026() {
   return (
     <Layout>
       <Head>
-        <title>{title} | Midas Tools</title>
+        <title>{`${title} | Midas Tools`}</title>
         <meta name="description" content={description} />
         <meta name="keywords" content="best AI prompt packs 2026, AI prompt templates, prompt engineering bundles, ChatGPT prompts for business, AI prompt collections, best prompt packs, prompt library comparison" />
         <meta property="og:title" content={title} />

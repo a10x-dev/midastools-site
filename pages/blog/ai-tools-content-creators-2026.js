@@ -95,7 +95,7 @@ export default function AIToolsContentCreators2026() {
   return (
     <Layout>
       <Head>
-        <title>{title} | Midas Tools</title>
+        <title>{`${title} | Midas Tools`}</title>
         <meta name="description" content={description} />
         <meta name="keywords" content="AI tools content creators, best AI tools creators 2026, AI content creation, AI writing tools, AI video tools, AI design tools, content creator AI stack, AI for YouTubers, AI for bloggers, AI tools influencers" />
         <meta property="og:title" content={title} />

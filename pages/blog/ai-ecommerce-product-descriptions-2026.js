@@ -23,7 +23,7 @@ export default function AIEcommerceProductDescriptions2026() {
   return (
     <Layout>
       <Head>
-        <title>{title} | Midas Tools</title>
+        <title>{`${title} | Midas Tools`}</title>
         <meta name="description" content={description} />
         <meta name="keywords" content="AI product descriptions e-commerce 2026, AI copywriting, product description generator, e-commerce AI tools, Amazon listing optimization, product copy AI, AI for Shopify, e-commerce copywriting prompts" />
         <meta property="og:title" content={title} />

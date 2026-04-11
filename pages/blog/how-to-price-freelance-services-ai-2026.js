@@ -34,7 +34,7 @@ export default function HowToPriceFreelanceServicesAI2026() {
   return (
     <Layout>
       <Head>
-        <title>{title} | Midas Tools</title>
+        <title>{`${title} | Midas Tools`}</title>
         <meta name="description" content={description} />
         <meta name="keywords" content="how to price freelance services, freelance pricing strategy, AI pricing tools freelancers, freelance rate calculator, value-based pricing freelancers, freelance pricing tiers 2026" />
         <meta property="og:title" content={title} />

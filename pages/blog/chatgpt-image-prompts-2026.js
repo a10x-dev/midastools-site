@@ -85,7 +85,7 @@ export default function ChatGPTImagePrompts2026() {
   return (
     <Layout>
       <Head>
-        <title>{title} | Midas Tools</title>
+        <title>{`${title} | Midas Tools`}</title>
         <meta name="description" content={description} />
         <meta name="keywords" content="ChatGPT image prompts, AI image generation, DALL-E prompts, viral AI images, AI art prompts 2026, ChatGPT image generation, AI image prompts, best AI image prompts, DALL-E 3 prompts, ChatGPT art" />
         <meta property="og:title" content={title} />

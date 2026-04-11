@@ -110,7 +110,7 @@ export default function NotionTemplatesBusiness2026() {
   return (
     <Layout>
       <Head>
-        <title>{title} | Midas Tools</title>
+        <title>{`${title} | Midas Tools`}</title>
         <meta name="description" content={description} />
         <meta name="keywords" content="Notion templates business, best Notion templates 2026, Notion for business, Notion AI templates, Notion productivity, Notion small business, Notion project management, Notion CRM template" />
         <meta property="og:title" content={title} />

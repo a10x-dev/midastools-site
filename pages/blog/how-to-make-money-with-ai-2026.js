@@ -59,7 +59,7 @@ export default function HowToMakeMoneyWithAI2026() {
   return (
     <Layout>
       <Head>
-        <title>{title} | Midas Tools</title>
+        <title>{`${title} | Midas Tools`}</title>
         <meta name="description" content={description} />
         <meta name="keywords" content="how to make money with AI, make money with AI 2026, AI side hustle, earn money with AI, AI income streams, AI business ideas, make money ChatGPT, AI freelancing 2026" />
         <meta property="og:title" content={title} />

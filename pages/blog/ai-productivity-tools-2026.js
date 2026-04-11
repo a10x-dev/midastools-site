@@ -66,7 +66,7 @@ export default function AIProductivityTools2026() {
   return (
     <Layout>
       <Head>
-        <title>{title} | Midas Tools</title>
+        <title>{`${title} | Midas Tools`}</title>
         <meta name="description" content={description} />
         <meta name="keywords" content="AI productivity tools 2026, best AI tools for productivity, AI time saving tools, productivity apps 2026, AI work tools, best AI productivity software, AI tools knowledge workers" />
         <meta property="og:title" content={title} />

@@ -84,7 +84,7 @@ export default function BestMidjourneyPrompts2026() {
   return (
     <Layout>
       <Head>
-        <title>{title} | Midas Tools</title>
+        <title>{`${title} | Midas Tools`}</title>
         <meta name="description" content={description} />
         <meta name="keywords" content="best Midjourney prompts 2026, Midjourney prompts, Midjourney v6 prompts, AI art prompts, Midjourney photography prompts, Midjourney anime prompts, Midjourney architecture prompts, Midjourney parameters, --style raw, --niji, Midjourney prompt guide" />
         <meta property="og:title" content={title} />

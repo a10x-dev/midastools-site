@@ -135,7 +135,7 @@ export default function BestInstagramHashtags2026() {
   return (
     <Layout>
       <Head>
-        <title>{title} | Midas Tools</title>
+        <title>{`${title} | Midas Tools`}</title>
         <meta name="description" content={description} />
         <meta name="keywords" content="best instagram hashtags 2026, instagram hashtags, top instagram hashtags, best hashtags for instagram, instagram reels hashtags, instagram hashtag strategy, popular instagram hashtags, trending instagram hashtags, niche hashtags instagram, hashtag generator" />
         <meta property="og:title" content={title} />

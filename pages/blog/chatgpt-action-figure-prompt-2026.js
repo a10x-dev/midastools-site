@@ -77,7 +77,7 @@ export default function ChatGPTActionFigurePrompt2026() {
   return (
     <Layout>
       <Head>
-        <title>{title} | Midas Tools</title>
+        <title>{`${title} | Midas Tools`}</title>
         <meta name="description" content={description} />
         <meta name="keywords" content="ChatGPT action figure prompt, AI action figure generator, ChatGPT doll box, AI action figure, ChatGPT toy prompt, AI toy generator, action figure AI, ChatGPT blister pack, AI doll box prompt, ChatGPT Funko Pop prompt" />
         <meta property="og:title" content={title} />

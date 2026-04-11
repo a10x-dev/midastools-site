@@ -23,7 +23,7 @@ export default function ChatGPTSideHustle2026() {
   return (
     <Layout>
       <Head>
-        <title>{title} | Midas Tools</title>
+        <title>{`${title} | Midas Tools`}</title>
         <meta name="description" content={description} />
         <meta name="keywords" content="ChatGPT side hustle 2026, AI side hustle, make money with ChatGPT 2026, ChatGPT business ideas, AI side hustle ideas, ChatGPT freelancing, make money with AI" />
         <meta property="og:title" content={title} />

@@ -57,7 +57,7 @@ export default function ChatGPTTipsTricks2026() {
   return (
     <Layout>
       <Head>
-        <title>{title} | Midas Tools</title>
+        <title>{`${title} | Midas Tools`}</title>
         <meta name="description" content={description} />
         <meta name="keywords" content="ChatGPT tips, ChatGPT tricks 2026, ChatGPT hacks, how to use ChatGPT, ChatGPT prompts, ChatGPT tips and tricks, best ChatGPT prompts, ChatGPT for work, ChatGPT productivity" />
         <meta property="og:title" content={title} />

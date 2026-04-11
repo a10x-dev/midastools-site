@@ -85,7 +85,7 @@ export default function HowToMakeMoneySellingAiArt2026() {
   return (
     <Layout>
       <Head>
-        <title>{title} | Midas Tools</title>
+        <title>{`${title} | Midas Tools`}</title>
         <meta name="description" content={description} />
         <meta name="keywords" content="how to make money selling AI art, sell AI art, AI art business, make money with AI images, sell AI generated art, AI art income, print on demand AI art, AI stock photography, AI art commissions, AI prompt packs" />
         <meta property="og:title" content={title} />

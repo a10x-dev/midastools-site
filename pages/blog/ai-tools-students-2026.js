@@ -36,7 +36,7 @@ export default function AIToolsStudents2026() {
   return (
     <Layout>
       <Head>
-        <title>{title} | Midas Tools</title>
+        <title>{`${title} | Midas Tools`}</title>
         <meta name="description" content={description} />
         <meta name="keywords" content="AI tools for students 2026, best AI tools students, AI study tools, AI for college students, ChatGPT for students, AI homework help, AI writing tools students, free AI tools students" />
         <meta property="og:title" content={title} />

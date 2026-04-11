@@ -75,7 +75,7 @@ export default function ClaudeManagedAgents2026() {
   return (
     <Layout>
       <Head>
-        <title>{title} | Midas Tools</title>
+        <title>{`${title} | Midas Tools`}</title>
         <meta name="description" content={description} />
         <meta name="keywords" content="Claude managed agents, Anthropic managed agents, Claude AI agents platform, Claude agent API, Claude agents 2026, AI agent infrastructure, autonomous AI agents" />
         <meta property="og:title" content={title} />

@@ -27,7 +27,7 @@ export default function AISecondIncome2026() {
   return (
     <Layout>
       <Head>
-        <title>{title} | Midas Tools</title>
+        <title>{`${title} | Midas Tools`}</title>
         <meta name="description" content={description} />
         <meta name="keywords" content="second income AI 2026, make money with AI, AI side income, passive income AI, AI freelancing, how to earn with AI, AI business ideas 2026, ChatGPT income" />
         <meta property="og:title" content={title} />

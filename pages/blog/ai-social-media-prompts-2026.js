@@ -95,7 +95,7 @@ export default function AISocialMediaPrompts2026() {
   return (
     <Layout>
       <Head>
-        <title>{title} | Midas Tools</title>
+        <title>{`${title} | Midas Tools`}</title>
         <meta name="description" content={description} />
         <meta name="keywords" content="AI social media prompts, social media content calendar AI, ChatGPT social media, AI captions, social media automation AI, AI Instagram captions, TikTok AI prompts, LinkedIn AI content, social media manager AI tools, AI content calendar generator" />
         <meta property="og:title" content={title} />
