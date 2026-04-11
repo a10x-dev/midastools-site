@@ -80,6 +80,42 @@ function getSourceBonus(source) {
       cta: { text: "Get 150+ Image Prompts — $29", link: IMAGE_PACK_LINK },
     };
   }
+  if (source && source.includes('hug-younger-self')) {
+    return {
+      hook: "Since you loved the Hug My Younger Self Generator",
+      bonus: "Here are 3 exclusive nostalgic AI photo prompts not on the site:",
+      prompts: [
+        { title: "Letter to My Younger Self", prompt: "Create an emotional photograph of an adult sitting at a desk, writing a letter. Behind them, translucent and ghost-like, stands their 7-year-old self reading over their shoulder with wide, curious eyes. Warm lamp light, evening, the letter visible with the words 'Dear little me...' Cinematic, shallow depth of field, tears on the adult's cheek. The child version is smiling. Bittersweet, beautiful, museum-quality portrait." },
+        { title: "Walking Side by Side", prompt: "An adult and their 5-year-old self walking hand-in-hand down a tree-lined path in autumn. Golden leaves falling around them. Shot from behind so we see them walking into the warm light ahead. The child is looking up at the adult with trust; the adult is looking down with tenderness. Same hair color, same walk. 35mm film photography, Kodak Portra colors, soft bokeh." },
+        { title: "Teaching My Younger Self", prompt: "An adult kneeling in a sunlit room, teaching their younger self (age 6) to tie their shoes. The adult's hands gently guide the child's hands. Morning light streaming through curtains. Both laughing at a failed attempt. The warmth of patience, the beauty of becoming your own parent. Studio portrait quality, soft focus background, tears-in-your-eyes emotional." },
+      ],
+      cta: { text: "Get 150+ Image Prompts — $29", link: IMAGE_PACK_LINK },
+    };
+  }
+  if (source && source.includes('lego')) {
+    return {
+      hook: "Since you loved the Lego Minifigure Generator",
+      bonus: "Here are 3 exclusive Lego prompts not on the site:",
+      prompts: [
+        { title: "Lego Wedding Scene", prompt: "A Lego wedding scene in a tiny chapel made of white and gold bricks. The bride and groom minifigures at the altar, guests seated in rows. Stained glass windows made of transparent colored bricks casting rainbow light. Flowers made of small round pieces. A Lego organist playing. Product photography style, shallow DOF, warm lighting. Every detail is brick-perfect." },
+        { title: "Lego Office Chaos", prompt: "A Lego office scene in total chaos — minifigures having a Nerf war, coffee spilling, papers flying, one figure hiding under a desk. A boss minifigure walks in through the door with a shocked expression. Tiny Lego computers, water cooler, motivational poster on the wall. Shot like a dramatic movie still with cinematic lighting. Comedy meets corporate life in brick form." },
+        { title: "Lego Album Cover", prompt: "Recreate a classic album cover in Lego style. A Lego minifigure version of a rock band on stage, with tiny brick instruments, amplifiers made of 2x4 bricks, and a crowd of minifigure fans. Stage lighting from colored transparent bricks. The band name written in Lego letters above. Shot like an actual album cover — square format, dramatic lighting, iconic pose." },
+      ],
+      cta: { text: "Get 150+ Image Prompts — $29", link: IMAGE_PACK_LINK },
+    };
+  }
+  if (source && source.includes('diorama')) {
+    return {
+      hook: "Since you loved the Miniature Diorama Generator",
+      bonus: "Here are 3 exclusive diorama prompts not on the site:",
+      prompts: [
+        { title: "Miniature Ramen Shop", prompt: "A tiny, handcrafted miniature ramen shop at night. Warm light spilling from the tiny doorway, a miniature noren curtain, steam rising from bowls visible through the window. Tiny lanterns outside, a wooden bench, a bicycle parked beside it. Everything made of painted wood, clay, and paper. Macro lens photography, f/2.8, extreme shallow depth of field. The warm glow makes you want to shrink down and walk inside." },
+        { title: "Desktop Terrarium World", prompt: "A complete tiny world inside a glass terrarium on a desk. Miniature waterfalls flowing over moss-covered rocks, tiny handmade trees with wire trunks, a small wooden bridge crossing a resin river. Tiny LED fairy lights woven through. Morning mist effect with dry ice. Shot with a macro lens — the glass jar edges visible, a laptop blurred in the background for scale. Magical, cozy, impossibly detailed." },
+        { title: "Snow Globe Living Room", prompt: "A miniature living room scene inside a snow globe. Tiny Christmas tree with LED lights, a fireplace with real orange glow, a miniature armchair with a tiny knitted blanket. Snowflakes frozen mid-fall inside the glass. The snow globe sits on a real wooden shelf with books. Tilt-shift macro photography, warm vs cool contrast between the cozy interior and the glass exterior. Heartwarming, holiday magic." },
+      ],
+      cta: { text: "Get 150+ Image Prompts — $29", link: IMAGE_PACK_LINK },
+    };
+  }
   // Default: general business prompts
   return {
     hook: "Here's something exclusive for subscribers",
