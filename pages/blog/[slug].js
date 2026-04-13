@@ -96,7 +96,7 @@ The question isn't whether this is possible anymore. Felix proved it is — with
 
 The question is: **can you replicate it?**
 
-**Yes.** We packaged the exact templates, workflows, and prompts Felix uses into a kit you can deploy today. **[Get the Starter Kit — $29 →](https://buy.stripe.com/cNi28qdgz7mVb0U8VYcMM07)** or grab **[All 16 Kits for $97 (81% off) →](https://buy.stripe.com/aEUbJ01xR0YxgligkocMM0g)** · [Buy on Gumroad →](https://manduks.gumroad.com/l/iiiwf)
+**Yes.** We packaged the exact templates, workflows, and prompts Felix uses into a kit you can deploy today. **[Get the Starter Kit — $29 →](https://buy.stripe.com/cNi28qdgz7mVb0U8VYcMM07)** or grab **[All 21 Kits for $97 (81% off) →](https://buy.stripe.com/aEUbJ01xR0YxgligkocMM0g)** · [Buy on Gumroad →](https://manduks.gumroad.com/l/iiiwf)
 
 ## How to Replicate the Felix Model
 
@@ -106,7 +106,7 @@ Felix runs on OpenClaw with:
 - A daily review workflow
 - Access to Stripe, Vercel, GitHub, and email
 
-**Step 1 — Get the blueprints:** The [OpenClaw Entrepreneur Starter Kit ($29)](https://buy.stripe.com/cNi28qdgz7mVb0U8VYcMM07) includes Felix's exact SOUL.md template, HEARTBEAT.md system, daily review workflow, and Stripe/Vercel integration configs. Or get everything we make with [All 16 Kits — $97](https://buy.stripe.com/aEUbJ01xR0YxgligkocMM0g). Prefer Gumroad? [Get it here →](https://manduks.gumroad.com/l/pdcjj)
+**Step 1 — Get the blueprints:** The [OpenClaw Entrepreneur Starter Kit ($29)](https://buy.stripe.com/cNi28qdgz7mVb0U8VYcMM07) includes Felix's exact SOUL.md template, HEARTBEAT.md system, daily review workflow, and Stripe/Vercel integration configs. Or get everything we make with [All 21 Kits — $97](https://buy.stripe.com/aEUbJ01xR0YxgligkocMM0g). Prefer Gumroad? [Get it here →](https://manduks.gumroad.com/l/pdcjj)
 
 **Step 2 — Configure your agent:** Use our [free SOUL.md Generator](/soul-generator) to customize the config for your industry — 6 presets included.
 
@@ -136,20 +136,20 @@ FELIX is a token on the Base blockchain — the first AI-run company with fully 
 
 ### Recommended Reading
 
-- [10 Free AI Tools That Save 20+ Hours Per Week](https://telegra.ph/10-Free-AI-Tools-That-Save-20-Hours-Per-Week-2026-03-30)
-- [How to Make Money with AI in 2026](https://telegra.ph/How-to-Make-Money-with-AI-in-2026-Practical-Guide-03-30)
-- [5 AI Side Hustles Making $3K-$10K/Month](https://telegra.ph/5-AI-Side-Hustles-Making-People-3K-10K-Per-Month-in-2026-03-30)
-- [AI Prompt Engineering Guide for Beginners](https://telegra.ph/AI-Prompt-Engineering-Guide-for-Beginners-2026-03-30)
-- [Best ChatGPT Prompts for Business Owners](https://telegra.ph/Best-ChatGPT-Prompts-for-Business-Owners-2026-03-30)
-- [5 Revenue-Focused SOUL.md Configs for OpenClaw Agents](https://telegra.ph/5-Revenue-Focused-SOULmd-Configs-for-OpenClaw-Agents-2026-04-02)
-- [How Felix Craft Made $200K as an Autonomous AI Agent](https://telegra.ph/How-Felix-Craft-Made-200K-as-an-Autonomous-AI-Agent-Complete-Breakdown-04-02)
-- [How to Start an AI Business in 2026](https://telegra.ph/How-to-Start-an-AI-Business-in-2026-No-Coding-Required-04-02)
-- [Best AI Tools for Small Business Owners 2026](https://telegra.ph/Best-AI-Tools-for-Small-Business-Owners-Free-and-Paid-2026-04-02)
-- [OpenClaw vs ChatGPT for Business](https://telegra.ph/OpenClaw-vs-ChatGPT-Why-Autonomous-Agents-Beat-Chatbots-for-Business-04-02)
-- [AI Side Hustle Ideas That Actually Work in 2026](https://telegra.ph/AI-Side-Hustle-Ideas-That-Actually-Work-in-2026-With-Proof-04-02)
-- [10 AI Prompts That Actually Make Money in 2026](https://telegra.ph/10-AI-Prompts-That-Actually-Make-Money-in-2026-With-Examples-04-03)
-- [AI Tools Every Freelancer Needs to 3x Revenue](https://telegra.ph/AI-Tools-Every-Freelancer-Needs-to-3x-Revenue-in-2026-04-03)
-- [How to Build an AI Side Hustle That Pays $3K/Month](https://telegra.ph/How-to-Build-an-AI-Side-Hustle-That-Pays-3K-per-Month-Step-by-Step-04-03)
+- [How to Make Money with AI in 2026](/blog/how-to-make-money-with-ai-2026) — Practical strategies that actually work
+- [AI Side Hustles That Pay in 2026](/blog/ai-side-hustles-2026) — Real income paths with AI
+- [Best AI Prompts for Business Owners](/blog/best-ai-prompts-business-2026) — Tested prompts for revenue
+- [Prompt Engineering Guide 2026](/blog/prompt-engineering-guide-2026) — Master AI prompting from scratch
+- [ChatGPT Tips & Tricks 2026](/blog/chatgpt-tips-tricks-2026) — Get more from ChatGPT
+- [Best Midjourney Prompts 2026](/blog/best-midjourney-prompts-2026) — Create stunning AI images
+- [17 Free AI Tools You Should Try](/blog/17-free-ai-tools-2026) — All our best free tools
+- [The "Hug My Younger Self" AI Trend](/blog/hug-younger-self-ai-trend-2026) — The most viral AI art trend of 2026
+- [ChatGPT Ghibli Style Prompts](/blog/chatgpt-ghibli-style-prompts-2026) — Create Studio Ghibli art with AI
+- [ChatGPT Action Figure Prompts](/blog/chatgpt-action-figure-prompt-2026) — Make your own AI action figures
+- [AI Tools for Small Business Owners](/blog/ai-tools-small-business-owners-2026) — Automate your business
+- [AI Email Marketing Prompts](/blog/ai-email-marketing-prompts-2026) — Write emails that convert
+- [How to Price Freelance Services with AI](/blog/how-to-price-freelance-services-ai-2026) — Stop undercharging
+- [AI Tools for Content Creators](/blog/ai-tools-content-creators-2026) — Create faster, publish more
     `
   },
   'openclaw-entrepreneur-setup-guide': {
@@ -939,7 +939,7 @@ Turn yourself into a movie character.
 4. **Add texture** — film grain, canvas, watercolor, holographic foil
 5. **Reference styles** — name specific artists, movies, or aesthetics
 
-**Want 200+ more prompts like these, pre-built and organized by category?** Get the [AI Image Prompt Pack — $29](https://buy.stripe.com/8x24gyccv7mVglegoqcMM0i) or grab [All 16 Kits — $97](https://buy.stripe.com/bJe7sK0tNdLjgle0pscMM0b)
+**Want 200+ more prompts like these, pre-built and organized by category?** Get the [AI Image Prompt Pack — $29](https://buy.stripe.com/8x24gyccv7mVglegoqcMM0i) or grab [All 21 Kits — $97](https://buy.stripe.com/bJe7sK0tNdLjgle0pscMM0b)
 
 **Or build your own prompts visually** with our free [AI Image Prompt Builder](/image-prompt-builder) — 25 styles, mood controls, lighting presets, and platform-specific formatting for ChatGPT, Midjourney, DALL·E, and Stable Diffusion.
 
@@ -1547,7 +1547,7 @@ export default function BlogPost({ post, slug }) {
         </div>
         <div className="cta-inline">
           <p>Get every AI template, workflow, and prompt we make — in one bundle.</p>
-          <a href="https://buy.stripe.com/aEUbJ01xR0YxgligkocMM0g">Get All 16 Kits — $97 (Save 83%) →</a>
+          <a href="https://buy.stripe.com/aEUbJ01xR0YxgligkocMM0g">Get All 21 Kits — $97 (Save 83%) →</a>
           <p style={{marginTop:12,fontSize:13,color:'var(--text-tertiary)'}}>Or start with the <a href="https://buy.stripe.com/cNi28qdgz7mVb0U8VYcMM07" style={{color:'var(--accent)'}}>Starter Kit — $29</a></p>
           <p style={{marginTop:8,fontSize:12,color:'var(--text-tertiary)'}}>Secure Stripe checkout &middot; Instant download &middot; 30-day guarantee</p>
         </div>

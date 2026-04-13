@@ -109,16 +109,53 @@ export default function AIAgent10KDay() {
           <p style={{ margin: '0 0 16px', color: '#6B7280', fontSize: '15px' }}>Get everything you need — SOUL templates, heartbeat configs, business prompts, automation workflows. From the same playbook Felix Craft used to hit $300K/month.</p>
           <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
             <a href="https://buy.stripe.com/cNi28qdgz7mVb0U8VYcMM07" style={{ display: 'inline-block', background: '#3B5FFF', color: '#fff', padding: '12px 24px', borderRadius: '6px', textDecoration: 'none', fontWeight: '700', fontSize: '15px' }}>Starter Kit — $29</a>
-            <a href="https://buy.stripe.com/aEUbJ01xR0YxgligkocMM0g" style={{ display: 'inline-block', background: '#111827', color: '#fff', padding: '12px 24px', borderRadius: '6px', textDecoration: 'none', fontWeight: '700', fontSize: '15px' }}>All 16 Kits — $97 (83% off)</a>
+            <a href="https://buy.stripe.com/aEUbJ01xR0YxgligkocMM0g" style={{ display: 'inline-block', background: '#111827', color: '#fff', padding: '12px 24px', borderRadius: '6px', textDecoration: 'none', fontWeight: '700', fontSize: '15px' }}>All 21 Kits — $97 (83% off)</a>
           </div>
           <p style={{ margin: '12px 0 0', fontSize: '13px', color: '#6B7280' }}>Instant download · 30-day money-back guarantee · Works with ChatGPT, Claude, Gemini</p>
         </div>
 
         <div style={{ marginTop: '24px', padding: '24px', background: '#FFFBEB', border: '1px solid #FCD34D', borderRadius: '8px' }}>
-          <h3 style={{ margin: '0 0 8px', fontSize: '1rem' }}>Free AI tools — no purchase needed</h3>
-          <p style={{ margin: '0', fontSize: '14px', color: '#6B7280' }}>
-            Try our <a href="/prompt-generator" style={{ color: '#3B5FFF', fontWeight: 600 }}>AI Prompt Generator</a>, <a href="/ai-roi-calculator" style={{ color: '#3B5FFF', fontWeight: 600 }}>ROI Calculator</a>, or <a href="/tools" style={{ color: '#3B5FFF', fontWeight: 600 }}>9 other free tools</a> — built for entrepreneurs automating with AI.
+          <h3 style={{ margin: '0 0 8px', fontSize: '1rem' }}>Free AI Tools — No Purchase Needed</h3>
+          <p style={{ margin: '0 0 12px', fontSize: '14px', color: '#6B7280' }}>
+            22+ free tools built for creators and entrepreneurs:
           </p>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))', gap: '8px', fontSize: '14px' }}>
+            <a href="/prompt-generator" style={{ color: '#3B5FFF' }}>AI Prompt Generator</a>
+            <a href="/prompt-enhancer" style={{ color: '#3B5FFF' }}>Prompt Enhancer</a>
+            <a href="/ghibli-prompt-generator" style={{ color: '#3B5FFF' }}>Ghibli Art Generator</a>
+            <a href="/pet-portrait-generator" style={{ color: '#3B5FFF' }}>Pet Portrait Generator</a>
+            <a href="/action-figure-generator" style={{ color: '#3B5FFF' }}>Action Figure Generator</a>
+            <a href="/hug-younger-self-generator" style={{ color: '#3B5FFF' }}>Hug Younger Self Generator</a>
+            <a href="/lego-prompt-generator" style={{ color: '#3B5FFF' }}>LEGO Minifigure Generator</a>
+            <a href="/miniature-diorama-generator" style={{ color: '#3B5FFF' }}>Miniature Diorama Generator</a>
+            <a href="/tattoo-generator" style={{ color: '#3B5FFF' }}>AI Tattoo Generator</a>
+            <a href="/album-cover-generator" style={{ color: '#3B5FFF' }}>Album Cover Generator</a>
+            <a href="/fantasy-map-generator" style={{ color: '#3B5FFF' }}>Fantasy Map Generator</a>
+            <a href="/caricature-generator" style={{ color: '#3B5FFF' }}>Caricature Generator</a>
+            <a href="/childhood-reimagine-generator" style={{ color: '#3B5FFF' }}>Childhood Reimagine Generator</a>
+            <a href="/buyer-intent-generator" style={{ color: '#3B5FFF' }}>Buyer Intent Finder</a>
+            <a href="/soul-generator" style={{ color: '#3B5FFF' }}>SOUL.md Generator</a>
+            <a href="/hashtag-generator" style={{ color: '#3B5FFF' }}>Hashtag Generator</a>
+            <a href="/photo-roast-generator" style={{ color: '#3B5FFF' }}>Photo Roast Generator</a>
+            <a href="/muse-spark-prompt-generator" style={{ color: '#3B5FFF' }}>Muse Spark Generator</a>
+          </div>
+          <p style={{ margin: '12px 0 0', fontSize: '13px' }}>
+            <a href="/tools" style={{ color: '#3B5FFF', fontWeight: 600 }}>See all tools →</a>
+          </p>
+        </div>
+
+        <div style={{ marginTop: '24px', padding: '24px', background: '#F0FDF4', border: '1px solid #86EFAC', borderRadius: '8px' }}>
+          <h3 style={{ margin: '0 0 8px', fontSize: '1rem' }}>More from the Blog</h3>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(250px, 1fr))', gap: '8px', fontSize: '14px' }}>
+            <Link href="/blog/hug-younger-self-ai-trend-2026" style={{ color: '#3B5FFF' }}>The "Hug My Younger Self" AI Trend</Link>
+            <Link href="/blog/chatgpt-ghibli-style-prompts-2026" style={{ color: '#3B5FFF' }}>ChatGPT Ghibli Style Prompts</Link>
+            <Link href="/blog/chatgpt-action-figure-prompt-2026" style={{ color: '#3B5FFF' }}>ChatGPT Action Figure Prompts</Link>
+            <Link href="/blog/how-to-make-money-with-ai-2026" style={{ color: '#3B5FFF' }}>How to Make Money with AI</Link>
+            <Link href="/blog/best-midjourney-prompts-2026" style={{ color: '#3B5FFF' }}>Best Midjourney Prompts 2026</Link>
+            <Link href="/blog/chatgpt-image-prompts-2026" style={{ color: '#3B5FFF' }}>ChatGPT Image Prompts Guide</Link>
+            <Link href="/blog/ai-side-hustles-2026" style={{ color: '#3B5FFF' }}>AI Side Hustles 2026</Link>
+            <Link href="/blog/17-free-ai-tools-2026" style={{ color: '#3B5FFF' }}>17 Free AI Tools You Should Try</Link>
+          </div>
         </div>
       </div>
     </Layout>
