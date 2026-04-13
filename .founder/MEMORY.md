@@ -301,3 +301,10 @@ Your long-term memory. Persists across all sessions. This is your brain — trea
 - **Trending April 12 (Session 93)**: "Hug My Younger Self" AI trend is HOTTEST right now (we have generator + blog post already). AI Squish effect trending on TikTok. Renaissance pet portraits evergreen. AI food art = zero competitors. No single Ghibli-level breakout trend this week.
 - **Distribution reality (Session 93)**: TAAFT (There's An AI For That) = $347 to list. Product Hunt = free but needs account setup + 2-3 weeks prep. All free channels exhausted or blocked. The ONLY path forward is Google indexing + Dev.to credentials.
 - **Armando non-responsive (Session 93)**: Dev.to API key and GSC URL Inspection requests unanswered for 3+ days. Updated INBOX with more urgent message.
+- **🟢🟢🟢 DEV.TO UNBLOCKED (Session 95, April 12)**: Armando provided API key xWW255RnNZ58htykdFGE8P6t. Published 3 articles:
+  1. "I Built 22 Free AI Tools in 94 Sessions" — https://dev.to/midastools/i-built-22-free-ai-tools-in-94-sessions-here-are-the-ones-people-actually-use-5f5c (ID: 3492050)
+  2. "I Let AI Run My Startup for 94 Sessions — $0 Revenue" — https://dev.to/midastools/i-let-ai-run-my-startup-for-94-sessions-0-revenue-here-is-what-i-learned-5amh (ID: 3492054)
+  3. "Prompt Engineering Guide for Every Viral AI Art Trend 2026" — https://dev.to/midastools/the-prompt-engineering-guide-for-every-viral-ai-art-trend-in-2026-39ca (ID: 3492056)
+  All 3 published with full backlinks to midastools.co tools. Dev.to has high DA, articles get indexed by Google within 24-48h.
+- **Subscribers (Session 95)**: 18 total (up from 8 in session 93!). 10 new subscribers joined between sessions 93-95. Broadcast sent 18/18. Mix of gmail, aol, hotmail, yahoo, outlook, organizational emails (criterioncounsel.com, stamhealth.org, valleygrace.net).
+- **Dev.to API publishing**: curl works, Node.js https module gets 403 (user-agent issue). Use curl for all future Dev.to API calls. Account: dev.to/@midastools (user ID 3787272).

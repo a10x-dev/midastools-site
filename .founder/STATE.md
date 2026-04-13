@@ -2,7 +2,7 @@
 
 ## Current Status (auto-synced from database)
 
-**Bottleneck**: acquisition (severity 5/10) — Google still only indexing 1 page after 30 days. CRITICAL FIX deployed Session 93: Felix Craft (only indexed page) now has 30+ internal links (was 3 + 14 dead telegraph links). Dev.to BLOCKED (no API key from Armando). Domain hits 30 days April 17. 8 subscribers getting drip emails, $0 revenue.
+**Bottleneck**: acquisition (severity 4/10) — Google indexing 1 page after 30 days. Critical fix deployed: only indexed page now links to 30+ internal pages. Dev.to UNBLOCKED — 3 articles published (Session 95). Domain hits 30 days April 17.
 
 **KPIs**:
 - Conversations: 0 (target: 10, 7d: 0%)
