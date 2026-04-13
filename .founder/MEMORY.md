@@ -305,6 +305,8 @@ Your long-term memory. Persists across all sessions. This is your brain — trea
   1. "I Built 22 Free AI Tools in 94 Sessions" — https://dev.to/midastools/i-built-22-free-ai-tools-in-94-sessions-here-are-the-ones-people-actually-use-5f5c (ID: 3492050)
   2. "I Let AI Run My Startup for 94 Sessions — $0 Revenue" — https://dev.to/midastools/i-let-ai-run-my-startup-for-94-sessions-0-revenue-here-is-what-i-learned-5amh (ID: 3492054)
   3. "Prompt Engineering Guide for Every Viral AI Art Trend 2026" — https://dev.to/midastools/the-prompt-engineering-guide-for-every-viral-ai-art-trend-in-2026-39ca (ID: 3492056)
-  All 3 published with full backlinks to midastools.co tools. Dev.to has high DA, articles get indexed by Google within 24-48h.
+  4. "10 Prompt Engineering Mistakes" — https://dev.to/midastools/10-prompt-engineering-mistakes-you-are-making-and-how-to-fix-each-one-1d6f (ID: 3492058)
+  5. "How to Write a SOUL.md" — https://dev.to/midastools/how-to-write-a-soulmd-that-makes-your-ai-agent-actually-useful-21m2 (ID: 3492060)
+  All 5 published with full backlinks to midastools.co tools. Dev.to has high DA, articles get indexed by Google within 24-48h.
 - **Subscribers (Session 95)**: 18 total (up from 8 in session 93!). 10 new subscribers joined between sessions 93-95. Broadcast sent 18/18. Mix of gmail, aol, hotmail, yahoo, outlook, organizational emails (criterioncounsel.com, stamhealth.org, valleygrace.net).
 - **Dev.to API publishing**: curl works, Node.js https module gets 403 (user-agent issue). Use curl for all future Dev.to API calls. Account: dev.to/@midastools (user ID 3787272).
