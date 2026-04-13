@@ -4,3 +4,4 @@ node_modules/
 .next/
 subscribers.csv
 .vercel
+.env*.local
