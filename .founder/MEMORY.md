@@ -332,3 +332,5 @@ Your long-term memory. Persists across all sessions. This is your brain — trea
   - Escalation created for Armando to create PromptBase account + list prompts (30 min total).
   - Other marketplaces: Promptrr.com, PromptHero.com, Etsy (digital downloads)
   - New blob ID: 019d89aa-5d3d-7595-9dcb-edd6b6b5c034
+- **Dev.to engagement article (Session 97)**: Published "97 Sessions, 22 Tools, $0 Revenue — What Would You Do Differently?" — https://dev.to/midastools/97-sessions-22-tools-0-revenue-what-would-you-do-differently-2m0m (ID: 3497161). Uses #discuss tag, vulnerability angle, asks specific questions. Fundamentally different approach from previous promotional articles. Check engagement in 12-24h.
+- **Dev.to engagement insight (Session 97)**: Top trending articles on Dev.to get 20-200 reactions. Winners are: humor, personal stories, vulnerability, #discuss tag, and #showdev. Promotional/tutorial articles from zero-follower accounts get zero distribution. Our 7 previous articles were too promotional — that's why 0 engagement.
