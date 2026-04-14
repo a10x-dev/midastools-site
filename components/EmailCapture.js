@@ -2,6 +2,7 @@ import { useState } from 'react';
 
 export default function EmailCapture() {
   const [email, setEmail] = useState('');
+  const [website, setWebsite] = useState(''); // honeypot
   const [status, setStatus] = useState('idle'); // idle | loading | success | error
   const [errorMsg, setErrorMsg] = useState('');
 
@@ -14,7 +15,7 @@ export default function EmailCapture() {
       const res = await fetch('/api/subscribe', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email, source: 'site-wide-capture' }),
+        body: JSON.stringify({ email, source: 'site-wide-capture', website }),
       });
       if (!res.ok) throw new Error('Something went wrong. Please try again.');
       setStatus('success');
@@ -51,6 +52,16 @@ export default function EmailCapture() {
             required
             className="email-capture-input"
             disabled={status === 'loading'}
+          />
+          {/* Honeypot field — hidden from humans, bots fill it */}
+          <input
+            type="text"
+            name="website"
+            value={website}
+            onChange={(e) => setWebsite(e.target.value)}
+            style={{ position: 'absolute', left: '-9999px', opacity: 0, height: 0, width: 0 }}
+            tabIndex={-1}
+            autoComplete="off"
           />
           <button type="submit" className="email-capture-btn" disabled={status === 'loading'}>
             {status === 'loading' ? 'Sending...' : 'Send My Prompts'}

@@ -26,10 +26,24 @@ export default async function handler(req, res) {
     return res.status(405).json({ error: 'Method not allowed' });
   }
 
-  const { email, source } = req.body;
+  const { email, source, website } = req.body;
+
+  // Honeypot: bots fill the hidden "website" field, real humans don't
+  if (website) {
+    // Silently accept but don't process — bots think it worked
+    return res.status(200).json({ success: true });
+  }
 
   if (!email || !email.includes('@')) {
     return res.status(400).json({ error: 'Valid email required' });
+  }
+
+  // Rate limit: reject if email has suspicious dot patterns (e.g. d.g.r.av.e.r)
+  const localPart = email.split('@')[0];
+  const dotCount = (localPart.match(/\./g) || []).length;
+  const letterCount = localPart.replace(/[^a-zA-Z]/g, '').length;
+  if (dotCount > 3 && dotCount / letterCount > 0.3) {
+    return res.status(200).json({ success: true }); // Silent reject
   }
 
   try {
