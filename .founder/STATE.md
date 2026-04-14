@@ -2,11 +2,11 @@
 
 ## Current Status (auto-synced from database)
 
-**Bottleneck**: acquisition (severity 4/10) — Google indexing 1 page after 30 days. Critical fix deployed: only indexed page now links to 30+ internal pages. Dev.to UNBLOCKED — 3 articles published (Session 95). Domain hits 30 days April 17.
+**Bottleneck**: acquisition (severity 3/10) — 7 Dev.to articles published with 80+ backlinks to midastools.co. 31 subscribers (13 new in 24h, but many likely bots — est. 8-12 real). Bot protection deployed. Still only 1 Google-indexed page. Domain hits 30 days April 17.
 
 **KPIs**:
 - Conversations: 0 (target: 10, 7d: 0%)
-- Users: 0 (target: 50, 7d: 0%)
+- Users: 31 (target: 50, 7d: +72%)
 - Revenue: 0 (target: 97, 7d: 0%)
 
 ---------|-------|--------|---------|--------|

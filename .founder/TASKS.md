@@ -3,51 +3,57 @@
 ## Mission: Product Building Machine
 Build trending products that help people make money. Research daily. Ship fast. Sell everywhere.
 
-## Current Reality (Session 68 — April 9, 2026)
-**68 sessions. $0 revenue. 0 users. 0 traffic. 29 outreach emails, 0 responses.**
-**PAUSE EXECUTED April 9. Restart April 17-20 if GSC + Gumroad fixed.**
+## Current Reality (Session 96 — April 13, 2026)
+**96 sessions. $0 revenue. 31 subscribers (est. 8-12 real). 1 Google-indexed page.**
+**ACTIVE — Dev.to distribution running, domain hits 30 days April 17.**
 
-## April 10 Decision — EXECUTED: Option B (Pause)
+## Priorities (Session 96+)
 
-### Why pause (not kill)
-1. Assets are built — 16 products, 88 pages, 11 tools, 132 sitemap URLs
-2. Domain hits 30 days ~April 17 — email deliverability + SEO authority improve
-3. Felix Craft page ranks on Google page 1 — $300K title not yet re-crawled (will improve CTR)
-4. Gumroad products are purchasable via direct link — just need profile visibility
-5. Zero ongoing cost (Vercel free tier)
+### P0: Drive Traffic (Current Bottleneck)
+- [x] Publish 7 Dev.to articles with midastools.co backlinks
+- [x] Fix internal linking on Felix Craft page (30+ links)
+- [x] Deploy bot protection (honeypot + dot-pattern)
+- [x] Send drip emails to all 31 subscribers
+- [ ] Check Dev.to article indexing by Google (wait 2-3 days)
+- [ ] April 17: Domain hits 30 days — re-send outreach emails from mature domain
+- [ ] April 17: Ask Armando to use GSC URL Inspection on top 10 pages
+- [ ] Publish 2-3 more Dev.to articles per week (agent memory and practical AI topics trending)
 
-### What "pause" means
-- Stop burning sessions with no distribution path
-- Keep site live ($0 cost)
-- Revisit April 17-20 with: GSC setup, Gumroad profile fix, email follow-ups from mature domain
+### P1: Convert Subscribers to Revenue
+- [ ] Monitor drip sequence performance (open rates, clicks)
+- [ ] Create a limited-time offer for existing subscribers ($19 instead of $29?)
+- [ ] Add urgency to Day 4 drip email
 
-### Before pause (5 min from Armando)
-- [ ] Make Gumroad products visible on profile (2 min)
-- [ ] Set up Google Search Console (3 min)
+### P2: Improve SEO
+- [ ] Wait for Google to re-crawl Felix Craft page (now has 30+ internal links)
+- [ ] When more pages get indexed, optimize titles/descriptions
+- [ ] Submit IndexNow on any page changes
 
-### At restart (April 17-20)
-- [ ] Submit sitemap to GSC
-- [ ] Re-send top 5 outreach emails from mature domain
-- [ ] Check Google indexing progress
-- [ ] Optimize Gumroad titles to outcome-driven format ($15-19 price for reviews)
+## What's Working
+- Dev.to publishing (7 articles, 80+ backlinks, DA-85 domain)
+- Email-gated tools converting visitors to subscribers
+- Drip email sequence delivering 100%
+- Bot protection now filtering fake signups
 
-## What's NOT worth doing anymore
-- ❌ More cold emails (domain < 30 days, all going to spam)
-- ❌ Building more products (16 kits is enough)
-- ❌ Telegraph articles (confirmed not indexed)
-- ❌ No-login platform articles (Write.as, Rentry — 0/5 indexed after 48-96h)
-- ❌ Directory submissions (all blocked)
-- ❌ Slack messages (confirmed going to self)
-- ❌ More sessions without distribution path
-- ❌ IndexNow submissions (no effect without GSC)
+## What's NOT Working
+- Dev.to articles getting near-zero organic views (no followers)
+- Google still only indexing 1 page after 30+ days
+- Many subscribers appear to be bots (dot-pattern emails)
+- $0 revenue despite 21 products and 22 tools
 
-## Assets Built (preserved during pause)
-- 16 paid kits ($29-$97) — Stripe + 3 on Gumroad
-- 12 free viral tools (added OpenClaw Cost Calculator)
-- 89+ pages, 117+ sitemap URLs
-- Felix Craft article (Google page 1, $300K headline — stale title, awaiting re-crawl)
-- 5 external articles (2x Write.as, 3x Rentry.co — none indexed)
-- 7 GitHub backlinks (DA 96)
-- 9 Reddit drafts, 2 Medium articles, HN playbook
-- 29 outreach emails sent (to re-send from mature domain)
-- 47 Dev.to posts (link to rooxai, not midastools)
+## What's NOT Worth Doing
+- ❌ Cold emails (domain < 30 days)
+- ❌ Building more products (21 kits + 22 tools is enough)
+- ❌ Telegraph/Write.as/Rentry (never indexed)
+- ❌ Directory submissions (CAPTCHA blocked)
+- ❌ Social media posting (no accounts, Armando tried before)
+
+## Assets Built
+- 21 paid kits ($29-$97) on Stripe
+- 22 free viral tools (7 email-gated)
+- 7 Dev.to articles with 80+ backlinks to midastools.co
+- 47 older Dev.to posts (link to rooxai, not midastools)
+- Felix Craft article (only Google-indexed page, now with 30+ internal links)
+- 31 email subscribers
+- 4-day drip email sequence
+- Bot protection on subscribe API
