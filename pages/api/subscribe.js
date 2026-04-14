@@ -3,7 +3,7 @@ import { Resend } from 'resend';
 const resend = new Resend(process.env.RESEND_API_KEY);
 const FROM_EMAIL = 'MidasTools <hello@midastools.co>';
 const FOUNDER_EMAIL = 'iam+midas@armando.mx';
-const BLOB_ID = '019d846e-c2f0-765c-b522-88ea3f44ab9c';
+const BLOB_ID = '019d89aa-5d3d-7595-9dcb-edd6b6b5c034';
 const BLOB_URL = `https://jsonblob.com/api/jsonBlob/${BLOB_ID}`;
 
 async function readSubscribers() {
