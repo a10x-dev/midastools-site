@@ -298,6 +298,38 @@ export default function SoulGenerator() {
         </div>
       </section>
 
+      {/* Top Conversion Banner — direct path to paid */}
+      <section style={{ maxWidth: 700, margin: '0 auto 2rem', padding: '0 1.5rem' }}>
+        <div style={{
+          background: 'linear-gradient(135deg, #7C3AED 0%, #5B21B6 100%)',
+          borderRadius: 16,
+          padding: '18px 22px',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'space-between',
+          gap: 16,
+          flexWrap: 'wrap',
+          boxShadow: '0 8px 24px rgba(124,58,237,0.2)',
+        }}>
+          <div style={{ flex: '1 1 260px', color: '#FFF' }}>
+            <div style={{ fontSize: 11, fontWeight: 800, letterSpacing: 1, color: '#FCD34D', marginBottom: 4 }}>⚡ DEPLOY A REAL REVENUE AGENT</div>
+            <div style={{ fontSize: 16, fontWeight: 700, lineHeight: 1.35 }}>OpenClaw Starter Kit: 5 SOUL templates, heartbeat workflow, revenue ops &amp; full setup guide.</div>
+          </div>
+          <a href={STRIPE_STARTER} style={{
+            display: 'inline-block',
+            background: '#FCD34D',
+            color: '#5B21B6',
+            fontWeight: 800,
+            fontSize: 14,
+            padding: '12px 22px',
+            borderRadius: 99,
+            textDecoration: 'none',
+            whiteSpace: 'nowrap',
+            boxShadow: '0 4px 12px rgba(252,211,77,0.35)',
+          }}>Get Kit — $29 →</a>
+        </div>
+      </section>
+
       {/* ── Industry Presets ── */}
       <section className="presets-section">
         <h2>1. Choose Your Industry</h2>

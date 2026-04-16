@@ -205,6 +205,37 @@ export default function BuyerIntentGenerator() {
           who just posted "I need [your service]" — and reach out before anyone else does.
         </p>
 
+        {/* Top Conversion Banner — direct path to paid */}
+        <div style={{
+          background: 'linear-gradient(135deg, #FF4500 0%, #C2410C 100%)',
+          borderRadius: 16,
+          padding: '18px 22px',
+          margin: '24px 0 32px',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'space-between',
+          gap: 16,
+          flexWrap: 'wrap',
+          boxShadow: '0 8px 24px rgba(255,69,0,0.2)',
+        }}>
+          <div style={{ flex: '1 1 260px', color: '#FFF' }}>
+            <div style={{ fontSize: 11, fontWeight: 800, letterSpacing: 1, color: '#FEF08A', marginBottom: 4 }}>⚡ WANT THE COMPLETE SYSTEM?</div>
+            <div style={{ fontSize: 16, fontWeight: 700, lineHeight: 1.35 }}>Reddit Lead Gen Kit: 500+ phrases, DM templates, tracking spreadsheet &amp; 30+ niches.</div>
+          </div>
+          <a href="https://buy.stripe.com/bJefZg1xRcHf6KE5JMcMM0p" style={{
+            display: 'inline-block',
+            background: '#FEF08A',
+            color: '#9A3412',
+            fontWeight: 800,
+            fontSize: 14,
+            padding: '12px 22px',
+            borderRadius: 99,
+            textDecoration: 'none',
+            whiteSpace: 'nowrap',
+            boxShadow: '0 4px 12px rgba(254,240,138,0.35)',
+          }}>Get Kit — $49 →</a>
+        </div>
+
         {/* Generator Form */}
         <div className="bi-form">
           <div className="bi-form-row">
