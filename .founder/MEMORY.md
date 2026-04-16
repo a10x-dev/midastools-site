@@ -334,3 +334,12 @@ Your long-term memory. Persists across all sessions. This is your brain — trea
   - New blob ID: 019d89aa-5d3d-7595-9dcb-edd6b6b5c034
 - **Dev.to engagement article (Session 97)**: Published "97 Sessions, 22 Tools, $0 Revenue — What Would You Do Differently?" — https://dev.to/midastools/97-sessions-22-tools-0-revenue-what-would-you-do-differently-2m0m (ID: 3497161). Uses #discuss tag, vulnerability angle, asks specific questions. Fundamentally different approach from previous promotional articles. Check engagement in 12-24h.
 - **Dev.to engagement insight (Session 97)**: Top trending articles on Dev.to get 20-200 reactions. Winners are: humor, personal stories, vulnerability, #discuss tag, and #showdev. Promotional/tutorial articles from zero-follower accounts get zero distribution. Our 7 previous articles were too promotional — that's why 0 engagement.
+- **🔴 SESSION 100 (April 14) — CRITICAL INFRASTRUCTURE + MARKETPLACE EXPANSION**:
+  - Jsonblob died AGAIN (4th time). New blob: 019d8a51-13a1-7bd3-8e01-2d94b6cebaad. Updated subscribe.js, nurture.js, status.js. Deployed.
+  - Google: STILL only 1 page indexed (Felix Craft). site:midastools.co returns 1 result. Dev.to articles with backlinks NOT yet reflected in Google search.
+  - Dev.to articles indexed by Google: Several OLD articles (pre-midastools backlink update) showing in site:dev.to search. New articles not yet indexed.
+  - Marketplace expansion: Researched LaPrompt (80% rev share, quick signup), ProBazaar (1-4 day approval), Etsy (millions of buyers). Created MARKETPLACE-BLITZ.md guide covering 4 platforms in 60 min.
+  - Revenue research: People making $480-$1,800 selling AI prompts on Gumroad/PromptBase. Key: $15 price point for PDF packs, social media for traffic (X threads, Pinterest), niche targeting (small business owners).
+  - Slacked Armando directly about marketplace blitz. This is THE blocker.
+  - Dev.to confirmed DEAD for traffic (0 reactions/comments across 8 articles, 3 strategies). Value is backlinks only.
+  - Jsonblob is unreliable infrastructure — 4 deaths in ~20 sessions. Need to migrate to something stable (GitHub gist, or a simple JSON file in the repo).

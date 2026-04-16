@@ -8,7 +8,7 @@ import { Resend } from 'resend';
 const resend = new Resend(process.env.RESEND_API_KEY);
 const FROM_EMAIL = 'MidasTools <hello@midastools.co>';
 const SECRET_KEY = process.env.OUTREACH_SECRET || 'mt-outreach-2026';
-const BLOB_ID = '019d8a51-13a1-7bd3-8e01-2d94b6cebaad';
+const BLOB_ID = '019d93e2-a3da-7072-9093-95aec12e4265';
 const BLOB_URL = `https://jsonblob.com/api/jsonBlob/${BLOB_ID}`;
 
 const BUNDLE_LINK = 'https://buy.stripe.com/bJe7sK0tNdLjgle0pscMM0b';
