@@ -280,6 +280,41 @@ const emails = {
 const broadcasts = {
   tools: emails[5], // free tools showcase
   bundle: emails[6], // bundle math
+  flash: {
+    subject: "48h only: $29 Image Pack (pet, Ghibli, action figures)",
+    html: (source) => wrapEmail(`
+      <div style="background:linear-gradient(135deg,#7C3AED,#4C1D95);border-radius:16px;padding:20px 24px;margin:0 0 24px;color:#FFF;text-align:center;">
+        <div style="font-size:11px;font-weight:800;letter-spacing:1.5px;color:#FCD34D;margin-bottom:4px;">⏰ 48 HOURS ONLY</div>
+        <div style="font-size:22px;font-weight:800;line-height:1.2;">AI Image Prompt Pack — $29</div>
+        <div style="font-size:13px;color:#DDD6FE;margin-top:6px;">150+ ready-to-paste prompts. Usually $49.</div>
+      </div>
+
+      <h1 style="font-size:24px;font-weight:700;margin:0 0 16px;">You've been using the free generators. Here's what's on the other side.</h1>
+
+      <p style="font-size:16px;line-height:1.7;color:#374151;">You played with the Pet Portrait, Ghibli, and Action Figure generators. They each do ONE thing well.</p>
+
+      <p style="font-size:16px;line-height:1.7;color:#374151;"><strong>The AI Image Prompt Pack has 150+ prompts across every viral style</strong> — no generator, no steps, just copy and paste:</p>
+
+      <div style="background:#F3F4F6;border-left:4px solid #7C3AED;border-radius:8px;padding:20px 24px;margin:24px 0;">
+        <p style="font-size:14px;line-height:2;color:#374151;margin:0;">
+          ✅ <strong>Pet portraits</strong> — Royal, Ghibli, Action Figure, Trading Card, Funko (12 styles)<br/>
+          ✅ <strong>Yourself as a character</strong> — Superhero, Cyberpunk, Anime, Pixar, Oil Painting<br/>
+          ✅ <strong>Product shots</strong> — For your e-commerce, Etsy, DTC brand<br/>
+          ✅ <strong>Social content</strong> — Thumbnails, hooks, viral templates<br/>
+          ✅ <strong>Ghibli worlds</strong> — 8 Miyazaki film styles, landscape + character<br/>
+          ✅ <strong>Trending hooks</strong> — Barbie Box, Pet-as-Human, Tokyo drift swaps
+        </p>
+      </div>
+
+      <p style="font-size:16px;line-height:1.7;color:#374151;">Works with <strong>ChatGPT, Midjourney, DALL-E, Flux, Stable Diffusion</strong>. Instant download. No subscription.</p>
+
+      ${ctaButton("Grab the Pack — $29 →", IMAGE_PACK_LINK, "48h only · 30-day money-back guarantee · Instant download")}
+
+      <p style="font-size:15px;line-height:1.7;color:#374151;">After 48 hours it's back to $49. You've been getting free value from us for weeks — this is the easiest way to say thanks.</p>
+
+      <p style="font-size:14px;color:#6B7280;line-height:1.6;">— The MidasTools Team<br/><em>P.S. If you want everything, the <a href="${BUNDLE_LINK}" style="color:#3B5FFF;">All Kits Bundle is $97</a> (normally $661).</em></p>
+    `),
+  },
   trending: {
     subject: "New AI tools just dropped",
     html: (source) => wrapEmail(`
