@@ -215,11 +215,11 @@ export default function Home() {
         }
       `}</style>
 
-      {/* Urgency Banner */}
-      <div style={{ background: 'linear-gradient(90deg, #3B5FFF, #1E3AE0)', padding: '10px 40px', textAlign: 'center', fontSize: 13, fontWeight: 600 }}>
-        <a href="/bundle" style={{ color: '#FFFFFF', textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: 8 }}>
-          <span style={{ background: 'rgba(255,255,255,0.2)', padding: '2px 8px', borderRadius: 4, fontSize: 11, fontWeight: 800, letterSpacing: 0.5 }}>LAUNCH WEEK</span>
-          All 16 AI Kits — $564 value for just $97 (83% off)
+      {/* Urgency Banner — $9 Tripwire (low-friction entry) */}
+      <div style={{ background: 'linear-gradient(90deg, #F59E0B, #D97706)', padding: '10px 40px', textAlign: 'center', fontSize: 13, fontWeight: 600 }}>
+        <a href="/starter-pack" style={{ color: '#FFFFFF', textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: 8 }}>
+          <span style={{ background: 'rgba(255,255,255,0.25)', padding: '2px 8px', borderRadius: 4, fontSize: 11, fontWeight: 800, letterSpacing: 0.5 }}>TRY FOR $9</span>
+          20 hand-picked AI prompts — instant download, 30-day guarantee
           <span style={{ fontWeight: 800, marginLeft: 4 }}>&rarr;</span>
         </a>
       </div>
@@ -239,7 +239,10 @@ export default function Home() {
           <strong>Instant download</strong> &middot; 30-day money-back guarantee &middot; No subscription
         </p>
         <p style={{ marginTop: '12px', fontSize: '14px', color: '#6B7280', fontFamily: "'Inter', sans-serif" }}>
-          Not ready to buy? <a href="/tools" style={{ color: '#3B5FFF', fontWeight: 600, textDecoration: 'none' }}>Try our free AI tools</a> &middot; <a href="/quiz" style={{ color: '#3B5FFF', fontWeight: 600, textDecoration: 'none' }}>Take the quiz</a> &middot; <a href="/free-prompts" style={{ color: '#3B5FFF', fontWeight: 600, textDecoration: 'none' }}>Get 5 free prompts</a>
+          Want a smaller taste first? <a href="/starter-pack" style={{ color: '#D97706', fontWeight: 700, textDecoration: 'none' }}>Get our 20 best prompts for $9 &rarr;</a>
+        </p>
+        <p style={{ marginTop: '6px', fontSize: '13px', color: '#9CA3AF', fontFamily: "'Inter', sans-serif" }}>
+          Or: <a href="/tools" style={{ color: '#3B5FFF', fontWeight: 600, textDecoration: 'none' }}>Free AI tools</a> &middot; <a href="/quiz" style={{ color: '#3B5FFF', fontWeight: 600, textDecoration: 'none' }}>Take the quiz</a> &middot; <a href="/free-prompts" style={{ color: '#3B5FFF', fontWeight: 600, textDecoration: 'none' }}>5 free prompts</a>
         </p>
 
         <div className="stats-bar">
@@ -511,11 +514,12 @@ export default function Home() {
       {/* Product Ladder */}
       <section style={{ paddingTop: 0 }}>
         <div className="section-label">Choose Your Path</div>
-        <h2>One goal. Two ways to get there.</h2>
-        <p className="section-sub">Start with the kit. Upgrade when you're ready.</p>
+        <h2>Three rungs. Climb at your own pace.</h2>
+        <p className="section-sub">Start for $9. Upgrade anytime — we credit it toward the bundle.</p>
         <div className="pricing-grid">
           {[
-            { label: 'Start Here', price: '$29', term: 'one-time', name: 'Starter Kit', desc: 'Templates, workflows, and prompts to deploy your first AI agent yourself.', href: STRIPE_URL, cta: 'Get the Kit \u2192', featured: false },
+            { label: 'Try Us For $9', price: '$9', term: 'one-time', name: 'Starter Pack', desc: '20 hand-picked AI prompts. Cold outreach, landing pages, content, AI images, sales, productivity. Instant download.', href: '/starter-pack', cta: 'Get 20 Prompts \u2192', featured: false },
+            { label: 'Most Popular', price: '$29', term: 'one-time', name: 'AI Prompt Mega Pack', desc: '200+ prompts across every business function. The full prompt library.', href: STRIPE_URL, cta: 'Get the Kit \u2192', featured: false },
             { label: 'Best Value', price: '$97', term: 'one-time', name: 'All Kits Bundle', desc: '16 AI kits + all future kits free. Save 83% vs buying separately.', href: 'https://buy.stripe.com/aEUbJ01xR0YxgligkocMM0g', cta: 'Get the Bundle \u2192', featured: true },
           ].map(p => (
             <div key={p.name} className={`pricing-card${p.featured ? ' featured' : ''}`}>

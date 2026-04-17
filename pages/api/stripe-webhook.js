@@ -14,6 +14,22 @@ const transporter = nodemailer.createTransport({
 // Map Stripe checkout URLs to kit info
 // Each Stripe Payment Link has a unique ID embedded in the URL
 const KIT_MAP = {
+  // $9 Tripwire — web-delivered, not a zip
+  'starter-pack': {
+    name: 'Best 20 AI Prompts — Starter Pack',
+    file: null,
+    deliveryUrl: 'https://www.midastools.co/starter-pack-delivery',
+    subject: 'Your 20 AI Prompts are ready',
+    items: [
+      'Cold Outreach (4 reply-magnet prompts)',
+      'Landing Page Copy (3 conversion-tuned prompts)',
+      'Social Content (4 calendar + hook prompts)',
+      'AI Image Gen (3 production-ready prompts)',
+      'Sales & Offers (3 irresistible-offer prompts)',
+      'Productivity (3 decision/focus prompts)',
+      'Works with ChatGPT, Claude, Gemini',
+    ],
+  },
   // Default / fallback
   'default': {
     name: 'OpenClaw Starter Kit',
@@ -263,6 +279,8 @@ function detectKit(session) {
   const PAYMENT_LINK_MAP = {
     // Starter Kit
     'plink_1R...': 'default',
+    // $9 Tripwire — 20 Best Prompts Starter Pack
+    'plink_1TNBCeAdkDx8xZMks2c0wz2y': 'starter-pack',
     // Real Estate Kit
     'plink_fZueVcb8r6iR5GAfkmcMM08': 'real-estate',
     // Content Creator Kit
@@ -280,6 +298,7 @@ function detectKit(session) {
 
   // Check product/line item name as fallback
   const productName = (session.metadata?.product_name || '').toLowerCase();
+  if (productName.includes('starter pack') || productName.includes('best 20')) return KIT_MAP['starter-pack'];
   if (productName.includes('video')) return KIT_MAP['video-prompt-pack'];
   if (productName.includes('prompt') || productName.includes('mega pack')) return KIT_MAP['prompt-mega-pack'];
   if (productName.includes('real estate')) return KIT_MAP['real-estate'];
@@ -295,6 +314,7 @@ function detectKit(session) {
 
   // Check amount as last resort
   const amount = session.amount_total;
+  if (amount === 900) return KIT_MAP['starter-pack'];
   if (amount === 9700) return KIT_MAP['bundle'];
   if (amount === 4900) return KIT_MAP['real-estate'];
   if (amount === 3900) {
@@ -316,13 +336,22 @@ function buildBundleDownloadLinks(kit) {
 
 async function sendDownloadEmail(customerEmail, customerName, kit) {
   const baseUrl = 'https://www.midastools.co';
-  const isBundle = kit.file === null;
+  const isBundle = kit.file === null && Array.isArray(kit.files);
+  const isWebDelivery = kit.file === null && kit.deliveryUrl;
 
-  const downloadSection = isBundle
-    ? `<p style="color:#ccc;font-size:15px;margin-bottom:16px;">Download each kit below:</p>${buildBundleDownloadLinks(kit)}`
-    : `<a href="${baseUrl}/${kit.file}" style="display:inline-block;background:#3B5FFF;color:#FFFFFF;padding:16px 32px;border-radius:10px;font-weight:800;font-size:16px;text-decoration:none;margin-bottom:32px;">
+  let downloadSection;
+  if (isWebDelivery) {
+    downloadSection = `<a href="${kit.deliveryUrl}" style="display:inline-block;background:#D97706;color:#FFFFFF;padding:16px 32px;border-radius:10px;font-weight:800;font-size:16px;text-decoration:none;margin-bottom:32px;">
+        → Open Your Prompt Pack
+      </a>
+      <p style="color:#6B7280;font-size:13px;margin-top:-20px;margin-bottom:32px;">Bookmark this link — your 20 prompts live here. Copy-paste into ChatGPT, Claude, or Gemini.</p>`;
+  } else if (isBundle) {
+    downloadSection = `<p style="color:#ccc;font-size:15px;margin-bottom:16px;">Download each kit below:</p>${buildBundleDownloadLinks(kit)}`;
+  } else {
+    downloadSection = `<a href="${baseUrl}/${kit.file}" style="display:inline-block;background:#3B5FFF;color:#FFFFFF;padding:16px 32px;border-radius:10px;font-weight:800;font-size:16px;text-decoration:none;margin-bottom:32px;">
         ⬇ Download Your Kit
       </a>`;
+  }
 
   await transporter.sendMail({
     from: `"Midas Tools" <${process.env.GMAIL_ADDRESS}>`,
