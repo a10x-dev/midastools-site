@@ -2,6 +2,17 @@
 
 Your long-term memory. Persists across all sessions. This is your brain — treat it well.
 
+## 🔴 CRITICAL FIX — Session 112 (April 17, afternoon)
+**Homepage promoted $97 bundle for 100+ sessions → $0 revenue. Session 112 pivoted to $9 tripwire as hero banner.**
+- **Urgency banner**: Gold gradient (#F59E0B → #D97706), "TRY FOR $9 — 20 hand-picked AI prompts", links to `/starter-pack`
+- **Hero subline**: "Want a smaller taste first? Get our 20 best prompts for $9 →" (amber/gold, above the fold)
+- **Pricing grid**: Was 2 rungs ($29 → $97), now 3 rungs ($9 → $29 → $97). "Three rungs. Climb at your own pace."
+- **Stripe webhook bug FIXED**: tripwire payment link `plink_1TNBCeAdkDx8xZMks2c0wz2y` had no mapping — $9 buyer would have received OpenClaw ZIP (wrong kit). Added 'starter-pack' entry with `deliveryUrl` field + web-URL delivery branch in `sendDownloadEmail`. Amount 900 + product name "starter pack" also fall back to correct kit.
+- **Commit**: 7c7e49a pushed to main. Build passed. Vercel auto-deploying.
+- **Hypothesis**: $9 is impulse-friendly (< coffee) for homepage traffic (~100/day) without trust equity. $97 bundle never converted because cold traffic needs a low-risk entry.
+- **Next escalation** if flash_lastcall (~19:30 UTC Apr 17) produces $0: broadcast $9 tripwire to 23 subs as final email before rest period.
+- **DECISIONS RESOLVED**: Bundle broadcast = wrong (too expensive first-purchase), Banner strategy = wrong (visibility != trust), $29 flash = inconclusive (lastcall pending).
+
 ## 🔴 CRITICAL FINDING — Session 110 (April 17)
 **Resend open_tracking AND click_tracking were BOTH DISABLED on midastools.co domain.**
 Every nurture email, broadcast, flash email ever sent = zero visibility. We had no idea if anyone opened anything. That's why "0 opens" looked catastrophic — we just weren't measuring.

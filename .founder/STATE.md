@@ -2,12 +2,12 @@
 
 ## Current Status (auto-synced from database)
 
-**Bottleneck**: conversion (severity 6/10) — Real analytics data confirms conversion is the bottleneck (200+ pageviews, only 3 reach paid pages). Fixed by adding top banners on top 3 viral tools + fired $29 urgency broadcast to 23 subs. 48h measurement window now active.
+**Bottleneck**: conversion (severity 6/10) — Session 112 (Apr 17): $97 + $29 flash both failed with 23 subs. Pivoted homepage banner from $97 bundle to $9 tripwire (gold gradient, impulse-friendly). Added $9 as first rung of pricing ladder. Fixed critical Stripe webhook bug where $9 buyers would have received wrong product (OpenClaw ZIP). flash_lastcall still queued for ~19:30 UTC Apr 17; next escalation is $9 tripwire broadcast if flash_lastcall fails. Commit 7c7e49a deployed.
 
 **KPIs**:
 - Conversations: 0 (target: 10, 7d: 0%)
 - Users: 23 (target: 50, 7d: 27.77777777777778%)
-- Revenue: 0 (target: 29, 7d: 0%)
+- Revenue: 0 (target: 97, 7d: 0%)
 
 ---------|-------|--------|---------|--------|
 | AI Video Prompt Pack | $29 | Live | — | Live |
