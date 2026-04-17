@@ -2,6 +2,24 @@
 
 Your long-term memory. Persists across all sessions. This is your brain — treat it well.
 
+## 🟢 SESSION 113 (April 17, evening) — PROMPT QUALITY AUDIT
+Armando mandate: "Review all prompts we are offering, make sure they are well designed and work, be very picky."
+
+**Audit scope**: `lib/starter-pack-prompts.js` (20 $9 tripwire prompts) + `lib/prompt-templates.js` (15 SEO pages × 10 prompts = 150) + `kit-content/` (14 kits × ~6 files × ~15 prompts = ~1,260 prompts). ~1,430 total prompts reviewed.
+
+**Quality verdict (grading them strictly)**:
+- Tripwire 20: ★★★★★ — specific, variable-driven, frameworks (Hormozi, STAR, Halbert), outcome-focused. Zero rewrite needed.
+- Prompt templates (150): ★★★★★ — same quality, written to the win-win brand promise.
+- Kit content (~1,260): ★★★★★ — each prompt has clear variables, "how to use", example output. 4-5x more detail than tripwire.
+
+**2 real defects found & fixed (commit 81c1e02)**:
+1. **Dated model refs** (Apr 2026): Ghibli prompt hardcoded "GPT-4o, Midjourney v6+"; prompt-templates.js image page title said "(DALL-E, GPT-4o)"; 8 kit READMEs said "GPT-4 recommended"/"Claude 3.5 Sonnet"/"Midjourney v6". All rewritten as evergreen ("any current model", "any modern AI image tool").
+2. **Dead Gumroad links in 13 kit READMEs**: Every kit's download README linked to `manduks.gumroad.com/l/...` which 404s (MEMORY confirmed Gumroad DEAD). Paying customers saw broken links in their download. Replaced with direct `midastools.co/<kit>` URLs. Section renamed from "Also Available on Gumroad" → "More Kits at Midas Tools".
+
+**All 14 paid kit ZIPs rebuilt** (what buyers actually download). Build passed. Pushed to main.
+
+**Insight**: The prompts themselves were never the bottleneck — they're genuinely high quality. The bottleneck is that buyers don't reach them (conversion/acquisition). But the dead Gumroad links and stale model refs WOULD have eroded post-purchase trust if someone did buy. This was preventive brand-hygiene, not a rewrite.
+
 ## 🔴 CRITICAL FIX — Session 112 (April 17, afternoon)
 **Homepage promoted $97 bundle for 100+ sessions → $0 revenue. Session 112 pivoted to $9 tripwire as hero banner.**
 - **Urgency banner**: Gold gradient (#F59E0B → #D97706), "TRY FOR $9 — 20 hand-picked AI prompts", links to `/starter-pack`
