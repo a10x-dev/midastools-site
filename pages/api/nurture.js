@@ -1,6 +1,6 @@
 // Nurture email sequence — 7-day drip + broadcast + auto-drip
 // Manual: GET /api/nurture?key=SECRET&day=1&to=email
-// Broadcast: GET /api/nurture?key=SECRET&broadcast=true&template=tools|bundle|trending
+// Broadcast: GET /api/nurture?key=SECRET&broadcast=true&template=tools|bundle|trending|flash|flash_lastcall|tripwire
 // Auto-drip: GET /api/nurture?key=SECRET&drip=true (sends correct day email to each subscriber based on signup date)
 
 import { Resend } from 'resend';
@@ -14,6 +14,7 @@ const BUNDLE_LINK = 'https://buy.stripe.com/bJe7sK0tNdLjgle0pscMM0b';
 const MEGA_PACK_LINK = 'https://buy.stripe.com/4gMbJ0dgz4aJ1qkb46cMM0d';
 const IMAGE_PACK_LINK = 'https://buy.stripe.com/8x24gy90j22B4Cw9UXcMM0i';
 const CLAUDE_KIT_LINK = 'https://buy.stripe.com/8x25kCccv4aJ3ys0pscMM0q';
+const TRIPWIRE_LINK = 'https://buy.stripe.com/fZueVcb8rgXv3ysc8acMM0t';
 
 function wrapEmail(content) {
   return `
@@ -366,6 +367,56 @@ const broadcasts = {
       <p style="font-size:15px;line-height:1.7;color:#374151;">After 48 hours it's back to $49. You've been getting free value from us for weeks — this is the easiest way to say thanks.</p>
 
       <p style="font-size:14px;color:#6B7280;line-height:1.6;">— The MidasTools Team<br/><em>P.S. If you want everything, the <a href="${BUNDLE_LINK}" style="color:#3B5FFF;">All Kits Bundle is $97</a> (normally $661).</em></p>
+    `),
+  },
+  tripwire: {
+    subject: "Just $9 — our 20 best AI prompts (instant access)",
+    html: (source) => wrapEmail(`
+      <div style="background:linear-gradient(135deg,#F59E0B,#D97706);border-radius:16px;padding:22px 24px;margin:0 0 24px;color:#FFF;text-align:center;">
+        <div style="font-size:11px;font-weight:800;letter-spacing:1.5px;color:#FEF3C7;margin-bottom:6px;">🎯 STARTER PACK</div>
+        <div style="font-size:26px;font-weight:900;line-height:1.1;">20 battle-tested AI prompts — $9</div>
+        <div style="font-size:13px;color:#FEF3C7;margin-top:8px;">The 20 best of our 200+ prompt Mega Pack.</div>
+      </div>
+
+      <h1 style="font-size:24px;font-weight:700;margin:0 0 16px;">Small ask: $9 for the 20 prompts we'd pick first.</h1>
+
+      <p style="font-size:16px;line-height:1.7;color:#374151;">I've been sending you free tools for weeks. No pressure — they stay free.</p>
+
+      <p style="font-size:16px;line-height:1.7;color:#374151;">But if you want the <strong>shortcut</strong> — the 20 prompts we reach for before anything else — here's the fastest way to grab them:</p>
+
+      <div style="background:#FFFBEB;border:1px solid #FCD34D;border-radius:10px;padding:18px 22px;margin:24px 0;">
+        <p style="font-size:14px;line-height:1.9;color:#78350F;margin:0;">
+          <strong>What's inside the $9 Starter Pack:</strong><br/>
+          ✉️ 4 cold outreach prompts (email + LinkedIn + warm intros)<br/>
+          📄 3 landing page copy rewriters (pricing, headlines, hero)<br/>
+          📱 4 social content engines (calendar, hooks, carousels, Reels)<br/>
+          🖼️ 3 AI image prompts (Ghibli, product shots, Pinterest pins)<br/>
+          💰 3 sales &amp; offer builders (Hormozi-style stack)<br/>
+          ⚡ 3 productivity prompts (brain dump, meetings, decisions)
+        </p>
+      </div>
+
+      <p style="font-size:14px;line-height:1.6;color:#6B7280;margin:24px 0 8px;"><strong style="color:#111827;">Here's one — paste it into ChatGPT right now:</strong></p>
+
+      <div style="background:#0F172A;border-radius:10px;padding:18px 20px;margin:8px 0 20px;">
+        <p style="font-size:12px;line-height:1.7;color:#E5E7EB;margin:0;font-family:'SF Mono',Monaco,monospace;">
+          You are a world-class cold email copywriter.<br/><br/>
+          Write a 5-sentence cold email to <span style="color:#FCD34D;">[PROSPECT_NAME]</span>, a <span style="color:#FCD34D;">[ROLE]</span> at <span style="color:#FCD34D;">[COMPANY]</span>.<br/><br/>
+          Constraints: subject line must reference something specific they did recently. First line proves I paid attention (never "I hope this finds you well"). Close with a single low-commitment ask. No buzzwords.<br/><br/>
+          My offer: <span style="color:#FCD34D;">[WHAT_I_DO_IN_ONE_SENTENCE]</span>.<br/><br/>
+          Return 3 complete email versions + which one to send first and why.
+        </p>
+      </div>
+
+      <p style="font-size:13px;line-height:1.6;color:#6B7280;margin:0 0 24px;font-style:italic;">19 more like this — all copy-paste ready, variables in [BRACKETS].</p>
+
+      ${ctaButton("Get the 20 Prompts — $9 →", TRIPWIRE_LINK, "Instant access · 30-day money-back guarantee · Less than a coffee run")}
+
+      <p style="font-size:15px;line-height:1.7;color:#374151;">If you like these, the full <strong>200+ prompt Mega Pack is $29</strong> and the <strong>All-Kits Bundle is $97</strong>. But $9 is the honest starting point. No upsell pressure after.</p>
+
+      <p style="font-size:14px;color:#6B7280;line-height:1.6;">— The MidasTools Team</p>
+
+      <p style="font-size:13px;color:#9CA3AF;line-height:1.6;font-style:italic;">P.S. If $9 still isn't for you, no problem — the free generators stay free forever. You'll never get another email about this particular offer.</p>
     `),
   },
   trending: {
