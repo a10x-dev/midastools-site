@@ -188,7 +188,7 @@ export default function Bundle() {
           {[
             {
               abbr: 'VP', name: 'AI Video Content Pack', price: '$29', bg: 'var(--card-cyan)',
-              desc: '150+ ready-to-use video scripts and production briefs. Paste into Sora, Runway, or Kling AI — get professional videos without hiring a videographer.',
+              desc: '150+ ready-to-use video scripts and production briefs. Paste into Veo 3.1, Kling 3.0, Runway, or Pika — get professional videos without hiring a videographer.',
               link: '/ai-video-prompt-pack',
               items: ['25 social media video scripts ready to produce', '25 product demo & marketing videos', '25 tutorial & educational videos', '25 cinematic & storytelling videos', '25 corporate & business videos', '25 viral trending-style videos'],
             },

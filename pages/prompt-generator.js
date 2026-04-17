@@ -974,7 +974,7 @@ export default function PromptGenerator() {
         <h2>Frequently Asked Questions</h2>
         {[
           { q: 'Is the AI Prompt Generator really free?', a: 'Yes, 100% free with no signup required. Generate as many custom prompts as you want. No limits, no catches.' },
-          { q: 'What AI tools do the prompts work with?', a: 'All generated prompts work with ChatGPT (GPT-4), Claude, Gemini, Copilot, Midjourney, DALL-E, Stable Diffusion, Sora, Runway, and any other AI tool that accepts text prompts.' },
+          { q: 'What AI tools do the prompts work with?', a: 'All generated prompts work with ChatGPT (GPT-5, GPT-4o), Claude (Sonnet/Opus 4.6), Gemini 3.1, Copilot, Midjourney v7, DALL-E, Stable Diffusion, Google Veo 3.1, Kling AI 3.0, Runway Gen-4, Pika, and any other AI tool that accepts text prompts.' },
           { q: 'How is this different from just asking ChatGPT?', a: 'Our generator uses battle-tested prompt engineering frameworks developed by professionals. The structure, specificity, and role-setting produce significantly better outputs than generic questions.' },
           { q: 'Can I use the generated prompts for my business?', a: 'Absolutely. Use them for clients, products, marketing, content — no restrictions. They\'re yours.' },
           { q: 'Why would I buy the Mega Pack if this is free?', a: 'This generator creates great starting prompts. The Mega Pack includes 200+ advanced prompts with multiple variations, industry-specific frameworks, and prompt chains that build on each other for complex workflows.' },
@@ -1023,7 +1023,7 @@ export default function PromptGenerator() {
           </Link>
           <Link href="/blog/ai-video-prompts-sora-runway-2026" className="related-card">
             <h3 className="rc-title">Best AI Video Prompts 2026</h3>
-            <p className="rc-desc">Create stunning videos with Sora, Runway, and Pika</p>
+            <p className="rc-desc">Create stunning videos with Veo 3.1, Kling 3.0, and Runway</p>
           </Link>
         </div>
       </section>

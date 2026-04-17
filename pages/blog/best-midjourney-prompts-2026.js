@@ -7,7 +7,7 @@ const IMAGE_PACK_LINK = '/ai-image-prompt-pack';
 
 export default function BestMidjourneyPrompts2026() {
   const title = '40+ Best Midjourney Prompts for Stunning AI Art in 2026 (Copy & Paste)';
-  const description = 'The best Midjourney prompts for 2026. 40+ copy-paste prompts for photorealistic portraits, product photography, cinematic art, anime, architecture, and abstract design. Includes v6.1 parameters, --ar, --style raw, --niji, and multi-prompt syntax.';
+  const description = 'The best Midjourney prompts for 2026. 40+ copy-paste prompts for photorealistic portraits, product photography, cinematic art, anime, architecture, and abstract design. Includes v7 parameters, --ar, --style raw, --niji, and multi-prompt syntax.';
   const url = 'https://www.midastools.co/blog/best-midjourney-prompts-2026';
 
   const jsonLd = {
@@ -32,7 +32,7 @@ export default function BestMidjourneyPrompts2026() {
         name: 'What is the best Midjourney version to use in 2026?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Midjourney v6.1 is the current default and best version for most use cases in 2026. It produces the highest quality photorealistic images, has the best text rendering, and understands complex prompts with greater accuracy than previous versions. For anime and manga styles, use the --niji parameter which activates a specialized model tuned for Japanese art styles.'
+          text: 'Midjourney v7 is the current default and best version for most use cases in 2026 (v8 Alpha is also available in preview). V7 became default in June 2025 and features Omni Reference, model personalization turned on by default, and significantly improved realism, prompt interpretation, and generation speed. For anime and manga styles, use the --niji parameter which activates a specialized model tuned for Japanese art styles.'
         }
       },
       {
@@ -86,7 +86,7 @@ export default function BestMidjourneyPrompts2026() {
       <Head>
         <title>{`${title} | Midas Tools`}</title>
         <meta name="description" content={description} />
-        <meta name="keywords" content="best Midjourney prompts 2026, Midjourney prompts, Midjourney v6 prompts, AI art prompts, Midjourney photography prompts, Midjourney anime prompts, Midjourney architecture prompts, Midjourney parameters, --style raw, --niji, Midjourney prompt guide" />
+        <meta name="keywords" content="best Midjourney prompts 2026, Midjourney prompts, Midjourney v7 prompts, AI art prompts, Midjourney photography prompts, Midjourney anime prompts, Midjourney architecture prompts, Midjourney parameters, --style raw, --niji, Midjourney prompt guide" />
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
         <meta property="og:url" content={url} />
@@ -110,7 +110,7 @@ export default function BestMidjourneyPrompts2026() {
 
         <p>Midjourney remains the undisputed king of AI-generated art in 2026. While other tools have caught up in certain areas, nothing matches Midjourney&rsquo;s ability to produce visually breathtaking, editorially polished images with a single prompt.</p>
         <p>The secret is that Midjourney is not just a prompt-in, image-out tool. It has its own <strong>parameter system</strong> that gives you fine-grained control over aspect ratio, stylization, chaos, quality, and more. The people getting jaw-dropping results are not writing better descriptions &mdash; they are using Midjourney&rsquo;s parameters like a professional photographer uses camera settings.</p>
-        <p>Every prompt below is designed for <strong>Midjourney v6.1</strong> (the current default). Paste them into the <code>/imagine</code> command in Discord or the Midjourney web app. I have included the exact parameters that produce the best results for each style.</p>
+        <p>Every prompt below is designed for <strong>Midjourney v7</strong> (the current default). Paste them into the <code>/imagine</code> command in Discord or the Midjourney web app. I have included the exact parameters that produce the best results for each style.</p>
         <p>If you are looking for ChatGPT/DALL-E versions of image prompts, check out our <Link href="/blog/chatgpt-image-prompts-2026" style={{ color: '#3B5FFF' }}>50 Viral ChatGPT Image Prompts guide</Link>.</p>
 
         <p style={{ marginTop: '16px' }}><strong>Quick parameter reference:</strong></p>
@@ -133,7 +133,7 @@ export default function BestMidjourneyPrompts2026() {
         {/* ============================================ */}
 
         <h2 style={{ fontSize: '1.4rem', fontWeight: '700', marginTop: '40px' }}>Section 1: Photorealistic &amp; Portrait Prompts</h2>
-        <p>Midjourney&rsquo;s photorealism is unmatched. These prompts exploit v6.1&rsquo;s understanding of camera systems, lighting physics, and film stocks to generate images that are indistinguishable from photographs shot on real cameras.</p>
+        <p>Midjourney&rsquo;s photorealism is unmatched. These prompts exploit v7&rsquo;s understanding of camera systems, lighting physics, and film stocks to generate images that are indistinguishable from photographs shot on real cameras.</p>
 
         {/* PROMPT 1 */}
         <h3 style={{ fontSize: '1.15rem', fontWeight: '700', marginTop: '32px' }}>1. The Executive Headshot</h3>
@@ -167,7 +167,7 @@ export default function BestMidjourneyPrompts2026() {
 
         {/* PROMPT 5 */}
         <h3 style={{ fontSize: '1.15rem', fontWeight: '700', marginTop: '32px' }}>5. Golden Hour Environmental Portrait</h3>
-        <p>The magic hour shot that every photographer chases. Midjourney v6.1 handles golden hour light with stunning accuracy.</p>
+        <p>The magic hour shot that every photographer chases. Midjourney v7 handles golden hour light with stunning accuracy.</p>
         <div style={promptBlockStyle}>
 {`/imagine prompt: environmental portrait of a [describe person] standing in an open field at golden hour, warm backlight creating a glowing rim light around hair and shoulders, lens flare from the low sun, shot on Sony A7IV 85mm f/1.8, bokeh of wildflowers in the foreground, vast sky with soft clouds painted in warm oranges and pinks, relaxed natural pose, earth-toned clothing, the kind of photograph that wins portrait awards --ar 16:9 --s 300 --v 6.1`}
         </div>
@@ -544,7 +544,7 @@ Example:
         <h2 style={{ fontSize: '1.4rem', fontWeight: '700', marginTop: '40px' }}>Frequently Asked Questions</h2>
 
         <h3 style={{ fontSize: '1.05rem', fontWeight: '700', marginTop: '24px' }}>What is the best Midjourney version to use in 2026?</h3>
-        <p>Midjourney v6.1 is the current default and best version for most use cases. It produces the highest quality photorealistic images, has the best text rendering, and understands complex prompts more accurately than previous versions. For anime and manga styles, use the <code>--niji</code> parameter which activates a specialized model tuned for Japanese art styles.</p>
+        <p>Midjourney v7 is the current default and best version for most use cases (v8 Alpha is in preview). V7 became default in June 2025 and features Omni Reference, model personalization on by default, and significantly improved realism and prompt interpretation vs v6.1. For anime and manga styles, use the <code>--niji</code> parameter which activates a specialized model tuned for Japanese art styles.</p>
 
         <h3 style={{ fontSize: '1.05rem', fontWeight: '700', marginTop: '24px' }}>How do I write better Midjourney prompts?</h3>
         <p>Follow the formula: <strong>subject</strong> first, then <strong>style/medium</strong>, then <strong>lighting and atmosphere</strong>, then <strong>parameters</strong>. Use multi-prompt syntax (<code>::</code>) to weight different elements. Add parameters like <code>--ar</code> for aspect ratio, <code>--s</code> for stylization, and <code>--style raw</code> for less opinionated results. Be specific about what you want, but leave room for Midjourney&rsquo;s creativity.</p>

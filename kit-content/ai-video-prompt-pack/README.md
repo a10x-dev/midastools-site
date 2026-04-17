@@ -11,15 +11,18 @@
 5. **Business & Corporate Videos** (25+ prompts) — Presentations, training, company culture
 6. **Viral & Trending Styles** (25+ prompts) — Trending aesthetics, meme formats, AI art styles
 
-## Supported Tools
+## Supported Tools (April 2026)
 
-- **Sora** (OpenAI)
-- **Runway Gen-3** / Gen-4
-- **Pika Labs**
-- **Kling AI**
-- **Luma Dream Machine**
-- **Stable Video Diffusion**
-- **HailuoAI (MiniMax)**
+- **Google Veo 3.1** — best-in-class quality, native audio, generous free tier
+- **Kling AI 3.0** — up to 120-second clips, excellent human motion
+- **Runway Gen-4** — pro editing workflows, image-to-video, motion brush
+- **Pika Labs 2.0** — fast iteration, stylized content
+- **Luma Dream Machine** — 3D-aware generation
+- **HappyHorse-1.0** — top AI video leaderboard April 2026
+- **HailuoAI (MiniMax)** — strong for character consistency
+- **Stable Video Diffusion** — open-source, self-hostable
+
+> **Note on Sora:** OpenAI announced Sora's shutdown on March 24, 2026. Web/app access ends April 26, 2026; API ends September 24, 2026. All prompts in this pack are model-agnostic — they work with every tool listed above.
 
 ## How to Use
 

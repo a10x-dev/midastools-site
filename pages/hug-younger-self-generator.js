@@ -172,7 +172,7 @@ export default function HugYoungerSelfGenerator() {
     '@type': 'FAQPage',
     mainEntity: [
       { '@type': 'Question', name: 'How do I create a "Hug My Younger Self" AI photo?', acceptedAnswer: { '@type': 'Answer', text: 'Upload a current photo of yourself to ChatGPT (GPT-4o) or Google Gemini along with a childhood photo. Use a detailed prompt describing the scene — our generator creates the perfect prompt for you. The AI will create an image of your adult self hugging your childhood self.' } },
-      { '@type': 'Question', name: 'Which AI tool works best for the Hug My Younger Self trend?', acceptedAnswer: { '@type': 'Answer', text: 'Google Gemini currently produces the most viral results for this trend. ChatGPT with GPT-4o is also excellent, especially when you upload both a current and childhood photo. Midjourney v6 works for artistic interpretations but cannot use reference photos.' } },
+      { '@type': 'Question', name: 'Which AI tool works best for the Hug My Younger Self trend?', acceptedAnswer: { '@type': 'Answer', text: 'Google Gemini currently produces the most viral results for this trend. ChatGPT with GPT-4o is also excellent, especially when you upload both a current and childhood photo. Midjourney v7 works for artistic interpretations but cannot use reference photos.' } },
       { '@type': 'Question', name: 'Is the Hug My Younger Self AI trend still popular?', acceptedAnswer: { '@type': 'Answer', text: 'Yes! The "Hug My Younger Self" trend exploded in early 2026 and continues to be one of the most shared AI image trends on TikTok, Instagram, and X. It resonates because it triggers genuine emotion — nostalgia, self-compassion, and the universal wish to comfort our younger selves.' } },
     ],
   };

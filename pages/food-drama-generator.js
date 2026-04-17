@@ -60,7 +60,7 @@ const TONES = [
 /* -- OUTPUT TYPE --------------------------------------- */
 const OUTPUT_TYPES = [
   { id: 'image', label: 'Image Prompt', desc: 'For ChatGPT / DALL-E / Midjourney', icon: '\uD83D\uDDBC\uFE0F' },
-  { id: 'video', label: 'Video Prompt', desc: 'For Sora / Runway / Kling', icon: '\uD83C\uDFAC' },
+  { id: 'video', label: 'Video Prompt', desc: 'For Veo 3.1 / Kling 3.0 / Runway', icon: '\uD83C\uDFAC' },
 ];
 
 /* -- PROMPT BUILDER ------------------------------------ */
@@ -261,7 +261,7 @@ export default function FoodDramaGenerator() {
         name: 'Can I create AI food drama videos for TikTok?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Yes! Our generator creates prompts for both images (ChatGPT, DALL-E, Midjourney) and videos (Sora, Runway, Kling). Select "Video Prompt" as the output type to get a prompt optimized for AI video generation tools. The video prompts include camera direction, pacing, and dialogue overlay suggestions.',
+          text: 'Yes! Our generator creates prompts for both images (ChatGPT, DALL-E, Midjourney v7) and videos (Google Veo 3.1, Kling AI 3.0, Runway Gen-4). Select "Video Prompt" as the output type to get a prompt optimized for AI video generation tools. The video prompts include camera direction, pacing, and dialogue overlay suggestions.',
         },
       },
       {
@@ -269,7 +269,7 @@ export default function FoodDramaGenerator() {
         name: 'Which AI tools work best for food drama images?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'ChatGPT with GPT-4o produces the best anthropomorphic food characters. Midjourney excels at artistic quality and dramatic lighting. For videos, Sora and Runway ML create the most realistic food drama animations. Our prompts are optimized to work with all of these tools.',
+          text: 'ChatGPT (GPT-5 or GPT-4o) produces the best anthropomorphic food characters. Midjourney v7 excels at artistic quality and dramatic lighting. For videos, Google Veo 3.1 and Kling AI 3.0 create the most realistic food drama animations. Our prompts are optimized to work with all of these tools.',
         },
       },
       {
@@ -729,7 +729,7 @@ export default function FoodDramaGenerator() {
                       </>
                     ) : (
                       <>
-                        <li>Open <strong>Sora</strong>, <strong>Runway ML</strong>, or <strong>Kling AI</strong></li>
+                        <li>Open <strong>Veo 3.1</strong>, <strong>Kling AI 3.0</strong>, or <strong>Runway Gen-4</strong></li>
                         <li>Paste this prompt as the video description</li>
                         <li>Generate your food drama video clip</li>
                         <li>Post to TikTok with #FoodTok #AIFoodDrama</li>

@@ -1075,7 +1075,7 @@ export default function ImagePromptBuilder() {
         </div>
         <div className="faq-item">
           <h3>Does this work with ChatGPT's image generation?</h3>
-          <p>Yes! The Image Prompt Builder generates optimized prompts for ChatGPT (DALL·E 3), Midjourney v6, Stable Diffusion XL, and Ideogram. Each platform gets specifically formatted prompts for best results.</p>
+          <p>Yes! The Image Prompt Builder generates optimized prompts for ChatGPT (DALL·E 3), Midjourney v7, Stable Diffusion XL, and Ideogram. Each platform gets specifically formatted prompts for best results.</p>
         </div>
         <div className="faq-item">
           <h3>Is this tool really free?</h3>

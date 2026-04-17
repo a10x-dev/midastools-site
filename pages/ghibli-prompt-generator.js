@@ -165,7 +165,7 @@ export default function GhibliPromptGenerator() {
     mainEntity: [
       { '@type': 'Question', name: 'How do I create Studio Ghibli-style AI art?', acceptedAnswer: { '@type': 'Answer', text: 'Use our free Ghibli prompt generator to create a detailed prompt, then paste it into ChatGPT (GPT-4o), DALL-E, or Midjourney. Upload a photo for portrait-style results.' } },
       { '@type': 'Question', name: 'Is the Ghibli AI art trend still popular in 2026?', acceptedAnswer: { '@type': 'Answer', text: 'Yes! The Studio Ghibli AI art trend that started in early 2025 continues to be one of the most popular AI image trends, with millions of people creating Ghibli-style portraits and scenes.' } },
-      { '@type': 'Question', name: 'Which AI tool works best for Ghibli-style images?', acceptedAnswer: { '@type': 'Answer', text: 'ChatGPT with GPT-4o produces the most authentic Ghibli-style results. Midjourney v6 is also excellent. DALL-E 3 works but may require more specific prompting.' } },
+      { '@type': 'Question', name: 'Which AI tool works best for Ghibli-style images?', acceptedAnswer: { '@type': 'Answer', text: 'ChatGPT with GPT-4o produces the most authentic Ghibli-style results. Midjourney v7 is also excellent. DALL-E 3 works but may require more specific prompting.' } },
     ],
   };
 
@@ -589,7 +589,7 @@ export default function GhibliPromptGenerator() {
 
           <div style={{ marginBottom: 20 }}>
             <h3 style={{ fontSize: 16, fontWeight: 700, color: '#111827', margin: '0 0 6px' }}>Which AI tool creates the best Ghibli images?</h3>
-            <p style={{ fontSize: 14, color: '#6B7280', lineHeight: 1.7, margin: 0 }}>ChatGPT with GPT-4o produces the most authentic Ghibli-style results. The image generation model understands Miyazaki&apos;s watercolor aesthetic, cel-shading, and atmospheric details. Midjourney v6 is also excellent for landscapes.</p>
+            <p style={{ fontSize: 14, color: '#6B7280', lineHeight: 1.7, margin: 0 }}>ChatGPT with GPT-4o produces the most authentic Ghibli-style results. The image generation model understands Miyazaki&apos;s watercolor aesthetic, cel-shading, and atmospheric details. Midjourney v7 is also excellent for landscapes.</p>
           </div>
 
           <div>

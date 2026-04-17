@@ -7,11 +7,13 @@ const STRIPE_STARTER = 'https://buy.stripe.com/7sI9CDbla7Cx7Bu3ck';
 const STRIPE_BUNDLE = 'https://buy.stripe.com/00g5xY2WM04Ncyw9AH';
 
 const MODELS = [
-  { id: 'sonnet', name: 'Claude 3.5 Sonnet', inputPer1M: 3, outputPer1M: 15 },
-  { id: 'opus', name: 'Claude Opus', inputPer1M: 15, outputPer1M: 75 },
+  { id: 'sonnet46', name: 'Claude Sonnet 4.6', inputPer1M: 3, outputPer1M: 15 },
+  { id: 'opus46', name: 'Claude Opus 4.6', inputPer1M: 15, outputPer1M: 75 },
   { id: 'haiku', name: 'Claude Haiku', inputPer1M: 0.25, outputPer1M: 1.25 },
+  { id: 'gpt5', name: 'GPT-5', inputPer1M: 3.00, outputPer1M: 12 },
   { id: 'gpt4o', name: 'GPT-4o', inputPer1M: 2.50, outputPer1M: 10 },
   { id: 'gpt4omini', name: 'GPT-4o-mini', inputPer1M: 0.15, outputPer1M: 0.60 },
+  { id: 'gemini31', name: 'Gemini 3.1 Pro', inputPer1M: 1.25, outputPer1M: 5 },
 ];
 
 const PLANS = [

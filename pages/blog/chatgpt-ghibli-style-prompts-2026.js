@@ -243,7 +243,7 @@ export default function GhibliStylePrompts2026() {
         <p>Art &ldquo;styles&rdquo; are not copyrightable, so Ghibli-inspired AI art is generally fine for commercial use. However, avoid using copyrighted character names (Totoro, Chihiro, No-Face) in your prompts. Always check the AI tool&apos;s terms of service for commercial usage rights.</p>
 
         <h3 style={sty.h3}>Which AI tool makes the best Ghibli art?</h3>
-        <p>ChatGPT (GPT-4o) currently produces the most consistent Ghibli-style images. Midjourney v6 is excellent for detailed scenes. DALL·E 3 (standalone) works well for simpler compositions. Our <a href="/image-prompt-builder" style={{ color: '#3B5FFF' }}>Image Prompt Builder</a> formats prompts for all three platforms.</p>
+        <p>ChatGPT (GPT-4o) currently produces the most consistent Ghibli-style images. Midjourney v7 is excellent for detailed scenes. DALL·E 3 (standalone) works well for simpler compositions. Our <a href="/image-prompt-builder" style={{ color: '#3B5FFF' }}>Image Prompt Builder</a> formats prompts for all three platforms.</p>
 
         <hr style={{ margin: '40px 0', border: 'none', borderTop: '1px solid #eee' }} />
 

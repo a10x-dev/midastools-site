@@ -476,7 +476,7 @@ export default function Home() {
         <p className="section-sub">Each kit includes ready-to-use prompts, templates, and workflows — or grab them all with the bundle.</p>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(240px, 1fr))', gap: 12 }}>
           {[
-            { name: 'Video Prompt Pack', price: '$29', desc: 'Sora, Runway, Pika prompts', href: '/ai-video-prompt-pack', bg: 'var(--card-cyan)' },
+            { name: 'Video Prompt Pack', price: '$29', desc: 'Veo 3.1, Kling 3.0, Runway prompts', href: '/ai-video-prompt-pack', bg: 'var(--card-cyan)' },
             { name: 'Image Prompt Pack', price: '$29', desc: 'ChatGPT, Midjourney, DALL-E', href: '/ai-image-prompt-pack', bg: 'var(--card-pink)' },
             { name: 'Prompt Mega Pack', price: '$29', desc: '200+ prompts for any business', href: '/ai-prompt-mega-pack', bg: 'var(--card-amber)' },
             { name: 'Notion Templates Kit', price: '$39', desc: '150+ Notion templates & systems', href: '/notion-templates-kit', bg: 'var(--card-purple)' },

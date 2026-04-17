@@ -185,7 +185,7 @@ export default function AlbumCoverGenerator() {
         name: 'Which AI tool works best for generating album covers?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'ChatGPT with GPT-4o and DALL-E 3 produces excellent album covers with good text rendering. Midjourney v6 excels at artistic and photographic styles. For the best results, try your prompt in multiple tools and pick the output you like most.',
+          text: 'ChatGPT with GPT-4o and DALL-E 3 produces excellent album covers with good text rendering. Midjourney v7 excels at artistic and photographic styles. For the best results, try your prompt in multiple tools and pick the output you like most.',
         },
       },
       {

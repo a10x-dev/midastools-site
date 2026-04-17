@@ -28,16 +28,16 @@ export default function AIVideoPromptPack() {
     <Layout>
       <Head>
         <title>AI Video Prompt Pack — 150+ Video Generation Prompts | Midas Tools</title>
-        <meta name="description" content="150+ ready-to-use AI video prompts for social media, product demos, tutorials, cinematic content, corporate videos, and viral styles. Works with Sora, Runway, Pika, Kling AI, Luma. $29 one-time." />
-        <meta name="keywords" content="AI video prompts, Sora prompts, Runway prompts, Pika prompts, AI video generation, Kling AI prompts, Luma Dream Machine prompts, AI video maker, text to video prompts, video generation prompts" />
+        <meta name="description" content="150+ ready-to-use AI video prompts for social media, product demos, tutorials, cinematic content, corporate videos, and viral styles. Works with Veo 3.1, Kling 3.0, Runway Gen-4, Pika, Luma. $29 one-time." />
+        <meta name="keywords" content="AI video prompts, Veo 3.1 prompts, Kling AI prompts, Runway prompts, Pika prompts, AI video generation, Luma Dream Machine prompts, AI video maker, text to video prompts, video generation prompts 2026" />
         <meta property="og:title" content="AI Video Prompt Pack — 150+ Video Generation Prompts" />
-        <meta property="og:description" content="150+ battle-tested video generation prompts for social media, products, tutorials, and cinematic content. Works with Sora, Runway, Pika, Kling AI, and more. $29." />
+        <meta property="og:description" content="150+ battle-tested video generation prompts for social media, products, tutorials, and cinematic content. Works with Veo 3.1, Kling 3.0, Runway Gen-4, Pika, and more. $29." />
         <meta property="og:url" content="https://www.midastools.co/ai-video-prompt-pack" />
         <meta property="og:image" content="https://www.midastools.co/og-image.png" />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="AI Video Prompt Pack — 150+ Video Generation Prompts | Midas Tools" />
-        <meta name="twitter:description" content="150+ ready-to-use AI video generation prompts for social media, products, tutorials, and cinematic content. Works with Sora, Runway, Pika. $29 one-time." />
+        <meta name="twitter:description" content="150+ ready-to-use AI video generation prompts for social media, products, tutorials, and cinematic content. Works with Veo 3.1, Kling 3.0, Runway Gen-4. $29 one-time." />
         <link rel="canonical" href="https://www.midastools.co/ai-video-prompt-pack" />
         <link rel="icon" type="image/png" href="/favicon.png" />
 
@@ -83,7 +83,7 @@ export default function AIVideoPromptPack() {
               "@type": "Review",
               "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
               "author": { "@type": "Person", "name": "Alex K." },
-              "reviewBody": "These video prompts are a game-changer for my TikTok content. The camera movement and lighting instructions built into each prompt make the output look cinematic. Sora + these prompts = unlimited content."
+              "reviewBody": "These video prompts are a game-changer for my TikTok content. The camera movement and lighting instructions built into each prompt make the output look cinematic. Veo 3.1 + these prompts = unlimited content."
             },
             {
               "@type": "Review",
@@ -103,7 +103,7 @@ export default function AIVideoPromptPack() {
           "@context": "https://schema.org",
           "@type": "FAQPage",
           "mainEntity": [
-            { "@type": "Question", "name": "What AI video tools do these prompts work with?", "acceptedAnswer": { "@type": "Answer", "text": "Every prompt works with Sora (OpenAI), Runway Gen-3/Gen-4, Pika Labs, Kling AI, Luma Dream Machine, Stable Video Diffusion, HailuoAI (MiniMax), and any AI video generator that accepts text prompts." }},
+            { "@type": "Question", "name": "What AI video tools do these prompts work with?", "acceptedAnswer": { "@type": "Answer", "text": "Every prompt works with Google Veo 3.1, Kling AI 3.0, Runway Gen-4, Pika Labs 2.0, Luma Dream Machine, HailuoAI (MiniMax), Stable Video Diffusion, and any AI video generator that accepts text prompts. Note: OpenAI's Sora shuts down April 26, 2026 — our prompts are model-agnostic and work with every current leader." }},
             { "@type": "Question", "name": "Do I need technical skills to use these prompts?", "acceptedAnswer": { "@type": "Answer", "text": "No. Every prompt is ready to use — just fill in the brackets with your specifics and paste into your AI video tool. The prompts include camera movement, lighting, duration, and aspect ratio instructions so you get professional results without being a filmmaker." }},
             { "@type": "Question", "name": "How is this different from the AI Image Prompt Pack?", "acceptedAnswer": { "@type": "Answer", "text": "The Image Prompt Pack generates still images. The Video Prompt Pack is specifically designed for motion content — it includes camera movement instructions, duration specifications, transition effects, and temporal descriptions that image prompts don't need." }},
             { "@type": "Question", "name": "Can I use the generated videos commercially?", "acceptedAnswer": { "@type": "Answer", "text": "The prompts are yours to use however you want. Commercial usage rights for generated videos depend on the AI tool you use — check your tool's terms of service. Most platforms allow commercial use on paid plans." }},
@@ -164,7 +164,7 @@ export default function AIVideoPromptPack() {
 
       {/* HERO */}
       <section style={{textAlign:'center', paddingBottom: 60}}>
-        <div className="badge" style={{marginBottom:24}}>150+ AI Video Prompts · Sora · Runway · Pika · Kling AI</div>
+        <div className="badge" style={{marginBottom:24}}>150+ AI Video Prompts · Veo 3.1 · Kling 3.0 · Runway · Pika</div>
         <h1 style={{fontSize:'clamp(32px, 5vw, 52px)', fontWeight:900, lineHeight:1.1, marginBottom:16}}>
           Stop Scripting.<br/>Start Generating <span>Stunning AI Videos.</span>
         </h1>
@@ -176,10 +176,10 @@ export default function AIVideoPromptPack() {
           One-time payment · Instant download · 30-day money-back guarantee
         </p>
         <div className="tools-row">
-          <div className="tool-badge">Sora (OpenAI)</div>
-          <div className="tool-badge">Runway Gen-3/4</div>
-          <div className="tool-badge">Pika Labs</div>
-          <div className="tool-badge">Kling AI</div>
+          <div className="tool-badge">Google Veo 3.1</div>
+          <div className="tool-badge">Kling AI 3.0</div>
+          <div className="tool-badge">Runway Gen-4</div>
+          <div className="tool-badge">Pika Labs 2.0</div>
           <div className="tool-badge">Luma Dream Machine</div>
         </div>
       </section>
@@ -256,7 +256,7 @@ export default function AIVideoPromptPack() {
           Look inside. <span>Real prompts.</span> No fluff.
         </h2>
         <p style={{color:'var(--text-secondary)', fontSize:16, marginBottom:32}}>
-          Every prompt specifies camera movement, lighting, duration, and aspect ratio — everything Sora, Runway, and Pika need to output cinematic video. Here are 2 of the 150+.
+          Every prompt specifies camera movement, lighting, duration, and aspect ratio — everything Veo, Kling, Runway, and Pika need to output cinematic video. Here are 2 of the 150+.
         </p>
 
         <div className="sample-card">
@@ -272,7 +272,7 @@ to reveal the full product.
 Shallow depth of field. Professional product photography style.
 Vertical 9:16 format. Subtle warm color grading.`}</div>
           <div className="sample-how">
-            <strong style={{color:'var(--text)'}}>Best for:</strong> Sora, Runway Gen-3/4, Pika Labs. The pull-back reveal creates a natural hook for TikTok and Reels — engagement rises ~20% vs static product shots.
+            <strong style={{color:'var(--text)'}}>Best for:</strong> Veo 3.1, Kling 3.0, Runway Gen-4, Pika Labs. The pull-back reveal creates a natural hook for TikTok and Reels — engagement rises ~20% vs static product shots.
           </div>
         </div>
 
@@ -297,7 +297,7 @@ Bright, clean lighting. 9:16 vertical.`}</div>
 
         <div style={{textAlign:'center', marginTop:32}}>
           <p style={{color:'var(--text-secondary)', fontSize:15, marginBottom:16}}>
-            <strong style={{color:'var(--accent)'}}>148 more prompts</strong> like this — across 6 categories. Ready to paste into Sora, Runway, Pika, or Kling right now.
+            <strong style={{color:'var(--accent)'}}>148 more prompts</strong> like this — across 6 categories. Ready to paste into Veo 3.1, Kling 3.0, Runway, or Pika right now.
           </p>
           <a href={STRIPE_URL} className="btn-primary">Unlock All 150+ Prompts — $29 →</a>
         </div>
@@ -366,7 +366,7 @@ Bright, clean lighting. 9:16 vertical.`}</div>
             {[
               '150+ ready-to-use video generation prompts',
               '6 categories (social, product, tutorial, cinematic, corporate, viral)',
-              'Works with Sora, Runway, Pika, Kling AI, Luma, and more',
+              'Works with Veo 3.1, Kling 3.0, Runway Gen-4, Pika, Luma, and more',
               'Camera movement, lighting, and duration built into every prompt',
               'Every aspect ratio: 9:16, 16:9, 1:1, and cinematic widescreen',
               'Free updates as new tools and styles emerge',
@@ -433,7 +433,7 @@ Bright, clean lighting. 9:16 vertical.`}</div>
         {[
           {
             q: 'What AI video tools do these prompts work with?',
-            a: 'Every prompt works with Sora (OpenAI), Runway Gen-3/Gen-4, Pika Labs, Kling AI, Luma Dream Machine, Stable Video Diffusion, HailuoAI (MiniMax), and any other AI video generator that accepts text prompts. The prompts are plain text — copy, paste, and generate.'
+            a: 'Every prompt works with Google Veo 3.1, Kling AI 3.0, Runway Gen-4, Pika Labs 2.0, Luma Dream Machine, HailuoAI (MiniMax), Stable Video Diffusion, and any AI video generator that accepts text prompts. The prompts are plain text — copy, paste, and generate. Note: OpenAI announced Sora\'s shutdown on March 24, 2026 (web access ends April 26, API ends September 24). Our prompts are model-agnostic and work with every current leader.'
           },
           {
             q: 'Do I need filmmaking experience to use these?',

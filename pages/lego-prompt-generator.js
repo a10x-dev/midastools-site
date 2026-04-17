@@ -164,7 +164,7 @@ export default function LegoPromptGenerator() {
     '@type': 'FAQPage',
     mainEntity: [
       { '@type': 'Question', name: 'How do I turn myself into a LEGO minifigure with AI?', acceptedAnswer: { '@type': 'Answer', text: 'Use our free Lego prompt generator to create a detailed prompt, then paste it into ChatGPT (GPT-4o), DALL-E, or Midjourney. Upload a photo of yourself for the most accurate minifigure likeness.' } },
-      { '@type': 'Question', name: 'Which AI tool makes the best LEGO-style images?', acceptedAnswer: { '@type': 'Answer', text: 'ChatGPT with GPT-4o and DALL-E 3 produce the most realistic LEGO minifigure images with accurate ABS plastic textures and stud details. Midjourney v6 is also excellent for cinematic LEGO scenes.' } },
+      { '@type': 'Question', name: 'Which AI tool makes the best LEGO-style images?', acceptedAnswer: { '@type': 'Answer', text: 'ChatGPT with GPT-4o and DALL-E 3 produce the most realistic LEGO minifigure images with accurate ABS plastic textures and stud details. Midjourney v7 is also excellent for cinematic LEGO scenes.' } },
       { '@type': 'Question', name: 'Can I create LEGO box art with AI?', acceptedAnswer: { '@type': 'Answer', text: 'Yes! Select the "Lego Box Art" style in our generator. The prompt includes product number, age rating, piece count, and the official box layout so the AI creates realistic-looking LEGO packaging.' } },
     ],
   };
@@ -551,7 +551,7 @@ export default function LegoPromptGenerator() {
 
           <div style={{ marginBottom: 20 }}>
             <h3 style={{ fontSize: 16, fontWeight: 700, color: '#111827', margin: '0 0 6px' }}>Which AI tool makes the best LEGO-style images?</h3>
-            <p style={{ fontSize: 14, color: '#6B7280', lineHeight: 1.7, margin: 0 }}>ChatGPT with GPT-4o and DALL-E 3 produce the most realistic LEGO minifigure images with accurate ABS plastic textures, stud details, and injection mold seams. Midjourney v6 is also excellent for cinematic LEGO scenes and box art.</p>
+            <p style={{ fontSize: 14, color: '#6B7280', lineHeight: 1.7, margin: 0 }}>ChatGPT with GPT-4o and DALL-E 3 produce the most realistic LEGO minifigure images with accurate ABS plastic textures, stud details, and injection mold seams. Midjourney v7 is also excellent for cinematic LEGO scenes and box art.</p>
           </div>
 
           <div>

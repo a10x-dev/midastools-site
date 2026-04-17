@@ -8,7 +8,7 @@ const kits = [
   {
     name: 'AI Video Prompt Pack',
     price: '$29',
-    desc: '150+ AI video generation prompts for social media, product demos, tutorials, cinematic content, corporate videos & viral styles. Works with Sora, Runway, Pika, Kling AI.',
+    desc: '150+ AI video generation prompts for social media, product demos, tutorials, cinematic content, corporate videos & viral styles. Works with Veo 3.1, Kling 3.0, Runway, Pika.',
     href: '/ai-video-prompt-pack',
     stripe: 'https://buy.stripe.com/cNi6oGgsLfTrfha2xAcMM0g',
     badge: 'NEW',

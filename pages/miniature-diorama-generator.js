@@ -170,7 +170,7 @@ export default function MiniatureDioramaGenerator() {
     mainEntity: [
       { '@type': 'Question', name: 'How do I create miniature diorama AI images?', acceptedAnswer: { '@type': 'Answer', text: 'Use our free generator to build a detailed diorama prompt, then paste it into ChatGPT (GPT-4o), DALL-E, or Midjourney. The prompt instructs the AI to create images that look like real handcrafted miniature models photographed with a macro lens.' } },
       { '@type': 'Question', name: 'What is tilt-shift AI photography?', acceptedAnswer: { '@type': 'Answer', text: 'Tilt-shift photography makes real scenes look like miniature models by using selective focus and shallow depth of field. Our generator creates prompts that replicate this effect in AI-generated images, making any scene look like a tiny handcrafted diorama.' } },
-      { '@type': 'Question', name: 'Which AI tool creates the best miniature diorama images?', acceptedAnswer: { '@type': 'Answer', text: 'ChatGPT with GPT-4o and Midjourney v6 both excel at creating realistic miniature diorama images. GPT-4o is best for photorealistic macro photography effects, while Midjourney produces stunning artistic interpretations of tiny worlds.' } },
+      { '@type': 'Question', name: 'Which AI tool creates the best miniature diorama images?', acceptedAnswer: { '@type': 'Answer', text: 'ChatGPT with GPT-4o and Midjourney v7 both excel at creating realistic miniature diorama images. GPT-4o is best for photorealistic macro photography effects, while Midjourney produces stunning artistic interpretations of tiny worlds.' } },
     ],
   };
 
@@ -561,7 +561,7 @@ export default function MiniatureDioramaGenerator() {
 
           <div>
             <h3 style={{ fontSize: 16, fontWeight: 700, color: '#111827', margin: '0 0 6px' }}>Which AI tool creates the best miniature diorama images?</h3>
-            <p style={{ fontSize: 14, color: '#6B7280', lineHeight: 1.7, margin: 0 }}>ChatGPT with GPT-4o and Midjourney v6 both excel at creating realistic miniature diorama images. GPT-4o is best for photorealistic macro photography effects, while Midjourney produces stunning artistic interpretations of tiny worlds.</p>
+            <p style={{ fontSize: 14, color: '#6B7280', lineHeight: 1.7, margin: 0 }}>ChatGPT with GPT-4o and Midjourney v7 both excel at creating realistic miniature diorama images. GPT-4o is best for photorealistic macro photography effects, while Midjourney produces stunning artistic interpretations of tiny worlds.</p>
           </div>
         </div>
 
