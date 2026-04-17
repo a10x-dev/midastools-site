@@ -306,6 +306,16 @@ const broadcasts = {
 
       <p style="font-size:16px;line-height:1.7;color:#374151;">That's less than what a single custom commissioned pet portrait costs on Etsy. And you can make 150 different styles, as many times as you want.</p>
 
+      <p style="font-size:14px;line-height:1.6;color:#6B7280;margin:24px 0 8px;"><strong style="color:#111827;">Here's an actual prompt from inside</strong> — paste into ChatGPT or Midjourney right now:</p>
+
+      <div style="background:#0F172A;border-radius:10px;padding:18px 20px;margin:8px 0 24px;">
+        <p style="font-size:12px;line-height:1.7;color:#E5E7EB;margin:0;font-family:'SF Mono',Monaco,monospace;">
+          A <span style="color:#FCD34D;">[PRODUCT]</span> presented in a Studio Ghibli-inspired scene. The product sits on <span style="color:#FCD34D;">[SURFACE]</span>. Surrounding details: tiny mushrooms growing around the base, a small bird perched nearby, sunbeams filtering through leaves. Warm, golden-hour lighting. Hand-painted anime style with soft edges and visible brushstrokes. The product is rendered realistically while the environment is in full Ghibli animation style — creating a magical hybrid. Aspect ratio 1:1.
+        </p>
+      </div>
+
+      <p style="font-size:13px;line-height:1.6;color:#6B7280;margin:0 0 24px;font-style:italic;">149 more like this in the pack.</p>
+
       ${ctaButton("Grab the Pack — $29 →", IMAGE_PACK_LINK, "Price goes back to $49 tomorrow · 30-day refund if you don't love it")}
 
       <p style="font-size:14px;color:#6B7280;line-height:1.6;">— The MidasTools Team</p>
@@ -340,6 +350,16 @@ const broadcasts = {
       </div>
 
       <p style="font-size:16px;line-height:1.7;color:#374151;">Works with <strong>ChatGPT, Midjourney, DALL-E, Flux, Stable Diffusion</strong>. Instant download. No subscription.</p>
+
+      <p style="font-size:14px;line-height:1.6;color:#6B7280;margin:24px 0 8px;"><strong style="color:#111827;">One of the 150 — try it right now:</strong></p>
+
+      <div style="background:#0F172A;border-radius:10px;padding:18px 20px;margin:8px 0 20px;">
+        <p style="font-size:12px;line-height:1.7;color:#E5E7EB;margin:0;font-family:'SF Mono',Monaco,monospace;">
+          A Studio Ghibli-style anime portrait of a <span style="color:#FCD34D;">[GENDER]</span> <span style="color:#FCD34D;">[AGE RANGE]</span> person with <span style="color:#FCD34D;">[HAIR]</span>. Wearing <span style="color:#FCD34D;">[OUTFIT]</span>. They are <span style="color:#FCD34D;">[ACTION]</span>. Expressive, large eyes with a gentle, contemplative expression. Soft, hand-painted animation style with delicate linework. Warm, natural lighting — golden hour. Background: <span style="color:#FCD34D;">[SETTING]</span>. Ghibli's signature warmth, nostalgia, and humanity. Aspect ratio 3:4.
+        </p>
+      </div>
+
+      <p style="font-size:13px;line-height:1.6;color:#6B7280;margin:0 0 24px;font-style:italic;">149 more like this in the pack — pet portraits, action figures, cyberpunk, trading cards, Funko, and more.</p>
 
       ${ctaButton("Grab the Pack — $29 →", IMAGE_PACK_LINK, "48h only · 30-day money-back guarantee · Instant download")}
 
