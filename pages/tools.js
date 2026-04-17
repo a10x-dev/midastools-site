@@ -299,6 +299,33 @@ export default function Tools() {
           <p>Powerful AI tools to help you start and grow your business. Free forever, no account required.</p>
         </div>
 
+        <Link href="/starter-pack" style={{ textDecoration: 'none', display: 'block', marginBottom: 32 }}>
+          <div style={{
+            background: 'linear-gradient(135deg, #1E3A8A 0%, #3B5FFF 100%)',
+            color: '#FFF', borderRadius: 20, padding: '24px 28px',
+            display: 'flex', justifyContent: 'space-between', alignItems: 'center',
+            gap: 20, flexWrap: 'wrap',
+          }}>
+            <div>
+              <div style={{ fontSize: 12, fontWeight: 700, letterSpacing: 2, opacity: 0.9, marginBottom: 6 }}>
+                ★ WANT THE BEST 20 PROMPTS? TRY US FOR $9
+              </div>
+              <div style={{ fontSize: 20, fontWeight: 800, marginBottom: 4 }}>
+                Starter Pack — 20 hand-picked AI prompts
+              </div>
+              <div style={{ fontSize: 14, opacity: 0.85 }}>
+                Cold outreach, landing pages, content, AI images, sales, productivity. Instant download. 30-day guarantee.
+              </div>
+            </div>
+            <div style={{
+              background: '#FBBF24', color: '#1E3A8A', fontWeight: 800, fontSize: 15,
+              padding: '14px 24px', borderRadius: 99, whiteSpace: 'nowrap',
+            }}>
+              Get 20 Prompts — $9 →
+            </div>
+          </div>
+        </Link>
+
         {TOOLS.map(tool => (
           <Link key={tool.href} href={tool.href} style={{ textDecoration: 'none', display: 'block' }}>
             <div className="tool-card">
