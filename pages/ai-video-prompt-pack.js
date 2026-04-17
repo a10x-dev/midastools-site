@@ -137,6 +137,24 @@ export default function AIVideoPromptPack() {
         .faq-a { font-size: 15px; color: var(--text-secondary); line-height: 1.7; }
         .tools-row { display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; margin-top: 20px; }
         .tool-badge { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 8px 16px; font-size: 13px; font-weight: 600; color: var(--text); }
+        .sample-card {
+          background: var(--surface); border: 1px solid var(--border); border-radius: 14px;
+          padding: 28px; margin-bottom: 20px;
+        }
+        .sample-label {
+          display: inline-block; background: rgba(59,95,255,0.12); color: var(--accent);
+          padding: 4px 12px; border-radius: 100px; font-size: 12px; font-weight: 700;
+          margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.5px;
+        }
+        .sample-title { font-size: 18px; font-weight: 800; margin-bottom: 14px; color: var(--text); }
+        .sample-code {
+          background: #0f1419; border: 1px solid var(--border); border-radius: 10px;
+          padding: 20px; font-family: 'SF Mono', Monaco, 'Cascadia Code', monospace;
+          font-size: 13px; line-height: 1.65; color: #e6e6e6;
+          white-space: pre-wrap; overflow-x: auto;
+        }
+        .sample-code .var { color: #ffc857; font-weight: 600; }
+        .sample-how { font-size: 13px; color: var(--text-secondary); margin-top: 12px; line-height: 1.6; }
         @media(max-width: 700px) {
           section { padding: 48px 20px; }
           .kit-grid { grid-template-columns: 1fr; }
@@ -228,6 +246,60 @@ export default function AIVideoPromptPack() {
               <div style={{fontSize:14, color:'var(--text-secondary)', lineHeight:1.6}}>{f.desc}</div>
             </div>
           ))}
+        </div>
+      </section>
+
+      {/* SAMPLE PROMPTS — See Before You Buy */}
+      <section style={{paddingTop:0}}>
+        <div className="section-label">See It In Action</div>
+        <h2 style={{fontSize:'clamp(24px, 3.5vw, 36px)', fontWeight:900, marginBottom:8}}>
+          Look inside. <span>Real prompts.</span> No fluff.
+        </h2>
+        <p style={{color:'var(--text-secondary)', fontSize:16, marginBottom:32}}>
+          Every prompt specifies camera movement, lighting, duration, and aspect ratio — everything Sora, Runway, and Pika need to output cinematic video. Here are 2 of the 150+.
+        </p>
+
+        <div className="sample-card">
+          <div className="sample-label">Sample · Social Media Videos · Prompt 1 of 25+</div>
+          <div className="sample-title">Product Showcase Reel — Cinematic 9:16, 5 seconds</div>
+          <div className="sample-code">{`A smooth, cinematic 5-second video of `}<span className="var">[YOUR PRODUCT]</span>{`
+rotating slowly on a clean white pedestal.
+
+Soft studio lighting from the left with a gentle shadow.
+The camera starts close-up on a detail, then slowly pulls back
+to reveal the full product.
+
+Shallow depth of field. Professional product photography style.
+Vertical 9:16 format. Subtle warm color grading.`}</div>
+          <div className="sample-how">
+            <strong style={{color:'var(--text)'}}>Best for:</strong> Sora, Runway Gen-3/4, Pika Labs. The pull-back reveal creates a natural hook for TikTok and Reels — engagement rises ~20% vs static product shots.
+          </div>
+        </div>
+
+        <div className="sample-card">
+          <div className="sample-label">Sample · Social Media Videos · Prompt 4 of 25+</div>
+          <div className="sample-title">Before/After Transformation — Split-Screen 9:16</div>
+          <div className="sample-code">{`A split-screen style 6-second video.
+
+Left side: `}<span className="var">[BEFORE STATE]</span>{`
+(e.g., "a cluttered desk with papers everywhere")
+
+Right side: `}<span className="var">[AFTER STATE]</span>{`
+(e.g., "the same desk, clean and organized with a laptop and plant")
+
+The transition between before and after uses a smooth wipe
+from left to right at the 3-second mark.
+Bright, clean lighting. 9:16 vertical.`}</div>
+          <div className="sample-how">
+            <strong style={{color:'var(--text)'}}>Pro tip:</strong> Before/after transformations are the single highest-performing format on TikTok and Reels. Keep the camera angle identical on both sides for maximum impact.
+          </div>
+        </div>
+
+        <div style={{textAlign:'center', marginTop:32}}>
+          <p style={{color:'var(--text-secondary)', fontSize:15, marginBottom:16}}>
+            <strong style={{color:'var(--accent)'}}>148 more prompts</strong> like this — across 6 categories. Ready to paste into Sora, Runway, Pika, or Kling right now.
+          </p>
+          <a href={STRIPE_URL} className="btn-primary">Unlock All 150+ Prompts — $29 →</a>
         </div>
       </section>
 

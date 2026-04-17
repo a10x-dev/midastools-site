@@ -139,6 +139,24 @@ export default function AIImagePromptPack() {
         .faq-a { font-size: 15px; color: var(--gray-400); line-height: 1.7; }
         .tools-row { display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; margin-top: 20px; }
         .tool-badge { background: var(--gray-900); border: 1px solid var(--gray-800); border-radius: 8px; padding: 8px 16px; font-size: 13px; font-weight: 600; color: var(--gray-200); }
+        .sample-card {
+          background: var(--gray-900); border: 1px solid var(--gray-800); border-radius: 14px;
+          padding: 28px; margin-bottom: 20px;
+        }
+        .sample-label {
+          display: inline-block; background: rgba(59,95,255,0.12); color: var(--gold);
+          padding: 4px 12px; border-radius: 100px; font-size: 12px; font-weight: 700;
+          margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.5px;
+        }
+        .sample-title { font-size: 18px; font-weight: 800; margin-bottom: 14px; }
+        .sample-code {
+          background: #0a0a0a; border: 1px solid var(--gray-800); border-radius: 10px;
+          padding: 20px; font-family: 'SF Mono', Monaco, 'Cascadia Code', monospace;
+          font-size: 13px; line-height: 1.65; color: #d4d4d4;
+          white-space: pre-wrap; overflow-x: auto;
+        }
+        .sample-code .var { color: var(--gold); font-weight: 600; }
+        .sample-how { font-size: 13px; color: var(--gray-400); margin-top: 12px; line-height: 1.6; }
         @media(max-width: 700px) {
           section { padding: 48px 20px; }
           .kit-grid { grid-template-columns: 1fr; }
@@ -233,6 +251,67 @@ export default function AIImagePromptPack() {
               <div style={{fontSize:14, color:'var(--gray-400)', lineHeight:1.6}}>{f.desc}</div>
             </div>
           ))}
+        </div>
+      </section>
+
+      {/* SAMPLE PROMPTS — See Before You Buy */}
+      <section style={{paddingTop:0}}>
+        <div className="section-label">See It In Action</div>
+        <h2 style={{fontSize:'clamp(24px, 3.5vw, 36px)', fontWeight:900, marginBottom:8}}>
+          Look inside. <span>Real prompts.</span> No stock samples.
+        </h2>
+        <p style={{color:'var(--gray-400)', fontSize:16, marginBottom:32}}>
+          Every prompt specifies lighting, camera angle, composition, aspect ratio, and style — so you get professional results the first try. Here are 2 of the 150+.
+        </p>
+
+        <div className="sample-card">
+          <div className="sample-label">Sample · E-commerce Product · Prompt 1 of 25+</div>
+          <div className="sample-title">Lifestyle Flat-Lay Product Photo — Instagram 4:5</div>
+          <div className="sample-code">{`A beautifully styled flat lay photograph of `}<span className="var">[PRODUCT]</span>{`
+arranged on a `}<span className="var">[SURFACE MATERIAL]</span>{`
+(e.g., marble countertop, rustic wooden table, linen fabric).
+
+Surrounded by complementary lifestyle props like:
+- `}<span className="var">[PROP 1]</span>{` (e.g., fresh eucalyptus sprigs)
+- `}<span className="var">[PROP 2]</span>{` (e.g., a ceramic coffee cup)
+- `}<span className="var">[PROP 3]</span>{` (e.g., a pair of reading glasses)
+
+Soft natural window light casting gentle shadows from the left.
+Color palette: `}<span className="var">[COLOR PALETTE]</span>{`.
+Shot from directly above (bird's eye view), photorealistic,
+Canon EOS R5, 35mm lens. Aspect ratio 4:5.
+No text, no watermarks.`}</div>
+          <div className="sample-how">
+            <strong style={{color:'var(--gray-200)'}}>Best for:</strong> ChatGPT (DALL-E 3), Midjourney. The 4:5 ratio (1080×1350) takes up maximum vertical space in the Instagram feed.
+          </div>
+        </div>
+
+        <div className="sample-card">
+          <div className="sample-label">Sample · Viral Aesthetic · Prompt 1 of 25+</div>
+          <div className="sample-title">Cohesive Photo Dump Set — Film Color Grading</div>
+          <div className="sample-code">{`A `}<span className="var">[MOOD]</span>{` photograph of `}<span className="var">[SUBJECT]</span>{`.
+
+Mood options: warm sun-drenched / moody film-grain / bright and airy
+Subject example: a cozy coffee shop corner with exposed brick,
+a half-finished latte, and a worn paperback book on the table.
+
+Shot in a candid, editorial style reminiscent of film photography
+with `}<span className="var">[FILM STOCK]</span>{` color grading.
+(Kodak Portra 400 / Fuji Superia / Cinestill 800T)
+
+Slight grain, organic tones, natural imperfections.
+Shot on a 35mm prime lens with shallow depth of field.
+Aspect ratio 4:5.`}</div>
+          <div className="sample-how">
+            <strong style={{color:'var(--gray-200)'}}>Pro tip:</strong> Generate 5-8 images with the same film stock and mood — change only the subject each time — to create a cohesive photo-dump set that ranks on Explore.
+          </div>
+        </div>
+
+        <div style={{textAlign:'center', marginTop:32}}>
+          <p style={{color:'var(--gray-400)', fontSize:15, marginBottom:16}}>
+            <strong style={{color:'var(--gold)'}}>148 more prompts</strong> like this — across 6 categories. Ready to paste into ChatGPT, Midjourney, or DALL-E right now.
+          </p>
+          <a href={STRIPE_URL} className="btn-primary">Unlock All 150+ Prompts — $29 →</a>
         </div>
       </section>
 
