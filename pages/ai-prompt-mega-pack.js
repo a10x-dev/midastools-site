@@ -134,6 +134,24 @@ export default function AIPromptMegaPack() {
         .faq-a { font-size: 15px; color: var(--gray-400); line-height: 1.7; }
         .tools-row { display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; margin-top: 20px; }
         .tool-badge { background: var(--gray-900); border: 1px solid var(--gray-800); border-radius: 8px; padding: 8px 16px; font-size: 13px; font-weight: 600; color: var(--gray-200); }
+        .sample-card {
+          background: var(--gray-900); border: 1px solid var(--gray-800); border-radius: 14px;
+          padding: 28px; margin-bottom: 20px;
+        }
+        .sample-label {
+          display: inline-block; background: rgba(59,95,255,0.12); color: var(--gold);
+          padding: 4px 12px; border-radius: 100px; font-size: 12px; font-weight: 700;
+          margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.5px;
+        }
+        .sample-title { font-size: 18px; font-weight: 800; margin-bottom: 14px; }
+        .sample-code {
+          background: #0a0a0a; border: 1px solid var(--gray-800); border-radius: 10px;
+          padding: 20px; font-family: 'SF Mono', Monaco, 'Cascadia Code', monospace;
+          font-size: 13px; line-height: 1.65; color: #d4d4d4;
+          white-space: pre-wrap; overflow-x: auto;
+        }
+        .sample-code .var { color: var(--gold); font-weight: 600; }
+        .sample-how { font-size: 13px; color: var(--gray-400); margin-top: 12px; line-height: 1.6; }
         @media(max-width: 700px) {
           section { padding: 48px 20px; }
           .kit-grid { grid-template-columns: 1fr; }
@@ -226,6 +244,74 @@ export default function AIPromptMegaPack() {
               <div style={{fontSize:14, color:'var(--gray-400)', lineHeight:1.6}}>{f.desc}</div>
             </div>
           ))}
+        </div>
+      </section>
+
+      {/* SAMPLE PROMPTS — See Before You Buy */}
+      <section style={{paddingTop:0}}>
+        <div className="section-label">See It In Action</div>
+        <h2 style={{fontSize:'clamp(24px, 3.5vw, 36px)', fontWeight:900, marginBottom:8}}>
+          Look inside. <span>Real prompts.</span> No screenshots.
+        </h2>
+        <p style={{color:'var(--gray-400)', fontSize:16, marginBottom:32}}>
+          Every prompt is engineered like this — specific structures, output rules, variables you fill in. Copy, customize, paste into your AI tool. Here are 2 of the 200+.
+        </p>
+
+        <div className="sample-card">
+          <div className="sample-label">Sample · Copywriting & Sales · Prompt 1 of 35+</div>
+          <div className="sample-title">Cold Outreach Email — 3-Variation Split Test</div>
+          <div className="sample-code">{`Write a cold outreach email for `}<span className="var">[PRODUCT/SERVICE]</span>{` targeting `}<span className="var">[TARGET AUDIENCE]</span>{`.
+
+Context:
+- The main pain point I solve: `}<span className="var">[PAIN POINT]</span>{`
+- My key differentiator: `}<span className="var">[BENEFIT]</span>{`
+- Price point: `}<span className="var">[PRICE]</span>{`
+
+Rules:
+- Subject line must create curiosity without being clickbait
+- Opening line must reference something specific to their role
+  (not "I hope this finds you well")
+- Body must be under 125 words
+- Include exactly one specific metric or result
+- CTA must be a soft ask (question, not demand)
+- No attachments, no links in first email
+- Write 3 variations: direct, story-based, and data-led`}</div>
+          <div className="sample-how">
+            <strong style={{color:'var(--gray-200)'}}>How to use:</strong> Send variation A to 33% of your list, B to 33%, C to 33%. Track opens and replies. Double down on the winner.
+          </div>
+        </div>
+
+        <div className="sample-card">
+          <div className="sample-label">Sample · Content Creation · Prompt 1 of 35+</div>
+          <div className="sample-title">SEO Blog Post — Research-Backed, 1500+ Words</div>
+          <div className="sample-code">{`Write a 1500-word SEO blog post targeting the primary keyword `}<span className="var">[KEYWORD]</span>{`
+for `}<span className="var">[TARGET AUDIENCE]</span>{`.
+
+Structure:
+- H1: Contains primary keyword, under 60 characters, promises specific outcome
+- Intro (120 words): Pattern interrupt hook, problem restatement, promise
+- 5-7 H2 sections covering: `}<span className="var">[SUBTOPIC 1-5]</span>{`
+- Each H2: 180-220 words, one actionable takeaway, one specific example
+- Include 3 internal link opportunities marked as [LINK: anchor text]
+- Include 2 external source citations marked as [CITE: claim]
+- Conclusion: Summary + single CTA to `}<span className="var">[CTA GOAL]</span>{`
+
+Rules:
+- Flesch reading ease 60+ (8th grade reading level)
+- Use "you" more than "we" or "I"
+- No filler phrases ("in today's world", "in this article we will")
+- Break every paragraph longer than 4 lines
+- Include 1 numbered list and 1 bulleted list minimum`}</div>
+          <div className="sample-how">
+            <strong style={{color:'var(--gray-200)'}}>How to use:</strong> Pair with Google's "People Also Ask" for the subtopics. Output is 80% ready — you edit the voice, not the structure.
+          </div>
+        </div>
+
+        <div style={{textAlign:'center', marginTop:32}}>
+          <p style={{color:'var(--gray-400)', fontSize:15, marginBottom:16}}>
+            <strong style={{color:'var(--gold)'}}>198 more prompts</strong> like this — across 6 categories. Ready to paste into ChatGPT, Claude, or Gemini right now.
+          </p>
+          <a href={STRIPE_URL} className="btn-primary">Unlock All 200+ Prompts — $29 →</a>
         </div>
       </section>
 
