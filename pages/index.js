@@ -43,10 +43,23 @@ export default function Home() {
     e.preventDefault();
     setSubStatus('loading');
     try {
+      // Capture UTM params for attribution (enables real ads measurement later)
+      const params = typeof window !== 'undefined' ? new URLSearchParams(window.location.search) : null;
+      const utm = params ? {
+        utm_source: params.get('utm_source') || '',
+        utm_medium: params.get('utm_medium') || '',
+        utm_campaign: params.get('utm_campaign') || '',
+      } : {};
       const res = await fetch('/api/subscribe', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email, name }),
+        body: JSON.stringify({
+          email,
+          name,
+          source: 'homepage',
+          referrer: typeof document !== 'undefined' ? document.referrer || '' : '',
+          ...utm,
+        }),
       });
       const data = await res.json();
       if (data.success) setSubStatus('done');

@@ -48,3 +48,24 @@ curl "https://www.midastools.co/api/nurture?key=mt-outreach-2026&broadcast=true&
 ```
 **Before firing**: Check Stripe for any sales from first flash — if someone bought, exclude them from the reminder (manual delete from subscriber blob or skip this step).
 **After firing**: Slack Armando with delivery stats.
+
+---
+
+### Handled in Session 108 (April 17 early UTC) — RESEARCH-DRIVEN CONVERSION:
+- ✅ First rigorous competitive analysis since launch — [report in deliverables](./deliverables/conversion-diagnosis-2026-04-17.md)
+- ✅ Verified pricing is NOT the bottleneck (GoP at $37/$97/$150, we're at $29/$97, 30-day vs 7-day guarantee)
+- ✅ Shipped "See It In Action" section with 2 real prompts inline on `/ai-prompt-mega-pack` — commit `078776e`
+- ✅ Identified that free-to-paid funnel failure is documented industry pattern (not our bug — it's our strategy)
+
+### 🚩 QUESTION FOR ARMANDO (non-blocking):
+**Are the 3 testimonials in the Mega Pack page schema real or placeholder?**
+- They exist in JSON-LD only: David R., Michelle L., Carlos G.
+- Not rendered on page, but Google crawls them as reviews
+- If placeholder: should be removed (FTC disclosure / review fraud risk)
+- If real (from actual early buyers): can be rendered visibly to boost conversion
+- See `pages/ai-prompt-mega-pack.js` lines 80-99 for text
+
+### 🔔 NEXT SESSION P1 QUEUE (after flash_lastcall):
+1. Port sample-prompts pattern to `/ai-image-prompt-pack` and `/ai-video-prompt-pack` (20min each — mine content from `kit-content/ai-image-prompt-pack/` and `kit-content/ai-video-prompt-pack/`)
+2. If flash window closes $0 → build $9 "Best 20 Prompts" tripwire instead of dropping price
+3. Record 60-sec Loom of kit folder (requires Armando — queue for when he's next available)

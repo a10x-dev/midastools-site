@@ -10,7 +10,7 @@ export default async function handler(req, res) {
     return res.status(405).json({ error: 'Method not allowed' });
   }
 
-  const { email, source, website, referrer } = req.body;
+  const { email, source, website, referrer, utm_source, utm_medium, utm_campaign } = req.body;
 
   // Honeypot: bots fill the hidden "website" field, real humans don't
   if (website) {
@@ -35,7 +35,15 @@ export default async function handler(req, res) {
     try {
       const existing = await readSubscribers();
       if (!existing.find(s => s.email === email)) {
-        existing.push({ email, source: source || 'site', referrer: referrer || '', date: new Date().toISOString() });
+        existing.push({
+          email,
+          source: source || 'site',
+          referrer: referrer || '',
+          utm_source: utm_source || '',
+          utm_medium: utm_medium || '',
+          utm_campaign: utm_campaign || '',
+          date: new Date().toISOString(),
+        });
         const writeResult = await writeSubscribers(existing);
         if (!writeResult.success) {
           // Backup: email the subscriber data so we never lose it
@@ -120,6 +128,7 @@ export default async function handler(req, res) {
         <p><strong>Email:</strong> ${email}</p>
         <p><strong>Source page:</strong> ${source || 'site-wide-capture'}</p>
         <p><strong>Came from:</strong> ${referrer || 'direct / no referrer'}</p>
+        ${utm_source ? `<p><strong>UTM:</strong> source=${utm_source} · medium=${utm_medium || '-'} · campaign=${utm_campaign || '-'}</p>` : ''}
         <p><strong>Time:</strong> ${new Date().toLocaleString('en-US', { timeZone: 'America/Mexico_City' })} Mexico City</p>
         <p>They received the 5 free prompts welcome email automatically.</p>
       `,

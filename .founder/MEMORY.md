@@ -2,6 +2,15 @@
 
 Your long-term memory. Persists across all sessions. This is your brain — treat it well.
 
+## 🔴 CRITICAL FINDING — Session 110 (April 17)
+**Resend open_tracking AND click_tracking were BOTH DISABLED on midastools.co domain.**
+Every nurture email, broadcast, flash email ever sent = zero visibility. We had no idea if anyone opened anything. That's why "0 opens" looked catastrophic — we just weren't measuring.
+- **FIXED**: Enabled both via Resend API PATCH /domains/6a09dc70-f13f-4ae0-947a-7a3c12685ea4. Verified both = true.
+- **From now on**: Every email sent includes open pixel + click rewriting. Future /api/status can pull real engagement.
+- **2 permanent bounces removed**: shannon.heenan@lakecountyca.gov (.gov), atredesign83@orange.fr (.fr). Blob now at 19.
+- **Subscriber recovery**: Added tommy.c.us@gmail.com back. Confirmed 5 dot-spaced Gmails + 1 SMS gateway intentionally excluded as bots/bounces. Remaining gap = emails Armando deleted from inbox — only recoverable via Gmail MCP.
+- **Test-nobody loop**: 29 emails fired to test-nobody-exists@example.com on Apr 17 03:03 UTC (6-second intervals). Subject = Day 1 nurture. Likely a skill/harness loop hitting our endpoint. Not in subscriber blob. Wasted Resend quota, not a spam risk. Investigate source.
+
 ## Key Facts
 - **Project**: Midas Tools — Product building machine. Research trending products, build versions, sell them.
 - **Stack**: Next.js 14.2, React 18, Stripe, Nodemailer/Gmail SMTP, inline CSS
@@ -409,3 +418,19 @@ Your long-term memory. Persists across all sessions. This is your brain — trea
   - **NEW PLAYBOOK CANDIDATE**: "Analytics-driven funnel repair" — use real traffic data to find highest-leverage fix. Add paid CTA at visitor entry point, not after completion.
   - **Actual subscriber count**: 23 (not 27 — the 4 lost were likely bot/bounce filtered out of current blob)
   - **KPI movement watch**: Revenue from $0 — first sale from 23 subs + banner traffic in next 48h is the test.
+- **🟢 SESSION 108 (April 17 early UTC) — COMPETITIVE INTEL + VISIBLE PRODUCT PROOF**:
+  - **RESEARCH SPRINT**: First rigorous competitive analysis in 107 sessions. Key findings saved to `.founder/deliverables/conversion-diagnosis-2026-04-17.md`.
+  - **Pricing verdict: NOT the problem**. God of Prompt $37/$97/$150 vs our $29/$97. Our 30-day guarantee beats their 7-day. Do NOT drop price below $19.
+  - **Page audit verdict: WE'RE MISSING VISIBLE PRODUCT PROOF**. God of Prompt has 40+ testimonials, 17K Trustpilot, 13 bundle preview images. We have 0 of each visible. We can't fabricate testimonials (and won't — 3 existing schema-only reviews are flagged for review).
+  - **Free-to-paid failure is documented pattern**: Medium seller distributed 200 free copies → 0 paid conversions. Matches our 22 free tools + 23 subs + $0 revenue exactly.
+  - **SHIPPED**: Added "See It In Action" section to `/ai-prompt-mega-pack` rendering 2 full real prompts inline (Cold Outreach Email + SEO Blog Post), variable placeholders highlighted in brand gold, repeat CTA with "198 more prompts" anchor. Commit 078776e. Build passed. Pushed to main.
+  - **WHY THIS IS DIFFERENT**: Previous conversion work (Session 107) added banners and CTAs. This session addresses the actual purchase decision — "what am I buying?" — honestly, without fabricating proof.
+  - **RECOMMENDATIONS LOGGED** (see deliverables report):
+    - P1: Port sample-prompts pattern to AI Image Pack + AI Video Pack (20min/page)
+    - P1: Build $9 "Best 20 Prompts" tripwire with upsell to $29 Mega Pack at checkout
+    - P1: Record 60s Loom walkthrough of kit folder
+    - P2: Add funnel instrumentation (scroll depth, CTA CTR)
+  - **LEGAL FLAG**: 3 reviews (David R., Michelle L., Carlos G.) exist ONLY in JSON-LD schema, never in page content. Grep confirms they appear in no other file. Need to verify with Armando if these are real customer quotes or placeholder. If fabricated, this is potentially FTC disclosure issue.
+  - **SCHEDULED**: flash_lastcall still queued for ~19:30 UTC Apr 17.
+  - **EXTENSION (same session, continuation)**: Ported visible-sample-prompts pattern to `/ai-image-prompt-pack` (Flat-Lay + Photo Dump prompts) and `/ai-video-prompt-pack` (Product Showcase Reel + Before/After Transformation). Commit `b9e26e8`. Build passed, deployed, both verified live via curl. ALL 3 PAID PRODUCT PAGES now render real prompts inline. This is the first time site visitors can evaluate product quality before paying, on any paid page.
+  - **EMAIL EXTENSION (same session)**: Audited nurture.js — discovered flash + flash_lastcall broadcast templates had the same bug as sales pages (told "150+ prompts" but never showed one). Added inline Ghibli-style prompts to both templates with highlighted variable placeholders. Commit `f20e71a`. Build passed. Pushed. **Critical because flash_lastcall fires to 23 subs at ~19:30 UTC today with new prompt visible.** Days 1-4 of nurture drip already embed prompts (no change needed). This was the one gap.

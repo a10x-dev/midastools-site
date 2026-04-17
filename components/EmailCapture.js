@@ -43,10 +43,19 @@ export default function EmailCapture() {
 
     setStatus('loading');
     try {
+      const params = typeof window !== 'undefined' ? new URLSearchParams(window.location.search) : null;
       const res = await fetch('/api/subscribe', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email, source: ctx.source, website, referrer: document.referrer || '' }),
+        body: JSON.stringify({
+          email,
+          source: ctx.source,
+          website,
+          referrer: document.referrer || '',
+          utm_source: params?.get('utm_source') || '',
+          utm_medium: params?.get('utm_medium') || '',
+          utm_campaign: params?.get('utm_campaign') || '',
+        }),
       });
       if (!res.ok) throw new Error('Something went wrong. Please try again.');
       setStatus('success');

@@ -2,12 +2,12 @@
 
 ## Current Status (auto-synced from database)
 
-**Bottleneck**: conversion (severity 6/10) — 107 sessions, $0 revenue. Session 107: Armando shared analytics data (200+ pageviews total, ~50 on viral tools, only 3 on paid pages). Diagnosis: free tool → paid kit funnel leak. Fixed by adding prominent top conversion banners on pet-portrait, action-figure, ghibli generators (direct to $29 Image Pack Stripe). Fired "flash" 48h broadcast to 23/23 subs with urgency $29 offer. First real data-driven conversion push. Waiting 48h to measure.
+**Bottleneck**: conversion (severity 6/10) — Real analytics data confirms conversion is the bottleneck (200+ pageviews, only 3 reach paid pages). Fixed by adding top banners on top 3 viral tools + fired $29 urgency broadcast to 23 subs. 48h measurement window now active.
 
 **KPIs**:
 - Conversations: 0 (target: 10, 7d: 0%)
-- Users: 0 (target: 50, 7d: -100%)
-- Revenue: 0 (target: 97, 7d: 0%)
+- Users: 23 (target: 50, 7d: 27.77777777777778%)
+- Revenue: 0 (target: 29, 7d: 0%)
 
 ---------|-------|--------|---------|--------|
 | AI Video Prompt Pack | $29 | Live | — | Live |
