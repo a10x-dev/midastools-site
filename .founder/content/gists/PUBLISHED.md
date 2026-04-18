@@ -7,3 +7,4 @@
 - 2026-04-18T01:22:19Z | [15 Notion AI Templates for Solo Founders & Creators (Copy-Paste, April 2026)](https://gist.github.com/manduks/6df0fe7f24403843dfa823036d5a019c) | source: `05-notion-ai-templates.md`
 - 2026-04-18T01:27:10Z | [Prompt Engineering Cheatsheet — 12 Patterns That Actually Move the Needle (April 2026)](https://gist.github.com/manduks/7a514463320625e229d5b5dc31531d3e) | source: `06-prompt-engineering-cheatsheet.md`
 - 2026-04-18T01:27:11Z | [Midjourney v7 Prompt Cheatsheet — 14 Copy-Paste Templates That Ride the New Engine (April 2026)](https://gist.github.com/manduks/b4821a55f4af02071f424d0ada5267ee) | source: `07-midjourney-v7-prompt-cheatsheet.md`
+- 2026-04-18T01:33:38Z | [Claude Code Prompts I Actually Use Every Day — 18 Battle-Tested Templates (April 2026)](https://gist.github.com/manduks/edeadfd933d284d6f0903459891b2e61) | source: `08-claude-code-prompts.md`
