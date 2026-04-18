@@ -2,6 +2,136 @@
 
 Your long-term memory. Persists across all sessions. This is your brain — treat it well.
 
+## 🟢 SESSION 119 (Apr 18 01:30 UTC) — SHIPPED 7 GISTS AUTONOMOUSLY + BUILT UTM ATTRIBUTION
+
+**Unblock**: Armando sent GitHub PAT via INBOX at 01:21 UTC. Token saved to `.founder/.gh_gist_token` (gitignored, chmod 600). Publishing is now fully autonomous.
+
+**Shipped**: 7 gists live on gist.github.com/manduks/ — all verified HTTP 200, all submitted to IndexNow, all carry `utm_source=gist&utm_medium=github&utm_campaign=<slug>` on every midastools.co link.
+
+| # | Slug | URL | Funnels to |
+|---|------|-----|------------|
+| 01 | sora-alternatives-cheatsheet | f8c7efb4d1749f324cb3161d20c2caad | AI Video Pack |
+| 02 | cold-outreach-prompts | 9e63ad23fd1884c3c2293025eb5bbb74 | Starter pack $9 |
+| 03 | ghibli-prompt-cheatsheet | 9efa985bed24330f1ef1c38521bad71f | AI Image Pack |
+| 04 | action-figure-prompt-cheatsheet | 5045c5431a5eb0687e3057e7efeffc9e | AI Image Pack |
+| 05 | notion-ai-templates | 6df0fe7f24403843dfa823036d5a019c | Mega Pack $29 |
+| 06 | prompt-engineering-cheatsheet | 7a514463320625e229d5b5dc31531d3e | Mega Pack $29 |
+| 07 | midjourney-v7-prompt-cheatsheet | b4821a55f4af02071f424d0ada5267ee | AI Image Pack |
+
+**New tools built**:
+- `publish-gist.sh` — existing, used 2x this session (initial 5, then new 2)
+- `update-gist.sh` — NEW. PATCHes published gists to add UTM params to links. Used 3x in-session to retrofit all 5 existing + include 06+07 from the start. Registered in tools/manifest.json.
+
+**Key calibration**:
+- Publishing API: POST /gists works, PATCH /gists/:id works
+- IndexNow ping works on every publish + every update
+- Python3 regex within bash script is a clean pattern — handled markdown link rewriting without false positives
+
+**What this unlocks forever**: Every future gist can ship autonomously in one command. No more 30-second-ask loops. Our #1 traffic channel just went from 1 post to 7 posts in a single session.
+
+**Drafting cadence target**: 3 gists/week going forward. Pipeline of gap topics: Claude Code prompts, LinkedIn post prompts, Pet Portrait cheatsheet, trend-riders (Dubai chocolate, Food Drama, caricature).
+
+**Next session priority**:
+1. Check Stripe for flash_lastcall sales (fired ~19:30 UTC Apr 17, now ~6h ago)
+2. If zero, fire $9 tripwire broadcast (curl in INBOX.md)
+3. Write 2-3 more gists
+4. Ask Armando for referrer analytics refresh in 48-72h to measure gist performance
+
+---
+
+## 🔥 SESSION 118 (April 17, night UTC) — DISCOVERED #1 TRAFFIC CHANNEL: GitHub Gists
+
+**The intel**: Armando sent a Umami/Plausible-style referrer screenshot showing the real acquisition data. First time we've had this.
+
+**Referrer breakdown (recent period, ~25 total visitors):**
+| Source | % | Visitors | Pageviews |
+|---|---|---|---|
+| **gist.github.com** | **36%** | **9** | **13** |
+| google.com | 24% | 6 | 8 |
+| statics.teams.cdn.office.net | 12% | 3 | 3 |
+| yandex.ru | 8% | 2 | 2 |
+| 2oceansvibe.com | 4% | 1 | 1 |
+| chatgpt.com | 4% | 1 | 1 |
+| ecosia.org | 4% | 1 | 1 |
+| google.com.vn | 4% | 1 | 1 |
+| vercel.com | 4% | 1 | 1 |
+
+**Source identified**: `gist.github.com/manduks/a75d188de9ada857f515c3bcee61a54c` — "OpenClaw SOUL.md Best Practices" gist Armando posted 3 weeks ago. ONE gist = 36% of all traffic (more than Google!).
+
+**Implications**:
+1. Gists are indexed by Google fast (3 weeks and still pulling organic traffic).
+2. ChatGPT referred 1 visitor — we're getting LLM-answer visibility.
+3. Microsoft Teams referred 3 — someone shared us in an org chat.
+4. Ecosia + Yandex sending traffic means non-Google search engines index us.
+5. **Our biggest acquisition lever is one we never prioritized: publishing GitHub Gists.**
+
+**Actions this session**:
+- Reverse-engineered the winning gist template (headers + tables + YAML code + 5 backlinks + Common Mistakes + Resources)
+- Drafted 3 publication-ready gists in `.founder/content/gists/`:
+  1. `01-sora-alternatives-cheatsheet.md` → rides 9-day Sora shutdown, funnels to /ai-video-prompt-pack
+  2. `02-cold-outreach-prompts.md` → funnels to /starter-pack ($9 tripwire)
+  3. `03-ghibli-prompt-cheatsheet.md` → funnels to /ghibli-prompt-generator + /ai-image-prompt-pack
+- Saved playbook + publishing instructions to `.founder/content/gists/README.md`
+- Updated INBOX with clear 30-second ask to Armando (GitHub PAT OR manual publish)
+- Updated STATE: bottleneck re-classified **conversion (6) → acquisition (7)** — real blocker is traffic volume, not conversion rate
+
+**Publishing blocker**: agent-browser session at `/opt/homebrew/bin/agent-browser` not logged into GitHub. Will be unblocked by either (a) Armando providing a PAT with `gist` scope, or (b) Armando manually publishing the 3 gists in 5 min.
+
+**Decision resolutions (all 3 old decisions judged WRONG this session)**:
+- Bundle broadcast $97 (45h): 0 sales → wrong
+- Top-3 viral tool banners + flash (29h): 0 sales → wrong
+- $29 Image Pack with 48h urgency (29h): 0 sales → wrong
+**Lesson**: Conversion-layer work with 23 subs / <30 daily visitors doesn't produce data. Acquisition is the actual bottleneck. Stop optimizing downstream until upstream volume exists.
+
+**Next gists to draft (queued)**: Action Figure / Notion Templates / Real Estate / SaaS Founder / Presentation
+
+---
+
+## 🟢 SESSION 117 (April 17, late evening) — AI LANDSCAPE AUDIT
+Armando mandate: "Research on the web to get up to date and make sure the prompts and products we are offering make sense, or they are outdated, we need to start moving this money wheel"
+
+**CRITICAL DISCOVERY**: OpenAI's Sora shuts down **April 26, 2026** (9 days away). Web/app ends Apr 26, API ends Sep 24. Reason: unsustainable burn — $18/clip compute vs $4-8 user pay = $120M/mo bleed. We had 40+ references across site selling "Sora prompts" — buyers in 9 days would get kits with dead tool references.
+
+**April 2026 Current SOTA** (memorize):
+- **Text**: GPT-5.4 (Mar 5), Claude Sonnet/Opus 4.6 (Feb), Gemini 3.1 Pro/Ultra (Mar), Grok 4.20 Beta 2
+- **Image**: Midjourney v7 default (since Jun 2025), v8 Alpha preview (Mar 17), DALL-E 3, SDXL/SD3, Ideogram 2.0
+- **Video**: Veo 3.1 (best free tier, native audio), Kling 3.0 (up to 120s clips), Runway Gen-4, Pika 2.0, Luma, HappyHorse-1.0 (tops leaderboard)
+- **Dead/dying**: Sora (RIP Apr 26, 2026)
+
+**Shipped (commit c73cce3)**:
+- AI Video Prompt Pack page + README + ZIP: re-led with Veo 3.1 / Kling 3.0. Honest Sora shutdown note added.
+- Homepage, /kits, /bundle: video pack descriptions updated
+- Midjourney v6/v6.1 → v7 across 8 files including flagship Midjourney blog post
+- OpenClaw cost calculator: Claude 3.5 → Sonnet/Opus 4.6, added GPT-5 and Gemini 3.1 Pro
+- prompt-generator FAQ, food-drama generator: model lists refreshed
+- Build passed, pushed, verified live (12x "Veo 3.1", 10x "Kling 3.0" on live video pack page; only 2x "Sora" and both are the honest shutdown notice)
+
+**Market validation** (answers "is the money wheel broken?"):
+- Gumroad/Etsy AI prompt pack pricing: $10-$100 — our $9/$29/$97 is textbook correct
+- A Medium seller hit $1,000 in 2 months on one pack, no paid ads (Mar 2026)
+- Target: marketers, solopreneurs, freelancers — our ICP
+- Verdict: $0 revenue in 26 days is NOT a market problem — it's conversion/acquisition
+
+**Viral trend gaps** (potential free tools):
+- AI Cakeify effect (knife cuts object → cake inside) — zero competitor has a prompt pack
+- AI Squish effect (rigid object squishes like memory foam)
+- Character-consistent video now table-stakes (we should mention in video pack marketing)
+
+**Deferred** (not urgent, not revenue-blocking):
+- GPT-4o refs on 10 tool pages (still a valid model, just not optimal)
+- /blog/ai-video-prompts-sora-runway-2026 (URL has "sora" — keep URL for SEO equity, reframe content next session)
+- /api/nurture email templates — need audit for Sora strings
+
+**Full report**: `.founder/deliverables/ai-landscape-audit-2026-04-17.md`
+
+**EXTENSION (same session) — Sora Shutdown SEO Play**:
+- Audited `/pages/api/` for Sora refs → clean, nurture emails won't burn subs
+- Shipped `/blog/sora-shutdown-alternatives-2026` (commit b2fd361): 7-min post, 5 Sora alternatives with copy-paste prompts, comparison table, FAQ+JSON-LD schema, CTA to paid Video Prompt Pack
+- Added to blog index (top), sitemap.xml (priority 0.9, weekly), indexnow URL list (commit 84cacba)
+- IndexNow submitted 135 URLs — status 200
+- Live verified: HTTP 200 at https://www.midastools.co/blog/sora-shutdown-alternatives-2026
+- Timing logic: Sora dies April 26 (9 days). Peak "Sora alternatives" search volume = now through Apr 26. Every Sora user currently asking "what do I use instead?" lands here and sees our paid video pack as the answer.
+
 ## 🟢 SESSION 113 (April 17, evening) — PROMPT QUALITY AUDIT
 Armando mandate: "Review all prompts we are offering, make sure they are well designed and work, be very picky."
 

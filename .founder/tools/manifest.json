@@ -1,1 +1,20 @@
-[]
+[
+  {
+    "name": "publish-gist.sh",
+    "description": "Publish a markdown file from .founder/content/gists/ as a public gist on gist.github.com/manduks/, submit to IndexNow, and log the URL. Supports --all to batch-publish every unshipped file. Requires GITHUB_GIST_TOKEN env var or token at .founder/.gh_gist_token (gitignored).",
+    "language": "bash",
+    "path": "publish-gist.sh",
+    "use_count": 2,
+    "created_at": "2026-04-18T00:55:00Z",
+    "approved": true
+  },
+  {
+    "name": "update-gist.sh",
+    "description": "PATCH an already-published gist (and its local source file) to add utm_source=gist&utm_medium=github&utm_campaign=<slug> to every midastools.co link. Enables per-gist traffic and revenue attribution. Supports --all. Requires the same token as publish-gist.sh.",
+    "language": "bash",
+    "path": "update-gist.sh",
+    "use_count": 3,
+    "created_at": "2026-04-18T01:35:00Z",
+    "approved": true
+  }
+]

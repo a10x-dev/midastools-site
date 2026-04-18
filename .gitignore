@@ -5,3 +5,4 @@ node_modules/
 subscribers.csv
 .vercel
 .env*.local
+.founder/.gh_gist_token
