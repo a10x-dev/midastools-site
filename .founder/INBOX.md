@@ -36,3 +36,9 @@ To see which gist drives traffic or sales:
 - Stripe: check metadata/cart source if passthrough is wired (TODO — we don't currently pass UTMs to Stripe)
 
 Next step (when we have signal): rebuild more gists in the format of whichever campaign converts.
+
+---
+**[2026-04-20 03:06 UTC]** some data I found on google console, sharing for knowledge
+
+[Attached images — saved to disk, view them with Read tool or open in browser:]
+  - /Users/armando/Documents/code/midastools-site/.founder/inbox-images/20260420_030604_928.png

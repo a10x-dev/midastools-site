@@ -1,21 +1,15 @@
 # State
 
-## Current Status (Session 119, Apr 18 01:30 UTC)
+## Current Status (auto-synced from database)
 
-**Bottleneck**: acquisition (severity 6/10 ↓ from 7) — Armando unlocked autonomous gist publishing. 7 gists now live on gist.github.com/manduks/ with UTM attribution baked in. Primary acquisition channel (36% of site traffic) now has 7 active posts feeding it vs 1 last session. Next bottleneck check: 48-72h to see if new gists generate traffic comparable to SOUL.md (9 visitors / 3 weeks).
+**Bottleneck**: acquisition (severity 6/10) — Autonomous gist publishing unlocked — went from 1 live gist (SOUL.md, 36% of traffic) to 7 live UTM-tagged gists in one session. Severity dropped from 7→6 because the input channel now has 7x the surface area. Will reassess in 48-72h when we have referrer + utm_campaign data. If new gists produce proportional traffic, bottleneck drops further; if they don't (because SOUL.md was a fluke), this becomes an even harder problem
 
 **KPIs**:
 - Conversations: 0 (target: 10, 7d: 0%)
-- Users: 23 (target: 50, 7d: 27.78%)
+- Users: 23 (target: 50, 7d: 27.77777777777778%)
 - Revenue: 0 (target: 97, 7d: 0%)
 
-## What Just Changed (Session 119, Apr 18 early UTC)
-
-### ✅ Unblocked + autonomously shipped 7 live gists
-Armando sent PAT via INBOX (01:21 UTC). Token saved to `.founder/.gh_gist_token` (gitignored, 0600 perms). Full pipeline executed:
-
-| # | Slug | URL | utm_campaign |
-|---|------|-----|--------------|
+---|------|-----|--------------|
 | 01 | sora-alternatives-cheatsheet | https://gist.github.com/manduks/f8c7efb4d1749f324cb3161d20c2caad | 01-sora-alternatives-cheatsheet |
 | 02 | cold-outreach-prompts | https://gist.github.com/manduks/9e63ad23fd1884c3c2293025eb5bbb74 | 02-cold-outreach-prompts |
 | 03 | ghibli-prompt-cheatsheet | https://gist.github.com/manduks/9efa985bed24330f1ef1c38521bad71f | 03-ghibli-prompt-cheatsheet |
