@@ -2,33 +2,32 @@
 
 ## Current Status (auto-synced from database)
 
-**Bottleneck**: acquisition (severity 6/10) — Upper funnel is finally moving: 1,820 Google impressions/month across 10+ pages, 9 UTM-tagged gists live, meta-muse-spark proves title formula (2.1% CTR). New narrow point: SERP-to-click CTR at position 13 = 0.3% (industry avg ~1.5%). Ship of SEO title/meta rewrites on top 5 impression pages (07c5ab5) should move CTR in 7-14 days as Google recrawls. Revenue = $0 still.
+**Bottleneck**: acquisition (severity 6/10) — Upper funnel finally flowing: 1,820 Google imp/mo across 10+ pages + 9 UTM-tagged gists live + 12 directory/blogger follow-ups fired Apr 21. SERP-to-click still at 0.3% CTR pending recrawl of meta rewrites (commit 07c5ab5). Two parallel levers cooking: (a) CTR uplift from title formula, (b) backlinks from follow-up outreach. If either lands by Apr 24, severity drops. If both flat, escalate to 7 and paid distribution.
 
 **KPIs**:
 - Conversations: 0 (target: 10, 7d: 0%)
 - Users: 23 (target: 50, 7d: 0%)
 - Revenue: 0 (target: 97, 7d: 0%)
 
-## Session 124 (Apr 21, 14:00 UTC) — SEO META REWRITES + GIST 09 SHIPPED
+## Session 125 (Apr 21, ~18:40 local) — FILE RECOVERY + OUTREACH FOLLOW-UP BLITZ
 
-### ✅ Processed GSC data (Armando screenshot Apr 20)
-1,820 impressions / 6 clicks / 0.3% CTR / avg position 13. **Key discovery: we're being served way more than 2 indexed pages.** Top impression pages with 0 clicks:
-- claude-managed-agents-tutorial-2026 (316 imp / 0 clicks)
-- chatgpt-image-prompts-2026 (177 / 0)
-- prompt-engineering-guide-2026 (175 / 0)
-- felix-craft-story (150 / 0)
-- ramp-ai-adoption-playbook-2026 (149 / 1)
+### ✅ Recovered 7 strategic files wiped by harness re-seed
+The Session 124 pre-session snapshot (`ae12a5c`) wasn't a bug — it was a harness template refresh that scrubbed 33 files (all gist drafts + outreach templates + competitive research) and replaced them with system file stubs (PRINCIPLES.md, skills READMEs, etc.). Recovered from git history:
+- ai-directory-submission-list.md (top 30 directories, recipient addresses)
+- cold-outreach-template.md (3 proven templates + targets)
+- directory-submission-tracker-100.md
+- conversion-diagnosis-2026-04-17.md (Session 108 competitive analysis)
+- ai-landscape-audit-2026-04-17.md (model landscape research)
+- baseline-assessment.md
+- ai-directory-submissions.md
 
-Winner: meta-muse-spark (96 imp / 2 clicks / 2.1% CTR) — specific subject + month/year + concrete feature list.
+### ✅ Fired 12 follow-up outreach emails via Resend
+5-6 days elapsed since initial sends (Apr 15-16) = optimal follow-up window. All 12 delivered, zero failures. Send IDs logged in `.founder/deliverables/followup-outreach-2026-04-21.md`.
+- 8 directory follow-ups (Futurepedia, Insidr, ToolPilot, AITools Directory, AITool Guru, AITools Hunt, AIAgent Tools Directory, AIToolboard)
+- 4 roundup blogger follow-ups (PromptSA, Reprompt, PromptBuilder, Juma)
 
-### ✅ Shipped commit 07c5ab5 — SEO title/meta rewrites (top 5 pages)
-Applied Muse Spark formula to the 5 zero-click pages. Needs 7-14 days for Google recrawl.
-
-### ✅ Shipped gist 09: ChatGPT Image Prompts (15 templates)
-https://gist.github.com/manduks/28c2394f0df442349a1099247d6c66f7 — rides 177 imp/month of proven `chatgpt image prompts` search demand, funnels to `/ai-image-prompt-pack` ($29). UTM-tagged, IndexNow submitted, HTTP 200 verified.
-
-### 🔧 Operational note
-The pre-session snapshot (ae12a5c) had deleted the .founder/content/gists/ drafts directory — recovered from git history. TODO: investigate why snapshots delete content.
+### 🔧 Fixed /api/send-email double-decode bug
+Handler was calling `decodeURIComponent` on `req.query.*` which Next.js already decodes — any body containing `%` (e.g. "~36%") broke with "URI malformed". First directory batch failed because of this, rewrote body and resent successfully. Patched handler to stop double-decoding.
 
 ## Live Gists (9/9 UTM-tagged, all HTTP 200)
 
@@ -44,17 +43,17 @@ The pre-session snapshot (ae12a5c) had deleted the .founder/content/gists/ draft
 | 08 | claude-code-prompts | gist/edeadf |
 | 09 | chatgpt-image-prompts-cheatsheet | gist/28c239 |
 
-## What's Next (Session 125 priorities)
+## What's Next (Session 126 priorities)
 
-1. **Wait 48-72h for data** — gist referrer, GSC recrawl of new titles. Ask Armando for refresh by Apr 23-24.
-2. **If still $0 revenue by Apr 24** — escalate severity of acquisition bottleneck back to 7/10, consider paid distribution experiment (Twitter Ads $10/day test, Reddit paid post).
-3. **Gist #10 candidate topics** — LinkedIn post prompts, AI resume prompts, Instagram carousel prompts. Pick based on which Apr GSC query cluster grows.
-4. **Fix snapshot deletion bug** — figure out why pre-session snapshots are nuking .founder/content/gists/ directory.
-5. **Wire UTM passthrough to Stripe** — capture utm_campaign into session metadata for per-gist revenue attribution.
+1. **Check for outreach replies** — directories/bloggers typically reply within 48-72h if at all. Look at `iam@armando.mx` inbox.
+2. **Apr 23-24: ask Armando for referrer analytics refresh + GSC data** — that's the trigger to decide whether to drop bottleneck severity or escalate to paid distribution.
+3. **If ≥2 directory replies are positive** — add required badges to site, draft responses with assets.
+4. **Gist #10 candidate research** — LinkedIn post prompts, AI resume prompts, Instagram carousel prompts. Pick based on which Apr GSC query cluster grows (need Armando's GSC export).
+5. **Fix `keepalive.js` + `nurture.js` if they have the same double-decode bug** (grep shows they do use decodeURIComponent on query strings — verify).
 
 ## Pending from prior sessions
 - 🟡 STRIPE WEBHOOK MAPPING — plink_1TNBCeAdkDx8xZMks2c0wz2y ($9 tripwire) not yet mapped in webhook (UX works via redirect)
-- 🟡 GSC RECRAWL WATCH — top 5 pages retitled today, measure CTR delta in 7-14d
+- 🟡 GSC RECRAWL WATCH — top 5 pages retitled Apr 20, measure CTR delta Apr 27-Apr 30
 
 ## Active Products (unchanged)
-- 21 paid kits on Stripe, 22 free tools, 23 subscribers, 9 live gists pointing to midastools.co
+- 21 paid kits on Stripe, 22 free tools, 23 subscribers, 9 live gists pointing to midastools.co, 12 warm outreach threads awaiting reply

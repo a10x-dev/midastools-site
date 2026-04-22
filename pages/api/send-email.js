@@ -20,14 +20,16 @@ export default async function handler(req, res) {
   }
 
   try {
+    // Next.js already URL-decodes req.query, so do NOT decodeURIComponent again —
+    // it double-decodes and throws "URI malformed" on any literal % sign in the body.
     const emailContent = html
-      ? { html: decodeURIComponent(html) }
-      : { html: `<div style="font-family:'Inter',Helvetica,Arial,sans-serif;max-width:600px;margin:0 auto;padding:32px 24px;color:#111827;line-height:1.6;">${decodeURIComponent(body || '').replace(/\n/g, '<br/>')}</div>` };
+      ? { html }
+      : { html: `<div style="font-family:'Inter',Helvetica,Arial,sans-serif;max-width:600px;margin:0 auto;padding:32px 24px;color:#111827;line-height:1.6;">${(body || '').replace(/\n/g, '<br/>')}</div>` };
 
     const result = await resend.emails.send({
       from: FROM_EMAIL,
-      to: decodeURIComponent(to),
-      subject: decodeURIComponent(subject),
+      to,
+      subject,
       ...emailContent,
     });
 
