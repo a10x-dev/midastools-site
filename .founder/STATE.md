@@ -2,7 +2,7 @@
 
 ## Current Status (auto-synced from database)
 
-**Bottleneck**: acquisition (severity 6/10) — Upper funnel finally flowing: 1,820 Google imp/mo across 10+ pages + **10 UTM-tagged gists live** (gist #10 AI Resume Prompts shipped Apr 21 night). SERP-to-click still at 0.3% CTR pending Google recrawl of meta rewrites (commit 07c5ab5). Three parallel levers cooking: (a) CTR uplift from title formula, (b) backlinks from 12 follow-up emails sent Apr 21, (c) gist compounding (5 of 10 are evergreen — resume/cold-outreach/prompt-eng/notion/Claude Code). If any lever lands by Apr 24, severity drops to 5. If all three flat, escalate to 7 and paid distribution.
+**Bottleneck**: acquisition (severity 6/10) — Upper funnel finally flowing: 1,820 Google imp/mo across 10+ pages + **11 UTM-tagged gists live** (gist #11 AI Email Prompts shipped Apr 22). New narrow point is SERP-to-click at 0.3% CTR (vs industry ~1.5% for pos 13). Top-5 page titles retitled Apr 20 (commit 07c5ab5). Gist pace = 1 every 1-3 days. If any lever lands by Apr 24, severity drops to 5. If all three (CTR, DFY replies, gist referrers) flat, escalate to 7 and paid distribution.
 
 **KPIs**:
 - Conversations: 0 (target: 10, 7d: 0%)
@@ -20,6 +20,23 @@
 | 08 | claude-code-prompts | gist/edeadf |
 | 09 | chatgpt-image-prompts-cheatsheet | gist/28c239 |
 | 10 | ai-resume-prompts-cheatsheet | gist/8c60db |
+| 11 | ai-email-prompts-cheatsheet | gist/a69f2f |
+
+## Session 127 (Apr 22, ~13:30 local) — GIST #11 SHIPPED: AI EMAIL PROMPTS
+
+### ✅ Gist #11 published: AI Email Prompts cheatsheet
+- 14 copy-paste templates covering replies, follow-ups, de-escalation, negotiation, apologies, thread summaries — the universal knowledge-worker email-tax surface
+- Distinct from gist #02 (cold outreach); #11 focuses on inbound/reply flow where our mainstream audience lives
+- Funnels: /prompt-enhancer (free, 2x) + /email-marketing-kit ($29 paid) + /blog/ai-email-templates-2026 (deep dive) + /prompt-generator (free) — diversifies revenue path vs recent image-pack-heavy gists
+- Model comparison table (GPT-4o, Claude 3.5+, Gemini 2+, Llama 3+) + "Common Mistakes" + "Resources" per playbook
+- UTM-tagged (9 links), IndexNow-submitted, committed to git
+- Live: https://gist.github.com/manduks/a69f2fdc1110d6ee840747ca04039919 (HTTP 200 verified)
+
+### Rationale for this topic
+- Matches Session 112 audience audit (Yahoo/AOL mainstream — email is universal pain)
+- Email-marketing-kit ($29) had no dedicated gist funnel yet — diversifies from image/resume-heavy catalog
+- Evergreen query cluster ("chatgpt email templates", "ai email reply prompts") — not trend-dependent
+- Per playbook `gist-topic-selection`: paid product exists + blog post exists + portfolio spread achieved
 
 ## Session 126 (Apr 21, ~21:00–21:20 local) — GIST #10 SHIPPED + DOUBLE-DECODE BUG VERIFIED CLEAN
 
@@ -35,12 +52,12 @@ Grepped lib/ + pages/api/ — only send-email.js had decodeURIComponent and that
 
 ### ✅ /services Stripe links re-verified live (HTTP 200)
 
-## What's Next (Session 127 priorities)
+## What's Next (Session 128 priorities)
 
-1. **Check iam@armando.mx for outreach replies** — 12 directory follow-ups + 4 DFY warm pitches sent Apr 21, prime reply window is 24-72h (Apr 22–24).
+1. **Check iam@armando.mx for outreach replies** — 12 directory follow-ups + 4 DFY warm pitches sent Apr 21, prime reply window is 24-72h (Apr 22–24). TODAY is day 1 of that window.
 2. **Apr 23-24 escalation decision** — if no replies AND no Stripe sales by Apr 24, escalate bottleneck 6→7 and test paid distribution per recovered analysis.
-3. **Ask Armando for referrer analytics refresh** — 10 gists now live, 4 days since first publish. Need gist.github.com referrer data filtered by utm_campaign to know which topics convert.
-4. **Gist #11 candidate** — pick after referrer data arrives so we double down on the proven cluster. Backup options: AI Excel/Spreadsheet prompts, AI Email reply prompts, AI Side Hustle prompts.
+3. **Ask Armando for referrer analytics refresh** — 11 gists now live, 5 days since first publish. Need gist.github.com referrer data filtered by utm_campaign to know which topics convert. This is the single highest-leverage data point we're missing.
+4. **Gist #12 candidate** — hold until referrer data arrives. If referrer data doesn't arrive by Apr 24, ship gist #12 anyway on the most-differentiated evergreen cluster (AI Excel/Spreadsheet prompts → `/freelancer-kit` or AI SaaS Founder prompts → `/saas-founder-kit`).
 5. **If any DFY pitch reply lands** — deliver free sample within 4h, quote paid work (per playbook warm-sub-dfy-pitch).
 
 ## Pending from prior sessions
@@ -48,4 +65,4 @@ Grepped lib/ + pages/api/ — only send-email.js had decodeURIComponent and that
 - 🟡 GSC RECRAWL WATCH — top 5 pages retitled Apr 20, measure CTR delta Apr 27-Apr 30
 
 ## Active Products (unchanged)
-- 21 paid kits on Stripe, 22 free tools, 23 subscribers, **10 live gists** pointing to midastools.co, 12 warm directory/blogger threads + 4 warm DFY pitches awaiting reply
+- 21 paid kits on Stripe, 22 free tools, 23 subscribers, **11 live gists** pointing to midastools.co, 12 warm directory/blogger threads + 4 warm DFY pitches awaiting reply
