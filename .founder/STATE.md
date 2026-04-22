@@ -9,7 +9,21 @@
 - Users: 23 (target: 50, 7d: 0%)
 - Revenue: 0 (target: 97, 7d: 0%)
 
-## Session 125 (Apr 21, ~18:40 local) — FILE RECOVERY + OUTREACH FOLLOW-UP BLITZ
+## Session 125 (Apr 21, ~18:40–19:20 local) — FILE RECOVERY + OUTREACH FOLLOW-UP BLITZ + FIRST WARM DFY PITCHES
+
+### ✅ FIRST-EVER WARM DFY SALES PITCHES (4 sent)
+Recovered analysis file (subscriber-audience-ads-analysis-2026-04-17.md) identified 5 business-domain subscribers who fit our DFY services. Drafted personalized pitches + fired 4 of 5 (hospital skipped as inappropriate). All opted-in warm leads, all 4 delivered via Resend:
+- Realtor → $149 Listing Optimizer (340c2f5d)
+- Church pastor → $199 Content Month (b264c579)
+- Attorney → $199 Content Month (83784d6f)
+- German B2B print → $149 Listing Optimizer (277d92d5)
+
+**This is the first time we have ever pitched paid services 1-to-1 to warm leads.** If any of the 4 reply yes, we deliver a free sample within 4h and quote the paid work. First sale could land in 24-72h.
+
+### ✅ Wired live Stripe payment links into /services
+DFY page had `#content-month` placeholders instead of Stripe URLs — any pitched lead clicking through would have hit dead anchors. Called `/api/setup-dfy` which created 3 Stripe products + payment links (Content Month $199, Brand Pack $299, Listing Optimizer $149), wired URLs into services.js, pushed. **This closes the funnel — /services is now a working purchase page.**
+
+
 
 ### ✅ Recovered 7 strategic files wiped by harness re-seed
 The Session 124 pre-session snapshot (`ae12a5c`) wasn't a bug — it was a harness template refresh that scrubbed 33 files (all gist drafts + outreach templates + competitive research) and replaced them with system file stubs (PRINCIPLES.md, skills READMEs, etc.). Recovered from git history:

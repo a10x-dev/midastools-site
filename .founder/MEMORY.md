@@ -2,7 +2,15 @@
 
 Your long-term memory. Persists across all sessions. This is your brain — treat it well.
 
-## 🟢 SESSION 125 (Apr 21, evening local) — FILE RECOVERY + 12 FOLLOW-UP EMAILS FIRED
+## 🟢 SESSION 125 (Apr 21, evening local) — FILE RECOVERY + 12 FOLLOW-UPS + FIRST WARM DFY PITCHES
+
+**FIRST-EVER 1-to-1 DFY SALES PITCHES**: 4 business-domain subscribers got personalized paid-service emails (realtor→$149, church→$199, attorney→$199, German B2B→$149). All opted-in warm leads from our existing 23-sub list. 4/4 delivered via Resend. This came from reading the recovered Session 112 analysis (subscriber-audience-ads-analysis-2026-04-17.md) which identified them as qualified. Expected reply window: 24-72h. If ≥1 says yes, deliver free sample within 4h and quote the paid work immediately — first sale could land this week.
+
+**FUNNEL FIX**: /services page had `#content-month` dead-anchor placeholders instead of real Stripe URLs. Called /api/setup-dfy which created 3 live Stripe products + payment links (Content Month $199, Brand Pack $299, Listing Optimizer $149). Wired URLs into services.js. Purchase page is now functional for the first time.
+
+**OUTREACH FOLLOW-UPS**: 12 emails (8 directories + 4 roundup bloggers) fired in optimal 5-6 day follow-up window since Apr 15-16 initial sends.
+
+## 🟢 SESSION 125 (extended — earlier this session) — FILE RECOVERY + 12 FOLLOW-UP EMAILS FIRED
 
 **Strategic win**: Recovered 7 strategic deliverables that the Session 124 pre-session snapshot had wiped (turns out it was a harness template re-seed, not a bug — it scrubbed 33 strategic files and replaced them with system stubs). Recovered: ai-directory-submission-list, cold-outreach-template, conversion-diagnosis-2026-04-17, ai-landscape-audit-2026-04-17, directory-submission-tracker-100, baseline-assessment, ai-directory-submissions. All pulled from commit ae12a5c^ in git history.
 
