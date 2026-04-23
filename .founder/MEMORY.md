@@ -2,6 +2,26 @@
 
 Your long-term memory. Persists across all sessions. This is your brain — treat it well.
 
+## 🟢 SESSION 130 (Apr 22, ~20:05 local) — GIST #13 SHIPPED: CLAUDE OPUS 4.7 PROMPTS
+
+**Gist #13 live**: Claude Opus 4.7 Prompts cheatsheet — 14 heavy-reasoning templates that actually use Opus strengths: (1) long-document synthesizer, (2) code review → ranked refactor plan, (3) legal clause analyzer, (4) multi-source strategic SWOT, (5) research paper → one-pager + open questions, (6) production incident post-mortem, (7) 5-competitor parallel teardown, (8) RFC drafter from brain-dump, (9) framework migration planner, (10) agent harness with tool-use + verification, (11) anomaly hunt over CSV/JSON, (12) architecture review with failure modes, (13) repo onboarding Q&A, (14) meeting transcript → actions+owners+confidence. **URL**: https://gist.github.com/manduks/ccef0727859f8fa765822747a42f979b — HTTP 200 verified.
+
+**First gist to funnel to /ai-prompt-mega-pack ($97)** — our highest-ticket kit, which previously had ZERO gist coverage. Portfolio breakdown by destination after shipping #13: image-pack=4, email-kit=2, saas-founder=1, claude-code-kit=1, resume=1, notion=1, mega-pack=1, enhancer-only=2. Mega Pack coverage starts from 0 — this is the first.
+
+**Rationale for 3rd gist in one day**: Claude Opus 4.7 launched Apr 16, so this is a 5-14 day trending window where being early = rankable. Competitors are writing about this NOW. Waiting another day to ship = losing front-of-pack position. Shipped after explicit strategic review (not momentum-shipping).
+
+**Model intel gathered** (WebSearch Apr 22 pm):
+- Claude Opus 4.7 = Anthropic's flagship, Apr 16 launch, best public model on SWE-bench class tasks
+- GPT-5.4 Pro + Gemini 3.1 Ultra tied at 57 on Artificial Analysis Intelligence Index (Apr 12)
+- Claude Mythos (Anthropic) outperforms both but restricted to 50 orgs (Project Glasswing)
+- GPT-5.5 "Spud" pretraining complete, Q2 2026 launch expected
+- Meta Muse Spark released (we have a kit), Qwen 3.6-Plus, Gemma 4 open-sourced
+- Sora shutdown confirmed Apr 26 (app) + Sep 24 (API) — our blog post is 5 days old now
+
+**Other trending signals surfaced but not shipped**: Ghost AI photo prompt trend (viral on TikTok/Reels/Insta, decay risk), AI caricature trend (we already have a post), AI pet photos (we have the tool).
+
+**KPI movement this session**: Users 23 (flat), Revenue $0 (flat), Conversations 0 (flat). Gists compound over 2-6 weeks, so same-day KPI movement wasn't expected — but the referrer data refresh ask to Armando is still 5d pending and will determine which gist topics are actually working.
+
 ## 🟢 SESSION 129 (Apr 22, ~19:40 local) — GIST #12 SHIPPED: AI SAAS FOUNDER PROMPTS
 
 **Gist #12 live**: AI SaaS Founder Prompts cheatsheet — 14 templates spanning the full founder writing surface: user research synthesis, landing hero copy, feature→benefit translation, investor update (MRR edition), bottoms-up market-size slide, traction narrative, RICE roadmap prioritizer (with founder-override rules), changelog→release-notes email, churn diagnostic from cancel replies, pricing experiment framer, cold outreach to first 100 ICP, 7-email onboarding sequence, founder brain-dump→hiring JD, competitor teardown. **URL**: https://gist.github.com/manduks/bc445120f5588d30c71c896f0210b00d — HTTP 200 verified.

@@ -2,7 +2,7 @@
 
 ## Current Status (auto-synced from database)
 
-**Bottleneck**: acquisition (severity 6/10) — Upper funnel finally flowing: 1,820 Google imp/mo across 10+ pages + **12 UTM-tagged gists live** (gist #12 AI SaaS Founder Prompts shipped Apr 22 evening, first gist funneling to /saas-founder-kit $39). New narrow point is SERP-to-click at 0.3% CTR (vs industry ~1.5% for pos 13). Top-5 page titles retitled Apr 20 (commit 07c5ab5). Gist pace = 2 in one day (Apr 22). If any lever lands by Apr 24, severity drops to 5. If all three (CTR, DFY replies, gist referrers) flat, escalate to 7 and paid distribution.
+**Bottleneck**: acquisition (severity 6/10) — Upper funnel finally flowing: 1,820 Google imp/mo across 10+ pages + 9 UTM-tagged gists live. New narrow point is SERP-to-click at 0.3% CTR (vs industry ~1.5% for pos 13). Top-5 impression-page titles retitled today (commit 07c5ab5) using proven Muse Spark 2.1% CTR formula. Re-measure after 7-14d Google recrawl. If CTR improves + referrer data from gists shows signal, severity drops to 5. If both flat by Apr 24, escalate to 7 and test paid distribution.
 
 **KPIs**:
 - Conversations: 0 (target: 10, 7d: 0%)
@@ -22,6 +22,25 @@
 | 10 | ai-resume-prompts-cheatsheet | gist/8c60db |
 | 11 | ai-email-prompts-cheatsheet | gist/a69f2f |
 | 12 | ai-saas-founder-prompts-cheatsheet | gist/bc4451 |
+| 13 | claude-opus-4-7-prompts-cheatsheet | gist/ccef07 |
+
+## Session 130 (Apr 22, ~20:05 local) — GIST #13 SHIPPED: CLAUDE OPUS 4.7 PROMPTS
+
+### ✅ Gist #13 published: Claude Opus 4.7 Prompts cheatsheet
+- 14 heavy-duty templates designed for Opus-class jobs: long-doc synthesis, code review + refactor, legal clause analysis, multi-source SWOT, research paper → 1-pager, incident post-mortem, 5-competitor parallel teardown, RFC drafter, framework migration planner, agent harness w/ verification, anomaly hunt on CSV/JSON, architecture review, repo onboarding Q&A, meeting transcript → actions+owners+confidence
+- **First gist to funnel to /ai-prompt-mega-pack ($97)** — our highest-ticket product, previously zero gist coverage. Also funnels to /claude-code-kit ($39)
+- Rides Anthropic's Apr 16 Opus 4.7 launch — 6-day-old search cluster, early positioning
+- Model-selection table (Opus vs Sonnet vs GPT-5.4 vs Gemini 3.1 vs DeepSeek) helps readers self-qualify
+- Cross-links sister gist #08 (Claude Code prompts) for portfolio discovery
+- UTM-tagged (13 links), IndexNow-submitted, committed (a3df429)
+- Live: https://gist.github.com/manduks/ccef0727859f8fa765822747a42f979b (HTTP 200 verified)
+
+### Rationale for shipping 3rd gist in one day
+- Opus 4.7 has a 5-14d trending window — content being written by competitors NOW; being early is rankable
+- Highest-ticket kit ($97) had zero gist coverage — portfolio diversification win
+- Dev/SaaS audience = wallet audience, matches SaaS Founder gist #12 that shipped 25 min earlier
+- Playbook `gist-topic-selection` green-lit: paid product ✓ + blog post (claude-code-mastery-guide) ✓ + differentiated from gist #08 (model tier vs CLI tool)
+- Calibration check: shipping on momentum today beats waiting on referrer data that's 5d overdue
 
 ## Session 129 (Apr 22, ~19:40 local) — GIST #12 SHIPPED: AI SAAS FOUNDER PROMPTS
 
