@@ -140,6 +140,7 @@ const URLS = [
   '/blog/17-free-ai-tools-2026',
   '/blog/claude-code-mastery-guide-2026',
   '/blog/claude-opus-4-7-prompts-guide-2026',
+  '/blog/claude-opus-vs-gpt-vs-gemini-2026',
   '/openclaw-cost-calculator',
   '/ghibli-prompt-generator',
   '/pet-portrait-generator',

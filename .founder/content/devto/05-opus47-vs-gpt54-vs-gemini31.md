@@ -3,6 +3,7 @@ title: "Claude Opus 4.7 vs GPT-5.4 vs Gemini 3.1: 6 Real Tasks, 3 Different Winn
 published: true
 description: "I built 14 production prompts after Anthropic shipped Opus 4.7 on April 16. Here are 6 real tasks, the model I picked for each, and what breaks when you pick wrong."
 tags: ai, claude, openai, gemini
+canonical_url: https://www.midastools.co/blog/claude-opus-vs-gpt-vs-gemini-2026
 cover_image:
 series:
 ---
