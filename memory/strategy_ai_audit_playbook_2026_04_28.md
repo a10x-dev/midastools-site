@@ -1,26 +1,74 @@
-# AI Audit Playbook — Adopted Apr 28 (Session 133)
+---
+name: AI Audit Playbook (active)
+description: Productized $997 AI Clarity Assessment shipped Apr 28 — canonical /ai-audit, support assets, 3 pitches awaiting send
+type: project
+---
 
-**TL;DR:** Armando shared a verbatim Twitter/X post documenting a productized $999 "AI Tools Assessment" business making ~$1K/hour effective. Validates our Apr 28 coach pivot AND gives us the missing top-of-funnel: a free audit template.
+# AI Audit Playbook — Active (Session 133, Apr 28 2026)
 
-## Key facts
+**TL;DR:** $997 AI Clarity Assessment is now the productized entry point bridging $97 mega-pack and $3K-$10K DFY ladder. Two parallel sessions on Apr 28 (one drafted /ai-audit at $997, one drafted /ai-assessment at $999) — consolidated to /ai-audit. Duplicate Stripe price deactivated. Three personalized pitches drafted but **not sent yet** — awaiting Armando approval.
 
-- **Existing asset:** `/ai-audit` page already live at $997 (Stripe: cNi14m90j6iR7OI8VYcMM03). Promises 48hr audit + deployed AI agent + $5K savings guarantee.
-- **Missing asset:** No `/audit-template` free lead magnet. The Twitter playbook author has `audittemplate.ai` as their funnel top.
-- **Format adopted:** 4-phase framework (Discovery call → Claude analysis → Gamma report → Walkthrough). 5+ hr/week guarantee replaces our $5K/yr framing.
-- **Implementation upsell:** Our 21 kits become the post-audit upsell tier ($999 → $5K-10K).
-- **5 discovery questions:** "Walk me through yesterday" + 4 more — added visibly to /ai-audit sales page to prove depth.
+---
 
-## What shipped Session 133
+## Canonical references
 
-1. `/audit-template` — free email-gated lead magnet (5 questions + scoring rubric + tool framework) [WIP]
-2. `/ai-audit` rewrite with 4-phase framework + 5 discovery questions visible + 5 hr/wk guarantee
-3. Homepage hero CTA upgraded to feature /ai-audit
-4. /for-coaches gains a $997 "Premium Audit" tier
+| Asset | Path / URL |
+|---|---|
+| Sales page | https://www.midastools.co/ai-audit |
+| Stripe payment link | https://buy.stripe.com/cNi14m90j6iR7OI8VYcMM03 |
+| Stripe product / price | (existing $997 product, not the deactivated $999) |
+| Lead magnet | https://www.midastools.co/audit-template (free, email-gated) |
+| Operating playbook | `.founder/playbooks/ai-assessment-playbook.md` (226 lines) |
+| Discovery call script | `.founder/playbooks/discovery-call-script.md` (142 lines, 4-segment × 15-min) |
+| Discovery questionnaire | `.founder/sales/ai-assessment-discovery-questionnaire.md` |
+| Report template | `.founder/sales/ai-assessment-report-template.md` (279 lines, Gamma-format) |
+| Upsell menu | `.founder/sales/ai-assessment-upsell-menu.md` (3 implementation tiers: $1.5K / $3.5K / $7.5K+) |
+| Source playbook (user-pasted) | `.founder/deliverables/ai-audit-playbook-2026-04-28.md` |
 
-## Open questions for Armando (asked in Slack)
+## DEACTIVATED — do not reactivate without coordination
 
-1. Can you do 4 audit calls/month? If no → we make it async-only at $297.
+- Stripe price `price_1TRAUUAdkDx8xZMkDJWRFE4p` ($999, deactivated Apr 28)
+- Stripe product `prod_UQ0VKPcAwhAxwx` ("AI Operations Assessment", deactivated Apr 28)
+- Old payment link `https://buy.stripe.com/3cI14mekD9v34Cw0pscMM0x` (will return inactive error)
+- `/ai-assessment` URL was created and deleted same day — never deployed beyond local
+
+## 4-phase framework (canonical)
+
+1. **Pre-call research** (analyst before call) — public footprint dossier
+2. **60-min discovery interview** (Day 1) — 4 segments × 15 min: calendar map / tool stack / painful workflows / numbers + ambition
+3. **Custom report delivery** (Day 4) — Gamma PDF: priority matrix + 4-day quick-start + financial impact
+4. **30-min review call** (Day 7) — screen-share walkthrough + 3 closing questions
+
+## 3 pitches drafted — NOT YET SENT (awaiting Armando)
+
+File: `.founder/sales/assessment-pitches-2026-04-28.md`
+
+| # | To | Industry | Status | Reason for fit |
+|---|---|---|---|---|
+| 1 | hiedeh@tavassoli.com (Negar Tavassoli) | Real estate, North Vancouver | DRAFT | TOP-1 confidence; 5 corroborating sources; 4 distinct workflows; bilingual niche |
+| 2 | pastordoug@valleygrace.net (Doug Courter) | Pastor + IT instructor + missions board, Hagerstown MD | DRAFT | Tech-literate "skip the basics" prospect; 5 distinct workflows |
+| 3 | cbrannan@criterioncounsel.com → Christopher Pham | IP/brand protection law, Woodland Hills CA | DRAFT | Senior-partner deal size; 4 well-defined AI pain points; meta-irony hook |
+
+**Standing question for Armando:** "Send all 3 / send specific ones / edit first." Ask explicitly next session.
+
+## Pending Slack questions (still open from parallel session)
+
+1. Can you do 4 audit calls/month? If no → make async-only at $297.
 2. Founder-pricing $497 for first 5 case studies, or lead with $997?
 3. Approve email broadcast to 20 subs about new audit offer?
 
-## Source playbook saved to: `.founder/deliverables/ai-audit-playbook-2026-04-28.md`
+## Strategic position
+
+- **Sells clarity, not automation.** A coach billing $200/hr → ROI on $997 in 5 hrs/week saved.
+- **Bridge SKU** between $97 mega-pack (DIY) and $3K-$10K DFY (full implementation).
+- **YC RFS #2 quote** on the page (Garry Tan / Gustaf Alströmer): *"Total spend on services is many times larger than spend on software."*
+- **Refund guarantee:** "Full refund if we don't save you 5+ hrs/week."
+
+## Lessons learned (parallel-session convergence)
+
+Two Claude sessions running in parallel on Apr 28 both built assessment SKUs from the same user-pasted playbook. They converged on near-identical 4-phase frameworks, $997 vs $999, and identical Gamma-style report templates. Resolution was straightforward because:
+- One session had already wired /ai-audit into homepage hero + sitemap + supporting docs
+- The other session brought additive value (discovery-call-script, 3 personalized pitches with subscriber intel, deactivation of duplicate Stripe)
+- Consolidation took 5 file edits + 1 commit. No work lost.
+
+**Implication for future:** If you see signs of parallel work (untracked files matching your active task, modifications you didn't make), assume parallel session and consolidate rather than duplicating.
