@@ -72,16 +72,16 @@ export default function Home() {
   return (
     <Layout>
       <Head>
-        <title>Midas Tools — AI Automation Kits for Entrepreneurs</title>
-        <meta name="description" content="Deploy AI agents that automate your business 24/7. Templates, workflows & prompts used by entrepreneurs making $1,000s/week with AI." />
-        <meta property="og:title" content="Midas Tools — AI Automation Kits for Entrepreneurs" />
-        <meta property="og:description" content="The exact templates and workflows behind the AI agents already making real revenue. Starting at $29." />
+        <title>Midas Tools — AI for Coaches, Consultants & Experts</title>
+        <meta name="description" content="The AI productivity stack for solo coaches and consultants. Done-for-you content, branding, and prompt kits that turn your expertise into recurring revenue. Lifetime ownership — no subscriptions." />
+        <meta property="og:title" content="Midas Tools — AI for Coaches & Consultants" />
+        <meta property="og:description" content="Turn your expertise into recurring revenue. Done-for-you AI content + lifetime prompt kits built for coaches and consultants. Starting at $9." />
         <meta property="og:url" content="https://www.midastools.co" />
         <meta property="og:image" content="https://www.midastools.co/og-image.png" />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Midas Tools — AI Automation Kits" />
-        <meta name="twitter:description" content="Deploy AI agents that automate your business 24/7. Templates, workflows, and prompts for real revenue." />
+        <meta name="twitter:title" content="Midas Tools — AI for Coaches & Consultants" />
+        <meta name="twitter:description" content="Turn your expertise into recurring revenue. Done-for-you AI content + lifetime prompt kits for coaches and consultants." />
         <meta name="twitter:image" content="https://www.midastools.co/og-image.png" />
         <link rel="icon" type="image/png" href="/favicon.png" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -90,8 +90,8 @@ export default function Home() {
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "WebPage",
-          "name": "Midas Tools — AI Automation Kits for Entrepreneurs",
-          "description": "Deploy AI agents that automate your business 24/7. Templates, workflows, and prompts used by entrepreneurs already making $1,000s/week with AI.",
+          "name": "Midas Tools — AI for Coaches, Consultants & Experts",
+          "description": "AI productivity stack for solo coaches and consultants. Done-for-you content, branding, and prompt kits that turn expertise into recurring revenue.",
           "url": "https://www.midastools.co",
           "publisher": { "@id": "https://www.midastools.co/#organization" },
           "mainEntity": {
@@ -226,20 +226,20 @@ export default function Home() {
 
       {/* Hero */}
       <div className="home-hero">
-        <div className="badge" style={{ marginBottom: 32 }}>AI Automation Kits for Entrepreneurs</div>
-        <h1>Deploy AI That<br /><span>Runs Your Business</span><br />While You Sleep.</h1>
+        <div className="badge" style={{ marginBottom: 32 }}>For Coaches, Consultants & Experts</div>
+        <h1>Turn your expertise<br />into <span>recurring revenue.</span></h1>
         <p className="hero-sub">
-          Battle-tested templates, workflows, and prompts to launch AI agents that manage email, generate revenue, publish content, and operate your business 24/7.
+          The AI productivity stack for solo coaches and consultants. Done-for-you content, branding, and lead-gen kits — so you stop trading hours for dollars and start scaling.
         </p>
         <div className="hero-ctas">
-          <a href={STRIPE_URL} className="btn-primary">Get the Starter Kit — $29 &rarr;</a>
-          <a href="/bundle" className="btn-outline">See All Kits</a>
+          <a href="/for-coaches" className="btn-primary">See Coach Pricing &rarr;</a>
+          <a href="/services" className="btn-outline">Done-For-You Services</a>
         </div>
         <p className="price-tag">
-          <strong>Instant download</strong> &middot; 30-day money-back guarantee &middot; No subscription
+          <strong>Lifetime ownership</strong> &middot; No subscriptions, ever &middot; 30-day guarantee
         </p>
         <p style={{ marginTop: '12px', fontSize: '14px', color: '#6B7280', fontFamily: "'Inter', sans-serif" }}>
-          Want a smaller taste first? <a href="/starter-pack" style={{ color: '#D97706', fontWeight: 700, textDecoration: 'none' }}>Get our 20 best prompts for $9 &rarr;</a>
+          Want a smaller taste first? <a href="/starter-pack" style={{ color: '#D97706', fontWeight: 700, textDecoration: 'none' }}>Try our 20 best prompts for $9 &rarr;</a>
         </p>
         <p style={{ marginTop: '6px', fontSize: '13px', color: '#9CA3AF', fontFamily: "'Inter', sans-serif" }}>
           Or: <a href="/tools" style={{ color: '#3B5FFF', fontWeight: 600, textDecoration: 'none' }}>Free AI tools</a> &middot; <a href="/quiz" style={{ color: '#3B5FFF', fontWeight: 600, textDecoration: 'none' }}>Take the quiz</a> &middot; <a href="/free-prompts" style={{ color: '#3B5FFF', fontWeight: 600, textDecoration: 'none' }}>5 free prompts</a>
@@ -247,9 +247,9 @@ export default function Home() {
 
         <div className="stats-bar">
           {[
-            { num: '$300K/mo', label: 'Peak Agent Revenue' },
-            { num: '15', label: 'Niche AI Kits Available' },
-            { num: '24/7', label: 'Autonomous Operation' },
+            { num: '$200/hr', label: 'Coach billing rate it pays back in 1 session' },
+            { num: '21', label: 'Lifetime kits — no subscription' },
+            { num: '48 hrs', label: 'Done-for-you delivery' },
           ].map(s => (
             <div key={s.label} className="stat-item">
               <div className="stat-num">{s.num}</div>

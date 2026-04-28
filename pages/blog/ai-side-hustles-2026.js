@@ -5,8 +5,8 @@ import Layout from '../../components/Layout';
 const STRIPE_BUNDLE = 'https://buy.stripe.com/bJe7sK0tNdLjgle0pscMM0b';
 
 export default function AISideHustles2026() {
-  const title = '15 AI Side Hustles That Actually Make Money in 2026 (With Income Data)';
-  const description = 'Real AI side hustles with verified income ranges, difficulty ratings, and time to first dollar. From prompt engineering to AI automation agencies — here are the 15 best ways to earn with AI in 2026.';
+  const title = 'AI Side Hustles 2026: 15 Ideas That Actually Pay (Real Income Numbers)';
+  const description = '15 AI side hustles ranked by real income, time to first dollar, and difficulty. Prompt selling, AI agencies, automation consulting, content production — see what each pays per month and how to start this week.';
   const url = 'https://www.midastools.co/blog/ai-side-hustles-2026';
 
   const jsonLd = {

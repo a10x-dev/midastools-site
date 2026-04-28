@@ -113,10 +113,10 @@ export default function Services() {
   return (
     <Layout>
       <Head>
-        <title>AI Services — Done-For-You Content, Branding & Listings | Midas Tools</title>
-        <meta name="description" content="Skip the learning curve. We use AI to create your social content, brand materials, and product listings. Professional results in 24-72 hours. From $149." />
-        <meta property="og:title" content="AI Services — We Do The Work, You Get The Results | Midas Tools" />
-        <meta property="og:description" content="Stop buying tools. Start getting results. Done-for-you AI content, branding, and listing optimization from $149." />
+        <title>AI Services for Coaches & Consultants — Done-For-You Content & Branding | Midas Tools</title>
+        <meta name="description" content="Done-for-you AI content, branding, and sales pages built for solo coaches and consultants. The AI-native service company YC's S26 RFS #2 was written about. From $149, delivered in 24-72 hours." />
+        <meta property="og:title" content="AI Services for Coaches & Consultants — Done For You | Midas Tools" />
+        <meta property="og:description" content="Stop writing IG posts at midnight. We deliver finished AI content, branding, and sales pages for coaches. From $149." />
         <meta property="og:url" content="https://www.midastools.co/services" />
         <meta property="og:image" content="https://www.midastools.co/og-image.png" />
         <meta name="twitter:card" content="summary_large_image" />
@@ -370,15 +370,19 @@ export default function Services() {
       <div className="svc-wrap">
         {/* Hero */}
         <div className={`svc-hero svc-fade${visible ? ' in' : ''}`}>
-          <div className="badge" style={{ marginBottom: 28 }}>New: AI Services</div>
-          <h1>Stop Buying Tools.<br />Start Getting <em>Results</em>.</h1>
+          <div className="badge" style={{ marginBottom: 28 }}>YC S26 RFS #2 — AI-Native Service Companies</div>
+          <h1>Done-for-you AI for <em>coaches & consultants</em>.</h1>
           <p className="svc-sub">
-            We use AI to deliver the actual work &mdash; content, branding, listings &mdash; so you don&rsquo;t have to learn prompts, configure tools, or spend hours experimenting.
+            You stop writing posts, fighting brand voice, and tweaking prompts at midnight. We deliver the finished work &mdash; content, branding, sales pages &mdash; so you can get back to coaching.
           </p>
           <div style={{ display: 'flex', justifyContent: 'center', gap: 12, flexWrap: 'wrap' }}>
             <a href="#services" className="btn-primary" style={{ fontSize: 15 }}>See Services &darr;</a>
-            <Link href="/tools" className="btn-outline" style={{ fontSize: 15 }}>Or try free tools first</Link>
+            <Link href="/for-coaches" className="btn-outline" style={{ fontSize: 15 }}>Coach Pricing</Link>
           </div>
+          <p style={{ maxWidth: 580, margin: '32px auto 0', fontSize: 13, color: 'var(--text-tertiary)', lineHeight: 1.65, fontStyle: 'italic', borderLeft: '3px solid var(--accent)', paddingLeft: 16, textAlign: 'left' }}>
+            &ldquo;Total spend on services is many times larger than spend on software. Build companies that deliver services directly through AI.&rdquo;
+            <br/><span style={{ fontStyle: 'normal', fontWeight: 700, color: 'var(--text-secondary)' }}>— Garry Tan, YC President · RFS Summer 2026</span>
+          </p>
         </div>
 
         {/* Problem */}
