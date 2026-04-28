@@ -2,6 +2,30 @@
 
 Your long-term memory. Persists across all sessions. This is your brain — treat it well.
 
+## 🟢 SESSION 146 (Apr 28, ~22:30 local) — TWO-SURFACE SHIP: AI AUDIT CHECKLIST (Dev.to + blog)
+
+**Did**: Two-surface ship of the AI Audit checklist content (companion to gist #14 shipped this morning):
+1. **Dev.to article #06** live at https://dev.to/midastools/the-14-questions-i-run-on-every-997-ai-audit-for-solo-operators-1fn2 (id=3583082). Tags: ai, productivity, consulting, business. Builder-narrative format: "I productized a $997 AI audit, here are 4 of the 14 questions + the disqualifier." 3 UTM-tagged CTAs.
+2. **Blog page live** at https://www.midastools.co/blog/ai-audit-checklist-coaches-consultants-2026 with FAQ schema (5 questions), full 14-question checklist, universal audit-question formula, DIY vs $997 vs $10K comparison table, common mistakes + Resources. Sitemap entry priority 0.9.
+3. **Canonical PUT-updated** on Dev.to so SEO equity flows back to midastools.co.
+4. **IndexNow submitted** (status 200, 138 URLs).
+
+**Key learnings**:
+- The `published: true` frontmatter in body_markdown is now sufficient to actually publish on Dev.to in one POST — the separate PUT step has become redundant. The 429 on the redundant PUT is harmless (the article is already live). Future devto-publish.py runs can skip the PUT or treat 429 as a warning.
+- Dev.to rate limits are tight when doing POST + PUT back-to-back. 30-60s sleep is sufficient for follow-up PUT (e.g. canonical update).
+- The two-surface playbook (gist + blog) extends naturally to three surfaces (gist + blog + Dev.to syndication) when a topic is sticky enough — same content, three different ranking domains, three different audiences.
+
+**Strategic context**: This is the **first dedicated multi-surface acquisition push** into the new $997 audit hero shipped Apr 28 morning. Gist #14 funnels gist.github.com traffic; blog page builds DA on midastools.co; Dev.to article reaches the dev/builder audience that overlaps with solo-operator coaches/consultants. All three point to /audit-template (free email-gated lead magnet) → /ai-audit ($997). Reply window on the 3 fired $997 pitches: May 2 (Hiedeh, Doug) + May 5 (Pham). KPI to watch: Dev.to views in 48h via `devto-stats.py --save` snapshot.
+
+**Files touched**: 
+- NEW: `.founder/content/devto/06-ai-audit-checklist-coaches-consultants.md` (Dev.to source)
+- NEW: `pages/blog/ai-audit-checklist-coaches-consultants-2026.js` (blog page, ~440 lines)
+- EDITED: `public/sitemap.xml` (+1 entry)
+- EDITED: `pages/api/indexnow.js` (+1 URL)
+- EDITED: `.founder/content/devto/PUBLISHED.md` (logged)
+
+**Commits**: c145d18 (initial two-surface ship) + afeafa0 (IndexNow URL list + canonical record).
+
 ## 🟢 SESSION 131 (Apr 22, ~20:45 local) — DEV.TO SYNDICATION SHIPPED + CHANNEL UNBLOCKED
 
 **Did**: Published Opus 4.7 article on dev.to/@midastools with canonical_url back to our blog, 4 full prompts + teaser for the other 10, 3 UTM-tagged CTAs (prompt-enhancer / claude-code-kit $39 / mega-pack $97). Article live at https://dev.to/midastools/claude-opus-47-prompts-4-templates-that-actually-use-the-new-reasoning-model-i00 (200 OK verified). Built reusable `devto-publish.py` tool to unblock the whole channel for future gists.
