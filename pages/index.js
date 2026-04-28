@@ -232,14 +232,14 @@ export default function Home() {
           The AI productivity stack for solo coaches and consultants. Done-for-you content, branding, and lead-gen kits — so you stop trading hours for dollars and start scaling.
         </p>
         <div className="hero-ctas">
-          <a href="/for-coaches" className="btn-primary">See Coach Pricing &rarr;</a>
-          <a href="/services" className="btn-outline">Done-For-You Services</a>
+          <a href="/ai-audit" className="btn-primary">Get the AI Audit &mdash; $997 &rarr;</a>
+          <a href="/audit-template" className="btn-outline">Free 5-Question Template</a>
         </div>
         <p className="price-tag">
-          <strong>Lifetime ownership</strong> &middot; No subscriptions, ever &middot; 30-day guarantee
+          <strong>5+ hrs/week recovered</strong> &middot; 48-hour turnaround &middot; Full refund if we don&rsquo;t deliver
         </p>
         <p style={{ marginTop: '12px', fontSize: '14px', color: '#6B7280', fontFamily: "'Inter', sans-serif" }}>
-          Want a smaller taste first? <a href="/starter-pack" style={{ color: '#D97706', fontWeight: 700, textDecoration: 'none' }}>Try our 20 best prompts for $9 &rarr;</a>
+          Want kits instead? <a href="/for-coaches" style={{ color: '#3B5FFF', fontWeight: 700, textDecoration: 'none' }}>Coach kits from $9 &rarr;</a> &middot; <a href="/services" style={{ color: '#6B7280', fontWeight: 600, textDecoration: 'none' }}>Done-for-you services</a>
         </p>
         <p style={{ marginTop: '6px', fontSize: '13px', color: '#9CA3AF', fontFamily: "'Inter', sans-serif" }}>
           Or: <a href="/tools" style={{ color: '#3B5FFF', fontWeight: 600, textDecoration: 'none' }}>Free AI tools</a> &middot; <a href="/quiz" style={{ color: '#3B5FFF', fontWeight: 600, textDecoration: 'none' }}>Take the quiz</a> &middot; <a href="/free-prompts" style={{ color: '#3B5FFF', fontWeight: 600, textDecoration: 'none' }}>5 free prompts</a>

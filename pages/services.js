@@ -7,8 +7,31 @@ import Layout from '../components/Layout';
 const DFY_CONTENT_URL = 'https://buy.stripe.com/28EdR84K36iR5GAa02cMM0u';
 const DFY_BRAND_URL = 'https://buy.stripe.com/cNi14mccv36F3ys1twcMM0v';
 const DFY_LISTING_URL = 'https://buy.stripe.com/8x2fZgfoHbDb1qk3BEcMM0w';
+// $997 AI Clarity Assessment — see /ai-audit (canonical landing page)
+const ASSESSMENT_URL = 'https://buy.stripe.com/cNi14m90j6iR7OI8VYcMM03';
 
 const SERVICES = [
+  {
+    id: 'ai-assessment',
+    tag: 'Start Here',
+    name: 'AI Clarity Assessment',
+    price: 997,
+    time: '7 days',
+    hook: 'A productized 7-day consulting engagement. Find your highest-leverage AI moves.',
+    desc: 'Pre-call research, 60-min discovery interview, custom AI tool stack report (priority matrix + 4-day quick-start + financial impact projection), and 30-min review call. Full refund if we don\'t save you 5+ hrs/week.',
+    deliverables: [
+      'Pre-call research dossier',
+      '60-min structured discovery interview',
+      'Priority matrix (high impact + low effort = start here)',
+      '4-day quick-start plan with hourly blocks',
+      'Financial impact projection (hours saved × your rate)',
+      '30-min review call with screen-share walkthrough',
+    ],
+    href: '/ai-audit',
+    featured: true,
+    accent: 'rgba(252,211,77,0.10)',
+    border: 'rgba(252,211,77,0.45)',
+  },
   {
     id: 'content-month',
     tag: 'Most Popular',
@@ -376,8 +399,8 @@ export default function Services() {
             You stop writing posts, fighting brand voice, and tweaking prompts at midnight. We deliver the finished work &mdash; content, branding, sales pages &mdash; so you can get back to coaching.
           </p>
           <div style={{ display: 'flex', justifyContent: 'center', gap: 12, flexWrap: 'wrap' }}>
-            <a href="#services" className="btn-primary" style={{ fontSize: 15 }}>See Services &darr;</a>
-            <Link href="/for-coaches" className="btn-outline" style={{ fontSize: 15 }}>Coach Pricing</Link>
+            <Link href="/ai-audit" className="btn-primary" style={{ fontSize: 15 }}>Start with $997 Assessment &rarr;</Link>
+            <a href="#services" className="btn-outline" style={{ fontSize: 15 }}>See All Services &darr;</a>
           </div>
           <p style={{ maxWidth: 580, margin: '32px auto 0', fontSize: 13, color: 'var(--text-tertiary)', lineHeight: 1.65, fontStyle: 'italic', borderLeft: '3px solid var(--accent)', paddingLeft: 16, textAlign: 'left' }}>
             &ldquo;Total spend on services is many times larger than spend on software. Build companies that deliver services directly through AI.&rdquo;

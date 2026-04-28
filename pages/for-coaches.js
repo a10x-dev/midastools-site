@@ -6,6 +6,7 @@ const STRIPE_STARTER = 'https://buy.stripe.com/fZueVcb8rgXv3ysc8acMM0t'; // $9 s
 const STRIPE_MEGA_PACK = 'https://buy.stripe.com/4gMbJ0dgz4aJ1qkb46cMM0d'; // $97 mega pack — verified in pages/ai-prompt-mega-pack.js:6
 const STRIPE_DFY_CONTENT = 'https://buy.stripe.com/28EdR84K36iR5GAa02cMM0u'; // $199 AI Content Month DFY
 const STRIPE_DFY_BRAND = 'https://buy.stripe.com/cNi14mccv36F3ys1twcMM0v'; // $299 Brand Starter Pack DFY
+const STRIPE_ASSESSMENT = 'https://buy.stripe.com/cNi14m90j6iR7OI8VYcMM03'; // $997 AI Clarity Assessment — see /ai-audit
 
 const PAINS = [
   {
@@ -108,6 +109,24 @@ const TIERS = [
     cta: 'Book Brand Pack — $299',
     accent: '#D1FAE5',
     accentText: '#065F46',
+  },
+  {
+    tag: 'Strategic',
+    name: 'AI Clarity Assessment',
+    price: 997,
+    href: '/ai-audit',
+    desc: 'A 7-day productized consulting engagement. We map your weekly time sinks, build a custom AI tool stack, and deliver a 4-day quick-start to recover 5+ hours/week. Full refund if we don\'t hit the target.',
+    bullets: [
+      'Pre-call research dossier',
+      '60-min discovery interview',
+      'Priority matrix + tool recommendations',
+      '4-day quick-start plan',
+      'Financial impact projection',
+      '30-min review call walkthrough',
+    ],
+    cta: 'Book Assessment — $997',
+    accent: '#FEF3C7',
+    accentText: '#92400E',
   },
 ];
 
@@ -216,6 +235,41 @@ export default function ForCoaches() {
               <span>✓ Lifetime ownership — no subscriptions</span>
               <span>✓ 30-day guarantee</span>
               <span>✓ Works with ChatGPT, Claude, Gemini</span>
+            </div>
+          </div>
+        </section>
+
+        {/* AUDIT BANNER — premium service above kits */}
+        <section style={{ padding: '32px 24px 16px', maxWidth: 880, margin: '0 auto' }}>
+          <div style={{
+            background: 'linear-gradient(135deg, #FEF3C7 0%, #FCD34D 100%)',
+            border: '1px solid #F59E0B',
+            borderRadius: 18,
+            padding: '28px 32px',
+            display: 'flex',
+            gap: 24,
+            alignItems: 'center',
+            flexWrap: 'wrap',
+            justifyContent: 'space-between',
+          }}>
+            <div style={{ flex: '1 1 320px' }}>
+              <div style={{ display: 'inline-block', padding: '4px 10px', background: '#0F172A', color: '#FCD34D', fontSize: 10, fontWeight: 800, borderRadius: 99, marginBottom: 10, letterSpacing: 1 }}>NEW &middot; PREMIUM SERVICE</div>
+              <h3 style={{ fontSize: 22, fontWeight: 900, margin: '0 0 8px', color: '#0F172A', letterSpacing: '-0.5px' }}>
+                Not sure which kit fits? Get a $997 AI Audit first.
+              </h3>
+              <p style={{ fontSize: 15, color: '#1F2937', margin: 0, lineHeight: 1.5 }}>
+                48-hour custom report. We map your bottleneck, recommend the exact AI moves, and tell you which kits (if any) are worth it. <strong>5+ hrs/week recovered or full refund.</strong>
+              </p>
+            </div>
+            <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
+              <a href="/ai-audit" style={{
+                display: 'inline-block', background: '#0F172A', color: '#FFF', fontWeight: 700, fontSize: 14,
+                padding: '13px 22px', borderRadius: 99, textDecoration: 'none', whiteSpace: 'nowrap',
+              }}>Book the Audit &rarr;</a>
+              <a href="/audit-template" style={{
+                display: 'inline-block', background: 'rgba(15,23,42,0.08)', color: '#0F172A', fontWeight: 700, fontSize: 14,
+                padding: '13px 22px', borderRadius: 99, textDecoration: 'none', whiteSpace: 'nowrap',
+              }}>Free template</a>
             </div>
           </div>
         </section>

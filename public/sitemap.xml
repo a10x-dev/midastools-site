@@ -74,9 +74,15 @@
   </url>
   <url>
     <loc>https://www.midastools.co/ai-audit</loc>
-    <lastmod>2026-04-09</lastmod>
+    <lastmod>2026-04-28</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.midastools.co/audit-template</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
   </url>
   <url>
     <loc>https://www.midastools.co/ai-content-detector</loc>
