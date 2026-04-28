@@ -232,11 +232,11 @@ export default function Home() {
           22+ free AI tools, 250+ expert prompts, and lifetime kits for ChatGPT, Claude, Midjourney &amp; more. Used by creators, marketers, founders. No subscription, ever.
         </p>
         <div className="hero-ctas">
-          <a href="/tools" className="btn-primary">Try Free AI Tools &rarr;</a>
-          <a href="https://buy.stripe.com/4gMbJ0dgz4aJ1qkb46cMM0d" className="btn-outline">Get Mega Pack &mdash; $97</a>
+          <a href="/tools" className="btn-primary" data-cta="hero-free-tools">Try Free AI Tools &rarr;</a>
+          <a href="https://buy.stripe.com/4gMbJ0dgz4aJ1qkb46cMM0d" className="btn-outline" data-cta="hero-mega-pack-97">Get Mega Pack &mdash; $97</a>
         </div>
         <p className="price-tag">
-          <strong>Just want 20 starter prompts?</strong> <a href="/starter-pack" style={{ color: '#D97706', fontWeight: 700, textDecoration: 'none' }}>Try for $9 &rarr;</a> &middot; 30-day refund
+          <strong>Just want 20 starter prompts?</strong> <a href="/starter-pack" data-cta="hero-tripwire-9" style={{ color: '#D97706', fontWeight: 700, textDecoration: 'none' }}>Try for $9 &rarr;</a> &middot; 30-day refund
         </p>
         <p style={{ marginTop: '12px', fontSize: '14px', color: '#6B7280', fontFamily: "'Inter', sans-serif" }}>
           Browse: <a href="/bundle" style={{ color: '#3B5FFF', fontWeight: 700, textDecoration: 'none' }}>21 lifetime kits</a> &middot; <a href="/prompts" style={{ color: '#3B5FFF', fontWeight: 600, textDecoration: 'none' }}>Free prompt library</a> &middot; <a href="/quiz" style={{ color: '#3B5FFF', fontWeight: 600, textDecoration: 'none' }}>Take the quiz</a>

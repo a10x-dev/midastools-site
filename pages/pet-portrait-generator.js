@@ -208,9 +208,9 @@ export default function PetPortraitGenerator() {
           </div>
         </div>
 
-        {/* Top Conversion Banner — direct path to paid */}
+        {/* Top Conversion Banner — $9 tripwire (primary, lowest-friction entry) */}
         <div style={{
-          background: 'linear-gradient(135deg, #7C3AED 0%, #4C1D95 100%)',
+          background: 'linear-gradient(135deg, #F59E0B 0%, #D97706 100%)',
           borderRadius: 16,
           padding: '18px 22px',
           marginBottom: 28,
@@ -219,30 +219,30 @@ export default function PetPortraitGenerator() {
           justifyContent: 'space-between',
           gap: 16,
           flexWrap: 'wrap',
-          boxShadow: '0 8px 24px rgba(124,58,237,0.18)',
+          boxShadow: '0 8px 24px rgba(245,158,11,0.22)',
         }}>
           <div style={{ flex: '1 1 260px', color: '#FFF' }}>
-            <div style={{ fontSize: 11, fontWeight: 800, letterSpacing: 1, color: '#FCD34D', marginBottom: 4 }}>⚡ SKIP THE GENERATOR</div>
-            <div style={{ fontSize: 16, fontWeight: 700, lineHeight: 1.35 }}>Get 150+ ready-to-paste image prompts — pet portraits, Ghibli, action figures, cards &amp; more.</div>
+            <div style={{ fontSize: 11, fontWeight: 800, letterSpacing: 1, color: '#FFF', marginBottom: 4 }}>⚡ SKIP THE GENERATOR &middot; TRY US FOR $9</div>
+            <div style={{ fontSize: 16, fontWeight: 700, lineHeight: 1.35 }}>20 hand-picked AI prompts (incl. image prompts) — instant download, 30-day refund.</div>
           </div>
-          <a href={STRIPE_IMAGE_PACK} style={{
+          <a href="/starter-pack" data-cta="tripwire-banner-top" style={{
             display: 'inline-block',
-            background: '#FCD34D',
-            color: '#4C1D95',
+            background: '#FFF',
+            color: '#92400E',
             fontWeight: 800,
             fontSize: 14,
             padding: '12px 22px',
             borderRadius: 99,
             textDecoration: 'none',
             whiteSpace: 'nowrap',
-            boxShadow: '0 4px 12px rgba(252,211,77,0.35)',
-          }}>Get Pack — $29 →</a>
+            boxShadow: '0 4px 12px rgba(0,0,0,0.12)',
+          }}>Get 20 Prompts — $9 &rarr;</a>
         </div>
 
-        {/* $9 Tripwire Alternative */}
+        {/* $29 Image Pack — secondary upsell for image-specific buyers */}
         <div style={{ textAlign: 'center', marginBottom: 28, marginTop: -16 }}>
-          <a href="/starter-pack" style={{ color: '#92400E', fontSize: 13, fontWeight: 600, textDecoration: 'none', borderBottom: '1px dashed #D97706', paddingBottom: 2 }}>
-            Budget? Start with our 20 best prompts for $9 →
+          <a href={STRIPE_IMAGE_PACK} data-cta="image-pack-secondary" style={{ color: '#7C3AED', fontSize: 13, fontWeight: 600, textDecoration: 'none', borderBottom: '1px dashed #A78BFA', paddingBottom: 2 }}>
+            Want 150+ image-only prompts instead? Image Pack &mdash; $29 &rarr;
           </a>
         </div>
 

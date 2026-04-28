@@ -208,12 +208,12 @@ export default function ActionFigureGenerator() {
           boxShadow: '0 8px 24px rgba(59,95,255,0.2)',
         }}>
           <div style={{ flex: '1 1 260px', color: '#FFF' }}>
-            <div style={{ fontSize: 11, fontWeight: 800, letterSpacing: 1, color: '#FCD34D', marginBottom: 4 }}>⚡ WANT MORE VIRAL STYLES?</div>
-            <div style={{ fontSize: 16, fontWeight: 700, lineHeight: 1.35 }}>150+ copy-paste prompts: action figures, Ghibli, royal pets, trading cards, cyberpunk &amp; more.</div>
+            <div style={{ fontSize: 11, fontWeight: 800, letterSpacing: 1, color: '#FFF', marginBottom: 4 }}>⚡ SKIP THE GENERATOR &middot; TRY US FOR $9</div>
+            <div style={{ fontSize: 16, fontWeight: 700, lineHeight: 1.35 }}>20 hand-picked AI prompts (incl. action figure + viral image styles) — instant download.</div>
           </div>
-          <a href={STRIPE_IMAGE_PACK} style={{
+          <a href="/starter-pack" data-cta="tripwire-banner-top" style={{
             display: 'inline-block',
-            background: '#FCD34D',
+            background: '#FFF',
             color: '#1E3AE0',
             fontWeight: 800,
             fontSize: 14,
@@ -221,14 +221,14 @@ export default function ActionFigureGenerator() {
             borderRadius: 99,
             textDecoration: 'none',
             whiteSpace: 'nowrap',
-            boxShadow: '0 4px 12px rgba(252,211,77,0.35)',
-          }}>Get Pack — $29 →</a>
+            boxShadow: '0 4px 12px rgba(0,0,0,0.12)',
+          }}>Get 20 Prompts — $9 &rarr;</a>
         </div>
 
-        {/* $9 Tripwire Alternative */}
+        {/* $29 Image Pack — secondary upsell for image-specific buyers */}
         <div style={{ textAlign: 'center', marginBottom: 28, marginTop: -16 }}>
-          <a href="/starter-pack" style={{ color: '#92400E', fontSize: 13, fontWeight: 600, textDecoration: 'none', borderBottom: '1px dashed #D97706', paddingBottom: 2 }}>
-            Budget? Start with our 20 best prompts for $9 →
+          <a href={STRIPE_IMAGE_PACK} data-cta="image-pack-secondary" style={{ color: '#1E3AE0', fontSize: 13, fontWeight: 600, textDecoration: 'none', borderBottom: '1px dashed #3B5FFF', paddingBottom: 2 }}>
+            Want 150+ image-only prompts instead? Image Pack &mdash; $29 &rarr;
           </a>
         </div>
 
