@@ -101,11 +101,14 @@ iam@armando.mx · Midas Tools
 
 ## Sequence + tracking
 
-| # | Recipient | Sent | Reply by | Follow-up |
-|---|---|---|---|---|
-| 1 | hiedeh@tavassoli.com | [PENDING] | 2026-05-02 | 1 follow-up @ 4d if no reply |
-| 2 | pastordoug@valleygrace.net | [PENDING] | 2026-05-02 | 1 follow-up @ 4d if no reply |
-| 3 | cbrannan@criterioncounsel.com | [PENDING] | 2026-05-05 (longer for legal) | 1 follow-up @ 7d if no reply |
+| # | Recipient | Sent | Reply by | Follow-up | Resend ID |
+|---|---|---|---|---|---|
+| 1 | hiedeh@tavassoli.com | 2026-04-28 (Resend) | 2026-05-02 | 1 follow-up @ 4d if no reply | e1f00089-6e6a-4b05-a7af-11950771d04b |
+| 2 | pastordoug@valleygrace.net | 2026-04-28 (Resend) | 2026-05-02 | 1 follow-up @ 4d if no reply | 887ad3cf-c197-47cc-b3a7-84a93aa59b01 |
+| 3 | cbrannan@criterioncounsel.com | 2026-04-28 (Resend) | 2026-05-05 (longer for legal) | 1 follow-up @ 7d if no reply | dfa249f9-2cd9-4f10-b2c6-5261334e00c6 |
+
+**Sent via:** `.founder/tools/send-pitches.py` (Resend HTTP API, from=hello@midastools.co, reply_to=iam@armando.mx).
+**3/3 OK on first send (after adding User-Agent header to bypass Cloudflare 1010 block).**
 
 ## Why these 3 are the right 3
 
