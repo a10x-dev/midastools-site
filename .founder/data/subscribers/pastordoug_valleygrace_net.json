@@ -3,21 +3,40 @@
   "local": "pastordoug",
   "domain": "valleygrace.net",
   "enriched_at": "2026-04-28T04:04:26.796809+00:00",
+  "manually_verified_at": "2026-04-28T04:30:00+00:00",
   "domain_class": "custom_domain",
-  "domain_signals": {
-    "title": "VALLEY GRACE - Home",
-    "meta_description": "Valley Grace is a church that exists to encourage you in your private and public worship of God, to help you grow both personally and in community with Christ, and to help provide opportunities to serve Christ in His church and the world.",
-    "og_description": "Valley Grace is a church that exists to encourage you in your private and public worship of God, to help you grow both personally and in community with Christ, and to help provide opportunities to serve Christ in His church and the world.",
-    "body_snippet": "VALLEY GRACE - Home .wsite-section-content > .container { padding:5px !important; } div.paragraph { margin-bottom: 0px !important; } .wsite-elements.wsite-not-footer:not(.wsite-header-elements) div.paragraph, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) p, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-block .product-title, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-description, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .wsite-form-field label, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .wsite-form-field label, #wsite-content div.paragraph, #wsite-content p, #wsite-content .product-block .product-title, #wsite-content .product-description, #wsite-content .wsite-form-field label, #wsite-content .wsite-form-field label, .blog-sidebar div.paragraph, .blog-sidebar p, .blog-sidebar .wsite-form-field label, .blog-sidebar .wsite-form-field label {font-family:\"Lora\" !important;font-weight:400 !important;} #wsite-content div.paragraph, #wsite-content p, #wsite-content .product-block .product-title, #wsite-content .product-description, #wsite-content .wsite-form-field label, #wsite-content .wsite-form-field label, .blog-sidebar div.paragraph, .blog-sidebar p, .blog-sidebar .wsite-form-field label, .blog-sidebar .wsite-form-field label {color:#424f44 !important;} .wsite-elements.wsite-footer div.paragraph, .wsite-elements.wsite-footer p, .wsite-elements.wsite-footer .product-block .pro",
-    "fetched_url": "https://www.valleygrace.net/",
-    "status": 200
+  "confidence": "HIGH",
+  "person": {
+    "name": "Doug Courter",
+    "role": "Associate Pastor of Church Ministries",
+    "tenure": "Since May 2011 (14+ years at Valley Grace)",
+    "prior_experience": "14 years senior pastor experience prior",
+    "education": ["B.A. University of Toledo", "Th.M. Grace Theological Seminary"],
+    "side_gigs": [
+      "Adjunct IT instructor at Hagerstown Community College",
+      "Adjunct IT instructor at Blue Ridge Community College",
+      "Board President + Database Manager for Three-Strands missions org"
+    ]
   },
-  "industry_hints": [
-    "ministry"
-  ],
-  "geography_hints": [],
-  "best_fit_product": "kit_content_creator",
-  "fit_reason": "Ministry \u2014 Content Creator Kit for sermons/newsletters",
+  "company": {
+    "name": "Valley Grace Brethren Church",
+    "denomination": "Charis Fellowship",
+    "address": "17310 Gay St, Hagerstown MD 21740",
+    "service_times": "Sunday 10:15am, in-person + livestream + on-demand"
+  },
+  "industry_hints": ["ministry", "education_adjunct", "tech_literate"],
+  "geography_hints": ["US/MD", "Hagerstown"],
+  "best_fit_product": "dfy_content_month",
+  "fit_reason": "Tech-literate pastor (IT instructor) = unicorn early-adopter for AI-in-ministry. Highest-confidence DFY-ready non-realtor sub on the list.",
   "manual_research_needed": false,
-  "outreach_recommendation": ""
+  "warm_pilot_priority": "TOP-2",
+  "outreach_recommendation": "Free pilot: 4 sermon outlines (his choice of texts) + 1 missions newsletter for Three-Strands. Frame around 'AI tools for tech-literate pastors' — meets him at his actual sophistication level. Outcome: church-vertical case study.",
+  "ai_pain_points": [
+    "Sermon prep and outlines (preaches regularly per sermonaudio.com)",
+    "Weekly bulletins / church comms",
+    "Missions newsletters for Three-Strands (board president responsibility)",
+    "IT class lecture prep (community college teaching)",
+    "Database admin tasks for Three-Strands"
+  ],
+  "tone_for_outreach": "Tech-literate, no condescension. Recognize his IT background. Don't oversimplify."
 }

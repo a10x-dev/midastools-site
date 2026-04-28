@@ -1,140 +1,149 @@
-# Free DFY Pilot Outreach — Hiedeh @ tavassoli.com
-**Drafted:** 2026-04-28 (Session 132, post-pivot ship)
+# Free DFY Pilot Outreach — Negar Tavassoli (REALTOR®, North Vancouver)
+**Drafted:** 2026-04-28 (Session 132 — corrected after research miss)
 **Status:** Drafted, NOT SENT — awaiting Armando approval
-**Why her:** Personal-brand consultant (custom domain `tavassoli.com`) = strongest coach/consultant fit in our 20-sub list. She just received the coach_pivot broadcast (~03:20 UTC).
+**Subscriber email of record:** `hiedeh@tavassoli.com`
+**Real target:** Negar Tavassoli, REALTOR® at Sutton Group-West Coast Realty, North Vancouver BC
 
 ---
 
-## Recommended send timing
-Wait 24–48h after the broadcast lands so she has time to read it, then follow with this personal note. Sending immediately back-to-back can feel pushy.
+## ⚠️ Why this draft replaces the prior version
 
-**Suggested fire window: Apr 30 morning (US Eastern) — Wed midday.**
+The Apr-28 04:00 UTC draft pitched her our $199 AI Content Month for a "personal-brand consultant" case study. That was wrong — `tavassoli.com` is the personal domain of Negar Tavassoli, a real estate agent/property manager at Sutton Group-West Coast Realty in North Vancouver BC. Hiedeh / Hayedeh is a Persian female first name — likely Negar's family member, alt-name, or team member sharing the family domain.
 
-## Send via
-`GET /api/send-email?key=mt-outreach-2026&to=hiedeh@tavassoli.com&subject=...&body=...` — or send manually from your `hello@midastools.co` inbox if you want truly 1:1 vibes.
+**Right service for a realtor:** $149 Listing Optimizer DFY (rewrites property listings with AI-optimized copy), not $199 Content Month.
 
----
-
-## Subject line options (pick one)
-
-1. ✉️ **"Hiedeh — quick honest pitch (free month of content for tavassoli.com)"**
-2. ✉️ "Free 30 days of content for tavassoli.com — in exchange for one favor"
-3. ✉️ "Built this for solo consultants like you — want to be our flagship?"
-
-I'd send #1. Honest, named, specific, low-key.
+**Right pitch surface:** Send to `hiedeh@tavassoli.com` (the email we have) but reference Negar's work directly. If Hiedeh isn't Negar herself, Hiedeh will forward.
 
 ---
 
-## Body (plain text — Resend wraps in basic HTML)
+## Send timing
+Recommend Apr 30 morning (PT) — gives her 2 days separation from the broadcast she received Apr 28. **Do NOT send today.**
+
+## Subject line options
+
+1. ✉️ **"Free pilot: rewrite 3 of your MLS listings (in exchange for one favor)"** ← my pick
+2. ✉️ "Hiedeh — quick offer for tavassoli.com (free listing rewrites)"
+3. ✉️ "AI-rewritten listings, free this week, in exchange for a case study"
+
+#1 is most specific to the actual realtor use case.
+
+---
+
+## Body (plain text)
 
 ```
-Hi Hiedeh,
+Hi Hiedeh (and Negar, if you're the one reading this) —
 
-You signed up to MidasTools a few weeks ago — thank you. I sent the
-broader founder note to the whole list yesterday (the one about going
-all-in on coaches and consultants). This is a more personal one, just
-to you.
+I noticed you signed up to MidasTools a few weeks ago. Thanks for being
+on the list.
 
-Quick context: of the people on our subscriber list, you're one of
-maybe 5 who actually fit the niche we're now building for —
-solo consultants/coaches who sell expertise, not products.
+I'll be direct: I run a small AI productivity company and we just
+narrowed our focus to solo service professionals who'd benefit from
+done-for-you content — agents like Negar are exactly who we built our
+$149 Listing Optimizer service for.
 
-So I want to make you a direct offer:
+What I'd like to do this week is build the work for free, in exchange
+for one specific favor.
 
-We'll build you our $199 "AI Content Month" package — completely free —
-in exchange for 3 things:
+What you'd get (free, no strings):
+  • 3 of your live MLS listings rewritten with AI-optimized copy
+    (engagement-driven, SEO-friendly, before/after side-by-side)
+  • 4 Instagram captions for your most recent property posts
+  • A "neighborhood guide" blog post for one of your North Vancouver
+    farm areas (drives long-tail SEO)
+  • A short 1-page positioning brief: how your listings stack up
+    against the top-3 agents in North Van by content quality
 
-  1. A 5-minute intake call (or async form, your call) so we can build
-     it right
-  2. Honest feedback on the deliverable when it lands
-  3. Permission to use the work as our flagship case study (your name +
-     a brief quote, only if you're happy with the output — total veto
-     otherwise)
+What I'd ask in return:
+  • 5-minute reply with feedback — useful, not useful, what was off
+  • If you're happy with the output, permission to use one rewrite
+    (anonymized if you prefer) as a flagship case study on
+    midastools.co/services
+  • Total veto if you don't like the work
 
-What you'd get inside the Content Month:
-  • 10 LinkedIn posts + 10 IG captions + 10 Twitter posts (your voice,
-    your audience)
-  • 4 newsletter editions
-  • Brand voice cheat sheet
-  • Posting calendar with optimal times
+Why I'm doing this: we need ONE realtor case study before we can
+honestly pitch this to other Lower Mainland agents. You're the right
+shape — established practice at Sutton Group, real listings live now,
+North Van market with bilingual reach. If the pilot works, my goal
+would be to be worth $200/month to your practice in 6 months
+(retainer for ongoing listing + content work, optional, no pressure).
 
-Turnaround: 48 hours from intake.
+If yes — just reply with a link to one of your live listings (or three,
+if you have favorites) and we'll have it back to you in 48 hours.
 
-Why I'm doing this: I need a real consultant case study before I can
-sell this honestly to other consultants. You're the right shape —
-established personal brand, solo, exactly the customer we want to be
-worth $1,500/month to in six months.
-
-If you're in, just reply with one word and I'll send the intake. If
-you're not — totally fine, the $9 starter pack and free tools stay
-yours forever.
+If no — totally fine, the free generators and starter pack stay yours.
 
 — Armando
 hello@midastools.co
-midastools.co/for-coaches
+midastools.co/services
 
-P.S. If you have a friend/peer who's a better fit for this and you'd
-rather pass it along, I'd genuinely appreciate the intro. Same offer
-applies to whoever you send.
+P.S. If you'd rather pass this to a colleague at Sutton who'd be a
+better fit, I'd genuinely appreciate the intro. Same offer applies.
 ```
 
 ---
 
-## Why this email is calibrated this way
+## Why this is calibrated this way
 
 | Choice | Reason |
 |---|---|
-| Personal first line referencing the broadcast | Stops her thinking "another mass email" — proves human |
-| "Maybe 5 of you fit" | Honest scarcity, not fake urgency |
-| 3 specific asks (call, feedback, permission) | Removes ambiguity about what "free" costs her |
-| Total veto on case study | Removes the "what if it sucks" objection |
-| "Worth $1,500/month to in 6 months" | Anchors the future relationship — signals we're building a real business, not free-tier mining |
-| One-word reply ask | Lowest friction commitment |
-| P.S. asks for referral | Even on a "no", we extract value |
+| "Hi Hiedeh (and Negar, if you're the one reading this)" | Acknowledges the domain ambiguity transparently, removes weirdness |
+| References Sutton Group + North Van + Negar by name | Proves we did our research; not a mass blast |
+| Specific deliverable: "3 live MLS listings + 4 IG captions + 1 neighborhood guide" | Concrete, not vague. She can visualize the value. |
+| Mentions "bilingual reach" obliquely | Hints we know about the Iranian-Canadian buyer community in Vancouver — without overplaying it |
+| "$200/month in 6 months" anchor | Signals real business intent, not a free-tier mining attempt |
+| One-link reply ask | Lowest-friction commitment |
+| P.S. asks for referral | Fallback value extraction even on a "no" |
 
 ---
 
 ## What we ship if she says yes
 
-**Hour 1–2:** Intake call/form (5 min for her). Capture:
-- Her exact ICP
-- 5 client wins to reference
-- Her best transformation story
-- Voice samples (3 pieces of her existing content)
-- 90-day business goal
+**Hour 1–2:** Pull her 3 live listings from REW.ca / Sutton MLS. Identify the property type, price point, key features.
 
-**Hour 3–48:** Build deliverable.
-- 10 LinkedIn (hook + body + CTA, 1500 chars optimized)
-- 10 IG (caption + hashtags + carousel structure where relevant)
-- 10 Twitter (5 threads + 5 singles)
-- 4 newsletter editions (subject + body, 600-900 words each)
-- Brand voice cheat sheet (1-pager)
-- Posting calendar (when to post each piece)
+**Hour 3–4:** Use prompts from our Mega Pack (specifically: "Real Estate Listing Rewriter" and "Hero Property Description") + Claude/GPT-4o to produce 3 rewrites, side-by-side with originals. Highlight changes in color.
 
-**Hour 48:** Ship via email as Google Doc + ZIP. Ask for feedback.
+**Hour 4–5:** Generate 4 IG captions with hashtag sets for her most recent IG posts (pull from `negartavassolipropertymanagement` FB feed if IG handle isn't visible).
 
-**Hour 72–96:** Iterate based on feedback (1 round included per /services policy).
+**Hour 5–7:** Write a 1,200-word neighborhood guide for one of her farm areas (Lower Lonsdale, Edgemont, Deep Cove). Include 5 local landmarks, school catchment notes, transit, recent sale activity.
 
-**Week 2:** Pull testimonial + case study. Publish on /for-coaches as social proof for next 100 visitors.
+**Hour 7:** 1-page positioning brief comparing her listings to top-3 North Van agents by content quality.
+
+**Hour 8:** Ship via email as Google Doc + ZIP. Include a Loom walkthrough (90 sec).
+
+**Total cost:** 6-8 hours founder time, ~$10 in API tokens.
 
 ---
 
-## Cost / risk
+## ROI math
 
-**Time cost:** 6–10 hours founder time (mostly AI-assisted with strong human polish).
-**Money cost:** ~$15 in API tokens.
-**Risk:** She says yes but ghosts on feedback. Mitigation: deliverable still has external value as marketing material even without her case study.
-**Upside:** First real DFY case study + testimonial + logo on /for-coaches + plausible $1,500/mo ongoing relationship.
+If she says yes + provides testimonial + permission to use case study:
+- Real estate Plan B sub-vertical activates with proof
+- /for-coaches gets first social proof block
+- Plausible $200/mo retainer with Negar herself
+- Foot in the door at Sutton Group North Van (50+ agents)
 
-ROI math: If 1 in 10 visitors who see her case study converts at $97 (Mega Pack), and the case study drives an extra 50 visitors/mo → $485/mo incremental revenue from this pilot alone. Plus retainer optionality with Hiedeh herself.
+If she ghosts:
+- We still own the deliverable (anonymize, use as marketing portfolio piece)
+- 6-8 hours sunk, but assets reusable
+
+If she declines:
+- No cost beyond the email
+- P.S. referral path may still produce value
 
 ---
 
-## If Armando wants to send via API
+## Send via
 
+**Option A (recommended):** Manual send from `hello@midastools.co` Gmail/Resend interface — feels more personal than API.
+
+**Option B:** API (URL-encoded subject + body):
 ```bash
-# Replace SUBJECT and BODY with URL-encoded versions
-curl -X GET "https://www.midastools.co/api/send-email?key=mt-outreach-2026&to=hiedeh@tavassoli.com&subject=Hiedeh%20%E2%80%94%20quick%20honest%20pitch%20(free%20month%20of%20content%20for%20tavassoli.com)&body=Hi%20Hiedeh%2C%0A%0AYou%20signed%20up%20to%20MidasTools..."
+curl -G "https://www.midastools.co/api/send-email" \
+  --data-urlencode "key=mt-outreach-2026" \
+  --data-urlencode "to=hiedeh@tavassoli.com" \
+  --data-urlencode "subject=Free pilot: rewrite 3 of your MLS listings (in exchange for one favor)" \
+  --data-urlencode "body=$(cat body.txt)"
 ```
 
-Or just paste the plain-text body into Gmail and send from `hello@midastools.co`.
+**Option C (highest reply rate):** Send from Armando's personal Gmail rather than `hello@midastools.co`. Personal sender = less likely to be filtered as marketing.
