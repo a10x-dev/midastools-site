@@ -1,0 +1,23 @@
+{
+  "email": "pastordoug@valleygrace.net",
+  "local": "pastordoug",
+  "domain": "valleygrace.net",
+  "enriched_at": "2026-04-28T04:04:26.796809+00:00",
+  "domain_class": "custom_domain",
+  "domain_signals": {
+    "title": "VALLEY GRACE - Home",
+    "meta_description": "Valley Grace is a church that exists to encourage you in your private and public worship of God, to help you grow both personally and in community with Christ, and to help provide opportunities to serve Christ in His church and the world.",
+    "og_description": "Valley Grace is a church that exists to encourage you in your private and public worship of God, to help you grow both personally and in community with Christ, and to help provide opportunities to serve Christ in His church and the world.",
+    "body_snippet": "VALLEY GRACE - Home .wsite-section-content > .container { padding:5px !important; } div.paragraph { margin-bottom: 0px !important; } .wsite-elements.wsite-not-footer:not(.wsite-header-elements) div.paragraph, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) p, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-block .product-title, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-description, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .wsite-form-field label, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .wsite-form-field label, #wsite-content div.paragraph, #wsite-content p, #wsite-content .product-block .product-title, #wsite-content .product-description, #wsite-content .wsite-form-field label, #wsite-content .wsite-form-field label, .blog-sidebar div.paragraph, .blog-sidebar p, .blog-sidebar .wsite-form-field label, .blog-sidebar .wsite-form-field label {font-family:\"Lora\" !important;font-weight:400 !important;} #wsite-content div.paragraph, #wsite-content p, #wsite-content .product-block .product-title, #wsite-content .product-description, #wsite-content .wsite-form-field label, #wsite-content .wsite-form-field label, .blog-sidebar div.paragraph, .blog-sidebar p, .blog-sidebar .wsite-form-field label, .blog-sidebar .wsite-form-field label {color:#424f44 !important;} .wsite-elements.wsite-footer div.paragraph, .wsite-elements.wsite-footer p, .wsite-elements.wsite-footer .product-block .pro",
+    "fetched_url": "https://www.valleygrace.net/",
+    "status": 200
+  },
+  "industry_hints": [
+    "ministry"
+  ],
+  "geography_hints": [],
+  "best_fit_product": "kit_content_creator",
+  "fit_reason": "Ministry \u2014 Content Creator Kit for sermons/newsletters",
+  "manual_research_needed": false,
+  "outreach_recommendation": ""
+}

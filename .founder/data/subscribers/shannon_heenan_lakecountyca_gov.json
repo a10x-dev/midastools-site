@@ -1,0 +1,17 @@
+{
+  "email": "shannon.heenan@lakecountyca.gov",
+  "local": "shannon.heenan",
+  "domain": "lakecountyca.gov",
+  "enriched_at": "2026-04-28T04:04:30.817950+00:00",
+  "domain_class": "gov_edu_nonprofit",
+  "domain_signals": {
+    "status": 403,
+    "fetched_url": "https://lakecountyca.gov/"
+  },
+  "industry_hints": [],
+  "geography_hints": [],
+  "best_fit_product": "uncertain",
+  "fit_reason": "",
+  "manual_research_needed": true,
+  "outreach_recommendation": "Domain reachable but no industry signal. Visit the site manually + cross-reference with LinkedIn before outreach."
+}

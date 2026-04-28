@@ -1,0 +1,21 @@
+{
+  "email": "info@ac-printmedia.de",
+  "local": "info",
+  "domain": "ac-printmedia.de",
+  "enriched_at": "2026-04-28T04:04:29.148840+00:00",
+  "domain_class": "custom_domain",
+  "domain_signals": {
+    "title": "F\u00fcr diese Domain wurden keine Inhalte hinterlegt.",
+    "meta_description": "",
+    "og_description": "",
+    "body_snippet": "\ufeff F\u00fcr diese Domain wurden keine Inhalte hinterlegt. --> * { padding: 0; margin: 0; border: 0; font-family: Arial,Helvetica,sans-serif; background-color:#123b72; color: #fff; } html { font-size: 14px; } body { padding: 20px; padding-top: 0; background-color:#123b72; } img { width: 100% } a { color: inherit; } #content { margin: auto; max-width: 800px; text-align: center; } #content ul { display: flex; justify-content: center; justify-items: start; } #content li { list-style-type: none; margin: 10px; } #content li a { font-weight: bold; font-size: 1rem; } www.goneo.de Kontakt Datenschutz Impressum",
+    "fetched_url": "https://www.ac-printmedia.de/",
+    "status": 200
+  },
+  "industry_hints": [],
+  "geography_hints": [],
+  "best_fit_product": "uncertain",
+  "fit_reason": "No clear industry signal \u2014 needs manual LinkedIn lookup before outreach",
+  "manual_research_needed": true,
+  "outreach_recommendation": "Domain reachable but no industry signal. Visit the site manually + cross-reference with LinkedIn before outreach."
+}
