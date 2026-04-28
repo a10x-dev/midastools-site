@@ -7,3 +7,5 @@ subscribers.csv
 .env*.local
 .founder/.gh_gist_token
 .founder/.devto_token
+.founder/.resend_key
+.founder/.stripe_key

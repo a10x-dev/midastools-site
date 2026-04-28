@@ -11,8 +11,27 @@ import os
 import sys
 import json
 import urllib.request
+from pathlib import Path
 
-RESEND_KEY = "re_6T5io8B9_7FGQYGpx6RPjT7cjuxbh4q2M"
+
+def load_resend_key() -> str:
+    """Read Resend API key from env or .founder/.resend_key (gitignored).
+    Never hardcode — GitGuardian will catch it and the key has to be rotated.
+    """
+    env = os.environ.get("RESEND_API_KEY")
+    if env:
+        return env.strip()
+    key_file = Path(__file__).parent.parent / ".resend_key"
+    if key_file.exists():
+        return key_file.read_text().strip()
+    sys.exit(
+        "ERROR: No Resend API key found.\n"
+        "  Set RESEND_API_KEY env var, OR\n"
+        "  Put the key in .founder/.resend_key (gitignored)."
+    )
+
+
+RESEND_KEY = load_resend_key()
 FROM = "Armando from MidasTools <hello@midastools.co>"
 REPLY_TO = "iam@armando.mx"
 
