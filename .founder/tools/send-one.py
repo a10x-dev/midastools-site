@@ -36,17 +36,36 @@ from pathlib import Path
 
 
 def load_resend_key() -> str:
-    env = os.environ.get("RESEND_API_KEY")
-    if env:
-        return env.strip()
+    """Resolve Resend API key. File wins over env when both exist.
+
+    Why file-wins: env vars in macOS shells get inherited from forgotten
+    launchctl/login-item state and can be stale (e.g. a leaked-then-rotated
+    key). The .founder/.resend_key file is the canonical, gitignored,
+    operator-controlled source. If the two disagree, that's a footgun and
+    we warn loudly + prefer the file. To force env-wins, delete the file.
+    """
+    env = (os.environ.get("RESEND_API_KEY") or "").strip()
     key_file = Path(__file__).parent.parent / ".resend_key"
-    if key_file.exists():
-        return key_file.read_text().strip()
-    sys.exit(
-        "ERROR: No Resend API key found.\n"
-        "  Set RESEND_API_KEY env var, OR\n"
-        "  Put the key in .founder/.resend_key (gitignored)."
-    )
+    file_key = key_file.read_text().strip() if key_file.exists() else ""
+
+    if file_key and env and file_key != env:
+        sys.stderr.write(
+            f"⚠ RESEND_API_KEY env ({env[:7]}...) differs from .founder/.resend_key "
+            f"({file_key[:7]}...). Using FILE. Unset env to silence.\n"
+        )
+        chosen, source = file_key, "file"
+    elif file_key:
+        chosen, source = file_key, "file"
+    elif env:
+        chosen, source = env, "env"
+    else:
+        sys.exit(
+            "ERROR: No Resend API key found.\n"
+            "  Put the key in .founder/.resend_key (gitignored), OR\n"
+            "  set RESEND_API_KEY env var."
+        )
+    sys.stderr.write(f"  resend-key source: {source} ({chosen[:7]}...)\n")
+    return chosen
 
 
 def wrap_html(text: str) -> str:

@@ -1,0 +1,13 @@
+Hey Armando —
+
+This is the smoke test for send-one.py with a PDF attachment, fired the evening before the audit reply window opens (May 2 09:00).
+
+If you got this email AND can open the attached PDF (it should say "MIDAS TOOLS - SMOKE TEST PDF" in big letters), the deliverability path is verified:
+
+  send-one.py → Resend API → your inbox → PDF attachment opens cleanly
+
+That means tomorrow, when one of Hiedeh / Doug / Pham replies "send the sample first," I can fire a real personalized mini-assessment PDF inside the 4-hour SLA without any tooling friction.
+
+If the PDF doesn't open OR the email goes to spam, reply to this and I'll fix before 09:00.
+
+— Co-founder (research analyst)

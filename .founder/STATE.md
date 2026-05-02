@@ -24,6 +24,60 @@
 | 12 | ai-saas-founder-prompts-cheatsheet | gist/bc4451 |
 | 13 | claude-opus-4-7-prompts-cheatsheet | gist/ccef07 |
 
+## Session 150b (May 1, 19:30 local) — PRE-STAGED 3 PROSPECT MINI-ASSESSMENT OUTLINES + TRACKER
+
+### What I did
+After the smoke-test fix landed, kept momentum by pre-staging the deliverable that fires on type-B replies. Compresses the 4-hr SLA path from cold-research-then-deliver to fill-template-and-send. 3 outlines on disk, 1 tracker on disk, all referenced from the reply-handling playbook.
+
+### ✅ Shipped this session
+- **`.founder/sales/mini-assessment-outline-pham.md`** — fully unblocked. Includes verbatim Criterion Counsel firm-voice excerpt, references their real Bose v. Rongstar $2.9M counterfeit judgment, real Lanham Act §32/§43(a)/§501-cited Form 17 takedown narrative as the AFTER, and the IP-attorney-mandatory privacy disclaimer.
+- **`.founder/sales/mini-assessment-outline-doug.md`** — partially unblocked. Researched Doug's expositional preaching pattern (verse-by-verse Ecclesiastes, July 2025 was Eccl 9-10), drafted a 4-step Claude prompt sequence keyed to his Charis Fellowship/Brethren tradition + Hagerstown MD demographic. Bonus tracks for IT-instructor + Three-Strands missions newsletter use cases.
+- **`.founder/sales/mini-assessment-outline-negar.md`** — research-blocked (REW.ca Cloudflare, Sutton Facebook login wall). Mitigation: built a representative North Vancouver upmarket BEFORE/AFTER + a "send me your real listing URL and I'll regenerate within 2 hours" personalization hook that turns the gap into a workflow demo. Includes the bilingual Persian variant as the niche-moat play (with checkpoint to omit if no native reviewer available).
+- **`.founder/sales/audit-replies-tracker.md`** — accountability log: pre-staged-asset table, empty reply-log table ready to fill, reply-type cheat-sheet, SLA accountability rules, May 10 decision-data branches.
+
+### What I did NOT do (deliberately)
+- Did not fully generate the PDFs tonight — leaves room for fresh AFTER samples generated against the actual reply context (e.g. Negar's actual listing URL, Doug's currently-active sermon series). Stale pre-baked PDFs would feel canned.
+- Did not try to bypass REW.ca's Cloudflare via headless tools beyond a single Playwright/agent-browser availability check — both failed; the personalization-hook mitigation is more honest than a fabricated listing.
+- Did not pitch any of the 17 non-viable subs at $997 (audience-product-fit hypothesis still standing).
+
+### KPI movement this session
+Zero direct. Indirect: turned the 4-hr SLA into a ~30-min SLA by pre-loading the 60-min research step. If any of the 3 prospects replies B-type tomorrow, the speed advantage is the difference between "felt rushed" and "felt prepared."
+
+### Total session 150 + 150b shipped
+- send-one.py smoke-tested + bug fixed (revoked-key footgun)
+- 3 Resend tools hardened against env-vs-file silent stale-key failure
+- 3 prospect outlines pre-staged
+- audit-replies-tracker.md created
+- 2 real Resend IDs in Armando's inbox for PDF rendering verification
+
+### Confidence
+80% — outlines are solid, tracker is honest, but Negar's research blocker is a real reduction in trust signal vs Pham/Doug. Mitigation hook is the best available without a real-browser session.
+
+## Session 150 (May 1, 18:45 local) — SMOKE-TEST CAUGHT REVOKED-KEY FOOTGUN T-14H
+
+### What I did
+Smoke-tested send-one.py end-to-end with PDF attachment **before** the May 2 09:00 audit reply window opens. First real send 401'd. Traced to: shell env var `RESEND_API_KEY` was holding the LEAKED+REVOKED Apr-28 key (`re_6T5io8B9...`) and `load_resend_key()` checked env-first → silent stale key, silent send failure during the window.
+
+### ✅ Shipped this session
+- **`.founder/tools/make-test-pdf.py`** — emits a 744-byte valid PDF for smoke-testing attachment paths. One-shot tool, no deps.
+- **`.founder/sales/smoke-test-mini-assessment.pdf`** + `smoke-test-body.txt` — fixture pair for any future Resend-attachment regression test.
+- **Hardened `load_resend_key()` across all 3 Resend tools** (send-one.py, send-pitches.py, send-survey.py): file-wins-over-env when both exist, loud stderr warning if they disagree, key-source + first-7-chars logged to stderr on every send. The footgun cannot bite silently again.
+- **2 real Resend sends** to iam@armando.mx as proof-of-life: id `df353a35-8af3-48f6-95ba-88101f5c7348` (clean run with env unset) + id `cb928df9-452b-4214-a4b1-d69d087a2a75` (hardened run with stale env still set, file-key wins). Both with the test PDF attached.
+
+### Why this matters more than it looks
+If the real reply window had opened with this bug latent, the first prospect's "send the sample first" reply would have triggered a silent 401 — I would have seen "✓ sent" appear NOWHERE because send-one.py exits non-zero, but I might have logged it as "sent" in the tracker before checking the exit code. We'd have blown the 4-hour SLA on the very first lead.
+
+### What I did NOT do (deliberately)
+- Did not ship more content (per `motion-vs-progress` principle — the channel is dark, more shipments don't move the KPI).
+- Did not hunt the env-var source to ground (rabbit-hole; the hardening prevents the failure mode without needing to find the root cause).
+- Did not pre-stage the 3 prospect mini-assessment outlines yet — that's the next-most-valuable pre-window work (research Negar's REW.ca listings, Doug's sermon archive, Pham's case work, draft BEFORE/AFTER samples, leave PDF gen for post-reply). Saving for the next check-in once Armando confirms the smoke test PDF rendered cleanly.
+
+### KPI movement this session
+Zero direct. Indirect: prevented a SLA-blowing failure during a window that opens in 14 hours. Counterfactual saving = 1-3 reply windows preserved.
+
+### Confidence
+85% — the hardened load_resend_key proven-correct via a real test that exercises the exact failure path.
+
 ## Session 149 (May 1, 14:30 local) — PRE-BUILT MAY 10 DECISION BRANCHES
 
 ### Strategic posture
