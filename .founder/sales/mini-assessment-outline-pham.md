@@ -9,7 +9,7 @@
 ## What I looked at (paste verbatim into PDF)
 
 - criterioncounsel.com/about-us (firm voice + positioning)
-- /recent-judgments (Bose v. Rongstar $2.9M counterfeit judgment)
+- /recent-judgments (Bose Corporation v. Rongstar Digital — $2,904,927.83 counterfeit judgment, featured on homepage banner)
 - /publications (6 LA Lawyers articles — practice depth signal)
 - 2-page lean firm site, no blog, no news section
 
@@ -17,7 +17,7 @@
 
 **Tool:** Claude (200K context, no training on inputs) with a custom system prompt encoding Criterion's house style — formal-but-direct, evidence-led, statute-cited.
 **Task:** First-draft demand letters and Amazon counterfeit-takedown packages.
-**Why this first:** The Bose case shows the firm's volume play is brand-protection enforcement at scale. Each takedown package + each demand letter is 1-3 billable hours of structured drafting. AI compresses the first-pass to ~20 minutes, freeing partner time for strategy + court appearances. Client intake + LinkedIn marketing are #2 and #3 — lower hourly leverage.
+**Why this first:** The Bose Corporation v. Rongstar Digital judgment ($2,904,927.83) shows the firm's volume play is brand-protection enforcement at scale. Each takedown package + each demand letter is 1-3 billable hours of structured drafting. AI compresses the first-pass to ~20 minutes, freeing partner time for strategy + court appearances. Client intake + LinkedIn marketing are #2 and #3 — lower hourly leverage.
 
 ## BEFORE (typical current workflow, ~70 words)
 
@@ -62,7 +62,7 @@ Ready when you are. — Armando · midastools.co/ai-audit
 ## DELIVERY CHECKLIST (for actual fire-day)
 
 - [ ] Confirm reply name (C. Brannan vs Pham vs other partner)
-- [ ] Verify Bose v. Rongstar reference is still on /recent-judgments (don't cite if removed)
+- [x] Verify Bose v. Rongstar reference (verified May 2 — $2,904,927.83 displayed on homepage banner, case title "BOSE CORPORATION V. RONGSTAR DIGITAL")
 - [ ] Generate the AFTER excerpt fresh in Claude using the saved prompt + generic placeholders
 - [ ] Add the privacy disclaimer before the "What you'd get" section
 - [ ] Filename: `mini-assessment-pham-YYYYMMDD.pdf` OR `mini-assessment-brannan-YYYYMMDD.pdf` (match the replier)
