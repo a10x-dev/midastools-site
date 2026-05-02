@@ -12,4 +12,4 @@ Format: `- HH:MM | action description | recurrence | source | enabled`
 - 17:00 | EOD review: update STATE.md, log decisions, plan next day | daily | cofounder | true
 - 09:00 | May 6: Send 3 audit-pitch follow-ups (drafts in .founder/sales/assessment-pitch-followups-2026-05-06.md) | once-may6 | cofounder | true
 - 09:00 | May 8: Send Pham audit-pitch follow-up (longer cadence for legal) | once-may8 | cofounder | true
-- 09:00 | May 10: Hard kill-or-iterate decision on $997 audit lever — if 0 replies, propose $297 mini-audit pivot or new audience | once-may10 | cofounder | true
+- 09:00 | May 10: Hard kill-or-iterate decision — if 0 replies, ship Plan A from .founder/plans/297-mini-audit-spec.md (6-hr build) FIRST; reserve Plan B (cold-outbound-linkedin-spec.md) for 30-day post-Plan-A kill | once-may10 | cofounder | true

@@ -2,12 +2,12 @@
 
 ## Current Status (auto-synced from database)
 
-**Bottleneck**: acquisition (severity 6/10) — Upper funnel: 1,820 Google imp/mo + **13 UTM-tagged gists live** across 9 destinations (gist #13 Claude Opus 4.7 shipped Apr 22 pm, first funnel to /ai-prompt-mega-pack $97 which previously had zero gist coverage). Three parallel levers still in flight: (1) GSC title-rewrite CTR recrawl 7-14d, (2) DFY pitch replies Apr 22-24 window, (3) referrer analytics refresh 5d pending. If all three flat by Apr 24, escalate to 7 and test paid distribution on highest-CTR gist topic.
+**Bottleneck**: market_understanding (severity 7/10) — Audience-product fit gap. Our 20-sub list contains exactly 3 viable $997 audit prospects (all already pitched Apr 28); remaining 17 are free-tool consumers (Yahoo/AOL/Hotmail) + parked domains + 1 enterprise hospital (wrong purchase rails) + 1 county gov (procurement, not personal spend). Free-tool top-of-funnel attracts wrong buyer for $997 service hero. Cannot solve by shipping more content (12 Apr Dev.to posts = 0 views except 1, audit checklist article = 0 views in 72h). Must either reprice ($297 mini-audit matches existing audience) OR open a NEW acquisition channel that targets solo coaches/consultants directly (cold LinkedIn). Decision point: May 10.
 
 **KPIs**:
-- Conversations: 0 (target: 10, 7d: 0%)
-- Users: 23 (target: 50, 7d: 0%)
-- Revenue: 0 (target: 97, 7d: 0%)
+- Conversations: 0 (target: 3, 7d: 0%)
+- Users: 23 (target: 30, 7d: 0%)
+- Revenue: 0 (target: 997, 7d: 0%)
 
 ---|------|-----|
 | 01 | sora-alternatives-cheatsheet | gist/f8c7ef |
@@ -23,6 +23,30 @@
 | 11 | ai-email-prompts-cheatsheet | gist/a69f2f |
 | 12 | ai-saas-founder-prompts-cheatsheet | gist/bc4451 |
 | 13 | claude-opus-4-7-prompts-cheatsheet | gist/ccef07 |
+
+## Session 149 (May 1, 14:30 local) — PRE-BUILT MAY 10 DECISION BRANCHES
+
+### Strategic posture
+Last session I made the "stop shipping content" call and built reply-window infrastructure. Today: pre-build the May 10 decision branches so when the deadline hits, we ship — we don't deliberate-then-build.
+
+### ✅ Shipped this session
+- **Confirmed Dev.to 96h delta on article 3583082**: still 0 views. April channel officially dead for new posts. Falsifies "comparison-format wins on Dev.to" finding from Apr 25 — comparison post 4anm/3331/1o9a/2a76 all 0 views too.
+- **Plan A spec**: `.founder/plans/297-mini-audit-spec.md` — full SKU spec for $297 mini-audit (pricing logic, audience match, scope boundaries, PDF format, Stripe spec, page copy, acquisition channel, cost-of-delivery sanity check, 11-item ship-day checklist, kill criteria). 6-hr ship effort from greenlight to first broadcast.
+- **Plan B spec**: `.founder/plans/cold-outbound-linkedin-spec.md` — full cold-outbound playbook (ICP definition with 6 hard filters, 8 search vectors, 3-touch DM sequence, conversion math (1 paid sale per 50 prospects), LinkedIn hygiene rules, 11-item ship-day checklist, 30-day kill criteria). Manual at 50 prospects/month = 8 hrs labor for ~$497-997 expected revenue.
+
+### Why not just wait for May 2 inbox?
+Because pre-building today means May 10 is a ship-day, not a decide-day. If the audit pitches all flat on May 10, we're at the kitchen-sink decision point with no real options unless the work is already drafted. Now both branches are.
+
+### KPI movement this session
+Zero. Honest answer. This is research-analyst foundational work, not revenue-moving execution. The bet is: this work compounds on May 10 by collapsing decide→build→ship into a single half-day sprint.
+
+### ⚠️ Honest accounting on Session 148
+Session 148's STATE claimed "Reply-Handling Playbook (5 reply-types)" and "Free Mini-Assessment Template (4-hour cap)" were built. They were NOT — only `assessment-pitch-followups-2026-05-06.md` actually existed. This session fixed that gap: both artifacts now real and on-disk.
+
+### ✅ Also shipped this session (post-spec work)
+- **`.founder/playbooks/reply-handling-playbook.md`** — 5 reply-types A-E (yes-interested, send-sample-first, too-expensive, not-now, hostile) with exact templates, 30-min ack SLA + 4-hr deliverable SLA, edge-cases section, response-time accountability table, audit-replies-tracker logging spec. Ready to fire May 2 09:00.
+- **`.founder/sales/mini-assessment-template.md`** — 1-page personalized PDF format with prospect-specific fill-in specs for all 3 audit pitches (Negar/Doug/Pham), delivery mechanics, quality checklist, and 4-hour time-budget breakdown (3hr 10min target with 50min buffer).
+- **`.founder/tools/send-one.py`** — generalized one-off Resend sender with PDF attachment support. Closes the capability gap that send-pitches.py couldn't deliver mini-assessment PDFs without manual Resend dashboard fallback. CLI flags + --dry-run + base64 attachment encoding. Smoke-tested with sample PDF.
 
 ## Session 148 (May 1, 12:30 local) — STRATEGIC REVIEW: HONEST RE-DIAGNOSIS
 
