@@ -70,5 +70,14 @@
     "use_count": 0,
     "created_at": "2026-05-03T08:55:00Z",
     "approved": true
+  },
+  {
+    "name": "audit-signal-monitor.py",
+    "description": "Watch the live subscriber blob for audit-tagged signups (source=audit-template, ai-audit, or any field containing 'audit-*' / 'clarity-assessment'). Prints a snapshot vs the prior run; exits 10 if a NEW audit-tagged sub appeared (signal to fire 1-to-1 outreach via send-one.py within 4h). Reads jsonblob 019dee81 directly. Hourly cron candidate. State at .founder/state/audit-monitor-last.json. Built 2026-05-03 to instrument the audit-curious funnel that's currently invisible — the 20 baseline subs are all source='site' fallback, anything tagged 'audit-*' is a $297/$997 prospect.",
+    "language": "python",
+    "path": "audit-signal-monitor.py",
+    "use_count": 1,
+    "created_at": "2026-05-03T17:42:00Z",
+    "approved": true
   }
 ]

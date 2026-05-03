@@ -7,7 +7,7 @@ Items marked `[cofounder]` were scheduled by you — adjust as needed.
 Format: `- HH:MM | action description | recurrence | source | enabled`
 
 ## Entries
-- 09:00 | Morning standup: review metrics, check Dev.to stats, check subscriber count, prioritize day | daily | cofounder | true
+- 09:00 | Morning standup: review metrics, check Dev.to stats, run audit-signal-monitor.py + metrics-snapshot.py, prioritize day | daily | cofounder | true
 - 12:00 | Audit-window check: any reply to Hiedeh/Doug/Pham? If yes, fire Reply-Handling Playbook within 30min | daily-may1-may10 | cofounder | true
 - 17:00 | EOD review: update STATE.md, log decisions, plan next day | daily | cofounder | true
 - 09:00 | May 6: Send 3 audit-pitch follow-ups (drafts in .founder/sales/assessment-pitch-followups-2026-05-06.md) | once-may6 | cofounder | true
