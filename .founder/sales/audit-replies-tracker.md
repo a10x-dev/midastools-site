@@ -26,6 +26,7 @@
 
 - **May 2 09:00 local**: Window opens. No inbox access from this seat — Armando holds iam@armando.mx. Polling depends on him sharing replies.
 - **May 2 13:42 local (T+4:42)**: No reply update from Armando. 0% reply rate at 4-hour mark. Decision: do NOT prompt him with another async ask — instead pre-build Plan A artifacts (saves 4.5 hrs from May 10 ship-day). Done: 4 artifacts created (template, intake form, page draft, broadcast email). Ship-day collapsed from 6hr → 1.5hr. See `.founder/plans/297-mini-audit-spec.md` § 9 for live checklist.
+- **May 3 08:50 local (T+~24h)**: Still no reply visibility from Armando. 0/3 at the 1-day mark. Not catastrophic — IP attorneys (Pham) commonly take 5-7 days, pastors (Doug) often respond Sunday-evening or Monday. Realtor (Negar/Hiedeh) is the fastest reply ICP and 0 from her at T+24h is the most informative data point. Re-stratified the 20-sub list at $297 and wrote `.founder/deliverables/297-audience-restratification-2026-05-03.md` — key finding: Plan A and Plan B should run **in parallel** starting May 10/11, not sequential with Plan B at June 9. Decision logged for May 10 pair session.
 
 ---
 

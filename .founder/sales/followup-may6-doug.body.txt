@@ -1,0 +1,13 @@
+Doug,
+
+Following up on the assessment note from last week. I built a small
+"sermon-prep AI workflow" using Claude that takes a passage reference +
+your last 3 sermon transcripts and produces a 90% draft outline in your
+voice — the kind of thing the assessment would normally surface.
+
+Want me to send the workflow + a 5-min Loom showing how I'd run it on
+this Sunday's sermon? Free, no strings.
+
+Reply "send it" and I'll have it in your inbox before Friday.
+
+— Armando

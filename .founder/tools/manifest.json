@@ -52,5 +52,23 @@
     "use_count": 0,
     "created_at": "2026-05-01T15:00:00Z",
     "approved": true
+  },
+  {
+    "name": "fire-may6-followups.sh",
+    "description": "Fire the May 6 audit-pitch follow-ups (Hiedeh + Doug) via send-one.py with pre-staged body files at .founder/sales/followup-may6-{hiedeh,doug}.body.txt. Dry-run by default; pass --send to actually send. Pre-flight: verify no replies received from Hiedeh/Doug since Apr 28. Smoke-tested 2026-05-03 (HTML render + payload shape correct). Reduces May 6 morning to a single command.",
+    "language": "bash",
+    "path": "fire-may6-followups.sh",
+    "use_count": 0,
+    "created_at": "2026-05-03T08:55:00Z",
+    "approved": true
+  },
+  {
+    "name": "fire-may8-followups.sh",
+    "description": "Fire the May 8 audit-pitch follow-up (Pham via C. Brannan) — 10-day cadence (longer than Hiedeh/Doug 8-day) because IP attorneys reply slower. Dry-run by default; pass --send. Pre-flight: verify no reply since Apr 28. Smoke-tested 2026-05-03. Body at .founder/sales/followup-may8-pham.body.txt.",
+    "language": "bash",
+    "path": "fire-may8-followups.sh",
+    "use_count": 0,
+    "created_at": "2026-05-03T08:55:00Z",
+    "approved": true
   }
 ]

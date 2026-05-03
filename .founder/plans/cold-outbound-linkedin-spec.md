@@ -141,15 +141,20 @@ That's the floor. If reply rate is 8% (conservative) we still get 4 prospects en
 
 ## 8. May 10 ship-day checklist (if greenlit)
 
-- [ ] Open `.founder/prospects/linkedin-solo-coaches-2026-05-10.md`
-- [ ] Run the 8 search vectors → save 50 prospects with the template above
-- [ ] Score + rank → keep top 25 by score
-- [ ] Draft 25 personalized Touch-1 DMs in `.founder/outreach/linkedin-touch1-2026-05-10.md`
+- [x] **PRE-BUILT 2026-05-03**: `.founder/prospects/linkedin-solo-coaches-2026-05-10.template.md` — 50-slot scaffold, ICP scoring rubric, 8 search vectors, top-25 selection table. On ship-day: drop `.template` from filename and fill in.
+- [x] **PRE-BUILT 2026-05-03**: `.founder/outreach/linkedin-touch1-template-2026.md` — 4 niche variants (Coach / Consultant / Advisor / Founder), Touch-2/3 templates lifted from § 5, niche-deliverable bank with 10 pre-thought deliverables for Touch-2.
+- [x] **PRE-BUILT 2026-05-03**: `.founder/outreach/linkedin-replies-tracker.template.md` — send-log table, Day-14 metrics checkpoint with kill thresholds, reply log structure, lessons-captured section.
+- [ ] Open the prospect template, drop `.template` from filename
+- [ ] Run the 8 search vectors → fill 50 prospect entries (~4 hrs manual; or test Vibe Prospecting MCP for compression)
+- [ ] Score + rank → keep top 25 by score in the top-25 table
+- [ ] Personalize 25 Touch-1 DMs by filling bracketed slots in the template variants
 - [ ] Send 5/day for 5 days (LinkedIn rate-limit safety) starting May 11
 - [ ] Schedule Touch-2 sends at T+5 (cron entry in SCHEDULE.md)
 - [ ] Schedule Touch-3 sends at T+12 (cron entry)
-- [ ] Track reply rates in `.founder/outreach/linkedin-replies-tracker.md`
+- [ ] Track reply rates in `.founder/outreach/linkedin-replies-tracker.md` (template ready)
 - [ ] At Day 14: pull stats → if reply rate <5%, kill; if >10%, scale to 50 prospects/wk
+
+**Effort compression:** Pre-build saved ~3 hours of formatting/template work on ship-day. Remaining ship-day effort: 4-5 hrs research + 2 hrs Touch-1 personalization (or compressed via Vibe Prospecting if validated).
 
 ---
 

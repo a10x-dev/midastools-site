@@ -12,4 +12,7 @@ Format: `- HH:MM | action description | recurrence | source | enabled`
 - 17:00 | EOD review: update STATE.md, log decisions, plan next day | daily | cofounder | true
 - 09:00 | May 6: Send 3 audit-pitch follow-ups (drafts in .founder/sales/assessment-pitch-followups-2026-05-06.md) | once-may6 | cofounder | true
 - 09:00 | May 8: Send Pham audit-pitch follow-up (longer cadence for legal) | once-may8 | cofounder | true
-- 09:00 | May 10: Hard kill-or-iterate decision — if 0 replies, ship Plan A from .founder/plans/297-mini-audit-spec.md (6-hr build) FIRST; reserve Plan B (cold-outbound-linkedin-spec.md) for 30-day post-Plan-A kill | once-may10 | cofounder | true
+- 09:00 | May 10: Hard kill-or-iterate decision — if 0 replies, ship Plan A from .founder/plans/297-mini-audit-spec.md (~1.5hr ship-day, 6 of 12 items pre-built) | once-may10 | cofounder | true
+- 09:00 | May 11: Begin Plan B prep — research 50 LinkedIn solo-coach prospects per cold-outbound-linkedin-spec.md (PARALLEL with Plan A reply-handling, not sequential — see .founder/deliverables/297-audience-restratification-2026-05-03.md) | once-may11 | cofounder | true
+- 09:00 | May 15: Plan B first wave — send 25 personalized cold LinkedIn DMs (or kill Plan B if research showed audience is wrong) | once-may15 | cofounder | true
+- 09:00 | May 22: Plan A retro — if 0 sales from broadcast, kill Day-2 send cadence; Plan B wave 1 reply-handling | once-may22 | cofounder | true

@@ -2,6 +2,32 @@
 
 Your long-term memory. Persists across all sessions. This is your brain — treat it well.
 
+## 🟢 SESSION 152 (May 3, 08:50 local) — RE-STRATIFIED LIST AT $297 + PRE-STAGED MAY 6/8 FIRE SCRIPTS (T+~24H)
+
+**Did**: At T+~24h into the audit reply window with still no inbox visibility from this seat, I re-read all 20 enriched subscriber JSONs and stress-tested the audience-product-fit hypothesis at the $297 price point (vs the original $997 logic from Session 148). Then pre-staged the May 6/8 audit-pitch follow-ups as smoke-tested one-command fire scripts so those mornings are mechanical.
+
+**Strategic finding**: At $297 the audience-product-fit hypothesis SOFTENS but does not INVERT. The 14 free-provider subs go from "auto-disqualified" to "eligible but unverified" — but with zero positive research signals on any of them, the broadcast remains a Hail Mary, not a portfolio of qualified prospects. Plan A broadcast alone is unlikely to clear the $997 KPI ($297 × 1-3% reply rate × ~20 subs = 0-1 sale, median 0). The right move is to run **Plan A and Plan B in parallel** starting May 10/11, not Plan B as a 30-day fallback at June 9. This contradicts the current schedule and is now the recommendation logged for the May 10 pair session.
+
+**Shipped**:
+1. `.founder/deliverables/297-audience-restratification-2026-05-03.md` — Tier A/B/C re-stratification of all 20 subs with $997 vs $297 wallet-match logic side-by-side, 2 decision_log entries embedded, and a proposed parallel-not-sequential schedule for Plan A + Plan B.
+2. `.founder/sales/followup-may6-{hiedeh,doug}.body.txt` + `followup-may8-pham.body.txt` — plain-text body files extracted from the May 6 follow-up draft. Stable inputs reviewable/editable independent of the fire script.
+3. `.founder/tools/fire-may6-followups.sh` + `.founder/tools/fire-may8-followups.sh` — wrappers around send-one.py with all parameters pre-wired. Dry-run default; `--send` for live. **Both smoke-tested 2026-05-03** — payload, HTML wrap, subject lines, special chars all clean. May 6 morning is now: `bash .founder/tools/fire-may6-followups.sh --send` (single command after pre-flight check).
+4. `.founder/SCHEDULE.md` — added 3 new entries for the parallel Plan A+B sequencing (May 11 begin Plan B prep, May 15 Plan B wave 1 send, May 22 Plan A retro). Updated May 10 entry with the new ~1.5hr ship effort.
+5. `.founder/sales/audit-replies-tracker.md` — T+~24h status update logged with cross-link to the re-stratification deliverable.
+6. `.founder/tools/manifest.json` — registered the 2 fire scripts.
+
+**Learned**:
+- Re-running the audience-fit analysis at a different price point catches assumption drift cheaply. Session 148-me concluded "17 of 20 are non-viable" without spelling out "non-viable AT WHAT PRICE." That's the kind of unstated dependency that decays into bad strategy if not surfaced.
+- Honest finding: $297 doesn't unlock the free-provider tier as much as I hoped — eligibility ≠ evidence. The acquisition channel is still the bottleneck, not the price point.
+- Build the kill-criteria into the deliverable BEFORE running the experiment. Falsification criteria embedded in the re-stratification doc let future-me know what evidence would invalidate the conclusion.
+
+**Pending — next session / future**:
+- May 6 09:00: pre-flight check (confirm no Hiedeh/Doug reply since Apr 28), then run `bash .founder/tools/fire-may6-followups.sh --send`. Log Resend IDs in audit-replies-tracker.md.
+- May 8 09:00: same flow with `fire-may8-followups.sh`.
+- May 10 09:00: pair session for kill-or-iterate decision. Bring the re-stratification deliverable + the parallel-not-sequential argument. Get green-light or pushback BEFORE shipping Plan A.
+
+**Confidence**: 80%. Files verified on disk + smoke tests pass + reasoning is conservative on reply-rate assumptions. The parallel-vs-sequential argument depends on judgment, not data — Armando might prefer to wait for Plan A's actual signal before committing Plan B resources, in which case my recommendation gets revised down at the pair session.
+
 ## 🟢 SESSION 151 (May 2, 13:42 local) — PRE-BUILT PLAN A SHIP-DAY ARTIFACTS (T+4:42 INTO REPLY WINDOW)
 
 **Did**: Used the dead time inside the May 2-10 audit reply window (no inbox visibility from this seat as Armando holds iam@armando.mx) to pre-build 6 Plan A artifacts that collapse the May 10 ship day from 6 hrs → ~1 hr 20 min:

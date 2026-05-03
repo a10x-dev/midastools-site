@@ -24,6 +24,58 @@
 | 12 | ai-saas-founder-prompts-cheatsheet | gist/bc4451 |
 | 13 | claude-opus-4-7-prompts-cheatsheet | gist/ccef07 |
 
+## Session 152 (May 3, 08:50 local) — RE-STRATIFIED LIST AT $297 + PRE-STAGED MAY 6/8 FIRE SCRIPTS (T+~24H INTO REPLY WINDOW)
+
+### Strategic posture
+T+~24h since reply window opened May 2 09:00. Still no inbox visibility from this seat — Armando holds the inbox and hasn't relayed. Per `armando-async-asks`, no async ping. Per `motion-vs-progress`, no new content. Per `pre-build-while-waiting`, used the dead time to (a) re-stratify the 20-sub list at the $297 price point — testing whether the audience-product-fit hypothesis softens enough to make Plan A a credibly-targeted play vs. a Hail Mary, and (b) pre-stage the May 6/8 follow-up sends as smoke-tested one-command fire scripts.
+
+### ✅ Shipped this session
+- **`.founder/deliverables/297-audience-restratification-2026-05-03.md`** — full Tier A/B/C re-stratification of all 20 enriched subscriber JSONs at the $297 wallet-match logic vs the original $997 logic. Honest finding: at $297 the 14 free-provider subs go from "auto-disqualified" to "eligible but unverified" — that softens the hypothesis but does NOT invert it. Plan A broadcast alone is unlikely to clear the $997 KPI ($297 × 1-3% reply rate × ~20 subs = 0-1 sale, median 0). Strategic recommendation: Plan A and Plan B should run in **parallel** starting May 10/11, not sequential with Plan B at June 9. Two decision_log entries embedded.
+- **`.founder/sales/followup-may6-{hiedeh,doug}.body.txt`** + **`.founder/sales/followup-may8-pham.body.txt`** — plain-text body files for the 3 follow-up emails (extracted from `.founder/sales/assessment-pitch-followups-2026-05-06.md`). Stable inputs that can be reviewed/edited independently of the fire script.
+- **`.founder/tools/fire-may6-followups.sh`** + **`.founder/tools/fire-may8-followups.sh`** — wrappers around send-one.py with subject + recipient + body-file pre-wired. Dry-run by default (`--send` flag for live). Smoke-tested both — payload shape, HTML wrap, subject lines, special chars all render clean. **May 6 morning is now: `bash .founder/tools/fire-may6-followups.sh --send`** (single command, after the pre-flight check).
+- **`.founder/SCHEDULE.md`** — added 3 new schedule entries for the parallel Plan A+B sequencing: May 11 (begin Plan B prep), May 15 (Plan B wave 1 send), May 22 (Plan A retro). Updated May 10 entry to reflect new ~1.5hr ship-time (down from 6hr).
+- **`.founder/sales/audit-replies-tracker.md`** — logged T+~24h status update with link to today's re-stratification deliverable.
+- **`.founder/tools/manifest.json`** — registered the 2 new fire scripts.
+
+### Honest finding from the re-stratification
+The Session 148 conclusion ("only 3 of 20 viable") was framed at $997. At $297 the math softens for 14 free-provider subs — they're now ELIGIBLE for a personal-spend purchase. But "eligible" ≠ "high-conversion." Without LinkedIn validation or open-rate signal on any of them, the broadcast remains a Hail Mary, not a portfolio of qualified prospects. **Implication: the audience-product-fit bottleneck is real even at $297.** The right response is parallel Plan A + Plan B, NOT a 30-day sequential wait between them.
+
+### Spec checklist update
+- `.founder/plans/297-mini-audit-spec.md` § 9 — unchanged from Session 151; still 6 of 12 items ☑ pre-built. May 10 ship-day effort is still ~1.5hr.
+- May 6/8 follow-up sends: pre-built, smoke-tested, fire-on-one-command.
+
+### What I did NOT do (deliberately)
+- Did NOT do the 70min × 14 LinkedIn lookups on Tier C subs. That manual research has higher leverage as Plan B's 50-prospect cold-outbound list, not as Plan A's targeting (the broadcast goes to all 20 anyway).
+- Did NOT pitch any Tier B/C subscriber at $997 today. The window is still open on the 3 fired Apr 28 — wait for that signal first.
+- Did NOT send a Telegram update to Armando (per `armando-async-asks` — saving for May 10 pair session unless a reply lands).
+- Did NOT modify the Plan A broadcast targeting (it's already going to all 20 active subs, which is the right call given the Tier C analysis).
+
+### KPI movement this session
+**Zero direct.** Honest answer. This is research-analyst work to derisk the May 10 decision and collapse the May 6/8 sends to one-command fires. The bet: when May 10 hits with (likely) 0 replies, the parallel-not-sequential framing means Plan B starts May 11 instead of June 9 — 17-day acceleration on the kill-or-iterate signal.
+
+### Confidence
+80% — files verified on disk; smoke tests pass; reasoning is conservative on reply-rate assumptions. Lower than 85% because the parallel-vs-sequential argument depends on judgment about expected reply rates with no actual data, and Armando might disagree on May 10 about resourcing both plans simultaneously.
+
+### Session 152 continuation — Plan B template pre-build + tooling probe
+
+After the re-stratification + May 6/8 fire scripts shipped, kept momentum by applying the same `pre-build-while-waiting` playbook to Plan B that was applied to Plan A in Sessions 151-152 part 1. Plan B's spec § 8 ship-day was 5 unchecked template-build items + 4 hrs prospect research; pre-build collapses 3 of those items to template-on-disk, drops ship-day prep effort by ~3 hrs.
+
+**Shipped (continuation):**
+- **`.founder/prospects/linkedin-solo-coaches-2026-05-10.template.md`** — 50-slot prospect scaffold with ICP scoring rubric (6 hard filters + 4 soft signals + 5 hard rejects), 8 search vectors, top-25 selection table for the Touch-1 send batch.
+- **`.founder/outreach/linkedin-touch1-template-2026.md`** — 4 niche-specific Touch-1 DM variants (Coach / Consultant / Advisor / Founder), Touch-2/3 templates lifted from spec § 5, niche-deliverable bank with 10 pre-thought deliverables matched to common niches (life coach, biz coach, strategy consultant, fractional CFO/CMO, solo SaaS, career coach, realtor, pastor [Doug], IP attorney [Pham]).
+- **`.founder/outreach/linkedin-replies-tracker.template.md`** — send-log table, Day-14 metrics checkpoint with kill thresholds (per spec § 10), reply log structure for qualitative dataset, lessons-captured section.
+- **`.founder/plans/cold-outbound-linkedin-spec.md` § 8** — checklist updated: 3 of 9 items now ☑ pre-built. Remaining items remain mechanical/research-driven (LinkedIn search, scoring, personalization, sending).
+- **`.founder/plans/plan-b-tooling-options.md`** — documents 3 prospect-research options (manual / Vibe Prospecting / Firecrawl agent), with decision tree for May 10/11 to test compression options before falling back to manual. Probed Vibe Prospecting `autocomplete` for `job_title=coach` — coach taxonomy is real (10 useful variants). Did NOT burn credits on speculative cost-estimation; documented the probe sequence for future-self.
+
+**Capability gap logged:** LinkedIn-native prospect discovery (post-history + follower-count + paid-offer in one query) — neither Vibe Prospecting nor Firecrawl fully solves this. At ≤50 prospects/month manual is fine; at 200+/month we'd need a custom pipeline. Defer until 1st cold-outbound sale lands.
+
+**What I did NOT do (deliberately):**
+- Did NOT run a real Vibe Prospecting export/match-prospects — Plan B not green-lit yet, speculative credit-burn before May 10 = waste.
+- Did NOT pre-fill the 50 prospect entries with real names — assumes commitment to Plan B before May 10 pair session.
+- Did NOT write personalized Touch-1 messages — same reason; bracketed slots filled on ship-day.
+
+**Total session 152 deliverables:** 9 files shipped (re-stratification deliverable + 3 follow-up body files + 2 fire scripts + 3 Plan B template files + tooling-options memo) + spec checklist updates + tracker updates + STATE/MEMORY updates. Plan A May 10 ship effort: ~1.5 hrs (unchanged). Plan B May 10/11 ship effort: ~5-6 hrs research + 2 hrs personalization (compressible to ~30 min if Vibe Prospecting probe succeeds).
+
 ## Session 151 (May 2, 13:42 local) — PRE-BUILT PLAN A SHIP-DAY ARTIFACTS (T+4:42 INTO REPLY WINDOW)
 
 ### Strategic posture
