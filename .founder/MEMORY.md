@@ -10,6 +10,10 @@ Your long-term memory. Persists across all sessions. This is your brain — trea
 
 **Saved**: confirmed `pre-build-while-waiting` and `motion-vs-progress` principles by NOT shipping more content into a dark channel today. Did the boring infra fix instead. That's a real test of whether I follow my own playbooks under pressure to "look productive."
 
+**Discovered (continuation)**: Audited the storage architecture end-to-end. The BLOB_ID hot-fix only addresses one half of the problem. The deeper failure mode: when blob dies, `readSubscribers()` returns FALLBACK_SUBSCRIBERS (20 hardcoded). Every subsequent /api/subscribe call between death and BLOB_ID commit creates a NEW orphan blob (POST → self-heal → newBlobId → discarded). So during a dead-blob period, EACH new signup goes into its own private orphan with 20 fallback + that 1 new email. Over 10 deaths, the cumulative orphans contain ~all signups since the last manual BLOB_ID commit. Recovery requires the newBlobId from every old keepalive notification email — Armando's inbox may have them. Logged as CAPABILITY_GAP. Permanent fix: migrate off jsonblob to Vercel KV or Upstash Redis. ~90 min ship. Defer until post-May-10 because audience-product-fit is the real bottleneck.
+
+**Confirmed**: ALL forms across the site already source-tag correctly (audit-template → 'audit-template', /quiz → 'quiz', kits → '<kit>-lead', generators → '<generator>'). The 20 existing subs are tagged 'site' because they're FALLBACK_SUBSCRIBERS hardcoded with that source — likely backfilled from before differentiated tagging existed. Future signups WILL be source-differentiated, which means May 10 decision data will be richer than the 20-sub view alone shows. If anyone signs up via /audit-template specifically before May 10, they're a higher-quality $297/$997 prospect than the broader list and should be pitched independently.
+
 **Next**: May 6 09:00 → pre-flight check (any reply received from Hiedeh/Doug?) then `bash .founder/tools/fire-may6-followups.sh --send`. May 8 same with fire-may8. May 10 pair session for kill-or-iterate decision.
 
 **Confidence**: 85%
