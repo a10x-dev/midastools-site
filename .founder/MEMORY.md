@@ -2,6 +2,47 @@
 
 Your long-term memory. Persists across all sessions. This is your brain — treat it well.
 
+## 🟢 SESSION 155 (May 4, 04:39 local) — MARKET INTEL: $997 IS WRONG, PLANS A+B BOTH FAIL DATA
+
+### TL;DR
+First real ICP intelligence in 42 days. Delegated 30-min research to Explore agent: 8 named competitors, 21 cited sources, full pricing-landscape analysis. Strategic finding rejects BOTH pre-built May 10 plans:
+
+| Plan | Recommendation | Why |
+|---|---|---|
+| Plan A — reprice to $297 | ❌ NOT supported | Price isn't the blocker. Cheaper reinforces "generic advice" objection. Lands below AgentsLabs €97 tripwire while keeping $997-tier scope = incoherent. |
+| Plan B — cold LinkedIn | ❌ NOT supported | Wrong channel for cold discovery. LinkedIn is a closing channel after niche-warm signal. |
+| Plan C — kill | ⚠️ Premature | Category is real and transacting. 6 days + 3 pitches isn't a market test. |
+| **Plan D — reposition to $1,499** | ✅ Recommended | Match the productized real-audit tier where Promptful/levelupwithai/ChatDoctor compete. Add tripwire + community distribution. |
+
+### Key data points (from .founder/deliverables/ai-audit-icp-intel-2026-05-04.md)
+- **$997 sits in a structural dead zone.** Productized tier is $750-$1,500 (Promptful $750, levelupwithai $500-1,500), premium tier is $1,999-$5,000+ (ChatDoctor $1,999/$4,999, ConsultKit $5K anchor). $1,500 is modal.
+- **Dominant buyer objection: "vague deliverables / generic advice I could have Googled / six-month YouTube experts."** Trust + scope clarity > price. Documented across 4 independent sources.
+- **ICP aggregates at: SmarterX Slack (10K+), Marketing AI Institute (100K+ subs), AI For Small Business Substack, Coachvox AI newsletter, r/smallbusiness mega-threads, Late Checkout community.** Not cold LinkedIn.
+- **Levelupwithai's actual cold-LinkedIn play** is targeted to *team leads in regulated industries (healthcare/legal/finance)* — pre-qualified ICP, not solopreneur-spray.
+
+### Plan D specifics for May 10 consideration
+1. **Reposition (not reprice) to $1,499** — productized real-audit tier.
+2. **Publish 4-artifact deliverable spec on /ai-audit**: workflow map + AI-readiness scored matrix + top-3 recommendations with time-savings + human-in-loop design. Every named competitor uses this template; we don't. This kills the "generic advice" objection.
+3. **Distribute through SmarterX Slack + Coachvox AI newsletter + AI For Small Business Substack + r/smallbusiness engagement** — NOT cold LinkedIn DM.
+4. **Ship $97-$197 async tripwire** as the front door (matches AgentsLabs €97 / Promptful $175). The 3 cold pitches at $997 didn't reply because there was no $97 step before $997.
+5. **Push decision gate to May 20** — 10+ pitches at the new positioning gives a fair signal.
+
+### Telegram sent to Armando
+Strategic input, not async-ask. Armando still owns the May 10 call.
+
+### What I deliberately did NOT do
+- Did NOT pre-build Plan D's full Stripe SKU + tripwire + page (4-decision repositioning, not binary like Plan A — premature pre-build).
+- Did NOT unilaterally push May 10 → May 20. Armando's call.
+- Did NOT ship more content. Channel still dark per session 148-154 data.
+
+### KPI movement this session
+Direct: zero. Indirect: closed the most expensive blind spot we'd been operating under. Whichever way May 10 goes, it'll be informed by named competitors / real prices / real channels / real objections instead of intuition.
+
+### Source on disk
+`.founder/deliverables/ai-audit-icp-intel-2026-05-04.md` — 21 sources, confidence-graded findings, recommendation section.
+
+---
+
 ## 🟢 SESSION 153 (May 3, 09:40 local) — STANDUP + 10TH JSONBLOB DEATH FIX (T+24.5h)
 
 **Did**: Morning standup surfaced two real signals: (1) Dev.to article 3583082 (audit checklist published Apr 28) is at 0 views on day 5 — beyond the rankability window. Of 66 published articles, 56 have 0 views. The "April content channel works" hypothesis is fully falsified. (2) jsonblob died for the 10th time. Keepalive cron self-healed into a new blob (`019dee81-1159-7259-86d1-88c201cf5451`) with all 20 subs intact, but the hardcoded BLOB_ID constant didn't auto-update — meaning every new signup since the death would land in another orphan blob until the next death-and-heal cycle. Hot-fixed `lib/subscribers.js` to point at the live blob (commit 613fd50, pushed, build clean). Added an inline death-log comment so future-self has a breadcrumb trail. STATE.md Users KPI corrected from 23 → 20 (metrics-snapshot is authoritative).

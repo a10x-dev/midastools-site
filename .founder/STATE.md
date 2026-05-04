@@ -6,7 +6,7 @@
 
 **KPIs**:
 - Conversations: 0 (target: 3, 7d: 0%)
-- Users: 23 (target: 30, 7d: 0%)
+- Users: 20 (target: 30, 7d: -13.043478260869565%)
 - Revenue: 0 (target: 997, 7d: 0%)
 
 ---|------|-----|
@@ -23,6 +23,71 @@
 | 11 | ai-email-prompts-cheatsheet | gist/a69f2f |
 | 12 | ai-saas-founder-prompts-cheatsheet | gist/bc4451 |
 | 13 | claude-opus-4-7-prompts-cheatsheet | gist/ccef07 |
+
+## Session 155 (May 4, 04:39 local) — MARKET INTEL SHIPPED: $997 IS WRONG, REPOSITIONING NOT REPRICING
+
+### Strategic posture
+Pre-build queue exhausted on Plans A+B (specs at 6/12 and 3/9). Five sessions of execution-prep didn't move the actual bottleneck (market_understanding 7/10). At 04:39 I made the call: stop pre-building, attack the bottleneck directly with real market intelligence before May 10 turns into a 3-option decision based on intuition.
+
+### ✅ Shipped this session
+- **`.founder/deliverables/ai-audit-icp-intel-2026-05-04.md`** — 1,250-word intelligence brief on the $500-$5,000 SMB AI audit market. 8 named competitors with prices/deliverables/sources, 7 ICP-aggregation watering holes, 4 dominant buyer objections with citations, full pricing landscape analysis. 21 cited sources. Confidence-graded 🟢/🟡/🔴 per finding.
+- **Monitors run clean**: audit-signal-monitor 20 subs / 0 audit-tagged / 0 new. metrics-snapshot 0 sales / $0 / 5/5 uptime.
+
+### THE FINDING (changes May 10 decision frame)
+The $500-$2,000 SMB AI audit market is real and transacting. But:
+- **$997 is in a structural dead zone** between the $750-$1,500 productized tier (Promptful $750, levelupwithai $1,500) and the $1,999+ premium tier (ChatDoctor $1,999, ConsultKit $5K-anchor recommendation).
+- **Price is NOT the blocker.** Documented buyer objection across 4 sources is "vague deliverables / generic advice / six-month YouTube experts." Repricing to $297 makes this *worse* — cheaper price reinforces "generic advice" frame.
+- **ICP doesn't aggregate on LinkedIn for cold discovery.** They aggregate at SmarterX Slack (10K+), Marketing AI Institute (100K+ subs), AI For Small Business Substack, Coachvox AI newsletter, r/smallbusiness threads, Late Checkout. LinkedIn is a *closing* channel for already-warm niche prospects.
+- **Plan A ($297 reprice) AND Plan B (cold LinkedIn) BOTH fail the data.**
+
+### Recommended Plan D (new option for May 10)
+1. Reposition (not reprice) to **$1,499** — match the productized real-audit tier.
+2. **Publish a 4-artifact deliverable spec** on /ai-audit (workflow map + AI-readiness scored matrix + top-3 recommendations + human-in-loop design) — copying the structure every named competitor uses. Kills the "generic advice" objection.
+3. **Distribute through SmarterX Slack + AI For Small Business Substack + Coachvox newsletter + r/smallbusiness comment-engagement** (NOT cold LinkedIn).
+4. **Ship a $97-$197 async tripwire audit** as the front door (matches AgentsLabs €97 / Promptful $175 expectation).
+5. **Push decision gate to May 20** — give 10+ pitches at the new positioning a fair test.
+
+### Telegram sent to Armando
+This is a strategic input for May 10, not an ask. Armando holds the call.
+
+### What I did NOT do (deliberately)
+- Did NOT pre-build Plan D's full Stripe SKU + page + tripwire. The Plan A pre-build pattern was justified because it was a binary go/no-go — Plan D is a complete repositioning with 4 sub-decisions, premature to pre-build before strategic alignment.
+- Did NOT unilaterally push the May 10 decision date to May 20. That's Armando's call.
+- Did NOT ship more content. Same falsified-content pattern.
+
+### KPI movement this session
+**Direct: zero. Indirect: significant.** First real ICP intelligence in 42 days. Closes the most expensive blind spot we've been operating under. The May 10 decision — whichever way it goes — will be informed by named competitors, real prices, real channels, real objections. If it lands on Plan D, we save the ~$100 of pre-build effort that would have gone into Plan A's setup-mini-audit Stripe SKU at the wrong price.
+
+### Confidence
+85% — research delegated to Explore agent with 21 cited sources, all URLs tested-by-citation. Strategic recommendation graded 🟡 because Plan D inherits some assumption risk (assumes the productized real-audit tier is reachable through community distribution, not yet validated). Higher confidence on the negative findings (Plan A/B both fail) than on the positive Plan D recommendation.
+
+### Session 155 continuation — drop-in deliverable spec + Plan D stub
+
+After the intel deliverable + memory/wiki updates landed, kept momentum on the highest-leverage **plan-agnostic** ship: drafted the 4-artifact deliverable spec for `/ai-audit` that addresses the documented #1 buyer objection ("vague deliverables / generic advice") regardless of which May 10 plan wins. Lifted the structure from Levelupwithai's documented audit (verbatim 4-artifact framing — workflow map + AI-readiness scored matrix + top-3 recommendations + human-in-loop design) — the cleanest productized real-audit template in the named-competitor corpus.
+
+**Shipped (continuation):**
+- **`.founder/plans/ai-audit-deliverable-spec.draft.md`** — full 4-artifact spec with drop-in JSX for `pages/ai-audit.js` (replaces lines 211-225), updated FAQ schema text, validation checklist, scope-by-plan-branch decision table, 1-hour ship-day estimate.
+- **`.founder/plans/plan-d-reposition-1499-spec.md`** — Plan D stub spec with 4 sub-decisions (pricing / deliverable / tripwire / channel), hardcoded kill criteria (May 25), 3.5-hour ship-day checklist that reuses Plan A's pre-built Stripe API draft + webhook diff + intake form. Per `pre-build-vs-intel-balance`: stub only because Plan D is a 4-decision repositioning, not a binary go/no-go like Plan A.
+
+**Why this is the right continuation work:**
+- The 4-artifact deliverable spec is independent of price — it benefits Plan A ($297), Plan B ($997 cold), and Plan D ($1,499) equally because it addresses the trust objection at every price point.
+- The Plan D stub gives Armando a 4th option on May 10 with a concrete 3.5-hour ship path, not a "let me think about it" deliberation. End-state: May 10 is a decide-day not a build-day, regardless of choice.
+- Both artifacts pre-built only as drafts in `.founder/plans/` — nothing live, nothing committable, nothing that prejudges Armando's call.
+
+**Final session output:**
+1. `.founder/deliverables/ai-audit-icp-intel-2026-05-04.md` — 1,250 words, 21 cited sources, 8 named competitors, 4 buyer objections, 7 ICP-aggregation watering holes
+2. `.founder/plans/ai-audit-deliverable-spec.draft.md` — 4-artifact deliverable spec with drop-in JSX
+3. `.founder/plans/plan-d-reposition-1499-spec.md` — Plan D stub with 4 sub-decisions + ship-day checklist
+4. STATE/MEMORY/SCHEDULE updates
+5. Wiki page `ai-audit-icp-may-2026` created
+6. 1 new playbook (`market-intel-before-decision-day`) + 1 new principle (`pre-build-vs-intel-balance`)
+7. Telegram brief to Armando
+8. Bottleneck description updated with new evidence
+
+### Confidence (revised)
+85% unchanged — both pre-built artifacts inherit the same intel-confidence as the deliverable. The deliverable spec is highest-confidence (lifted verbatim from a documented competitor template) because copying a working pattern carries less risk than inventing one. Plan D stub is medium-confidence — the 4 sub-decisions are correctly framed but each individual sub-decision still needs Armando's voice.
+
+---
 
 ## Session 154 (May 3, 23:24 local) — LATE-SUNDAY EOD SIGNAL SWEEP (T+38h INTO REPLY WINDOW)
 
