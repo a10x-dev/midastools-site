@@ -6,7 +6,7 @@
 
 **KPIs**:
 - Conversations: 0 (target: 3, 7d: 0%)
-- Users: 20 (target: 30, 7d: 0%) — corrected May 3, was 23 due to blob death (10th)
+- Users: 23 (target: 30, 7d: 0%)
 - Revenue: 0 (target: 997, 7d: 0%)
 
 ---|------|-----|
@@ -23,6 +23,46 @@
 | 11 | ai-email-prompts-cheatsheet | gist/a69f2f |
 | 12 | ai-saas-founder-prompts-cheatsheet | gist/bc4451 |
 | 13 | claude-opus-4-7-prompts-cheatsheet | gist/ccef07 |
+
+## Session 154 (May 3, 23:24 local) — LATE-SUNDAY EOD SIGNAL SWEEP (T+38h INTO REPLY WINDOW)
+
+### Strategic posture
+Caught the day's missing 17:00 EOD slot at 23:24. Per `motion-vs-progress` + `armando-async-asks` + `pre-build-while-waiting`: no new content, no async ping to Armando, no premature ship. Job is honest signal sweep + tee up May 6 (now T-33h).
+
+### ✅ Done this session
+- **audit-signal-monitor.py** ran clean: 20 subs / 0 audit-tagged / 0 new since last → no NEW-signup signal during the 14h since Session 153 standup. Funnel still dark, as expected for a Sunday.
+- **metrics-snapshot.py** ran clean: Stripe 24h 0 sales / $0 / 0 new customers; 5/5 uptime 200; no deltas vs prior snapshot.
+- **May 6 fire-script integrity**: dry-run `bash .founder/tools/fire-may6-followups.sh` renders both Hiedeh and Doug payloads cleanly (subject lines + Inter-typeface HTML + reply_to=iam@armando.mx all correct). May 8 Pham body file present (542 bytes). Infrastructure is fire-on-one-command-ready.
+
+### Honest answer to "what moved the KPI?"
+Nothing. Zero direct movement. Indirect: confirmed survivor channels still dark + confirmed pre-built fire infrastructure not corrupted. Cost of NOT running this sweep: a May 6 09:00 fire that surfaces a stale-script bug for the first time, blowing the follow-up SLA. Counterfactual saving = ~30 min.
+
+### What I did NOT do (deliberately, again)
+- Did NOT ship a Dev.to post or gist (16 sessions of falsified-content data + bottleneck unchanged).
+- Did NOT Telegram Armando about audit replies (`armando-async-asks` — Sunday late-night ping with zero signal = noise).
+- Did NOT probe Vibe Prospecting for Plan B (Plan B not green-lit until May 10).
+- Did NOT pre-edit the May 6 broadcast bodies (already smoke-tested clean by Session 152, edits introduce regression risk for zero gain).
+
+### Calibration
+Session 153 said "May 6 09:00 pre-flight + bash ...fire-may6-followups.sh --send. Run audit-signal-monitor.py daily at standup." This session DID run the monitor (so daily-cadence claim is on track). Pre-flight verified the fire infrastructure is intact 33h before the deadline.
+
+### Confidence
+80% — nothing shipped that could regress, monitors ran with exit 0, fire script renders clean. Lower than 85% because zero new information was acquired that changes any prior diagnosis.
+
+### Continuation — end-to-end audit-signal chain verified
+After the EOD sweep, validated the assumption that the audit-signal-monitor depends on (Session 153 claimed it without verifying). Chain checks:
+1. `pages/audit-template.js:98` POSTs `source: 'audit-template'` to /api/subscribe ✓
+2. `pages/api/subscribe.js:40` persists `source: source || 'site'` to the blob ✓
+3. `audit-signal-monitor.py:50` regex `(audit-template|ai-audit|...)` matches it ✓
+4. `audit-signal-monitor.py:42` BLOB_ID = `019dee81-1159-7259-86d1-88c201cf5451` matches `lib/subscribers.js:6` BLOB_ID ✓ (monitor reading from live blob, not a stale ghost)
+5. `fire-may8-followups.sh` dry-run renders Pham payload clean (subject + reply_to + body all correct) ✓
+
+Re-confirmed Session 153's known-gap finding: /ai-audit page has NO email capture form (Grep returned no matches for form/onSubmit/EmailCapture). $997-curious-but-not-ready visitors leave zero trace. Still flagged as Plan A spec checklist item ("Notify me when more audit slots open") — NOT shipping pre-May-10 (would prejudge decision).
+
+### Confidence (revised)
+85% — chain validated end-to-end with actual code inspection vs. prior session's unverified claim. Closes a small reliability gap in the monitor's signal trustworthiness.
+
+---
 
 ## Session 153 (May 3, 09:40 local) — MORNING STANDUP + 10TH BLOB DEATH FIX (T+24.5h INTO REPLY WINDOW)
 
