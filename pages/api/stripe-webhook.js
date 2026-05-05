@@ -212,6 +212,20 @@ const KIT_MAP = {
       'Pro tips & best practices for each category',
     ],
   },
+  'image-prompt-pack': {
+    name: 'AI Image Prompt Pack',
+    file: 'ai-image-prompt-pack.zip',
+    subject: 'Your AI Image Prompt Pack is ready',
+    items: [
+      '25+ Social media content image prompts',
+      '25+ Brand & marketing image prompts',
+      '25+ E-commerce product image prompts',
+      '25+ Content & blog visual prompts',
+      '25+ Professional headshot & portrait prompts',
+      '25+ Viral aesthetic style prompts',
+      'Compatible with ChatGPT, Midjourney, DALL-E, Stable Diffusion, Leonardo AI',
+    ],
+  },
   'muse-spark': {
     name: 'Meta Muse Spark Prompt Kit',
     file: 'muse-spark-kit.zip',
@@ -300,7 +314,8 @@ function detectKit(session) {
   const productName = (session.metadata?.product_name || '').toLowerCase();
   if (productName.includes('starter pack') || productName.includes('best 20')) return KIT_MAP['starter-pack'];
   if (productName.includes('video')) return KIT_MAP['video-prompt-pack'];
-  if (productName.includes('prompt') || productName.includes('mega pack')) return KIT_MAP['prompt-mega-pack'];
+  if (productName.includes('image')) return KIT_MAP['image-prompt-pack'];
+  if (productName.includes('mega pack') || productName.includes('prompt mega') || productName.includes('prompt pack')) return KIT_MAP['prompt-mega-pack'];
   if (productName.includes('real estate')) return KIT_MAP['real-estate'];
   if (productName.includes('content creator') || productName.includes('creator')) return KIT_MAP['content-creator'];
   if (productName.includes('freelancer')) return KIT_MAP['freelancer'];

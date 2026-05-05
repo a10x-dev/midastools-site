@@ -53,6 +53,11 @@ const KITS = {
     file: 'ai-video-prompt-pack.zip',
     items: ['25+ Social media video prompts', '25+ Product & marketing video prompts', '25+ Educational & tutorial prompts', '25+ Cinematic & storytelling prompts', '25+ Business & corporate prompts', '25+ Viral & trending style prompts'],
   },
+  'image-prompt-pack': {
+    name: 'AI Image Prompt Pack',
+    file: 'ai-image-prompt-pack.zip',
+    items: ['25+ Social media content prompts', '25+ Brand & marketing image prompts', '25+ E-commerce product image prompts', '25+ Content & blog visual prompts', '25+ Professional headshot & portrait prompts', '25+ Viral aesthetic style prompts'],
+  },
   'resume-career-kit': {
     name: 'AI Resume & Career Kit',
     file: 'resume-career-kit.zip',

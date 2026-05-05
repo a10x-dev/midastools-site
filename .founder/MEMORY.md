@@ -2,6 +2,44 @@
 
 Your long-term memory. Persists across all sessions. This is your brain — treat it well.
 
+## 🚨 SESSION 158 (May 5, 14:27 local) — ATTRIBUTION + 13 PAYMENT-LINK BUGS FIXED
+
+### TL;DR
+Pulled the 🔴 HIGH open question from Session 156 ledger ("how did our 3 buyers find us?"). Three surprises: (1) George Nelson is an OpenClaw customer on a SEPARATE Vercel property, not midastools — so the lookalike pool is 2 not 3. (2) Shantae's $97 payment link `plink_1TDwTm` was misconfigured with `hosted_confirmation`, meaning she stayed on Stripe's page after paying — never landed on /thank-you, no GTM event, no upsell, no email re-capture. (3) The bug was systemic: 14/34 active payment links had post-purchase delivery problems. Fixed 13 via Stripe API (9 hosted_confirmation + Arnaud's slug typo + 3 wrong-TLD). 7 broken left, all needing pages/thank-you.js KITS-map code changes.
+
+### Why this matters
+- Every future $97 All Kits Bundle sale will now hit our /thank-you with upsell + email-capture + GTM `purchase` event firing — that's the difference between losing the customer relationship vs starting it.
+- Arnaud paid $29 for AI Prompt Mega Pack but landed on a /thank-you that displayed OpenClaw Starter Kit (silent UX bug from `mega-pack` slug not matching KITS map's `prompt-mega-pack`). Future Mega Pack buyers see the correct product.
+- 13 plinks fixed in <30min via 2 idempotent tools that can re-run safely (audit-payment-links.py + fix-payment-links.py).
+
+### Strategic implications (updated)
+- **Conversion model that's working at midastools.co**: Cold traffic → free tool / kit page → CTA → Stripe Link one-click payment. NOT email-list nurture → broadcast → conversion. Both midastools buyers (Arnaud + Shantae) cold-purchased without ever subscribing to our email list. Subscribers and buyers are disjoint cohorts.
+- **Implication for May 10 audit decision**: The $1,499 Plan D reposition is a bet against our only data point — our buyers convert via low-friction cold purchase on $29-$97 SKUs, not bespoke high-ticket consulting. Doesn't make Plan D wrong, but reframes it as "diversifying funnel pattern" rather than "rescue plan for failing flywheel."
+- **Channel investment**: Reaffirms that gists/Dev.to/Reddit are NOT the right channels (no buyer attribution). Page CTAs on free tools ARE working. Free-tool conversion optimization > content channel investment.
+
+### ✅ Tools shipped (all in `.founder/tools/`, registered in manifest.json)
+- `customer-attribution.py` — Pull Stripe checkout-session attribution for known paying customers. With --save writes `customer-attribution-YYYY-MM-DD.md`.
+- `audit-payment-links.py` — Read-only audit of all active plinks. Flags hosted_confirmation, wrong-TLD, unknown-kit-slug. With --save writes `payment-link-audit-YYYY-MM-DD.md`.
+- `fix-payment-links.py` — Idempotent --dry-run/--apply patcher. Hard-codes plink → kit_slug map.
+
+### ✅ Deliverables shipped (`.founder/deliverables/`)
+- `customer-attribution-2026-05-05.md` — full attribution report with per-customer detail, strategic implications, ranked recommendations.
+- `payment-link-audit-2026-05-05.md` — full plink audit (34 active, 27 healthy, 7 still-broken).
+
+### Remaining open work (NOT done this session)
+- 5 plinks redirect to /thank-you?kit=<slug> with slugs that aren't in KITS map (muse-spark, claude-code, reddit-lead-kit, team-adoption, cowork-mastery). Buyers see OpenClaw Starter Kit on their thank-you. Need: add KITS entries + verify ZIP delivery files exist in /public/.
+- 1 plink (`plink_1TFId8`) is for AI Image Prompt Pack with slug `image-pack` not in KITS — same fix.
+- 1 plink (`plink_1TB4CN`) is "Midas Content — 4 Articles/Month" recurring service, deliberately deferred — needs strategic call on what onboarding looks like for recurring subscribers vs one-time download page.
+
+### Bottleneck re-frame
+Old (severity 6/10): market_understanding / audience-product-fit gap.
+**New finding to consider**: bottleneck is `conversion_optimization` — our 2 confirmed midastools buyers came through page CTAs that worked, but those CTAs were leaking post-purchase data due to misconfigured Stripe redirects. The funnel was "leaking out the bottom" not "not filling at the top." With this fix, the next 5-10 conversions will produce clean attribution data, which is what we need to move beyond hypothesis-driven decisions.
+
+### Confidence
+90% — 13 plink patches confirmed via Stripe API + re-audit. Strategic finding 80% (logical, not yet falsified). Tools idempotent and safe to re-run.
+
+---
+
 ## 🚨 SESSION 156 (May 5, 16:15 local) — REVENUE LEDGER DISCOVERY: $155 NOT $0
 
 ### TL;DR

@@ -7,11 +7,9 @@
 **KPIs**:
 - Conversations: 0 (target: 3, 7d: 0%)
 - Users: 20 (target: 30, 7d: -13.043478260869565%)
-- Revenue: **$155 LIFETIME** (target: 997, 7d: $126 — Apr 29 $97 + May 2 $29). **Corrected upward Session 156** — prior "$0" was an artifact of metrics-snapshot.py only checking 24h windows; 3 actual paying customers confirmed via Stripe API.
+- Revenue: **$155 LIFETIME** (target: 997, 7d: $126 — Apr 29 $97 + May 2 $29). Apr 29 + May 2 sales confirmed Session 156. Session 158 — 9 misconfigured Stripe payment links FIXED (Shantae's $97 All Kits Bundle plink redirected from hosted_confirmation → /thank-you?kit=bundle, which restores upsell + GTM event + email re-capture for every future $97 buyer). Plus Arnaud's plink slug fixed (mega-pack → prompt-mega-pack so /thank-you renders correct kit). Plus 3 .com→.co TLD typos fixed. Net: 14 broken plinks → 7 broken (remaining 7 require KITS-map code addition for muse-spark/claude-code/reddit-lead-kit/team-adoption/cowork-mastery/image-pack + Midas Content recurring service deliberately skipped).
 
-**REVENUE LEDGER (real, Stripe-confirmed):**
-| Date | Customer | Product | Amount | Stripe ID |
-|---|---|---|---|---|
+---|---|---|---|---|
 | 2026-05-02 | arnaud.ademes@gmail.com (Arnaud Demes) | AI Prompt Mega Pack ($29 SKU) | $29 | py_3TSYXnAdkDx8xZMk0S1sanqe |
 | 2026-04-29 | sclinton06@yahoo.com (Shantae Clinton) | MidasTools All Kits Bundle | $97 | py_3TRYVcAdkDx8xZMk04ACOBY5 |
 | 2026-03-13 | nelson.george.edward@gmail.com (George Nelson) | OpenClaw Entrepreneur Starter Kit | $29 | py_3TAY4EAdkDx8xZMk1FPx4Cg9 |
@@ -30,6 +28,44 @@
 | 11 | ai-email-prompts-cheatsheet | gist/a69f2f |
 | 12 | ai-saas-founder-prompts-cheatsheet | gist/bc4451 |
 | 13 | claude-opus-4-7-prompts-cheatsheet | gist/ccef07 |
+
+## Session 158 (May 5, 14:27 local) — 🚨 ATTRIBUTION + 13 PAYMENT LINK BUGS FIXED
+
+### Trigger
+Continuation of Session 156's revenue-ledger discovery. The 🔴 HIGH open question: "how did Arnaud + Shantae find us?" Pulled checkout-session attribution from Stripe.
+
+### What I found (3 surprises)
+1. **George Nelson is NOT a midastools.co customer** — bought from `openclaw-starter-kit.vercel.app` (separate Vercel property). The "Vegas tradesperson" lookalike vector in customer-icp-research-2026-05-05.md is misattributed and should be revised. Real midastools lookalike pool = 2 customers, not 3.
+
+2. **🚨 Shantae's $97 payment link was misconfigured** — `plink_1TDwTmAdkDx8xZMkmxB9yn55` had `hosted_confirmation` (stays on Stripe's page after payment) instead of redirecting to /thank-you. She paid $97 and never landed on our site post-purchase. No GTM event. No upsell. No email re-capture. No referrer trail.
+
+3. **Bug was systemic** — 10 of 34 active payment links had `hosted_confirmation`. 4 more had `.com` instead of `.co` TLD typos. 6 had unknown kit slugs that fall back to OpenClaw Starter Kit on /thank-you (including Arnaud's mega-pack — he paid $29 for AI Prompt Mega Pack and saw OpenClaw Starter Kit on his thank-you page).
+
+### ✅ Shipped this session
+- **`.founder/deliverables/customer-attribution-2026-05-05.md`** — full attribution report, 3 customers profiled with checkout-session detail + source-page inference + recommended remediation ranking
+- **`.founder/tools/customer-attribution.py`** — reusable read-only attribution tool (Stripe API + subscriber blob cross-ref)
+- **`.founder/tools/audit-payment-links.py`** — read-only audit of all active plinks; flags hosted_confirmation, wrong-TLD, unknown-kit-slug. With --save writes dated report.
+- **`.founder/tools/fix-payment-links.py`** — idempotent patcher. --dry-run + --apply. Stamps metadata.fixed_session=158 for audit trail.
+- **9 hosted_confirmation plinks PATCHED** via Stripe API to redirect to /thank-you?kit=<existing-KITS-slug> (presentation-kit, email-marketing-kit, social-media-kit, small-business, bundle, freelancer, content-creator, real-estate, starter)
+- **Arnaud's plink slug FIXED** (mega-pack → prompt-mega-pack to match KITS map)
+- **3 .com→.co TLD typos FIXED** (resume-career-kit, notion-templates, video-prompt-pack)
+- **`.founder/deliverables/payment-link-audit-2026-05-05.md`** — full audit table
+
+### What I did NOT do (deliberately)
+- Did NOT update pages/thank-you.js KITS map to add aliases for muse-spark/claude-code/reddit-lead-kit/team-adoption/cowork-mastery/image-pack — these need ZIP file existence verification + cross-check with webhook KIT_MAP. Separate sprint.
+- Did NOT touch `plink_1TB4CNAdkDx8xZMkHi0Sqo0X` (Midas Content recurring subscription) — different post-purchase pattern (onboarding email, not download page). Needs strategic call.
+- Did NOT change Arnaud's plink underlying URL — only the redirect target. He still bought through `buy.stripe.com/4gMbJ0dgz4aJ1qkb46cMM0d`; just the post-purchase landing fixed.
+- Did NOT email any of the 3 customers (per protocol, requires Armando's explicit ok).
+
+### KPI movement this session
+**Direct: zero.** **Indirect: high.** Future $97 sales now hit /thank-you (Shantae was the only $97 sale to date, but the path is fixed for the next one). Future $29 Mega Pack sales now show correct kit on /thank-you (was showing OpenClaw before this session). Future $29 kit sales (presentation, email-marketing, social-media, small-business, freelancer, content-creator, real-estate) now redirect to our site instead of staying on stripe.com.
+
+The strategic finding (no email subscribers in our 3-buyer cohort + George not a midastools customer) reframes May 10 audit-decision data once more.
+
+### Confidence
+90% — 9 + 1 + 3 = 13 plinks confirmed PATCHed via Stripe API, verified by re-running audit-payment-links.py (broken count 14 → 7). Audit + fix tools both idempotent; can re-run safely. Strategic finding (channel-fit) is one logical layer deeper than Session 156's lookalike framing — both are correct but at different abstraction levels.
+
+---
 
 ## Session 156 (May 5, 16:15 local) — 🚨 REVENUE LEDGER DISCOVERY: $155 NOT $0, 3 PAYING CUSTOMERS
 
