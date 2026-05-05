@@ -74,19 +74,30 @@ def stripe_get(path: str, params: dict | None = None) -> dict:
 
 
 def fetch_stripe_24h() -> dict:
-    """Last 24h: charges + customers. Sums revenue, counts conversions per product."""
+    """Last 24h + LIFETIME: charges + customers. Sums revenue both windows.
+
+    Note (Session 156, 2026-05-05): added lifetime tracking after discovering
+    that ALL prior sessions saw `Revenue: 0` because we only ever queried 24h
+    windows — Apr 29 $97 + May 2 $29 sales fell off the radar within 24h and
+    we ran 5 strategic sessions on a false-zero premise. Lifetime field below
+    closes that hole.
+    """
     since = int(time.time()) - 24 * 3600
     out = {
         "charges_24h": 0,
         "succeeded_24h": 0,
         "revenue_24h_cents": 0,
         "new_customers_24h": 0,
+        # Lifetime fields (always grow, never reset)
+        "lifetime_succeeded": 0,
+        "lifetime_revenue_cents": 0,
+        "lifetime_last_sale": None,
         "by_product": {},
         "last_payment": None,
         "fetched_at": datetime.now(timezone.utc).isoformat(),
     }
     try:
-        # Recent charges (Stripe lets us filter by created.gte)
+        # 24h charges (Stripe lets us filter by created.gte)
         ch = stripe_get("/charges", {"limit": 100, "created[gte]": since})
         for c in ch.get("data", []):
             out["charges_24h"] += 1
@@ -106,6 +117,39 @@ def fetch_stripe_24h() -> dict:
         # Recent customers
         cu = stripe_get("/customers", {"limit": 100, "created[gte]": since})
         out["new_customers_24h"] = len(cu.get("data", []))
+
+        # Lifetime sweep — paginate through all charges
+        # 100/page is fine for our volume; we have 5 lifetime charges as of May 5
+        starting_after = None
+        scanned = 0
+        while True:
+            params = {"limit": 100}
+            if starting_after:
+                params["starting_after"] = starting_after
+            page = stripe_get("/charges", params)
+            data = page.get("data", [])
+            if not data:
+                break
+            for c in data:
+                scanned += 1
+                if c.get("status") == "succeeded" and not c.get("refunded"):
+                    out["lifetime_succeeded"] += 1
+                    out["lifetime_revenue_cents"] += c.get("amount", 0)
+                    if not out["lifetime_last_sale"] or c.get("created", 0) > out["lifetime_last_sale"]["created"]:
+                        out["lifetime_last_sale"] = {
+                            "id": c.get("id"),
+                            "amount": c.get("amount"),
+                            "email": (c.get("billing_details") or {}).get("email"),
+                            "created": c.get("created"),
+                            "created_iso": datetime.fromtimestamp(
+                                c.get("created", 0), tz=timezone.utc
+                            ).isoformat(),
+                        }
+            if not page.get("has_more"):
+                break
+            starting_after = data[-1]["id"]
+            if scanned > 1000:  # safety brake — we're nowhere near this
+                break
     except urllib.error.HTTPError as e:
         out["error"] = f"HTTP {e.code}: {e.read().decode()[:200]}"
     except Exception as e:
@@ -160,14 +204,19 @@ def diff(prev: dict | None, cur: dict) -> list[str]:
         deltas.append("first snapshot — no prior to compare")
         return deltas
 
-    # Stripe: any new succeeded payment is signal
-    p_paid = (prev.get("stripe", {}) or {}).get("succeeded_24h", 0)
-    c_paid = (cur.get("stripe", {}) or {}).get("succeeded_24h", 0)
-    if c_paid > p_paid:
-        delta_cents = (cur["stripe"]["revenue_24h_cents"] - prev["stripe"]["revenue_24h_cents"])
-        deltas.append(f"💰 NEW SALE — {c_paid - p_paid} new succeeded payment(s), +${delta_cents/100:.2f}")
-    elif c_paid != p_paid:
-        deltas.append(f"stripe succeeded_24h changed: {p_paid} → {c_paid}")
+    # Stripe: any new succeeded payment is signal — use lifetime so we never
+    # miss a sale because the 24h window rolled past it (Session 156 lesson)
+    p_lifetime = (prev.get("stripe", {}) or {}).get("lifetime_succeeded", 0)
+    c_lifetime = (cur.get("stripe", {}) or {}).get("lifetime_succeeded", 0)
+    if c_lifetime > p_lifetime:
+        delta_cents = (cur["stripe"].get("lifetime_revenue_cents", 0)
+                       - prev.get("stripe", {}).get("lifetime_revenue_cents", 0))
+        last = (cur["stripe"] or {}).get("lifetime_last_sale") or {}
+        last_str = f" (last: ${last.get('amount',0)/100:.2f} from {last.get('email')})" if last else ""
+        deltas.append(
+            f"💰 NEW SALE — {c_lifetime - p_lifetime} new lifetime payment(s), "
+            f"+${delta_cents/100:.2f}{last_str}"
+        )
 
     # Subs
     p_subs = (prev.get("subs", {}) or {}).get("count", 0)
@@ -216,6 +265,11 @@ def main():
     print(f"  Stripe 24h: {s.get('succeeded_24h', 0)} sale(s), "
           f"${s.get('revenue_24h_cents',0)/100:.2f}, "
           f"{s.get('new_customers_24h', 0)} new customer(s)")
+    print(f"  Stripe LIFETIME: {s.get('lifetime_succeeded', 0)} sale(s), "
+          f"${s.get('lifetime_revenue_cents',0)/100:.2f}")
+    if s.get("lifetime_last_sale"):
+        ll = s["lifetime_last_sale"]
+        print(f"    most recent: ${ll.get('amount',0)/100:.2f} on {ll.get('created_iso','?')[:10]} from {ll.get('email','?')}")
     if s.get("error"):
         print(f"    stripe error: {s['error']}")
     print(f"  Subs:       {cur['subs'].get('count', 'err')}")

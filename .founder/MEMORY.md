@@ -2,6 +2,43 @@
 
 Your long-term memory. Persists across all sessions. This is your brain — treat it well.
 
+## 🚨 SESSION 156 (May 5, 16:15 local) — REVENUE LEDGER DISCOVERY: $155 NOT $0
+
+### TL;DR
+Armando got a Stripe transfer notification. While confirming, **I discovered we have $155 in lifetime revenue across 3 paying customers — not $0 like we'd been operating under for 38+ sessions.** The metrics-snapshot.py only ever queried 24h windows, so any sale older than 24h disappeared from the dashboard. 5 strategic sessions (151-155) including the May 10 audit-decision frame were planned on a false-zero premise.
+
+### The 3 sales (Stripe-confirmed)
+| Date | Customer | Product | Amount |
+|---|---|---|---|
+| 2026-05-02 | arnaud.ademes@gmail.com (Arnaud Demes) | AI Prompt Mega Pack | $29 |
+| 2026-04-29 | sclinton06@yahoo.com (Shantae Clinton) | MidasTools All Kits Bundle | $97 |
+| 2026-03-13 | nelson.george.edward@gmail.com (George Nelson) | OpenClaw Starter Kit | $29 |
+
+**Two sales in the last 7 days = revenue accelerating, not flatlined.**
+
+### Critical findings beyond the sales themselves
+1. **`metrics-snapshot.py` was structurally broken** — only checked 24h windows. Patched this session to also track lifetime revenue + use lifetime delta for NEW-SALE pings. Future blind-spot closed.
+2. **Two-product naming collision discovered**: "AI Prompt Mega Pack" (`prod_UCeQWrkY2zDGZV`, $29, sells via /ai-prompt-mega-pack) and "MidasTools All Kits Bundle" (`prod_UCL9ktPNy9o7M1`, $97, sells via direct payment link) are TWO DIFFERENT SKUS that we've been treating as one. Memory references "$97 mega pack" repeatedly but the page actually sells the $29 SKU. Cleanup task pending.
+3. **The May 10 audit-decision frame must be revisited.** "Plan D reposition to $1,499 vs kill" was framed against $0 revenue. With $155 lifetime + 2 sales last 7 days, the prompt-pack flywheel is working at low volume. The audit experiment is now an *additional* path on top of working revenue, not make-or-break.
+
+### Highest-value open question
+**How did Shantae Clinton (Apr 29 $97) and Arnaud Demes (May 2 $29) find us?** Checkout-session UTMs + email-list cross-reference can answer. Highest-leverage investigation for next session — if gist→page→checkout, double down on gist flywheel. If something else, that's a new funnel to amplify.
+
+### What I shipped this session
+- `.founder/STATE.md` — KPIs corrected to $155 lifetime + revenue ledger table inserted + Session 156 entry added
+- `.founder/deliverables/revenue-ledger-2026-05-05.md` — full intel brief: 3 sales detail, 2-product naming bug, May 10 decision-frame correction, NEXT-INVESTIGATION queue (3 priorities)
+- `.founder/tools/metrics-snapshot.py` — patched: paginates lifetime charges, tracks lifetime_succeeded + lifetime_revenue_cents + lifetime_last_sale, uses lifetime delta for NEW-SALE ping. Verified output: "Stripe LIFETIME: 3 sale(s), $155.00"
+
+### What I did NOT do (deliberately)
+- Did NOT email any of the 3 customers (would risk chargeback / spam complaint without Armando's ok)
+- Did NOT change marketing copy on /ai-prompt-mega-pack (premature without strategic call)
+- Did NOT redraft the May 10 audit deck (Armando's call)
+
+### Permanent rule encoded
+Any monitoring/metrics tool MUST track BOTH window-based and lifetime fields. Window-only tracking = silent metric loss the moment data falls outside the window. Don't make this mistake again with subs, conversations, or any other KPI.
+
+---
+
 ## 🟢 SESSION 155 (May 4, 04:39 local) — MARKET INTEL: $997 IS WRONG, PLANS A+B BOTH FAIL DATA
 
 ### TL;DR

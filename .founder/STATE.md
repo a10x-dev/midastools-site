@@ -2,12 +2,19 @@
 
 ## Current Status (auto-synced from database)
 
-**Bottleneck**: market_understanding (severity 7/10) — Audience-product fit gap. Our 20-sub list contains exactly 3 viable $997 audit prospects (all already pitched Apr 28); remaining 17 are free-tool consumers (Yahoo/AOL/Hotmail) + parked domains + 1 enterprise hospital (wrong purchase rails) + 1 county gov (procurement, not personal spend). Free-tool top-of-funnel attracts wrong buyer for $997 service hero. Cannot solve by shipping more content (12 Apr Dev.to posts = 0 views except 1, audit checklist article = 0 views in 72h). Must either reprice ($297 mini-audit matches existing audience) OR open a NEW acquisition channel that targets solo coaches/consultants directly (cold LinkedIn). Decision point: May 10.
+**Bottleneck**: market_understanding (severity 6/10) — Audience-product fit gap. Real $500-$5,000 SMB AI audit market exists with 8+ named competitors transacting (Promptful $750, ChatDoctor $1,999/$4,999, levelupwithai $500-$1,500, AgentsLabs €97, ConsultKit recommends $5K anchor). $997 sits in dead zone between $750-$1,500 productized tier and $1,999+ premium tier. Dominant buyer objection is "vague deliverables / generic advice" NOT price — repricing to $297 makes it worse. ICP aggregates at SmarterX Slack / Marketing AI Institute / AI For Small Business Substack / Coachvox newsletter / r/smallbusiness — NOT cold LinkedIn. Plans A+B both fail data. Recommended Plan D: reposition to $1,499 + publish 4-artifact deliverable spec + ship $97-197 tripwire + distribute through community channels. Decision May 10.
 
 **KPIs**:
 - Conversations: 0 (target: 3, 7d: 0%)
 - Users: 20 (target: 30, 7d: -13.043478260869565%)
-- Revenue: 0 (target: 997, 7d: 0%)
+- Revenue: **$155 LIFETIME** (target: 997, 7d: $126 — Apr 29 $97 + May 2 $29). **Corrected upward Session 156** — prior "$0" was an artifact of metrics-snapshot.py only checking 24h windows; 3 actual paying customers confirmed via Stripe API.
+
+**REVENUE LEDGER (real, Stripe-confirmed):**
+| Date | Customer | Product | Amount | Stripe ID |
+|---|---|---|---|---|
+| 2026-05-02 | arnaud.ademes@gmail.com (Arnaud Demes) | AI Prompt Mega Pack ($29 SKU) | $29 | py_3TSYXnAdkDx8xZMk0S1sanqe |
+| 2026-04-29 | sclinton06@yahoo.com (Shantae Clinton) | MidasTools All Kits Bundle | $97 | py_3TRYVcAdkDx8xZMk04ACOBY5 |
+| 2026-03-13 | nelson.george.edward@gmail.com (George Nelson) | OpenClaw Entrepreneur Starter Kit | $29 | py_3TAY4EAdkDx8xZMk1FPx4Cg9 |
 
 ---|------|-----|
 | 01 | sora-alternatives-cheatsheet | gist/f8c7ef |
@@ -23,6 +30,53 @@
 | 11 | ai-email-prompts-cheatsheet | gist/a69f2f |
 | 12 | ai-saas-founder-prompts-cheatsheet | gist/bc4451 |
 | 13 | claude-opus-4-7-prompts-cheatsheet | gist/ccef07 |
+
+## Session 156 (May 5, 16:15 local) — 🚨 REVENUE LEDGER DISCOVERY: $155 NOT $0, 3 PAYING CUSTOMERS
+
+### Trigger
+Armando: "Please check if someone bought a kit or something I got a stripe notification of transfer"
+
+### What I found
+The transfer that hit his bank today ($1,568 MXN payout) was the **Apr 29 $97 MidasTools All Kits Bundle sale** clearing through Stripe's 6-day hold for new accounts. While investigating I pulled the full charge history — **3 paying customers confirmed**, not zero:
+
+| Date | Customer | Product | Amount |
+|---|---|---|---|
+| 2026-05-02 | Arnaud Demes (arnaud.ademes@gmail.com) | AI Prompt Mega Pack ($29 SKU) | $29 |
+| 2026-04-29 | Shantae Clinton (sclinton06@yahoo.com) | MidasTools All Kits Bundle | $97 |
+| 2026-03-13 | George Nelson (nelson.george.edward@gmail.com) | OpenClaw Starter Kit | $29 |
+
+**Total lifetime revenue: $155.** Two sales in the last 7 days = revenue accelerating, not flatlined.
+
+### Why we missed this for 38+ days
+`metrics-snapshot.py` only queries Stripe charges in a 24h rolling window. The Apr 29 + May 2 sales fell off the radar within 24h of landing. State db still showed `Revenue: 0`. Five strategic sessions (151-155) operated on a false zero-revenue premise. **The May 10 audit-decision frame was built on bad data.**
+
+### Cascade implications
+
+1. **Bottleneck re-diagnosis needed.** "Audience-product fit gap" was the diagnosis with $0 revenue. Reality: prompt-pack flywheel converts at low volume (~1 sale/week current run-rate). Bottleneck shifts to **funnel volume × pricing-tier optimization**, NOT product-market mismatch.
+
+2. **Two-product naming collision discovered.** "AI Prompt Mega Pack" (`prod_UCeQWrkY2zDGZV`, $29) and "MidasTools All Kits Bundle" (`prod_UCL9ktPNy9o7M1`, $97) are two different SKUs that we've been treating as one in marketing copy + memory. The /ai-prompt-mega-pack page links to the $29 SKU. Memory references "$97 mega pack" repeatedly. **Both customers' purchases are legitimate but our internal record-keeping mixed them.** Fix: clean up product-naming in copy + memory + sitemap.
+
+3. **The Apr 29 + May 2 customers are gold-tier intel.** Where did they come from? Did they email-subscribe before purchase or buy cold? What gist/page funneled them? **HIGHEST-VALUE NEXT INVESTIGATION**: pull their utm_source from logs/checkout sessions (already have plink IDs `plink_1TEF84AdkDx8xZMk6J6nBE6l` for Mega Pack, `plink_1TDwTmAdkDx8xZMkmxB9yn55` for All Kits Bundle).
+
+4. **May 10 audit-decision impact.** "Plan D reposition $1,499" was the leading recommendation under $0 revenue. Under $155 LTM with 2 sales last 7 days, the prompt-pack flywheel earns continued investment — kill-or-iterate framing should now be **"audit experiment vs. double down on what's working."** Plan D still valid for the audit SKU but the broader portfolio call changes.
+
+### ✅ Shipped this session
+- `.founder/STATE.md` — KPIs corrected to $155 lifetime + revenue ledger table inserted
+- `.founder/deliverables/revenue-ledger-2026-05-05.md` — full intel brief: 3 sales detail, 2-product naming bug, May 10 decision-frame correction, NEXT-INVESTIGATION queue
+- `.founder/tools/metrics-snapshot.py` — patched to also report lifetime sales, not just 24h
+
+### What I did NOT do (deliberately)
+- Did NOT email arnaud.ademes/sclinton06/nelson.george.edward (real customers; any contact requires Armando's explicit ok per outreach principles).
+- Did NOT change marketing copy on /ai-prompt-mega-pack to address the naming collision (would be premature without Armando's strategic call).
+- Did NOT pre-rebuild the May 10 decision based on this new data (Armando's call).
+
+### Confidence
+95% — three Stripe-confirmed charges with receipts, line items, customer emails, and confirmed product matches via the prices API. The `prod_*` and `price_*` IDs are direct from Stripe's live API.
+
+### KPI movement this session
+**HUGE indirect.** Direct: zero new sales triggered today. Indirect: revenue baseline corrected from $0 → $155. Apr 29 + May 2 sales surfaced for the first time. May 10 decision now operates on real numbers.
+
+---
 
 ## Session 155 (May 4, 04:39 local) — MARKET INTEL SHIPPED: $997 IS WRONG, REPOSITIONING NOT REPRICING
 
