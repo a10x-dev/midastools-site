@@ -10,5 +10,7 @@ subscribers.csv
 .founder/.gh_gist_token
 .founder/.devto_token
 .founder/.resend_key
+.founder/.resend_webhook_secret
 .founder/.stripe_key
 .founder/state/
+.founder/inbox/
