@@ -82,7 +82,11 @@ When cold-outreach lookalikes purchase, port them here under "Active customers" 
 
 | Email | Source | Sent | Replied | Bought | Notes |
 |---|---|---|---|---|---|
-| _(populated as cold-outreach lands)_ | | | | | |
+| dwooten@hearst.com | shantae-lookalike-cold (batch1) | 2026-05-06 (id `a560ad67`) | — | — | Donnie Wooten, Sr Director IT & Operations, Hearst Television. /p/donnie-wooten. Pattern-verified via Hunter (88/100). |
+| frank.lodestro@hearst.com | shantae-lookalike-cold (batch1) | 2026-05-06 (id `e47e4e80`) | — | — | Frank LoDestro, Director IT Compliance, Hearst. /p/frank-lodestro. Hunter 88/100. |
+| kris.smith@hearst.com | shantae-lookalike-cold (batch1) | 2026-05-06 (id `ace3565e`) | — | — | Kris Smith, VP Identity & Collaboration, Hearst Technology. /p/kris-smith. Hunter 89/100. |
+| asage@pmc.com | shantae-lookalike-cold (batch1) | 2026-05-06 (id `7eb9279d`) | — | — | Alexander Sage, Director IT, Penske Media. /p/alexander-sage. Hunter 100/100 (best-confidence email). |
+| brian.lee@buzzfeed.com | shantae-lookalike-cold (batch1) | 2026-05-06 (id `6f23c172`) | — | — | Brian Lee, Sr Director Engineering, BuzzFeed (12+yr tenure). /p/brian-lee. Hunter 43/100 (lower confidence; valid status). |
 
 ---
 
