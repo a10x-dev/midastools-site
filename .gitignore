@@ -15,5 +15,7 @@ subscribers.csv
 .founder/.firecrawl_key
 .founder/.apollo_key
 .founder/.hunter_key
+.founder/.anthropic_key
 .founder/state/
+.founder/drafts/
 .founder/inbox/

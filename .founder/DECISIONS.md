@@ -100,3 +100,52 @@ The 35% downside breakdown:
 - Use "World Cup" generically (it's a descriptive term, not a unique trademark in our context — but no FIFA logo, no team logos, no player photos)
 - Generate stylized text-only output; no image gen of named players
 - Disclaimer: "Independent fan project, not affiliated with FIFA"
+
+---
+
+## 2026-05-06 22:00 · jsonblob-to-github-gist-migration + trend-watch-phase-2
+
+**Bet (combined):** Two related infra ships in one go. (1) Migrate subscribers blob + inbound-replies blob from jsonblob (11 deaths in 6 weeks) to GitHub Gist storage (durable, free, we have a token with gist scope). (2) Build Phase 2 of trend-watch: auto-draft layer that takes a top trend from the daily digest + uses Claude API to generate a citation-pattern-compliant blog draft, lands in `.founder/drafts/`, ships to publish only after my agent-review.
+
+**Cost:**
+- Migration: ~90 min (build lib/gist-store.js + migrate subscribers.js + inbound-replies.js + add ANTHROPIC_API_KEY... wait, that's for Phase 2)
+- Phase 2: ~60 min (Claude API integration + draft template + smoke test)
+- Total: ~2.5 hrs
+- $0/mo (GitHub Gist free; Claude API costs ~$0.05 per draft generated, expected <$5/mo)
+
+**Evidence pulled:**
+- Memory + DECISIONS · trend-watch-cron-v1 originally gated Phase 2 on "May 13 audit, 1+ actionable trend." Today's first run already produced 4/5 actionable angles incl. 1622-pt Chrome AI story. **Armando is overriding the gate based on the obvious-quality signal.** Valid override; logging for transparency.
+- Memory · jsonblob has died 11 times. Every death is data loss between deaths. Already lost 3 paying customers' attribution data. Continuing to build on jsonblob risks losing the auto-attribution + reply data shipped tonight.
+- GitHub Gist API: 5k req/hour authenticated, 256KB+ per gist, durable forever. Token at `.founder/.gh_gist_token` already has gist scope (used by our gist-publishing work).
+- Phase 2 risk: factual hallucinations in auto-drafts. Mitigation: agent review (me, not auto-publish) + prompt design forcing "no fabricated stats" rule.
+
+**Inversion (most likely failure):**
+- Migration: GitHub token doesn't have gist scope in Vercel production. Code falls back to jsonblob, no improvement. Mitigation: test the token locally before deploying.
+- Phase 2: Claude generates plausible-sounding but factually wrong drafts; I miss the errors in review; ChatGPT cites them; we get blacklisted. Mitigation: every draft requires me to verify all named-entity claims before ship. Hard rule in DECISIONS.md.
+
+**ICP / Buyer reality:** N/A both internal infra.
+
+**Reversibility:**
+- Migration: two-way (keep jsonblob fallback wired in; gist becomes primary, jsonblob stays as backup for 1 week).
+- Phase 2: two-way (drafts in .founder/drafts/, never auto-publish).
+
+**Alternatives considered:**
+- Vercel KV ($20/mo, requires Pro plan upgrade) — rejected; cost is 13% of LTM revenue, GitHub Gist is free.
+- Upstash Redis (free tier) — viable but requires Armando to sign up + paste new creds; blocks on his action.
+- Skip migration, just keepalive jsonblob more aggressively — band-aid, doesn't fix root cause.
+- Skip Phase 2, wait for May 13 audit — Armando overrode this; signal-quality already obvious.
+- Auto-publish drafts from Phase 2 — rejected per chatgpt-citation-playbook risk + Q3 inversion.
+
+**Confidence: 70%.** Above threshold. Going.
+
+Downside breakdown (30%):
+- 12%: migration fails because token scope is wrong; have to defer to next session
+- 10%: auto-drafts are too generic/wrong-tone; I have to rewrite from scratch (saves no time)
+- 8%: agent review takes too long, becomes the new bottleneck
+
+**Decision: GO.** Both ships in this session.
+
+**Auditable outcome by:** 2026-05-13 (T+7 days).
+- ✅ Migration: 0 jsonblob deaths impact (subscribers blob doesn't lose data even if jsonblob dies)
+- ✅ Phase 2: 1+ blog post shipped from auto-draft via review-then-publish flow
+- ❌ if either fails → rollback the relevant component, log lessons
