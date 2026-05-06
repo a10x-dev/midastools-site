@@ -216,10 +216,10 @@ export default function GhibliStylePrompts2026() {
           <h3 style={{ margin: '0 0 8px', fontSize: '1.1rem' }}>Want 200+ Pre-Built Image Prompts?</h3>
           <p style={{ margin: '0 0 16px', color: '#6B7280', fontSize: 15 }}>The <strong>AI Image Prompt Pack</strong> includes 200+ battle-tested prompts — Ghibli, cyberpunk, hyperrealistic, product photography, portraits, and more. Every style, every mood, pre-built and tested. $29 one-time.</p>
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: 12, alignItems: 'center' }}>
-            <a href={STRIPE_IMAGE_PACK} style={{ display: 'inline-block', background: '#3B5FFF', color: '#fff', padding: '12px 24px', borderRadius: 6, textDecoration: 'none', fontWeight: 700, fontSize: 15 }}>
+            <a href={STRIPE_IMAGE_PACK} data-cta="ghibli-blog-imagepack" style={{ display: 'inline-block', background: '#3B5FFF', color: '#fff', padding: '12px 24px', borderRadius: 6, textDecoration: 'none', fontWeight: 700, fontSize: 15 }}>
               Get the Image Pack &mdash; $29
             </a>
-            <a href={STRIPE_BUNDLE} style={{ display: 'inline-block', background: '#111827', color: '#fff', padding: '12px 24px', borderRadius: 6, textDecoration: 'none', fontWeight: 700, fontSize: 15 }}>
+            <a href={STRIPE_BUNDLE} data-cta="ghibli-blog-bundle" style={{ display: 'inline-block', background: '#111827', color: '#fff', padding: '12px 24px', borderRadius: 6, textDecoration: 'none', fontWeight: 700, fontSize: 15 }}>
               All Kits Bundle &mdash; $97
             </a>
           </div>

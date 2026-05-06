@@ -117,7 +117,7 @@ export default function RampAIAdoptionPlaybook() {
         <div style={{ background: '#EEF2FF', border: '2px solid #3B5FFF', borderRadius: '12px', padding: '24px', margin: '32px 0', textAlign: 'center' }}>
           <p style={{ fontSize: '1.1rem', fontWeight: '700', margin: '0 0 8px' }}>Skip Months of Building — Get Pre-Built AI Skills</p>
           <p style={{ color: '#6B7280', margin: '0 0 16px', fontSize: '15px' }}>The Claude Cowork Kit gives your team 50+ ready-to-use AI skills, workflow templates, and prompt chains — the same kind of skills Ramp's employees built internally.</p>
-          <a href={STRIPE_COWORK_KIT} style={{ display: 'inline-block', background: '#3B5FFF', color: '#fff', padding: '14px 28px', borderRadius: '999px', textDecoration: 'none', fontWeight: '700', fontSize: '15px' }}>
+          <a href={STRIPE_COWORK_KIT} data-cta="ramp-blog-cowork-hero" style={{ display: 'inline-block', background: '#3B5FFF', color: '#fff', padding: '14px 28px', borderRadius: '999px', textDecoration: 'none', fontWeight: '700', fontSize: '15px' }}>
             Claude Cowork Kit — $29 →
           </a>
         </div>
@@ -171,7 +171,7 @@ export default function RampAIAdoptionPlaybook() {
         <div style={{ background: '#F9FAFB', border: '1px solid #E5E7EB', borderRadius: '12px', padding: '24px', margin: '24px 0' }}>
           <h3 style={{ fontSize: '1.1rem', fontWeight: '700', margin: '0 0 8px' }}>Claude Cowork Kit — $29</h3>
           <p style={{ color: '#6B7280', margin: '0 0 12px', fontSize: '15px' }}>50+ pre-built AI skills and prompt chains for Claude. This is your team's "Glass" — a curated set of workflows that deliver value on first use. Perfect for getting every team member from L1 to L2.</p>
-          <a href={STRIPE_COWORK_KIT} style={{ color: '#3B5FFF', textDecoration: 'none', fontWeight: '700', fontSize: '15px' }}>Get the Cowork Kit →</a>
+          <a href={STRIPE_COWORK_KIT} data-cta="ramp-blog-cowork-inline" style={{ color: '#3B5FFF', textDecoration: 'none', fontWeight: '700', fontSize: '15px' }}>Get the Cowork Kit →</a>
           {' · '}
           <Link href="/claude-cowork-kit" style={{ color: '#6B7280', textDecoration: 'none', fontSize: '14px' }}>Learn more</Link>
         </div>
@@ -179,7 +179,7 @@ export default function RampAIAdoptionPlaybook() {
         <div style={{ background: '#F9FAFB', border: '1px solid #E5E7EB', borderRadius: '12px', padding: '24px', margin: '24px 0' }}>
           <h3 style={{ fontSize: '1.1rem', fontWeight: '700', margin: '0 0 8px' }}>AI Team Adoption Kit — $49</h3>
           <p style={{ color: '#6B7280', margin: '0 0 12px', fontSize: '15px' }}>The complete adoption playbook: L0–L3 assessment templates, department-specific skill libraries, leaderboard templates, and onboarding sequences. Everything Ramp built internally, packaged for teams of any size.</p>
-          <a href={STRIPE_TEAM_KIT} style={{ color: '#3B5FFF', textDecoration: 'none', fontWeight: '700', fontSize: '15px' }}>Get the Team Kit →</a>
+          <a href={STRIPE_TEAM_KIT} data-cta="ramp-blog-team-inline" style={{ color: '#3B5FFF', textDecoration: 'none', fontWeight: '700', fontSize: '15px' }}>Get the Team Kit →</a>
           {' · '}
           <Link href="/team-adoption-kit" style={{ color: '#6B7280', textDecoration: 'none', fontSize: '14px' }}>Learn more</Link>
         </div>
@@ -187,7 +187,7 @@ export default function RampAIAdoptionPlaybook() {
         <div style={{ background: '#F9FAFB', border: '1px solid #E5E7EB', borderRadius: '12px', padding: '24px', margin: '24px 0' }}>
           <h3 style={{ fontSize: '1.1rem', fontWeight: '700', margin: '0 0 8px' }}>Full Bundle — $97</h3>
           <p style={{ color: '#6B7280', margin: '0 0 12px', fontSize: '15px' }}>All 16 kits including both the Cowork Kit and Team Adoption Kit, plus prompt packs for marketing, sales, engineering, HR, finance, and more. One purchase, every AI workflow your team needs.</p>
-          <a href={STRIPE_BUNDLE} style={{ color: '#3B5FFF', textDecoration: 'none', fontWeight: '700', fontSize: '15px' }}>Get the Full Bundle →</a>
+          <a href={STRIPE_BUNDLE} data-cta="ramp-blog-bundle-inline" style={{ color: '#3B5FFF', textDecoration: 'none', fontWeight: '700', fontSize: '15px' }}>Get the Full Bundle →</a>
           {' · '}
           <Link href="/bundle" style={{ color: '#6B7280', textDecoration: 'none', fontSize: '14px' }}>Learn more</Link>
         </div>
@@ -215,13 +215,13 @@ export default function RampAIAdoptionPlaybook() {
           <p style={{ color: '#fff', fontSize: '1.2rem', fontWeight: '700', margin: '0 0 8px' }}>Your Team's AI Adoption Starts Here</p>
           <p style={{ color: '#9CA3AF', margin: '0 0 20px', fontSize: '15px' }}>Ramp had a dedicated AI team. You have us. Pre-built skills, adoption playbooks, and prompt kits — everything you need to go from L0 to L3.</p>
           <div>
-            <a href={STRIPE_COWORK_KIT} style={{ display: 'inline-block', background: '#3B5FFF', color: '#fff', padding: '14px 24px', borderRadius: '999px', textDecoration: 'none', fontWeight: '700', fontSize: '15px', margin: '6px' }}>
+            <a href={STRIPE_COWORK_KIT} data-cta="ramp-blog-cowork-bottom" style={{ display: 'inline-block', background: '#3B5FFF', color: '#fff', padding: '14px 24px', borderRadius: '999px', textDecoration: 'none', fontWeight: '700', fontSize: '15px', margin: '6px' }}>
               Cowork Kit — $29
             </a>
-            <a href={STRIPE_TEAM_KIT} style={{ display: 'inline-block', background: '#fff', color: '#111827', padding: '14px 24px', borderRadius: '999px', textDecoration: 'none', fontWeight: '700', fontSize: '15px', margin: '6px' }}>
+            <a href={STRIPE_TEAM_KIT} data-cta="ramp-blog-team-bottom" style={{ display: 'inline-block', background: '#fff', color: '#111827', padding: '14px 24px', borderRadius: '999px', textDecoration: 'none', fontWeight: '700', fontSize: '15px', margin: '6px' }}>
               Team Kit — $49
             </a>
-            <a href={STRIPE_BUNDLE} style={{ display: 'inline-block', background: '#10B981', color: '#fff', padding: '14px 24px', borderRadius: '999px', textDecoration: 'none', fontWeight: '700', fontSize: '15px', margin: '6px' }}>
+            <a href={STRIPE_BUNDLE} data-cta="ramp-blog-bundle-bottom" style={{ display: 'inline-block', background: '#10B981', color: '#fff', padding: '14px 24px', borderRadius: '999px', textDecoration: 'none', fontWeight: '700', fontSize: '15px', margin: '6px' }}>
               Full Bundle — $97 →
             </a>
           </div>

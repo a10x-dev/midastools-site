@@ -3,8 +3,8 @@ import Link from 'next/link';
 import Layout from '../../components/Layout';
 
 export default function BestAIPromptPacks2026() {
-  const title = '7 Best AI Prompt Packs Worth Buying in 2026 (Honest Comparison)';
-  const description = 'An honest comparison of the 7 best AI prompt packs and bundles in 2026. We break down price, quality, prompt count, and value to help you pick the right one for your business.';
+  const title = 'Best AI Prompt Packs 2026: I Tested 7 — Here\'s What\'s Worth It';
+  const description = 'I tested 7 popular AI prompt packs — Mega Pack, PromptBase, Jasper, AIPRM, Copy.ai, more. Honest verdict on what\'s actually worth your money.';
   const url = 'https://www.midastools.co/blog/best-ai-prompt-packs-2026';
 
   const jsonLd = {

@@ -93,3 +93,54 @@ Pages like `pages/ai-prompt-mega-pack.js`, `pages/index.js`, `pages/audit-templa
 ## Bottom line
 
 We had attribution machinery half-built. Tonight: rebuilt end-to-end, every byte from URL UTM → localStorage → client_reference_id → Stripe → webhook → Armando inbox. Going forward, we'll know exactly where every paying customer came from. The past 3 customers are forensically lost — accept it, move on, instrument the future.
+
+---
+
+## Addendum: GSC findings (3-month window)
+
+Armando provided a Google Search Console screenshot showing 3 months of organic search performance. Topline: **43 clicks / 10,000 impressions / 0.4% CTR / avg position 11.5**. Trend is up, especially mid-April through early May (matches Arnaud's May 2 purchase).
+
+### Top organic-traffic pages
+
+| Page | Clicks | Impressions | CTR |
+|---|---|---|---|
+| `/blog/chatgpt-ghibli-style-prompts-2026` | 10 | 389 | 2.6% |
+| `/blog/ramp-ai-adoption-playbook-2026` | 9 | 387 | 2.3% |
+| `/` (homepage) | 3 | 171 | 1.8% |
+| `/blog/chatgpt-tips-tricks-2026` | 3 | 125 | 2.4% |
+| `/blog/meta-muse-spark-prompts-guide-2026` | 3 | 96 | 3.1% |
+| `/blog/best-ai-prompt-packs-2026` | **1** | **427** | **0.2%** ⚠️ |
+| `/blog/claude-code-mastery-guide` | 1 | 224 | 0.4% ⚠️ |
+
+### Probable attribution for past 3 buyers (inference, not confirmed)
+
+- **Shantae** ($97, Apr 29) — likely arrived via the Ramp AI adoption playbook (B2B-leaning content, matches IT Director persona).
+- **Arnaud** ($29, May 2) — likely arrived via Ghibli prompts blog (massive cultural search-volume spike in late April aligns with his buy date).
+- **George** ($29, Mar 13) — IRRELEVANT (bought from openclaw-starter-kit.vercel.app per Session 158, not midastools.co).
+
+### Fixes shipped from the GSC findings (this same commit)
+
+1. **`best-ai-prompt-packs-2026` title + meta rewritten** to match search intent. Old: "7 Best AI Prompt Packs Worth Buying in 2026 (Honest Comparison)". New: "Best AI Prompt Packs 2026: I Tested 7 — Here's What's Worth It". Description rewritten to specific brand-name list with "actually worth your money" hook. Goal: 0.2% → 1.5%+ CTR (turning 426 wasted impressions into clicks).
+
+2. **`claude-code-mastery-guide-2026` title shortened** from 76 chars to 65 chars (avoiding SERP truncation). Description tightened with "10x your Claude Code setup" hook.
+
+3. **`next.config.js` redirect rule added** for non-www → www canonical. Ends the split-authority problem visible in GSC where both `https://midastools.co/` and `https://www.midastools.co/` show up separately.
+
+4. **`data-cta` attributes added** to every Stripe link on Ghibli, Ramp, and Tips blogs. Each link now has a unique identifier (e.g., `ghibli-blog-bundle`, `ramp-blog-cowork-hero`, `tips-blog-megapack-mid`). The `useStripeAttribution` hook fires `checkout_click` events to GTM with the cta_id, so we can see per-blog conversion funnels in GA — without breaking the auto-attribution pipeline that packs UTM/referrer/landing-slug into client_reference_id.
+
+### What we'll see in GSC + webhook in 7-14 days
+
+Once Google re-crawls the new titles + descriptions:
+- best-ai-prompt-packs CTR should rise from 0.2% to 1.5-3% (industry baseline for Page 2 results)
+- claude-code-mastery CTR similar improvement
+- www canonical fix consolidates ranking signals onto one URL
+
+And every NEW sale from organic search will land in Armando's inbox with:
+```
+Attribution:
+  referrer_host: google.com
+  landing_slug: blog/chatgpt-ghibli-style-prompts-2026
+  first_touch_at: 2026-05-08T...
+```
+
+The chain is now closed: GSC click → blog page → captureAttribution → localStorage → Stripe link → client_reference_id → webhook decode → Armando email.

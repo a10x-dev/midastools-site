@@ -6,8 +6,8 @@ const STRIPE_CODE = 'https://buy.stripe.com/8x25kCccv4aJ3ys0pscMM0q';
 const STRIPE_BUNDLE = 'https://buy.stripe.com/bJe7sK0tNdLjgle0pscMM0b';
 
 export default function ClaudeCodeMasteryGuide() {
-  const title = 'The Ultimate Claude Code CLAUDE.md Guide: Templates, Hooks & Workflows (2026)';
-  const description = 'Copy-paste CLAUDE.md templates for React, Python, Go + 10 hook recipes + subagent patterns. The complete Claude Code mastery guide with ready-to-use configs.';
+  const title = 'Claude Code Mastery: CLAUDE.md Templates + 10 Hook Recipes (2026)';
+  const description = 'Copy-paste CLAUDE.md templates (React, Python, Go) + 10 hook recipes + subagent patterns. Drop-in configs that 10x your Claude Code setup.';
   const url = 'https://www.midastools.co/blog/claude-code-mastery-guide-2026';
 
   const jsonLd = [
