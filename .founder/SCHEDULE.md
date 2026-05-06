@@ -16,3 +16,9 @@ Format: `- HH:MM | action description | recurrence | source | enabled`
 - 09:00 | May 11: Begin Plan B prep — research 50 LinkedIn solo-coach prospects per cold-outbound-linkedin-spec.md (PARALLEL with Plan A reply-handling, not sequential — see .founder/deliverables/297-audience-restratification-2026-05-03.md) | once-may11 | cofounder | true
 - 09:00 | May 15: Plan B first wave — send 25 personalized cold LinkedIn DMs (or kill Plan B if research showed audience is wrong) | once-may15 | cofounder | true
 - 09:00 | May 22: Plan A retro — if 0 sales from broadcast, kill Day-2 send cadence; Plan B wave 1 reply-handling | once-may22 | cofounder | true
+- 09:00 | Customer reply check: run python3 .founder/tools/read-replies.py — exit 10 = unread reply present, fire reply-handling playbook within 30min | daily | cofounder | true
+- 09:00 | May 10: D+5 Shantae nudge if no reply yet (1-line bump, body unchanged) | once-may10 | cofounder | true
+- 09:00 | May 12: D+10 Arnaud nudge if no reply yet (same pattern) | once-may12 | cofounder | true
+- 09:00 | May 14: KILL-OR-ITERATE for customer-acquisition-strategy-2026-05-05.md — review the 4 kill criteria (customer reply / cold reply / new sale / referral lead) — if 0/4 fire, pick pivot option P1-P4 | once-may14 | cofounder | true
+- 09:00 | June 4: D+30 next-product feedback to Shantae + Arnaud (templates in .founder/crm/customers.md) | once-june4 | cofounder | true
+- 09:00 | August 3: D+90 referral + early-access ask to Shantae + Arnaud | once-august3 | cofounder | true
