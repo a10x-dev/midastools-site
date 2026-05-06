@@ -1,5 +1,6 @@
 import Stripe from 'stripe';
 import nodemailer from 'nodemailer';
+import { decodeAttributionFromClientRef } from '../../lib/stripe-attribution';
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
 
@@ -425,6 +426,14 @@ export default async function handler(req, res) {
     const name = session.customer_details?.name;
     const kit = detectKit(session);
 
+    // Decode client-side attribution that the front-end packed into client_reference_id
+    const attribution = decodeAttributionFromClientRef(session.client_reference_id);
+    if (attribution) {
+      console.log(`[attribution] sale for ${email}:`, JSON.stringify(attribution));
+    } else {
+      console.log(`[attribution] sale for ${email}: NO ATTRIBUTION (client_reference_id="${session.client_reference_id || ''}")`);
+    }
+
     console.log(`Purchase detected: ${kit.name} for ${email}`);
 
     if (email) {
@@ -433,6 +442,32 @@ export default async function handler(req, res) {
         console.log(`Download email sent to ${email} for ${kit.name}`);
       } catch (err) {
         console.error('Failed to send email:', err);
+      }
+
+      // Notify founder with attribution data alongside the sale
+      try {
+        const attrLine = attribution
+          ? Object.entries(attribution).map(([k, v]) => `<strong>${k}:</strong> ${v}`).join('<br/>')
+          : '<em>No attribution data — visitor likely arrived without UTM-tagged URL or before the upgraded capture shipped.</em>';
+        await transporter.sendMail({
+          from: process.env.GMAIL_ADDRESS,
+          to: process.env.GMAIL_ADDRESS,
+          subject: `💰 SALE: ${kit.name} — ${email}`,
+          html: `
+            <h2>New paying customer</h2>
+            <p><strong>Email:</strong> ${email}</p>
+            <p><strong>Product:</strong> ${kit.name}</p>
+            <p><strong>Amount:</strong> $${(session.amount_total || 0) / 100}</p>
+            <h3>Attribution</h3>
+            <p>${attrLine}</p>
+            <h3>Stripe</h3>
+            <p><strong>Session ID:</strong> ${session.id}</p>
+            <p><strong>Payment Link:</strong> ${session.payment_link || 'n/a'}</p>
+            <p><strong>client_reference_id:</strong> ${session.client_reference_id || '(empty)'}</p>
+          `,
+        });
+      } catch (err) {
+        console.error('Founder notification failed:', err);
       }
     }
   }

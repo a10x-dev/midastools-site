@@ -2,12 +2,23 @@ import Head from 'next/head';
 import Script from 'next/script';
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
+import { useRouter } from 'next/router';
+import { useEffect } from 'react';
 import { useStripeAttribution } from '../lib/stripe-attribution';
+import { trackEvent } from '../lib/track';
 
 const GTM_ID = 'GTM-TN8BDBCP';
 
 export default function App({ Component, pageProps }) {
   useStripeAttribution();
+  const router = useRouter();
+  useEffect(() => {
+    // Fire page_view on initial load + every client-side route change.
+    trackEvent('page_view', { path: router.asPath });
+    const onRoute = (url) => trackEvent('page_view', { path: url });
+    router.events.on('routeChangeComplete', onRoute);
+    return () => router.events.off('routeChangeComplete', onRoute);
+  }, [router]);
 
   return (
     <>

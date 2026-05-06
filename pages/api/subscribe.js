@@ -10,7 +10,14 @@ export default async function handler(req, res) {
     return res.status(405).json({ error: 'Method not allowed' });
   }
 
-  const { email, source, website, referrer, utm_source, utm_medium, utm_campaign } = req.body;
+  const { email, source, website, referrer, utm_source, utm_medium, utm_campaign, utm_term, utm_content, landing_slug, attribution } = req.body;
+
+  // Server-side enrichment: capture what the client may not have
+  const serverReferer = req.headers.referer || '';
+  const serverUserAgent = (req.headers['user-agent'] || '').slice(0, 200);
+  const serverCountry = req.headers['x-vercel-ip-country'] || req.headers['cf-ipcountry'] || '';
+  const serverCity = req.headers['x-vercel-ip-city'] || '';
+  const serverRegion = req.headers['x-vercel-ip-country-region'] || '';
 
   // Honeypot: bots fill the hidden "website" field, real humans don't
   if (website) {
@@ -38,10 +45,18 @@ export default async function handler(req, res) {
         existing.push({
           email,
           source: source || 'site',
-          referrer: referrer || '',
+          referrer: referrer || serverReferer || '',
           utm_source: utm_source || '',
           utm_medium: utm_medium || '',
           utm_campaign: utm_campaign || '',
+          utm_term: utm_term || '',
+          utm_content: utm_content || '',
+          landing_slug: landing_slug || '',
+          attribution: attribution || null,
+          server_country: serverCountry,
+          server_region: serverRegion,
+          server_city: serverCity,
+          user_agent: serverUserAgent,
           date: new Date().toISOString(),
         });
         const writeResult = await writeSubscribers(existing);
