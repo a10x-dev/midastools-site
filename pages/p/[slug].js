@@ -105,6 +105,18 @@ export default function PersonalPage({ page }) {
           </p>
         </div>
 
+        <div style={{ marginTop: 32, padding: '20px 24px', borderRadius: 12, background: '#F9FAFB', border: '1px dashed #D1D5DB', textAlign: 'center' }}>
+          <p style={{ fontSize: 14, color: DESIGN.gray400, marginBottom: 12, lineHeight: 1.6 }}>
+            Want a quick interactive version? Take the 60-second quiz and I'll email these 5 prompts (plus a 6th custom one based on your answer):
+          </p>
+          <a
+            href={`/q/${page.slug}`}
+            style={{ display: 'inline-block', color: DESIGN.accent, fontWeight: 700, fontSize: 15, textDecoration: 'none', borderBottom: `1px solid ${DESIGN.accent}` }}
+          >
+            Take {page.firstName}'s 60-second match →
+          </a>
+        </div>
+
         <p style={{ fontSize: 13, color: DESIGN.gray400, marginTop: 32, textAlign: 'center', lineHeight: 1.6 }}>
           This page was built just for {page.firstName}. If that's not you, the public version of the bundle lives at{' '}
           <a href="/ai-prompt-mega-pack" style={{ color: DESIGN.accent }}>midastools.co/ai-prompt-mega-pack</a>.
