@@ -12,5 +12,6 @@ subscribers.csv
 .founder/.resend_key
 .founder/.resend_webhook_secret
 .founder/.stripe_key
+.founder/.firecrawl_key
 .founder/state/
 .founder/inbox/
