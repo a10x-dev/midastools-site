@@ -1,0 +1,16 @@
+Hi Brian,
+
+I'm Armando — I run MidasTools. Brief: I sell a $97 bundle of 14 AI prompt kits for working professionals (post-mortems, RFCs, deploy comms, hiring rubrics, etc.).
+
+12+ years at BuzzFeed through the entire AI hype-then-real-utility cycle — you've probably seen more prompt-experiment noise than anyone. I'm not pitching that. I built a page specifically for you with 5 prompts tuned to senior-engineering writing surfaces (engineering post-mortems, tech-debt RICE memos, deploy comms to editorial, RFC drafter, hiring rubric).
+
+It's here, no email gate: https://www.midastools.co/p/brian-lee
+
+If even one prompt compresses an RFC or post-mortem that would otherwise eat 4 hours, $97 pays for itself. If they don't land — just ignore this email, no follow-up.
+
+Either way: even if you don't buy, a 30-second reply on whether the bundle concept lands or feels like noise would be 10x the value of any analytics dashboard I have.
+
+Armando
+midastools.co
+
+P.S. Reply with whichever writing surface eats the most senior-eng time at BuzzFeed and I'll send you a 6th prompt custom to it. I read every reply.

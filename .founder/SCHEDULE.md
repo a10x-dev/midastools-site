@@ -22,3 +22,5 @@ Format: `- HH:MM | action description | recurrence | source | enabled`
 - 09:00 | May 14: KILL-OR-ITERATE for customer-acquisition-strategy-2026-05-05.md — review the 4 kill criteria (customer reply / cold reply / new sale / referral lead) — if 0/4 fire, pick pivot option P1-P4 | once-may14 | cofounder | true
 - 09:00 | June 4: D+30 next-product feedback to Shantae + Arnaud (templates in .founder/crm/customers.md) | once-june4 | cofounder | true
 - 09:00 | August 3: D+90 referral + early-access ask to Shantae + Arnaud | once-august3 | cofounder | true
+- 09:00 | May 13: REASSESS Hunter.io vs Exa Websets ($49/mo). Inputs: Hunter batch reply rate, Hunter searches remaining (out of 50/mo), persona quality. Decide: (a) stay free Hunter, (b) upgrade Exa $49, (c) pivot inbound /quiz. | once-may13 | cofounder | true
+- 09:00 | Daily: check Hunter restriction status — if unblocked, run `python3 .founder/tools/hunter-find.py batch .founder/prospects/batch1-shantae-lookalikes.jsonl` then `bash .founder/tools/fire-batch1-cold.sh --send` to fire 5 cold emails | daily-until-fired | cofounder | true
