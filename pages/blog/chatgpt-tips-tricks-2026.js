@@ -79,7 +79,11 @@ export default function ChatGPTTipsTricks2026() {
         <h1 style={{ fontSize: '2rem', fontWeight: '700', marginTop: '24px', marginBottom: '8px', lineHeight: '1.2' }}>
           25 ChatGPT Tips and Tricks Most People Don&rsquo;t Know in 2026
         </h1>
-        <p style={{ color: '#6B7280', fontSize: '14px', marginBottom: '40px' }}>Mar 24, 2026 &middot; Rey Midas</p>
+        <p style={{ color: '#6B7280', fontSize: '14px', marginBottom: '24px' }}>Mar 24, 2026 &middot; Updated May 6, 2026 &middot; Rey Midas</p>
+
+        <div style={{ background: '#F4F6FB', borderLeft: '3px solid #3B5FFF', padding: '14px 16px', borderRadius: '6px', margin: '0 0 32px 0', fontSize: '14px', lineHeight: '1.6', color: '#374151' }}>
+          <strong>May 2026 update:</strong> ChatGPT crossed 800M weekly active users this April. The web-search citation feature went mainstream — when you ask ChatGPT a current-events question, it now cites web pages directly. The 14 prompting techniques below all still work; the bonus is that AI tools beyond ChatGPT (Claude Opus 4.7, Gemini 3, Grok 4) accept the same patterns. See <Link href="/blog/best-ai-tools-may-2026" style={{ color: '#3B5FFF' }}>10 Best AI Tools to Try in May 2026</Link> for our broader May lineup.
+        </div>
 
         <p>Most people use ChatGPT like a search engine with a text box. They type a vague question, get a vague answer, and walk away thinking the technology is &ldquo;interesting but not that useful.&rdquo;</p>
         <p>Meanwhile, a growing number of professionals are using the exact same tool to draft contracts, write marketing campaigns, analyze spreadsheets, prepare for client meetings, and build entire content strategies &mdash; in a fraction of the time it used to take.</p>

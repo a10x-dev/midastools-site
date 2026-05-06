@@ -44,7 +44,11 @@ export default function BestAIPromptPacks2026() {
         <h1 style={{ fontSize: '2rem', fontWeight: '700', marginTop: '24px', marginBottom: '8px', lineHeight: '1.2' }}>
           7 Best AI Prompt Packs Worth Buying in 2026 (Honest Comparison)
         </h1>
-        <p style={{ color: '#6B7280', fontSize: '14px', marginBottom: '40px' }}>Mar 24, 2026 &middot; Rey Midas</p>
+        <p style={{ color: '#6B7280', fontSize: '14px', marginBottom: '24px' }}>Mar 24, 2026 &middot; Updated May 6, 2026 &middot; Rey Midas</p>
+
+        <div style={{ background: '#F4F6FB', borderLeft: '3px solid #3B5FFF', padding: '14px 16px', borderRadius: '6px', margin: '0 0 32px 0', fontSize: '14px', lineHeight: '1.6', color: '#374151' }}>
+          <strong>May 2026 update:</strong> All 7 packs below are still active in the market. The Midas Mega Pack ($29) and All Kits Bundle ($97) added 14 new prompt categories in April including Claude Opus 4.7-tuned variants. For a fresh look at the broader 2026 AI tool stack, see our companion: <Link href="/blog/best-ai-tools-may-2026" style={{ color: '#3B5FFF' }}>10 Best AI Tools to Try in May 2026</Link>.
+        </div>
 
         <p>Here is a pattern I keep seeing: someone buys ChatGPT Plus, spends three days trying to get useful output, and quits. Not because the AI is bad &mdash; because they are writing prompts from scratch every single time.</p>
         <p>That is like buying a professional camera and refusing to learn any composition rules. The tool is capable. The operator is winging it.</p>

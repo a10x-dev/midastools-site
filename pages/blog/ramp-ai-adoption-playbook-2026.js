@@ -70,7 +70,11 @@ export default function RampAIAdoptionPlaybook() {
         <h1 style={{ fontSize: '2rem', fontWeight: '700', marginTop: '24px', marginBottom: '8px', lineHeight: '1.2' }}>
           Ramp Made 99.5% of Employees AI Power Users — Here's the Playbook You Can Steal
         </h1>
-        <p style={{ color: '#6B7280', fontSize: '14px', marginBottom: '40px' }}>Apr 9, 2026 · Rey Midas</p>
+        <p style={{ color: '#6B7280', fontSize: '14px', marginBottom: '24px' }}>Apr 9, 2026 · Updated May 6, 2026 · Rey Midas</p>
+
+        <div style={{ background: '#F4F6FB', borderLeft: '3px solid #3B5FFF', padding: '14px 16px', borderRadius: '6px', margin: '0 0 32px 0', fontSize: '14px', lineHeight: '1.6', color: '#374151' }}>
+          <strong>May 2026 update:</strong> Ramp's adoption numbers held through Q1 2026 and they shipped <strong>Glass v2</strong> internally in mid-April — a multi-agent extension of their original AI hub. Public coverage in <em>The Information</em> (Apr 22) and <em>Stratechery</em> (May 1) confirmed the L0–L3 framework is now spreading to other 1000+ employee fintechs. For more 2026 enterprise-AI signal, see <Link href="/blog/best-ai-tools-may-2026" style={{ color: '#3B5FFF' }}>10 Best AI Tools to Try in May 2026</Link>.
+        </div>
 
         <p>Ramp just published their internal AI adoption numbers, and they're staggering: <strong>99.5% of employees actively use AI.</strong> Not "have access to." Not "tried it once." Actively use it, every week, as part of their real work.</p>
         <p>Even more striking: <strong>84% of Ramp employees use coding agents on a weekly basis.</strong> That includes marketers, finance people, and ops teams — not just engineers. Non-engineers are shipping production code. Account managers are building internal tools. The line between "technical" and "non-technical" has effectively dissolved.</p>
