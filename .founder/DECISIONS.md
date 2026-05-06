@@ -48,3 +48,55 @@ The 35% downside breakdown:
 - ❌ if 0 posts shipped → kill the cron, accept manual scanning instead
 
 **Lessons committed to capture by May 13:** noise floor of public feeds, false-positive rate of scoring algo, time-from-trend-detection-to-published-post.
+
+---
+
+## 2026-05-06 21:15 · world-cup-ai-prompts-experiment
+
+**Bet:** Ship a parallel-experiment seasonal product: `/world-cup-ai-prompts` landing page (10 free prompts + 20 email-gated) + `/world-cup-scorecard-generator` (interactive text/HTML scorecard generator users screenshot for socials). Position 5 weeks pre-kickoff (June 11) to capture pre-tournament search/citation window. Test demand before committing to a paid pack.
+
+**Cost:**
+- Build: ~2.5 hours (landing 45 min + generator 90 min + sitemap + cross-link 15 min)
+- $0/mo (no paid APIs; HTML-rendered scorecard, no DALL-E)
+- Reputation: low-medium. IP risk on "FIFA World Cup" trademark — must use "World Cup" generically + skip FIFA logos / team logos / player photos.
+
+**Evidence pulled:**
+- `chatgpt-citation-playbook` (just shipped) — listicle + named-entity + recent-date pattern works. World Cup content checks all 3 (10-prompt list, named players/teams, June 2026 date).
+- `feedback_protect_flywheel` + `feedback_email_gate_tools` — free tool that captures emails fits the existing flywheel without disturbing homepage.
+- Memory: 14 existing free generators drive most of our traffic. Adding +1 themed for a major sports event aligns with the proven pattern.
+- Web/timing: 2026 FIFA World Cup runs June 11 - July 19, 2026. We're at T-36 days. Pre-tournament search peaks 1-2 weeks before kickoff. Now is prime seeding.
+- Past customer profile (Shantae IT Director / Arnaud French finance) does NOT match soccer-fan-buyer. Free generator is top-of-funnel diversification, not a buyer-profile match. ROI is brand awareness + email captures + (possibly) niche $9 pack sales.
+
+**Inversion (most likely failure):** product feels weak vs ESPN/Sofascore/FIFA Plus apps. No one shares because output is text-only and uninspiring. Backup failure: no one searches "world cup AI prompts" — niche too small. ONE assumption that blows it up: that USERS want to CREATE custom scorecards (vs just screenshotting ESPN's official scorecard). Counter mitigation: framing emphasizes "AI-generated commentary" + "personalized take", which ESPN doesn't do.
+
+**ICP / Buyer reality:**
+- Free-tool user: any World Cup viewer who wants AI-flavored shareable content (broad, low-intent).
+- Paid product (deferred): small biz/creators doing World Cup marketing — bars, restaurants, sports merch sellers, content creators. ~$9 micro-pack ticket if shipped.
+- Strongest NO: free tools from ESPN/Sofascore + IG/TikTok native stickers already cover the share-graphic need.
+
+**Reversibility:** Two-way door entirely. Free pages, no Stripe products committed yet, no public press, easy to delete after the tournament if zero engagement.
+
+**Alternatives considered:**
+- (a) Full interactive generator + image generation via DALL-E (~$0.04/image, would compound to real cost at scale). Rejected — too expensive for unproven demand.
+- (b) Just a blog post with 30 prompts, no interactive tool. Lower build cost (~30 min) but lower share-virality — no "create" verb.
+- (c) Wait until June 1 (T-10d) when pre-tournament search is peaking. Rejected — citation indexes need time to crawl + rank; shipping now lets us be in ChatGPT/Bing's index by the time queries spike.
+- (d) **Landing page (10 free prompts, 20 email-gated) + simple HTML-rendered scorecard generator (no image gen).** PICKED. Smallest reversible step that still tests both vectors (search demand + share virality).
+
+**Confidence: 65%.** Above threshold. Going.
+
+The 35% downside breakdown:
+- 18%: too niche; sub-100 visitors over 6 weeks
+- 10%: scorecard quality is uninspiring without image generation; low share rate
+- 7%: IP/brand framing tightrope — we slip and use "FIFA" or a player photo accidentally
+
+**Decision: GO.** Smaller scope (no paid product, no DALL-E). If 50+ email captures in 14 days → ship $9 paid micro-pack + investigate DALL-E image gen. If <10 captures → kill, accept the 2.5 hours as cheap data.
+
+**Auditable outcome by:** 2026-05-20 (T+14 days, mid-tournament-buildup).
+- ✅ if 50+ email captures attributable to /world-cup-ai-prompts
+- ⚠️ if 10-50 → sustain free, do not invest in paid
+- ❌ if <10 → kill the pages, log lessons
+
+**IP guardrails (committed in code):**
+- Use "World Cup" generically (it's a descriptive term, not a unique trademark in our context — but no FIFA logo, no team logos, no player photos)
+- Generate stylized text-only output; no image gen of named players
+- Disclaimer: "Independent fan project, not affiliated with FIFA"
