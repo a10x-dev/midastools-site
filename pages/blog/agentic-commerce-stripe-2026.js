@@ -438,13 +438,24 @@ export default function AgenticCommerceStripe2026() {
           translated it directly: <strong>"Stripe's basic idea is that money is data. When we
           launched Stripe in 2011, that was not the industry orthodoxy."</strong>
         </p>
-        <p style={{ fontSize: '1rem', lineHeight: 1.65, marginBottom: 32 }}>
+        <p style={{ fontSize: '1rem', lineHeight: 1.65, marginBottom: 16 }}>
           Hock arrived at the same conclusion from organizational theory — money is "a
           guarantee of value exchange" and the medium that carries it can be anything. Onstage
           the same day, Ginger Baker said it most plainly: <strong>"Isn't money just another
           form of digital content?"</strong> If money is data, then consumers of data
           (agents) will naturally become consumers of money. That is the philosophical
           foundation underneath every protocol, demo, and growth number on this page.
+        </p>
+        <p style={{ fontSize: '1rem', lineHeight: 1.65, marginBottom: 32 }}>
+          One closing detail completes the lineage. Sam Altman was one of Stripe's earliest
+          angel investors — the Collison brothers were not yet 20 when he wrote that check, 19
+          years ago. At Sessions 2026, in a last-minute substitution for Greg Brockman, Altman
+          described OpenAI's own evolution in three stages: from <strong>research lab, to
+          product company, to "token factory" supplying intelligence to the world</strong>.
+          Patrick traced an analogous evolution for Stripe: in 2010, the problem two Irish
+          teenagers solved was that accepting payments online was too difficult. Along the way
+          they solved that problem for 5 million businesses. In 2026 they have discovered a
+          new problem — <em>the customers of those businesses may soon no longer be human.</em>
         </p>
 
         <h2 style={{ fontSize: '1.5rem', fontWeight: 700, marginTop: 32, marginBottom: 16 }}>
@@ -513,6 +524,7 @@ export default function AgenticCommerceStripe2026() {
           <li>David Stearns — author of the definitive academic history of Visa; later joined Stripe.</li>
           <li>Patrick Collison's Lisp-inherited "code is data" / "money is data" framing onstage at Sessions 2026.</li>
           <li>Ginger Baker (Meta VP Product) at Sessions 2026 — "Isn't money just another form of digital content?"</li>
+          <li>Sam Altman closing fireside chat at Sessions 2026 (substituted for Greg Brockman last-minute) — described OpenAI as evolving from research lab to product company to "token factory supplying intelligence to the world"; Stripe's earliest angel investor when the Collison brothers were not yet 20.</li>
           <li>Tempo CLI + Tempo blockchain (Stripe, 2026) — agent-native stablecoin payment rails referenced in the Alpha Vantage and streaming-payments demos.</li>
           <li>Metronome (real-time metering engine) — combined with Tempo and stablecoins to power the world's first streaming payments business at Sessions 2026.</li>
           <li>Jeff Weinstein (Stripe product leader) interview at Sessions 2026 — "treat the agent as the best programmer you know" framing for merchants.</li>
