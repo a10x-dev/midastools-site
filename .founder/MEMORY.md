@@ -2,6 +2,57 @@
 
 Your long-term memory. Persists across all sessions. This is your brain — treat it well.
 
+## 🟢 SESSION 27 (May 7, 14:43 local) — BOTTLENECK-DIRECT: BOUCHER CHANNEL PIVOT PRE-BUILT
+
+### What changed
+- Bottleneck = market_understanding 6/10 (acquisition-channel re-targeting). Last session shipped /thank-you fallback (conversion work, not bottleneck-direct). This session attacked the bottleneck via real ICP channel research.
+- Delegated 45-min research to general-purpose agent → `.founder/deliverables/acquisition-channels-shantae-arnaud-lookalike-2026-05-07.md` (21+ cited sources, 5 channel categories analyzed, confidence 🟢/🟡/🔴).
+
+### THE FINDING (clear winner)
+**Nicolas Boucher's AI Finance Club ecosystem** is the single highest-density channel for the Arnaud profile:
+- 300K newsletter subscribers (LinkedIn AI+Finance Newsletter)
+- 1,500–2,400 paying members in AI Finance Club ($250/qtr)
+- 1M+ social, France-anchored = native-language Arnaud match (~80%)
+- LinkedIn DM: https://www.linkedin.com/in/bouchernicolas/
+- AI Finance Club: https://ai-finance.club/
+- Newsletter: https://www.linkedin.com/newsletters/ai-finance-by-nicolas-boucher-7203451938586177537
+
+### Pilot strategy (pre-built, awaiting greenlight)
+**Cross-promo swap, not paid sponsorship**: free Mega Pack ($29) for every AI Finance Club paying member in exchange for one mention in Boucher's newsletter. $0 cash + 1hr labor (digital good = zero marginal cost). Even 0.01% conversion at $29 = $870 GMV from a single email.
+
+### Pre-built artifacts (all on disk, awaiting Armando greenlight)
+1. **`.founder/sales/boucher-crosspromo-pitch.md`** (111 lines) — full pitch with 3 message variants (LinkedIn DM short / ultra-short / email long), reply-scenario matrix, attribution plan, kill criteria, fallback list (CFO Accelerator, CFO Club).
+2. **`.founder/plans/finance-club-page-spec.md`** (82 lines) — `/finance-club` side-door page spec (hero copy, form mechanics, email follow-up Day 0/3/7/14, Stripe $0 promo code, ~2hr build effort). Reusable for fallbacks.
+3. **SCHEDULE.md** — May 8 fire / May 12 fallback / May 22 14d kill / June 6 30d decision gate all locked in.
+
+### Honest finding on Shantae profile
+**No clean watering hole exists** for "IT Director at media company buying personally." SIM (5K IT execs) + INMA (16K media-co members at 900 cos) are right org-fits but neither sub-$50 entry. Reality: Shantae most likely found us via LinkedIn passive scroll — paid algorithmic placement, not a group. Honest 🟡 — pivoting to LinkedIn outbound is more viable than chasing groups for the Shantae profile.
+
+### Honest finding on Reddit
+- r/PromptEngineering (301K) + r/ChatGPTPromptGenius (35K) are the only paid-product-receptive subs for our SKU shape.
+- r/sysadmin (1.3M) culturally rejects $97 prompt packs despite title-match for Shantae.
+- $30 Reddit Promoted Post in r/ChatGPTPromptGenius = the **fallback pilot** if Boucher declines.
+
+### Honest finding on Facebook
+- Skip groups (low ICP density, anti-promo culture, FB doesn't index group sizes well).
+- Meta Lookalike off N=3 seed = statistically too thin (Meta wants ≥100 seed).
+- Sep-2026-pivot memo cited "local-trade-FB" — that was tied to George profile which is **contested** per Session 158. Drop the local-trade-FB hypothesis.
+
+### What's blocked on Armando (Telegram sent)
+1. Greenlight Boucher pitch (Version A or B LinkedIn DM preferred — Armando's name is the sender).
+2. Budget ceiling for May ($50 hard cap, or willing to escalate to $200–$300 for Reddit + Meta in parallel?).
+
+### What I did NOT do (deliberately)
+- Did NOT email Boucher directly (sender attribution = Armando's name).
+- Did NOT build /finance-club page yet (premature without Boucher commitment; 2hr ship on greenlight).
+- Did NOT run Vibe Prospecting on Shantae (defer until Boucher signal lands).
+- Did NOT unilaterally deactivate the 5 broken plinks (strategic call belongs to Armando per Session 26).
+
+### Confidence: 85%
+Research well-cited (21+ sources), pre-build artifacts verified on disk (193 lines), Telegram brief concise. Lower than 90% because the Boucher swap depends on (a) his reply rate, (b) audience engagement on free claim, (c) free→$97 conversion rate. Each is a real assumption.
+
+---
+
 ## 🟡 SESSION 26 (May 7, 13:43 local) — DELIVERABILITY GAP: 5 PAID SKUS HAVE NO CONTENT
 
 Daily standup ran green (0 audit-tagged, 0 unread replies, $155 LTM unchanged, 5/5 uptime). While investigating task `e82e87d6` discovered **5 active Stripe payment links sell products with no kit-content/ directory and no public/*.zip**: muse-spark, claude-code, reddit-lead-kit, team-adoption, cowork-mastery. Zero sales to date but if any buyer comes through, they fall to OpenClaw fallback (same trust-destroying bug Session 158 fixed for Arnaud).

@@ -106,5 +106,14 @@
     "use_count": 2,
     "created_at": "2026-05-05T20:36:00Z",
     "approved": true
+  },
+  {
+    "name": "partner-signal-monitor.py",
+    "description": "Watch the live subscriber gist for partner-channel-tagged signups (finance-club, boucher-finance-club, cfo-accelerator, cfo-club, etc.) from the new /finance-club side-door page. Each NEW partner-tagged sub validates the cross-promo swap is converting and triggers same-day welcome via send-one.py. Mirrors audit-signal-monitor.py architecture. State at .founder/state/partner-monitor-last.json. Daily cron candidate. Exit 10 on signal.",
+    "language": "python",
+    "path": "partner-signal-monitor.py",
+    "use_count": 1,
+    "created_at": "2026-05-07T20:55:00Z",
+    "approved": true
   }
 ]

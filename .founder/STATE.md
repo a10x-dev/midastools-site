@@ -29,6 +29,54 @@
 | 12 | ai-saas-founder-prompts-cheatsheet | gist/bc4451 |
 | 13 | claude-opus-4-7-prompts-cheatsheet | gist/ccef07 |
 
+## Session 27 (May 7, 14:43 local) — 🟢 BOTTLENECK-DIRECT: BOUCHER CROSS-PROMO PRE-BUILT (CHANNEL PIVOT PILOT #1)
+
+### Trigger
+Strategic review at start of session: bottleneck = market_understanding 6/10 (acquisition-channel re-targeting), KPIs stalled (Conversations 0, Users 20↓, Revenue $155 with last sale May 2). Last session shipped /thank-you fallback (conversion work) — this session must address bottleneck DIRECTLY per CEO Dashboard rule.
+
+### Daily monitors (clean)
+- `audit-signal-monitor.py`: 20 subs / 0 audit-tagged / 0 new since last run.
+- `read-replies.py`: 0 unread replies (1 acked total).
+- `metrics-snapshot.py`: 0 sales 24h, $155 LTM unchanged, 5/5 pages 200 OK.
+
+### ✅ Bottleneck-direct work shipped
+1. **`.founder/deliverables/acquisition-channels-shantae-arnaud-lookalike-2026-05-07.md`** — full ICP-channel research delegated to general-purpose agent with 21+ cited sources. 5 channel categories analyzed (LinkedIn/Substacks/Slacks/Reddit/Facebook). Confidence-graded 🟢/🟡/🔴 per finding.
+2. **THE WINNER**: Nicolas Boucher's AI Finance Club ecosystem — 300K newsletter subs + 1,500–2,400 paid finance pros at $250/qtr + 1M+ social. France-anchored, ~80% Arnaud-profile match. Highest expected ICP-density × buy-rate of any channel below $50.
+3. **`.founder/sales/boucher-crosspromo-pitch.md`** (111 lines) — full cold-pitch doc with 3 message variants (LinkedIn DM short, LinkedIn DM ultra-short, email longer w/ proof), reply-scenario matrix, attribution plan, kill criteria. 🟡 awaiting Armando greenlight.
+4. **`.founder/plans/finance-club-page-spec.md`** (82 lines) — full `/finance-club` side-door page spec (hero copy, form mechanics, email follow-up sequence, Stripe $0 promo code config, ~2hr build effort). Reusable for Boucher fallbacks (CFO Accelerator, CFO Club). Per `feedback_protect_flywheel.md` — side-door, NOT homepage.
+5. **`.founder/SCHEDULE.md`** — added 4 new entries: May 8 fire pitch, May 12 fallback check, May 22 14d kill, June 6 30d decision gate.
+
+### Strategic call: Boucher swap is the right pilot
+Per the Recommended Pilot table in the deliverable:
+
+| Criterion | Boucher swap | Reddit ad r/PE | Meta Lookalike | LinkedIn outbound |
+|---|---|---|---|---|
+| Reach | 300K | ~15K | ~10K | 50 connections |
+| ICP density | ~80% | ~25% | ~40% (N=3 seed) | ~70% |
+| Cost | $0 + 1hr | $50 | $50 | $99 (Sales Nav) |
+| Expected paid conversions | **3–10** | **0–2** | **0–2** | **1–3** |
+| Reversibility | High | High | High | Medium |
+
+Boucher wins on every axis. Falls back to Reddit r/ChatGPTPromptGenius if he declines.
+
+### What's blocked on Armando (Telegram queued)
+1. **Greenlight**: send the Boucher pitch (Version A LinkedIn DM preferred). Estimated 30 sec read.
+2. **Budget ceiling**: $50 hard cap for May, or willing to escalate to $200–$300 if Boucher path doesn't land?
+
+### What I did NOT do (deliberately)
+- Did NOT email Boucher directly — sender attribution matters; Armando's name is the brand here, not "Claude from MidasTools."
+- Did NOT build the `/finance-club` page yet — premature without Boucher commitment; spec is on disk for 2hr ship-day.
+- Did NOT run Vibe Prospecting on Shantae yet — defer until Boucher signal lands; if Boucher works, Shantae verification becomes lower priority.
+- Did NOT touch the 5-broken-SKU decision (task `3400b90c`) — strategic call belongs to Armando per Session 26; bottleneck rule says channel work > conversion work this session.
+
+### KPI movement this session
+**Direct: zero.** **Indirect: high.** Bottleneck-direct research complete + executable artifacts pre-built + decision-gate timeline locked in SCHEDULE. Ship-day on Boucher greenlight = single-message Telegram → fire LinkedIn DM. Compresses what could have been a multi-session research-then-build cycle into one greenlight call.
+
+### Confidence
+85% — research is well-cited (21+ sources), pre-build artifacts on disk verified (193 lines), Telegram brief is concise. Lower than 90% because the Boucher swap depends on (a) his reply rate, (b) his audience actually engaging the free claim, (c) finance-pros converting from $0 free to $97 bundle. Each is a real assumption.
+
+---
+
 ## Session 26 (May 7, 13:43 local) — 🟡 DAILY STANDUP CLEAN + DELIVERABILITY GAP DOCUMENTED (5 SKUS UNFULFILLABLE)
 
 ### Trigger
