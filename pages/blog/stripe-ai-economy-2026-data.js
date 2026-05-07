@@ -7,7 +7,7 @@ const STRIPE_MEGA_PACK = 'https://buy.stripe.com/4gMbJ0dgz4aJ1qkb46cMM0d';
 
 export default function StripeAIEconomy2026() {
   const title = "Stripe's AI Economy Data 2026: 15 Numbers That Reframe Every Strategy Deck";
-  const description = "Cursor went from $1B to $2B annualized in 3 months. AI co's on Stripe grew 575% in 2026. Top consumers spend $371/mo on AI. Solopreneur density hit 5,000 per million Americans. The 15 Stripe Sessions 2026 data points and what they mean for solo operators and SMBs.";
+  const description = "Stripe processes 2% of global GDP — $1.9 trillion across 5M businesses — and 86% of the Forbes AI 50 use it. Cursor doubled $1B->$2B in 3 months. AI co's on Stripe grew 575% in 2026. John Collison: agents as mainstream buyers in 12-18 months. The 15 Stripe Sessions 2026 data points + what they mean for solo operators and SMBs.";
   const url = 'https://www.midastools.co/blog/stripe-ai-economy-2026-data';
   const datePublished = '2026-05-07';
   const dateModified = '2026-05-07';
@@ -37,8 +37,8 @@ export default function StripeAIEconomy2026() {
     {
       n: 4,
       headline: 'AI businesses on Stripe grow 17x faster than the global economy',
-      claim: "Patrick Collison's headline at Stripe Sessions: businesses on Stripe (heavily AI-weighted) are growing 17 times faster than the global economy.",
-      why: "The global economy grew ~3% in 2025-2026. 17x means Stripe-platform businesses averaged ~50%+ growth — and the AI sub-segment is well above that. This is the largest gap between platform-economy growth and the underlying economy in Stripe's history.",
+      claim: "Patrick Collison's headline at Stripe Sessions: businesses on Stripe (heavily AI-weighted) are growing 17 times faster than the global economy. The macro picture confirms it: a St. Louis Fed study published in early 2026 found AI-related investment had already contributed close to 40% of marginal U.S. GDP growth, surpassing the peak contribution of the technology sector during the dot-com bubble.",
+      why: "The global economy grew ~3% in 2025-2026. 17x means Stripe-platform businesses averaged ~50%+ growth — and the AI sub-segment is well above that. This is the largest gap between platform-economy growth and the underlying economy in Stripe's history, and unlike the dot-com era it is appearing in macro data in real time, not retrospectively.",
       action: "Macro pessimism is the wrong frame for 2026 strategy. The gap between AI-revenue companies and 'traditional' companies is now wider than the gap between SaaS and on-prem in 2010."
     },
     {
@@ -79,7 +79,7 @@ export default function StripeAIEconomy2026() {
     {
       n: 10,
       headline: "John Collison's Solow paradox observation: productivity catches up after the rebuild",
-      claim: "John Collison (Stripe co-founder/President) referenced the Solow paradox at Stripe Sessions: in 1882, Edison lit the first customer lamps in Manhattan, but for the next three decades after electrification, productivity barely moved. The reason wasn't that electricity didn't work — it's that factories had been designed around the steam engine. Productivity gains appeared only after entire factories were rebuilt.",
+      claim: "John Collison (Stripe co-founder/President) referenced the Solow paradox at Stripe Sessions, citing economist Robert Solow's famous 1987 line: 'You can see the computer age everywhere but in the productivity statistics.' In 1882, Edison lit the first customer lamps in Manhattan, but for the next three decades after electrification, productivity barely moved. The reason wasn't that electricity didn't work — it's that factories had been designed around the steam engine. Productivity gains appeared only after entire factories were rebuilt. The dot-com era took a similar shape: the productivity contribution of computers didn't appear in the macro data until the mid-1990s.",
       why: "His judgment: AI is at a similar stage. Change is already happening, but old workflows haven't yet had time to absorb it. As John put it: 'Though I suspect AI will not take thirty years.' Translation: companies that don't restructure workflows around AI will look like steam-era factories with electric motors bolted on — present but unproductive.",
       action: "If you're a coach, consultant, solo operator, or SMB — the Solow paradox is your competitive moat. Most of your competitors will spend 2026-2028 layering AI tools on top of the same broken workflows. Rebuilding workflows around AI is what produces the 10-30x productivity gains, not adding ChatGPT to an unchanged process."
     },
@@ -106,9 +106,9 @@ export default function StripeAIEconomy2026() {
     },
     {
       n: 14,
-      headline: "Solopreneur density on Stripe Atlas hit 5,000 per million Americans",
-      claim: "Emily (Stripe Sessions 2026, Day 2) disclosed: the density of independent founders on Stripe Atlas is approaching 5,000 per million Americans, and a growing share are reaching annual revenues above $100,000. The framing word she used was 'solopreneur' — a one-person company.",
-      why: "5,000 per million = 0.5% of the adult US population is now running a real one-person company on Stripe Atlas alone. The classic firm-of-employees model is being replaced by 'one or two people plus a group of agents' running global businesses with real revenue. This is the demographic that buys productized AI services — and they buy fast because their decision-making isn't gated by procurement.",
+      headline: "Solopreneur density on Stripe Atlas hit 5,000 per million Americans, and the 2026 cohort is earning 5x what 2025's did at the same lifecycle point",
+      claim: "Stripe Atlas — one of the simplest ways for founders to incorporate a US company — celebrated its 100,000th company in early May 2026. Two harder numbers from the conference: companies incorporated through Atlas in 2025 had generated twice as much revenue by the same lifecycle point as the 2024 cohort, and the 2026 cohort (only a few months old) is already earning 5x what 2025's cohort did at the same stage. Emily disclosed on Day 2 that the density of independent founders on Atlas is approaching 5,000 per million Americans, with a growing share reaching annual revenues above $100,000. The framing word: 'solopreneur' — a one-person company.",
+      why: "5,000 per million = 0.5% of the adult US population is running a real one-person company on Atlas alone, and the cohort revenue curves are bending sharply upward year over year. The classic firm-of-employees model is being replaced by 'one or two people plus a group of agents' running global businesses with real revenue. This is the demographic that buys productized AI services — they buy fast because their decision-making isn't gated by procurement.",
       action: "If you sell to SMBs, the highest-converting buyer is the solopreneur at $50K-$500K ARR. They have wallet, they have urgency, and they have no committee. Position your offer for them, not for 'small businesses' generically."
     },
     {
@@ -247,13 +247,28 @@ export default function StripeAIEconomy2026() {
           disclosed by Patrick Collison at Stripe Sessions 2026, is the cleanest summary of where
           we actually are in May 2026 — and most strategy decks haven't caught up.
         </p>
+        <p style={{ fontSize: '1rem', color: '#374151', lineHeight: 1.65, marginBottom: 24 }}>
+          Why does Stripe's data matter more than other AI-economy estimates? <strong>Stripe
+          processes transaction volume equivalent to nearly 2% of global GDP</strong> — $1.9
+          trillion in annual payment volume across more than <strong>5 million businesses</strong>{' '}
+          — and <strong>86% of the Forbes AI 50</strong> use it. If the AI economy is a newborn
+          infant, Stripe is the heart monitor in the delivery room. It records the heartbeat
+          earlier and more precisely than almost anyone else.
+        </p>
+        <p style={{ fontSize: '1rem', color: '#374151', lineHeight: 1.65, marginBottom: 24 }}>
+          The macro context is also resolving. A St. Louis Fed study published in early 2026
+          showed that <strong>AI-related investment had already contributed close to 40% of
+          marginal U.S. GDP growth</strong>, surpassing the peak contribution of the technology
+          sector during the dot-com bubble. And in the most concrete forward signal of the
+          conference: in a group media interview, John Collison said <strong>he expects agents
+          acting as buyers in commercial transactions to become mainstream within 12 to 18
+          months</strong>. The 15 data points below are the supporting evidence — across two
+          days, 288 product and feature launches, and 10,000+ attendees at Stripe Sessions 2026.
+        </p>
         <p style={{ fontSize: '0.95rem', color: '#6B7280', lineHeight: 1.6, marginBottom: 32, padding: '14px 16px', borderLeft: '3px solid #3B5FFF', background: '#F4F6FB', borderRadius: 6 }}>
-          Below are the 15 most important data points from the Stripe Sessions 2026 keynote and
-          companion sessions — Cursor's growth rate, the $371/mo AI consumer wallet, the global
-          shape of AI revenue, the 5,000-per-million solopreneur density on Stripe Atlas, the
-          Gamma +22% UPI revenue lift, and John Collison's Solow paradox + Coase's theory of the
-          firm framings. Each item includes the claim, the why, and the action a solo operator
-          or SMB should take. For the operating framework that pairs with this data, see our <Link href="/blog/ramp-ai-adoption-playbook-2026" style={{ color: '#3B5FFF' }}>Ramp 99.5% AI adoption playbook</Link> and <Link href="/blog/best-ai-tools-may-2026" style={{ color: '#3B5FFF' }}>10 best AI tools to try in May 2026</Link>.
+          Each item below includes the claim, the why, and the action a solo operator or SMB
+          should take. For the agent-economy companion piece — covering MPP, Tempo, the
+          Agentic Commerce Suite, and Universal Commerce Protocol — see <Link href="/blog/agentic-commerce-stripe-2026" style={{ color: '#3B5FFF' }}>Agentic Commerce Is Here — 15 Signals From Stripe Sessions 2026</Link>. For the operating framework, see our <Link href="/blog/ramp-ai-adoption-playbook-2026" style={{ color: '#3B5FFF' }}>Ramp 99.5% AI adoption playbook</Link> and <Link href="/blog/best-ai-tools-may-2026" style={{ color: '#3B5FFF' }}>10 best AI tools to try in May 2026</Link>.
         </p>
 
         <hr style={{ margin: '32px 0', border: 'none', borderTop: '1px solid #E5E7EB' }} />
@@ -366,7 +381,13 @@ export default function StripeAIEconomy2026() {
           Sources & related reading
         </h2>
         <ul style={{ fontSize: '0.95rem', lineHeight: 1.7, color: '#374151', paddingLeft: 20 }}>
-          <li>Stripe Sessions 2026 (Patrick Collison + John Collison keynotes, May 2026) — primary source for all 2025/2026 growth figures, country counts, and consumer-wallet data.</li>
+          <li>Stripe Sessions 2026 (Patrick Collison + John Collison keynotes, May 2026) — primary source for all 2025/2026 growth figures, country counts, and consumer-wallet data. Two-day conference, 288 product/feature launches, 10,000+ attendees.</li>
+          <li>Stripe network statistics (Sessions 2026): $1.9 trillion annual payment volume, 5+ million businesses, equivalent to ~2% of global GDP, 86% of Forbes AI 50 use Stripe.</li>
+          <li>St. Louis Fed study (early 2026) — AI-related investment contributed ~40% of marginal U.S. GDP growth, surpassing the peak technology-sector contribution during the dot-com bubble.</li>
+          <li>John Collison group media interview at Sessions 2026 — agents acting as buyers in commercial transactions expected to become mainstream within 12-18 months.</li>
+          <li>Stripe Atlas milestones: 100,000th company incorporated in early May 2026; 2025 cohort generated 2x revenue vs 2024 cohort at same lifecycle point; 2026 cohort already earning 5x what 2025 did at same stage.</li>
+          <li>Robert Solow, Nobel-laureate economist, 1987 quote in <em>The New York Review of Books</em>: "You can see the computer age everywhere but in the productivity statistics" — the original Solow paradox John Collison invoked at Sessions 2026.</li>
+          <li>Maia Josebachvili (Stripe chief revenue officer for AI) at Sessions 2026 — iOS App Store releases jumped 24% month over month after AI coding tools arrived (after years of declining).</li>
           <li>'Indexing the Economy' session at Stripe Sessions 2026 — top-100 AI startup country distribution.</li>
           <li>Abhi Tiwari (Stripe global head of product, Singapore) at Stripe Sessions 2026 — 46-country / 195-market / 125-payment-method localization stack figures.</li>
           <li>Emily's Day 2 Stripe Sessions 2026 talk — Stripe Atlas solopreneur density (5,000 per million Americans) and $100K+ ARR data.</li>

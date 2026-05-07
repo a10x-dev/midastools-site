@@ -41,9 +41,9 @@ export default function BestAIToolsMay2026() {
       n: 4,
       name: 'Lovable',
       maker: 'Lovable.dev',
-      hook: 'The "ChatGPT for full-stack apps" that hit $1M ARR in 8 weeks. Builds working React apps from a prompt with deployment included.',
-      why: 'You describe an app in English. It generates Next.js code, sets up Supabase, deploys to Vercel — all in 5 minutes. Non-engineers are shipping real businesses.',
-      tryIt: 'Best for: founders prototyping, marketers building landing pages. The same pattern is in our [SaaS Founder Kit](/saas-founder-kit) — 50 prompts to architect your next product.',
+      hook: 'The "ChatGPT for full-stack apps" that hit $100M ARR in 8 months and reached $400M ARR another 8 months later (Maia Josebachvili, Stripe Sessions 2026). Builds working React apps from a prompt with deployment included.',
+      why: 'You describe an app in English. It generates Next.js code, sets up Supabase, deploys to Vercel — all in 5 minutes. Non-engineers are shipping real businesses, which is why Lovable\'s ARR curve is one of the steepest ever recorded on Stripe.',
+      tryIt: 'Best for: founders prototyping, marketers building landing pages. The same pattern is in our [SaaS Founder Kit](/saas-founder-kit) — 50 prompts to architect your next product. For the macro context, see [Stripe\'s AI economy data 2026](/blog/stripe-ai-economy-2026-data).',
     },
     {
       n: 5,
