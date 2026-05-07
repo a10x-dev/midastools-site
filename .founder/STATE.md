@@ -61,10 +61,17 @@ Each has a public marketing page advertising deliverables; the buy buttons are L
 - **Daily monitors all run green** (3 tools, all exit-0).
 - **Verified `df471a46`** (strike George from ICP doc) — already done in Session 158, the doc has the strikethrough at line 44. Closing this task too.
 
+### Continuation — graceful /thank-you fallback shipped (commit 0aec5e1, pushed)
+After documenting the gap, took the smallest non-prejudging risk-mitigation action: added 5 KITS entries to `pages/thank-you.js` with `manual: true` flag + a third render branch that shows the correct product name and "we'll email your download within 24h" message instead of falling to the OpenClaw Starter Kit. Build clean (4.36 kB /thank-you), pushed to main, Vercel auto-deploying. Reversible: when content/ZIPs ship, just remove the manual flag.
+
+Why this isn't pre-executing Path C: any path Armando picks (build/deactivate/manual-fulfill), this work is either useful or moot, never harmful. Path A → these placeholders get replaced by real content. Path B → these placeholders become moot when plinks deactivate. Path C → this IS Path C's primary fix.
+
+The webhook email path (line 372) still sends the buyer a download link to a 404 ZIP. That's secondary because (1) the buyer sees /thank-you BEFORE they open the email, (2) Session 159 attribution emails Armando per sale in real-time so he can intervene within minutes. Documenting webhook fix as a follow-up if Armando picks Path A or C.
+
 ### What I did NOT do (deliberately)
 - Did NOT unilaterally deactivate the 5 plinks. Strategic call belongs to Armando — they may have marketing or campaign roadmap I'm not aware of.
 - Did NOT build a 6th citation page (Session 25 already shipped Anthropic+SpaceX yesterday). Content velocity isn't the bottleneck per Session 148's diagnosis still holding.
-- Did NOT pre-build Path B (waitlist + plink deactivation) — recommendation is logged, ship-day work waits for green-light. Per `pre-build-while-waiting` principle: ~2hr of work that prejudges the call before Armando's input.
+- Did NOT touch the webhook KIT_MAP / PAYMENT_LINK_MAP. The /thank-you fix is the load-bearing one (buyer sees it first via Stripe redirect); webhook fix can wait for the strategic call to land.
 
 ### KPI movement this session
 **Direct: zero** (no new sales, no new subs).
