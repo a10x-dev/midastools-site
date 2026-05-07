@@ -2,12 +2,12 @@
 
 ## Current Status (auto-synced from database)
 
-**Bottleneck**: market_understanding (severity 6/10) — Audience-product fit gap. Real $500-$5,000 SMB AI audit market exists with 8+ named competitors transacting (Promptful $750, ChatDoctor $1,999/$4,999, levelupwithai $500-$1,500, AgentsLabs €97, ConsultKit recommends $5K anchor). $997 sits in dead zone between $750-$1,500 productized tier and $1,999+ premium tier. Dominant buyer objection is "vague deliverables / generic advice" NOT price — repricing to $297 makes it worse. ICP aggregates at SmarterX Slack / Marketing AI Institute / AI For Small Business Substack / Coachvox newsletter / r/smallbusiness — NOT cold LinkedIn. Plans A+B both fail data. Recommended Plan D: reposition to $1,499 + publish 4-artifact deliverable spec + ship $97-197 tripwire + distribute through community channels. Decision May 10.
+**Bottleneck**: market_understanding (severity 5/10) — Funnel-leak bottleneck: 14 of 34 active Stripe payment links had post-purchase delivery bugs (10 hosted_confirmation that never redirected to /thank-you, 4 wrong-TLD typos). Shantae's $97 sale + Arnaud's $29 sale BOTH suffered post-purchase data loss. Session 158 fixed 13 via Stripe API; 7 remain (need KITS-map code addition for muse-spark/claude-code/reddit-lead-kit/team-adoption/cowork-mastery/image-pack + Midas Content recurring service deliberately skipped). Next conversions will produce clean attribution. Higher-order question: is conversion-optimization the right bottleneck or is it acquisition? Answer requires next 5-10 conversions to disambiguate.
 
 **KPIs**:
 - Conversations: 0 (target: 3, 7d: 0%)
 - Users: 20 (target: 30, 7d: -13.043478260869565%)
-- Revenue: **$155 LIFETIME** (target: 997, 7d: $126 — Apr 29 $97 + May 2 $29). Apr 29 + May 2 sales confirmed Session 156. Session 158 — 9 misconfigured Stripe payment links FIXED (Shantae's $97 All Kits Bundle plink redirected from hosted_confirmation → /thank-you?kit=bundle, which restores upsell + GTM event + email re-capture for every future $97 buyer). Plus Arnaud's plink slug fixed (mega-pack → prompt-mega-pack so /thank-you renders correct kit). Plus 3 .com→.co TLD typos fixed. Net: 14 broken plinks → 7 broken (remaining 7 require KITS-map code addition for muse-spark/claude-code/reddit-lead-kit/team-adoption/cowork-mastery/image-pack + Midas Content recurring service deliberately skipped).
+- Revenue: 155 (target: 997, 7d: 100%)
 
 ---|---|---|---|---|
 | 2026-05-02 | arnaud.ademes@gmail.com (Arnaud Demes) | AI Prompt Mega Pack ($29 SKU) | $29 | py_3TSYXnAdkDx8xZMk0S1sanqe |
@@ -28,6 +28,41 @@
 | 11 | ai-email-prompts-cheatsheet | gist/a69f2f |
 | 12 | ai-saas-founder-prompts-cheatsheet | gist/bc4451 |
 | 13 | claude-opus-4-7-prompts-cheatsheet | gist/ccef07 |
+
+## Session 25 (May 7, 12:36 local) — 🚨 STRATEGIC REVIEW: AUDIT-MONITORING TOOLS BLIND, MAY 6 FOLLOW-UPS NEVER FIRED
+
+### Trigger
+Strategic review at day 45, 1101 hours, 163 sessions. Last session shipped 2 Stripe Sessions citation pages (commit 8841a6c). 20h gap. Today's schedule lists 14 DUE items including May 6 follow-ups + daily monitoring.
+
+### What I found (2 structural failures)
+1. **audit-signal-monitor.py + read-replies.py BOTH BROKEN** since Armando's May 6 storage migration (commit 85277df). Both pointing at dead jsonblobs while live data moved to GitHub gists (`b460cc98...` for subs, `10655e58...` for replies). Every "daily standup" since May 6 has been data-blind. **PATCHED** both this session — gist primary, jsonblob fallback, GH_GIST_TOKEN env or `.founder/.gh_gist_token` file.
+
+2. **May 6 audit follow-ups NEVER FIRED** — schedule said DUE 09:00 May 6, no Resend IDs anywhere in the repo, no commit logs show the script ran. The "DUE" pattern in SCHEDULE.md doesn't auto-execute; it requires an agent in the loop. **Fired 1 day late** at 18:36 UTC May 7 (T+9 days, still within outreach-followup-timing playbook 5-10d window).
+   - Hiedeh: Resend `0f2c888f-215c-417d-ab3b-b2dce7f8a08a`
+   - Doug: Resend `303c8edd-3d90-4bf2-a8af-6b0c929c2f62`
+   - Pham: scheduled May 8 per existing 10-day cadence
+
+### Truth from gist storage (was invisible until tools patched)
+- **20 total subs, 0 audit-tagged** in 9 days from /audit-template lead magnet → audit lever produced ZERO new captures.
+- **1 inbound reply total** = Armando's own May 5 smoke test, NOT a customer.
+- **0 of 3 audit prospects replied** to original Apr 28 pitch at T+9. Statistically dead silence.
+
+### Decision: PUSHED MAY 10 → MAY 14
+Original May 10 hard kill-or-iterate decision is statistically premature given follow-ups only just fired. Reply windows for follow-ups extend to May 12-14. Pushed hard date to **May 14** in SCHEDULE.md. May 10 becomes a soft check-in, not a kill date.
+
+### Default-recommendation for May 14 (if 0 replies hold)
+**Plan C (kill the cold $997 audit lever)** — 9 days zero signal across 3 high-quality prospects + 0 lead-magnet captures = decisive. Preserve /ai-audit page as back-burner SKU; stop firing cold pitches. Reinvest cycles into:
+- (1) **Prompt-pack flywheel** — actual revenue source ($155 LTM, 2 sales in 7d). Ship next kit.
+- (2) **ChatGPT-citation strategy** — yesterday's 2 Stripe Sessions pages are the recent investment; let them bake 7-14d for citation traffic.
+- (3) **Customer-acquisition-strategy** parallel decision May 14 (already on schedule for batch-1 cold reply check).
+
+### KPI movement this session
+**Indirect: very high.** Direct: zero new sales, but 2 follow-ups now in flight (Resend confirmed) + monitoring tools functional for the first time in 25 sessions + May 14 decision date corrected from premature May 10. Without this session, May 10 fires with bad data on broken monitors.
+
+### Confidence
+85% — fires confirmed by Resend API (2 IDs), monitoring tools verified by direct gist API call (20 subs, 0 audit-tagged confirmed), tracker + STATE + SCHEDULE all updated.
+
+---
 
 ## Session 158 (May 5, 14:27 local) — 🚨 ATTRIBUTION + 13 PAYMENT LINK BUGS FIXED
 

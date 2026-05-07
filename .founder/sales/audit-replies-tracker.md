@@ -21,6 +21,8 @@
 | Date/time received | Prospect | Reply-type (A-E) | Ack sent (Resend ID) | Sample sent? | Sample Resend ID | Time-to-ack | Time-to-deliver | Outcome |
 |---|---|---|---|---|---|---|---|---|
 | _(awaiting first reply — window opened May 2 09:00 local; T+4.5hrs at 13:42 local with 0 inbox visibility from cofounder side)_ | | | | | | | | |
+| 2026-05-07 18:36 UTC (FOLLOW-UP SENT) | Hiedeh / Negar | n/a (we sent, awaiting reply) | n/a | n/a | n/a | n/a | n/a | Resend `0f2c888f`. Watching gist replies via `python3 .founder/tools/read-replies.py` daily. |
+| 2026-05-07 18:36 UTC (FOLLOW-UP SENT) | Doug Courter | n/a (we sent, awaiting reply) | n/a | n/a | n/a | n/a | n/a | Resend `303c8edd`. Watching gist replies via `python3 .founder/tools/read-replies.py` daily. |
 
 ### Window status updates
 
@@ -29,6 +31,13 @@
 - **May 3 08:50 local (T+~24h)**: Still no reply visibility from Armando. 0/3 at the 1-day mark. Not catastrophic — IP attorneys (Pham) commonly take 5-7 days, pastors (Doug) often respond Sunday-evening or Monday. Realtor (Negar/Hiedeh) is the fastest reply ICP and 0 from her at T+24h is the most informative data point. Re-stratified the 20-sub list at $297 and wrote `.founder/deliverables/297-audience-restratification-2026-05-03.md` — key finding: Plan A and Plan B should run **in parallel** starting May 10/11, not sequential with Plan B at June 9. Decision logged for May 10 pair session.
 - **May 3 09:40 local (T+24:40)**: Morning standup. Still 0/3 reply visibility. Sunday morning is a soft window — pastor traffic typically post-service. Dev.to article 3583082 (audit checklist) confirmed 0 views at day 5; April content channel triple-falsified. Fixed unrelated infra (10th jsonblob death, BLOB_ID drift, commit 613fd50). Did NOT prompt Armando about replies per `armando-async-asks` principle.
 - **May 3 23:24 local (T+38:24)**: Late-Sunday EOD signal sweep. 0/3 reply visibility still. audit-signal-monitor.py exit 0, metrics-snapshot.py exit 0, fire-may6 dry-run renders clean. Sunday-night silence is normal; first real reply opportunity is Monday May 4 morning when work-week resumes. T-33h to May 6 09:00 follow-up fire.
+- **May 7 12:36 local (T+9 days)**: Strategic-review session 25. Two structural findings:
+  - **(a) audit-signal-monitor.py + read-replies.py both broken** — pointing at dead jsonblobs after Armando's May 6 (commit 85277df) migration to GitHub gists. PATCHED both this session: now read from gist primary, jsonblob fallback. Confirmed via gist truth-source: 20 total subs, **0 audit-tagged in 9 days from /audit-template lead magnet**, 1 inbound reply total and it's Armando's own May 5 smoke test (NOT a customer).
+  - **(b) May 6 follow-ups NEVER FIRED** — schedule said "DUE 09:00 May 6" but no agent ran the script; no Resend IDs anywhere in the repo. The DUE-item pattern doesn't auto-execute; needs an agent in the loop. Fired 1 day late this session at T+9 (still within outreach-followup-timing playbook 5-10 day window).
+  - **Hiedeh follow-up sent**: Resend id `0f2c888f-215c-417d-ab3b-b2dce7f8a08a` @ 2026-05-07 18:36 UTC
+  - **Doug follow-up sent**: Resend id `303c8edd-3d90-4bf2-a8af-6b0c929c2f62` @ 2026-05-07 18:36 UTC
+  - **Pham follow-up scheduled**: tomorrow May 8 (10-day cadence per IP-attorney spec)
+  - **Implication: May 10 hard kill-or-iterate decision MUST PUSH to May 14**. Reply window for follow-ups runs May 7-14. Calling kill at May 10 (T+3 days post-followup) is statistically premature for 8-10d reply patterns.
 
 ---
 

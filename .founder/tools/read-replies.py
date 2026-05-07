@@ -23,13 +23,18 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 import sys
 import urllib.request
 from datetime import datetime, timezone
 from pathlib import Path
 
-BLOB_ID = "019dfa62-6add-7890-9835-9a0d7d6a1d0c"
-BLOB_URL = f"https://jsonblob.com/api/jsonBlob/{BLOB_ID}"
+# Storage migrated 2026-05-06 (commit 85277df) from jsonblob → GitHub gists.
+GIST_ID = "10655e586c8c60a1d498f77efa937fc1"
+GIST_URL = f"https://api.github.com/gists/{GIST_ID}"
+
+JSONBLOB_ID = "019dfa62-6add-7890-9835-9a0d7d6a1d0c"
+JSONBLOB_URL = f"https://jsonblob.com/api/jsonBlob/{JSONBLOB_ID}"
 
 ROOT = Path(__file__).parent.parent
 STATE_DIR = ROOT / "state"
@@ -37,10 +42,42 @@ INBOX_DIR = ROOT / "inbox"
 STATE_DIR.mkdir(exist_ok=True)
 INBOX_DIR.mkdir(exist_ok=True)
 CURSOR = STATE_DIR / "replies-cursor.json"
+GIST_TOKEN_FILE = ROOT / ".gh_gist_token"
+
+
+def _gist_token() -> str | None:
+    env_token = os.environ.get("GH_GIST_TOKEN") or os.environ.get("GITHUB_GIST_TOKEN")
+    if env_token:
+        return env_token.strip()
+    if GIST_TOKEN_FILE.exists():
+        return GIST_TOKEN_FILE.read_text().strip()
+    return None
 
 
 def fetch_replies() -> list[dict]:
-    req = urllib.request.Request(BLOB_URL, headers={"User-Agent": "midastools-read-replies/1.0"})
+    # Primary: GitHub gist
+    token = _gist_token()
+    if token:
+        try:
+            req = urllib.request.Request(
+                GIST_URL,
+                headers={
+                    "Authorization": f"token {token}",
+                    "Accept": "application/vnd.github+json",
+                    "User-Agent": "midastools-read-replies/2.0",
+                },
+            )
+            with urllib.request.urlopen(req, timeout=10) as resp:
+                gist = json.load(resp)
+            files = gist.get("files", {})
+            if files:
+                content = next(iter(files.values())).get("content", "{}")
+                data = json.loads(content)
+                return data.get("replies", []) if isinstance(data, dict) else []
+        except Exception as e:
+            print(f"WARN: gist fetch failed ({e}), falling back to jsonblob", file=sys.stderr)
+    # Fallback: jsonblob (legacy)
+    req = urllib.request.Request(JSONBLOB_URL, headers={"User-Agent": "midastools-read-replies/2.0"})
     with urllib.request.urlopen(req, timeout=10) as resp:
         data = json.loads(resp.read().decode("utf-8"))
     return data.get("replies", []) if isinstance(data, dict) else []
