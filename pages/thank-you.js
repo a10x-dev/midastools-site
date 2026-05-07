@@ -78,6 +78,36 @@ const KITS = {
     file: 'presentation-kit.zip',
     items: ['Pitch deck prompts (25+ prompts)', 'Sales presentation templates (25+ prompts)', 'Conference talk outlines (20+ prompts)', 'Business report frameworks (20+ prompts)', 'Training & workshop decks (20+ prompts)', 'Slide design & storytelling (20+ prompts)'],
   },
+  'muse-spark': {
+    name: 'Meta Muse Spark Prompt Kit',
+    file: null,
+    manual: true,
+    items: ['100+ Muse Spark prompts (8 categories)', 'Visual Coding prompts', 'Multimodal Reasoning prompts', 'Contemplating Mode prompts', 'Multi-Agent Orchestration patterns', 'Mode Selection Guide + Cheatsheet'],
+  },
+  'claude-code': {
+    name: 'Claude Code Mastery Kit',
+    file: null,
+    manual: true,
+    items: ['Claude Code workflow templates', 'Multi-file refactor prompts', 'Codebase onboarding sequences', 'Test-generation patterns', 'Repo-aware debugging prompts', 'CLI productivity setup guide'],
+  },
+  'reddit-lead-kit': {
+    name: 'Reddit Lead Generation Kit',
+    file: null,
+    manual: true,
+    items: ['Subreddit research prompts', 'Comment-engagement templates', 'DM outreach sequences', 'Value-first posting frameworks', 'Compliance + ToS playbook', 'Lead-tracking spreadsheet templates'],
+  },
+  'team-adoption': {
+    name: 'AI Team Adoption Kit',
+    file: null,
+    manual: true,
+    items: ['Team rollout playbook', 'Use-case discovery prompts', 'Training materials + workshop scripts', 'Policy + governance templates', 'ROI measurement framework', 'Change-management email sequences'],
+  },
+  'cowork-mastery': {
+    name: 'Claude Cowork Mastery Kit',
+    file: null,
+    manual: true,
+    items: ['Cowork session frameworks', 'Pair-with-Claude workflow templates', 'Context-handoff prompts', 'Multi-session continuity patterns', 'Project-state SOUL.md templates', 'Setup wizard + best-practices guide'],
+  },
   'bundle': {
     name: 'Complete AI Toolkit Bundle',
     file: null,
@@ -137,7 +167,8 @@ export default function ThankYou() {
 
   const kitKey = router.query.kit || 'starter';
   const kit = KITS[kitKey] || KITS['starter'];
-  const isBundle = kit.file === null;
+  const isManual = kit.manual === true;
+  const isBundle = !isManual && kit.file === null;
 
   return (
     <Layout>
@@ -172,8 +203,13 @@ export default function ThankYou() {
         <p className="ty-sub">Your {kit.name} is ready. A download link is also on its way to your email.</p>
 
         <div className="dl-box">
-          <h2>Download Your Kit</h2>
-          {isBundle ? (
+          <h2>{isManual ? 'Your Kit Is Being Prepared' : 'Download Your Kit'}</h2>
+          {isManual ? (
+            <>
+              <p>Your {kit.name} is being personally prepared and will be delivered to your inbox within 24 hours. You&apos;ll get a download link from <a href="mailto:iam@armando.mx" style={{color:'var(--gold)'}}>iam@armando.mx</a>.</p>
+              <p style={{fontSize:13,marginTop:16}}>Need it sooner? Reply to your purchase receipt and we&apos;ll prioritize delivery.</p>
+            </>
+          ) : isBundle ? (
             <>
               <p>Download each kit below:</p>
               {kit.files.map(f => (
@@ -195,7 +231,7 @@ export default function ThankYou() {
           </ul>
         </div>
 
-        {!isBundle && (
+        {!isBundle && !isManual && (
           <div style={{background:'rgba(59,95,255,0.06)',border:'1px solid rgba(59,95,255,0.2)',borderRadius:12,padding:'20px 24px',marginBottom:24,textAlign:'left'}}>
             <p style={{fontSize:14,fontWeight:700,color:'var(--gold)',marginBottom:6}}>Want all 16 kits? Save 83%</p>
             <p style={{fontSize:14,color:'var(--gray-400)',lineHeight:1.5}}>Get the <a href="https://buy.stripe.com/bJe7sK0tNdLjgle0pscMM0b" style={{color:'var(--gold)',fontWeight:700}}>Complete Bundle for $97</a> — includes every kit plus all future releases free.</p>

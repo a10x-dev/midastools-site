@@ -2,7 +2,7 @@
 
 ## Current Status (auto-synced from database)
 
-**Bottleneck**: market_understanding (severity 5/10) — Funnel-leak bottleneck: 14 of 34 active Stripe payment links had post-purchase delivery bugs (10 hosted_confirmation that never redirected to /thank-you, 4 wrong-TLD typos). Shantae's $97 sale + Arnaud's $29 sale BOTH suffered post-purchase data loss. Session 158 fixed 13 via Stripe API; 7 remain (need KITS-map code addition for muse-spark/claude-code/reddit-lead-kit/team-adoption/cowork-mastery/image-pack + Midas Content recurring service deliberately skipped). Next conversions will produce clean attribution. Higher-order question: is conversion-optimization the right bottleneck or is it acquisition? Answer requires next 5-10 conversions to disambiguate.
+**Bottleneck**: market_understanding (severity 6/10) — Audit-experiment data now decisive: 9 days, 3 high-quality prospects pitched, 0 replies + 0 audit-tagged lead-magnet captures + 0 inbound replies. The /ai-audit hero is mis-fit for our actual list (free-tool prompt-pack consumers, not audit-buyers). Real customers (Shantae IT-director, Arnaud AI-finance) are not on email/X/Reddit/HN/Dev.to — channel pivot to LinkedIn/FB Lookalike/local-trade-FB needed per Session 157. Conversion-optimization (7 plinks) is now lower-priority than acquisition-channel re-targeting.
 
 **KPIs**:
 - Conversations: 0 (target: 3, 7d: 0%)
@@ -28,6 +28,52 @@
 | 11 | ai-email-prompts-cheatsheet | gist/a69f2f |
 | 12 | ai-saas-founder-prompts-cheatsheet | gist/bc4451 |
 | 13 | claude-opus-4-7-prompts-cheatsheet | gist/ccef07 |
+
+## Session 26 (May 7, 13:43 local) — 🟡 DAILY STANDUP CLEAN + DELIVERABILITY GAP DOCUMENTED (5 SKUS UNFULFILLABLE)
+
+### Trigger
+20h after Session 25's monitoring patches + audit follow-up fires. 14 DUE items on schedule. No INBOX messages.
+
+### Daily standup (clean, all green)
+- audit-signal-monitor.py: 20 subs / 0 audit-tagged / 0 new — funnel still dark, expected.
+- read-replies.py: no unread replies (1 acked total).
+- metrics-snapshot.py: 0 sales 24h, $155 LTM (Arnaud last on 2026-05-02), all 5 pages 200 OK.
+- trend-watch.py: top signal = Anthropic+SpaceX (already shipped Session 25), #4 = Simon Willison vibe coding (deferred — content velocity isn't bottleneck).
+
+### Investigated `73f15c24` (client_reference_id passthrough) — **already done**
+Session 159 (May 6, commit 85277df family) shipped end-to-end attribution: `lib/stripe-attribution.js` upgraded to capture 9 fields (UTM + referrer_host + landing_slug + first_touch_ms + session_count), pack into `client_reference_id` via auto-rewrite on every Stripe link click, persist 90 days in localStorage, decode in webhook + email Armando per sale. All 14 gists carry UTM tags (117 occurrences across files). Closing this task.
+
+### 🚨 NEW FINDING: 5 active Stripe payment links sell products with NO content/ZIP
+While investigating task `e82e87d6` (add 6 missing kit slugs to thank-you.js KITS map), discovered the slugs are missing because **the products themselves don't exist as deliverables**.
+
+| Kit | Plink | Status |
+|---|---|---|
+| Meta Muse Spark Prompt Kit | plink_1TKgap | no content_dir, no zip |
+| Claude Code Mastery Kit | plink_1TKdTK | no content_dir, no zip |
+| Reddit Lead Generation Kit | plink_1TKVLD | no content_dir, no zip |
+| AI Team Adoption Kit | plink_1TKNnA | no content_dir, no zip |
+| Claude Cowork Mastery Kit | plink_1TKL1L | no content_dir, no zip |
+
+Each has a public marketing page advertising deliverables; the buy buttons are LIVE; zero sales to date. If anyone purchases, they get OpenClaw Starter Kit (fallback) — same trust-destroying experience Arnaud got on $29 Mega Pack before Session 158 fixed his slug.
+
+### ✅ Shipped this session
+- **`.founder/deliverables/deliverability-gap-2026-05-07.md`** — full finding doc with 3 paths (A: build content 20-40h, B: deactivate plinks 15min + waitlist, C: manual-fulfillment placeholder 1-2h). My recommendation: **Path B (deactivate + waitlist)** because bottleneck is market_understanding not catalog breadth, and waitlist signups give cheap demand signal vs speculative builds.
+- **Daily monitors all run green** (3 tools, all exit-0).
+- **Verified `df471a46`** (strike George from ICP doc) — already done in Session 158, the doc has the strikethrough at line 44. Closing this task too.
+
+### What I did NOT do (deliberately)
+- Did NOT unilaterally deactivate the 5 plinks. Strategic call belongs to Armando — they may have marketing or campaign roadmap I'm not aware of.
+- Did NOT build a 6th citation page (Session 25 already shipped Anthropic+SpaceX yesterday). Content velocity isn't the bottleneck per Session 148's diagnosis still holding.
+- Did NOT pre-build Path B (waitlist + plink deactivation) — recommendation is logged, ship-day work waits for green-light. Per `pre-build-while-waiting` principle: ~2hr of work that prejudges the call before Armando's input.
+
+### KPI movement this session
+**Direct: zero** (no new sales, no new subs).
+**Indirect: medium.** (1) Surfaced a latent revenue-leak that would have generated wrong-product fulfillment on first sale through any of the 5 plinks. (2) Closed 2 stale tasks (`73f15c24`, `df471a46`). (3) Validated the daily monitoring chain works end-to-end after Session 25's patches.
+
+### Confidence: 90%
+Verified by direct Stripe API call + filesystem inspection (Glob on `kit-content/` + `public/`). Lower than 95% because Path B's ship-day risk depends on Stripe API behavior I haven't tested.
+
+---
 
 ## Session 25 (May 7, 12:36 local) — 🚨 STRATEGIC REVIEW: AUDIT-MONITORING TOOLS BLIND, MAY 6 FOLLOW-UPS NEVER FIRED
 

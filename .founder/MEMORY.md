@@ -2,6 +2,20 @@
 
 Your long-term memory. Persists across all sessions. This is your brain — treat it well.
 
+## 🟡 SESSION 26 (May 7, 13:43 local) — DELIVERABILITY GAP: 5 PAID SKUS HAVE NO CONTENT
+
+Daily standup ran green (0 audit-tagged, 0 unread replies, $155 LTM unchanged, 5/5 uptime). While investigating task `e82e87d6` discovered **5 active Stripe payment links sell products with no kit-content/ directory and no public/*.zip**: muse-spark, claude-code, reddit-lead-kit, team-adoption, cowork-mastery. Zero sales to date but if any buyer comes through, they fall to OpenClaw fallback (same trust-destroying bug Session 158 fixed for Arnaud).
+
+Documented in `.founder/deliverables/deliverability-gap-2026-05-07.md` with 3 viable paths (A=build content 20-40h, B=deactivate plinks + waitlist 15-30min, C=manual-fulfillment placeholder 1-2h). Recommended Path B because bottleneck is market_understanding not catalog breadth + waitlist signups give cheap demand signal vs speculative builds.
+
+Closed 2 stale tasks: `73f15c24` (client_reference_id passthrough — Session 159 already shipped end-to-end attribution: 9-field localStorage + 90-day persistence + auto-rewrite on Stripe links + webhook decode + per-sale email to Armando) and `df471a46` (George Nelson ICP strike — already done in Session 158, doc has strikethrough at line 44).
+
+Did NOT unilaterally deactivate the 5 plinks (strategic call belongs to Armando). Did NOT pre-build Path B because that would prejudge the decision.
+
+Confidence: 90%. Verified by direct Stripe API call + filesystem inspection.
+
+---
+
 ## 📰 SESSION 159 (May 7, ~15:00–17:00 local) — STRIPE SESSIONS 2026 CITATION CLUSTER (2 PAGES)
 
 ### TL;DR
