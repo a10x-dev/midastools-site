@@ -244,6 +244,22 @@ export default function AgenticCommerceStripe2026() {
           '@type': 'Answer',
           text: "At Stripe Sessions 2026, three protocols defined the emerging agentic-commerce stack: (1) Machine Payments Protocol (MPP) — Stripe-initiated, lets agents discover payments over HTTP with zero configuration. (2) Agentic Commerce Suite — Stripe + Google, Meta, OpenAI, Microsoft. Lets consumers buy directly inside AI applications. (3) Universal Commerce Protocol (UCP) — Shopify-initiated, joined by Meta, Amazon, Salesforce, Microsoft, with Stripe on the general council. UCP is the cross-platform layer letting products listed on one platform be discoverable and purchasable on others."
         }
+      },
+      {
+        '@type': 'Question',
+        name: 'Is Visa a node in the Tempo blockchain?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: "Yes. At Stripe Sessions 2026, Georgios Konstantopoulos (CTO of the Tempo blockchain) showed the validator lineup onstage. Visa was on it. The organization Dee Hock created in the late 1960s to let competing banks share payment infrastructure as equal members is now a participating node in a blockchain network incubated by Stripe — a deliberate echo of the Visa-network design philosophy applied to agent-economy rails."
+        }
+      },
+      {
+        '@type': 'Question',
+        name: 'What does Patrick Collison mean by "money is data"?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: "Patrick Collison traced Stripe's core thesis back to programming Lisp at Stripe Sessions 2026: 'Stripe's basic idea is that money is data. When we launched Stripe in 2011, that was not the industry orthodoxy.' Lisp's foundational principle is 'code is data,' and Stripe's translation is that money is data — programmable, callable by APIs, operable by agents. Dee Hock reached the same conclusion from organizational theory (money as 'a guarantee of value exchange'). Ginger Baker said it most plainly at Sessions 2026: 'Isn't money just another form of digital content?' The framing is the philosophical foundation for the entire agentic-commerce thesis: if money is data, agents that consume data will naturally consume money."
+        }
       }
     ]
   };
@@ -393,6 +409,44 @@ export default function AgenticCommerceStripe2026() {
           your products to need metadata that satisfies all three by 2027.
         </p>
 
+        <h2 style={{ fontSize: '1.5rem', fontWeight: 700, marginTop: 40, marginBottom: 16 }}>
+          Why the protocol coalition exists: money is data
+        </h2>
+        <p style={{ fontSize: '1rem', lineHeight: 1.65, marginBottom: 16 }}>
+          A group of companies that are simultaneously partners and competitors — Stripe,
+          Shopify, Google, Meta, Amazon, OpenAI, Microsoft, Salesforce — agreed to collaborate
+          on shared protocols because <strong>fragmentation makes it difficult for agents to
+          consume smoothly across platforms, and that benefits no one</strong>. The same logic
+          that produced the Visa network in the late 1960s is producing the agentic-commerce
+          protocol stack in 2026.
+        </p>
+        <p style={{ fontSize: '1rem', lineHeight: 1.65, marginBottom: 16 }}>
+          One detail at Stripe Sessions 2026 captures the historical lineage perfectly. Onstage,
+          <strong> Georgios Konstantopoulos</strong>, CTO of the Tempo blockchain, showed the
+          Tempo validator lineup. One of the names was <strong>Visa</strong>. <em>The
+          organization Dee Hock created in the late 1960s — to let dozens of competing banks
+          share infrastructure as equal members — is now a participating node in a blockchain
+          network incubated by Stripe.</em> The student built a new network. The teacher
+          became one node in it.
+        </p>
+        <p style={{ fontSize: '1rem', lineHeight: 1.65, marginBottom: 16 }}>
+          The intellectual lineage is explicit. After Dee Hock died in 2022, Patrick Collison
+          publicly called Hock "a very underrated innovator" who had inspired him and his
+          brother. <strong>David Stearns</strong>, author of the definitive academic history of
+          Visa, later joined Stripe. Onstage at Sessions 2026, Patrick traced his own
+          intellectual roots to programming Lisp, where the core idea is "code is data." He
+          translated it directly: <strong>"Stripe's basic idea is that money is data. When we
+          launched Stripe in 2011, that was not the industry orthodoxy."</strong>
+        </p>
+        <p style={{ fontSize: '1rem', lineHeight: 1.65, marginBottom: 32 }}>
+          Hock arrived at the same conclusion from organizational theory — money is "a
+          guarantee of value exchange" and the medium that carries it can be anything. Onstage
+          the same day, Ginger Baker said it most plainly: <strong>"Isn't money just another
+          form of digital content?"</strong> If money is data, then consumers of data
+          (agents) will naturally become consumers of money. That is the philosophical
+          foundation underneath every protocol, demo, and growth number on this page.
+        </p>
+
         <h2 style={{ fontSize: '1.5rem', fontWeight: 700, marginTop: 32, marginBottom: 16 }}>
           The 5 things solopreneurs should ship this quarter
         </h2>
@@ -454,6 +508,11 @@ export default function AgenticCommerceStripe2026() {
           <li>Stripe Radar — fraud-prevention model trained on a 5-million-business shared risk network, blocked 3.3M high-risk free-trial registrations across 8 AI companies last month.</li>
           <li>Stripe Shared Payment Tokens — payment-credential tokenization that lets agents transact without touching raw card numbers.</li>
           <li>Emily Glassberg Sands (Stripe head of data and AI) — three AI fraud patterns + "compute is the new cash" framing at Sessions 2026.</li>
+          <li>Georgios Konstantopoulos (CTO of Tempo blockchain) — disclosed Visa as a validator node on Tempo at Sessions 2026.</li>
+          <li>Dee Hock — Visa founder, author of <em>One from Many</em> (1968 BankAmericard / Visa origin story); Patrick Collison publicly cited Hock as "a very underrated innovator" in 2022.</li>
+          <li>David Stearns — author of the definitive academic history of Visa; later joined Stripe.</li>
+          <li>Patrick Collison's Lisp-inherited "code is data" / "money is data" framing onstage at Sessions 2026.</li>
+          <li>Ginger Baker (Meta VP Product) at Sessions 2026 — "Isn't money just another form of digital content?"</li>
           <li>Tempo CLI + Tempo blockchain (Stripe, 2026) — agent-native stablecoin payment rails referenced in the Alpha Vantage and streaming-payments demos.</li>
           <li>Metronome (real-time metering engine) — combined with Tempo and stablecoins to power the world's first streaming payments business at Sessions 2026.</li>
           <li>Jeff Weinstein (Stripe product leader) interview at Sessions 2026 — "treat the agent as the best programmer you know" framing for merchants.</li>
