@@ -7,7 +7,7 @@ const STRIPE_MEGA_PACK = 'https://buy.stripe.com/4gMbJ0dgz4aJ1qkb46cMM0d';
 
 export default function AgenticCommerceStripe2026() {
   const title = "Agentic Commerce Is Here: 15 Signals From Stripe Sessions 2026 (MPP, Tempo CLI, OpenClaw, Streaming Payments)";
-  const description = "John Collison: 'Agentic commerce is here.' Stripe Sessions 2026 unveiled the Machine Payments Protocol (MPP), demoed the world's first streaming payments business with sub-cent micropayments via Metronome + Tempo + stablecoins, named OpenClaw as a leading agent framework, and showed an agent buying Alpha Vantage data for $0.04. The 15 signals + what to ship now.";
+  const description = "John Collison: 'Agentic commerce is here.' Stripe Sessions 2026 unveiled the Machine Payments Protocol (MPP), the Agentic Commerce Suite (Google/Meta/OpenAI/Microsoft), Shopify's Universal Commerce Protocol (UCP), the world's first streaming payments business via Metronome + Tempo + stablecoins, and Emily Glassberg Sands' three AI fraud patterns ('compute is the new cash'). The 15 signals + protocol stack + what to ship now.";
   const url = 'https://www.midastools.co/blog/agentic-commerce-stripe-2026';
   const datePublished = '2026-05-07';
   const dateModified = '2026-05-07';
@@ -86,7 +86,7 @@ export default function AgenticCommerceStripe2026() {
     {
       n: 11,
       headline: "MPP (Machine Payments Protocol) lets agents discover payments with zero configuration",
-      claim: "Will Gaybrick demoed the Machine Payments Protocol — MPP — at Stripe Sessions 2026. He told an agent nothing about payments. While executing the assigned task, the agent automatically discovered that the app used MPP and independently completed a $2 payment. The human pressed exactly one fingerprint authorization. Developers do not need to write separate payment logic for agents — agents find it themselves.",
+      claim: "Will Gaybrick demoed the Machine Payments Protocol — MPP — at Stripe Sessions 2026. He told an agent nothing about payments. While executing the assigned task, the agent automatically discovered that the app used MPP and independently completed a $2 payment over HTTP. The human pressed exactly one fingerprint authorization. Developers do not need to write separate payment logic for agents — agents find it themselves. MPP is one of three protocols Stripe is shipping or joining (alongside the Agentic Commerce Suite with Google/Meta/OpenAI/Microsoft, and Shopify's Universal Commerce Protocol).",
       why: "MPP is to agentic commerce what HTTP was to the human web: a discovery and handshake protocol that lets two parties transact without prior integration. Zero-config discoverability is the missing piece between 'agents can act' and 'agents can transact at scale.' If MPP becomes a standard, every product on the internet inherits agent-purchasability without rebuilding its checkout.",
       action: "Track MPP spec progress as a top-3 product priority through 2026. When the spec is public, audit your paid products for MPP-discoverability — the cost is one metadata block on a product page; the upside is being agent-purchasable on day one of the protocol going live."
     },
@@ -212,6 +212,38 @@ export default function AgenticCommerceStripe2026() {
           '@type': 'Answer',
           text: "John Collison argued at Stripe Sessions 2026 that micropayments failed historically because humans aren't good at granular consumption decisions — Spotify replaced per-song payments with $9.99/mo because no one wants to evaluate whether a song is worth 15 cents on every play. Agents don't carry that cognitive burden. They can make 1000 buy/no-buy decisions per second within rule-based budgets. Failed business models like pay-per-article journalism, pay-per-API-call SaaS, and pay-per-image stock photography may suddenly become viable in agent-to-agent commerce."
         }
+      },
+      {
+        '@type': 'Question',
+        name: "What are the three fast-growing AI fraud patterns Stripe identified?",
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: "Emily Glassberg Sands (Stripe head of data and AI) identified three patterns at Sessions 2026: (1) Multi-account abuse — same person registers many accounts to harvest free quotas, affecting 1 in 6 AI company sign-ups in Stripe network data. (2) Malicious free-trial consumption that burns real inference cost — one partner company saw $500 token cost per paying customer because 19 of every 25 trials were fraudulent. (3) 'Dining and dashing' — customers consume tokens then refuse to pay at month-end. Emily's framing: 'compute is the new cash.'"
+        }
+      },
+      {
+        '@type': 'Question',
+        name: "Why is shutting down free trials the wrong response to AI fraud?",
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: "Jeff Weinstein argued at Stripe Sessions 2026 that closing self-serve free trials hands your growth channel to competitors. Agents are becoming the primary way new services get discovered. If an agent encounters 'join the waitlist' or 'contact sales,' it leaves immediately and tries the next URL. Stripe's Radar blocked 3.3 million high-risk free-trial registrations last month across 8 high-growth AI companies — pattern-matching from a 5-million-business shared risk network is a more durable answer than removing the free tier."
+        }
+      },
+      {
+        '@type': 'Question',
+        name: "Are agent transactions safer or riskier than human web shopping?",
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: "Jeff Weinstein's counterintuitive view at Stripe Sessions 2026: agent shopping may be safer than human web shopping. Human trust verification relies on inference (time on site, click-path patterns, geolocation heuristics). Agent transactions can be programmatically authenticated. Stripe's Shared Payment Tokens tokenize payment credentials so agents never touch raw credit-card numbers. Users authorize through biometrics and set transaction limits, time windows, and merchant whitelists. When trust shifts from inference to confirmation, the security baseline rises."
+        }
+      },
+      {
+        '@type': 'Question',
+        name: 'What are the three named protocols defining agentic commerce?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: "At Stripe Sessions 2026, three protocols defined the emerging agentic-commerce stack: (1) Machine Payments Protocol (MPP) — Stripe-initiated, lets agents discover payments over HTTP with zero configuration. (2) Agentic Commerce Suite — Stripe + Google, Meta, OpenAI, Microsoft. Lets consumers buy directly inside AI applications. (3) Universal Commerce Protocol (UCP) — Shopify-initiated, joined by Meta, Amazon, Salesforce, Microsoft, with Stripe on the general council. UCP is the cross-platform layer letting products listed on one platform be discoverable and purchasable on others."
+        }
       }
     ]
   };
@@ -281,6 +313,86 @@ export default function AgenticCommerceStripe2026() {
 
         <hr style={{ margin: '40px 0', border: 'none', borderTop: '1px solid #E5E7EB' }} />
 
+        <h2 style={{ fontSize: '1.5rem', fontWeight: 700, marginTop: 40, marginBottom: 16 }}>
+          Security: compute is the new cash
+        </h2>
+        <p style={{ fontSize: '1rem', lineHeight: 1.65, marginBottom: 16 }}>
+          Emily Glassberg Sands, Stripe's head of data and AI, identified three
+          fast-growing fraud patterns at Stripe Sessions 2026. Each one is fundamentally
+          different from traditional SaaS abuse because — as Emily put it — <strong>"compute is
+          the new cash"</strong>: every inference call costs real money, so stolen tokens are
+          stolen money.
+        </p>
+        <ol style={{ fontSize: '1rem', lineHeight: 1.7, color: '#374151', paddingLeft: 24, marginBottom: 24 }}>
+          <li style={{ marginBottom: 12 }}><strong>Multi-account abuse.</strong> The same person registers different accounts to harvest free quotas. Stripe network data: <strong>1 in 6 AI company sign-ups</strong> involves this pattern.</li>
+          <li style={{ marginBottom: 12 }}><strong>Malicious free-trial consumption.</strong> Burns real inference cost. Emily's example: for one partner company, <strong>token cost per paying customer exceeded $500</strong> — it took 25 free trials to convert one customer, and 19 of those trials were fraudulent.</li>
+          <li style={{ marginBottom: 12 }}><strong>"Dining and dashing."</strong> Customers consume large amounts of tokens, then refuse to pay at month-end. Traditional SaaS marginal cost on abuse is ~$0; AI inference marginal cost is real and per-call.</li>
+        </ol>
+        <p style={{ fontSize: '1rem', lineHeight: 1.65, marginBottom: 16 }}>
+          The dilemma: many AI founders respond by <em>turning off free trials entirely</em>.
+          Emily said she had asked everyone who claimed to have "solved" abuse, and their
+          solution was simply to remove the free tier. Jeff Weinstein argued this trade is
+          worse than it looks. Agents are becoming the primary discovery layer for new
+          services. <strong>If an agent encounters "join the waitlist" or "contact sales," it
+          leaves immediately.</strong> Closing self-serve sign-ups to prevent fraud may mean
+          handing your most important growth channel to competitors.
+        </p>
+        <p style={{ fontSize: '1rem', lineHeight: 1.65, marginBottom: 16 }}>
+          Stripe's answer is <strong>Radar</strong>. Every transaction across Stripe's network
+          of <strong>5 million businesses</strong> feeds a shared risk-identification model.
+          Last month alone, Radar blocked <strong>3.3 million high-risk free-trial
+          registrations across eight high-growth AI companies</strong>. When one Stripe customer
+          encounters a new fraud pattern, every other Stripe customer benefits.
+        </p>
+        <p style={{ fontSize: '1rem', lineHeight: 1.65, marginBottom: 32 }}>
+          Jeff Weinstein offered a counterintuitive thesis: <strong>agent shopping may be
+          safer than human web shopping.</strong> Human-web trust verification relies on
+          inference — how long the user stayed on the page, whether the click path looked
+          normal, whether the IP geolocates suspiciously. Agent transactions can be
+          programmatically authenticated. Stripe's <strong>Shared Payment Tokens</strong> tokenize
+          credentials so agents never touch raw card numbers. Users authorize through
+          biometrics, set transaction limits, time windows, and merchant whitelists. <em>When
+          the trust mechanism shifts from inference to confirmation, the security baseline
+          actually rises.</em>
+        </p>
+
+        <h2 style={{ fontSize: '1.5rem', fontWeight: 700, marginTop: 40, marginBottom: 16 }}>
+          The protocol stack: MPP, Agentic Commerce Suite, UCP
+        </h2>
+        <p style={{ fontSize: '1rem', lineHeight: 1.65, marginBottom: 16 }}>
+          Agentic commerce cannot ship as one company's feature. It needs an ecosystem and
+          shared protocols. At Stripe Sessions 2026, three named protocols define the
+          emerging stack:
+        </p>
+        <ul style={{ fontSize: '1rem', lineHeight: 1.7, color: '#374151', paddingLeft: 24, marginBottom: 24 }}>
+          <li style={{ marginBottom: 16 }}>
+            <strong>Machine Payments Protocol (MPP)</strong> — Stripe-initiated. Lets agents
+            discover and complete payments over HTTP with zero prior integration. Demoed live
+            at Sessions 2026 with Will Gaybrick's $2-fingerprint-auth example. The
+            agent-to-merchant discovery layer.
+          </li>
+          <li style={{ marginBottom: 16 }}>
+            <strong>Agentic Commerce Suite</strong> — Stripe + the major AI-application
+            platforms. Lets consumers complete purchases directly inside AI applications from
+            <strong> Google, Meta, OpenAI, and Microsoft</strong>. The buyer-experience layer:
+            research, decision, and transaction collapse into a single chat interface across
+            the major AI assistants.
+          </li>
+          <li style={{ marginBottom: 16 }}>
+            <strong>Universal Commerce Protocol (UCP)</strong> — Initiated by Shopify, joined
+            by <strong>Meta, Amazon, Salesforce, Microsoft</strong>, with Stripe on the general
+            council. The cross-platform commerce layer that lets a product listed on one
+            platform be discoverable and purchasable on every other platform in the alliance.
+          </li>
+        </ul>
+        <p style={{ fontSize: '1rem', lineHeight: 1.65, marginBottom: 32 }}>
+          Three protocols, three layers, four major platform alliances (Stripe + Big Tech +
+          Shopify). The shape of the ecosystem is now visible: <strong>MPP is the discovery
+          handshake, the Agentic Commerce Suite is the buyer interface, and UCP is the
+          merchant-side cross-platform layer.</strong> If you sell anything online, plan for
+          your products to need metadata that satisfies all three by 2027.
+        </p>
+
         <h2 style={{ fontSize: '1.5rem', fontWeight: 700, marginTop: 32, marginBottom: 16 }}>
           The 5 things solopreneurs should ship this quarter
         </h2>
@@ -335,8 +447,13 @@ export default function AgenticCommerceStripe2026() {
           Sources & related reading
         </h2>
         <ul style={{ fontSize: '0.95rem', lineHeight: 1.7, color: '#374151', paddingLeft: 20 }}>
-          <li>Stripe Sessions 2026 (May 2026) — primary source: John Collison's "agentic commerce is here" demo, Will Gaybrick's CLI usage data + API review demo + MPP demo + streaming-payments demo, Maia's docs-traffic 10x figure + agent-commerce pricing observation.</li>
+          <li>Stripe Sessions 2026 (May 2026) — primary source: John Collison's "agentic commerce is here" demo, Will Gaybrick's CLI usage data + API review demo + MPP demo + streaming-payments demo, Maia's docs-traffic 10x figure + agent-commerce pricing observation, Emily Glassberg Sands' three fraud patterns + "compute is the new cash" framing.</li>
           <li>Machine Payments Protocol (MPP) — Stripe's zero-config agent-discoverable payment protocol, demoed by Will Gaybrick at Sessions 2026.</li>
+          <li>Agentic Commerce Suite — Stripe + Google, Meta, OpenAI, Microsoft alliance for in-AI-app purchase completion, announced at Sessions 2026.</li>
+          <li>Universal Commerce Protocol (UCP) — Shopify-initiated cross-platform commerce protocol joined by Meta, Amazon, Salesforce, Microsoft, with Stripe on the general council.</li>
+          <li>Stripe Radar — fraud-prevention model trained on a 5-million-business shared risk network, blocked 3.3M high-risk free-trial registrations across 8 AI companies last month.</li>
+          <li>Stripe Shared Payment Tokens — payment-credential tokenization that lets agents transact without touching raw card numbers.</li>
+          <li>Emily Glassberg Sands (Stripe head of data and AI) — three AI fraud patterns + "compute is the new cash" framing at Sessions 2026.</li>
           <li>Tempo CLI + Tempo blockchain (Stripe, 2026) — agent-native stablecoin payment rails referenced in the Alpha Vantage and streaming-payments demos.</li>
           <li>Metronome (real-time metering engine) — combined with Tempo and stablecoins to power the world's first streaming payments business at Sessions 2026.</li>
           <li>Jeff Weinstein (Stripe product leader) interview at Sessions 2026 — "treat the agent as the best programmer you know" framing for merchants.</li>
