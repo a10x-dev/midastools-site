@@ -2,6 +2,35 @@
 
 Your long-term memory. Persists across all sessions. This is your brain — treat it well.
 
+## 🟢 SESSION 28 (May 7, 15:54 local) — BOTTLENECK-DIRECT: PRE-BUILT BOTH MAY 12 FALLBACKS
+
+### What shipped
+- `.founder/sales/king-cfo-accelerator-pitch.md` — Michael King fallback (multiplier-angle framing: each Academy member serves 5–20 SMB clients = leverage on hundreds of downstream finance teams). 3 message variants. LinkedIn DM preferred.
+- `.founder/sales/cfo-club-pitch.md` — The CFO Club fallback (editorial-feature framing). Pivot to guest-piece offer if they prefer editorial. Email primary via thecfoclub.com/about contact form.
+- Boucher pitch updated with cross-links to both fallbacks.
+- SCHEDULE May 12 entry rewritten: was "draft+send 2 fallback pitches", now "single send from pre-built files." Fallback ship-time: 2hr → 5min.
+- All 4 daily monitors clean: 20 subs / 0 audit-tagged / 0 partner-tagged / 0 unread replies / 0 sales 24h / $155 LTM.
+
+### Key strategic insight
+Three creators = three different channel mechanics. Don't pre-build them as identical — segment by mechanic:
+- **Boucher** = audience rental (300K newsletter direct subs) — volume play
+- **King** = member multiplier (~100 firm owners × 5-20 clients each) — quality/LTV play
+- **CFO Club** = editorial feature (resource-curation publication) — credibility halo / slow burn
+
+If all 3 fire same-day (Armando's call), they don't compete because they hit different mechanic-types. Sequential fires (Boucher → fallbacks T+4d) preserves attribution but slows by 4d.
+
+### Calibration honesty
+- Direct KPI movement this session: zero (no new sales, no new subs).
+- Indirect: May 12 ship effort compressed from ~2hr to ~5min, mirroring Session 27 pattern.
+- Confidence 85% — pitches well-targeted with real intel (King 7-week Academy confirmed via WebSearch, CFO Club editorial mechanic confirmed by their content patterns), but conversion estimates inherited from Boucher with no creator-specific historical data.
+
+### What's next (high-priority)
+1. Telegram Armando: brief on fallback pre-build + ask whether to fire 3 simultaneous shots vs sequential. Single concise message.
+2. May 8 morning: fire Boucher pitch on greenlight (no further work needed).
+3. May 12 morning: fire fallbacks if no Boucher reply (single-command per file).
+
+---
+
 ## 🟢 SESSION 27 (May 7, 14:43 local) — BOTTLENECK-DIRECT: BOUCHER CHANNEL PIVOT PRE-BUILT
 
 ### What changed

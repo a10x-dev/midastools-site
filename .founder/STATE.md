@@ -29,6 +29,57 @@
 | 12 | ai-saas-founder-prompts-cheatsheet | gist/bc4451 |
 | 13 | claude-opus-4-7-prompts-cheatsheet | gist/ccef07 |
 
+## Session 28 (May 7, 15:54 local) — 🟢 BOTTLENECK-DIRECT: PRE-BUILT BOTH MAY 12 FALLBACKS (CHANNEL PIVOT PILOTS #2 + #3)
+
+### Trigger
+Strategic review at start: same bottleneck (market_understanding 6/10), same blocker (Boucher pitch awaits Armando greenlight per Session 27), same `armando-async-asks` rule (don't queue another async ping). Per `pre-build-while-waiting`: highest-leverage unilateral move is pre-building the May 12 fallback pitches so when Boucher window expires (T+4d), ship is single-send not draft+send.
+
+### Daily monitors (clean)
+- `partner-signal-monitor.py`: 20 subs / 0 partner-tagged / 0 new.
+- `audit-signal-monitor.py`: 20 subs / 0 audit-tagged / 0 new.
+- `read-replies.py`: 0 unread replies.
+- `metrics-snapshot.py`: 0 sales 24h, $155 LTM, 5/5 pages 200 OK.
+
+### ✅ Bottleneck-direct work shipped
+1. **`.founder/sales/king-cfo-accelerator-pitch.md`** — Michael King fallback pitch, 3 message variants (LinkedIn DM short, ultra-short, email longer-with-proof). Multiplier-angle framing (each Academy member serves 5–20 SMB clients = leverage on hundreds of downstream finance teams). Reply-scenario matrix + 30%-rev-share affiliate fallback if he wants compensation. 7-day kill criteria → falls through to CFO Club. Source intel: WebSearch May 7 confirmed 7-week CFO Academy + Inner Circle mastermind + active LinkedIn at https://www.linkedin.com/in/iammichaelking.
+2. **`.founder/sales/cfo-club-pitch.md`** — The CFO Club fallback pitch, editorial-feature framing (vs Boucher audience-rental and King multiplier). 3 variants: email primary, ultra-short, LinkedIn DM. Pivot to guest-piece offer ("The 14 Prompts Every Tech CFO Should Have") if they prefer editorial. 14-day kill → falls through to Reddit r/ChatGPTPromptGenius $30 promoted post.
+3. **`/finance-club?via=cfo-accelerator` and `?via=cfo-club` URLs** — verified via existing page code (line 88: `source: via ? `${via}-finance-club` : 'finance-club'`); zero code change needed thanks to Session 27's reusable `?via=` param. Both URLs return HTTP 200.
+4. **`partner-signal-monitor.py` regex** — already covers `cfo-accelerator|cfo-club|cfo-connect` (Session 27 built it forward-looking). Zero patch needed; first NEW source-tagged sub from either fallback triggers same-day welcome.
+5. **`.founder/sales/boucher-crosspromo-pitch.md`** — updated 2 lines to cross-link the new fallback files in reply-scenario + kill-criteria sections.
+6. **`.founder/SCHEDULE.md`** — May 12 entry rewritten from "draft + send" to "single send" (specific file paths + LinkedIn DM URL + email contact form path). Future-self can fire fallbacks in 5 min not 2 hr.
+
+### Strategic call: 3 simultaneous shots vs sequential is Armando's call
+Per Boucher pitch reply-scenario line 88: option exists for "three independent shots same week per pitch doc." Sequential (Boucher first, fallbacks T+4d) preserves cleanest attribution but slows by 4d. Simultaneous (all three same day) maximizes 14d-window coverage but blurs which channel produces a yes. Pre-build supports both — strategy choice deferred to Armando.
+
+### Cross-channel risk-comparison table
+| Dimension | Boucher | King | CFO Club |
+|---|---|---|---|
+| Audience type | Newsletter subs (300K) | Coached firm owners (~100+) | Editorial readers (size unknown) |
+| Mechanic | Audience rental swap | Member multiplier (×5-20 clients) | Editorial feature |
+| Geo | France-anchored | US (Dallas) | US tech-SaaS |
+| ICP density | ~80% (finance pros) | ~70% (firm owners, higher LTV) | ~60% (tech CFOs) |
+| Reply rate (estimate) | 30% | 40% | 25% |
+| Best for | Volume signups | Quality / long-term partnership | Editorial credibility halo |
+
+### What I did NOT do (deliberately)
+- Did NOT email Boucher / King / CFO Club directly. Sender attribution belongs to Armando — these are LinkedIn DMs / personal-email cold-pitches; from "Claude from MidasTools" they read as bot, from "Armando from MidasTools" they read as founder.
+- Did NOT pre-build the CFO Connect (Spendesk) pitch — fourth fallback in Boucher's kill-criteria list. Diminishing returns: if Boucher + 2 fallbacks all decline in 14d, the lesson is ICP-channel-mismatch, not "we need a 4th creator." Save the 1hr.
+- Did NOT touch the 5-broken-SKU decision (task `3400b90c`) — strategic call still belongs to Armando.
+- Did NOT ship a content surface (gist/blog/Dev.to) — channel still dark per Session 25 instrumentation; bottleneck doesn't move with more shipping.
+
+### KPI movement this session
+**Direct: zero.** **Indirect: high.** May 12 fallback ship effort dropped from ~2hr (research + draft + smoke-test for 2 creators) to ~5 min (pick file, copy DM, paste in LinkedIn). Same compression pattern as Session 27 applied to the fallback layer. If Boucher ghosts, the 4-day gap doesn't extend by another 2 hours.
+
+### Confidence
+85% — pitches are well-targeted (real intel: King 7-week Academy confirmed via web search, CFO Club editorial mechanic confirmed by their "best CFO newsletters" / "best CFO communities" content patterns). Lower than 90% because the conversion estimates are inherited from Boucher (no creator-specific historical data) and CFO Club's actual newsletter size is unverified.
+
+### Session 28 — TODOs flagged for next session
+- If Boucher pitch greenlit + sent May 8 → set May 12 reminder to fire fallbacks if no T+4d reply (already in SCHEDULE).
+- If Armando picks "3 simultaneous shots" instead of sequential → fire all 3 May 8 (zero additional pre-build needed).
+- If a partner reply lands → execute partner-signal-monitor.py same-day welcome flow per Session 27 setup.
+
+---
+
 ## Session 27 (May 7, 14:43 local) — 🟢 BOTTLENECK-DIRECT: BOUCHER CROSS-PROMO PRE-BUILT (CHANNEL PIVOT PILOT #1)
 
 ### Trigger

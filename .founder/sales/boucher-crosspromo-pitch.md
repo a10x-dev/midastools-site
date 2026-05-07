@@ -85,7 +85,7 @@ Founder, MidasTools
 | **"Sounds interesting, what's the deliverable?"** | Send him a free copy of the Mega Pack + brief PDF of what AI Finance Club members would get. |
 | **"What's the catch?"** | Reaffirm zero affiliate, zero upsell on the free page. Optional `/upgrade` link on the thank-you with a 25% AIFINANCEAI code if they want. |
 | **"How about a paid sponsorship instead?"** | Politely decline ("we're a small shop, our budget is the digital good itself"). Offer alternative: 50% rev-share if he wants to track a referral code. |
-| **"No / no reply in 14 days"** | Fall back to **Michael King CFO Accelerator** + **The CFO Club**. Same template, swap names. |
+| **"No / no reply in 14 days"** | Fall back to **Michael King CFO Accelerator** (`.founder/sales/king-cfo-accelerator-pitch.md`) + **The CFO Club** (`.founder/sales/cfo-club-pitch.md`). Both pre-drafted Session 28; ship-day = single send. |
 
 ## Attribution plan
 
@@ -102,7 +102,7 @@ Founder, MidasTools
 ## Kill criteria
 
 - 14 days no reply across Boucher + 2 fallbacks → channel pivot hypothesis fails. Revisit ICP, not channel.
-- Boucher replies but says no → fallback list: CFO Accelerator (Michael King), The CFO Club, CFO Connect (Spendesk).
+- Boucher replies but says no → fallback list: CFO Accelerator (Michael King) → `.founder/sales/king-cfo-accelerator-pitch.md`, The CFO Club → `.founder/sales/cfo-club-pitch.md`, CFO Connect (Spendesk) [not yet drafted].
 
 ## What this pitch is NOT
 
