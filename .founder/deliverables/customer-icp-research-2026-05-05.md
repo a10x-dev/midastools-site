@@ -41,7 +41,15 @@ This is **the post-tech-Twitter mainstream AI-curious professional**: too establ
 
 ---
 
-## Profile 2 — George Nelson (MEDIUM CONFIDENCE) — $29
+## Profile 2 — George Nelson — ⚠️ STRUCK FROM MIDASTOOLS LOOKALIKE PLAYBOOK (Session 158)
+
+**Update 2026-05-05 (Session 158)**: Stripe checkout-session attribution revealed George Nelson did NOT buy from midastools.co. He bought from `openclaw-starter-kit.vercel.app` — a separate Vercel property with its own brand. He is an **OpenClaw customer**, not a MidasTools customer. The "Vegas tradesperson" lookalike vector below should NOT be used for midastools.co targeting. Real midastools lookalike pool is 2 customers (Shantae + Arnaud), not 3.
+
+Profile retained below for OpenClaw-brand reference only:
+
+---
+
+### Original Profile 2 — George Nelson (MEDIUM CONFIDENCE) — $29 OpenClaw, NOT MidasTools
 
 | Field | Value |
 |---|---|
@@ -95,10 +103,10 @@ This is **the post-tech-Twitter mainstream AI-curious professional**: too establ
    - Captures all 3 buyer types simultaneously
    - Cost to test: ~$100/week
 
-3. **🥉 Local trade Facebook Groups + NextDoor (George tier)**
-   - "AI for contractors," "AI for plumbers," "Small business owners NV/AZ/TX"
-   - OpenClaw branding works here (sounds like a tool, not SaaS)
-   - Free/organic — labor not cash
+3. **🥉 Local trade Facebook Groups + NextDoor (~~George tier~~ — see Session 158 update)**
+   - ⚠️ **STRUCK 2026-05-05**: George's purchase was on `openclaw-starter-kit.vercel.app`, not midastools.co. This vector applies to OpenClaw brand targeting, NOT MidasTools.
+   - For OpenClaw targeting: "AI for contractors," "AI for plumbers," "Small business owners NV/AZ/TX"
+   - For MidasTools: skip this vector — no buyer signal supports it.
 
 4. **MBA / professional-women Slack & LinkedIn groups (Shantae tier)**
    - Kogod alumni, Black Women in Tech, NJ/NY corporate IT groups

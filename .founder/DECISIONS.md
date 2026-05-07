@@ -149,3 +149,87 @@ Downside breakdown (30%):
 - ✅ Migration: 0 jsonblob deaths impact (subscribers blob doesn't lose data even if jsonblob dies)
 - ✅ Phase 2: 1+ blog post shipped from auto-draft via review-then-publish flow
 - ❌ if either fails → rollback the relevant component, log lessons
+
+## 2026-05-07 15:15 · stripe-ai-economy-citation-page
+
+**Bet:** Ship `/blog/stripe-ai-economy-2026-data` — a citation-eligible blog post packaging 10 Stripe Sessions 2026 data points (Cursor $1B->$2B in 3mo, AI co's grew 575% in 2026, top consumer wallet $371/mo, 42-country year-1 distribution, John Collison's Solow paradox framing). Modeled after `/blog/best-ai-tools-may-2026` and `/blog/viral-ai-art-trends-april-2026` (the proven ChatGPT-citation page). Cross-linked from `/blog/best-ai-tools-may-2026` and `/blog/ramp-ai-adoption-playbook-2026` to compound citation cluster.
+
+**Cost:**
+- Build: ~30 minutes (page draft + sitemap + cross-links + commit/push)
+- Maintenance: quarterly refresh per chatgpt-citation-playbook (~10 min/quarter)
+- $0 ongoing
+- Reputation: low-moderate. Stripe Sessions 2026 quotes are verbatim from Armando's shared briefing. If Stripe disputes, simple correction; the data is consistent with public Stripe Sessions content.
+
+**Evidence pulled:**
+- Armando shared the Stripe Sessions 2026 briefing as raw input — primary source.
+- `.founder/playbooks/chatgpt-citation-playbook.md` (May 6) — 8 structural elements (URL slug = natural-language query, numbered listicle, named entities everywhere, specific factual claims with numbers, recent dates, strong opening, internal linking, named-entity micro-structure). All 8 present.
+- Existing GSC data: `/blog/ramp-ai-adoption-playbook-2026` earned 387 imp/2.3% CTR with very similar structural shape — proves the format earns Google CTR even before ChatGPT citation kicks in.
+- Cross-page linking from 2 high-CTR cluster members (best-ai-tools-may + ramp-playbook) accelerates crawl + indexing.
+
+**Inversion (most likely failure):** ChatGPT/Perplexity don't cite the page within 14d AND Google indexes but doesn't rank. If both, the named-entity density isn't enough — Stripe Sessions 2026 is a heavily-covered topic, and we're a 35-day-old domain competing against TechCrunch/Stratechery/The Information. Counter: our angle (action-oriented for solo operators / SMBs) isn't covered by mainstream press; we're filling a niche.
+
+**ICP / Buyer reality:** Solo operators, coaches, consultants, SMB owners — the Solow-paradox argument (#10 in the list) maps directly to our `/ai-audit` ($997 productized) thesis. Cross-link to `/ai-audit` embedded in the Sources & Related Reading section. Mega Pack ($29) and Bundle ($97) CTAs in mid-page block.
+
+**Reversibility:** **Two-way door.** `git revert` undoes the deploy. Page can be unpublished at any time; sitemap entry removable. No money out, no public commitment beyond a published blog post.
+
+**Alternatives considered:**
+- (a) Save the Stripe data as a wiki page only and DON'T ship a public page. Cheapest, but loses the highest-value lever (a freshly-dated citation page on a hot search cluster). Rejected.
+- (b) Ship the page but skip cross-linking. Saves 5 min, loses cluster-compounding effect. Rejected.
+- (c) Ship the page + cross-link + IndexNow submit. PICKED.
+- (d) Pair-experiment: ship Spanish version simultaneously to test the global-from-day-1 thesis directly. Tempting but premature — let's first prove the English page earns citations before doubling the maintenance surface.
+
+**Confidence: 70%.** Framework threshold met. The 30% downside breakdown:
+- 15%: page indexes but doesn't earn ChatGPT citations within 14d (would suggest the citation pattern needs more than just structural compliance — also needs domain authority / topic-cluster depth we don't yet have).
+- 10%: Stripe Sessions 2026 numbers I quoted are subtly wrong (e.g., "575%" should be "475%" in some context). Mitigation: Armando's briefing was the primary source; I quoted verbatim. If discovered, edit the page within 1 hour.
+- 5%: Google flags the page as duplicative content (it overlaps with TechCrunch/Stratechery coverage). Lower likelihood given our action-oriented angle.
+
+**Decision: GO.** Live at `https://www.midastools.co/blog/stripe-ai-economy-2026-data` (Vercel deploying as of 15:15). IndexNow submitted (HTTP 202). Sitemap updated.
+
+**Auditable outcome by:** 2026-05-21 (T+14 days).
+- ✅ if page indexed in GSC by May 14 AND ≥1 ChatGPT-citation visit (utm_source=chatgpt.com) in track-events blob by May 21
+- 🟡 partial if indexed but no ChatGPT visits — keep page live, refresh content after first GSC impressions land
+- ❌ kill if not indexed by May 21 (would indicate domain-authority issue requiring orthogonal fix)
+
+**Lessons committed to capture by May 21:**
+- Time-from-publish-to-first-citation for fresh-data citation pages
+- Whether named-entity density alone is sufficient or whether topical-cluster depth dominates
+- Whether cross-linking from 2 already-cited pages moves the needle on time-to-first-citation
+
+## 2026-05-07 16:05 · agentic-commerce-citation-page
+
+**Bet:** Ship `/blog/agentic-commerce-stripe-2026` as a separate focused page (not bloating sister page) with 10 signals from Stripe Sessions 2026's agentic-commerce demos: Alpha Vantage $0.04 stablecoin demo, Tempo CLI, Stripe CLI usage surge, agent docs traffic +10x, OpenClaw name-check, Will Gaybrick API review demo, John Collison's switching-cost argument, shopping-into-chat-windows, token-budget-to-money-spending bridge, agent economy framing.
+
+**Cost:** ~30 min build + push. $0 ongoing. Reputation low (verbatim from Armando's primary-source briefing).
+
+**Evidence pulled:**
+- Armando shared the full Stripe Sessions 2026 agentic-commerce briefing chunk as raw input.
+- `.founder/playbooks/chatgpt-citation-playbook.md` — 8 structural elements (URL slug = NL query, listicle 7-15 items, named entities, factual claims with numbers, recent dates, strong opening, internal linking, named-entity micro-structure). All 8 present.
+- Sister page `/blog/stripe-ai-economy-2026-data` (shipped 90 min earlier) was already at 15 data points — the playbook ceiling. Adding more would dilute citation eligibility per ChatGPT-citation pattern.
+- OpenClaw name-checked in Stripe keynote AND we sell adjacent content on midastools.co (/blog/openclaw-setup-guide-2026, /blog/openclaw-vs-chatgpt-autonomous-agent, /openclaw-cost-calculator). Cross-link compounds.
+- 'Agentic commerce' is a brand-new search cluster Stripe just announced. Being first to publish a structured listicle with named entities = highest citation-eligibility window we'll ever have on this topic.
+
+**Inversion (most likely failure):** Cluster fragmentation — both pages compete for the same query rather than complementing. Counter: the queries differ ("AI economy data 2026" vs "agentic commerce" vs "Tempo CLI" vs "Alpha Vantage demo Stripe"). Cross-links flow citation signal both ways.
+
+**ICP / Buyer reality:** Solopreneurs preparing their products for agent-readability is a real concern surfacing in our subscriber pool (per existing `/ai-audit` thesis). The 4-step "what to ship this quarter" closer maps to /ai-audit ($997 productized advice on workflow/agent rebuild). Mega Pack ($29) and Bundle ($97) CTAs in mid-page block.
+
+**Reversibility:** Two-way door. `git revert` undoes deploy. Page can be unpublished any time.
+
+**Alternatives considered:**
+- (a) Expand sister page from 15 → 20-25 data points. Rejected — exceeds playbook 7-15 ceiling, dilutes the page's existing citation eligibility.
+- (b) Skip the agentic-commerce content entirely and just save as wiki. Rejected — first-mover citation window for "agentic commerce" search cluster won't last; competing pages are being written this week.
+- (c) Ship a focused 10-signal page + cross-link to sister. PICKED.
+- (d) Spanish version simultaneously. Rejected — separate non-trivial bet, premature before English version proves citation eligibility.
+
+**Confidence: 70%.** Same as sister-page bet — same data quality, same playbook compliance, same fundamental thesis on ChatGPT-citation eligibility. Slight upside vs sister: this page has stronger funnel alignment with our existing OpenClaw blog content + /openclaw-cost-calculator free tool.
+
+**Decision: GO.** Live at HTTP 200. IndexNow submitted (HTTP 202). Sitemap entry priority 0.9 weekly.
+
+**Auditable outcome by:** 2026-05-21 (T+14 days).
+- ✅ if BOTH pages indexed in GSC by May 14 AND ≥1 ChatGPT-citation visit (utm_source=chatgpt.com) on EITHER page by May 21
+- 🟡 partial if only one indexes; iterate the laggard
+- ❌ kill the laggard (consolidate into the survivor) if not indexed by May 21
+
+**Lessons committed to capture by May 21:**
+- Whether 2 sister pages compound or cannibalize each other in citation signal
+- Whether OpenClaw name-check in the page funnels traffic to /blog/openclaw-setup-guide-2026
+- First-mover advantage on a brand-new search cluster (agentic commerce) — measure days-to-first-citation
