@@ -224,7 +224,7 @@ def diff(prev: dict | None, cur: dict) -> list[str]:
     if c_subs > p_subs:
         deltas.append(f"📧 NEW SUB(S) — {c_subs - p_subs} new ({p_subs} → {c_subs})")
     elif c_subs < p_subs and c_subs >= 0 and p_subs >= 0:
-        deltas.append(f"⚠️ sub count dropped: {p_subs} → {c_subs} (jsonblob may have evicted)")
+        deltas.append(f"⚠️ sub count dropped: {p_subs} → {c_subs} (storage backend may have evicted — check gist b460cc98)")
 
     # Uptime
     p_up = prev.get("uptime", {}) or {}
