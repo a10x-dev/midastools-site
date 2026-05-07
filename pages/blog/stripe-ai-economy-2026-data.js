@@ -313,10 +313,14 @@ export default function StripeAIEconomy2026() {
           For solo operators, this is the next leverage step beyond #14 and #15. Today the
           solopreneur orchestrates agents manually. In the agent-economy phase, agents
           orchestrate each other across firm boundaries — and the Stripe payments rail becomes
-          the way agents exchange value. We'll write a dedicated page when concrete numbers
-          land. For now, the practical move is the same as before: build your one-person
-          operating system around AI tools you understand deeply, so you're ready to plug into
-          the agent economy as it materializes.
+          the way agents exchange value.
+        </p>
+        <p style={{ fontSize: '1rem', lineHeight: 1.65, marginBottom: 16 }}>
+          The concrete numbers and demos already landed. We covered them in our companion
+          piece: <Link href="/blog/agentic-commerce-stripe-2026" style={{ color: '#3B5FFF' }}>Agentic Commerce Is Here — 10 Signals From Stripe Sessions 2026</Link> walks through the Alpha Vantage $0.04 stablecoin demo, Tempo CLI, OpenClaw,
+          and the 10x growth in agent traffic to Stripe documentation. The practical move
+          remains the same: build your one-person operating system around AI tools you
+          understand deeply, so you're ready to plug into the agent economy as it materializes.
         </p>
 
         <div style={{ marginTop: 40, padding: '32px', background: '#111827', color: '#FFFFFF', borderRadius: 16 }}>
