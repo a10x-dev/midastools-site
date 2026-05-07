@@ -398,6 +398,7 @@ export default function StripeAIEconomy2026() {
           <li><Link href="/blog/ramp-ai-adoption-playbook-2026" style={{ color: '#3B5FFF' }}>Ramp's 99.5% AI adoption playbook</Link> — the Solow-paradox solution in practice at a real fintech.</li>
           <li><Link href="/blog/best-ai-tools-may-2026" style={{ color: '#3B5FFF' }}>10 best AI tools to try in May 2026</Link> — the exact tool stack powering these numbers.</li>
           <li><Link href="/blog/claude-opus-4-7-prompts-guide-2026" style={{ color: '#3B5FFF' }}>Claude Opus 4.7 prompts guide</Link> — workflow-rebuild templates for the strongest reasoning model.</li>
+          <li><Link href="/blog/anthropic-spacex-claude-higher-limits-may-2026" style={{ color: '#3B5FFF' }}>Anthropic + SpaceX: Claude&rsquo;s new higher limits</Link> — May 6, 2026 announcement (Colossus 1 deal, doubled Claude Code limits, Opus API ceilings raised).</li>
           <li><Link href="/ai-audit" style={{ color: '#3B5FFF' }}>AI Clarity Assessment ($997)</Link> — done-for-you workflow rebuild for solo operators serious about the Solow gap.</li>
         </ul>
 

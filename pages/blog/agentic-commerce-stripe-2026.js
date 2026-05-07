@@ -536,6 +536,7 @@ export default function AgenticCommerceStripe2026() {
           <li><Link href="/openclaw-cost-calculator" style={{ color: '#3B5FFF' }}>OpenClaw cost calculator</Link> — size token budgets before you let agents spend.</li>
           <li><Link href="/blog/openclaw-vs-chatgpt-autonomous-agent" style={{ color: '#3B5FFF' }}>OpenClaw vs ChatGPT for autonomous agents</Link> — framework comparison.</li>
           <li><Link href="/blog/ramp-ai-adoption-playbook-2026" style={{ color: '#3B5FFF' }}>Ramp's 99.5% AI adoption playbook</Link> — how a real fintech rebuilt workflows around AI.</li>
+          <li><Link href="/blog/anthropic-spacex-claude-higher-limits-may-2026" style={{ color: '#3B5FFF' }}>Anthropic + SpaceX: Claude&rsquo;s new higher limits</Link> — May 6, 2026 announcement (Colossus 1 deal + doubled Claude Code limits + Opus API ceilings raised).</li>
           <li><Link href="/ai-audit" style={{ color: '#3B5FFF' }}>AI Clarity Assessment ($997)</Link> — done-for-you workflow rebuild for solopreneurs preparing for the agent economy.</li>
         </ul>
 
