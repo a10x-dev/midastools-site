@@ -6,8 +6,8 @@ const STRIPE_BUNDLE = 'https://buy.stripe.com/8x25kCccv4aJ3ys0pscMM0q';
 const STRIPE_MEGA_PACK = 'https://buy.stripe.com/4gMbJ0dgz4aJ1qkb46cMM0d';
 
 export default function AgenticCommerceStripe2026() {
-  const title = "Agentic Commerce Is Here: 10 Signals From Stripe Sessions 2026 (Tempo CLI, OpenClaw, Alpha Vantage Demo)";
-  const description = "John Collison: 'Agentic commerce is here.' Stripe Sessions 2026 disclosed agent traffic to Stripe docs grew 10x in 2025, demoed an agent buying Alpha Vantage data for $0.04 in Tempo CLI stablecoin, and named OpenClaw as a leading autonomous-agent framework. The 10 signals + what to ship now.";
+  const title = "Agentic Commerce Is Here: 15 Signals From Stripe Sessions 2026 (MPP, Tempo CLI, OpenClaw, Streaming Payments)";
+  const description = "John Collison: 'Agentic commerce is here.' Stripe Sessions 2026 unveiled the Machine Payments Protocol (MPP), demoed the world's first streaming payments business with sub-cent micropayments via Metronome + Tempo + stablecoins, named OpenClaw as a leading agent framework, and showed an agent buying Alpha Vantage data for $0.04. The 15 signals + what to ship now.";
   const url = 'https://www.midastools.co/blog/agentic-commerce-stripe-2026';
   const datePublished = '2026-05-07';
   const dateModified = '2026-05-07';
@@ -82,6 +82,41 @@ export default function AgenticCommerceStripe2026() {
       claim: "Stripe's framing: the data points covered in our companion piece — 575% YoY AI-co growth, $371/mo top consumer wallet, 5,000 solopreneurs/M Americans on Atlas — all assumed humans were the transacting parties. The strongest forward signal at Stripe Sessions 2026 was the shift to agents as market participants. Agents that discover services. Agents that integrate software. Agents that handle payments. Agents that buy from and sell to other agents.",
       why: "If the human-to-AI economy is already 17x faster than the global economy, the agent-to-agent economy could compound on top of that. Stripe is positioning to be the rails. The same way Stripe became the payments backbone for human-to-human SaaS in 2010-2020, it's now positioning to be the backbone for agent-to-agent commerce in 2026-2030.",
       action: "Read our companion piece <a href=\"/blog/stripe-ai-economy-2026-data\">Stripe's AI Economy Data 2026 — 15 Numbers</a> for the human-economy baseline. Then plan your product's agent-readability layer (machine-readable pricing, per-call APIs, instruction files) before competitors do."
+    },
+    {
+      n: 11,
+      headline: "MPP (Machine Payments Protocol) lets agents discover payments with zero configuration",
+      claim: "Will Gaybrick demoed the Machine Payments Protocol — MPP — at Stripe Sessions 2026. He told an agent nothing about payments. While executing the assigned task, the agent automatically discovered that the app used MPP and independently completed a $2 payment. The human pressed exactly one fingerprint authorization. Developers do not need to write separate payment logic for agents — agents find it themselves.",
+      why: "MPP is to agentic commerce what HTTP was to the human web: a discovery and handshake protocol that lets two parties transact without prior integration. Zero-config discoverability is the missing piece between 'agents can act' and 'agents can transact at scale.' If MPP becomes a standard, every product on the internet inherits agent-purchasability without rebuilding its checkout.",
+      action: "Track MPP spec progress as a top-3 product priority through 2026. When the spec is public, audit your paid products for MPP-discoverability — the cost is one metadata block on a product page; the upside is being agent-purchasable on day one of the protocol going live."
+    },
+    {
+      n: 12,
+      headline: "Streaming payments — sub-cent micropayments via Metronome + Tempo + stablecoins",
+      claim: "Will Gaybrick combined Metronome (real-time metering engine), Tempo (blockchain designed for payments), and stablecoins onstage. An application charged in real time at $3 per million tokens. Multiple agents ran simultaneously. The dashboard showed token consumption rising; stablecoin micropayments flowed in synchronously. The Tempo blockchain explorer showed a $3.30 total composed of thousands of sub-cent micropayments — each equal to one three-thousandth of a cent. Gaybrick announced this as the world's first streaming payments business.",
+      why: "Credit cards cannot do this. ACH cannot do this. UPI and Pix cannot do this. The minimum viable transaction on traditional rails is roughly $0.30 (interchange + processing). Stablecoin rails on Tempo collapse that floor by 5+ orders of magnitude — a real number, not marketing. Continuous, per-millisecond billing is now operationally possible.",
+      action: "If your product has any usage-based component (API calls, AI tokens, compute-seconds, storage-megabyte-hours), the right billing model in 2027 is per-unit streaming, not per-month subscription. Start designing pricing as if the floor is $0.0001, not $9/mo."
+    },
+    {
+      n: 13,
+      headline: "John Collison: agents resurrect micropayments because they don't carry the cognitive burden humans do",
+      claim: "John Collison's argument at Stripe Sessions 2026: micropayments have been discussed for years but never worked, because humans are not good at making extremely granular consumption decisions. Spotify replaced per-song payments with $9.99/month because no one wants to decide, every time they press play, whether a song is worth 15 cents. Agents do not carry that cognitive burden. Maia confirmed that pricing is the topic that comes up most often in conversations with AI founders about agent commerce.",
+      why: "An entire generation of failed business models — pay-per-article journalism, pay-per-API-call SaaS, pay-per-image stock photos — failed because of human cognitive friction, not because the unit economics didn't work. Agents remove the friction. Models that died in 2008-2015 may suddenly become workable when an agent is making the buy/no-buy call 1000x per second.",
+      action: "Re-examine pricing models you abandoned years ago. If the business case died because 'users don't want to think about price every time they use it,' the agent-economy version may be viable. Per-API-call is the canonical example, but it extends to per-document, per-image, per-summary."
+    },
+    {
+      n: 14,
+      headline: "Jeff Weinstein: 'Think of an agent as the best programmer you know'",
+      claim: "Jeff Weinstein (Stripe product leader) on how merchants should treat agent customers: think of an agent as the best programmer you know. Agents want perfect information, structured formats, fast readability, and all the context required for decision-making. Human consumers like beautiful images and smooth animations. Agents want raw structured data, precise logistics information, and the ability to complete a transaction in as few steps as possible.",
+      why: "Most product pages on the internet are optimized for human eyes — hero images, story-driven copy, social proof, friction-laden checkout. Those features are noise to an agent customer. The merchant who wins the agent buyer is the merchant whose product page feels like an API response: structured pricing, structured terms, structured logistics, minimum-step purchase path.",
+      action: "Add a Schema.org Offer block (or an explicit JSON pricing endpoint) to every paid product page on your site. Make the license terms machine-parseable. Reduce purchase steps to <=2 clicks. The 'aesthetic' page can stay; the structured data is what an agent reads."
+    },
+    {
+      n: 15,
+      headline: "Ginger Baker (Meta VP Product): 'Payment will move from a moment to a strategy'",
+      claim: "Ginger Baker, Meta's Vice President of Product, summarized the shift at Stripe Sessions 2026: payment will move from a 'moment' to a 'strategy.' A human consumer's purchase is discrete — walk to the cashier, swipe the card, transaction done. Agent consumption is continuous. You set rules — 'spend no more than $50 on groceries this week,' 'always prioritize this card,' 'never authorize anything above $500 automatically' — and the agent spends autonomously within that authorization framework.",
+      why: "This reframes the customer-experience surface area entirely. The 'checkout flow' as a single moment becomes obsolete. The new surface is a rule-builder UI — you configure spending policies once, and the agent executes them across thousands of micro-transactions. The next generation of payment products won't compete on checkout aesthetics; they'll compete on policy expressiveness and audit clarity.",
+      action: "If you're a buyer (not a merchant) — start treating your payment relationships as standing strategies, not one-off events. List the categories where you spend repeatedly (SaaS, infra, supplies) and write spending rules for each. The agent-controlled future will reward whoever has the cleanest rules."
     }
   ];
 
@@ -151,7 +186,31 @@ export default function AgenticCommerceStripe2026() {
         name: "How should solopreneurs prepare for agentic commerce?",
         acceptedAnswer: {
           '@type': 'Answer',
-          text: "(1) Make products agent-discoverable: clear API or per-call pricing, machine-readable license, instruction file. (2) Audit documentation for agent-readability — agents read API docs at 10x growth in 2025. (3) Consider micropayment-priced offers ($0.01-$1.00 per call) alongside subscription models. (4) Speed to first agent-completed transaction matters more than catalog breadth — the first agent to close the loop becomes the user's default purchasing surface."
+          text: "(1) Make products agent-discoverable: clear API or per-call pricing, machine-readable license, instruction file. (2) Audit documentation for agent-readability — agents read API docs at 10x growth in 2025. (3) Consider micropayment-priced offers ($0.01-$1.00 per call) alongside subscription models. (4) Speed to first agent-completed transaction matters more than catalog breadth — the first agent to close the loop becomes the user's default purchasing surface. (5) Track Machine Payments Protocol (MPP) spec progress and add MPP-discoverability metadata to paid products as soon as the spec is public."
+        }
+      },
+      {
+        '@type': 'Question',
+        name: 'What is Machine Payments Protocol (MPP)?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: "Machine Payments Protocol (MPP) is the agent-to-merchant payment discovery protocol Stripe demoed at Sessions 2026. The core design: an agent with no payment configuration can autonomously discover that an app uses MPP and complete a payment. Will Gaybrick demoed an agent making a $2 payment with only one fingerprint authorization from the user. MPP's significance is zero-config discoverability — developers don't need to write separate payment logic for agents."
+        }
+      },
+      {
+        '@type': 'Question',
+        name: 'What are streaming payments, and why are credit cards unable to do them?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: "Streaming payments are continuous, sub-cent-per-event micropayments. At Stripe Sessions 2026, Will Gaybrick demoed a $3.30 payment composed of thousands of sub-cent micropayments — each equal to one three-thousandth of a cent — billed in real time as agents consumed AI tokens at $3 per million tokens. Credit cards, ACH, UPI, and Pix cannot do this because their per-transaction overhead exceeds the transaction value. Stablecoin rails on Tempo collapse that floor by 5+ orders of magnitude."
+        }
+      },
+      {
+        '@type': 'Question',
+        name: 'Why will agents make micropayments work when humans never did?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: "John Collison argued at Stripe Sessions 2026 that micropayments failed historically because humans aren't good at granular consumption decisions — Spotify replaced per-song payments with $9.99/mo because no one wants to evaluate whether a song is worth 15 cents on every play. Agents don't carry that cognitive burden. They can make 1000 buy/no-buy decisions per second within rule-based budgets. Failed business models like pay-per-article journalism, pay-per-API-call SaaS, and pay-per-image stock photography may suddenly become viable in agent-to-agent commerce."
         }
       }
     ]
@@ -181,7 +240,7 @@ export default function AgenticCommerceStripe2026() {
           Published May 7, 2026 · Updated May 7, 2026 · 10-min read
         </p>
         <h1 style={{ fontSize: '2rem', fontWeight: 800, lineHeight: 1.2, marginBottom: 16, letterSpacing: '-0.02em' }}>
-          Agentic Commerce Is Here: 10 Signals From Stripe Sessions 2026
+          Agentic Commerce Is Here: 15 Signals From Stripe Sessions 2026
         </h1>
         <p style={{ fontSize: '1.05rem', color: '#374151', lineHeight: 1.6, marginBottom: 24 }}>
           <strong>"Agentic commerce is here."</strong> John Collison said it on the second-day
@@ -190,11 +249,14 @@ export default function AgenticCommerceStripe2026() {
           agent-purchasable. End-to-end, in minutes. Both buyer and seller.
         </p>
         <p style={{ fontSize: '0.95rem', color: '#6B7280', lineHeight: 1.6, marginBottom: 32, padding: '14px 16px', borderLeft: '3px solid #3B5FFF', background: '#F4F6FB', borderRadius: 6 }}>
-          Below are the 10 most concrete signals that the agent economy crossed from
-          speculation into shipping product at Stripe Sessions 2026 — the Alpha Vantage demo,
-          Tempo CLI stablecoin rails, the 10x growth in agent traffic to Stripe docs, the
-          OpenClaw framework name-check, and Will Gaybrick's API review demo. For the
-          human-economy baseline these signals build on, see our companion piece <Link href="/blog/stripe-ai-economy-2026-data" style={{ color: '#3B5FFF' }}>Stripe's AI Economy Data 2026 — 15 Numbers That Reframe Every Strategy Deck</Link>.
+          Below are the 15 most concrete signals that the agent economy crossed from
+          speculation into shipping product at Stripe Sessions 2026 — the Machine Payments
+          Protocol (MPP) for zero-config payment discovery, the world's first streaming
+          payments business via Metronome + Tempo + stablecoins, the Alpha Vantage $0.04
+          stablecoin demo, the 10x growth in agent traffic to Stripe docs, the OpenClaw
+          framework name-check, the micropayments-resurrection thesis, and the executive
+          framings from Jeff Weinstein and Ginger Baker. For the human-economy baseline these
+          signals build on, see our companion piece <Link href="/blog/stripe-ai-economy-2026-data" style={{ color: '#3B5FFF' }}>Stripe's AI Economy Data 2026 — 15 Numbers That Reframe Every Strategy Deck</Link>.
         </p>
 
         <hr style={{ margin: '32px 0', border: 'none', borderTop: '1px solid #E5E7EB' }} />
@@ -220,13 +282,14 @@ export default function AgenticCommerceStripe2026() {
         <hr style={{ margin: '40px 0', border: 'none', borderTop: '1px solid #E5E7EB' }} />
 
         <h2 style={{ fontSize: '1.5rem', fontWeight: 700, marginTop: 32, marginBottom: 16 }}>
-          The 4 things solopreneurs should ship this quarter
+          The 5 things solopreneurs should ship this quarter
         </h2>
         <ol style={{ fontSize: '1rem', lineHeight: 1.7, color: '#374151', paddingLeft: 24 }}>
           <li style={{ marginBottom: 12 }}><strong>Per-task pricing alongside subscriptions.</strong> Today most B2B services price hourly or per-month. By Q4 2026 the agent-discoverable per-task offer will be the default. List one offer with a fixed price + clear deliverable.</li>
-          <li style={{ marginBottom: 12 }}><strong>Machine-readable price + license metadata.</strong> Add structured data (Schema.org Offer, JSON pricing endpoint) to every paid product page so agents can parse it. The Alpha Vantage dataset got bought because its license terms were machine-readable.</li>
+          <li style={{ marginBottom: 12 }}><strong>Machine-readable price + license metadata.</strong> Add structured data (Schema.org Offer, JSON pricing endpoint) to every paid product page so agents can parse it. The Alpha Vantage dataset got bought because its license terms were machine-readable. Once MPP ships, this metadata is what makes you agent-discoverable.</li>
           <li style={{ marginBottom: 12 }}><strong>API or CLI surface for your product.</strong> Even if your product is currently UI-first, ship a thin API layer. Agents will use the API; humans will use the UI. Both audiences matter now.</li>
-          <li style={{ marginBottom: 12 }}><strong>Documentation rewrite for agent readers.</strong> Agent traffic to Stripe docs grew 10x in 2025. The same is going to happen to your product docs. Audit for clarity, structured examples, and explicit error semantics.</li>
+          <li style={{ marginBottom: 12 }}><strong>Documentation rewrite for agent readers.</strong> Agent traffic to Stripe docs grew 10x in 2025. The same is going to happen to your product docs. Audit for clarity, structured examples, and explicit error semantics — Jeff Weinstein's "treat the agent like the best programmer you know" framing.</li>
+          <li style={{ marginBottom: 12 }}><strong>Sub-dollar pricing tier alongside your main offer.</strong> Streaming payments at sub-cent unit cost are now operationally possible on Tempo + stablecoins. Even if you keep your $29 or $97 SKU, design at least one $0.01-$1.00 per-call offer for agent-economy distribution.</li>
         </ol>
 
         <div style={{ marginTop: 40, padding: '32px', background: '#111827', color: '#FFFFFF', borderRadius: 16 }}>
@@ -272,8 +335,12 @@ export default function AgenticCommerceStripe2026() {
           Sources & related reading
         </h2>
         <ul style={{ fontSize: '0.95rem', lineHeight: 1.7, color: '#374151', paddingLeft: 20 }}>
-          <li>Stripe Sessions 2026 (May 2026) — primary source: John Collison's "agentic commerce is here" demo, Will Gaybrick's CLI usage data + API review demo, Maia's docs-traffic 10x figure.</li>
-          <li>Tempo CLI (Stripe, 2026) — agent-native stablecoin payment rails referenced in the Alpha Vantage demo.</li>
+          <li>Stripe Sessions 2026 (May 2026) — primary source: John Collison's "agentic commerce is here" demo, Will Gaybrick's CLI usage data + API review demo + MPP demo + streaming-payments demo, Maia's docs-traffic 10x figure + agent-commerce pricing observation.</li>
+          <li>Machine Payments Protocol (MPP) — Stripe's zero-config agent-discoverable payment protocol, demoed by Will Gaybrick at Sessions 2026.</li>
+          <li>Tempo CLI + Tempo blockchain (Stripe, 2026) — agent-native stablecoin payment rails referenced in the Alpha Vantage and streaming-payments demos.</li>
+          <li>Metronome (real-time metering engine) — combined with Tempo and stablecoins to power the world's first streaming payments business at Sessions 2026.</li>
+          <li>Jeff Weinstein (Stripe product leader) interview at Sessions 2026 — "treat the agent as the best programmer you know" framing for merchants.</li>
+          <li>Ginger Baker (Meta VP Product) at Sessions 2026 — "payment will move from a moment to a strategy" framing for buyers.</li>
           <li>OpenClaw open-source autonomous agent framework — name-checked at Stripe Sessions 2026 as a leading agent-orchestration tool.</li>
           <li>Alpha Vantage energy market dataset — the $0.04 purchase that closed the agent-as-buyer-and-seller loop on stage.</li>
           <li><Link href="/blog/stripe-ai-economy-2026-data" style={{ color: '#3B5FFF' }}>Stripe's AI Economy Data 2026 — 15 Numbers</Link> — the human-economy baseline these agent-commerce signals build on.</li>
