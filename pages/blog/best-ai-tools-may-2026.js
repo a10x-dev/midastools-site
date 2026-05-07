@@ -225,6 +225,9 @@ export default function BestAIToolsMay2026() {
           Last updated May 6, 2026. We refresh this list every month. Bookmark and check back —
           or subscribe via the homepage to get monthly updates.
         </p>
+        <p style={{ marginTop: 16, fontSize: 14, color: '#6B7280', lineHeight: 1.6, textAlign: 'center' }}>
+          For the macro view of how fast these tools are growing, see <Link href="/blog/stripe-ai-economy-2026-data" style={{ color: '#3B5FFF' }}>Stripe's AI economy data 2026 — 10 numbers that reframe every strategy deck</Link>.
+        </p>
       </article>
     </Layout>
   );
