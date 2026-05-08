@@ -29,6 +29,42 @@
 | 12 | ai-saas-founder-prompts-cheatsheet | gist/bc4451 |
 | 13 | claude-opus-4-7-prompts-cheatsheet | gist/ccef07 |
 
+## Session 32 (May 7, 20:45 local) — 🟢 EOD: PRE-BUILT MAY 14 DECIDE-DAY SYNTHESIS (3 EXPERIMENTS → 1 BRIEF)
+
+### Trigger
+20:45 local, EOD review slot 3:45h overdue. Session 31 fired Pham follow-up + 5 batch-1 D+2 nudges ~1h ago. 8 outreach emails now in-flight in pre-approved windows. All 4 monitors clean. Per `armando-async-asks` no Telegram ping, per `motion-vs-progress` no new content shipped, per `pre-build-while-waiting` use the dead time to compress the upcoming May 14 decide-day from a 2hr deliberate-then-build into a <30min decide.
+
+### Why this was the right move (not more outreach)
+Hunter has 40 prospect-slots remaining, but firing batch-2 the same day batch-1 D+2 nudges go out dilutes signal — can't tell which fire produced which reply. The HIGHER-leverage move was synthesizing the May 14 decision while the data-shape is fresh in working memory. Three independent acquisition experiments converge on May 14 (audit cold-outbound + customer-feedback+lookalikes + Boucher), each with separate kill criteria scattered across 4+ files. Without synthesis, May 14 starts with 30 min of file-archeology. With synthesis, May 14 starts with 4 commands + a data row + a 4-gate decision tree.
+
+### ✅ Bottleneck-direct work shipped
+1. **`.founder/plans/may14-strategic-synthesis.md`** (~10K, 230 lines) — single decide-day brief covering all 3 experiments. 4 sections: TL;DR comparison table / data inputs to collect (4 commands) / decision tree (4 branches) / pre-written recommendations per branch. Also covers what NOT to do unilaterally + what WILL do May 8-13 + confidence calibration (50% Branch 3 / 25% Branch 4 / 20% Branch 2 / 5% Branch 1 — i.e. most likely Boucher-incomplete-extend-to-May-22, second-most-likely all-dead-pivot-to-P4-hero-rewrite).
+2. **`.founder/SCHEDULE.md`** — both May 14 entries rewritten as DECIDE-DAY commands pointing at the synthesis. Entry 1 says "Read synthesis (8 min) + run 4 data commands (5 min) + decision tree picks branch automatically." Entry 2 says the customer-acquisition kill-or-iterate is now consolidated into Branch 4 P1-P4.
+3. **`.founder/sales/audit-replies-tracker.md`** — May 10 decision-data section superseded with pointer to the synthesis (eliminates the orphan section that would have caused confusion next session).
+
+### Pre-built decision branches (so May 14 = decide not draft)
+- **Branch 1 (≥1 sale)**: triple down on winner, kill other two, drop bottleneck severity 6→4. Pre-built artifacts ready per channel.
+- **Branch 2 (reply but no sale)**: ad-hoc personalized follow-up within 24h, single offer adjustment within 7d, re-evaluate May 28.
+- **Branch 3 (Boucher incomplete)**: kill A+B, extend C to May 22 per existing schedule, use 8-day window to pre-build P1-P4 specs.
+- **Branch 4 (all dead)**: pick ONE pivot path (P1 $1,499 reposition / P2 in-product CTA / P3 OpenClaw double-down / P4 hero copy rewrite). Recommendation: P4 first (cheapest + falsifiable in 14d).
+
+### Honest accounting
+**Direct KPI movement: zero.** No new sales, no new replies, no new subs. **Indirect: HIGH.** May 14 decide-day effort dropped from ~2hr (re-read 4 files + write decision tree from scratch + draft branch recommendations) to ~30min (read synthesis + run 4 commands + pick branch). Compounding pattern that worked Sessions 27-30 for Boucher applied to the May 14 strategic call instead of yet another sub-experiment pre-build. Per `execution-prep-counter`: Sessions 27-30 saturated Boucher pre-build at 4 sessions; this session opens a NEW pre-build target (May 14 decision-day) at 1 of allowed 3.
+
+### What I did NOT do (deliberately)
+- Did NOT fire batch-2 cold prospects despite Hunter capacity. Same-day-as-D+2-nudge dilutes signal.
+- Did NOT pre-build P1-P4 pivot specs in detail. Branch 4 is 25% probable; pre-building all 4 paths is wasted prep at this odds. P4 (hero rewrite) is the one I'd pre-build IF Branch 3 fires (8-day window) and probability shifts.
+- Did NOT Telegram Armando the synthesis. He'll be in next session naturally; saving for face-to-face. Per `armando-async-asks`, async strategic briefs go unread.
+- Did NOT touch the 5-broken-SKU decision (`3400b90c`). Strategic call belongs to Armando.
+
+### Confidence
+80% — synthesis covers all 3 known experiments + 4 exhaustive branches + pre-written actions per branch. Lower than 85% because: (a) confidence in branch probabilities (50/25/20/5) carries inherited estimation risk, (b) Branch 1 happy-path artifacts depend on which channel won — if customer-feedback wins, Plan B linkedin-spec needs a fresh round of personalization not yet pre-built, (c) Branch 4 P1-P4 pivots are listed but not pre-built (deliberately, given low probability).
+
+### NEXT_CHECKIN expectation
+Tomorrow morning standup (May 8 09:00 local) — read replies + monitor 3 signal sources + check Boucher greenlight. If greenlit, fire pitch (single command). If 9 May escalate via Telegram per existing entry.
+
+---
+
 ## Session 31 (May 7, 19:23 local) — 🟢 PHAM FOLLOW-UP FIRED + DAILY MONITORS CLEAN
 
 ### Trigger

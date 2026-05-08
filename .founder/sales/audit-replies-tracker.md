@@ -59,9 +59,6 @@
 - 4-hr deliverable window: B-type replies get the mini-assessment PDF in inbox within 4 hours of inbox arrival
 - Misses get logged with the reason in the outcome column. No backdating. Honest accounting > face-saving.
 
-## May 10 decision data
+## May 10 decision data — SUPERSEDED
 
-If reply-counts at May 10 09:00 local are:
-- ≥1 paid sale → continue audit lever, expand cold-outbound to find more like them
-- 1+ B-type sample requested but no sale → pivot positioning around what that prospect said
-- 0 replies of any type → execute Plan A ($297 mini-audit, spec at `.founder/plans/297-mini-audit-spec.md`)
+The May 10 decision was pushed to May 14 (Session 25 finding — follow-ups fired May 7-8 not May 6, statistical premature). On May 7 20:45 local, **Session 32 produced `.founder/plans/may14-strategic-synthesis.md`** which CONSOLIDATES this audit decision with the parallel customer-acquisition-strategy kill-or-iterate into a single decide-day synthesis. The synthesis covers all 3 acquisition experiments (audit / customer-feedback+cold-lookalike / Boucher) in one frame with 4 pre-written branch recommendations. Read that file May 14 09:00.
