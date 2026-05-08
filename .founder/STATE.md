@@ -29,6 +29,38 @@
 | 12 | ai-saas-founder-prompts-cheatsheet | gist/bc4451 |
 | 13 | claude-opus-4-7-prompts-cheatsheet | gist/ccef07 |
 
+## Session 37 (May 8, 14:00 local / 20:00 UTC) — 🟢 CAUGHT FALSE-POSITIVE PING IN METRICS-SNAPSHOT, HARDENED IT (commit a19e474 pushed)
+
+### Trigger
+User prompt at 14:00 local, ~75 min after Session 36 closed. Asked "what needs to happen next?" — open-ended. Per `pre-build-saturation-detector` + Session 36's lesson that scoped plan-agnostic ship-today fixes are the right work even mid-saturation, ran a fresh monitor sweep first to honestly verify nothing changed.
+
+### What I found (real signal)
+4-monitor sweep: `read-replies` clean / `audit-signal` clean / `partner-signal` clean / `metrics-snapshot` flagged **NEW SUB(S) — 1 new (20 → 21)** + "PING-WORTHY: yes — Slack Armando".
+
+**False positive.** Cross-checked the gist truth-source: 20 subs, latest entry juan.dylan dated 2026-04-17 — no new entries. Re-ran metrics-snapshot 50 sec later: count back to 20 with "sub count dropped: 21 → 20". The /api/status endpoint had flickered (FALLBACK_SUBSCRIBERS race or Vercel edge cache cycle, consistent with Session 153's documented orphan-blob architecture). Without the cross-check I would have Slack-pinged Armando about a phantom signup.
+
+### ✅ Bottleneck-direct work shipped (commit a19e474, pushed)
+**`.founder/tools/metrics-snapshot.py`** hardened: when fetching sub count from /api/status, also fetches gist b460cc98 directly via the GitHub API (using `.founder/.gh_gist_token` if present). Gist count wins as authoritative. /api/status vs gist discrepancy is exposed in the printed output as a `⚠️` line so future debugging is one glance. 51 insertions / 4 deletions. Verified with `--dry`: clean 20 / no false alert.
+
+**Why this is bottleneck-direct, not saturation:** Same pattern as Session 36's webhook fix — addresses a CONFLICTING-SIGNAL bug between two parts of the system (here: /api/status flicker vs gist truth). Fixes it with a scoped, reversible, ship-today change. Doesn't prejudge any May 14 strategic call. The cost of NOT fixing this: every future async-wait window (we have many: Boucher, audit-replies, batch-1) accumulates false-positive ping risk that erodes alert trust. The fix is a one-time cost; the bug compounds.
+
+### What I did NOT do (deliberately)
+- Did NOT append data-trail row 5 to may14 synthesis. Session 36 already added row 4 75 min ago; row 5 at +1.25h is data noise, not trajectory data.
+- Did NOT escalate Boucher greenlight via Telegram. May 9 trigger date, not May 8 (still today).
+- Did NOT pre-build any new artifacts. Saturated per Session 33's reasoning.
+- Did NOT TELEGRAM_SEND about the false alarm. Armando never saw the alert because the cron didn't run between Session 36 and now — pinging him to say "I prevented an alert you never received" is noise.
+
+### Honest accounting
+**Direct KPI movement: zero.** **Indirect: medium-low.** The fix prevents future false alarms during async-wait windows where we expect 8+ in-flight reply windows over the next 6 days. If the cron had been running on hourly cadence and hit this same flicker, Armando would have been Slacked unnecessarily. Now that path is closed.
+
+### Confidence
+85% — fix verified by direct test (--dry shows clean 20, no false ping); cross-check logic is defensive (gist wins only when gist read succeeds, otherwise falls back to /api/status — graceful degradation). Push verified by `git push` showing 2e61816..a19e474.
+
+### NEXT_CHECKIN expectation
+Tomorrow morning standup (May 9 09:00 local). Run all 4 monitors fresh + escalate Boucher via Telegram (May 9 trigger date). Watch 8 in-flight reply windows.
+
+---
+
 ## Session 36 (May 8, 12:45 local / 18:45 UTC) — 🟢 MIDDAY STANDUP — 4TH DATA-TRAIL ROW, ALL FLAT, T-6D TO DECIDE-DAY
 
 ### Trigger
