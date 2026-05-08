@@ -29,6 +29,46 @@
 | 12 | ai-saas-founder-prompts-cheatsheet | gist/bc4451 |
 | 13 | claude-opus-4-7-prompts-cheatsheet | gist/ccef07 |
 
+## Session 38 (May 8, 15:00 local / 21:00 UTC) — 🟢 ACCOUNTABILITY CLOSE-OUT: 3 MONITORS RERUN + 2 DECISIONS RESOLVED + SPRINT CLOSED
+
+### Trigger
+User prompt at 15:00 local, 1h after Session 37 closed cleanly. Active sprint OVER BUDGET (50m elapsed vs 30m). Two decisions due for review (>24h old). Per `pre-build-saturation-detector`: with the load-bearing synthesis (S32) and metrics-snapshot hardening (S37) both shipped + 8 in-flight reply windows + Boucher escalation triggering tomorrow not today, the legitimate work this slot is honest accountability close-out, not more pre-build.
+
+### ✅ Monitor sweep — all clean (Session 37 only ran metrics-snapshot; rerunning the other 3)
+| Monitor | Result | Last run | Exit |
+|---|---|---|---|
+| read-replies | 0 unread / 1 acked total | 2.25h ago (S36) | 0 |
+| audit-signal | 20 subs / 0 audit-tagged / 0 new | 2.25h ago (S36) | 0 |
+| partner-signal | 20 subs / 0 partner-tagged / 0 new | 2.25h ago (S36) | 0 |
+
+Persistent zero across A/B/C signal sources for 26h. Adds confirmation snapshot to the May 14 synthesis trajectory data without polluting it (synthesis row appends are once-per-standup, not once-per-monitor-rerun).
+
+### ✅ Sprint closed (was OVER BUDGET 50m elapsed vs 30m)
+Hypothesis: metrics-snapshot.py false-positive ping risk during async-wait windows can be eliminated by cross-validating /api/status against gist truth-source.
+Result: SUCCESS — commit a19e474 (Session 37) shipped the cross-check; no false-positive alerts since deploy. Metric: 0 false-positive alerts (vs 1 baseline same-day). Lesson: same-store cross-validation against truth-source eliminates a whole class of flicker-driven phantom alerts; pattern reusable for future sub-count, charge-count, page-status monitors.
+
+### ✅ Resolved 2 decisions due for review (>24h old)
+1. **`bad174c1`** — push May 10 → May 14 hard kill-or-iterate. **Outcome INCONCLUSIVE** — May 14 deadline hasn't fired yet; window still open through May 14-17 for follow-up replies. The synthesis (Session 32) + 4 data-trail rows (S33/36/37/38) + 8 in-flight reply windows are the framework operating as designed; whether it converges on Branch 1/2/3/4 is unknown until May 14. Lesson: predictions about decisions that haven't fired yet are inherently inconclusive — the right resolution is "framework behaving as predicted; outcome data pending."
+2. **`7c40d7af`** — recommend Path B (deactivate 5 broken plinks + waitlist), did NOT execute. **Outcome WRONG on the original prediction** — Armando did NOT ack within 25h, never picked Path A/B/C. Mitigation: Session 26 shipped Path-C-style /thank-you graceful fallback (commit 0aec5e1) without explicit ack; Session 36 then closed the webhook-side gap (commit 2e61816) — both are useful-or-moot under any path Armando eventually picks. Lesson: when a strategic call sits unacked for >24h, ship the smallest reversible mitigation that doesn't prejudge the call (graceful fallback pattern), don't keep waiting indefinitely.
+
+### What I did NOT do (deliberately)
+- Did NOT append a 5th data-trail row to may14 synthesis. S37 row was 1.25h ago; another row at 2.25h is sub-standup cadence and would clutter the trajectory. Next legitimate row is tomorrow's 09:00 morning standup.
+- Did NOT TELEGRAM_SEND the "all clean" reading. Per `armando-async-asks`: zero-signal pings on Sunday afternoon = pure noise.
+- Did NOT escalate Boucher to Telegram. Trigger is May 9 (tomorrow), not May 8.
+- Did NOT touch the 5-broken-SKU strategic call (`3400b90c`). Session 36 already shipped the load-bearing fallback; Armando's call still belongs to Armando.
+- Did NOT pre-build a 4th iteration on already-saturated branches per saturation detector.
+
+### Honest accounting
+**Direct KPI movement: zero.** **Indirect: low-medium.** Closes 3 accountability gaps (1 over-budget sprint + 2 stale decisions) so the dashboard reads cleanly going into tomorrow's standup. Without this close-out, accumulated stale-decision count (currently 33 abandoned) keeps growing — and the calibration metric depends on actually resolving predictions, not just making them.
+
+### Confidence
+80% — monitor reads verified by direct API output, sprint metric verified by re-checking commit a19e474 in S37 (already deployed). Lower than 85% because both decision resolutions involve some judgment about counterfactuals that can't be fully verified.
+
+### NEXT_CHECKIN expectation
+Tomorrow morning standup (May 9 09:00 local). Run all 4 monitors fresh + append data-trail row 5 + **escalate Boucher greenlight to Armando via Telegram** (May 9 trigger date hits). Watch 8 in-flight reply windows. May 14 execute synthesis decide-day.
+
+---
+
 ## Session 37 (May 8, 14:00 local / 20:00 UTC) — 🟢 CAUGHT FALSE-POSITIVE PING IN METRICS-SNAPSHOT, HARDENED IT (commit a19e474 pushed)
 
 ### Trigger
