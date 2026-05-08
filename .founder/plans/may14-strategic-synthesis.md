@@ -66,6 +66,22 @@ Experiment C — Boucher
 
 ---
 
+## 1.5. Pre-decision data trail (longitudinal — appended between authorship and decide-day)
+
+Per `verify-kpi-baseline-before-strategy`: snapshots at intervals between May 7 authorship and May 14 decide-day. Helps the May 14 reader see **velocity** not just point-in-time. A single snapshot can't distinguish persistent-zero from late-arriving signal.
+
+| Snapshot | Replies (A/B/C) | Audit-tagged subs | Partner-tagged subs | LTM sales | LTM revenue | Notes |
+|---|---|---|---|---|---|---|
+| May 7 21:45 (Session 33) | 0/0/n.a. | 0 | 0 | 3 | $155 | Boucher pitch ungreenlit; 8 in-flight email windows |
+| May 8 04:59 (Session 25) | 0/0/n.a. | 0 | 0 | 3 | $155 | 7h after S33; no overnight signal |
+| May 8 13:18 (Session 35) | 0/0/n.a. | 0 | 0 | 3 | $155 | 8.5h after S33; Pham follow-up at T+22h |
+
+**Pattern as of May 8:** Persistent zero across A/B (C never fired). 6 days since last paid sale (Arnaud, May 2). Velocity-of-zero is the strongest falsification signal for the audit-experiment hypothesis IF maintained through May 14. Single late-arriving reply between May 8 and May 14 would shift Branch 2 (weak signal) into play; absence locks Branch 4 unless C fires.
+
+**Append a new row at every standup between now and May 14.** If any cell flips from 0 → 1, surface immediately + re-run decision tree.
+
+---
+
 ## 2. Decision tree — which branch fires?
 
 ```
