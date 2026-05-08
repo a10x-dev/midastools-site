@@ -229,17 +229,72 @@ const KIT_MAP = {
   },
   'muse-spark': {
     name: 'Meta Muse Spark Prompt Kit',
-    file: 'muse-spark-kit.zip',
-    subject: 'Your Meta Muse Spark Prompt Kit is ready',
+    file: null,
+    manual: true,
+    subject: 'Your Meta Muse Spark Prompt Kit — delivery within 24 hours',
     items: [
-      '100+ Muse Spark prompts across 8 categories',
-      'Visual Coding prompts (landing pages, dashboards, games)',
-      'Multimodal Reasoning prompts (image analysis, data extraction)',
-      'Contemplating Mode prompts (deep analysis, financial modeling)',
-      'Multi-Agent Orchestration patterns (content pipelines, QA chains)',
-      'Platform-Specific prompts (Instagram, WhatsApp, Facebook, Ray-Ban)',
-      'Mode Selection Guide + Visual Coding Cheatsheet',
-      'Multimodal Prompt Patterns + Quick-Start Setup Guide',
+      '100+ Muse Spark prompts (8 categories)',
+      'Visual Coding prompts',
+      'Multimodal Reasoning prompts',
+      'Contemplating Mode prompts',
+      'Multi-Agent Orchestration patterns',
+      'Mode Selection Guide + Cheatsheet',
+    ],
+  },
+  'claude-code': {
+    name: 'Claude Code Mastery Kit',
+    file: null,
+    manual: true,
+    subject: 'Your Claude Code Mastery Kit — delivery within 24 hours',
+    items: [
+      'Claude Code workflow templates',
+      'Multi-file refactor prompts',
+      'Codebase onboarding sequences',
+      'Test-generation patterns',
+      'Repo-aware debugging prompts',
+      'CLI productivity setup guide',
+    ],
+  },
+  'reddit-lead-kit': {
+    name: 'Reddit Lead Generation Kit',
+    file: null,
+    manual: true,
+    subject: 'Your Reddit Lead Generation Kit — delivery within 24 hours',
+    items: [
+      'Subreddit research prompts',
+      'Comment-engagement templates',
+      'DM outreach sequences',
+      'Value-first posting frameworks',
+      'Compliance + ToS playbook',
+      'Lead-tracking spreadsheet templates',
+    ],
+  },
+  'team-adoption': {
+    name: 'AI Team Adoption Kit',
+    file: null,
+    manual: true,
+    subject: 'Your AI Team Adoption Kit — delivery within 24 hours',
+    items: [
+      'Team rollout playbook',
+      'Use-case discovery prompts',
+      'Training materials + workshop scripts',
+      'Policy + governance templates',
+      'ROI measurement framework',
+      'Change-management email sequences',
+    ],
+  },
+  'cowork-mastery': {
+    name: 'Claude Cowork Mastery Kit',
+    file: null,
+    manual: true,
+    subject: 'Your Claude Cowork Mastery Kit — delivery within 24 hours',
+    items: [
+      'Cowork session frameworks',
+      'Pair-with-Claude workflow templates',
+      'Context-handoff prompts',
+      'Multi-session continuity patterns',
+      'Project-state SOUL.md templates',
+      'Setup wizard + best-practices guide',
     ],
   },
   'bundle': {
@@ -306,6 +361,14 @@ function detectKit(session) {
     'plink_3cIaEW6SbcHfed6egicMM0c': 'small-business',
     // Bundle
     'plink_bJe7sK0tNdLjgle0pscMM0b': 'bundle',
+    // Manual-fulfillment SKUs (no ZIP yet — pending content build per Path A/B/C decision).
+    // Without these mappings, sales fall through to KIT_MAP['default'] (OpenClaw Starter)
+    // which conflicts with /thank-you's "delivery within 24h" message.
+    'plink_1TKgapAdkDx8xZMkxH6994A5': 'muse-spark',
+    'plink_1TKdTKAdkDx8xZMkd1Zjye59': 'claude-code',
+    'plink_1TKVLDAdkDx8xZMkJzKwgrfQ': 'reddit-lead-kit',
+    'plink_1TKNnAAdkDx8xZMkWZMpr8gW': 'team-adoption',
+    'plink_1TKL1LAdkDx8xZMkep0Q0e4e': 'cowork-mastery',
   };
   if (paymentLink && PAYMENT_LINK_MAP[paymentLink]) {
     return KIT_MAP[PAYMENT_LINK_MAP[paymentLink]];
@@ -354,9 +417,15 @@ async function sendDownloadEmail(customerEmail, customerName, kit) {
   const baseUrl = 'https://www.midastools.co';
   const isBundle = kit.file === null && Array.isArray(kit.files);
   const isWebDelivery = kit.file === null && kit.deliveryUrl;
+  const isManual = kit.file === null && kit.manual === true;
 
   let downloadSection;
-  if (isWebDelivery) {
+  if (isManual) {
+    downloadSection = `<div style="background:#FFF7ED;border:1px solid #FDBA74;border-radius:12px;padding:20px;margin-bottom:32px;">
+        <p style="color:#9A3412;font-size:15px;font-weight:700;margin:0 0 8px;">Your kit is being personalized</p>
+        <p style="color:#7C2D12;font-size:14px;margin:0;line-height:1.5;">We'll deliver your kit by reply email within 24 hours. Reply to this email if you have any questions or special requests.</p>
+      </div>`;
+  } else if (isWebDelivery) {
     downloadSection = `<a href="${kit.deliveryUrl}" style="display:inline-block;background:#D97706;color:#FFFFFF;padding:16px 32px;border-radius:10px;font-weight:800;font-size:16px;text-decoration:none;margin-bottom:32px;">
         → Open Your Prompt Pack
       </a>

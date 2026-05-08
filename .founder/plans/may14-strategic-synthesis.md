@@ -75,8 +75,9 @@ Per `verify-kpi-baseline-before-strategy`: snapshots at intervals between May 7 
 | May 7 21:45 (Session 33) | 0/0/n.a. | 0 | 0 | 3 | $155 | Boucher pitch ungreenlit; 8 in-flight email windows |
 | May 8 04:59 (Session 25) | 0/0/n.a. | 0 | 0 | 3 | $155 | 7h after S33; no overnight signal |
 | May 8 13:18 (Session 35) | 0/0/n.a. | 0 | 0 | 3 | $155 | 8.5h after S33; Pham follow-up at T+22h |
+| May 8 18:45 UTC / 12:45 local (Session 36) | 0/0/n.a. | 0 | 0 | 3 | $155 | 21h after S33; T-6d to decide-day; Boucher still ungreenlit; batch-1 D+2 nudges sent yesterday now at T+~24h with 0 replies |
 
-**Pattern as of May 8:** Persistent zero across A/B (C never fired). 6 days since last paid sale (Arnaud, May 2). Velocity-of-zero is the strongest falsification signal for the audit-experiment hypothesis IF maintained through May 14. Single late-arriving reply between May 8 and May 14 would shift Branch 2 (weak signal) into play; absence locks Branch 4 unless C fires.
+**Pattern as of May 8 12:45 local (T-6d):** Persistent zero across A/B/C/D — 4 consecutive snapshots over 21h. Total reply windows now in-flight: 8 (Pham audit follow-up, 5 batch-1 D+2 nudges Donnie/Frank/Kris/Alexander/Brian, 2 audit follow-ups Hiedeh/Doug). 6 days since last paid sale (Arnaud, May 2). The longer this flat-line holds, the more decisive Branch 4 becomes. **One reply between now and May 14 = Branch 2; zero = Branch 4 unless Boucher fires.**
 
 **Append a new row at every standup between now and May 14.** If any cell flips from 0 → 1, surface immediately + re-run decision tree.
 

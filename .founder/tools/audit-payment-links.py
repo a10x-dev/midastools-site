@@ -42,6 +42,7 @@ KNOWN_KITS = {
     "prompt-mega-pack", "ecommerce", "saas-founder", "notion-templates",
     "video-prompt-pack", "image-prompt-pack", "resume-career-kit",
     "social-media-kit", "email-marketing-kit", "presentation-kit", "bundle",
+    "muse-spark", "claude-code", "reddit-lead-kit", "team-adoption", "cowork-mastery",
 }
 
 # Brands that legitimately redirect off-domain — do NOT flag as broken.
