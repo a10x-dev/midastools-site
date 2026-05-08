@@ -41,6 +41,12 @@ LAST_SNAP = STATE_DIR / "metrics-last.json"
 CUR_SNAP = STATE_DIR / "metrics-current.json"
 
 STATUS_URL = "https://www.midastools.co/api/status?key=mt-outreach-2026"
+# Truth-source for sub count (per Session 25 storage migration). When /api/status
+# disagrees with this gist, the gist wins — /api/status is subject to fallback +
+# edge-cache flicker that produced false +1/-1 alerts (Session 37, May 8 2026).
+SUBS_GIST_ID = "b460cc98bbc21692f1f209e852c551b5"
+SUBS_GIST_URL = f"https://api.github.com/gists/{SUBS_GIST_ID}"
+GH_TOKEN_FILE = ROOT / ".gh_gist_token"
 UPTIME_PAGES = [
     "https://www.midastools.co/",
     "https://www.midastools.co/tools",
@@ -157,8 +163,35 @@ def fetch_stripe_24h() -> dict:
     return out
 
 
+def fetch_subs_gist_count() -> int:
+    """Fetch the truth-source sub count from gist b460cc98 (Session 25 migration).
+
+    Returns -1 on error. Used to cross-validate /api/status flicker.
+    """
+    try:
+        headers = {"User-Agent": "midastools-metrics/1.0"}
+        if GH_TOKEN_FILE.exists():
+            headers["Authorization"] = f"token {GH_TOKEN_FILE.read_text().strip()}"
+        req = urllib.request.Request(SUBS_GIST_URL, headers=headers)
+        with urllib.request.urlopen(req, timeout=10) as r:
+            data = json.loads(r.read())
+        files = data.get("files") or {}
+        if not files:
+            return -1
+        content = list(files.values())[0].get("content", "{}")
+        subs = json.loads(content).get("subscribers", [])
+        return len(subs)
+    except Exception:
+        return -1
+
+
 def fetch_subs() -> dict:
-    """Hit /api/status, extract nested metrics.subscribers + recent emails."""
+    """Hit /api/status, extract nested metrics.subscribers + recent emails.
+
+    Cross-validates against gist truth-source — /api/status is prone to flicker
+    due to FALLBACK_SUBSCRIBERS race + Vercel edge cache (Session 37 incident).
+    When the two disagree, the gist count wins and we record the discrepancy.
+    """
     try:
         req = urllib.request.Request(
             STATUS_URL,
@@ -168,12 +201,23 @@ def fetch_subs() -> dict:
             data = json.loads(r.read())
         metrics = data.get("metrics") or {}
         recent = [s.get("email", "") for s in (data.get("recentSubscribers") or [])]
-        return {
-            "count": metrics.get("subscribers", 0),
+        api_count = metrics.get("subscribers", 0)
+        gist_count = fetch_subs_gist_count()
+        # Truth-source wins when both are valid
+        authoritative = gist_count if gist_count >= 0 else api_count
+        out = {
+            "count": authoritative,
+            "api_count": api_count,
+            "gist_count": gist_count,
             "revenue_dollars": metrics.get("revenue", 0),
             "recent_emails": recent,
             "verdict": data.get("verdict", ""),
         }
+        if gist_count >= 0 and gist_count != api_count:
+            out["discrepancy"] = (
+                f"/api/status={api_count} but gist={gist_count} — using gist"
+            )
+        return out
     except Exception as e:
         return {"count": -1, "error": f"{type(e).__name__}: {e}"}
 
@@ -272,7 +316,10 @@ def main():
         print(f"    most recent: ${ll.get('amount',0)/100:.2f} on {ll.get('created_iso','?')[:10]} from {ll.get('email','?')}")
     if s.get("error"):
         print(f"    stripe error: {s['error']}")
-    print(f"  Subs:       {cur['subs'].get('count', 'err')}")
+    subs_d = cur['subs']
+    print(f"  Subs:       {subs_d.get('count', 'err')}")
+    if subs_d.get("discrepancy"):
+        print(f"    ⚠️  {subs_d['discrepancy']}")
     bad_pages = [(u, c) for u, c in cur["uptime"].items() if c != 200]
     if bad_pages:
         print(f"  Uptime:     {len(bad_pages)} bad")
