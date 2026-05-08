@@ -29,6 +29,37 @@
 | 12 | ai-saas-founder-prompts-cheatsheet | gist/bc4451 |
 | 13 | claude-opus-4-7-prompts-cheatsheet | gist/ccef07 |
 
+## Session 31 (May 7, 19:23 local) — 🟢 PHAM FOLLOW-UP FIRED + DAILY MONITORS CLEAN
+
+### Trigger
+19:23 local on May 8 logical-date (UTC ~01:23 May 8). Multiple DUE schedule items: morning standup, audit-window check, EOD review, May 8 Pham follow-up (10-day cadence per IP-attorney spec), customer reply check. The Pham fire was load-bearing — last cold shot before the May 14 hard kill-or-iterate decision. No agent had fired the script at the 09:00 slot, confirming Session 25's `schedule-is-notes-not-cron` finding for the third time.
+
+### ✅ Bottleneck-direct work shipped
+1. **Pham follow-up fired**: Resend `6ae82a8f-47b8-461b-a94f-8b02adf02f82` to cbrannan@criterioncounsel.com. Subject "Christopher — sample demand letter we drafted." Body is a sample-deliverable hook (per outreach-followup-timing playbook): "Reply 'send it' and you'll have it within a business day." 10-day cadence (vs Hiedeh/Doug 8-day) appropriate for IP-attorney response patterns.
+2. **load_resend_key hardening proven again**: stale env var `re_6T5i...` (revoked Apr 28) was set at the shell level; loader correctly preferred file key `re_GnKw...` and emitted warning. Session 150's footgun-prevention fix is doing its job.
+3. **Audit-replies-tracker updated**: appended Pham row + window-status entry. T+10d post-original; reply window now extends through May 14-17 for Pham.
+
+### Daily monitors (all clean, exit 0)
+- `read-replies.py`: 0 unread replies (1 acked total — Armando's May 5 smoke test).
+- `audit-signal-monitor.py`: 20 subs / 0 audit-tagged / 0 new since last run.
+- `partner-signal-monitor.py`: 20 subs / 0 partner-tagged / 0 new since last run.
+- `metrics-snapshot.py`: 0 sales 24h, $155 LTM unchanged, 5/5 pages 200 OK.
+
+### What I did NOT do (deliberately)
+- Did NOT pre-build more Boucher / King / CFO Club fallback artifacts. Per `execution-prep-counter`: 4+ pre-build sessions on the cross-promo branch already; diminishing returns + Armando greenlight not yet given.
+- Did NOT escalate Boucher greenlight to Armando today. Schedule entry is "May 8 if greenlit, May 9 escalate via Telegram." It's still May 8 logical-date — escalation triggers tomorrow not today.
+- Did NOT ship a 14th gist or new Dev.to post. Channel-dark per Session 25's monitoring data + bottleneck unchanged.
+- Did NOT touch the 5-broken-SKU decision (task `3400b90c`). Strategic call belongs to Armando.
+- Did NOT pre-build Plan D ($1,499 reposition) artifacts. Plan D's 4 sub-decisions need Armando's voice; pre-building creates premature commitment.
+
+### KPI movement this session
+**Direct: zero.** **Indirect: medium.** Pham fire preserves the audit-experiment's full reply-window for the May 14 decision (without it, May 14 would have been called on 2/3 prospects' data instead of 3/3). Daily monitors validate zero-signal hypothesis for May 14. Hardening proved across a real send.
+
+### Confidence
+90% — Pham fire confirmed by Resend ID, all 4 monitors verified clean by direct gist API call, schedule-script renders unchanged from Session 28's pre-build. Lower than 95% only because the strategic call (Plan C kill / Plan D pivot / Plan A repurpose) still belongs to Armando on May 14.
+
+---
+
 ## Session 30 (May 7, 18:30 local) — 🟢 BOUCHER PLATFORM CORRECTION + 6 VETTED CANDIDATES FOR VOLUME-FIRST
 
 ### Trigger

@@ -2,6 +2,34 @@
 
 Your long-term memory. Persists across all sessions. This is your brain — treat it well.
 
+## 🟢 SESSION 31 (May 7, 19:23 local) — PHAM FOLLOW-UP FIRED + DAILY MONITORS CLEAN
+
+### What shipped
+- **Pham follow-up via fire-may8-followups.sh --send**: Resend `6ae82a8f-47b8-461b-a94f-8b02adf02f82` to cbrannan@criterioncounsel.com. Subject: "Christopher — sample demand letter we drafted." Sample-deliverable hook ("Reply 'send it'…"). 10-day cadence per IP-attorney spec. ~10h late from 09:00 schedule slot — confirms `schedule-is-notes-not-cron` for the third time (after Sessions 25, 28).
+- **Audit-replies-tracker updated** with Pham row + T+10d window-status note.
+- **STATE.md Session 31 entry** logged.
+
+### Daily monitors — all clean, exit 0
+- read-replies: 0 unread.
+- audit-signal-monitor: 20 subs / 0 audit-tagged / 0 new.
+- partner-signal-monitor: 20 subs / 0 partner-tagged / 0 new.
+- metrics-snapshot: 0 sales 24h, $155 LTM, 5/5 uptime.
+
+### Key reinforcement
+- Session 150's `load_resend_key` hardening fired correctly: stale env var `re_6T5i...` (revoked Apr 28) was set at shell level; loader preferred file key `re_GnKw...` and warned to stderr. Footgun-prevention works in production.
+- 0/3 audit replies + 0 audit-tagged signups + 0 inbound replies after T+10d on original pitches and T+22h on follow-ups (Hiedeh/Doug). Plan C (kill cold $997 lever) is the trending default-recommendation for May 14 hard decision.
+
+### What I did NOT do (deliberately)
+- No more cross-promo pre-build (4+ sessions deep, diminishing returns).
+- No Boucher escalation to Armando today (May 9 trigger, not May 8).
+- No 14th gist / Dev.to post (channel-dark per Session 25 instrumentation).
+- No Plan D ($1,499) pre-build (4 sub-decisions need Armando's voice).
+- No Telegram status ping (per `armando-async-asks`: zero-signal status updates = noise).
+
+### Confidence: 90%
+
+---
+
 ## 🟢 SESSION 28 (May 7, 15:54 local) — BOTTLENECK-DIRECT: PRE-BUILT BOTH MAY 12 FALLBACKS
 
 ### What shipped

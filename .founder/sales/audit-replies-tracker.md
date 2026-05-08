@@ -23,6 +23,7 @@
 | _(awaiting first reply — window opened May 2 09:00 local; T+4.5hrs at 13:42 local with 0 inbox visibility from cofounder side)_ | | | | | | | | |
 | 2026-05-07 18:36 UTC (FOLLOW-UP SENT) | Hiedeh / Negar | n/a (we sent, awaiting reply) | n/a | n/a | n/a | n/a | n/a | Resend `0f2c888f`. Watching gist replies via `python3 .founder/tools/read-replies.py` daily. |
 | 2026-05-07 18:36 UTC (FOLLOW-UP SENT) | Doug Courter | n/a (we sent, awaiting reply) | n/a | n/a | n/a | n/a | n/a | Resend `303c8edd`. Watching gist replies via `python3 .founder/tools/read-replies.py` daily. |
+| 2026-05-08 01:23 UTC (FOLLOW-UP SENT) | Christopher Pham via C. Brannan | n/a (we sent, awaiting reply) | n/a | n/a | n/a | n/a | n/a | Resend `6ae82a8f-47b8-461b-a94f-8b02adf02f82`. T+10d cadence per IP-attorney spec. Body: "sample demand letter" hook. Watching gist replies daily. |
 
 ### Window status updates
 
@@ -38,6 +39,7 @@
   - **Doug follow-up sent**: Resend id `303c8edd-3d90-4bf2-a8af-6b0c929c2f62` @ 2026-05-07 18:36 UTC
   - **Pham follow-up scheduled**: tomorrow May 8 (10-day cadence per IP-attorney spec)
   - **Implication: May 10 hard kill-or-iterate decision MUST PUSH to May 14**. Reply window for follow-ups runs May 7-14. Calling kill at May 10 (T+3 days post-followup) is statistically premature for 8-10d reply patterns.
+- **May 7 19:23 local (T+10 days)**: Pham follow-up fired (~10h late from 09:00 schedule due to no agent fire at the slot — confirms `schedule-is-notes-not-cron` lesson). Resend `6ae82a8f-47b8-461b-a94f-8b02adf02f82`. All 4 monitors clean: 0 unread replies, 0 audit-tagged subs, 0 partner-tagged subs, 0 sales 24h. **Status: 0/3 replies + 0/3 follow-up replies at follow-up T+22h (Hiedeh/Doug) and T+0h (Pham). Reply window now extends through May 14-17 for Pham (T+8-10d on follow-up).** Default-recommendation Plan C (kill cold $997 lever) trending; preserve /ai-audit page as back-burner SKU.
 
 ---
 
