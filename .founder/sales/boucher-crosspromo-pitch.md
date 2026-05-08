@@ -7,8 +7,9 @@ Trigger to send: Armando says "go" via Telegram.
 
 ## Why him, why now
 
-- **300K newsletter subscribers** on his LinkedIn AI+Finance newsletter (https://www.linkedin.com/newsletters/ai-finance-by-nicolas-boucher-7203451938586177537)
-- **1,500–2,400 paying members** in AI Finance Club at $250/qtr (https://ai-finance.club/)
+- **300K newsletter subscribers** on his LinkedIn AI+Finance newsletter (https://www.linkedin.com/newsletters/ai-finance-by-nicolas-boucher-7203451938586177537) — *Note (Session 30): this LinkedIn-newsletter number is unverified at the 300K figure; his separate Kit-hosted newsletter at ai-finance.club shows 190,034 subs verified via raw HTML. The two may be different vehicles or overlap. If quoting a number in the pitch email, prefer the verified 190K figure with the ai-finance.club URL.*
+- **2,400+ paying members** in AI Finance Club at $250/qtr (https://ai-finance.club/) — *Note (Session 30): page copy says "2,400+", not the prior "1,500-2,400" range.*
+- **Platform note (Session 30):** ai-finance.club runs on **Kit/ConvertKit** (verified via form action to app.kit.com). Both Boucher and Christian Martinez (Tier 1 candidate per cross-promo-candidates-2026-05-07.md) are on Kit — propose **Kit Sponsored Recommendation swap** as the primary mechanic, not a generic "audience swap."
 - **Arnaud Demes** — our $29 Mega Pack buyer — fits this audience at ~80% (Paris finance/AI). Boucher's audience IS Arnaud lookalike.
 - **France-anchored** = native-language match.
 - **Cost: $0 cash + 1 hour labor** (digital good swap, no money changes hands).
