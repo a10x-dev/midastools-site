@@ -58,6 +58,26 @@
 ### Confidence
 90% — Pham fire confirmed by Resend ID, all 4 monitors verified clean by direct gist API call, schedule-script renders unchanged from Session 28's pre-build. Lower than 95% only because the strategic call (Plan C kill / Plan D pivot / Plan A repurpose) still belongs to Armando on May 14.
 
+### Session 31 continuation — BATCH-1 D+2 NUDGE FIRED (5/5)
+
+After Pham + monitors closed, ran daily DUE check on `trend-watch.py` (5 trends pulled — none ICP-fit, no shipment) and Hunter.io status (UNBLOCKED, 8/50 used). Discovered the May 8 BATCH-1 D+2 NUDGE schedule entry was DUE today and pre-approved: 5 cold-email lookalike prospects fired May 6 (Donnie/Frank/Kris/Alexander/Brian — 3 Hearst IT, 1 Penske, 1 BuzzFeed) had 0 replies. Built `fire-batch1-nudge.sh` + 5 body files pointing at their personalized `/q/{slug}` pages (all HTTP 200 verified). Smoke-tested clean, fired live.
+
+**5/5 sent successfully via Resend:**
+- Donnie Wooten (Hearst): id `16885942-f5b9-4db7-a7c4-fd7cafea5393`
+- Frank LoDestro (Hearst): id `71cd90e8-6fa9-4728-a083-e0087e760c8f`
+- Kris Smith (Hearst): id `d3c0c1ae-176a-4c76-875a-aa6b153f2480`
+- Alexander Sage (Penske Media): id `bebfaf0e-ed8c-4297-a619-3a927da8d52e`
+- Brian Lee (BuzzFeed): id `14d5f385-fabf-44db-9884-57e667e47883`
+
+Logged all 5 to `.founder/crm/customers.md` "Next inbound cohort tracker" with batch1-D+2-nudge source tag.
+
+**Strategic significance:** This IS bottleneck-direct work. The /ai-audit experiment is winding down (Plan C trending). The lookalike-cold-email pivot is the May 14 fallback channel. Each D+2 nudge is a second touch on a ICP-confirmed prospect (Hunter-verified valid emails, Shantae-shape role/industry). The /q/{slug} interactive-quiz pivot tests whether the original cold-email's failure was content-format mismatch (long body) vs ICP mismatch. Reply window: May 8-15. Schedule already has May 14 KILL-OR-ITERATE for customer-acquisition-strategy.
+
+**Trend-digest finding:** none of today's top-5 HN trends (AI slop, motherboard shortage, Telus accents, Anthropic+SpaceX [already shipped Session 25], GitHub outages) is ICP-fit for solo coaches/consultants/SaaS founders. Consistent with `motion-vs-progress` — not shipping a citation page that won't move the needle. May 13 cron-audit will likely kill the trend-watch daily entry.
+
+### Confidence (revised)
+85% — drop from 90 because while the 5 fires are confirmed by Resend IDs, the underlying ICP hypothesis (corporate IT directors are Shantae lookalikes who'll buy a $97 prompt bundle) has the same audience-product-fit risk that 0/5 May 6 replies already partially-falsified. The D+2 nudge is the right test, but expectations are calibrated to 0-1 replies, not "channel works."
+
 ---
 
 ## Session 30 (May 7, 18:30 local) — 🟢 BOUCHER PLATFORM CORRECTION + 6 VETTED CANDIDATES FOR VOLUME-FIRST

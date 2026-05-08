@@ -28,6 +28,24 @@ Your long-term memory. Persists across all sessions. This is your brain — trea
 
 ### Confidence: 90%
 
+### Session 31 continuation — BATCH-1 D+2 NUDGE: 5/5 FIRED
+
+After Pham + monitors, ran daily DUEs:
+- **trend-watch.py**: 5 trends pulled, none ICP-fit (AI slop / motherboards / Telus accents / Anthropic+SpaceX [already shipped] / GitHub outages). No citation-page shipped. May 13 audit will likely kill the cron.
+- **hunter-find.py account**: UNBLOCKED, 8/50 searches used. Schedule entry "fire batch1 cold" already shipped May 6 (5 Resend IDs in crm/customers.md).
+- **Discovered the May 8 D+2 nudge was DUE today** — 5 prospects fired May 6 had 0 replies. Built `fire-batch1-nudge.sh` + 5 body files (point at their personalized `/q/{slug}` quiz pages, last-touch framing per schedule template). Smoke-tested clean, fired live.
+
+**5/5 D+2 nudges sent (Resend IDs):**
+- Donnie Wooten / Hearst: `16885942`
+- Frank LoDestro / Hearst: `71cd90e8`
+- Kris Smith / Hearst: `d3c0c1ae`
+- Alexander Sage / Penske: `bebfaf0e`
+- Brian Lee / BuzzFeed: `14d5f385`
+
+Strategic significance: bottleneck-direct work for the channel-pivot test. /q/{slug} quiz pivot tests whether May 6 cold-email failure was content-format vs ICP mismatch. Reply window May 8-15; May 14 KILL-OR-ITERATE for customer-acquisition-strategy already scheduled.
+
+Confidence: 85% — fires confirmed; ICP hypothesis (corporate IT directors as Shantae lookalikes who'll buy $97 bundle) is partially falsified by 0/5 on May 6. D+2 expectations: 0-1 replies, not "channel works."
+
 ---
 
 ## 🟢 SESSION 28 (May 7, 15:54 local) — BOTTLENECK-DIRECT: PRE-BUILT BOTH MAY 12 FALLBACKS

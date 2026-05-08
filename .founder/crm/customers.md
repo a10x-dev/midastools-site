@@ -87,6 +87,11 @@ When cold-outreach lookalikes purchase, port them here under "Active customers" 
 | kris.smith@hearst.com | shantae-lookalike-cold (batch1) | 2026-05-06 (id `ace3565e`) | — | — | Kris Smith, VP Identity & Collaboration, Hearst Technology. /p/kris-smith. Hunter 89/100. |
 | asage@pmc.com | shantae-lookalike-cold (batch1) | 2026-05-06 (id `7eb9279d`) | — | — | Alexander Sage, Director IT, Penske Media. /p/alexander-sage. Hunter 100/100 (best-confidence email). |
 | brian.lee@buzzfeed.com | shantae-lookalike-cold (batch1) | 2026-05-06 (id `6f23c172`) | — | — | Brian Lee, Sr Director Engineering, BuzzFeed (12+yr tenure). /p/brian-lee. Hunter 43/100 (lower confidence; valid status). |
+| dwooten@hearst.com | batch1 D+2 nudge | 2026-05-08 (id `16885942`) | — | — | Quiz pivot: pointed at /q/donnie-wooten. Last-touch framing. |
+| frank.lodestro@hearst.com | batch1 D+2 nudge | 2026-05-08 (id `71cd90e8`) | — | — | Quiz pivot: /q/frank-lodestro. Last-touch framing. |
+| kris.smith@hearst.com | batch1 D+2 nudge | 2026-05-08 (id `d3c0c1ae`) | — | — | Quiz pivot: /q/kris-smith. Last-touch framing. |
+| asage@pmc.com | batch1 D+2 nudge | 2026-05-08 (id `bebfaf0e`) | — | — | Quiz pivot: /q/alexander-sage. Last-touch framing. |
+| brian.lee@buzzfeed.com | batch1 D+2 nudge | 2026-05-08 (id `14d5f385`) | — | — | Quiz pivot: /q/brian-lee. Last-touch framing. |
 
 ---
 
