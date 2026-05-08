@@ -7,9 +7,9 @@ Trigger to send: Armando says "go" via Telegram.
 
 ## Why him, why now
 
-- **300K newsletter subscribers** on his LinkedIn AI+Finance newsletter (https://www.linkedin.com/newsletters/ai-finance-by-nicolas-boucher-7203451938586177537) — *Note (Session 30): this LinkedIn-newsletter number is unverified at the 300K figure; his separate Kit-hosted newsletter at ai-finance.club shows 190,034 subs verified via raw HTML. The two may be different vehicles or overlap. If quoting a number in the pitch email, prefer the verified 190K figure with the ai-finance.club URL.*
-- **2,400+ paying members** in AI Finance Club at $250/qtr (https://ai-finance.club/) — *Note (Session 30): page copy says "2,400+", not the prior "1,500-2,400" range.*
-- **Platform note (Session 30):** ai-finance.club runs on **Kit/ConvertKit** (verified via form action to app.kit.com). Both Boucher and Christian Martinez (Tier 1 candidate per cross-promo-candidates-2026-05-07.md) are on Kit — propose **Kit Sponsored Recommendation swap** as the primary mechanic, not a generic "audience swap."
+- **190,034 newsletter subscribers** at https://ai-finance.club/newsletter/ — verified via raw HTML inspection (his own copy: "Join 190,034 others getting ahead of AI in Finance"). His separate LinkedIn AI+Finance newsletter (https://www.linkedin.com/newsletters/ai-finance-by-nicolas-boucher-7203451938586177537) is a distinct vehicle with audience overlap; only quote the 190K number when speaking to Boucher.
+- **2,400+ paying members** in AI Finance Club at $250/qtr (https://ai-finance.club/) — verified via page copy.
+- **Platform: Kit/ConvertKit** (verified via form action to app.kit.com on ai-finance.club/newsletter/). Christian Martinez (Tier 1 alternative per cross-promo-candidates-2026-05-07.md) is also on Kit — propose **Kit Sponsored Recommendation swap** as the primary mechanic, not a generic "audience swap."
 - **Arnaud Demes** — our $29 Mega Pack buyer — fits this audience at ~80% (Paris finance/AI). Boucher's audience IS Arnaud lookalike.
 - **France-anchored** = native-language match.
 - **Cost: $0 cash + 1 hour labor** (digital good swap, no money changes hands).
@@ -32,7 +32,7 @@ Hi Nicolas —
 
 I've been reading your AI+Finance newsletter for a while and a chunk of our paying customers are exactly the audience you've built — finance pros learning AI on their own time. One of them is in Paris.
 
-We sell the **MidasTools AI Prompt Mega Pack** ($29) — 200+ field-tested prompts across finance reporting, analysis, board decks, and ops automation. I'd like to give every AI Finance Club paying member a **free copy** ($30K+ retail value at 1,500 members) in exchange for a single mention in your newsletter.
+We sell the **MidasTools AI Prompt Mega Pack** ($29) — 200+ field-tested prompts across finance reporting, analysis, board decks, and ops automation. I'd like to give every AI Finance Club paying member a **free copy** ($70K+ retail value at 2,400+ members) in exchange for a single mention in your newsletter.
 
 No affiliate fee, no funnel tricks. Just a perk for your members. They get value, you get a "members-only" thank-you to share, we get exposure to a finance audience we'd never reach otherwise.
 
@@ -49,7 +49,7 @@ Hi Nicolas — quick offer: free MidasTools Mega Pack (200 finance + ops AI prom
 
 ## Pitch — Version C (Email, longer, with proof)
 
-**Subject: A €30K perk for your AI Finance Club members — proposal**
+**Subject: A €70K perk for your AI Finance Club members — proposal**
 
 Hi Nicolas,
 
@@ -58,7 +58,7 @@ I run [MidasTools](https://midastools.co) — a small AI prompt-pack shop. One o
 Here's the offer:
 
 **Free Mega Pack for every paying AI Finance Club member.**
-- 1,500–2,400 members × $29 retail = $43K–70K of perceived value
+- 2,400+ members × $29 retail = $70K+ of perceived value
 - Zero affiliate cut, zero upsell trick. They get the kit, that's it.
 - We build a `/finance-club` landing page with a passcode for your members only.
 - All we ask: one mention in your newsletter or a single members-only post in the Club Slack.
@@ -82,7 +82,7 @@ Founder, MidasTools
 
 | Boucher says | Our response |
 |---|---|
-| **"Yes, send me the page link"** | Ship `/finance-club` (see `.founder/plans/finance-club-page-spec.md`), DM him the URL within 24h. |
+| **"Yes, send me the page link"** | Page already live (Session 27, commit 0527a2d). DM him `https://www.midastools.co/finance-club?via=boucher` immediately. Confirm partner-signal-monitor.py will catch source-tagged signups. |
 | **"Sounds interesting, what's the deliverable?"** | Send him a free copy of the Mega Pack + brief PDF of what AI Finance Club members would get. |
 | **"What's the catch?"** | Reaffirm zero affiliate, zero upsell on the free page. Optional `/upgrade` link on the thank-you with a 25% AIFINANCEAI code if they want. |
 | **"How about a paid sponsorship instead?"** | Politely decline ("we're a small shop, our budget is the digital good itself"). Offer alternative: 50% rev-share if he wants to track a referral code. |

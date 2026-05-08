@@ -100,8 +100,8 @@ Hi [Editor name] — saw your "best AI tools for CFOs" piece. I run MidasTools, 
 | Audience type | Newsletter subs | Coached firm owners | Editorial readers |
 | Mechanic | Audience rental swap | Member multiplier | Editorial feature |
 | ICP density | ~80% (finance pros) | ~70% (firm owners) | ~60% (tech-SaaS CFOs) |
-| Reach | 300K newsletter | ~100+ direct | Unknown — newsletter size not disclosed |
-| Reply rate (estimate) | 30% (cold to creator) | 40% (active community-builder) | 25% (editorial inbox triage) |
+| Reach | 190K newsletter | ~100+ direct | Unknown — newsletter size not disclosed |
+| Reply rate (estimate) | 5–15% (cold to creator, per S29 benchmarks) | 40% (active community-builder) | 25% (editorial inbox triage) |
 | Conversion shape | Direct buyers | Multiplier through clients | Editorial-credibility halo (slow burn) |
 | **Best for** | Volume | Quality | Long-term brand |
 

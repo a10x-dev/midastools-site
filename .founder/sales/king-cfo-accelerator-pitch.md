@@ -115,11 +115,11 @@ Founder, MidasTools
 
 | Dimension | Boucher | King |
 |---|---|---|
-| Audience size | 300K newsletter | ~100+ firm owners (smaller direct) |
+| Audience size | 190K newsletter | ~100+ firm owners (smaller direct) |
 | Multiplier | Direct (each sub = potential buyer) | Indirect (member → 5-20 clients) |
 | ICP density | ~80% (employed finance pros) | ~70% (firm owners, not employees) |
 | Price tolerance | Personal $29 wallet | Higher — they sell $5K+ engagements |
-| Reply expected | 30%+ if Boucher engaged content marketers | 40%+ Michael actively builds community |
+| Reply expected | 5–15% (cold-to-creator B2B benchmark per S29) | 40%+ Michael actively builds community |
 | Best path on Yes | Free → upsell to $97 | Free → 30% rev-share on $97 (Michael ⊃ his members) |
 
 Honest take: King may convert FEWER raw signups than Boucher but each signup is **higher-LTV** because they're firm-owners who buy tools to deliver client work, not consumers who buy on-impulse. If both engage, king is the better long-term partnership.
