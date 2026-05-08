@@ -115,5 +115,14 @@
     "use_count": 1,
     "created_at": "2026-05-07T20:55:00Z",
     "approved": true
+  },
+  {
+    "name": "quiz-visit-monitor.py",
+    "description": "Watch the live track-events jsonblob for /q/{slug} page visits. Personalized prospect quiz pages (/q/donnie-wooten etc.) generate page_view events captured by /api/track. This monitor reads the track blob, filters page_view events whose path begins with /q/, dedupes by slug, and surfaces NEW slugs since the last snapshot. Strongest leading indicator of cold-email channel engagement BEFORE a reply. Exit 10 = NEW prospect engaged. State at .founder/state/quiz-monitor-last.json. Built 2026-05-08 to instrument the dark cold-email channel after batch-1 fired May 6.",
+    "language": "python",
+    "path": "quiz-visit-monitor.py",
+    "use_count": 1,
+    "created_at": "2026-05-08T23:45:00Z",
+    "approved": true
   }
 ]

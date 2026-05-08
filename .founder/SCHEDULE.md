@@ -7,7 +7,7 @@ Items marked `[cofounder]` were scheduled by you — adjust as needed.
 Format: `- HH:MM | action description | recurrence | source | enabled`
 
 ## Entries
-- 09:00 | Morning standup: review metrics, check Dev.to stats, run audit-signal-monitor.py + metrics-snapshot.py + read-replies.py + partner-signal-monitor.py, append a new row to `.founder/plans/may14-strategic-synthesis.md` § 1.5 data trail, prioritize day | daily | cofounder | true
+- 09:00 | Morning standup: review metrics, check Dev.to stats, run audit-signal-monitor.py + metrics-snapshot.py + read-replies.py + partner-signal-monitor.py + quiz-visit-monitor.py, append a new row to `.founder/plans/may14-strategic-synthesis.md` § 1.5 data trail, prioritize day | daily | cofounder | true
 - 12:00 | Audit-window check: any reply to Hiedeh/Doug/Pham? Run `python3 .founder/tools/read-replies.py` (now reading from gist storage, fixed 2026-05-07) — if exit 10, fire Reply-Handling Playbook within 30min. Window extended to 2026-05-14 because follow-ups fired May 7 not May 6. | daily-until-may14 | cofounder | true
 - 17:00 | EOD review: update STATE.md, log decisions, plan next day | daily | cofounder | true
 - 09:00 | May 6: Send 3 audit-pitch follow-ups — DONE LATE 2026-05-07 18:36 UTC (Hiedeh `0f2c888f`, Doug `303c8edd`); Pham still pending May 8 | DONE | cofounder | false

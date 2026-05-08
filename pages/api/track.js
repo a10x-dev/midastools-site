@@ -7,11 +7,22 @@
 // Storage: separate jsonblob (track-events) so a flood of events can't kill
 // the subscribers blob. Same self-heal pattern.
 //
+// ⚠️ This blob is HIGH-VOLUME (every page_view writes) so it dies more often
+// than the subscribers blob. Death log:
+//   019dfe20-8487-7349-ac62-b5faa8ba73ab — died 2026-05-08 (13th jsonblob death) →
+//   019e09fa-6623-7182-a6a4-66b00ede4152 — fresh 2026-05-08 23:44 UTC
+//
+// Architectural debt: high-volume key-value-on-PUT against jsonblob is
+// fundamentally fragile. Right answer is daily-rotated gist files (one
+// gist per day, append-only). Logged as capability gap; deferred until
+// post-May-14 because cold-email signal during reply windows beats clean
+// architecture.
+//
 // Auth: none. This is a fire-and-forget client beacon. We accept the load
 // risk in exchange for zero friction; rate-limit at the visitor level via
 // IP if it becomes a problem.
 
-const TRACK_BLOB_ID = '019dfe20-8487-7349-ac62-b5faa8ba73ab';
+const TRACK_BLOB_ID = '019e09fa-6623-7182-a6a4-66b00ede4152';
 const TRACK_BLOB_URL = `https://jsonblob.com/api/jsonBlob/${TRACK_BLOB_ID}`;
 const MAX_EVENTS_IN_BLOB = 5000; // Trim oldest if we exceed this
 
