@@ -60,6 +60,23 @@ Per `pre-build-saturation-detector`: May 14 synthesis already covers all 3 exper
 ### NEXT_CHECKIN expectation
 Tomorrow morning standup (May 9 09:00 local). Run all 4 monitors fresh, append data-trail row 5, **escalate Boucher greenlight to Armando via Telegram if still ungreenlit** (per existing schedule entry — May 9 is the trigger date). Watch for any of the 8 in-flight reply windows.
 
+### Continuation (12:50 local, commit 2e61816 pushed) — WEBHOOK MANUAL-FULFILLMENT FIX
+After standup closed, took on task `e82e87d6`. Session 26 had patched /thank-you with manual:true placeholders for 5 unfulfillable plinks (muse-spark / claude-code / reddit-lead-kit / team-adoption / cowork-mastery) but explicitly deferred the webhook side. Buyers on those plinks were getting CONFLICTING signals: /thank-you said "delivery within 24h" but the email arrived saying "Your OpenClaw Starter Kit is ready" with a working (wrong-product) download link.
+
+**✅ Shipped (commit 2e61816, pushed):**
+- 4 new KIT_MAP entries with file:null + manual:true (claude-code, reddit-lead-kit, team-adoption, cowork-mastery) mirroring pages/thank-you.js
+- muse-spark flipped to manual:true (was pointing at non-existent muse-spark-kit.zip)
+- 5 PAYMENT_LINK_MAP entries routing the actual plink IDs correctly
+- isManual branch in sendDownloadEmail rendering "your kit is being personalized — delivery within 24h" instead of a broken download
+- audit-payment-links.py KNOWN_KITS updated to include the 5 manual slugs (auditor went 6 broken → 1; only legitimate Midas Content recurring-sub case remains)
+
+**Verification:** `npx next build` clean. Audit re-ran post-fix shows 33 healthy / 1 broken. Cannot break any existing customer (no plink in this set has produced a sale to date). Reversible per Path A/B/C: A=swap manual:true for real file, B=plinks deactivated and entries become moot, C=already correct.
+
+**Closes task e82e87d6** ("Add 6 missing kit slugs to pages/thank-you.js KITS map") — the slugs were already in /thank-you.js since Session 26; this session closed the parallel gap in the webhook + auditor false-positive.
+
+### Confidence (revised)
+85% unchanged — same direct verification (build clean, audit clean, push verified). Lower than 90% because the webhook isManual branch wasn't smoke-tested with a real Stripe event (would require firing a $0.50 test charge through a manual-flag plink to fully validate). Per Session 158's stripe-cli smoke-test note: deferred until next strategic-cycle cleanup.
+
 ---
 
 ## Session 33 (May 7, 21:45 local) — 🟢 NIGHT MONITOR SWEEP — ALL CLEAN, HONEST CLOSE PER SATURATION DETECTOR
