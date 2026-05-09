@@ -67,3 +67,40 @@
 - **May 11 standup:** re-inspect the track blob, count chatgpt.com referrer share. If still 25%+, the trend is real.
 - **May 14 synthesis:** add the 48h trend reading to data trail row 6. Decision tree may now route Branch 4 → P5 instead of P4 if signal holds.
 - **Capability gap logged:** we have no per-visitor uniqueness counter on /api/track. Counting unique sessions vs. raw page_views matters for citation traffic analysis. Future tool work post-May-14.
+
+---
+
+## UPDATE — Session 27, 2026-05-09 14:09 UTC (T+~8h after first finding)
+
+### Re-inspection: 27 chatgpt-tagged events of 71 total = 38.0% (was 33%)
+
+Pulled the track blob 8h after the original finding to test "anomaly vs. trend." Five new chatgpt-cited events landed in that window. Falsifiability check across 4 dimensions:
+
+| Check | Result |
+|---|---|
+| Multi-day sustained? | **❌ FAIL — all 27 events are May 9 only** (02:08 → 12:45 UTC, 10h span) |
+| Single-burst-session? | ✅ Pass — 10h spread, no burst clustering |
+| Single device? | ✅ Pass — **6 distinct user-agent fingerprints**: Android (14), iPhone (6), Windows (3), Vivo (2), Android 5.0 (1), Nexus 5X (1) |
+| Single-source-bot? | ✅ Pass — real consumer device strings, no scraper UAs |
+| Genuine page-views? | ✅ Pass — 2-event sub-second clusters = SPA double-fire pattern (≈14 unique sessions) |
+
+**Strategic correction to original finding:** Calling this a "2-snapshot trend" was overstated. Both snapshots fall on the SAME calendar day. What we actually have:
+- ~14 unique organic sessions over 10h on May 9
+- 6 distinct device types (real consumer mix)
+- 0 conversions
+
+This is real organic traffic from a TODAY citation moment. Whether it's sustained citation OR a one-day ChatGPT featured-link burst is **still unknown until May 10/11/12 snapshots.**
+
+### Bottleneck-direct ship: position #2 paid CTA on the cited post (commit a6a42fc)
+
+14 organic sessions today and 0 conversions = the post's conversion plumbing is the lever. The bottom paid CTAs are 1,400 lines deep — most readers bounce before reaching them. Per Analytics-Driven Funnel Repair playbook (89%): added position #2 paid CTA banner immediately after the intro paragraph. Targets $29 AI Image Prompt Pack + $97 All 21 Kits — same Stripe links as bottom CTA so attribution remains clean.
+
+Reversible (single content edit), testable in 24-72h via Stripe sales delta + Image Pack page CTR delta.
+
+### Capability gap (urgent — May 10 morning standup)
+
+Track blob has NO IP, NO session ID, NO visitor cookie. The "14 unique sessions" figure is inferred from 6 distinct user-agents and 10h spread — could overstate uniqueness if 2+ users share device fingerprints. Need a per-session counter for accurate citation-traffic analysis. Defer permanent fix until post-May-14.
+
+### Revised confidence: 70% (down from 75%)
+
+The "trend confirmed" framing was overstated; rolling back to "real organic citation traffic on a single day, sustained vs anomaly TBD." Position #2 CTA is reversible and zero-risk. Counterfactual: if signal is fake or one-off, we lose nothing. If real, we capture conversions instead of missing them.
