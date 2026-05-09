@@ -45,6 +45,8 @@ export default async function handler(req, res) {
     blobId: BLOB_ID,
     healed,
     newBlobId: newBlobId || null,
+    writeError: writeResult.error || null,
+    hasGistToken: !!process.env.GH_GIST_TOKEN,
     timestamp: new Date().toISOString(),
   });
 }
