@@ -20,6 +20,27 @@ export default function App({ Component, pageProps }) {
     return () => router.events.off('routeChangeComplete', onRoute);
   }, [router]);
 
+  useEffect(() => {
+    // Global click listener: any anchor pointing at buy.stripe.com fires a
+    // cta_click event before navigation. Captures off-site Stripe clicks that
+    // are otherwise invisible to /api/track. Plink ID parsed from the path so
+    // we can attribute clicks to specific SKUs.
+    if (typeof window === 'undefined') return;
+    const onClick = (e) => {
+      const a = e.target && e.target.closest && e.target.closest('a[href*="buy.stripe.com/"]');
+      if (!a) return;
+      const href = a.getAttribute('href') || '';
+      const plinkMatch = href.match(/buy\.stripe\.com\/([a-zA-Z0-9]+)/);
+      trackEvent('cta_click', {
+        href,
+        plink_id: plinkMatch ? plinkMatch[1] : '',
+        cta_text: (a.innerText || '').slice(0, 80),
+      });
+    };
+    document.addEventListener('click', onClick, { capture: true });
+    return () => document.removeEventListener('click', onClick, { capture: true });
+  }, []);
+
   return (
     <>
       <Head>

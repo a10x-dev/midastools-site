@@ -39,6 +39,7 @@ export default async function handler(req, res) {
     page_path: (body.page_path || '').slice(0, 200),
     payload: body.payload || {},
     attribution: body.attribution || null,
+    session_id: (body.session_id || '').slice(0, 64),
     server_country: req.headers['x-vercel-ip-country'] || '',
     server_region: req.headers['x-vercel-ip-country-region'] || '',
     user_agent: (req.headers['user-agent'] || '').slice(0, 200),
