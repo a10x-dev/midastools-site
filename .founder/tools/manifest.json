@@ -1,5 +1,14 @@
 [
   {
+    "name": "send-recovery-welcomes.py",
+    "description": "Fire source-aware welcome emails to subscribers recovered by recover-storage-failed.py. Reads the same JSON list, classifies each by source (audit-template / finance-club / quiz / *-lead / free-tool / fallback), and renders a tailored welcome that delivers what they originally signed up for + acknowledges the storage-bug delay honestly. Idempotent via .founder/state/recovery-welcomes-sent.json log (skips already-sent on re-run; safe after partial failures). Built Session 26d (2026-05-08 night) as the post-recovery counterpart to recover-storage-failed.py. Without this, recovered subs sit dormant in the gist. Smoke-tested with 6-source fixture (all 6 variants classified + rendered correctly + idempotency verified).",
+    "language": "python",
+    "path": "send-recovery-welcomes.py",
+    "use_count": 0,
+    "created_at": "2026-05-09T03:30:00Z",
+    "approved": true
+  },
+  {
     "name": "recover-storage-failed.py",
     "description": "Parse \u2018\u26a0\ufe0f STORAGE FAILED \u2014 New subscriber\u2019 emails accumulating in iam+midas@armando.mx since the May 5 GH_GIST_TOKEN-missing-on-Vercel bug, then merge the recovered subscribers into the live gist (b460cc98bbc21692f1f209e852c551b5/subscribers.json). Two subcommands: `parse <file>` extracts subs (handles full-body, body-only, and subject-only fallbacks) into JSON; `merge --in <json> --dry-run|--apply` patches the live gist via GitHub API, dedup\u2019d on email. Pre-built Session 26c (2026-05-08 night) BEFORE Armando shares the inbox dump. Smoke-tested with synthetic 3-message fixture: parse \u2713, dedup \u2713, dry-run \u2713.",
     "language": "python",
