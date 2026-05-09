@@ -29,6 +29,101 @@
 | 12 | ai-saas-founder-prompts-cheatsheet | gist/bc4451 |
 | 13 | claude-opus-4-7-prompts-cheatsheet | gist/ccef07 |
 
+## Session 26b (May 8, 20:30 local / May 9 02:30 UTC) — 🚨 14TH MEASUREMENT-LAYER BUG: GIST WRITE-PATH BROKEN ON VERCEL (commit 7aee1e1 pushed)
+
+### Trigger
+After Session 26 closed, user pushed for highest-impact continuation. Per `instrument-funnel-when-channels-go-dark`: Session 39 found 13th jsonblob death. Asked whether ANOTHER measurement-layer bug exists right now. Verified 5 /q/ pages still HTTP 200 + track blob alive + ID matches deployed code (clean). Then probed broader storage layer: /api/keepalive returned `ok: false` persistently across 3 calls.
+
+### What I found (CRITICAL)
+**The gist write-path is broken on Vercel.** Patched keepalive.js to surface the actual error (commit 7aee1e1) and confirmed:
+```
+{
+  "ok": false,
+  "writeError": "GH_GIST_TOKEN not set",
+  "hasGistToken": false
+}
+```
+
+Implication: **GH_GIST_TOKEN env var is NOT in Vercel production.** Since the May 5 storage migration (Session 25), every /api/subscribe call has:
+- Tried gist write → failed (no token)
+- Tried jsonblob redundant write → failed (blob `019dfe1f` is HTTP 404 dead)
+- Returned success to the user
+- The "20 subs" count we've been reading is FALLBACK_SUBSCRIBERS hardcoded in lib/subscribers.js, NOT real data
+
+### ⚠️ Mitigating factor
+`pages/api/subscribe.js:64-72` has a backup: when writeSubscribers fails, sends an email to `iam+midas@armando.mx` with subject `⚠️ STORAGE FAILED — New subscriber: <email>` containing the email + source. So signups since May 5 aren't silently lost — they're in Armando's inbox waiting for manual recovery. BUT forward-going acquisition stays broken until env var is fixed.
+
+### ✅ Bottleneck-direct work shipped (commit 7aee1e1, pushed)
+**`pages/api/keepalive.js`**: added 2 diagnostic fields to response (`writeError` + `hasGistToken`). Diagnostic-only, reversible, surfaces the real failure mode in <1 sec. Verified live at https://www.midastools.co/api/keepalive?key=mt-outreach-2026.
+
+### Why this is bottleneck-direct
+The May 14 decision rests on the "20 subs / 0 audit-tagged" baseline. If real signups have been silently dropped (or are sitting in Armando's inbox unrecovered), the baseline is wrong. Audit-experiment kill criteria depend on accurate funnel measurement. Same pattern as Session 39's track-blob: instrument-funnel-when-channels-go-dark. Ship the diagnostic + escalate the fix. Cost of NOT fixing: every future signup keeps requiring email-recovery; growing inbox graveyard; baseline drift.
+
+### Telegram sent to Armando
+Concrete diagnosis + fix path: search inbox for `⚠️ STORAGE FAILED` since 2026-05-05 to count lost signups + add `GH_GIST_TOKEN` to Vercel env (token value at `.founder/.gh_gist_token` on his local). After deploy, re-probe to confirm `ok:true` + `hasGistToken:true`.
+
+### What I did NOT do (deliberately)
+- Did NOT add the env var myself — I don't have Vercel access. Armando-blocked.
+- Did NOT manually pull subs from Armando's inbox — I don't have Gmail MCP auth. Same blocker as Session 157's reply-pipeline question.
+- Did NOT attempt a probe-write through /api/subscribe with a fake email — would pollute the (broken) data + the Resend audience would deliver a welcome-email to a fake address. Not worth it; diagnostic patch surfaces same info.
+- Did NOT remove the jsonblob fallback path (task `7370537a` already tracks this for post-May-14).
+- Did NOT escalate to /api/track endpoint — that uses jsonblob directly (Session 39's fix), no gist dependency.
+
+### Honest accounting
+**Direct KPI movement: zero this session.** **Indirect: HIGH.** Every future signup now has a clear path to actually persisting once Armando adds the env var. Audit-experiment baseline can be RE-VERIFIED with real data once the recovery completes. May 14 decision becomes trustworthy. Same instrument-the-survivors leverage pattern as Session 39.
+
+### Confidence
+90% — diagnosis verified by direct API probe of deployed code (writeError field exposes literal error string from gist-store.js:77). Lower than 95% only because we don't know the lost-signup count until Armando reports the inbox query result.
+
+### NEXT_CHECKIN expectation
+Tomorrow morning 09:00 standup (May 9). If Armando added env var: re-probe keepalive, confirm `ok:true`, count any new gist subs vs FALLBACK_SUBSCRIBERS, update bottleneck description with revised baseline. If env var still missing by tomorrow afternoon: 2nd Telegram escalation per `armando-async-asks` 24h-silence pattern. Plus: 5-monitor sweep + data-trail row 5 + Boucher escalation + watch reply windows.
+
+---
+
+## Session 26 (May 8, 19:15 local / May 9 01:15 UTC) — 🟢 LATE-EVENING MONITOR SWEEP + 2 STALE DECISIONS RESOLVED + 1 TASK CLOSED (no commits)
+
+### Trigger
+User prompt at 19:15 local, ~1.5h after Session 39 closed (commit 38fe268 = quiz-visit-monitor + 13th jsonblob fix). Open-ended "what needs to happen next?" The 17:00 EOD slot is 2:15h overdue but Session 39 already covered the EOD work (5-monitor sweep + measurement-layer fix). At this hour the legitimate work is honest accountability close, not pre-build into saturated branches.
+
+### ✅ All 5 monitors clean (~1.5h since Session 39 sweep)
+| Monitor | Result | Exit |
+|---|---|---|
+| read-replies | 0 unread / 1 acked total | 0 |
+| audit-signal | 20 subs / 0 audit-tagged / 0 new | 0 |
+| partner-signal | 20 subs / 0 partner-tagged / 0 new | 0 |
+| metrics-snapshot | 0 sales 24h / $155 LTM unchanged / 5/5 pages 200 | 0 |
+| quiz-visit | 0 events on fresh blob (expected — blob rotated 1.5h ago) | 0 |
+
+Persistent zero across all 5 signal sources. 8 in-flight reply windows (Pham follow-up + 5 batch-1 D+2 nudges + 2 audit follow-ups Hiedeh/Doug) still silent — Friday late-evening, expected. The new quiz-visit-monitor (shipped S39) had its first scheduled non-smoke run; clean as expected because the track blob was fresh-rotated.
+
+### ✅ Closed task `e82e87d6` (was actually shipped Session 36)
+Verified by grep: `pages/api/stripe-webhook.js` and `pages/thank-you.js` both have 5 `manual: true` entries (muse-spark, claude-code, reddit-lead-kit, team-adoption, cowork-mastery). Session 36's commit 2e61816 closed this task. The task entry was orphaned in the queue. Closing.
+
+### ✅ Resolved 2 decisions due for review (>24h old)
+1. **`14f2f292`** — Boucher kill criteria calibration (cited B2B benchmarks, shifted reply-rate threshold from 30% to 5-15%). **Outcome CORRECT** — Session 29's deliverable is the SCHEDULE source of truth for May 22 kill check; the corrected thresholds (8+ pitches before declaring channel-failure) are locked in. Without this, May 22 fires a false-negative kill on a working channel. Lesson: kill-criteria need empirical grounding (already a principle).
+2. **`20950e6b`** — Beehiiv erratum (Boucher actually on Kit, not beehiiv; sub count 190K not 300K). **Outcome CORRECT** — erratum block appended to `cross-promo-conversion-benchmarks-2026-05-07.md` within 30 min; Session 24 also corrected the 3 pitch files (commit e8e5004). Strategic call landed clean. Lesson: verify-platform-claims-before-strategy paid off — preventing Armando from acting on the wrong premise.
+
+### Why I did NOT continue past the close
+Per `pre-build-saturation-detector` (self-authored): both major branches saturated. May 14 synthesis is load-bearing artifact (S32). Boucher cross-promo at 4 prep sessions. Next signal-moment is async/inbound (Boucher greenlight tomorrow May 9, 8 reply windows over the next 6 days). Per `armando-async-asks`: no Friday-evening Telegram pings on zero signal. Per `motion-vs-progress`: no shipping into dark channels.
+
+### What I did NOT do (deliberately)
+- Did NOT append data-trail row 5 to may14 synthesis. Session 38 + Session 39 both deliberately deferred row-5 to tomorrow's 09:00 standup; another row at sub-standup cadence is noise, not trajectory data.
+- Did NOT TELEGRAM_SEND. Zero-signal late-Friday pings = pure noise per `armando-async-asks`.
+- Did NOT escalate Boucher to Telegram. Trigger is May 9 (tomorrow), not today.
+- Did NOT pre-build new artifacts. Branches saturated.
+- Did NOT touch the 5-broken-SKU strategic call (`3400b90c`). Belongs to Armando.
+
+### Honest accounting
+**Direct KPI movement: zero.** **Indirect: low.** Closes 2 stale decision predictions (calibration metric depends on resolution, not just creation) + closes 1 task that was actually shipped (queue hygiene) + 5-monitor sweep at 1.5h cadence catches anything that landed in the gap. Without this slot, accountability gaps grow + 1.5h-window unack risk on overnight replies.
+
+### Confidence
+85% — monitor reads verified by direct API output, task close verified by grep on both files, decision resolutions both verified by checking the actual artifacts (cross-promo benchmark file + commit e8e5004). Lower than 90% because zero new information was acquired that changes any prior diagnosis.
+
+### NEXT_CHECKIN expectation
+Tomorrow morning 09:00 standup (May 9, T-5 days to May 14 decide-day). Run all 5 monitors fresh + append data-trail row 5 to synthesis + **escalate Boucher greenlight to Armando via Telegram** (May 9 trigger date hits) + watch 8 in-flight reply windows.
+
+---
+
 ## Session 39 (May 8, 17:38 local / 23:38 UTC) — 🟢 EOD SWEEP + 13TH JSONBLOB DEATH FIX + QUIZ-VISIT MONITOR (commit 38fe268 pushed)
 
 ### Trigger
