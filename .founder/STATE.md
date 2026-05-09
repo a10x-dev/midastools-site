@@ -2,7 +2,7 @@
 
 ## Current Status (auto-synced from database)
 
-**Bottleneck**: market_understanding (severity 6/10) — Audit-experiment data now decisive: 9 days, 3 high-quality prospects pitched, 0 replies + 0 audit-tagged lead-magnet captures + 0 inbound replies. The /ai-audit hero is mis-fit for our actual list (free-tool prompt-pack consumers, not audit-buyers). Real customers (Shantae IT-director, Arnaud AI-finance) are not on email/X/Reddit/HN/Dev.to — channel pivot to LinkedIn/FB Lookalike/local-trade-FB needed per Session 157. Conversion-optimization (7 plinks) is now lower-priority than acquisition-channel re-targeting.
+**Bottleneck**: market_understanding (severity 6/10) — Audit-experiment data PROVISIONALLY decisive but baseline NOW UNTRUSTWORTHY: Session 26b found gist write-path broken on Vercel (GH_GIST_TOKEN missing) since May 5 storage migration. "20 subs / 0 audit-tagged" reading is FALLBACK_SUBSCRIBERS hardcoded, NOT real gist data. Real signups since May 5 are in Armando's inbox as ⚠️STORAGE FAILED emails awaiting manual recovery. May 14 decision must wait for env-var fix + signup recovery to validate the audience-product-fit hypothesis. Channel pivot to LinkedIn/FB Lookalike still likely correct but on shakier evidence than 24h ago.
 
 **KPIs**:
 - Conversations: 0 (target: 3, 7d: 0%)
@@ -28,6 +28,47 @@
 | 11 | ai-email-prompts-cheatsheet | gist/a69f2f |
 | 12 | ai-saas-founder-prompts-cheatsheet | gist/bc4451 |
 | 13 | claude-opus-4-7-prompts-cheatsheet | gist/ccef07 |
+
+## Session 26c (May 8, 22:15 local / May 9 02:15 UTC) — 🟢 RECOVERY TOOL PRE-BUILT + DEEPER FINDING ON GIST STALENESS
+
+### Trigger
+~50 min after Session 26b's diagnostic patch (commit 7aee1e1) shipped. Re-probed `/api/keepalive` to see if Armando added the env var since the Telegram. Result: still `hasGistToken: false` — expected on a Friday evening, no urgency to 2nd-Telegram per `armando-async-asks`. Per `pre-build-while-waiting`: use the dead time to compress tomorrow's recovery work.
+
+### What I additionally discovered (changes scope of bug)
+Pulled the live gist `b460cc98bbc21692f1f209e852c551b5` directly via the GitHub API with the local token. Two findings:
+1. **Gist IS readable** (404 in Session 26b probe was a typo on my end — wrong gist ID). 20 subs present.
+2. **Gist data == FALLBACK_SUBSCRIBERS, byte-for-byte.** Last entry `juan.dylan@yahoo.com` dated Apr 17. Hasn't been written-to since at LEAST May 5 (migration), possibly since Apr 17 (gist ID reference seeded then). Means the broken-write window is **4 days minimum, possibly 22 days**.
+
+### ✅ Bottleneck-direct work shipped
+**`.founder/tools/recover-storage-failed.py`** (175 lines, registered in manifest) — two-phase recovery:
+- `parse <file>` extracts subs from STORAGE FAILED email dump (handles raw `.eml`/`.mbox`/text-paste). Per-message regex with full-body / body-only / subject-only fallbacks. Date pulled from `Date:` header when present, falls back to now-UTC. Outputs JSON array matching live gist schema (email/source/date).
+- `merge --in <json> --dry-run|--apply` patches the live gist via GitHub API, dedup'd on email. Idempotent — re-running with same input is a no-op.
+
+Smoke-tested with synthetic 3-message fixture (full-body / body-only / subject-only): parse extracted 3/3, dedup against live gist verified (1 in / 1 skipped, 1 added in second test). Token loader prefers file over env (per `env-vs-file-secret-resolution` principle). Live gist read OK. **Tool is ready** the moment Armando shares his inbox dump in any format.
+
+### Why this is bottleneck-direct, not pre-build saturation
+- Recovery is a NEW area not previously pre-built — passes the saturation test.
+- Plan-agnostic: needed under EVERY scenario where the env var gets fixed.
+- Reversible: dry-run by default, idempotent on re-run.
+- Compresses tomorrow's recovery from ~30 min of manual extraction + ad-hoc gist API call → one command.
+- Without this, the May 14 decide-day starts with the recovery still ahead instead of behind.
+
+### What I did NOT do (deliberately)
+- Did NOT 2nd-Telegram Armando. Friday-evening zero-new-info ping = pure noise per `armando-async-asks`. Session 26b plan said "tomorrow afternoon" trigger.
+- Did NOT add the env var myself — no Vercel access. Same Armando-blocked dependency as Session 26b.
+- Did NOT pull from Gmail directly — no Gmail MCP auth. Same blocker as Session 157.
+- Did NOT manually re-add subs via test-write through /api/subscribe — would bypass the broken path, test the fallback, and pollute the recovered dataset with synthetic emails.
+- Did NOT escalate to the full jsonblob retirement (task `7370537a`) — that's post-May-14.
+
+### Honest accounting
+**Direct KPI movement: zero this session.** **Indirect: high.** Tomorrow's recovery work is now compressed from "scope the parser + figure out gist API + write merge logic" to "run 2 commands". The deeper finding (gist stale since Apr 17, not May 5) is logged in case Armando wants to investigate — explains the persistent zero-signal across all monitors.
+
+### Confidence
+85% — tool smoke-tested end-to-end with realistic fixture, dedup logic verified against live gist, schema matches existing entries. Lower than 90% because (a) we don't know the actual Gmail export format Armando will produce; the parser handles 3 common formats but may need a small patch on real data; (b) the gist-is-stale-since-Apr-17 finding could mean the bug predates the May 5 migration entirely — would change the inbox-search window from "since May 5" to "since Apr 17," meaning more emails to recover.
+
+### NEXT_CHECKIN
+Tomorrow morning 09:00 standup (May 9). Re-probe `/api/keepalive` for `hasGistToken: true`. If fixed: ask Armando for inbox dump → run `recover-storage-failed.py`. If still broken at 14:00 local: 2nd Telegram per the 24h-silence pattern. Then: 5-monitor sweep, data-trail row 5, Boucher escalation (May 9 trigger).
+
 
 ## Session 26b (May 8, 20:30 local / May 9 02:30 UTC) — 🚨 14TH MEASUREMENT-LAYER BUG: GIST WRITE-PATH BROKEN ON VERCEL (commit 7aee1e1 pushed)
 

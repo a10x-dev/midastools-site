@@ -1,5 +1,14 @@
 [
   {
+    "name": "recover-storage-failed.py",
+    "description": "Parse \u2018\u26a0\ufe0f STORAGE FAILED \u2014 New subscriber\u2019 emails accumulating in iam+midas@armando.mx since the May 5 GH_GIST_TOKEN-missing-on-Vercel bug, then merge the recovered subscribers into the live gist (b460cc98bbc21692f1f209e852c551b5/subscribers.json). Two subcommands: `parse <file>` extracts subs (handles full-body, body-only, and subject-only fallbacks) into JSON; `merge --in <json> --dry-run|--apply` patches the live gist via GitHub API, dedup\u2019d on email. Pre-built Session 26c (2026-05-08 night) BEFORE Armando shares the inbox dump. Smoke-tested with synthetic 3-message fixture: parse \u2713, dedup \u2713, dry-run \u2713.",
+    "language": "python",
+    "path": "recover-storage-failed.py",
+    "use_count": 0,
+    "created_at": "2026-05-09T02:20:00Z",
+    "approved": true
+  },
+  {
     "name": "publish-gist.sh",
     "description": "Publish a markdown file from .founder/content/gists/ as a public gist on gist.github.com/manduks/, submit to IndexNow, and log the URL. Supports --all to batch-publish every unshipped file. Requires GITHUB_GIST_TOKEN env var or token at .founder/.gh_gist_token (gitignored).",
     "language": "bash",
