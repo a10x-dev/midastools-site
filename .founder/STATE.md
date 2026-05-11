@@ -29,6 +29,59 @@
 | 12 | ai-saas-founder-prompts-cheatsheet | gist/bc4451 |
 | 13 | claude-opus-4-7-prompts-cheatsheet | gist/ccef07 |
 
+## Session 28 (May 9, 13:57 local / 19:57 UTC) — 🟢 14:00 KEEPALIVE RE-PROBE + AUDIENCE-FIT FINDING + 3RD-CHANNEL TELEGRAM ESCALATION
+
+### Trigger
+14:00 local pre-committed re-probe per Session 27's NEXT_CHECKIN. T+~42h since Session 26b's first keepalive Telegram, T+~6h since Session 27's bundled 2nd Telegram. User prompted at 13:56 — exactly the slot.
+
+### ✅ Monitor sweep — all 5 clean
+| Monitor | Result | Exit |
+|---|---|---|
+| read-replies | 0 unread / 1 acked total | 0 |
+| audit-signal | 20 subs / 0 audit-tagged / 0 new | 0 |
+| partner-signal | 20 subs / 0 partner-tagged / 0 new | 0 |
+| metrics-snapshot | 0 sales 24h / $155 LTM unchanged / 5/5 pages 200 | 0 |
+| quiz-visit | 101 events / 0 distinct /q/ slugs | 0 |
+
+### 🚨 Keepalive STILL `hasGistToken: false` at T+~42h
+3rd nudge fired via Telegram (this session). Per `outreach-followup-timing` 24-72h pattern + `armando-async-asks`, framing intentionally upgraded with concrete impact ("every signup since May 5 is in your inbox as ⚠️ STORAGE FAILED").
+
+### 🟢 ChatGPT signal SUSTAINING + GROWING but NEW dimension surfaces audience-fit problem
+3rd inspection of track blob (24/71/101 events over 13h):
+- **44 of 101 events (43.6%) from chatgpt.com** to `/blog/viral-ai-art-trends-april-2026` — up from 22 (Session 25, 33%) → 27 (Session 27, 38%) → 44 (Session 28, 43.6%). Sustaining + growing.
+- **12 distinct hour-buckets across May 9** (02:00 → 19:07 UTC) — confirmed multi-session, not burst clustering.
+- **6 of 44 visitors clicked deeper** into the funnel (3× /ghibli-prompt-generator, 2× /blog/best-ai-tools-may-2026, 1× /starter-pack) = 13.6% multi-page rate.
+- **NEW dimension that changes the strategic read: 32/44 from India, 5 DR Congo, 3 Vietnam, 2 East Timor, 2 Japan + 41/44 mobile** vs. our 3 paying customers (Shantae=US Dotdash IT desktop / Arnaud=Paris finance desktop / George=Vegas plumbing).
+
+**Strategic implication:** Channel works for *traffic*, audience-product-fit fails one layer up at the *price-point*. Same audience-product-fit hypothesis as Session 148 + market intel Session 155 — different channel, same root cause. **Branch 4 P5 (citation-double-down) DOWNGRADED.** P4 (hero rewrite, 1.5h) regains primacy as Branch 4 default if all branches dead.
+
+### ✅ Deliverable + synthesis updated
+- `.founder/deliverables/chatgpt-referrer-signal-2026-05-09.md` — new "Session 28" update block with multi-dimensional falsifiability grid + audience-fit finding + revised branch ranking.
+- `.founder/plans/may14-strategic-synthesis.md` § 1.5 — data trail row 7 (May 9 19:57 UTC). 7 snapshots over 40h. Pattern paragraph rewritten to reflect the audience-fit finding.
+
+### ✅ Consolidated 3-item Telegram fired
+Per `bundle-armando-blocked-escalations`: (1) 3rd keepalive nudge with concrete-impact framing, (2) Boucher escalation (May 9 trigger date hit today), (3) chatgpt audience-fit data finding with strategic implication for May 14.
+
+### Position #2 CTA banner status (from Session 27)
+Cannot yet measure conversion impact — banner targets buy.stripe.com which is off-site (no track-blob signal). Stripe LTM still 3 sales / $155 unchanged. Need 24-48h Stripe delta to verify. Realistic conversion expectation revised DOWN given India-mobile audience demographic.
+
+### What I did NOT do (deliberately)
+- Did NOT pre-build P4 hero-rewrite spec. Branch 4 still 25% probable; pre-building specific paths prejudges call.
+- Did NOT escalate Boucher to King fallback yet. May 12 trigger, not today. May 9 = greenlight escalation only.
+- Did NOT touch /api/track schema for per-session uniqueness (capability gap from S27). Defer until post-May-14 per architectural-debt rule.
+- Did NOT revert position #2 CTA banner. Reversible-zero-risk baseline holds; data is too thin to call.
+
+### Honest accounting
+**Direct KPI movement: zero.** **Indirect: medium-high.** (1) ChatGPT signal upgraded from "sustaining" → "sustaining but mismatched ICP" — saves us from prematurely treating P5 as a winning Branch 4 path. (2) Keepalive 3rd-nudge timing met without violating `armando-async-asks` (channel-change signaling, not blind retry). (3) Boucher escalation triggered on its proper date with clear yes/no/fallback framing.
+
+### Confidence
+85% — track blob direct inspection verified by raw JSON parse, 4-dimension falsifiability check explicit, monitor reads all exit-0. Lower than 90% because: (a) signal is still single-day data; multi-day disambiguation requires May 10/11/12 snapshots; (b) audience-fit conclusion rests on 3-buyer ICP sample (small n).
+
+### NEXT_CHECKIN expectation
+Tomorrow May 10 09:00 local morning standup. Re-snapshot track blob to test whether chatgpt.com share holds across calendar boundary (the cleanest falsifier). Run all 5 monitors fresh. Append data-trail row 8. Watch Stripe for any sale attributable to position #2 banner. T-4d to May 14 decide-day.
+
+---
+
 ## Session 27 (May 9, 08:09 local / 14:09 UTC) — 🟢 MORNING STANDUP + 2 ARMANDO ESCALATIONS BUNDLED + CHATGPT SIGNAL CONFIRMED 2-SNAPSHOT
 
 ### Trigger

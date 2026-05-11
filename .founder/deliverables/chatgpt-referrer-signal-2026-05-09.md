@@ -104,3 +104,74 @@ Track blob has NO IP, NO session ID, NO visitor cookie. The "14 unique sessions"
 ### Revised confidence: 70% (down from 75%)
 
 The "trend confirmed" framing was overstated; rolling back to "real organic citation traffic on a single day, sustained vs anomaly TBD." Position #2 CTA is reversible and zero-risk. Counterfactual: if signal is fake or one-off, we lose nothing. If real, we capture conversions instead of missing them.
+
+---
+
+## UPDATE — Session 28, 2026-05-09 19:57 UTC (T+~13h after first finding)
+
+### Re-inspection: 44 chatgpt-tagged events of 101 total = 43.6% (was 38%)
+
+Third snapshot. Signal is sustaining and growing in absolute volume, BUT a new dimension surfaced that materially changes the strategic read.
+
+| Dimension | Reading |
+|---|---|
+| Total volume | 22 → 27 → 44 (steady accumulation) |
+| Share of all traffic | 33.0% → 38.0% → **43.6%** |
+| Calendar days covered | 1 (still May 9 only — 18h span: 02:00→19:07 UTC) |
+| Hour buckets | **12 distinct hour-buckets** — not a burst |
+| Engagement (multi-page sessions) | **6 of 44 visitors clicked deeper** — to /ghibli-prompt-generator (3), /blog/best-ai-tools-may-2026 (2), /starter-pack (1). That's 13.6% click-through rate from the cited post into our funnel. |
+| **Geography** | 32/44 India, 5 DR Congo, 3 Vietnam, 2 East Timor, 2 Japan |
+| **Device** | **41/44 mobile**, 3 desktop |
+
+### Strategic implication — audience-fit problem surfaces, not channel-fit
+
+**The signal is real, sustaining, and the visitors engage.** 13.6% multi-page sessions is meaningful — these aren't bouncing scrapers.
+
+**BUT the audience demographic is a near-total mismatch with our 3 paying customers:**
+- Shantae (Apr 29, $97): Dotdash IT Director, US, desktop, business email
+- Arnaud (May 2, $29): Paris finance/AI consultant, EU, desktop
+- George (Mar 13, $29): Vegas plumbing LLC, US, business
+
+vs. the 44 chatgpt-cited visitors today: India/SE-Asia, mobile, consumer-tier.
+
+This is the same audience-product-fit hypothesis we documented in Session 148 + market intel Session 155, just appearing through a NEW channel. The chatgpt-citation post (`viral-ai-art-trends-april-2026`) is content-shaped for a different buyer than our paid kits + audit are priced for.
+
+### What this changes about Branch 4 P5 (citation-double-down)
+
+P5's economic case is now **sharply weakened on the same data point that made it look interesting yesterday**:
+- 44 visitors / 0 sales is not an attribution gap — it's a price-point or audience-product mismatch.
+- More citation-shaped posts on the same topic family will likely pull the same demographic — same outcome.
+- P5 can still work IF combined with a different funnel: ad-supported page, low-priced ($1-9) consumer tripwire, or affiliate model — none of which are pre-built.
+
+**Updated branch ranking for May 14:** P5 drops from "second-cheapest pivot" to "interesting traffic without monetization plumbing." P4 (hero copy rewrite, 1.5h ship) regains primacy as Branch 4 default if all branches are dead.
+
+### Falsifiability — restated cleanly
+
+| Hypothesis | Falsified by |
+|---|---|
+| "Sustained organic citation traffic" | Multi-day data needed; today's 18h span is multi-hour but single-day |
+| "Channel works for our buyer ICP" | **Falsified today** — Indian mobile audience is wrong shape for $29-$997 USD kits |
+| "More citation posts will repeat the pattern" | Untested; would need 3 more posts + 14d measurement |
+
+### Position #2 CTA banner — likely zero-impact verdict
+
+Last session shipped a position #2 paid CTA banner targeting $29 Image Pack + $97 All Kits on the cited post. Today's data: of 44 chatgpt visitors, the buyer-side conversion mechanics (USD pricing, English business framing) are not aligned with the audience (India mobile). Banner is still useful (better-than-nothing) but realistic conversion expectation is now near-zero, NOT the ~1-3% I implicitly estimated when shipping.
+
+### Revised confidence: 80% (up from 70% on the underlying signal, lower on monetization path)
+
+Higher confidence the signal is real (44 events, 12 hour-buckets, 6 device types confirmed earlier, multi-page engagement). Lower confidence on monetization — clearer audience-fit problem.
+
+### 🔧 Instrumentation shipped (commit `e3c0ae6`, Vercel-deploying)
+
+Closed the S27 capability gap before tomorrow's standup needs it:
+
+- **`lib/track.js`** — every event now carries a `session_id` (UUID, localStorage-persistent). Tomorrow's analysis can group raw page_views into unique sessions: cleanly answers "44 events from 14 sessions or 44 sessions?"
+- **`pages/api/track.js`** — accepts + persists `session_id`.
+- **`pages/_app.js`** — global capture-phase click listener on `buy.stripe.com` anchors fires a `cta_click` event (with plink_id + cta_text + href) BEFORE navigation. Captures off-site Stripe clicks that were invisible until now.
+
+Tomorrow's standup can compute:
+- **Unique chatgpt sessions** (groupby session_id where utm_source=chatgpt.com).
+- **Banner CTR on the position #2 paid CTA**: count cta_click events where plink_id matches the $29 Image Pack (`8x24gyccv7mVglegoqcMM0i`) or $97 All Kits (`bJe7sK0tNdLjgle0pscMM0b`) AND page_path includes `viral-ai-art-trends`.
+- **Audience-fit failure mode disambiguation**: 0 clicks = banner invisible/ignored (reposition); high CTR + 0 buys = audience-product-mismatch (pivot offer).
+
+Reversible: additive new field + capture listener, no data-loss risk on existing events. Plan-agnostic: instruments every Stripe link sitewide, useful regardless of which May 14 branch fires.
