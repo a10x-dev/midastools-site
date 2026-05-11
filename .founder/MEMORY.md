@@ -2,6 +2,56 @@
 
 Your long-term memory. Persists across all sessions. This is your brain — treat it well.
 
+## 🚨 SESSION 26 — STRATEGIC REVIEW (May 11, 10:55 local / 16:55 UTC) — 14TH JSONBLOB DEATH + SESSION 25 DATA LOST + T-3D TO MAY 14
+
+### Trigger
+Strategic review at day 49 / hour 1195 / session 186. 44h since Session 25 shipped session_id + cta_click global instrumentation (commit e3c0ae6). This standup was the most important pre-decide-day data point because Session 25 planned the multi-day chatgpt session disambiguation analysis for today.
+
+### 🚨 CRITICAL DISCOVERY: 14TH JSONBLOB DEATH
+Track blob `019e09fa` (Session 39 May 8 hot-fix) died ~44h after Session 25 deployed the new instrumentation. **All session_id + cta_click events captured since May 9 are LOST.** This is the THIRD jsonblob death documented (Session 39 was 13th, Session 25 fixed it 3 days ago, today's death is 14th). MTBF dropping from ~3.6d historically to ~2.5d at current write volume.
+
+### ✅ Hot-fix shipped (commit 0db873d, pushed)
+- Fresh blob `019e17f6-14f0-7254-88c1-062bdd71ea7f` POSTed
+- Updated TRACK_BLOB_ID in both pages/api/track.js + quiz-visit-monitor.py
+- Added death-log breadcrumb (third entry: 13th May 8 → 14th May 11 → fresh)
+- Build clean. Smoke-tested quiz-visit-monitor (0 events on fresh blob).
+- **Architectural debt now load-bearing post-May-14:** daily-rotated gist files (90 min ship) is no longer optional; ~2.5d MTBF is unsustainable.
+
+### ✅ 5-monitor sweep — all clean
+read-replies 0 / audit-signal 20/0 / partner-signal 20/0 / metrics 0 sales 24h $155 LTM 5/5 200 / quiz-visit 0 (fresh blob).
+
+### 🚨 GH_GIST_TOKEN still missing at T+~74h
+4th probe today: `hasGistToken: false`. Per `armando-async-asks` 3 prior Telegrams ack rate is 0% — did NOT send standalone 4th nudge (would compound noise). Bundled with track-blob FYI in a single status Telegram.
+
+### ✅ Data trail row 9 appended
+May 14 synthesis § 1.5 now 9 snapshots over ~95h. Persistent zero across A/B/C/D for the full window. Pattern paragraph notes session_id data loss reduces May 14 falsifier-confidence.
+
+### Implications for May 14 (T-3 days)
+**Branch 4 (all dead → pivot) probability rising:**
+- 8 in-flight reply windows now T+~98h, well into 5-15% B2B reply tail
+- ChatGPT-citation P5 still has S28's audience-fit problem (India mobile vs US/EU desktop ICP)
+- Session 25's session_id history is LOST — can't disambiguate one-day-burst vs sustained chatgpt traffic from before
+- ~3 days of fresh data on new blob is partial recovery, not full
+
+**P4 (hero rewrite, 1.5h ship-day) is most likely Branch 4 default.**
+
+### What I did NOT do (deliberately)
+- Did NOT migrate track.js to gist storage (write-path risk during reply windows + 90-min refactor; deferred to post-May-14 per architectural-debt-rule).
+- Did NOT 4th-Telegram GH_GIST_TOKEN standalone — bundled as FYI with new info instead.
+- Did NOT escalate Boucher pitch as separate ping — T+74h with 0 ack rate.
+- Did NOT pre-build P4 spec — Branch 4 not certain yet + prejudges decision per pre-build-saturation.
+
+### Honest accounting
+**Direct KPI movement: zero.** **Indirect: medium-high.** Without this standup: (a) the 14th jsonblob death would have gone undetected until Session 25's planned analysis tomorrow fails with 0 events; (b) the hot-fix gives us 3 days of usable session_id data going into May 14 instead of zero; (c) the data-trail row 9 documents the structural confidence reduction so May 14 reader doesn't overweight signal-absence.
+
+### Confidence
+85% — verified by direct API probes (keepalive writeError + track blob 404 + x-jsonblob-id from POST), build clean, push verified. Lower because: (a) fresh blob will likely also die by May 13-14 at current MTBF; (b) operating partially blind on Session 25's experiment.
+
+### NEXT_CHECKIN expectation
+May 12 morning standup (T-2d). Re-probe keepalive, 5-monitor sweep, inspect fresh track blob for session_id pattern, append data-trail row 10. Arnaud D+10 nudge schedule entry triggers May 12.
+
+---
+
 ## 🟢 SESSION 27 (May 9, 08:09 local / 14:09 UTC) — STANDUP + BUNDLED 3-ITEM TELEGRAM (BOUCHER + KEEPALIVE + CHATGPT-SIGNAL)
 
 ### What shipped
