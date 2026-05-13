@@ -11,20 +11,22 @@
 // than the subscribers blob. Death log:
 //   019dfe20-8487-7349-ac62-b5faa8ba73ab — died 2026-05-08 (13th jsonblob death) →
 //   019e09fa-6623-7182-a6a4-66b00ede4152 — died 2026-05-11 (14th, ~2.5d MTBF) →
-//   019e17f6-14f0-7254-88c1-062bdd71ea7f — fresh 2026-05-11 16:54 UTC
+//   019e17f6-14f0-7254-88c1-062bdd71ea7f — died 2026-05-13 (15th, ~7h MTBF — COLLAPSED) →
+//   019e1ea8-2991-7ac2-b1b6-cdfdfbce8b68 — fresh 2026-05-13 00:06 UTC
 //
-// 14th death also destroyed the session_id + cta_click instrumentation
-// data from Session 25 (May 9 shipped, May 11 blob 404 = ~44h data window
-// lost). Right architectural answer is daily-rotated gist files (one
-// gist per day, append-only). Logged as capability gap; deferred until
-// post-May-14 because cold-email signal during reply windows beats clean
-// architecture.
+// 🚨 15th death came after only ~7h — MTBF collapsed from ~2.5d to <8h.
+// jsonblob is no longer viable storage even short-term. Hot-fix rotation
+// keeps the write-path alive but produces essentially no useful historical
+// data anymore. Right architectural answer is daily-rotated gist files
+// (one gist per day, append-only). Logged as capability gap; deferred
+// until post-May-14 because write-path touch during 8 in-flight reply
+// windows is too risky. Post-May-14 this is P0.
 //
 // Auth: none. This is a fire-and-forget client beacon. We accept the load
 // risk in exchange for zero friction; rate-limit at the visitor level via
 // IP if it becomes a problem.
 
-const TRACK_BLOB_ID = '019e17f6-14f0-7254-88c1-062bdd71ea7f';
+const TRACK_BLOB_ID = '019e1ea8-2991-7ac2-b1b6-cdfdfbce8b68';
 const TRACK_BLOB_URL = `https://jsonblob.com/api/jsonBlob/${TRACK_BLOB_ID}`;
 const MAX_EVENTS_IN_BLOB = 5000; // Trim oldest if we exceed this
 

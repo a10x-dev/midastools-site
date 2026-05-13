@@ -44,7 +44,7 @@ LAST_SNAP = STATE_DIR / "quiz-monitor-last.json"
 
 # Track-events jsonblob — separate from subscribers blob.
 # Death log lives in pages/api/track.js; update both when blob is rotated.
-TRACK_BLOB_ID = "019e17f6-14f0-7254-88c1-062bdd71ea7f"
+TRACK_BLOB_ID = "019e1ea8-2991-7ac2-b1b6-cdfdfbce8b68"
 TRACK_BLOB_URL = f"https://jsonblob.com/api/jsonBlob/{TRACK_BLOB_ID}"
 
 QUIZ_PATH_RE = re.compile(r"^/q/([a-z0-9-]+)", re.IGNORECASE)
