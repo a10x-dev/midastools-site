@@ -2,12 +2,12 @@
 
 ## Current Status (auto-synced from database)
 
-**Bottleneck**: market_understanding (severity 6/10) — Audit-experiment data PROVISIONALLY decisive but baseline NOW UNTRUSTWORTHY: Session 26b found gist write-path broken on Vercel (GH_GIST_TOKEN missing) since May 5 storage migration. "20 subs / 0 audit-tagged" reading is FALLBACK_SUBSCRIBERS hardcoded, NOT real gist data. Real signups since May 5 are in Armando's inbox as ⚠️STORAGE FAILED emails awaiting manual recovery. May 14 decision must wait for env-var fix + signup recovery to validate the audience-product-fit hypothesis. Channel pivot to LinkedIn/FB Lookalike still likely correct but on shakier evidence than 24h ago.
+**Bottleneck**: market_understanding (severity 6/10) — Audit-experiment data baseline DOUBLE-COMPROMISED at T-3d to May 14 decide-day: (1) gist write-path broken on Vercel since May 5 (GH_GIST_TOKEN missing, T+~74h after 1st escalation, 4 silent pings) — subs metric is FALLBACK hardcoded, real signups in Armando inbox as ⚠️STORAGE FAILED emails; (2) track blob 14th jsonblob death today destroyed Session 25's session_id + cta_click instrumentation data (44h of telemetry lost). Hot-fix shipped (commit 0db873d, fresh blob 019e17f6) giving ~3 days of usable data. May 14 confidence reduced — Branch 4 (all dead → pivot to P4 hero rewrite) trending most-likely. Post-May-14 must include /api/track migration to durable gist storage.
 
 **KPIs**:
 - Conversations: 0 (target: 3, 7d: 0%)
-- Users: 20 (target: 30, 7d: -13.043478260869565%)
-- Revenue: 155 (target: 997, 7d: 100%)
+- Users: 20 (target: 30, 7d: 0%)
+- Revenue: 155 (target: 997, 7d: 0%)
 
 ---|---|---|---|---|
 | 2026-05-02 | arnaud.ademes@gmail.com (Arnaud Demes) | AI Prompt Mega Pack ($29 SKU) | $29 | py_3TSYXnAdkDx8xZMk0S1sanqe |

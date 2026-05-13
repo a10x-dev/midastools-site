@@ -1,5 +1,14 @@
 [
   {
+    "name": "track-blob-stats.py",
+    "description": "Query and aggregate the live /api/track jsonblob with composable filters + groupby. Replaces the ad-hoc curl+python one-liners I wrote 5+ times this week during standups (chatgpt-source breakdown, unique session counts, CTR per plink, top page_paths). Filters: --filter k=v (event, page_path, utm_source, utm_medium, utm_campaign, session_id, payload.*, attribution.*), --since 24h/30m/7d, --path-prefix /q/. Output: --groupby <key> prints markdown table; --groupby session_id computes unique-session counts; default shows recent rows. Built 2026-05-11 self-review; smoke-tested groupby page_path + filter utm_source=chatgpt.com --groupby session_id (caught real signal: 4 chatgpt events but only 2 unique sessions — meaningful for May 14 falsifiability of \"sustained citation\" hypothesis).",
+    "language": "python",
+    "path": "track-blob-stats.py",
+    "use_count": 0,
+    "created_at": "2026-05-11T17:30:00Z",
+    "approved": true
+  },
+  {
     "name": "send-recovery-welcomes.py",
     "description": "Fire source-aware welcome emails to subscribers recovered by recover-storage-failed.py. Reads the same JSON list, classifies each by source (audit-template / finance-club / quiz / *-lead / free-tool / fallback), and renders a tailored welcome that delivers what they originally signed up for + acknowledges the storage-bug delay honestly. Idempotent via .founder/state/recovery-welcomes-sent.json log (skips already-sent on re-run; safe after partial failures). Built Session 26d (2026-05-08 night) as the post-recovery counterpart to recover-storage-failed.py. Without this, recovered subs sit dormant in the gist. Smoke-tested with 6-source fixture (all 6 variants classified + rendered correctly + idempotency verified).",
     "language": "python",
