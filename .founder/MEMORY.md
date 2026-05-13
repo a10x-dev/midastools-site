@@ -2,6 +2,57 @@
 
 Your long-term memory. Persists across all sessions. This is your brain — treat it well.
 
+## 🚨 SESSION 26 EOD (May 12, 18:06 local / May 13 00:06 UTC) — 15TH JSONBLOB DEATH AT 7H MTBF — COLLAPSED + T-2D TO MAY 14
+
+### Trigger
+Pair session this afternoon (3-sales-cluster analysis already shipped at strategy_model_launch_wave_pattern.md). EOD slot DUE at 17:00. User prompt at 18:04 "what's next?" Open-ended. T-2 days to May 14 decide-day.
+
+### 🚨 CRITICAL: 15TH JSONBLOB DEATH — MTBF COLLAPSED FROM ~2.5d TO ~7h
+Track blob `019e17f6` (rotated Session 26 today at 16:55 UTC) is 404 dead at 00:06 UTC — that's **7h11m MTBF, COLLAPSED from the prior ~2.5d**. jsonblob is no longer viable storage even for short-term continuity. Every rotation produces a fresh-zero state before any data accumulates. Session 25's session_id + cta_click + multi-day chatgpt disambiguation hypothesis CANNOT be tested before May 14.
+
+### ✅ Hot-fix shipped (commit fe3e5a8, pushed)
+- POST'd fresh blob `019e1ea8-2991-7ac2-b1b6-cdfdfbce8b68`
+- Updated `pages/api/track.js` TRACK_BLOB_ID + death-log breadcrumb (4 entries: 13th May 8 → 14th May 11 → 15th May 13 → fresh)
+- Updated `.founder/tools/quiz-visit-monitor.py` TRACK_BLOB_ID
+- Build clean, smoke-tested clean
+- **Architectural debt promoted from "post-May-14 deferred" to "post-May-14 P0":** at <8h MTBF, hot-fix can't compound. Need durable storage (daily gist files or Vercel KV) before any future instrumentation work compounds.
+
+### ✅ 5-monitor sweep — all clean
+| Monitor | Result | Exit |
+|---|---|---|
+| read-replies | 0 unread / 1 acked total | 0 |
+| audit-signal | 20 subs / 0 audit-tagged / 0 new | 0 |
+| partner-signal | 20 subs / 0 partner-tagged / 0 new | 0 |
+| metrics-snapshot | 0 sales 24h / $155 LTM unchanged / 5/5 pages 200 | 0 |
+| quiz-visit (post-hot-fix) | 0 events on fresh blob | 0 |
+
+### 🚨 GH_GIST_TOKEN still missing at T+~98h
+5th silent probe. 4 prior Telegrams unacked. Per `armando-async-asks`, no 5th nudge tonight — pure noise. The keepalive endpoint deliberately exposes writeError + hasGistToken so any future pair-session glance settles it.
+
+### ✅ Data trail row 10 appended to may14 synthesis
+10 snapshots over ~98h. Persistent zero across all branches. **15th death + GH_GIST_TOKEN silence both surfaced explicitly as confidence-reducers for May 14.** Branch 4 probability further elevated; **P5 (citation-double-down) effectively eliminated** because without durable storage, citation traffic deltas can't be measured + S28 audience-fit problem (India mobile vs US/EU desktop ICP) was already disqualifying. **Branch 4 default narrows to P4 (hero rewrite).**
+
+### Implications for May 14 (T-2 days)
+**Branch 4 probability now ~50-60% (up from 25% in S32):**
+- 8 reply windows at T+~98h with 0 replies — long tail unlikely
+- Boucher ungreenlit T+~98h — Experiment C effectively missed
+- Data baseline compromised on multiple axes (subs FALLBACK, track ephemeral)
+- **P4 (hero rewrite) is the default Branch 4 path** but needs S24 buyer-vs-funnel-mismatch integration: real buyers (Stripe Link one-click impulse buyers) are NOT in our content funnel, so hero copy alone may not be the right intervention. The deeper question for May 14: is P4 "hero rewrite" or is it "find where Stripe-Link-class buyers actually congregate"?
+
+### What I did NOT do (deliberately)
+- Did NOT migrate /api/track to durable storage tonight. Write-path touch during 8 in-flight reply windows is too risky per `hot-fix-before-migrate-during-reply-windows`. Architectural debt logged as post-May-14 P0.
+- Did NOT 5th-Telegram GH_GIST_TOKEN. `armando-async-asks` discipline holds — 4 prior pings silent, 5th is noise.
+- Did NOT pre-build P4 hero-rewrite spec. The S24 buyer-vs-funnel-mismatch insight (real buyers not in content funnel) suggests P4 may not be hero rewrite at all — it may be paid discovery / marketplace listings / lookalike ads. Pre-building a hero-rewrite spec tonight would prejudge the deeper strategic call. Tomorrow's standup should integrate S24 insight into P4 framing before any pre-build.
+- Did NOT TELEGRAM_SEND. Quiet infra fix + no urgent decide-now items.
+
+### Confidence
+85% — direct API probes verified (15th death by 404 + fresh blob 201 with x-jsonblob-id header captured; keepalive writeError verified). Build clean, push verified by `0db873d..fe3e5a8 main -> main`. Lower than 90% because (a) MTBF collapse pattern (2.5d → 7h) may continue and break the fresh blob within hours; (b) the May 14 decision is now operating on a substantially weaker data baseline than originally planned.
+
+### NEXT_CHECKIN expectation
+Tomorrow May 13 morning standup (T-1d). Re-probe keepalive (silent count). Inspect fresh track blob `019e1ea8` for any session_id signal that accumulated overnight (likely minimal given MTBF). 5 monitors + data-trail row 11. **Critical pre-decide work tomorrow:** integrate S24 buyer-vs-funnel-mismatch into May 14 synthesis Branch 4 P4 framing — should P4 be hero-rewrite, OR is the real intervention "test paid discovery for Stripe-Link-class impulse buyers" (Reddit promoted, FB lookalike, marketplace listing)?
+
+---
+
 ## 🚨 SESSION 26 — STRATEGIC REVIEW (May 11, 10:55 local / 16:55 UTC) — 14TH JSONBLOB DEATH + SESSION 25 DATA LOST + T-3D TO MAY 14
 
 ### Trigger

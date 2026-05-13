@@ -80,6 +80,7 @@ Per `verify-kpi-baseline-before-strategy`: snapshots at intervals between May 7 
 | May 9 14:09 UTC / 08:09 local (Session 27) | 0/0/n.a. | 0 | 0 | 3 | $155 | T-5d to decide-day; 5-monitor sweep all clean; track blob now 71 events (up from 67 in S25); **27 of 71 (38.0%) are utm_source=chatgpt.com to /blog/viral-ai-art-trends-april-2026** — but falsifiability check: ALL 27 are from May 9 only (10h span, 6 distinct UA fingerprints, ~14 unique sessions). NOT a 2-snapshot multi-day trend — could be one-day featured-citation burst OR sustained start. **Need May 10/11/12 snapshots to disambiguate.** SHIPPED position #2 paid CTA on the cited post (commit a6a42fc) — Reversible $29 Image Pack banner immediately after intro. Bottom CTAs were 1,400 lines deep. Keepalive STILL `hasGistToken: false` at T+~36h (Armando-blocked, 2nd Telegram fired); Boucher pitch ungreenlit T+~36h, 2nd Telegram fired (May 9 trigger). |
 | May 9 19:57 UTC / 13:57 local (Session 28) | 0/0/n.a. | 0 | 0 | 3 | $155 | T-5d to decide-day; 5-monitor sweep all clean; track blob now 101 events (up from 71 in S27); **44 of 101 (43.6%) are utm_source=chatgpt.com to /blog/viral-ai-art-trends-april-2026** — signal sustaining + growing (22→27→44). Multi-page engagement: 6/44 visitors clicked deeper to /ghibli-prompt-generator (3) + /blog/best-ai-tools-may-2026 (2) + /starter-pack (1) = 13.6% click-through. **NEW falsifiability check FAILED:** 32/44 from India, 5 DR Congo, 3 Vietnam, 2 East Timor, 2 Japan + 41/44 mobile vs our buyer ICP (US/EU desktop knowledge-workers). **Channel works for traffic, audience-product-fit problem reasserts itself one layer up.** P5 (citation-double-down) DOWNGRADED — same 44 visitors / 0 sales pattern is now ICP-mismatch, not just attribution gap. P4 (hero rewrite, 1.5h) regains primacy as Branch 4 default. Keepalive STILL `hasGistToken: false` at T+~42h — 3rd channel-change Telegram firing now per outreach-followup-timing. |
 | May 11 16:55 UTC / 10:55 local (Session 26 / strategic review) | 0/0/n.a. | 0 | 0 | 3 | $155 | T-3d to decide-day; 5-monitor sweep all clean; **🚨 14TH JSONBLOB DEATH:** track blob `019e09fa` (Session 39 May 8 fix) is 404 dead. ~2.5d MTBF on this blob — Session 25's session_id + cta_click instrumentation data (44h of telemetry) is **LOST**. Hot-fix shipped (commit 0db873d): fresh blob `019e17f6` rotated in track.js + quiz-visit-monitor.py, build clean + pushed. **The clean falsifier data Session 25 designed (multi-day chatgpt session disambiguation + banner CTR) cannot be computed from history — only from May 11 forward.** Have ~3 days of fresh data available for May 14. **Keepalive STILL `hasGistToken: false` at T+~74h** — 4th nudge needed (T+72h passed the outreach-followup-timing 24-72h pattern). Subscribe path still broken; all signups since May 5 still landing in STORAGE FAILED emails awaiting recovery. Boucher pitch ungreenlit T+~74h. **No new replies** to the 8 in-flight reply windows (Pham + 5 batch-1 D+2 nudges + Hiedeh/Doug audit follow-ups) — all now past T+~98h, well into the standard 5-15% B2B cold reply window's long tail. **Implication for May 14:** Branch 4 (all dead → pivot) probability rising; P4 (hero rewrite) is most likely Branch 4 path given P5's audience-fit problem from S28 still standing + the lost session_id data can't disconfirm. |
+| May 13 00:06 UTC / May 12 18:06 local (Session 26 EOD) | 0/0/n.a. | 0 | 0 | 3 | $155 | T-2d to decide-day; 5-monitor sweep all clean; **🚨 15TH JSONBLOB DEATH AT 7h11m MTBF — COLLAPSED FROM ~2.5d.** Track blob `019e17f6` (rotated Session 26 ~7h ago) already 404. Hot-fix shipped (commit fe3e5a8): fresh blob `019e1ea8` rotated. **jsonblob is no longer providing usable data even short-term.** Session 25's session_id + cta_click + multi-day chatgpt disambiguation hypothesis cannot be tested before May 14 — every rotation produces fresh-zero. **Keepalive STILL `hasGistToken: false` at T+~98h** — 5th silent probe, NO 5th Telegram (4 prior pings + `armando-async-asks` rule = noise). Subscribe path still broken; signups since May 5 still landing in STORAGE FAILED emails. Boucher pitch ungreenlit T+~98h. **No new replies** to the 8 in-flight reply windows. **Implication for May 14: Branch 4 probability further elevated. P5 (citation-double-down) effectively eliminated as a Branch 4 option** — without durable storage we cannot measure citation traffic deltas + April/May ICP data already showed audience-fit mismatch. **Branch 4 default narrows to P4 (hero rewrite, 1.5h ship).** Architectural debt (track migration) promoted from "post-May-14 deferred" to "post-May-14 P0". |
 
 **Pattern as of May 9 13:57 local (T-5d):** Persistent zero across A/B/C/D — 7 consecutive snapshots over 40h. **ChatGPT-citation signal: REAL + sustaining (44 events at 43.6% share, 12 distinct hour-buckets, 13.6% multi-page engagement) — but audience demographic (India mobile) is a near-total mismatch with our 3 paying-customer ICP (US/EU desktop knowledge-workers).** P5 weakens; P4 (hero rewrite) regains primacy as Branch 4 default if all branches dead. **ChatGPT-citation signal — earlier framing was TODAY-only data** (27 events all May 9 02:08-12:45 UTC, ~14 unique sessions across 6 device types). Falsifiability check ruled out single-burst-session AND single-device-bot, but cannot yet rule out single-day featured-citation. **P5 status downgraded back to "N=1 hold, pending May 10/11/12 snapshots"** to disambiguate sustained citation vs. one-day burst. Position #2 paid CTA shipped on the cited post (commit a6a42fc) so any future ChatGPT-referrer traffic gets a converting funnel, regardless of P5 May 14 weight. **Reply-window status (8 in-flight)**: Pham audit follow-up at T+~38h, 5 batch-1 D+2 nudges at T+~22h, 2 audit follow-ups Hiedeh/Doug at T+~46h. 7 days since last paid sale (Arnaud, May 2). **Quiz-visit telemetry now LIVE** (Session 39 fix): 67 page_views captured but 0 /q/{slug} clicks confirms batch-1 cold prospects didn't engage with the personalized URLs — partial falsification of the cold-email-format-mismatch hypothesis. **One reply between now and May 14 = Branch 2; zero = Branch 4 unless Boucher fires.**
 
@@ -179,22 +180,37 @@ START
 
 **Diagnosis:** Three independent acquisition channels at 9-16 days each = real evidence the BOTTLENECK IS WRONG. We've been chasing acquisition; the actual blocker is upstream. Possible upstream issues:
 1. **Offer-shape mismatch.** Our SKUs don't match what our funnel-visitors want.
-2. **Channel-shape mismatch.** Our acquisition surfaces don't reach the people who'd buy.
+2. **Channel-shape mismatch.** Our acquisition surfaces don't reach the people who'd buy. ← **S24 strongly supports this**
 3. **Trust-shape mismatch.** People see our offer + brand and don't believe we'll deliver.
 
-**Action — pick ONE pivot path, kill the others:**
+**🚨 Critical re-framing from Session 24 + Session 28 + Session 26 EOD findings (May 11-13):**
+- **All 3 paying customers used Stripe Link one-click** (S158 attribution dump). None were on subscriber list before purchase. None had detectable content-funnel touchpoint.
+- **Content-funnel visitor demographic** (S28 chatgpt.com referrer data): 32/44 India + 41/44 mobile.
+- **Buyer demographic** (S158 attribution): US Dotdash IT director + Paris finance/AI + Vegas plumbing — US/EU desktop knowledge-workers.
+- **Implication: the population that VISITS our content is fundamentally different from the population that BUYS.** Hero copy rewrite (P4a) assumes the same population. If S24 is correct, no amount of hero copy will convert India-mobile research-mode visitors into US-desktop impulse buyers.
 
-| Path | Test | Cost | Cycle time |
-|---|---|---|---|
-| **P1 — Drop /ai-audit, ship $1,499 reposition** | Plan D from Session 155. New deliverable spec. New positioning. Same audience. | 3.5 hr ship | 30-day test (1-2 LinkedIn DM volleys) |
-| **P2 — Pivot to in-product CTA** | Add upsell from /quiz → $29 tripwire. Catches mid-funnel intent. Memory says all 3 buyers used Stripe Link. | 2 hr ship | 14-day test (passive — depends on traffic) |
-| **P3 — Kill MidasTools brand acquisition, pivot to OpenClaw** | OpenClaw had a sale (George $29) on a separate vercel property. Memory shows OpenClaw might be the actual brand. | 4 hr ship + brand decision | 30-day test |
-| **P4 — Hero copy rewrite** | Per ICP intel: audience is "established professional, not AI-native". Our copy reads "AI-native creator". Single-page rewrite. | 1.5 hr ship | 14-day test |
-| **P5 — Double down on AI-search citation pages** | Session 26e direct blob inspection (May 9): 22/67 recent page_views came from `chatgpt.com` referrer to a single viral-trends blog post. Ship 3 more citation-shaped posts on adjacent trending AI topics + measure referrer delta. | 4-6 hr ship (3 posts) | 14-day test (passive — referrer-driven) |
+**Branch 4 splits into two competing hypotheses that need sequencing:**
 
-**Recommendation if Branch 4 fires:** P4 first (cheapest, fastest, falsifiable in 14d) — but if P5 referrer signal grows organically before May 14, P5 becomes a stronger first move because it has actual demand-pull evidence vs. P1-P4 hypotheses. If P4 also produces 0 signal, escalate severity 6 → 8 and trigger company-survival review.
+| Path | Underlying hypothesis | Test | Cost | Cycle time |
+|---|---|---|---|---|
+| **P1 — $1,499 reposition (Plan D)** | Offer-shape: $997 wrong price point | Plan D from Session 155. New positioning. Same audience. | 3.5 hr ship | 30-day test (1-2 LinkedIn DM volleys) |
+| **P2 — In-product CTA on /quiz** | Mid-funnel intent goes unmonetized | Add upsell from /quiz → $29 tripwire. Catches the Stripe-Link-impulse pattern at the page where intent is already shown. | 2 hr ship | 14-day test (passive — depends on traffic) |
+| **P3 — Pivot to OpenClaw brand** | MidasTools brand is the blocker | OpenClaw had a sale (George $29). Memory shows separate vercel property may be the converting brand. | 4 hr ship + brand decision | 30-day test |
+| **P4a — Hero copy rewrite** (assumes funnel-visitors CAN buy with better copy) | Trust/copy-shape: current visitors COULD convert | Per ICP intel: audience is "established professional, not AI-native". Our copy reads "AI-native creator". Single-page rewrite. | 1.5 hr ship | 14-day test |
+| **P4b — Buyer-discovery test** (assumes S24: buyers are not in content funnel) | Channel-shape: real buyers are on Reddit / FB / marketplaces — invisible to our current funnel | $30 Reddit promoted post in r/ChatGPTPromptGenius pointing at /ai-prompt-mega-pack ($29) — the SKU shape that closed 2 of 3 sales. OR: list on Gumroad / AppSumo / ProductHunt (free if approved). | 1-2 hr ship + $30 cash | 14-day test (paid spend == fast signal) |
+| ~~**P5 — Double down on AI-search citation pages**~~ | ~~Citation traffic converts~~ | ~~ELIMINATED Session 26 EOD May 12: (1) audience-fit problem confirmed S28 (India/mobile ≠ buyer ICP), (2) durable storage unavailable for measuring referrer delta (jsonblob MTBF collapsed <8h Session 26 EOD).~~ | — | — |
 
-**Confidence we'd execute well:** 60%. Branch 4 is the hardest because it requires admitting the bottleneck-diagnosis was wrong for 16+ sessions.
+**Recommendation if Branch 4 fires — RUN P4a + P4b IN PARALLEL, NOT SEQUENTIAL:**
+
+The critical-assumption test:
+- If S24 is wrong (funnel-visitors CAN buy with better copy) → P4a moves the needle in 14d, P4b will also move it (any audience helps) but P4a is cheaper.
+- If S24 is right (buyers are not in content funnel) → P4a produces 0 conversion lift, P4b produces measurable buyer signal at $30 cost.
+- **Running both simultaneously, $30 cash + 3 hr ship, lets us disconfirm S24 in 14 days.**
+- Sequential (P4a first, then P4b if dead) costs an extra 14 days before we know which hypothesis is right.
+
+If BOTH P4a and P4b produce 0 signal at T+14d (May 28): escalate severity 6 → 8 and trigger company-survival review. The bottleneck-diagnosis was wrong AND the alternative was also wrong = the company has a deeper problem (no real-world demand for the SKU shape we're shipping). At that point P1 (Plan D reposition) becomes the last hypothesis worth testing before kill-or-revive decision.
+
+**Confidence we'd execute well:** 65%. The parallel-P4a-P4b sequencing is the right call but depends on Armando approving the $30 Reddit spend (he hasn't yet — flagged for May 14). If he declines paid, fall back to free buyer-discovery channels (Gumroad listing, ProductHunt submission) at the cost of slower signal.
 
 ---
 
@@ -223,7 +239,13 @@ START
 
 **80%.** Branches 1-4 are exhaustive (if any new branch comes up I missed, decision quality goes down). Decision-tree gates are unambiguous (sale → branch 1 / reply → branch 2 / no-fire → branch 3 / fired+dead → branch 4). Lower than 90% because I'm forecasting reply rates with N=2 customer data points; each branch's conversion estimates carry inherited uncertainty.
 
-**Calibration:** 50% probability we land in Branch 3 (Boucher incomplete) given Armando's pattern of slow async greenlight. 25% Branch 4. 20% Branch 2. 5% Branch 1.
+**Calibration (revised Session 26 EOD May 12, T-2d):** With 8 reply windows all silent at T+~98h + Boucher ungreenlit T+~98h + 15th jsonblob death eliminating P5 + data baseline doubly-compromised:
+- Branch 4 (all dead): 55% (raised from 25%) — 8 reply windows past long tail of 5-15% B2B cold reply rate
+- Branch 3 (Boucher incomplete): 30% (down from 50%) — incomplete because never fired, not because reply pending
+- Branch 2 (weak signal): 12% (down from 20%) — some chance one of 8 windows produces a late reply
+- Branch 1 (paid sale): 3% (down from 5%) — no inflight signal
+
+**If Branch 4 fires (most likely):** P4a + P4b parallel (3 hr + $30 if approved, else free buyer-discovery channels).
 
 ---
 
@@ -237,4 +259,4 @@ START
 
 ---
 
-**Last updated:** 2026-05-07 20:45 local. Update on May 14 09:00 with the data-input row filled.
+**Last updated:** 2026-05-12 18:30 local (Session 26 EOD, T-2d) — Branch 4 P4 split into P4a (hero rewrite) + P4b (buyer-discovery), P5 (citation) struck as eliminated, calibration probabilities revised based on 10-row data trail + 15th jsonblob death + GH_GIST_TOKEN T+98h silence. Next update May 13 09:00 standup (T-1d) + May 14 09:00 decide-day with data-input row filled.
