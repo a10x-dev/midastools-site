@@ -12,9 +12,10 @@
 //   019dfe20-8487-7349-ac62-b5faa8ba73ab — died 2026-05-08 (13th jsonblob death) →
 //   019e09fa-6623-7182-a6a4-66b00ede4152 — died 2026-05-11 (14th, ~2.5d MTBF) →
 //   019e17f6-14f0-7254-88c1-062bdd71ea7f — died 2026-05-13 (15th, ~7h MTBF — COLLAPSED) →
-//   019e1ea8-2991-7ac2-b1b6-cdfdfbce8b68 — fresh 2026-05-13 00:06 UTC
+//   019e1ea8-2991-7ac2-b1b6-cdfdfbce8b68 — died 2026-05-14 02:13 UTC (16th, <26h MTBF) →
+//   019e2442-f1bb-7807-ae33-88a0d379d5e0 — fresh 2026-05-14 02:13 UTC
 //
-// 🚨 15th death came after only ~7h — MTBF collapsed from ~2.5d to <8h.
+// 🚨 16th death @ T-1d to May 14 decide-day — MTBF stuck at <1d.
 // jsonblob is no longer viable storage even short-term. Hot-fix rotation
 // keeps the write-path alive but produces essentially no useful historical
 // data anymore. Right architectural answer is daily-rotated gist files
@@ -26,7 +27,7 @@
 // risk in exchange for zero friction; rate-limit at the visitor level via
 // IP if it becomes a problem.
 
-const TRACK_BLOB_ID = '019e1ea8-2991-7ac2-b1b6-cdfdfbce8b68';
+const TRACK_BLOB_ID = '019e2442-f1bb-7807-ae33-88a0d379d5e0';
 const TRACK_BLOB_URL = `https://jsonblob.com/api/jsonBlob/${TRACK_BLOB_ID}`;
 const MAX_EVENTS_IN_BLOB = 5000; // Trim oldest if we exceed this
 
