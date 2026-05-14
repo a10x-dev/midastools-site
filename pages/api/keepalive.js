@@ -1,9 +1,12 @@
-// Subscriber storage keepalive — writes subscribers back to jsonblob daily
-// to prevent the ~30-day inactivity eviction. Called by Vercel cron.
+// Subscriber storage keepalive + health probe.
 // GET /api/keepalive?key=mt-outreach-2026
+//
+// Post-2026-05-14 migration: primary storage is Upstash KV (Vercel marketplace
+// integration). Gist remains as a 48h safety net. Response surfaces health of
+// BOTH layers so we can verify the migration end-to-end.
 
 import { Resend } from 'resend';
-import { readSubscribers, writeSubscribers, BLOB_ID } from '../../lib/subscribers';
+import { readSubscribers, writeSubscribers, hasKvCreds } from '../../lib/subscribers';
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 const NOTIFY_EMAIL = 'iam+midas@armando.mx';
@@ -16,37 +19,49 @@ export default async function handler(req, res) {
   const subs = await readSubscribers();
   const writeResult = await writeSubscribers(subs);
 
-  const healed = writeResult.healed === true;
-  const newBlobId = writeResult.newBlobId;
+  // Surface fine-grained health
+  const kvOk = writeResult.kvSuccess === true;
+  const gistOk = writeResult.gistSuccess === true;
+  const hasKv = hasKvCreds();
+  const hasGist = !!process.env.GH_GIST_TOKEN;
 
-  // If the write healed a dead blob, notify Armando so we can update the constant
-  if (healed && newBlobId) {
+  // Alert Armando if KV is misconfigured (since this is the new primary)
+  if (!hasKv) {
     try {
       await resend.emails.send({
         from: 'MidasTools <updates@midastools.co>',
         to: NOTIFY_EMAIL,
-        subject: `🔧 Subscriber blob auto-healed — update BLOB_ID to ${newBlobId}`,
+        subject: '🚨 KV creds missing in Vercel env — subscriber writes degraded',
         html: `
-          <h2>Self-heal triggered</h2>
-          <p>The jsonblob at <code>${BLOB_ID}</code> returned 404, so a new blob was auto-created.</p>
-          <p><strong>New blob ID:</strong> <code>${newBlobId}</code></p>
-          <p><strong>Subscribers preserved:</strong> ${subs.length}</p>
-          <p>Update <code>lib/subscribers.js</code> BLOB_ID constant to <code>${newBlobId}</code> on next deploy.</p>
+          <h2>Upstash KV environment variables not set</h2>
+          <p>The subscriber write-path can't reach Upstash KV. Falling back to gist
+          safety-net only. Check that the Upstash for Redis marketplace integration
+          is still installed under <code>artificialhq/midas-tools-kit</code>.</p>
+          <p>Expected env vars: <code>KV_REST_API_URL</code>, <code>KV_REST_API_TOKEN</code></p>
         `,
       });
     } catch (e) {
-      console.error('Notify failed:', e.message);
+      console.error('KV-alert email failed:', e.message);
     }
   }
 
   return res.status(200).json({
-    ok: writeResult.success,
+    ok: writeResult.success === true,
     subscribers: subs.length,
-    blobId: BLOB_ID,
-    healed,
-    newBlobId: newBlobId || null,
+    storage: {
+      primary: 'upstash-kv',
+      kvOk,
+      gistOk,
+      kvError: writeResult.kvError || null,
+      gistError: writeResult.gistError || null,
+      hasKvCreds: hasKv,
+      hasGistToken: hasGist,
+    },
+    // Legacy fields (kept for back-compat with /api/keepalive consumers):
+    healed: false,
+    newBlobId: null,
     writeError: writeResult.error || null,
-    hasGistToken: !!process.env.GH_GIST_TOKEN,
+    hasGistToken: hasGist,
     timestamp: new Date().toISOString(),
   });
 }
