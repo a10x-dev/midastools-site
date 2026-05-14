@@ -19,3 +19,6 @@ subscribers.csv
 .founder/state/
 .founder/drafts/
 .founder/inbox/
+
+.gemini_key
+.founder/.gemini_key
