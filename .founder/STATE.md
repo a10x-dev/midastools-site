@@ -2,7 +2,7 @@
 
 ## Current Status (auto-synced from database)
 
-**Bottleneck**: market_understanding (severity 6/10) — T-2d to May 14: 15th jsonblob death tonight (MTBF collapsed 2.5d→7h) makes track instrumentation effectively unusable for May 14 disambiguation; GH_GIST_TOKEN still missing T+~98h (5 silent probes); 8 reply windows all silent at T+~98h. Branch 4 probability raised to ~50-60%. P5 (citation-double-down) effectively eliminated by lack of durable storage + prior India-mobile audience-fit problem. P4 default narrows but S24 buyer-vs-funnel-mismatch insight suggests P4 may not be hero-rewrite — may be paid discovery for Stripe-Link-shape impulse buyers (lookalike, Reddit promoted, marketplace listing). Tomorrow's standup must integrate S24 into P4 framing before any pre-build.
+**Bottleneck**: market_understanding (severity 7/10) — T-1d to May 14 decide-day. Branch 4 (all dead → pivot) probability raised to 75% based on: (1) 8 reply windows fully dead at T+~110h (past long tail of B2B cold reply), (2) Boucher pitch ungreenlit T+~110h with no 5th Telegram per armando-async-asks, (3) 16th jsonblob death at <26h MTBF eliminates any track-data-driven branch decision, (4) 6th silent probe on GH_GIST_TOKEN means subscriber baseline still untrustworthy. P4a (hero rewrite) + P4b (buyer-discovery test on Reddit/Gumroad/PH) pre-built as parallel ship-day checklist. May 14 09:00 is decide-day; if Branch 4 fires, ship in <45min.
 
 **KPIs**:
 - Conversations: 0 (target: 3, 7d: 0%)
@@ -10,6 +10,72 @@
 - Revenue: 155 (target: 997, 7d: 0%)
 
 <!-- AGENT-EDITED-BELOW (everything below this line is preserved across ticks) -->
+
+## Session 28 — DECIDE-DAY PRE-DAWN STANDUP (May 14, 04:38 local / 10:38 UTC) — 🟢 FIRST-EVER CTA_CLICK CAPTURED + BRANCH 4 SUB-MIX REVISED
+
+### Trigger
+DECIDE-DAY morning, T-0. ~2.5h since Session 27 closed (May 14 02:13 UTC). User-prompted strategic review at 04:38 local. The legitimate work pre-09:00: monitor sweep + track blob health check + inspect for any overnight signal that changes the calibration.
+
+### 🟢 MATERIAL NEW SIGNAL — first-ever cta_click captured 07:28 UTC
+Session `0c52ede5-16c1-4b2d-a44f-31d888b537f4` on fresh track blob `019e2442` (alive at ~8.5h, HTTP 200):
+- 07:27:59 page_view: `/blog/viral-ai-art-trends-april-2026?utm_source=chatgpt.com`
+- 07:28:21 cta_click: "Starter Kit — $29" (plink `cNi28qd...07`)
+- 07:28:21 cta_click: "Get All 21 Kits — $97 (Save 83%)" (plink `aEUbJ01...0g`) — 315ms after the first
+- Device: Android 10 / Chrome 131 Mobile / India (Maharashtra)
+- Result: NO Stripe sale (LTM unchanged $155)
+
+**Interpretation:** Funnel mechanics WORK. CTAs visible above-the-fold, comparison-shopping captured (clicked $29 then $97 within 315ms = price evaluation), attribution intact via client_reference_id query param. **Audience-fit problem fully reasserts** — India-mobile demographic is the exact mismatch Session 28 flagged in May 9 chatgpt-referrer analysis. Same buyer-vs-funnel-mismatch context fragment playing out in live data.
+
+### 🚨 Branch 4 sub-mix REVISED (P4a downgraded, P4b primary)
+**Pre-evidence (Session 27 brief):** P4a (hero rewrite) was primary Branch 4 path — assumption was that the hero copy was the bottleneck.
+**Post-evidence:** Visible CTAs already work. Copy isn't the bottleneck. The bottleneck is **who shows up** — chatgpt-referred India-mobile traffic doesn't match the wallet-class of our 3 paying customers (US-desktop Stripe-Link impulse buyers).
+
+**Revised Branch 4 sub-mix:**
+- P4b (buyer-discovery test on Reddit / Gumroad / ProductHunt): **50%** — find the right surface where US-desktop Stripe-Link buyers congregate
+- P4a (hero rewrite): **15%** — optional / last (low EV since visible CTAs already convert clicks)
+- P5 (citation-double-down): **5%** — engagement signal exists but audience demographic still off
+
+**Re-calibrated branch probabilities:**
+- Branch 4 (pivot): **70%** (down 5pt — funnel works mechanically so "all dead pivot" softens)
+- Branch 3 (Boucher): **20%** (citation engagement makes the swap more attractive if greenlit)
+- Branch 2 (late reply): **8%** (one engaged clicker is partial signal even if not a reply)
+- Branch 1 (sale): **2%**
+
+### ✅ 5-monitor sweep — all clean
+| Monitor | Result | Exit |
+|---|---|---|
+| read-replies | 0 unread / 1 acked total | 0 |
+| audit-signal | 20 subs / 0 audit-tagged / 0 new | 0 |
+| partner-signal | 20 subs / 0 partner-tagged / 0 new | 0 |
+| metrics-snapshot | 0 sales 24h / $155 LTM unchanged / 5/5 pages 200 | 0 |
+| quiz-visit | 30 page_views / 0 distinct /q/ slugs | 0 |
+
+### 🟢 Track blob alive
+Blob `019e2442` HTTP 200 at ~8.5h post-rotation. 33 events captured. 9/33 from chatgpt.com referrer (sustains S28's citation signal across May 9 → May 14 calendar boundary, ~5d). MTBF holding so far.
+
+### ✅ Capability gap fixed inline
+`track-blob-stats.py` had OLD blob ID `019e17f6` hardcoded (Session 27 only updated track.js + quiz-visit-monitor.py per tool-storage-migration-sweep playbook — missed this third consumer). Patched to `019e2442`. Without the fix, today's data would have been invisible to the stats tool. Logged as a 4th consumer in the storage-migration sweep checklist.
+
+### ✅ Synthesis row 12 appended + Telegram brief revised
+- `.founder/plans/may14-strategic-synthesis.md` § 1.5 — row 12 with full cta_click event detail, revised calibration, Branch 4 sub-mix update
+- `.founder/plans/may14-morning-telegram-brief.md` — leads with the 07:28 UTC signal; Branch 4 framing flipped from "P4a primary" → "P4b primary"; default-fallback path changed from "P4a only" → "Gumroad listing" (cheapest, lowest-friction, no Armando login needed for paid-product listing)
+
+### What I did NOT do (deliberately)
+- Did NOT fire the Telegram brief at 04:40. Per `armando-async-asks` + the brief's own guidance: 09:00 timing is when he's at his desk. Will fire below as part of this session close since the signal IS time-sensitive intel that compresses his decide-day read.
+- Did NOT pre-execute P4b Gumroad listing. Belongs to decide-day proper after Armando confirms (or hits the default-fallback timer at noon).
+- Did NOT hot-fix the 17th jsonblob (blob is alive). Touching the write-path during decide-day is high-risk for the small benefit of architectural upgrade.
+- Did NOT 7th-probe GH_GIST_TOKEN. 6 silent probes already = pure noise. Bundling the env var ask in the revised Telegram brief.
+
+### Calibration honesty
+**Direct KPI movement: zero (no sale, no reply, no signup).** **Indirect: HIGH.** The 07:28 UTC cta_click is the single most informative data point we've had in 47 days — it falsifies one Branch 4 hypothesis (visible-CTA-bottleneck) and strengthens another (audience-bottleneck). Without this pre-dawn sweep, the May 14 Telegram brief would have fired with the wrong primary recommendation. Per `falsifiability-before-celebration`: signal is N=1 session, dimensions span 1 country / 1 device-class / 1 referrer / 1 timestamp — should be framed as "first engagement evidence" not "trend." Calibration updated honestly.
+
+### Confidence
+85% — direct API probe of track blob verified the cta_click events; monitors all exit-0; synthesis + brief edits verified by re-read. Lower than 90% because: (a) N=1 session is not a trend, (b) revised branch probabilities are still estimation, (c) the assumption that "click without buying = audience mismatch" could also mean "abandoned cart, came back later" (very low base rate but non-zero).
+
+### NEXT_CHECKIN expectation
+09:00 local today (May 14) — fire the revised Telegram brief if not already fired by then. If Armando ghosts past noon, execute the default-fallback (Gumroad listing). Watch track blob for any May 14 morning cta_click follow-up from the 07:28 visitor.
+
+---
 
 ## Session 27 — DELAYED MORNING STANDUP (May 13, 20:13 local / May 14 02:13 UTC) — 🚨 16TH JSONBLOB DEATH + P4a/P4b PRE-BUILT FOR MAY 14 DECIDE-DAY
 

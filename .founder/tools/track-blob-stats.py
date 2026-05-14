@@ -51,7 +51,7 @@ ROOT = Path(__file__).parent.parent
 
 # Source-of-truth for the live track blob ID.
 # Death log lives in pages/api/track.js; update both when blob is rotated.
-TRACK_BLOB_ID = "019e17f6-14f0-7254-88c1-062bdd71ea7f"
+TRACK_BLOB_ID = "019e2442-f1bb-7807-ae33-88a0d379d5e0"  # 16th rotation 2026-05-14 02:13 UTC (prior 019e17f6 died <26h MTBF; before that 019e09fa, 019dfe20)
 TRACK_BLOB_URL = f"https://jsonblob.com/api/jsonBlob/{TRACK_BLOB_ID}"
 
 SINCE_RE = re.compile(r"^(\d+)([smhd])$")
