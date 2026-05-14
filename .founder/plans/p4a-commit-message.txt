@@ -1,0 +1,31 @@
+P4a hero rewrite — buyer-shape copy targeting working professionals
+
+Per May 14 strategic synthesis Branch 4 P4a decision. Replaces the
+creator/marketer-framed hero with copy targeting the actual ICP from
+3 paying customers (Shantae IT director / Arnaud Paris finance / George
+Vegas plumber).
+
+Key changes:
+- Badge: swaps creator language for buyer language
+- H1: addresses actual job-to-be-done (prompts you'd write yourself)
+- Sub: explicit "working professionals" framing rejects India-mobile
+  content-funnel demographic
+- CTA primary: $29 Mega Pack (the SKU that closed Arnaud), not $97 bundle
+- $9 tripwire promoted from below-text mention to outline button
+- Free-tools moved to "looking around first" framing — preserves SEO
+  flywheel per feedback_protect_flywheel.md
+
+Per S24 buyer-vs-funnel-mismatch + Session 155 ICP intel: our content
+funnel visitors are India/mobile research-mode browsers; our buyers are
+US/EU desktop knowledge-workers who one-click via Stripe Link. The new
+copy reframes around the buyer, not the content visitor.
+
+Reversible: revert this commit if 14d delta on /api/track + Stripe
+shows zero conversion lift.
+
+Kill criteria (re-evaluate May 28 / T+14d):
+- Win: >=1 NEW Stripe sale attributable to homepage source
+- Hold: >=1 NEW partner/audit reply mentioning the new framing
+- Kill: 0 sales + 0 replies referencing framing -> P4a hypothesis wrong
+
+Co-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>
