@@ -11,6 +11,65 @@
 
 <!-- AGENT-EDITED-BELOW (everything below this line is preserved across ticks) -->
 
+## Session 30 (continuation, 22:30 local / May 15 04:30 UTC) — TRUTH-AUDIT PASS: 116 PROMPT-COUNT CLAIMS FIXED (commit e421cb4 pushed)
+
+### Trigger
+User pushed "continue working on highest-impact task" after Session 30 part 1 closed. Prior session lesson literally said *"Truthfulness drift is systemic — the codebase had 200+/250+/500+/1500+ in different places, all unverified"* and the Reddit ad pointing to those pages is LIVE. Bottleneck-direct = audit + fix before next click.
+
+### ✅ Shipped (commit e421cb4, pushed)
+Ground-truth counts via `kit-content/` direct inspection:
+- **ai-prompt-mega-pack: 145 prompts** (Armando-verified count)
+- **social-media-kit: 68 prompts** (vs claimed 150+ = 2x overstated, worst drift)
+- **ai-image-prompt-pack: 166 prompts** (vs claimed 200+)
+
+3-pass surgical fix via Python scripts (Edit-tool serial-Read constraint made sed-style mass replace impractical):
+- **Pass 1** (72 fixes): Mega Pack "200+ prompts" → "145+ prompts" across 25+ pages
+- **Pass 2** (17 fixes): image-pack + creator-pack + students variants ("200+ image prompts", "200+ Pre-Built Image Prompts", "200+ Copy-Paste AI Prompts for Students")
+- **Pass 3** (17 fixes): regex-based catch-all matching "200+" <N words> "prompt(s)" + table cells
+- **Manual** (3 fixes): starter-pack FAQ + free-prompts upsell heading + social-media-kit
+- **social-media-kit**: 7 instances of "150+" → "65+" (matches the 68-prompt truth)
+
+**Total: 116 stale numeric claims corrected across 43 files.**
+
+### Skip set (legitimate non-product context, audited and left alone)
+- "200+ employees" (HR article context)
+- "200+ designs" (Etsy example narrative)
+- "200+ executives" (testimonial prompt template)
+- "200+ resumes per day" (recruiter prompt template)
+- "3,200+ marketers" (HubSpot stat)
+- "$200+ courses" / "$40-$200+" (pricing comparison)
+- "200+ hours/year" (designer effort calc)
+- "200+ articles" (SEO author prompt template)
+- "150+ Best Instagram Hashtags 2026" (blog post title — separate content piece)
+
+### Build verification
+`npx next build` clean, all 125+ pages render, zero syntax errors. Vercel auto-deploying.
+
+### Strategic significance
+The previously-shipped Reddit ad and 20 recovery emails had claimed "250+ prompts" → corrected to "145+" before send (per pair-Session 25 audit). But the LANDING PAGES those campaigns drove traffic to still had "200+" claims everywhere. Buyer-trust gap: email said 145+, page said 200+, kit reality is 145. Now: all three numbers consistent.
+
+This is the EXACT pattern Session 24 lesson flagged: *"Source-of-truth (kit-content/) was 30 seconds away. Skipped that step."* The 30-second count would have prevented the original Reddit ad mismatch. Now formalized as a tool + verified pattern.
+
+### What I did NOT do (deliberately)
+- Did NOT touch Stripe product descriptions (Stripe API live data, separate ship-day risk)
+- Did NOT regenerate the .ZIP files in `public/` (zips were built when ZIP-creation script last ran; truth-of-content is the markdown files, not the ZIP — buyers receive markdown via the ZIP)
+- Did NOT audit the `.founder/sales/` outreach bodies further (5 of 6 already use 145+ per spot-check; remaining 1 is `boucher-crosspromo-pitch.md` which references Boucher's 190K subs — separate truth-audit topic)
+- Did NOT update the README files inside `kit-content/*/` (post-purchase deliverable; lower-priority than pre-purchase claim alignment; can batch later)
+
+### Sprint metric
+mismatched_claims_fixed: 0 → 116 (target was 0 — pure ship metric)
+
+### Honest accounting
+**Direct KPI: zero.** **Indirect: HIGH on trust.** Every conversion-window visitor now sees a consistent honest count across (email → landing → product → blog). The next click from the Reddit ad or from the recovery welcome lands on a page whose number matches what the email promised. Closes the trust-leak the May 14 pair-session lesson flagged.
+
+### Confidence
+90% — 3 passes verified via grep, build clean, push verified by commit hash. Lower than 95% because: (a) the truth-count for some kits is fuzzy at the edges (Mega Pack: 81 strict / 145 verified / 164 inclusive), so "145+" is conservative — defensible against scrutiny but slightly understated for some inclusive counts; (b) didn't audit Stripe product descriptions (live data, harder to roll back).
+
+### NEXT_CHECKIN expectation
+Tomorrow 09:00 local — morning standup unchanged from Session 30 part 1: (1) Armando reads delon@zplatform.ai Gmail thread, (2) decides Branch A/B/C for 17 recovery welcomes, (3) checks Reddit Ads dashboard for impressions. The truth-audit fix means any inbound from these channels now lands on consistent pages.
+
+---
+
 ## Session 30 (May 14, 21:37 local / May 15 03:37 UTC) — RECOVERY-WELCOMES READY-TO-FIRE + B2B INTEL + REDDIT P4b-A ZERO-CLICK AT T+16h
 
 ### Trigger
