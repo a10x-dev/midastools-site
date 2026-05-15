@@ -65,9 +65,9 @@ const TIERS = [
     name: 'Coach Edition Mega Pack',
     price: 97,
     href: STRIPE_MEGA_PACK,
-    desc: '200+ prompts across content, branding, sales pages, lead magnets, email pipelines, niche definition. Lifetime ownership — no subscription.',
+    desc: '145+ prompts across content, branding, sales pages, lead magnets, email pipelines, niche definition. Lifetime ownership — no subscription.',
     bullets: [
-      '200+ prompts, lifetime access',
+      '145+ prompts, lifetime access',
       'Replaces $360/yr Jasper, $588/yr Copy.ai',
       'Free updates forever',
       '30-day money-back guarantee',
@@ -332,7 +332,7 @@ export default function ForCoaches() {
                 display: 'inline-block', background: '#3B5FFF', color: '#FFF', fontWeight: 700, fontSize: 17,
                 padding: '16px 32px', borderRadius: 99, textDecoration: 'none', boxShadow: '0 4px 14px rgba(59,95,255,0.3)',
               }}>
-                Get 200+ more — $97 lifetime →
+                Get 145+ more — $97 lifetime →
               </a>
             </div>
           </div>

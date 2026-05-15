@@ -343,7 +343,7 @@ export default function StripeAIEconomy2026() {
             Battle-tested prompts to actually rebuild your workflow
           </h3>
           <p style={{ fontSize: 15, color: '#9CA3AF', marginBottom: 24, lineHeight: 1.6 }}>
-            The MidasTools <strong>AI Prompt Mega Pack</strong> ($29) bundles 200+ prompts
+            The MidasTools <strong>AI Prompt Mega Pack</strong> ($29) bundles 145+ prompts
             structured for Claude Opus 4.7, ChatGPT, Cursor, and Perplexity — the exact tools
             powering the Stripe Sessions 2026 numbers. The <strong>All Kits Bundle</strong> ($97)
             adds vertical packs for SaaS founders, freelancers, real estate, and small business

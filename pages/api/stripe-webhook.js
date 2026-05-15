@@ -304,7 +304,7 @@ const KIT_MAP = {
     items: [
       'AI Video Prompt Pack (150+ video generation prompts)',
       'AI Image Prompt Pack (150+ image generation prompts)',
-      'AI Prompt Mega Pack (200+ text prompts)',
+      'AI Prompt Mega Pack (145+ text prompts)',
       'Notion AI Templates Kit (150+ Notion templates)',
       'OpenClaw Starter Kit (5 identity templates + workflows)',
       'Real Estate AI Kit (lead response + listings + follow-ups)',

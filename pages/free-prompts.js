@@ -496,14 +496,14 @@ export default function FreePrompts() {
 
         {/* Upsell */}
         <div className="upsell">
-          <h2>Liked These 5? There Are 200+ More.</h2>
+          <h2>Liked These 5? There Are 145+ More.</h2>
           <p>
-            The AI Prompt Mega Pack includes 200+ prompts across 6 categories —
+            The AI Prompt Mega Pack includes 145+ prompts across 6 categories —
             plus 7 specialized kits for freelancers, real estate, e-commerce, SaaS, and more.
           </p>
           <div className="upsell-grid">
             <a href={STRIPE_MEGA_PACK} className="upsell-btn primary">
-              Get 200+ Prompts — $29
+              Get 145+ Prompts — $29
             </a>
             <a href={STRIPE_BUNDLE} className="upsell-btn secondary">
               Get All 8 Kits — $97

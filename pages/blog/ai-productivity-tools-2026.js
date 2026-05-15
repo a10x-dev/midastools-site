@@ -99,7 +99,7 @@ export default function AIProductivityTools2026() {
 
         <p>No filler tools. No tools we have not used ourselves. No &ldquo;honorable mentions&rdquo; for tools that do not clear the bar.</p>
 
-        <p>At the end: three copy-paste prompts for the productivity tasks that waste the most hours. Grab them, customize, and use them today. If you want the full library, the <a href={STRIPE_MEGA_PACK} className="inline-link">AI Prompt Mega Pack ($29)</a> has 200+ prompts organized by use case.</p>
+        <p>At the end: three copy-paste prompts for the productivity tasks that waste the most hours. Grab them, customize, and use them today. If you want the full library, the <a href={STRIPE_MEGA_PACK} className="inline-link">AI Prompt Mega Pack ($29)</a> has 145+ prompts organized by use case.</p>
 
         <hr />
 
@@ -210,7 +210,7 @@ export default function AIProductivityTools2026() {
 
         {/* CTA 1 */}
         <div className="cta-box">
-          <h3>Get 200+ AI prompts ready to use across all these tools</h3>
+          <h3>Get 145+ AI prompts ready to use across all these tools</h3>
           <p>The <strong>AI Prompt Mega Pack</strong> covers writing, research, email, meeting prep, analysis, and more. Copy, paste, customize &mdash; no prompt engineering required. <strong>$29 one-time, yours forever.</strong></p>
           <a href={STRIPE_MEGA_PACK} className="cta-btn">
             Get the AI Prompt Mega Pack &mdash; $29
@@ -392,7 +392,7 @@ Write an email that is:
 Do not start with "I hope this email finds you well." Do not use any corporate filler phrases.`}
         </div>
 
-        <p>Want 200+ more prompts like these, organized by category? The <a href={STRIPE_MEGA_PACK} className="inline-link">AI Prompt Mega Pack</a> has templates for every common business task. You can also browse our <Link href="/free-prompts" className="inline-link">free prompt library</Link> to start with no cost.</p>
+        <p>Want 145+ more prompts like these, organized by category? The <a href={STRIPE_MEGA_PACK} className="inline-link">AI Prompt Mega Pack</a> has templates for every common business task. You can also browse our <Link href="/free-prompts" className="inline-link">free prompt library</Link> to start with no cost.</p>
 
         <hr />
 

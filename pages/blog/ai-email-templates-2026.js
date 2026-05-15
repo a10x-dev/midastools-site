@@ -682,7 +682,7 @@ Best,
 
         {/* CTA 2: After all templates */}
         <div style={{ background: 'linear-gradient(135deg, #EEF2FF 0%, #E0E7FF 100%)', borderRadius: '12px', padding: '32px', margin: '40px 0', textAlign: 'center' }}>
-          <h3 style={{ marginTop: 0, fontSize: '1.3rem' }}>Get 200+ Prompts for Every Business Need</h3>
+          <h3 style={{ marginTop: 0, fontSize: '1.3rem' }}>Get 145+ Prompts for Every Business Need</h3>
           <p style={{ color: '#4B5563', marginBottom: '20px' }}>The Mega Prompt Pack covers emails, sales, marketing, operations, hiring, and more. Every prompt is copy-paste ready and tested across real businesses.</p>
           <a href={STRIPE_MEGA} style={{ display: 'inline-block', background: '#3B5FFF', color: '#fff', padding: '14px 32px', borderRadius: '100px', textDecoration: 'none', fontWeight: '700', fontSize: '16px' }}>Get the Mega Prompt Pack &rarr;</a>
         </div>

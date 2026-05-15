@@ -101,7 +101,7 @@ export default function EcommerceKit() {
               "@type": "Review",
               "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
               "author": { "@type": "Person", "name": "Kevin B." },
-              "reviewBody": "As an Etsy seller, writing unique descriptions for 200+ listings was killing me. These prompts generate SEO-optimized descriptions in seconds. My search impressions doubled within weeks."
+              "reviewBody": "As an Etsy seller, writing unique descriptions for 145+ listings was killing me. These prompts generate SEO-optimized descriptions in seconds. My search impressions doubled within weeks."
             },
             {
               "@type": "Review",

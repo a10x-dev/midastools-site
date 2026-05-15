@@ -251,7 +251,7 @@ function ResultBlock({ result, prospect, theme }) {
 
       <div style={{ marginTop: 40, padding: 28, background: DESIGN.black, color: DESIGN.white, borderRadius: 16 }}>
         <h3 style={{ fontSize: 22, fontWeight: 700, marginBottom: 8, color: DESIGN.white }}>
-          Want all 200+ prompts across 14 kits?
+          Want all 145+ prompts across 14 kits?
         </h3>
         <p style={{ fontSize: 15, color: '#9CA3AF', marginBottom: 20, lineHeight: 1.5 }}>
           The All Kits Bundle is $97 — 14 niche kits covering cold outreach, ops, email, image gen, and more.

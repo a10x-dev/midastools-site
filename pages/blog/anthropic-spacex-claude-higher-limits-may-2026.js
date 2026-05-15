@@ -160,7 +160,7 @@ export default function AnthropicSpaceXMay2026() {
             Build with Claude all day? Get prompts that pay off the new headroom.
           </h3>
           <p style={{ fontSize: 15, color: '#9CA3AF', marginBottom: 24, lineHeight: 1.6 }}>
-            The MidasTools <strong>Claude Code Kit</strong> ($39) is 80+ field-tested prompts for the exact workflows the new limits unlock — long refactors, agent loops, code review with verification, multi-file synthesis. Or grab the broader <strong>AI Prompt Mega Pack</strong> ($29) — 200+ prompts including 14 Opus-class templates engineered for the heavy reasoning jobs that justify the higher API ceilings.
+            The MidasTools <strong>Claude Code Kit</strong> ($39) is 80+ field-tested prompts for the exact workflows the new limits unlock — long refactors, agent loops, code review with verification, multi-file synthesis. Or grab the broader <strong>AI Prompt Mega Pack</strong> ($29) — 145+ prompts including 14 Opus-class templates engineered for the heavy reasoning jobs that justify the higher API ceilings.
           </p>
           <a
             href={STRIPE_BUNDLE + '?utm_source=blog&utm_campaign=anthropic-spacex'}

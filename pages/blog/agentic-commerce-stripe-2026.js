@@ -474,7 +474,7 @@ export default function AgenticCommerceStripe2026() {
             Get the prompt stack that powers agent-ready products
           </h3>
           <p style={{ fontSize: 15, color: '#9CA3AF', marginBottom: 24, lineHeight: 1.6 }}>
-            The MidasTools <strong>AI Prompt Mega Pack</strong> ($29) bundles 200+ prompts
+            The MidasTools <strong>AI Prompt Mega Pack</strong> ($29) bundles 145+ prompts
             structured for Claude Opus 4.7, ChatGPT, Cursor, and Perplexity — the toolchain
             powering OpenClaw and Stripe's agentic commerce demos. The <strong>All Kits Bundle</strong> ($97)
             adds vertical packs for SaaS founders, freelancers, and small business ops. Every

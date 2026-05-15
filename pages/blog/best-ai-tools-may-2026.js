@@ -67,7 +67,7 @@ export default function BestAIToolsMay2026() {
       maker: 'Midjourney',
       hook: 'Released April 2026. The character-consistency feature lets you keep the same person across hundreds of images — finally usable for storyboards, comics, brand assets.',
       why: 'V8 ships with native upscaling to 8K and a "style reference" mode that locks an art direction across an entire project. The Discord-only friction is gone (web app launched March).',
-      tryIt: 'Best for: designers, content creators, marketers. Get our [AI Image Prompt Pack](/ai-image-prompt-pack) — 200+ tested Midjourney v8 prompts.',
+      tryIt: 'Best for: designers, content creators, marketers. Get our [AI Image Prompt Pack](/ai-image-prompt-pack) — 145+ tested Midjourney v8 prompts.',
     },
     {
       n: 8,
@@ -197,7 +197,7 @@ export default function BestAIToolsMay2026() {
 
         <div style={{ marginTop: 40, padding: '32px', background: '#111827', color: '#FFFFFF', borderRadius: 16 }}>
           <h3 style={{ fontSize: '1.4rem', fontWeight: 700, marginBottom: 8, color: '#FFFFFF' }}>
-            200+ battle-tested prompts for these tools
+            145+ battle-tested prompts for these tools
           </h3>
           <p style={{ fontSize: 15, color: '#9CA3AF', marginBottom: 24, lineHeight: 1.6 }}>
             The MidasTools <strong>AI Prompt Mega Pack</strong> ($29) and <strong>All Kits Bundle</strong> ($97)

@@ -939,7 +939,7 @@ Turn yourself into a movie character.
 4. **Add texture** — film grain, canvas, watercolor, holographic foil
 5. **Reference styles** — name specific artists, movies, or aesthetics
 
-**Want 200+ more prompts like these, pre-built and organized by category?** Get the [AI Image Prompt Pack — $29](https://buy.stripe.com/8x24gyccv7mVglegoqcMM0i) or grab [All 21 Kits — $97](https://buy.stripe.com/bJe7sK0tNdLjgle0pscMM0b)
+**Want 145+ more prompts like these, pre-built and organized by category?** Get the [AI Image Prompt Pack — $29](https://buy.stripe.com/8x24gyccv7mVglegoqcMM0i) or grab [All 21 Kits — $97](https://buy.stripe.com/bJe7sK0tNdLjgle0pscMM0b)
 
 **Or build your own prompts visually** with our free [AI Image Prompt Builder](/image-prompt-builder) — 25 styles, mood controls, lighting presets, and platform-specific formatting for ChatGPT, Midjourney, DALL·E, and Stable Diffusion.
 

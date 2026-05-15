@@ -133,7 +133,7 @@ export default function ChromeBuiltinAIMay2026() {
             Want prompts that work across every AI in May 2026?
           </h3>
           <p style={{ fontSize: 15, color: '#9CA3AF', marginBottom: 24, lineHeight: 1.6 }}>
-            The MidasTools <strong>AI Prompt Mega Pack</strong> ($29) and <strong>All Kits Bundle</strong> ($97) include 200+ prompts engineered to work across Claude, ChatGPT, Gemini (cloud + Nano), and any other LLM. Each prompt has explicit role + context + constraint scaffolding, so they degrade gracefully when run on smaller on-device models.
+            The MidasTools <strong>AI Prompt Mega Pack</strong> ($29) and <strong>All Kits Bundle</strong> ($97) include 145+ prompts engineered to work across Claude, ChatGPT, Gemini (cloud + Nano), and any other LLM. Each prompt has explicit role + context + constraint scaffolding, so they degrade gracefully when run on smaller on-device models.
           </p>
           <a
             href={STRIPE_MEGA_PACK + '?utm_source=blog&utm_campaign=chrome-ai'}

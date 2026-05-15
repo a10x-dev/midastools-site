@@ -128,7 +128,7 @@ const KITS = {
       { name: 'AI Email Marketing Kit', file: 'email-marketing-kit.zip' },
       { name: 'AI Presentation & Pitch Deck Kit', file: 'presentation-kit.zip' },
     ],
-    items: ['AI Video Prompt Pack (150+ video prompts)', 'AI Image Prompt Pack (150+ image prompts)', 'AI Prompt Mega Pack (200+ text prompts)', 'Notion AI Templates Kit (150+ templates)', 'AI Resume & Career Kit (125+ prompts)', 'AI Social Media Manager Kit (150+ prompts)', 'AI Email Marketing Kit (125+ prompts)', 'AI Presentation & Pitch Deck Kit (125+ prompts)', 'OpenClaw Starter Kit', 'Real Estate AI Kit', 'Content Creator AI Kit', 'Freelancer AI Kit', 'Small Business AI Kit', 'E-commerce AI Kit', 'SaaS Founder AI Kit', 'All future kits — free, forever'],
+    items: ['AI Video Prompt Pack (150+ video prompts)', 'AI Image Prompt Pack (150+ image prompts)', 'AI Prompt Mega Pack (145+ text prompts)', 'Notion AI Templates Kit (150+ templates)', 'AI Resume & Career Kit (125+ prompts)', 'AI Social Media Manager Kit (150+ prompts)', 'AI Email Marketing Kit (125+ prompts)', 'AI Presentation & Pitch Deck Kit (125+ prompts)', 'OpenClaw Starter Kit', 'Real Estate AI Kit', 'Content Creator AI Kit', 'Freelancer AI Kit', 'Small Business AI Kit', 'E-commerce AI Kit', 'SaaS Founder AI Kit', 'All future kits — free, forever'],
   },
 };
 

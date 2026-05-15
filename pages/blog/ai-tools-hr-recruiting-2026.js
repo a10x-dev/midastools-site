@@ -263,7 +263,7 @@ Rules: Reference something specific from their background in the first sentence.
 
         {/* Post-prompts CTA */}
         <div style={{ background: 'linear-gradient(135deg, #EEF2FF 0%, #E0E7FF 100%)', borderRadius: '12px', padding: '32px', margin: '40px 0', textAlign: 'center' }}>
-          <h3 style={{ marginTop: 0, fontSize: '1.3rem' }}>Get 200+ Prompts Including HR Templates</h3>
+          <h3 style={{ marginTop: 0, fontSize: '1.3rem' }}>Get 145+ Prompts Including HR Templates</h3>
           <p style={{ color: '#4B5563', marginBottom: '20px' }}>Job descriptions, interview scorecards, onboarding checklists, performance reviews, and more. The Mega Pack has every prompt an HR team needs.</p>
           <a href={STRIPE_MEGA} style={{ display: 'inline-block', background: '#3B5FFF', color: '#fff', padding: '14px 32px', borderRadius: '100px', textDecoration: 'none', fontWeight: '700', fontSize: '16px', marginBottom: '12px' }}>Get the Mega Pack &rarr;</a>
           <p style={{ color: '#6B7280', fontSize: '14px', marginTop: '12px', marginBottom: 0 }}>Looking for the job seeker side? Our <a href="/resume-career-kit" style={{ color: '#3B5FFF', fontWeight: '600' }}>AI Resume &amp; Career Kit</a> ($29) has 125+ prompts for resumes, cover letters, LinkedIn, interviews &amp; salary negotiation.</p>

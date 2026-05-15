@@ -209,7 +209,7 @@ Now write product descriptions in this exact style for:
 
         {/* CTA AFTER TIP 8 */}
         <div style={{ marginTop: '32px', marginBottom: '32px', padding: '24px', background: '#F0F4FF', border: '1px solid #93B4FF', borderRadius: '8px', textAlign: 'center' }}>
-          <p style={{ margin: '0 0 12px', fontSize: '16px', fontWeight: '700' }}>Want 200+ battle-tested prompts that use all these techniques?</p>
+          <p style={{ margin: '0 0 12px', fontSize: '16px', fontWeight: '700' }}>Want 145+ battle-tested prompts that use all these techniques?</p>
           <p style={{ margin: '0 0 16px', color: '#6B7280', fontSize: '15px' }}>Every prompt is pre-structured with roles, constraints, and examples baked in. Works with ChatGPT, Claude, Gemini, and any LLM.</p>
           <a href={STRIPE_MEGA_PACK} data-cta="tips-blog-megapack-mid" style={{ display: 'inline-block', background: '#3B5FFF', color: '#fff', padding: '14px 28px', borderRadius: '6px', textDecoration: 'none', fontWeight: '700', fontSize: '15px' }}>
             Get the AI Prompt Mega Pack &mdash; $29
@@ -607,7 +607,7 @@ Show the scoring in a clean table with the final weighted score and a 2-sentence
         {/* FINAL CTA */}
         <div style={{ marginTop: '48px', padding: '32px', background: '#F0F4FF', border: '1px solid #93B4FF', borderRadius: '8px' }}>
           <h3 style={{ margin: '0 0 8px', fontSize: '1.1rem' }}>Ready to stop guessing and start prompting like a pro?</h3>
-          <p style={{ margin: '0 0 16px', color: '#6B7280', fontSize: '15px' }}>The <strong>AI Prompt Mega Pack</strong> includes 200+ battle-tested prompts organized by use case &mdash; sales, marketing, content, operations, analysis, and more. Every prompt uses the techniques from this article. Works with ChatGPT, Claude, Gemini, and any LLM. $29 one-time.</p>
+          <p style={{ margin: '0 0 16px', color: '#6B7280', fontSize: '15px' }}>The <strong>AI Prompt Mega Pack</strong> includes 145+ battle-tested prompts organized by use case &mdash; sales, marketing, content, operations, analysis, and more. Every prompt uses the techniques from this article. Works with ChatGPT, Claude, Gemini, and any LLM. $29 one-time.</p>
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px', alignItems: 'center' }}>
             <a href={STRIPE_MEGA_PACK} data-cta="tips-blog-megapack-bottom" style={{ display: 'inline-block', background: '#3B5FFF', color: '#fff', padding: '12px 24px', borderRadius: '6px', textDecoration: 'none', fontWeight: '700', fontSize: '15px' }}>
               Get the Mega Pack &mdash; $29

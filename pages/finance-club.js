@@ -100,11 +100,11 @@ export default function FinanceClub() {
 
   const partner = via === 'boucher' ? 'Nicolas Boucher' : (via ? via.charAt(0).toUpperCase() + via.slice(1) : 'A finance creator');
   const headlineSub = via === 'boucher'
-    ? 'Nicolas vouched for us, so we are vouching for his members. 200+ AI prompts built for finance pros, free for AI Finance Club.'
-    : '200+ AI prompts built for finance pros — reporting, scenario modelling, audit prep, board narrative, and ops automation. Free for community members.';
+    ? 'Nicolas vouched for us, so we are vouching for his members. 145+ AI prompts built for finance pros, free for AI Finance Club.'
+    : '145+ AI prompts built for finance pros — reporting, scenario modelling, audit prep, board narrative, and ops automation. Free for community members.';
 
   const title = 'Finance Club — Free MidasTools Mega Pack | Midas Tools';
-  const description = '200+ AI prompts for finance pros — reporting, scenario modelling, audit prep, board narrative, ops automation. Free for partner communities.';
+  const description = '145+ AI prompts for finance pros — reporting, scenario modelling, audit prep, board narrative, ops automation. Free for partner communities.';
   const url = 'https://www.midastools.co/finance-club';
 
   return (
@@ -165,7 +165,7 @@ export default function FinanceClub() {
       {/* HERO */}
       <div className="hero">
         <div className="pre-h1">{via === 'boucher' ? 'AI FINANCE CLUB · MEMBERS-ONLY' : 'PARTNER COMMUNITIES · MEMBERS-ONLY'}</div>
-        <h1>200+ AI prompts <span>built for finance pros.</span><br />Yours free.</h1>
+        <h1>145+ AI prompts <span>built for finance pros.</span><br />Yours free.</h1>
         <p className="hero-sub">{headlineSub}</p>
         {!unlocked ? (
           <div className="gate-box">
@@ -199,7 +199,7 @@ export default function FinanceClub() {
         ) : (
           <div className="download-box">
             <h3>Mega Pack unlocked.</h3>
-            <p>200+ prompts across 6 categories — copywriting, social, content, business operations, personal branding, productivity. ZIP file, ~80KB.</p>
+            <p>145+ prompts across 6 categories — copywriting, social, content, business operations, personal branding, productivity. ZIP file, ~80KB.</p>
             <a href={MEGA_PACK_ZIP} className="download-btn" download>Download .zip \u2193</a>
           </div>
         )}
@@ -210,7 +210,7 @@ export default function FinanceClub() {
         <div className="section-label">Inside the kit \u2014 2 sample prompts</div>
         <h2>What you actually get.</h2>
         <p style={{fontSize:15,color:'var(--gray-400)',marginBottom:32,lineHeight:1.65}}>
-          Below: 2 of the 200+ prompts from the Business Operations track. Variables in [BRACKETS] \u2014 fill in your numbers and run in Claude Opus 4.7 or ChatGPT-5. The full kit covers reporting, scenario modelling, audit prep, board narrative, hiring, SOPs, and ops automation.
+          Below: 2 of the 145+ prompts from the Business Operations track. Variables in [BRACKETS] \u2014 fill in your numbers and run in Claude Opus 4.7 or ChatGPT-5. The full kit covers reporting, scenario modelling, audit prep, board narrative, hiring, SOPs, and ops automation.
         </p>
 
         {SAMPLE_PROMPTS.map((p, i) => (

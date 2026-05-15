@@ -376,7 +376,7 @@ export default function Tools() {
           <div className="coming-grid">
             {[
               { href: 'https://manduks.github.io/free-ai-prompts/', title: '100+ Free AI Prompts', desc: 'Copy-paste prompts for ChatGPT, Claude & Midjourney. Business, marketing, sales, images.' },
-              { href: 'https://manduks.github.io/ai-prompt-cheatsheet/', title: 'AI Prompt Cheat Sheet', desc: '200+ prompts with the CRAFT framework. The only cheat sheet you need.' },
+              { href: 'https://manduks.github.io/ai-prompt-cheatsheet/', title: 'AI Prompt Cheat Sheet', desc: '145+ prompts with the CRAFT framework. The only cheat sheet you need.' },
               { href: 'https://manduks.github.io/ai-job-risk-database/', title: 'AI Job Risk Database', desc: '102 occupations ranked by AI automation risk. Data from BLS, WEF, Goldman Sachs.' },
             ].map(t => (
               <a key={t.href} href={t.href} target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>

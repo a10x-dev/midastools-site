@@ -240,7 +240,7 @@ Cite sources for every claim.`}
         <p><strong>What it does not do well:</strong> Emotional range for dramatic content, real-time conversation, singing.</p>
 
         <div style={ctaBoxStyle}>
-          <p style={{ fontWeight: '700', fontSize: '18px', marginBottom: '8px' }}>Want 200+ AI Prompts Built for Content Creators?</p>
+          <p style={{ fontWeight: '700', fontSize: '18px', marginBottom: '8px' }}>Want 145+ AI Prompts Built for Content Creators?</p>
           <p style={{ color: '#6B7280', marginBottom: '16px' }}>Scripts, captions, thumbnails, SEO titles, email sequences, and repurposing workflows &mdash; all ready to copy and paste.</p>
           <a href={CREATOR_KIT_URL} style={{ display: 'inline-block', background: '#3B5FFF', color: '#fff', padding: '12px 28px', borderRadius: '100px', fontWeight: 700, textDecoration: 'none', fontSize: '16px' }}>Get the Content Creator Kit &mdash; $39 &rarr;</a>
         </div>
@@ -323,7 +323,7 @@ My brand voice: [DESCRIBE YOUR TONE — e.g., "direct, slightly irreverent, data
         </div>
 
         <div style={ctaBoxStyle}>
-          <p style={{ fontWeight: '700', fontSize: '18px', marginBottom: '8px' }}>Skip the Setup &mdash; Get 200+ Creator Prompts Ready to Use</p>
+          <p style={{ fontWeight: '700', fontSize: '18px', marginBottom: '8px' }}>Skip the Setup &mdash; Get 145+ Creator Prompts Ready to Use</p>
           <p style={{ color: '#6B7280', marginBottom: '16px' }}>The Content Creator Kit includes prompts for every tool on this list &mdash; blog writing, video scripts, social captions, thumbnails, SEO, repurposing, and more.</p>
           <a href={CREATOR_KIT_URL} style={{ display: 'inline-block', background: '#3B5FFF', color: '#fff', padding: '12px 28px', borderRadius: '100px', fontWeight: 700, textDecoration: 'none', fontSize: '16px' }}>Get the Content Creator Kit &mdash; $39 &rarr;</a>
         </div>
@@ -451,12 +451,12 @@ Be specific. "Post more consistently" is not useful advice. "Your how-to posts a
 
         <h2 style={{ fontSize: '1.4rem', fontWeight: '700', marginTop: '40px' }}>Stop Building Prompts from Scratch</h2>
 
-        <p>Every tool on this list works 10x better with the right prompts. The <strong>Content Creator Kit</strong> includes 200+ prompts designed specifically for content creators &mdash; blog writing, video scripts, social media captions, email sequences, SEO optimization, and repurposing workflows.</p>
+        <p>Every tool on this list works 10x better with the right prompts. The <strong>Content Creator Kit</strong> includes 145+ prompts designed specifically for content creators &mdash; blog writing, video scripts, social media captions, email sequences, SEO optimization, and repurposing workflows.</p>
 
         <p>Instead of spending hours figuring out how to prompt each tool, copy-paste a proven prompt, fill in your details, and get results in seconds.</p>
 
         <div style={ctaBoxStyle}>
-          <p style={{ fontWeight: '700', fontSize: '18px', marginBottom: '8px' }}>Content Creator Kit &mdash; 200+ AI Prompts for Creators</p>
+          <p style={{ fontWeight: '700', fontSize: '18px', marginBottom: '8px' }}>Content Creator Kit &mdash; 145+ AI Prompts for Creators</p>
           <p style={{ color: '#6B7280', marginBottom: '16px' }}>Blog writing, video scripts, social captions, thumbnails, SEO, newsletters, repurposing &mdash; all in one kit.</p>
           <a href={CREATOR_KIT_URL} style={{ display: 'inline-block', background: '#3B5FFF', color: '#fff', padding: '12px 28px', borderRadius: '100px', fontWeight: 700, textDecoration: 'none', fontSize: '16px' }}>Get the Content Creator Kit &mdash; $39 &rarr;</a>
           <p style={{ marginTop: '16px', color: '#6B7280', fontSize: '14px' }}>Or get <a href={BUNDLE_URL} style={{ color: '#3B5FFF', fontWeight: 700, textDecoration: 'none' }}>all 16 AI kits for $97</a> (save 83%)</p>

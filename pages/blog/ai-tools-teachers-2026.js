@@ -352,10 +352,10 @@ Keep under 250 words. Format with clear headings.`}
 
         <h2 style={{ fontSize: '1.4rem', fontWeight: '700', marginTop: '40px' }}>Get All These Prompts (Plus 190 More)</h2>
 
-        <p>Every prompt in this article is included in the <strong>AI Prompt Mega Pack</strong> &mdash; 200+ tested prompts organized by profession, including a dedicated education section with lesson plans, grading rubrics, differentiation templates, and parent communication frameworks.</p>
+        <p>Every prompt in this article is included in the <strong>AI Prompt Mega Pack</strong> &mdash; 145+ tested prompts organized by profession, including a dedicated education section with lesson plans, grading rubrics, differentiation templates, and parent communication frameworks.</p>
 
         <div style={{ background: '#f0f4ff', border: '2px solid #3B5FFF', borderRadius: '12px', padding: '24px', textAlign: 'center', margin: '32px 0' }}>
-          <p style={{ fontSize: '18px', fontWeight: '700', marginBottom: '8px' }}>AI Prompt Mega Pack — 200+ Prompts</p>
+          <p style={{ fontSize: '18px', fontWeight: '700', marginBottom: '8px' }}>AI Prompt Mega Pack — 145+ Prompts</p>
           <p style={{ color: '#6B7280', marginBottom: '16px' }}>Lesson plans, grading, worksheets, parent emails, and more. Copy-paste ready.</p>
           <a href={STRIPE_MEGA_PACK} style={{ display: 'inline-block', background: '#3B5FFF', color: '#fff', padding: '14px 32px', borderRadius: '100px', textDecoration: 'none', fontWeight: '700', fontSize: '16px' }}>
             Get the Mega Pack — $29
@@ -389,7 +389,7 @@ Keep under 250 words. Format with clear headings.`}
         <ul style={{ lineHeight: '2' }}>
           <li><Link href="/blog/best-ai-prompts-business-2026" style={{ color: '#3B5FFF' }}>50 AI Prompts That Are Actually Making People Money in 2026</Link></li>
           <li><Link href="/blog/chatgpt-side-hustle-2026" style={{ color: '#3B5FFF' }}>7 ChatGPT Side Hustles Actually Making Money in 2026</Link></li>
-          <li><Link href="/ai-prompt-mega-pack" style={{ color: '#3B5FFF' }}>AI Prompt Mega Pack — 200+ Prompts for Every Profession</Link></li>
+          <li><Link href="/ai-prompt-mega-pack" style={{ color: '#3B5FFF' }}>AI Prompt Mega Pack — 145+ Prompts for Every Profession</Link></li>
           <li><Link href="/blog/ai-tools-healthcare-2026" style={{ color: '#3B5FFF' }}>7 AI Tools for Healthcare Workers That Reduce Burnout</Link></li>
         </ul>
       </div>

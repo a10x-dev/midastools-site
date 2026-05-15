@@ -140,7 +140,7 @@ Constraint: No cliches like "in today's digital landscape" or "game-changer."`}
 
         {/* CTA 1 */}
         <div style={{ marginTop: '48px', marginBottom: '48px', padding: '32px', background: '#F0F4FF', border: '1px solid #93B4FF', borderRadius: '8px' }}>
-          <h3 style={{ margin: '0 0 8px', fontSize: '1.1rem' }}>Want 200+ AI prompts that work across ALL these tools?</h3>
+          <h3 style={{ margin: '0 0 8px', fontSize: '1.1rem' }}>Want 145+ AI prompts that work across ALL these tools?</h3>
           <p style={{ margin: '0 0 16px', color: '#6B7280', fontSize: '15px' }}>The <strong>AI Prompt Mega Pack</strong> includes ready-to-use prompts for ChatGPT, Claude, Gemini, and every other major AI tool. Copy, paste, customize, profit. <strong>$29 one-time.</strong></p>
           <a href={STRIPE_MEGA_PACK} style={{ display: 'inline-block', background: '#3B5FFF', color: '#fff', padding: '12px 24px', borderRadius: '6px', textDecoration: 'none', fontWeight: '700', fontSize: '15px' }}>
             Get the AI Prompt Mega Pack &mdash; $29
@@ -309,7 +309,7 @@ Transcript: [PASTE OTTER TRANSCRIPT]`}
         {/* ── FINAL CTA ── */}
         <div style={{ marginTop: '48px', padding: '32px', background: '#F0F4FF', border: '1px solid #93B4FF', borderRadius: '8px' }}>
           <h3 style={{ margin: '0 0 8px', fontSize: '1.1rem' }}>These tools are free. Knowing how to use them is the edge.</h3>
-          <p style={{ margin: '0 0 16px', color: '#6B7280', fontSize: '15px' }}>Every tool on this list gets 10x more powerful with the right prompts. The <strong>AI Prompt Mega Pack</strong> gives you 200+ tested prompts for writing, research, marketing, coding, and more &mdash; ready to copy and paste into any AI tool. <strong>$29 one-time.</strong></p>
+          <p style={{ margin: '0 0 16px', color: '#6B7280', fontSize: '15px' }}>Every tool on this list gets 10x more powerful with the right prompts. The <strong>AI Prompt Mega Pack</strong> gives you 145+ tested prompts for writing, research, marketing, coding, and more &mdash; ready to copy and paste into any AI tool. <strong>$29 one-time.</strong></p>
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px', alignItems: 'center' }}>
             <a href={STRIPE_MEGA_PACK} style={{ display: 'inline-block', background: '#3B5FFF', color: '#fff', padding: '12px 24px', borderRadius: '6px', textDecoration: 'none', fontWeight: '700', fontSize: '15px' }}>
               Get the AI Prompt Mega Pack &mdash; $29

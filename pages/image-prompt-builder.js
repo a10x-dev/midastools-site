@@ -257,7 +257,7 @@ export default function ImagePromptBuilder() {
       { "@type": "Question", "name": "How do I write a good AI image prompt?", "acceptedAnswer": { "@type": "Answer", "text": "A good AI image prompt includes: the subject, art style, mood/atmosphere, lighting, and camera angle. Our free Image Prompt Builder combines all these elements automatically for ChatGPT, Midjourney, DALL-E, and Stable Diffusion." }},
       { "@type": "Question", "name": "What's the best AI image style right now?", "acceptedAnswer": { "@type": "Answer", "text": "Studio Ghibli-style AI art is the #1 viral trend in 2026, followed by hyperrealistic portraits, cyberpunk scenes, and 3D clay renders. Our tool supports all 25 trending styles including Pixar, pet portraits, and LinkedIn headshots." }},
       { "@type": "Question", "name": "Does this work with ChatGPT's image generation?", "acceptedAnswer": { "@type": "Answer", "text": "Yes! The Image Prompt Builder generates optimized prompts for ChatGPT (DALL-E), Midjourney, Stable Diffusion, and Ideogram. Each platform gets a specifically formatted prompt for best results." }},
-      { "@type": "Question", "name": "Is this AI image prompt tool free?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, the AI Image Prompt Builder is 100% free with no login required. For 200+ pre-built expert prompts across every style and category, check out our AI Image Prompt Pack." }},
+      { "@type": "Question", "name": "Is this AI image prompt tool free?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, the AI Image Prompt Builder is 100% free with no login required. For 145+ pre-built expert prompts across every style and category, check out our AI Image Prompt Pack." }},
     ]
   };
 
@@ -1051,11 +1051,11 @@ export default function ImagePromptBuilder() {
 
       {/* CTA */}
       <section className="cta-section">
-        <h2>Want 200+ Pre-Built Image Prompts?</h2>
-        <p>Skip the builder. Get instant access to 200+ expert-crafted prompts for portraits, landscapes, product shots, social media, and more — tested across ChatGPT, Midjourney, and DALL·E.</p>
+        <h2>Want 145+ Pre-Built Image Prompts?</h2>
+        <p>Skip the builder. Get instant access to 145+ expert-crafted prompts for portraits, landscapes, product shots, social media, and more — tested across ChatGPT, Midjourney, and DALL·E.</p>
         <a href={STRIPE_IMAGE_PACK} className="cta-btn">Get the AI Image Prompt Pack — $29 →</a>
         <div className="cta-features">
-          <span>✓ 200+ prompts</span>
+          <span>✓ 145+ prompts</span>
           <span>✓ 6 categories</span>
           <span>✓ All AI platforms</span>
           <span>✓ Instant download</span>
@@ -1079,7 +1079,7 @@ export default function ImagePromptBuilder() {
         </div>
         <div className="faq-item">
           <h3>Is this tool really free?</h3>
-          <p>100% free, no login required, no limits. Build as many prompts as you want. For 200+ pre-built expert prompts, check out our <Link href="/ai-image-prompt-pack">AI Image Prompt Pack</Link>.</p>
+          <p>100% free, no login required, no limits. Build as many prompts as you want. For 145+ pre-built expert prompts, check out our <Link href="/ai-image-prompt-pack">AI Image Prompt Pack</Link>.</p>
         </div>
         <div className="faq-item">
           <h3>What makes a Midjourney prompt different from a ChatGPT prompt?</h3>
@@ -1112,7 +1112,7 @@ export default function ImagePromptBuilder() {
           animation: 'slideUp 0.3s ease-out',
         }}>
           <span style={{ color: '#fff', fontSize: 14, fontWeight: 600 }}>
-            Want 200+ pre-built prompts? Skip the builder.
+            Want 145+ pre-built prompts? Skip the builder.
           </span>
           <a href={STRIPE_IMAGE_PACK} style={{
             background: '#3B5FFF', color: '#fff', padding: '8px 20px',

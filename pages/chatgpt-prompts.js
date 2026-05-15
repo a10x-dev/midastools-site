@@ -26,7 +26,7 @@ const faqs = [
   },
   {
     q: 'Are these prompts free?',
-    a: 'We publish free prompts in every blog post linked on this page. For our full collections (200+ business prompts, 150+ image prompts), we offer premium packs starting at $29. You can also grab 5 free prompts to try before you buy.',
+    a: 'We publish free prompts in every blog post linked on this page. For our full collections (145+ business prompts, 150+ image prompts), we offer premium packs starting at $29. You can also grab 5 free prompts to try before you buy.',
   },
   {
     q: 'Do these prompts work with GPT-4o and GPT-5?',
@@ -270,7 +270,7 @@ export default function ChatGPTPrompts() {
             <div className="cta-product">
               <div className="cta-product-price">$29</div>
               <div className="cta-product-name">AI Prompt Mega Pack</div>
-              <div className="cta-product-desc">200+ business &amp; productivity prompts for marketing, sales, operations, and growth.</div>
+              <div className="cta-product-desc">145+ business &amp; productivity prompts for marketing, sales, operations, and growth.</div>
               <Link href="/ai-prompt-mega-pack" className="cta-product-link">View Pack &rarr;</Link>
             </div>
             <div className="cta-product">

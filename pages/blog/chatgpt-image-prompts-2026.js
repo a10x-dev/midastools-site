@@ -182,7 +182,7 @@ export default function ChatGPTImagePrompts2026() {
 
         {/* CTA AFTER SECTION 1 */}
         <div style={{ marginTop: '32px', marginBottom: '32px', padding: '24px', background: '#F0F4FF', border: '1px solid #93B4FF', borderRadius: '8px', textAlign: 'center' }}>
-          <p style={{ margin: '0 0 12px', fontSize: '16px', fontWeight: '700' }}>Want 200+ image prompts with style variations and parameters pre-built?</p>
+          <p style={{ margin: '0 0 12px', fontSize: '16px', fontWeight: '700' }}>Want 145+ image prompts with style variations and parameters pre-built?</p>
           <p style={{ margin: '0 0 16px', color: '#6B7280', fontSize: '15px' }}>Every prompt includes lighting, camera, composition, and mood details. Copy, paste, generate. Works with ChatGPT, Midjourney, and any AI image tool.</p>
           <a href={IMAGE_PACK_LINK} style={{ display: 'inline-block', background: '#3B5FFF', color: '#fff', padding: '14px 28px', borderRadius: '6px', textDecoration: 'none', fontWeight: '700', fontSize: '15px' }}>
             Get the AI Image Prompt Pack &mdash; $29
@@ -322,7 +322,7 @@ export default function ChatGPTImagePrompts2026() {
         {/* CTA AFTER SECTION 3 */}
         <div style={{ marginTop: '32px', marginBottom: '32px', padding: '24px', background: '#F0F4FF', border: '1px solid #93B4FF', borderRadius: '8px', textAlign: 'center' }}>
           <p style={{ margin: '0 0 12px', fontSize: '16px', fontWeight: '700' }}>Creating content every day? Stop writing prompts from scratch.</p>
-          <p style={{ margin: '0 0 16px', color: '#6B7280', fontSize: '15px' }}>The AI Image Prompt Pack has 200+ prompts organized by platform and use case. The Mega Pack adds 200+ text prompts for captions, scripts, emails, and more.</p>
+          <p style={{ margin: '0 0 16px', color: '#6B7280', fontSize: '15px' }}>The AI Image Prompt Pack has 145+ prompts organized by platform and use case. The Mega Pack adds 145+ text prompts for captions, scripts, emails, and more.</p>
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px', justifyContent: 'center' }}>
             <a href={IMAGE_PACK_LINK} style={{ display: 'inline-block', background: '#3B5FFF', color: '#fff', padding: '14px 28px', borderRadius: '6px', textDecoration: 'none', fontWeight: '700', fontSize: '15px' }}>
               Image Prompt Pack &mdash; $29
@@ -647,7 +647,7 @@ Direction C (Abstract): A pure abstract composition — [flowing paint pours / c
 
         <div style={{ marginTop: '24px', padding: '32px', background: '#F0F4FF', border: '1px solid #93B4FF', borderRadius: '8px' }}>
           <h3 style={{ margin: '0 0 8px', fontSize: '1.1rem' }}>Ready to create scroll-stopping visuals on demand?</h3>
-          <p style={{ margin: '0 0 16px', color: '#6B7280', fontSize: '15px' }}>The <strong>AI Image Prompt Pack</strong> includes 200+ battle-tested image prompts organized by use case &mdash; portraits, products, social media, branding, art, and viral trends. Every prompt is pre-built with camera, lighting, composition, and mood details. Copy, paste, generate. $29 one-time.</p>
+          <p style={{ margin: '0 0 16px', color: '#6B7280', fontSize: '15px' }}>The <strong>AI Image Prompt Pack</strong> includes 145+ battle-tested image prompts organized by use case &mdash; portraits, products, social media, branding, art, and viral trends. Every prompt is pre-built with camera, lighting, composition, and mood details. Copy, paste, generate. $29 one-time.</p>
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px', alignItems: 'center' }}>
             <a href={IMAGE_PACK_LINK} style={{ display: 'inline-block', background: '#3B5FFF', color: '#fff', padding: '12px 24px', borderRadius: '6px', textDecoration: 'none', fontWeight: '700', fontSize: '15px' }}>
               Get the Image Prompt Pack &mdash; $29

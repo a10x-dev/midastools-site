@@ -497,7 +497,7 @@ Format: Executive summary, KPI table, what worked (3), what didn't (3), next qua
         </ul>
 
         <div style={{ marginTop: '48px', padding: '32px', background: '#F0F4FF', border: '1px solid #93B4FF', borderRadius: '8px' }}>
-          <h3 style={{ margin: '0 0 8px', fontSize: '1.1rem' }}>Want all 200+ prompts in one download?</h3>
+          <h3 style={{ margin: '0 0 8px', fontSize: '1.1rem' }}>Want all 145+ prompts in one download?</h3>
           <p style={{ margin: '0 0 16px', color: '#6B7280', fontSize: '15px' }}>The <strong>AI Prompt Mega Pack</strong> includes every prompt in this article plus 150 more &mdash; organized by category, ready to customize, works with ChatGPT, Claude, Gemini, and any LLM. $29 one-time.</p>
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px', alignItems: 'center' }}>
             <Link href="/ai-prompt-mega-pack" style={{ display: 'inline-block', background: '#3B5FFF', color: '#fff', padding: '12px 24px', borderRadius: '6px', textDecoration: 'none', fontWeight: '700', fontSize: '15px' }}>

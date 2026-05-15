@@ -80,7 +80,7 @@ export default function PersonalPage({ page }) {
 
         <div style={{ marginTop: 56, padding: '32px', background: DESIGN.black, color: DESIGN.white, borderRadius: 16 }}>
           <h2 style={{ fontSize: 24, fontWeight: 700, marginBottom: 8, color: DESIGN.white }}>
-            That's 5 of 200+ prompts in the bundle.
+            That's 5 of 145+ prompts in the bundle.
           </h2>
           <p style={{ fontSize: 16, color: '#9CA3AF', marginBottom: 24, lineHeight: 1.6 }}>
             14 niche kits — Cold Outreach, Operations, Email & Marketing, SaaS Founder, Resume & Career, Image Generation, and more. One Stripe-Link click, $97, 30-day no-questions refund.

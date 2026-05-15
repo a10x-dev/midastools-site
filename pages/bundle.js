@@ -200,7 +200,7 @@ export default function Bundle() {
             },
             {
               abbr: 'MP', name: 'AI Business Writing Pack', price: '$29', bg: 'var(--card-amber)',
-              desc: '200+ ready-to-use business documents — sales copy, social posts, blog drafts, SOPs, and career materials. Open, customize 2-3 words, publish.',
+              desc: '145+ ready-to-use business documents — sales copy, social posts, blog drafts, SOPs, and career materials. Open, customize 2-3 words, publish.',
               link: '/ai-prompt-mega-pack',
               items: ['35 sales & copywriting pieces done', '35 social media posts written', '35 content pieces drafted', '35 business SOPs & ops docs', '35 personal brand assets', '35 productivity workflows built'],
             },

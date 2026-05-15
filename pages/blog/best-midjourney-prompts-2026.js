@@ -196,7 +196,7 @@ export default function BestMidjourneyPrompts2026() {
 
         {/* CTA AFTER SECTION 1 */}
         <div style={{ marginTop: '32px', marginBottom: '32px', padding: '24px', background: '#F0F4FF', border: '1px solid #93B4FF', borderRadius: '8px', textAlign: 'center' }}>
-          <p style={{ margin: '0 0 12px', fontSize: '16px', fontWeight: '700' }}>Want 200+ image prompts pre-built with parameters and style variations?</p>
+          <p style={{ margin: '0 0 12px', fontSize: '16px', fontWeight: '700' }}>Want 145+ image prompts pre-built with parameters and style variations?</p>
           <p style={{ margin: '0 0 16px', color: '#6B7280', fontSize: '15px' }}>Every prompt includes Midjourney parameters, lighting setups, and composition details. Copy, paste into /imagine, generate. Works with Midjourney, ChatGPT, and any AI image tool.</p>
           <a href={IMAGE_PACK_LINK} style={{ display: 'inline-block', background: '#3B5FFF', color: '#fff', padding: '14px 28px', borderRadius: '6px', textDecoration: 'none', fontWeight: '700', fontSize: '15px' }}>
             Get the AI Image Prompt Pack &mdash; $29
@@ -265,7 +265,7 @@ export default function BestMidjourneyPrompts2026() {
         {/* CTA AFTER SECTION 2 */}
         <div style={{ marginTop: '32px', marginBottom: '32px', padding: '24px', background: '#F0F4FF', border: '1px solid #93B4FF', borderRadius: '8px', textAlign: 'center' }}>
           <p style={{ margin: '0 0 12px', fontSize: '16px', fontWeight: '700' }}>Stop writing prompts from scratch every time.</p>
-          <p style={{ margin: '0 0 16px', color: '#6B7280', fontSize: '15px' }}>The AI Image Prompt Pack has 200+ pre-built prompts with parameters for Midjourney, ChatGPT, and every major AI image tool. Organized by category. Copy, paste, generate.</p>
+          <p style={{ margin: '0 0 16px', color: '#6B7280', fontSize: '15px' }}>The AI Image Prompt Pack has 145+ pre-built prompts with parameters for Midjourney, ChatGPT, and every major AI image tool. Organized by category. Copy, paste, generate.</p>
           <a href={IMAGE_PACK_LINK} style={{ display: 'inline-block', background: '#3B5FFF', color: '#fff', padding: '14px 28px', borderRadius: '6px', textDecoration: 'none', fontWeight: '700', fontSize: '15px' }}>
             Get the AI Image Prompt Pack &mdash; $29
           </a>
@@ -392,7 +392,7 @@ export default function BestMidjourneyPrompts2026() {
 
         {/* CTA AFTER SECTION 4 */}
         <div style={{ marginTop: '32px', marginBottom: '32px', padding: '24px', background: '#F0F4FF', border: '1px solid #93B4FF', borderRadius: '8px', textAlign: 'center' }}>
-          <p style={{ margin: '0 0 12px', fontSize: '16px', fontWeight: '700' }}>200+ prompts. Every style. Every AI tool. One pack.</p>
+          <p style={{ margin: '0 0 12px', fontSize: '16px', fontWeight: '700' }}>145+ prompts. Every style. Every AI tool. One pack.</p>
           <p style={{ margin: '0 0 16px', color: '#6B7280', fontSize: '15px' }}>Portraits, products, cinematic, anime, architecture, abstract &mdash; all pre-built with parameters and variations. Works with Midjourney, ChatGPT, Leonardo, and more.</p>
           <a href={IMAGE_PACK_LINK} style={{ display: 'inline-block', background: '#3B5FFF', color: '#fff', padding: '14px 28px', borderRadius: '6px', textDecoration: 'none', fontWeight: '700', fontSize: '15px' }}>
             Get the AI Image Prompt Pack &mdash; $29
@@ -572,7 +572,7 @@ Example:
         {/* FINAL CTA */}
         <div style={{ marginTop: '24px', padding: '32px', background: '#F0F4FF', border: '1px solid #93B4FF', borderRadius: '8px' }}>
           <h3 style={{ margin: '0 0 8px', fontSize: '1.1rem' }}>Ready to generate stunning AI art on demand?</h3>
-          <p style={{ margin: '0 0 16px', color: '#6B7280', fontSize: '15px' }}>The <strong>AI Image Prompt Pack</strong> includes 200+ battle-tested image prompts organized by use case &mdash; portraits, products, cinematic, anime, architecture, abstract, and more. Every prompt is pre-built with Midjourney parameters, lighting, composition, and mood details. Copy, paste into /imagine, generate. $29 one-time.</p>
+          <p style={{ margin: '0 0 16px', color: '#6B7280', fontSize: '15px' }}>The <strong>AI Image Prompt Pack</strong> includes 145+ battle-tested image prompts organized by use case &mdash; portraits, products, cinematic, anime, architecture, abstract, and more. Every prompt is pre-built with Midjourney parameters, lighting, composition, and mood details. Copy, paste into /imagine, generate. $29 one-time.</p>
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px', alignItems: 'center' }}>
             <a href={IMAGE_PACK_LINK} style={{ display: 'inline-block', background: '#3B5FFF', color: '#fff', padding: '12px 24px', borderRadius: '6px', textDecoration: 'none', fontWeight: '700', fontSize: '15px' }}>
               Get the Image Prompt Pack &mdash; $29
@@ -594,7 +594,7 @@ Example:
         <ul style={{ paddingLeft: '20px', marginBottom: '16px' }}>
           <li><Link href="/blog/chatgpt-image-prompts-2026" style={{ color: '#3B5FFF' }}>50 Viral ChatGPT Image Prompts That Broke the Internet in 2026</Link></li>
           <li><Link href="/blog/chatgpt-action-figure-prompt-2026" style={{ color: '#3B5FFF' }}>The Viral ChatGPT Action Figure Prompt Everyone Is Using</Link></li>
-          <li><Link href="/ai-image-prompt-pack" style={{ color: '#3B5FFF' }}>AI Image Prompt Pack &mdash; 200+ Ready-to-Use Prompts</Link></li>
+          <li><Link href="/ai-image-prompt-pack" style={{ color: '#3B5FFF' }}>AI Image Prompt Pack &mdash; 145+ Ready-to-Use Prompts</Link></li>
           <li><Link href="/bundle" style={{ color: '#3B5FFF' }}>Midas Tools Complete Bundle &mdash; All Kits, One Price</Link></li>
           <li><Link href="/blog/ai-video-prompts-sora-runway-2026" style={{ color: '#3B5FFF' }}>30+ Best AI Video Prompts for Sora, Runway &amp; Pika 2026</Link></li>
         </ul>

@@ -326,7 +326,7 @@ export default function WorldCupAIPrompts2026() {
         {/* Bottom monetization CTA */}
         <div style={{ marginTop: 40, padding: 32, background: DESIGN.black, color: DESIGN.white, borderRadius: 16 }}>
           <h2 style={{ fontSize: 22, fontWeight: 700, marginTop: 0, marginBottom: 8, color: DESIGN.white }}>
-            Want 200+ AI prompts beyond World Cup?
+            Want 145+ AI prompts beyond World Cup?
           </h2>
           <p style={{ fontSize: 15, color: '#9CA3AF', marginBottom: 24, lineHeight: 1.6 }}>
             The MidasTools <strong>AI Prompt Mega Pack</strong> ($29) covers cold outreach, social

@@ -624,7 +624,7 @@ Rules:
 
         <div className="blog-cta">
           <h3>The full library this article draws from</h3>
-          <p>200+ reusable prompts across research, strategy, writing, and code — not just Claude.</p>
+          <p>145+ reusable prompts across research, strategy, writing, and code — not just Claude.</p>
           <div style={{ display: 'flex', gap: 12, justifyContent: 'center', flexWrap: 'wrap' }}>
             <a href={STRIPE_MEGA} className="blog-cta-btn">AI Prompt Mega Pack — $97</a>
             <a href={STRIPE_CODE} className="blog-cta-btn" style={{ background: 'var(--text)' }}>Claude Code Kit — $39</a>
@@ -674,7 +674,7 @@ Rules:
           push back on you. Those three moves are the difference between "Opus feels expensive" and "Opus earns its bill."
         </p>
         <p>
-          The 14 templates here are free to copy. If you want the complete library — 200+ prompts across research, strategy,
+          The 14 templates here are free to copy. If you want the complete library — 145+ prompts across research, strategy,
           code, writing, and agents — the{' '}
           <Link href="/ai-prompt-mega-pack" style={{ color: 'var(--accent)', fontWeight: 600 }}>AI Prompt Mega Pack</Link>{' '}
           is what this article is drawn from.
@@ -682,7 +682,7 @@ Rules:
 
         <div className="blog-cta" style={{ marginBottom: 0 }}>
           <h3>Stop paying Opus prices for Sonnet answers</h3>
-          <p>200+ ready-to-use prompts with the VERIFICATION slot pre-wired. Lifetime updates.</p>
+          <p>145+ ready-to-use prompts with the VERIFICATION slot pre-wired. Lifetime updates.</p>
           <div style={{ display: 'flex', gap: 12, justifyContent: 'center', flexWrap: 'wrap' }}>
             <a href={STRIPE_MEGA} className="blog-cta-btn">Get the Mega Pack — $97</a>
             <a href={STRIPE_CODE} className="blog-cta-btn" style={{ background: 'var(--text)' }}>Claude Code Kit — $39</a>

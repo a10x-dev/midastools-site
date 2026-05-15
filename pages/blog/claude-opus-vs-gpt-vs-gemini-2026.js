@@ -326,7 +326,7 @@ Final report must include:
         </p>
 
         <div className="blog-cta">
-          <h3>200+ tested prompts across every model</h3>
+          <h3>145+ tested prompts across every model</h3>
           <p>The AI Prompt Mega Pack ships with prompts categorized by best-fit model — Opus, GPT, Gemini, Sonnet — so you stop guessing.</p>
           <a href={`${STRIPE_MEGA}?client_reference_id=opus-vs-gpt-vs-gemini`} className="blog-cta-btn">Get the Mega Pack — $97 →</a>
         </div>

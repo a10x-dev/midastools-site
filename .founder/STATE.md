@@ -2,14 +2,52 @@
 
 ## Current Status (auto-synced from database)
 
-**Bottleneck**: market_understanding (severity 6/10) — DECIDE-DAY MORNING (May 14 04:40 local / 10:40 UTC). Branch 4 probability holds ~70% but sub-mix REVISED based on first-ever cta_click captured 07:28 UTC. India/Android user from chatgpt.com referrer clicked $29 Starter Kit then $97 All Kits within 315ms — funnel mechanics work, audience-fit problem confirmed. P4a (hero rewrite) DOWNGRADED, P4b (buyer-discovery via Reddit/Gumroad/ProductHunt) PRIMARY. Telegram brief fired with revised calibration. Gumroad listing paste-ready for noon default-fallback. Awaiting Armando response.
+**Bottleneck**: market_understanding (severity 6/10) — Post-decide-day P0 closed: /api/track migrated to Upstash KV, Reddit P4b-A attribution data durable for full 14d run. Subscriber count corrected 20→37 (pair-session recovery surfaced 17 new subs incl. fanucamerica.com B2B). 🚨 2 unread Gmail replies from delon@zplatform.ai to guest-post pitches (May 14 21:27 + May 15 01:13 UTC) — first inbound signal in 47 days. Local body-capture empty (Resend webhook bug); Armando must read Gmail directly. Tomorrow 09:00 standup: re-evaluate branches with NEW data foundation including any Reddit-attributed traffic + delon thread content.
 
 **KPIs**:
 - Conversations: 0 (target: 3, 7d: 0%)
-- Users: 20 (target: 30, 7d: 0%)
+- Users: 37 (target: 30, 7d: 85%)
 - Revenue: 155 (target: 997, 7d: 0%)
 
 <!-- AGENT-EDITED-BELOW (everything below this line is preserved across ticks) -->
+
+## Session 30 (May 14, 21:37 local / May 15 03:37 UTC) — RECOVERY-WELCOMES READY-TO-FIRE + B2B INTEL + REDDIT P4b-A ZERO-CLICK AT T+16h
+
+### Trigger
+User asked "what needs to happen next?" 2 min after Session 29 continuation closed. Three self-authored principles agree against more Telegram pings tonight (`armando-async-asks`) or content pushes (`motion-vs-progress`). But the morning standup plan had 3 items, and 2 of them (KV check + recovery welcomes prep) compress productively at 21:37.
+
+### ✅ Data shipped this session
+1. **5-monitor sweep — all clean** (read-replies confirms 2 delon@zplatform.ai unread w/ empty body, audit/partner/quiz/metrics all 0). LTM unchanged $155, 37 subs.
+2. **KV inspection of /api/track-events (fresh post-S29 migration)** — 7 events / 5 unique sessions in ~36h. **ZERO Reddit-attributed events.** chatgpt.com signal sustains (India/Android visitor) **but did NOT repeat the 07:28 UTC cta_click pattern** → falsifies "07:28 visitor was a trend" → that engagement was N=1. **First attributed directory referral**: submitaitools.org → / from Sweden (proves one of our directory submissions is delivering traffic).
+3. **17-recovered-subs reconstruction COMPLETE** — built `.founder/tools/reconstruct-recovered-subs.py` (gist∖FALLBACK diff), wrote 17-entry synthetic JSON to `.founder/state/recovered-subs-reconstructed.json`, dry-run send-recovery-welcomes.py validates 17/17 queued + 0 skipped + render clean. Tomorrow's morning recovery is now **one command**: `--apply`.
+4. **B2B intel on 3 high-value subscribers** — Ramella Badawi (Mgr Business Reporting at FANUC America, 7/10 fit), support@galaxyholidays.co.uk (UK SMB alias, 3/10), **Daniel @ 80si.com (Lead Dev at 8-person Dutch dev agency, 9/10 fit for Claude Code Kit)**. Saved to `.founder/deliverables/recovery-readiness-2026-05-15.md` with 3 decision branches for tomorrow.
+
+### Key finding for tomorrow's standup (Reddit P4b-A)
+**$50 Reddit promoted post has produced ZERO measurable click-thrus in ~16h.** Preliminary (Reddit ad delivery can take 24-48h to ramp + may strip UTM through their click tracker) but worth surfacing. Armando should check his Reddit Ads dashboard for impression count tomorrow morning — if impressions exist but clicks=0, the ad copy/headline is the bug. If impressions=0, Reddit's targeting hasn't matched yet. Either way, P4b-A "PRIMARY" framing from Session 28 morning needs re-calibration if T+24h still 0.
+
+### Deeper-than-expected storage-blackout window
+5 of the 17 recovered subs date **before** May 5 (Apr 13 → Apr 27). Consistent with Session 26c's hypothesis that gist write-path may have been stale since Apr 17. The bug is ~4 weeks wide, not 4 days. (Not changing strategy on this — recovery handles all 17 regardless.)
+
+### What I did NOT do (deliberately)
+- Did NOT 2nd-Telegram Armando about delon's replies. Already pinged 2h ago; second ping = noise.
+- Did NOT --apply recovery welcomes. Armando-blocked on the "have you contacted any of them" check + Branch A/B/C decision (generic-all vs personalize-B2B-subset).
+- Did NOT pre-draft personalized B2B touches for Ramella/Daniel. Saturation territory — intel surfaced is sufficient for Armando's morning call. Drafts only make sense AFTER he picks Branch B.
+- Did NOT ack the 2 delon replies. Body still empty locally; he reads Gmail directly tomorrow.
+- Did NOT inspect the now-deployed inbound-email parser for any production logs. Vercel logs require login I don't have; the diagnostic will surface in next real inbound payload.
+
+### Honest accounting
+**Direct KPI: zero.** **Indirect: medium-high.**
+1. Tomorrow morning's recovery work compressed from "reconstruct + smoke-test + decide branch + send" (~30-45 min) → "decide branch + 1 command" (5 min).
+2. B2B intel surfaces 1 9/10-fit subscriber (Daniel/80si) Armando wouldn't have time to research mid-standup.
+3. Reddit P4b-A zero-click finding pre-empts a false-positive "campaign working" assumption in tomorrow's calibration.
+
+### Confidence
+85% — KV inspection direct via /api/track-events HTTPS GET (7 events confirmed schema-intact); reconstruction script smoke-tested with real gist data (17 subs identified, dry-run clean); B2B intel from authoritative sources (ZoomInfo for Ramella, 80si.com homepage for Daniel). Lower than 90% because: (a) Reddit ad data is too thin at T+16h for confident calibration revision, (b) Daniel @ 80si.com role inference rests on team-page scrape, not direct confirmation.
+
+### NEXT_CHECKIN expectation
+Tomorrow 09:00 local — morning standup. (1) Armando reads delon@zplatform.ai Gmail thread → draft response. (2) Armando picks Branch A/B/C for 17 recovery welcomes → execute. (3) Armando checks Reddit Ads dashboard for impression count → re-calibrate P4b-A primary status. (4) Re-run 5 monitors + check KV for any overnight cta_click events.
+
+---
 
 ## Session 29 (continuation 21:40 local) — INBOUND-EMAIL BODY-CAPTURE HARDENED + zPlatform.ai INTEL UNLOCKED
 

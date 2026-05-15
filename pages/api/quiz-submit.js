@@ -114,7 +114,7 @@ function renderResultEmail({ personaTitle, blurb, prompts, painpoint, prospect }
   ${painpointBlock}
   ${promptHtml}
   <div style="margin-top:32px;padding:24px;background:#111827;color:#FFFFFF;border-radius:14px;">
-    <h2 style="font-size:18px;font-weight:700;margin:0 0 6px 0;color:#FFFFFF;">Want all 200+ prompts across 14 kits?</h2>
+    <h2 style="font-size:18px;font-weight:700;margin:0 0 6px 0;color:#FFFFFF;">Want all 145+ prompts across 14 kits?</h2>
     <p style="font-size:14px;color:#9CA3AF;margin:0 0 16px 0;">The All Kits Bundle is $97. 14 niche kits, 30-day refund.</p>
     <a href="${stripeUrl}" style="display:inline-block;background:#3B5FFF;color:#FFFFFF;padding:10px 20px;border-radius:6px;font-weight:700;font-size:14px;text-decoration:none;">Get the Bundle — $97</a>
     ${prospect ? `<p style="font-size:12px;color:#9CA3AF;margin:14px 0 0 0;">Your hand-picked page: <a href="https://www.midastools.co/p/${prospect.slug}" style="color:#3B5FFF;">midastools.co/p/${prospect.slug}</a></p>` : ''}

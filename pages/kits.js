@@ -26,7 +26,7 @@ const kits = [
   {
     name: 'AI Prompt Mega Pack',
     price: '$29',
-    desc: '200+ battle-tested AI prompts for copywriting, social media, content, operations, branding & productivity. Works with any LLM.',
+    desc: '145+ battle-tested AI prompts for copywriting, social media, content, operations, branding & productivity. Works with any LLM.',
     href: '/ai-prompt-mega-pack',
     stripe: 'https://buy.stripe.com/4gMbJ0dgz4aJ1qkb46cMM0d',
     gumroad: null,

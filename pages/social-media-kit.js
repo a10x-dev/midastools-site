@@ -38,16 +38,16 @@ export default function SocialMediaKit() {
     <Layout>
       <Head>
         <title>AI Social Media Manager Kit — Content Calendars, Captions, Viral Formulas &amp; Ad Copy | Midas Tools</title>
-        <meta name="description" content="150+ AI prompts and templates for social media managers. Content calendars, caption hooks, viral formulas, analytics prompts, community management, and paid ad copy for every major platform. $39 one-time." />
+        <meta name="description" content="65+ AI prompts and templates for social media managers. Content calendars, caption hooks, viral formulas, analytics prompts, community management, and paid ad copy for every major platform. $39 one-time." />
         <meta name="keywords" content="AI social media manager, social media templates, content calendar AI, caption generator, viral content prompts, social media ad copy templates" />
         <meta property="og:title" content="AI Social Media Manager Kit — Content Calendars, Captions & Viral Formulas | Midas Tools" />
-        <meta property="og:description" content="150+ AI prompts and templates for social media managers. Calendars, captions, viral formulas, analytics, and ad copy — all for $39 one-time." />
+        <meta property="og:description" content="65+ AI prompts and templates for social media managers. Calendars, captions, viral formulas, analytics, and ad copy — all for $39 one-time." />
         <meta property="og:url" content="https://www.midastools.co/social-media-kit" />
         <meta property="og:image" content="https://www.midastools.co/og-image.png" />
         <meta property="og:type" content="product" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="AI Social Media Manager Kit — Midas Tools" />
-        <meta name="twitter:description" content="150+ AI prompts for social media managers. Calendars, captions, viral content, analytics, and paid ads. $39 one-time." />
+        <meta name="twitter:description" content="65+ AI prompts for social media managers. Calendars, captions, viral content, analytics, and paid ads. $39 one-time." />
         <link rel="canonical" href="https://www.midastools.co/social-media-kit" />
         <link rel="icon" type="image/png" href="/favicon.png" />
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
@@ -55,7 +55,7 @@ export default function SocialMediaKit() {
           "@context": "https://schema.org",
           "@type": "Product",
           "name": "AI Social Media Manager Kit",
-          "description": "150+ AI prompts and templates for social media managers — content calendars, caption hooks, viral formulas, analytics, community management, and paid ad copy for every major platform.",
+          "description": "65+ AI prompts and templates for social media managers — content calendars, caption hooks, viral formulas, analytics, community management, and paid ad copy for every major platform.",
           "url": "https://www.midastools.co/social-media-kit",
           "image": "https://www.midastools.co/og-image.png",
           "brand": "Midas Tools",
@@ -142,7 +142,7 @@ export default function SocialMediaKit() {
         <div className="badge" style={{marginBottom:32}}>Built for Social Media Managers</div>
         <h1>Stop the Content Burnout.<br />Plan, Post &amp; Grow<br /><span>on Every Platform.</span></h1>
         <p style={{fontSize:18,color:'var(--gray-400)',maxWidth:560,margin:'0 auto 40px',lineHeight:1.7}}>
-          150+ AI prompts and templates for social media — content calendars, caption hooks, viral formulas, analytics, community management, and paid ad copy. All for $39.
+          65+ AI prompts and templates for social media — content calendars, caption hooks, viral formulas, analytics, community management, and paid ad copy. All for $39.
         </p>
         <a href={STRIPE_URL} className="btn-primary">Get the Social Media Kit &mdash; $39 &rarr;</a>
         <p style={{marginTop:14,fontSize:14,color:'var(--gray-400)'}}>One-time payment &middot; Instant download &middot; 30-day money-back guarantee</p>
@@ -153,7 +153,7 @@ export default function SocialMediaKit() {
         <div style={{background:'var(--gray-900)',border:'1px solid var(--gray-800)',borderRadius:16,padding:48,textAlign:'center',marginBottom:48}}>
           <h2 style={{fontSize:28}}>The average social media manager spends 6+ hours per day creating content</h2>
           <p style={{color:'var(--gray-400)',fontSize:17,maxWidth:540,margin:'0 auto',lineHeight:1.7}}>
-            Content calendars, captions, hashtags, engagement, analytics, ads — it never ends. This kit gives you <strong style={{color:'var(--gold)'}}>150+ battle-tested templates</strong> so you can manage any account faster and smarter.
+            Content calendars, captions, hashtags, engagement, analytics, ads — it never ends. This kit gives you <strong style={{color:'var(--gold)'}}>65+ battle-tested templates</strong> so you can manage any account faster and smarter.
           </p>
         </div>
 
@@ -427,7 +427,7 @@ export default function SocialMediaKit() {
             { name: 'Content Creator Kit', price: '$39', desc: 'Repurposing templates, headline formulas, and a 30-day content calendar generator.', href: '/content-creator-kit' },
             { name: 'Small Business AI Kit', price: '$39', desc: 'Social media, email marketing, customer service, hiring, and operations templates.', href: '/small-business-kit' },
             { name: 'E-commerce AI Kit', price: '$39', desc: 'Product descriptions, email sequences, ad copy, and SEO templates for online stores.', href: '/ecommerce-kit' },
-            { name: 'AI Prompt Mega Pack', price: '$29', desc: '200+ battle-tested AI prompts for copywriting, social media, content, and productivity.', href: '/ai-prompt-mega-pack' },
+            { name: 'AI Prompt Mega Pack', price: '$29', desc: '145+ battle-tested AI prompts for copywriting, social media, content, and productivity.', href: '/ai-prompt-mega-pack' },
           ].map(k => (
             <a key={k.name} href={k.href} style={{background:'var(--gray-900)',border:'1px solid var(--gray-800)',borderRadius:12,padding:24,textDecoration:'none',color:'inherit',transition:'border-color 0.2s'}}>
               <div style={{fontSize:15,fontWeight:700,marginBottom:4}}>{k.name} <span style={{color:'var(--gold)'}}>{k.price}</span></div>
@@ -441,7 +441,7 @@ export default function SocialMediaKit() {
       <section style={{textAlign:'center',paddingBottom:100}}>
         <h2>Ready to 10x your <span>social media output?</span></h2>
         <p style={{color:'var(--gray-400)',fontSize:16,marginBottom:32,maxWidth:480,margin:'0 auto 32px',lineHeight:1.7}}>
-          150+ prompts. Every major platform. One price. Stop creating from scratch and start using proven AI templates.
+          65+ prompts. Every major platform. One price. Stop creating from scratch and start using proven AI templates.
         </p>
         <a href={STRIPE_URL} className="btn-primary">Get the Social Media Kit &mdash; $39 &rarr;</a>
         <p style={{marginTop:14,fontSize:14,color:'var(--gray-400)'}}>One-time payment &middot; Instant download &middot; 30-day money-back guarantee</p>

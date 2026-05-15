@@ -375,7 +375,7 @@ const broadcasts = {
       <div style="background:linear-gradient(135deg,#F59E0B,#D97706);border-radius:16px;padding:22px 24px;margin:0 0 24px;color:#FFF;text-align:center;">
         <div style="font-size:11px;font-weight:800;letter-spacing:1.5px;color:#FEF3C7;margin-bottom:6px;">🎯 STARTER PACK</div>
         <div style="font-size:26px;font-weight:900;line-height:1.1;">20 battle-tested AI prompts — $9</div>
-        <div style="font-size:13px;color:#FEF3C7;margin-top:8px;">The 20 best of our 200+ prompt Mega Pack.</div>
+        <div style="font-size:13px;color:#FEF3C7;margin-top:8px;">The 20 best of our 145+ prompt Mega Pack.</div>
       </div>
 
       <h1 style="font-size:24px;font-weight:700;margin:0 0 16px;">Small ask: $9 for the 20 prompts we'd pick first.</h1>
@@ -412,7 +412,7 @@ const broadcasts = {
 
       ${ctaButton("Get the 20 Prompts — $9 →", TRIPWIRE_LINK, "Instant access · 30-day money-back guarantee · Less than a coffee run")}
 
-      <p style="font-size:15px;line-height:1.7;color:#374151;">If you like these, the full <strong>200+ prompt Mega Pack is $29</strong> and the <strong>All-Kits Bundle is $97</strong>. But $9 is the honest starting point. No upsell pressure after.</p>
+      <p style="font-size:15px;line-height:1.7;color:#374151;">If you like these, the full <strong>145+ prompt Mega Pack is $29</strong> and the <strong>All-Kits Bundle is $97</strong>. But $9 is the honest starting point. No upsell pressure after.</p>
 
       <p style="font-size:14px;color:#6B7280;line-height:1.6;">— The MidasTools Team</p>
 
@@ -447,7 +447,7 @@ const broadcasts = {
       <div style="background:#F9FAFB;border:1px solid #E5E7EB;border-radius:10px;padding:18px 22px;margin:8px 0 24px;">
         <p style="font-size:14px;line-height:1.85;color:#374151;margin:0;">
           🟢 <a href="https://www.midastools.co/for-coaches?utm_source=email&amp;utm_campaign=coach_pivot" style="color:#3B5FFF;font-weight:700;">See coach pricing &amp; sample prompts</a><br/>
-          📦 <strong>Coach Mega Pack</strong> $97 lifetime — 200+ prompts<br/>
+          📦 <strong>Coach Mega Pack</strong> $97 lifetime — 145+ prompts<br/>
           📅 <strong>AI Content Month DFY</strong> $199 — 30 days of content shipped in 48h<br/>
           🎨 <strong>Coach Brand Starter Pack DFY</strong> $299 — full brand voice + sales page in 72h
         </p>

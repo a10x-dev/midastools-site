@@ -914,7 +914,7 @@ export default function PromptGenerator() {
                 </div>
                 <div className="prompt-output">{generatedPrompt}</div>
                 <div className="tip">
-                  <strong>Pro tip:</strong> Paste this prompt into ChatGPT, Claude, or Gemini. For even better results, add specific examples from your business. Want 200+ pre-built expert prompts? Check out our <Link href="/ai-prompt-mega-pack" style={{ color: '#92400E', fontWeight: 700 }}>AI Prompt Mega Pack</Link>.
+                  <strong>Pro tip:</strong> Paste this prompt into ChatGPT, Claude, or Gemini. For even better results, add specific examples from your business. Want 145+ pre-built expert prompts? Check out our <Link href="/ai-prompt-mega-pack" style={{ color: '#92400E', fontWeight: 700 }}>AI Prompt Mega Pack</Link>.
                 </div>
 
                 {/* Email capture — shows after 2nd prompt */}
@@ -957,7 +957,7 @@ export default function PromptGenerator() {
             <a href={STRIPE_MEGA_PACK} className="upsell-option" target="_blank" rel="noopener noreferrer">
               <div className="price">$29</div>
               <div className="name">AI Prompt Mega Pack</div>
-              <div className="desc">200+ prompts for every business task</div>
+              <div className="desc">145+ prompts for every business task</div>
             </a>
             <a href={STRIPE_BUNDLE} className="upsell-option featured" target="_blank" rel="noopener noreferrer">
               <div className="tag">Best Value — 79% Off</div>
@@ -977,7 +977,7 @@ export default function PromptGenerator() {
           { q: 'What AI tools do the prompts work with?', a: 'All generated prompts work with ChatGPT (GPT-5, GPT-4o), Claude (Sonnet/Opus 4.6), Gemini 3.1, Copilot, Midjourney v7, DALL-E, Stable Diffusion, Google Veo 3.1, Kling AI 3.0, Runway Gen-4, Pika, and any other AI tool that accepts text prompts.' },
           { q: 'How is this different from just asking ChatGPT?', a: 'Our generator uses battle-tested prompt engineering frameworks developed by professionals. The structure, specificity, and role-setting produce significantly better outputs than generic questions.' },
           { q: 'Can I use the generated prompts for my business?', a: 'Absolutely. Use them for clients, products, marketing, content — no restrictions. They\'re yours.' },
-          { q: 'Why would I buy the Mega Pack if this is free?', a: 'This generator creates great starting prompts. The Mega Pack includes 200+ advanced prompts with multiple variations, industry-specific frameworks, and prompt chains that build on each other for complex workflows.' },
+          { q: 'Why would I buy the Mega Pack if this is free?', a: 'This generator creates great starting prompts. The Mega Pack includes 145+ advanced prompts with multiple variations, industry-specific frameworks, and prompt chains that build on each other for complex workflows.' },
         ].map((item, i) => (
           <div key={i} className="faq-item">
             <h3 className="faq-q">{item.q}</h3>

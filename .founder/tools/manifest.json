@@ -1,5 +1,14 @@
 [
   {
+    "name": "reconstruct-recovered-subs.py",
+    "description": "Reconstruct synthetic recovery JSON by diffing the live gist subscribers against FALLBACK_SUBSCRIBERS in lib/subscribers.js. Built 2026-05-14 (Session 30) because pair-Session 25 merged 17 STORAGE FAILED subs directly into the gist but the parsed JSON from recover-storage-failed.py was discarded post-merge. Produces the exact input schema send-recovery-welcomes.py expects. Idempotent (gist∖fallback is deterministic). Usage: python3 .founder/tools/reconstruct-recovered-subs.py --out /tmp/recovered.json — then chain to send-recovery-welcomes.py --in /tmp/recovered.json --dry-run | --apply.",
+    "language": "python",
+    "path": "reconstruct-recovered-subs.py",
+    "use_count": 1,
+    "created_at": "2026-05-15T03:55:00Z",
+    "approved": true
+  },
+  {
     "name": "track-blob-stats.py",
     "description": "Query and aggregate the live /api/track jsonblob with composable filters + groupby. Replaces the ad-hoc curl+python one-liners I wrote 5+ times this week during standups (chatgpt-source breakdown, unique session counts, CTR per plink, top page_paths). Filters: --filter k=v (event, page_path, utm_source, utm_medium, utm_campaign, session_id, payload.*, attribution.*), --since 24h/30m/7d, --path-prefix /q/. Output: --groupby <key> prints markdown table; --groupby session_id computes unique-session counts; default shows recent rows. Built 2026-05-11 self-review; smoke-tested groupby page_path + filter utm_source=chatgpt.com --groupby session_id (caught real signal: 4 chatgpt events but only 2 unique sessions \u2014 meaningful for May 14 falsifiability of \"sustained citation\" hypothesis).",
     "language": "python",

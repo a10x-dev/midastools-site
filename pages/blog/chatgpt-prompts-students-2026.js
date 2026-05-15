@@ -318,7 +318,7 @@ For each question, provide the answer AND explain the reasoning so I learn from 
 
         {/* MID-ARTICLE CTA */}
         <div style={{ marginTop: '32px', marginBottom: '32px', padding: '24px', background: '#F0F4FF', border: '1px solid #93B4FF', borderRadius: '8px', textAlign: 'center' }}>
-          <p style={{ margin: '0 0 12px', fontSize: '16px', fontWeight: '700' }}>Want 200+ prompts ready to copy-paste?</p>
+          <p style={{ margin: '0 0 12px', fontSize: '16px', fontWeight: '700' }}>Want 145+ prompts ready to copy-paste?</p>
           <p style={{ margin: '0 0 16px', color: '#6B7280', fontSize: '15px' }}>The AI Prompt Mega Pack has prompts for studying, writing, research, productivity, and more &mdash; organized by use case and ready to go. Works with ChatGPT, Claude, Gemini, and any LLM.</p>
           <Link href="/ai-prompt-mega-pack" style={{ display: 'inline-block', background: '#3B5FFF', color: '#fff', padding: '14px 28px', borderRadius: '999px', textDecoration: 'none', fontWeight: '700', fontSize: '15px' }}>
             Get the AI Prompt Mega Pack &mdash; $29
@@ -787,7 +787,7 @@ After the mind map, suggest the 3 connections between branches that are most lik
         {/* ============================================ */}
 
         <div style={{ marginTop: '48px', padding: '32px', background: '#F0F4FF', border: '1px solid #93B4FF', borderRadius: '8px' }}>
-          <h3 style={{ margin: '0 0 8px', fontSize: '1.1rem' }}>Ready for 200+ prompts you can use right now?</h3>
+          <h3 style={{ margin: '0 0 8px', fontSize: '1.1rem' }}>Ready for 145+ prompts you can use right now?</h3>
           <p style={{ margin: '0 0 16px', color: '#6B7280', fontSize: '15px' }}>The <strong>AI Prompt Mega Pack</strong> includes prompts for studying, writing, research, productivity, career prep, and more &mdash; all organized by use case with fill-in-the-blank templates. Works with ChatGPT, Claude, Gemini, and any LLM. $29 one-time.</p>
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px', alignItems: 'center' }}>
             <Link href="/ai-prompt-mega-pack" style={{ display: 'inline-block', background: '#3B5FFF', color: '#fff', padding: '12px 24px', borderRadius: '999px', textDecoration: 'none', fontWeight: '700', fontSize: '15px' }}>

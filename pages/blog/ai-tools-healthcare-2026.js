@@ -328,10 +328,10 @@ Format per standard QI methodology. Reference Joint Commission National Patient 
 
         <h2 style={{ fontSize: '1.4rem', fontWeight: '700', marginTop: '40px' }}>Get All These Prompts Ready to Use</h2>
 
-        <p>Every prompt in this article &mdash; plus 200+ more for business operations, client communication, and professional workflows &mdash; is in the <strong>AI Prompt Mega Pack</strong>.</p>
+        <p>Every prompt in this article &mdash; plus 145+ more for business operations, client communication, and professional workflows &mdash; is in the <strong>AI Prompt Mega Pack</strong>.</p>
 
         <div style={{ background: '#f0f4ff', border: '2px solid #3B5FFF', borderRadius: '12px', padding: '24px', textAlign: 'center', margin: '32px 0' }}>
-          <p style={{ fontSize: '18px', fontWeight: '700', marginBottom: '8px' }}>AI Prompt Mega Pack — 200+ Prompts</p>
+          <p style={{ fontSize: '18px', fontWeight: '700', marginBottom: '8px' }}>AI Prompt Mega Pack — 145+ Prompts</p>
           <p style={{ color: '#6B7280', marginBottom: '16px' }}>Documentation, communication, training, scheduling, and more. Copy-paste ready for healthcare professionals.</p>
           <a href={STRIPE_MEGA_PACK} style={{ display: 'inline-block', background: '#3B5FFF', color: '#fff', padding: '14px 32px', borderRadius: '100px', textDecoration: 'none', fontWeight: '700', fontSize: '16px' }}>
             Get the Mega Pack — $29

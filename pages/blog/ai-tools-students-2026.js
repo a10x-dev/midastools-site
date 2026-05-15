@@ -149,7 +149,7 @@ Notes:
 
         {/* Mid-article CTA */}
         <div style={{ background: '#f0f4ff', border: '2px solid #3B5FFF', borderRadius: '12px', padding: '24px', textAlign: 'center', margin: '40px 0' }}>
-          <p style={{ fontSize: '18px', fontWeight: '700', marginBottom: '8px' }}>Want 200+ Copy-Paste AI Prompts for Students?</p>
+          <p style={{ fontSize: '18px', fontWeight: '700', marginBottom: '8px' }}>Want 145+ Copy-Paste AI Prompts for Students?</p>
           <p style={{ color: '#6B7280', marginBottom: '16px' }}>The AI Prompt Mega Pack includes study prompts, research prompts, writing prompts, and more &mdash; tested and ready to use for any subject.</p>
           <a href={STRIPE_MEGA_PACK} style={{ display: 'inline-block', background: '#3B5FFF', color: '#fff', padding: '14px 32px', borderRadius: '100px', textDecoration: 'none', fontWeight: '700', fontSize: '16px' }}>
             Get the Mega Pack &mdash; $29
@@ -331,12 +331,12 @@ Assignment requirements: [PASTE THE PROMPT OR RUBRIC IF YOU HAVE IT]`}
 
         <hr style={{ margin: '40px 0', border: 'none', borderTop: '1px solid #eee' }} />
 
-        <h2 style={{ fontSize: '1.4rem', fontWeight: '700', marginTop: '40px' }}>Get 200+ Prompts Built for Students</h2>
+        <h2 style={{ fontSize: '1.4rem', fontWeight: '700', marginTop: '40px' }}>Get 145+ Prompts Built for Students</h2>
 
-        <p>The three prompts above are a sample of what is in the <strong>AI Prompt Mega Pack</strong> &mdash; 200+ tested prompts covering academic writing, research, studying, productivity, and more. Every prompt includes fill-in-the-blank variables so you can adapt it to any assignment in under a minute.</p>
+        <p>The three prompts above are a sample of what is in the <strong>AI Prompt Mega Pack</strong> &mdash; 145+ tested prompts covering academic writing, research, studying, productivity, and more. Every prompt includes fill-in-the-blank variables so you can adapt it to any assignment in under a minute.</p>
 
         <div style={{ background: '#f0f4ff', border: '2px solid #3B5FFF', borderRadius: '12px', padding: '24px', textAlign: 'center', margin: '32px 0' }}>
-          <p style={{ fontSize: '18px', fontWeight: '700', marginBottom: '8px' }}>AI Prompt Mega Pack &mdash; 200+ Prompts</p>
+          <p style={{ fontSize: '18px', fontWeight: '700', marginBottom: '8px' }}>AI Prompt Mega Pack &mdash; 145+ Prompts</p>
           <p style={{ color: '#6B7280', marginBottom: '16px' }}>Study prompts, research prompts, writing prompts, and more. Copy-paste ready for any class.</p>
           <a href={STRIPE_MEGA_PACK} style={{ display: 'inline-block', background: '#3B5FFF', color: '#fff', padding: '14px 32px', borderRadius: '100px', textDecoration: 'none', fontWeight: '700', fontSize: '16px' }}>
             Get the Mega Pack &mdash; $29

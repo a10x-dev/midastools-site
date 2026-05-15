@@ -222,7 +222,7 @@ Product photography with dramatic studio lighting — slightly moody with a subt
 
         {/* MID-ARTICLE CTA */}
         <div style={{ marginTop: '32px', marginBottom: '32px', padding: '24px', background: '#F0F4FF', border: '1px solid #93B4FF', borderRadius: '8px', textAlign: 'center' }}>
-          <p style={{ margin: '0 0 12px', fontSize: '16px', fontWeight: '700' }}>Want 200+ AI image prompts ready to copy and paste?</p>
+          <p style={{ margin: '0 0 12px', fontSize: '16px', fontWeight: '700' }}>Want 145+ AI image prompts ready to copy and paste?</p>
           <p style={{ margin: '0 0 16px', color: '#6B7280', fontSize: '15px' }}>Action figures, portraits, product shots, brand visuals, and more. Every prompt includes lighting, materials, composition, and style details. Works with ChatGPT, Midjourney, and any AI image tool.</p>
           <a href={IMAGE_PACK_LINK} style={{ display: 'inline-block', background: '#3B5FFF', color: '#fff', padding: '14px 28px', borderRadius: '6px', textDecoration: 'none', fontWeight: '700', fontSize: '15px' }}>
             Get the AI Image Prompt Pack &mdash; $29

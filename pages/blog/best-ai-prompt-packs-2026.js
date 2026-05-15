@@ -79,12 +79,12 @@ export default function BestAIPromptPacks2026() {
         <h3 style={{ fontSize: '1.15rem', fontWeight: '700', marginTop: '32px' }}>#1. Midas AI Prompt Mega Pack &mdash; $29</h3>
 
         <p>Full disclosure: this is our product. But I am including it at #1 because after testing every option on this list, I genuinely believe it offers the best value for entrepreneurs and business owners. If it didn&rsquo;t, I would not have built it.</p>
-        <p>The Mega Pack includes <strong>200+ prompts across 6 business categories</strong>: sales and outreach, content creation, operations and systems, customer service, product and strategy, and social media. Every prompt uses a fill-in-the-bracket format with context variables, output constraints, and tone instructions.</p>
+        <p>The Mega Pack includes <strong>145+ prompts across 6 business categories</strong>: sales and outreach, content creation, operations and systems, customer service, product and strategy, and social media. Every prompt uses a fill-in-the-bracket format with context variables, output constraints, and tone instructions.</p>
         <p>What sets it apart is that these prompts are <strong>action-oriented</strong>. They are not theoretical &mdash; they are designed for specific tasks that entrepreneurs do every week. Write a cold email. Create a content calendar. Draft an SOP. Respond to a negative review. Analyze churn data. Each prompt has been tested across ChatGPT, Claude, and Gemini.</p>
 
         <p><strong>Pros:</strong></p>
         <ul>
-          <li>200+ prompts &mdash; broadest coverage on this list</li>
+          <li>145+ prompts &mdash; broadest coverage on this list</li>
           <li>Covers 6 business categories, not just marketing</li>
           <li>One-time purchase, no subscription</li>
           <li>Works with any LLM (ChatGPT, Claude, Gemini, Llama, etc.)</li>
@@ -261,7 +261,7 @@ export default function BestAIPromptPacks2026() {
               <tr style={{ borderBottom: '1px solid #E5E7EB', background: '#F0F4FF' }}>
                 <td style={{ padding: '10px', fontWeight: '700' }}>Midas Mega Pack</td>
                 <td style={{ padding: '10px', whiteSpace: 'nowrap' }}>$29 once</td>
-                <td style={{ padding: '10px' }}>200+</td>
+                <td style={{ padding: '10px' }}>145+</td>
                 <td style={{ padding: '10px' }}>6</td>
                 <td style={{ padding: '10px' }}>Any LLM</td>
                 <td style={{ padding: '10px' }}>Entrepreneurs</td>
@@ -324,7 +324,7 @@ export default function BestAIPromptPacks2026() {
 
         <p>There is no single &ldquo;best&rdquo; prompt pack for everyone. It depends on what you do and how you use AI.</p>
 
-        <p><strong>If you are an entrepreneur, freelancer, or small business owner</strong> who needs prompts across multiple business functions &mdash; sales, content, operations, customer service, strategy &mdash; the <Link href="/ai-prompt-mega-pack" style={{ color: '#3B5FFF' }}>Midas AI Prompt Mega Pack</Link> is the best value on this list. At $29 for 200+ prompts that work with any LLM, the cost per prompt is under $0.15. Nothing else comes close on a per-prompt, per-category basis.</p>
+        <p><strong>If you are an entrepreneur, freelancer, or small business owner</strong> who needs prompts across multiple business functions &mdash; sales, content, operations, customer service, strategy &mdash; the <Link href="/ai-prompt-mega-pack" style={{ color: '#3B5FFF' }}>Midas AI Prompt Mega Pack</Link> is the best value on this list. At $29 for 145+ prompts that work with any LLM, the cost per prompt is under $0.15. Nothing else comes close on a per-prompt, per-category basis.</p>
 
         <p><strong>If you are a developer</strong> who primarily uses AI for code generation, debugging, and technical tasks, the AI Prompt Engineer Bundle ($49) is worth the premium. It goes deep where the Mega Pack stays broad.</p>
 
@@ -342,7 +342,7 @@ export default function BestAIPromptPacks2026() {
 
         <div style={{ marginTop: '48px', padding: '32px', background: '#F0F4FF', border: '1px solid #93B4FF', borderRadius: '8px' }}>
           <h3 style={{ margin: '0 0 8px', fontSize: '1.1rem' }}>Ready to stop writing prompts from scratch?</h3>
-          <p style={{ margin: '0 0 16px', color: '#6B7280', fontSize: '15px' }}>The <strong>AI Prompt Mega Pack</strong> includes 200+ tested, fill-in-the-bracket prompts across 6 business categories. Works with ChatGPT, Claude, Gemini, and any LLM. One-time purchase &mdash; no subscription, no platform lock-in.</p>
+          <p style={{ margin: '0 0 16px', color: '#6B7280', fontSize: '15px' }}>The <strong>AI Prompt Mega Pack</strong> includes 145+ tested, fill-in-the-bracket prompts across 6 business categories. Works with ChatGPT, Claude, Gemini, and any LLM. One-time purchase &mdash; no subscription, no platform lock-in.</p>
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px', alignItems: 'center' }}>
             <Link href="/ai-prompt-mega-pack" style={{ display: 'inline-block', background: '#3B5FFF', color: '#fff', padding: '12px 24px', borderRadius: '6px', textDecoration: 'none', fontWeight: '700', fontSize: '15px' }}>
               Get the Mega Pack &mdash; $29
