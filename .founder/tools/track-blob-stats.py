@@ -49,17 +49,18 @@ from pathlib import Path
 
 ROOT = Path(__file__).parent.parent
 
-# Source-of-truth for the live track blob ID.
-# Death log lives in pages/api/track.js; update both when blob is rotated.
-TRACK_BLOB_ID = "019e2442-f1bb-7807-ae33-88a0d379d5e0"  # 16th rotation 2026-05-14 02:13 UTC (prior 019e17f6 died <26h MTBF; before that 019e09fa, 019dfe20)
-TRACK_BLOB_URL = f"https://jsonblob.com/api/jsonBlob/{TRACK_BLOB_ID}"
+# Post-2026-05-15 migration: track-events now lives in Upstash KV, read
+# through /api/track-events (server-side proxy; KV creds are Vercel-only).
+# No more jsonblob ID rotation. Death log preserved in git history of
+# pages/api/track.js for archaeological reference.
+TRACK_EVENTS_URL = "https://www.midastools.co/api/track-events?key=mt-outreach-2026"
 
 SINCE_RE = re.compile(r"^(\d+)([smhd])$")
 
 
 def fetch_events() -> list[dict]:
     req = urllib.request.Request(
-        TRACK_BLOB_URL,
+        TRACK_EVENTS_URL,
         headers={"User-Agent": "track-blob-stats/1.0"},
     )
     with urllib.request.urlopen(req, timeout=10) as resp:

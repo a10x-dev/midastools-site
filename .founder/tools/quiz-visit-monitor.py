@@ -42,10 +42,10 @@ STATE_DIR = ROOT / "state"
 STATE_DIR.mkdir(exist_ok=True)
 LAST_SNAP = STATE_DIR / "quiz-monitor-last.json"
 
-# Track-events jsonblob — separate from subscribers blob.
-# Death log lives in pages/api/track.js; update both when blob is rotated.
-TRACK_BLOB_ID = "019e2442-f1bb-7807-ae33-88a0d379d5e0"
-TRACK_BLOB_URL = f"https://jsonblob.com/api/jsonBlob/{TRACK_BLOB_ID}"
+# Post-2026-05-15 migration: track-events now lives in Upstash KV, read
+# through /api/track-events (server-side proxy; KV creds are Vercel-only).
+# No more jsonblob death rotations to chase.
+TRACK_EVENTS_URL = "https://www.midastools.co/api/track-events?key=mt-outreach-2026"
 
 QUIZ_PATH_RE = re.compile(r"^/q/([a-z0-9-]+)", re.IGNORECASE)
 
@@ -53,25 +53,17 @@ QUIZ_PATH_RE = re.compile(r"^/q/([a-z0-9-]+)", re.IGNORECASE)
 def fetch_events() -> list[dict] | None:
     try:
         req = urllib.request.Request(
-            TRACK_BLOB_URL,
+            TRACK_EVENTS_URL,
             headers={"User-Agent": "quiz-visit-monitor/1.0"},
         )
         with urllib.request.urlopen(req, timeout=10) as resp:
             data = json.load(resp)
         return data.get("events", [])
     except urllib.error.HTTPError as e:
-        if e.code == 404:
-            print(
-                f"ERROR: track blob {TRACK_BLOB_ID} returned 404 (DEAD). "
-                "Hot-fix: POST a fresh blob, update TRACK_BLOB_ID in "
-                "pages/api/track.js + this tool, redeploy.",
-                file=sys.stderr,
-            )
-        else:
-            print(f"ERROR: track blob fetch HTTP {e.code}", file=sys.stderr)
+        print(f"ERROR: /api/track-events fetch HTTP {e.code}", file=sys.stderr)
         return None
     except Exception as e:
-        print(f"ERROR: track blob fetch failed: {e}", file=sys.stderr)
+        print(f"ERROR: /api/track-events fetch failed: {e}", file=sys.stderr)
         return None
 
 

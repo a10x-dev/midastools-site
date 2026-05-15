@@ -18,8 +18,9 @@ import re
 import urllib.request
 from datetime import datetime, timezone
 
-TRACK_BLOB_ID = "019e2442-f1bb-7807-ae33-88a0d379d5e0"
-JSONBLOB_BASE = "https://jsonblob.com/api/jsonBlob"
+# Post-2026-05-15 migration: track-events now lives in Upstash KV, read
+# through /api/track-events (server-side proxy; KV creds are Vercel-only).
+TRACK_EVENTS_URL = "https://www.midastools.co/api/track-events?key=mt-outreach-2026"
 STATE_PATH = ".founder/state/reddit-monitor-last.json"
 
 REDDIT_RE = re.compile(r"utm_source=reddit", re.I)
@@ -27,7 +28,7 @@ REDDIT_RE = re.compile(r"utm_source=reddit", re.I)
 
 def fetch_events():
     req = urllib.request.Request(
-        f"{JSONBLOB_BASE}/{TRACK_BLOB_ID}",
+        TRACK_EVENTS_URL,
         headers={"User-Agent": "reddit-ad-monitor/1.0"},
     )
     with urllib.request.urlopen(req, timeout=15) as r:

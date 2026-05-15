@@ -1,35 +1,36 @@
 // Client-side event tracking endpoint.
 //
+// Storage: Upstash KV (post-2026-05-14 migration). Single key 'track-events'
+// stores rolling array of last 5000 events. Sub-100ms read+write, no eviction,
+// no death cycle. Provisioned via Vercel Marketplace integration
+// upstash-kv-coffee-xylophone — same KV instance the subscribers store uses.
+//
+// Migration log:
+//   2026-05-15 — Migrated /api/track from jsonblob → Upstash KV.
+//   jsonblob had 16 deaths in 47 days (MTBF collapsed to <26h). Reddit P4b
+//   campaign launched May 14 needs durable attribution data — kept losing
+//   events on every blob rotation. KV migration closes the architectural
+//   debt declared P0 post-May-14.
+//
+// Earlier (deprecated, removed 2026-05-15):
+//   jsonblob primary (16 deaths Apr→May, see git log + pages/api/track.js
+//   git history for full death trail). Retired entirely; no fallback —
+//   if KV is unreachable, the event is dropped (consistent with the
+//   prior fire-and-forget pattern).
+//
 // Events captured: page_view, scroll_depth, time_on_page, cta_click, custom.
 // Each event includes the visitor's current attribution (UTM + referrer) so
 // we can correlate behavior to traffic source without tying it to an email.
 //
-// Storage: separate jsonblob (track-events) so a flood of events can't kill
-// the subscribers blob. Same self-heal pattern.
+// Auth: none. Fire-and-forget client beacon. Accept the load risk for zero
+// friction; rate-limit at the visitor level via IP if it becomes a problem.
 //
-// ⚠️ This blob is HIGH-VOLUME (every page_view writes) so it dies more often
-// than the subscribers blob. Death log:
-//   019dfe20-8487-7349-ac62-b5faa8ba73ab — died 2026-05-08 (13th jsonblob death) →
-//   019e09fa-6623-7182-a6a4-66b00ede4152 — died 2026-05-11 (14th, ~2.5d MTBF) →
-//   019e17f6-14f0-7254-88c1-062bdd71ea7f — died 2026-05-13 (15th, ~7h MTBF — COLLAPSED) →
-//   019e1ea8-2991-7ac2-b1b6-cdfdfbce8b68 — died 2026-05-14 02:13 UTC (16th, <26h MTBF) →
-//   019e2442-f1bb-7807-ae33-88a0d379d5e0 — fresh 2026-05-14 02:13 UTC
-//
-// 🚨 16th death @ T-1d to May 14 decide-day — MTBF stuck at <1d.
-// jsonblob is no longer viable storage even short-term. Hot-fix rotation
-// keeps the write-path alive but produces essentially no useful historical
-// data anymore. Right architectural answer is daily-rotated gist files
-// (one gist per day, append-only). Logged as capability gap; deferred
-// until post-May-14 because write-path touch during 8 in-flight reply
-// windows is too risky. Post-May-14 this is P0.
-//
-// Auth: none. This is a fire-and-forget client beacon. We accept the load
-// risk in exchange for zero friction; rate-limit at the visitor level via
-// IP if it becomes a problem.
+// Read events back via GET /api/track-events?key=<TRACK_READ_KEY>.
 
-const TRACK_BLOB_ID = '019e2442-f1bb-7807-ae33-88a0d379d5e0';
-const TRACK_BLOB_URL = `https://jsonblob.com/api/jsonBlob/${TRACK_BLOB_ID}`;
-const MAX_EVENTS_IN_BLOB = 5000; // Trim oldest if we exceed this
+import { readKV, writeKV } from '../../lib/kv-store';
+
+const KV_KEY = 'track-events';
+const MAX_EVENTS = 5000; // rolling window
 
 export default async function handler(req, res) {
   if (req.method !== 'POST') {
@@ -53,41 +54,14 @@ export default async function handler(req, res) {
   };
 
   try {
-    // Read existing events
-    const readRes = await fetch(TRACK_BLOB_URL, {
-      signal: AbortSignal.timeout(4000),
-    });
-    let existing = [];
-    if (readRes.ok) {
-      const data = await readRes.json();
-      existing = Array.isArray(data.events) ? data.events : [];
-    }
-    existing.push(enriched);
-    if (existing.length > MAX_EVENTS_IN_BLOB) {
-      existing = existing.slice(-MAX_EVENTS_IN_BLOB);
-    }
-
-    const writeRes = await fetch(TRACK_BLOB_URL, {
-      method: 'PUT',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ events: existing }),
-      signal: AbortSignal.timeout(4000),
-    });
-    if (!writeRes.ok) {
-      // Self-heal on 404
-      if (writeRes.status === 404) {
-        const healed = await fetch('https://jsonblob.com/api/jsonBlob', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ events: [enriched] }),
-        });
-        const newId = healed.headers.get('x-jsonblob-id');
-        console.warn(`[track] track blob died, healed into ${newId}`);
-      }
-    }
-    return res.status(204).end();
+    const data = await readKV(KV_KEY);
+    const events = Array.isArray(data?.events) ? data.events : [];
+    events.push(enriched);
+    const trimmed = events.length > MAX_EVENTS ? events.slice(-MAX_EVENTS) : events;
+    await writeKV(KV_KEY, { events: trimmed });
   } catch (err) {
     console.warn('[track] write failed:', err.message);
-    return res.status(204).end(); // Fire-and-forget — never block the client
+    // fall through — fire-and-forget
   }
+  return res.status(204).end();
 }
