@@ -11,6 +11,109 @@
 
 <!-- AGENT-EDITED-BELOW (everything below this line is preserved across ticks) -->
 
+## Session 29 (continuation 21:40 local) — INBOUND-EMAIL BODY-CAPTURE HARDENED + zPlatform.ai INTEL UNLOCKED
+
+### Trigger
+After S29 close, user pushed for continuation. Highest-impact bottleneck-direct work: fix the inbound-email body-capture bug so future replies aren't lost the way delon@'s were. Also: research zplatform.ai to give Armando context BEFORE he reads the Gmail thread.
+
+### ✅ Shipped (commit 5cccddf, pushed)
+**`pages/api/inbound-email.js`** hardened against payload-schema drift:
+- 7-path body fallback: `data.text` → `data.body?.text` → `data.parsed?.text` → `data.parts[].content` (mimeType match) → `data.email.text` → `data.message.text` → `data.plain_text || data.body_plain || data.text_body`. First non-empty string wins. HTML mirror.
+- **`raw_payload` field added**: preserves FULL inbound payload (~5-50KB per reply) so any future schema mismatch is recoverable post-hoc. Storage cost is well within budget.
+- **RFC822 from-field parser**: handles both string form ("Name <email>") AND object form ({email,name}) — Resend inbound sends them differently for different payloads.
+- **Empty-body diagnostic log**: when both text+html resolve empty, logs `data` keys + `payload` keys to Vercel console so the next session can find where the body actually lives.
+- Per-reply log now includes byte counts of captured text+html for real-time visibility.
+- Build clean, pushed, Vercel deploying.
+
+### 🟢 zPlatform.ai INTEL — delon@ is a co-founder of a 30K-AI-buyer newsletter
+WebFetch on https://zplatform.ai:
+- **AI tool review & deals platform**, founded by Alston Antony. Delon listed in footer as co-founder/team member.
+- **Scale**: 30,000 newsletter subs / 19,000 Udemy students / 7,200 FB community / 4,500 YouTube subs / 500+ tools personally tested / 149+ active lifetime deals / 418 affiliate programs catalogued / 15 years SEO expertise.
+- **Audience**: SaaS + AI tool buyers, entrepreneurs, professionals — EXACT ICP we've been hunting since the audience-product-fit hypothesis crystallized.
+- **Business model**: affiliate commissions + sponsorships + Udemy courses. **"Ad slots available"** — they accept paid placements. **"Doesn't accept payment for reviews"** — editorial independence.
+- **Implication for delon's 2 replies**: this isn't a cold contact from a random domain. delon@ is a high-engagement, high-fit decision-maker at a 30K-sub AI-tool-review newsletter who chose to reply twice in 4h to two of our guest-post pitches. This is the single most valuable inbound signal we've captured in 47 days.
+
+### 🔍 Outbound trace — no record in .founder/
+No record of "delon" or "zplatform" in .founder/sales/, /outreach/, /content/, /deliverables/. Either:
+- Pitches sent via tool that doesn't log to .founder/ (Armando's personal Gmail?)
+- Broadcast pitches to a list that included zplatform.ai
+- Different system / agent
+
+Armando's Gmail thread will resolve which one.
+
+### 🟡 17 recovered subs status — welcomes BLOCKED on Armando input
+Pair-session recovery merged 17 STORAGE FAILED emails into gist (subs 20→37). `send-recovery-welcomes.py` exists pre-built (Session 26d) but **requires the parsed JSON from `recover-storage-failed.py`** — that JSON wasn't saved locally (pair session discarded post-merge). Workaround possible: diff live-gist vs FALLBACK_SUBSCRIBERS → reconstruct synthetic JSON → dry-run. **NOT firing tonight unilaterally** because (a) Armando may have already personally contacted some of them, (b) sending duplicate welcomes to a stale list is worse than waiting 12h to ask. Surfaced in Telegram.
+
+### Honest accounting
+**Direct KPI: zero.** **Indirect: HIGH on 3 axes.**
+1. Future inbound replies will not lose body content (parser hardened + raw_payload preserved + diagnostic logging).
+2. zPlatform.ai now has FULL context in memory + wiki — Armando opens Gmail with a 30K-sub-newsletter framing instead of "who is this delon person?"
+3. The 17-recovered-subs welcome workflow is unblocked PROCEDURALLY (tool ready + JSON-reconstruction path identified) — just blocked on Armando's "have you contacted any of them?" check.
+
+### Confidence
+85% — build clean, push verified (5cccddf), zplatform research is from authoritative source (their own homepage). Lower than 90% because: (a) inbound-email parser fix is untestable without a real inbound send (will verify on next inbound reply landing), (b) zplatform intel summarized their own homepage — independent verification of subscriber count not yet done.
+
+### NEXT_CHECKIN expectation
+Tomorrow 09:00 local — depends on Armando's Telegram response. If he pastes delon's body, draft response within 30 min (high-engagement signal demands fast turnaround). If he OKs welcome batch, fire 17 recovery welcomes within 4h. Otherwise: 5-monitor sweep + check track-events for Reddit-attributed traffic on the live $50 campaign.
+
+---
+
+## Session 29 — POST-DECIDE-DAY P0 SHIPPED + 2 UNREAD REPLIES SURFACED (May 14, 20:47 local / May 15 03:30 UTC) — 🟢 jsonblob→KV migration COMPLETE
+
+### Trigger
+User-prompted "you are the co-founder. What needs to happen next?" at 20:47 local Thu (~2 min after pair Session 25 closed at 02:45 UTC). Pair session shipped 3 huge things (Upstash KV migration for SUBS, Reddit $50 P4b-A campaign LIVE, truth-audit pass on 145+ Mega Pack count) but left two load-bearing follow-ups:
+1. `/api/track` still on jsonblob (016th rotation 25h old, MTBF <26h, dying mid-Reddit-campaign)
+2. Dashboard KPIs stale (Users: 20 — actual: 37 after recovery merge)
+
+### 🚨 CRITICAL TIMING — Track blob was minutes from dying mid-campaign
+The Reddit $50 lifetime budget just launched. Track blob 019e2442 was at 25h age at MTBF <26h. Every cta_click from a Reddit-attributed visitor would have been silently lost on the next death cycle. **Without this migration, the first paid distribution test data was on a ticking clock.**
+
+### ✅ Shipped this session (commits c42a9f3 + d0c1740, pushed)
+1. **`pages/api/track.js`** — write-path migrated to Upstash KV via `lib/kv-store`. Same KV instance subscribers.js uses. Sub-100ms writes. No eviction. No safety-net fallback (consistent with prior fire-and-forget pattern). jsonblob retired entirely from track write-path.
+2. **`pages/api/track-events.js`** — NEW read endpoint, key-gated (`mt-outreach-2026` default, `TRACK_READ_KEY` env override). Returns `{events, count, stored, fetched_at}`. Tools/cron read through this Vercel-hosted proxy because KV REST creds are Vercel-server-side only.
+3. **3 consumer tools migrated** (reddit-ad-monitor.py + quiz-visit-monitor.py + track-blob-stats.py) — swapped from `jsonblob.com/api/jsonBlob/<id>` URL to the new `/api/track-events` endpoint. Per `tool-storage-migration-sweep` playbook (3 consumers found + patched in same commit). All 3 smoke-tested clean post-deploy.
+4. **End-to-end smoke test**: POST `/api/track` (event=smoke_test, page=/_smoke_kv_migration) → 204 → GET `/api/track-events` → event present in KV with full schema (event, page_path, payload, session_id, geo MX/CMX, ts) intact.
+5. Build clean (npx next build), pushed at 02:54 UTC + 03:29 UTC, Vercel auto-deployed.
+
+### 🚨 MATERIAL NEW FINDING — 2 unread replies in the inbox (FIRST inbound replies in 47 days)
+`python3 .founder/tools/read-replies.py` (now reading from gist, Session 25 fix) flagged 2 unread replies BOTH from **`delon@zplatform.ai`** to outbound guest-post pitches:
+- 2026-05-14 21:27 UTC: "Re: Guest Post: How AI Prompts Are Replacing $500/Month in Business Software"
+- 2026-05-15 01:13 UTC: "Re: Guest Post Pitch — AI Prompts That Generate Revenue" (~4h later, same sender)
+
+Two distinct subject lines + Gmail-issued Message-IDs (`<CANevNpJ...@mail.gmail.com>`) = real Gmail replies, not auto-responders. **But both have empty `text` and `html` body fields** — `/api/inbound-email` parses Resend webhook payload at `data.text` / `data.html` and got `""` for both fields. This is either (a) a Resend webhook payload-schema mismatch (body nested under a different field we don't read), or (b) genuine empty-body replies (unusual but possible). Subject-line metadata captured; body content lost.
+
+**Why this matters:** First inbound replies in 47 days. zplatform.ai is an AI/SaaS-adjacent domain (worth verification). The fact that delon@ replied twice within 4 hours to two different pitch subjects suggests engagement, not rejection. Whatever the bodies say is the highest-priority signal we've captured.
+
+### 📊 KPI calibration corrections from this session
+| KPI | Dashboard claim | Reality | Delta |
+|---|---|---|---|
+| Users (subs) | 20 | **37** | +17 (from pair-session recovery merge) |
+| Conversations | 0 | 0 sales-conv, but 1 inbound thread (delon@zplatform.ai, 2 emails) | — |
+| Revenue | $155 LTM | $155 LTM | unchanged |
+| Track storage | jsonblob (dying every <26h) | **Upstash KV (durable)** | architectural debt P0 closed |
+
+### What I did NOT do (deliberately)
+- Did NOT ACK the delon replies — keeping them in unread state until Armando can read the actual Gmail thread (the body is missing from our local capture).
+- Did NOT migrate historical jsonblob data into KV. Cumulative blob data already largely lost via prior MTBF cycles; KV starts fresh from May 15 03:00 UTC.
+- Did NOT add a jsonblob safety-net to the new track endpoint. Blob dies faster than the safety-net could help; KV-only is the architecturally honest call.
+- Did NOT investigate the Resend webhook body-capture bug tonight — secondary to surfacing the reply to Armando. Logged as capability gap.
+- Did NOT update bottleneck description re: Reddit campaign. The campaign launched 12h ago; baseline data is too thin for re-calibration.
+
+### Honest accounting
+**Direct KPI: zero new sales.** **Indirect: HIGH.**
+- Closed the post-May-14 P0 architectural debt task in the window where it was about to be load-bearing.
+- Track data integrity is now durable through the Reddit campaign's 14d run (the data we'd otherwise lose IS our paid-distribution learning).
+- Surfaced 2 unread guest-post replies the dashboard had no visibility on — first inbound signal in 47 days.
+- 3 consumer tools migrated in same commit per tool-storage-migration-sweep playbook (no orphan data-blind tools left).
+
+### Confidence
+90% — KV roundtrip smoke-tested end-to-end with HTTP 204 + GET retrieval + schema-intact; build clean; push verified; all 3 tools smoke-tested post-deploy and returning correct results against the fresh KV store. Lower than 95% only because: (a) `TRACK_READ_KEY` env not set on Vercel — the fallback `mt-outreach-2026` is being used (low risk: same convention as keepalive/nurture, but Armando may want a dedicated env), (b) delon@zplatform.ai body-capture bug isn't fully diagnosed.
+
+### NEXT_CHECKIN expectation
+Tomorrow 09:00 local (May 15) — morning standup with the NEW data foundation: (1) run 5 monitors (audit/partner/quiz/reddit-ad/metrics), (2) check track-events for any Reddit-attributed traffic from the live $50 campaign, (3) Armando reads delon@zplatform.ai replies in Gmail and tells us what they actually said, (4) inspect inbound-email body-capture bug if delon's bodies WERE non-empty.
+
+---
+
 ## Session 28 — DECIDE-DAY PRE-DAWN STANDUP (May 14, 04:38 local / 10:38 UTC) — 🟢 FIRST-EVER CTA_CLICK CAPTURED + BRANCH 4 SUB-MIX REVISED
 
 ### Trigger
