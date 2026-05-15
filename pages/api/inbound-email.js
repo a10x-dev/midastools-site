@@ -75,25 +75,83 @@ export default async function handler(req, res) {
   }
 
   const data = payload.data || payload;
+
+  // Body extraction — try multiple paths because Resend's inbound webhook
+  // schema isn't documented as stable. Session 29 (May 15) found 2 delon@
+  // replies with empty text+html at top-level — possibly the payload nests
+  // them under data.body / data.parsed / data.parts. Walk fallback paths
+  // until we find something non-empty.
+  const extractBody = (d, kind) => {
+    if (!d) return '';
+    const candidates = [
+      d[kind],
+      d.body?.[kind],
+      d.parsed?.[kind],
+      d.parts?.find?.((p) => (p?.mimeType || p?.type || '').includes(kind === 'text' ? 'plain' : 'html'))?.content,
+      d.email?.[kind],
+      d.message?.[kind],
+      kind === 'text' ? d.plain_text || d.body_plain || d.text_body : d.body_html || d.html_body,
+    ];
+    for (const c of candidates) {
+      if (typeof c === 'string' && c.length > 0) return c;
+    }
+    return '';
+  };
+
+  const text = extractBody(data, 'text');
+  const html = extractBody(data, 'html');
+
+  // RFC822 "Name <email>" string parser — Resend inbound sends 'from' as
+  // a raw RFC822 string for some payloads (vs object {email,name} for others).
+  const parseFromField = (raw) => {
+    if (!raw) return { email: null, name: null };
+    if (typeof raw === 'object') return { email: raw.email || null, name: raw.name || null };
+    const s = String(raw).trim();
+    const m = s.match(/^\s*(?:"?([^"<]*?)"?\s*<)?([^<>\s@]+@[^<>\s]+)>?\s*$/);
+    if (m) return { name: (m[1] || '').trim() || null, email: m[2] };
+    return { email: s, name: null };
+  };
+  const fromParsed = parseFromField(data.from);
+
   const reply = {
     received_at: new Date().toISOString(),
     event_type: payload.type || 'email.received',
     email_id: data.id || data.email_id || null,
-    from: data.from?.email || data.from || null,
-    from_name: data.from?.name || null,
+    from: fromParsed.email,
+    from_name: fromParsed.name,
     to: Array.isArray(data.to)
       ? data.to.map((t) => t.email || t).filter(Boolean)
       : data.to
       ? [data.to]
       : [],
     subject: data.subject || '',
-    text: data.text || '',
-    html: data.html || '',
-    in_reply_to: data.in_reply_to || data.headers?.['in-reply-to'] || null,
-    message_id: data.message_id || data.headers?.['message-id'] || null,
+    text,
+    html,
+    in_reply_to: data.in_reply_to || data.headers?.['in-reply-to'] || data.headers?.['In-Reply-To'] || null,
+    message_id: data.message_id || data.headers?.['message-id'] || data.headers?.['Message-ID'] || null,
     raw_headers: data.headers || null,
+    // Forensic: keep the full payload so any future schema change is recoverable
+    // post-hoc. Cost is storage size (~5-50KB per reply); benefit is we never
+    // lose body content to a parser mismatch again. Strip nothing — even
+    // attachments-as-base64 stay in case they're needed for debugging.
+    raw_payload: payload,
     read: false,
   };
+
+  // If both bodies came back empty, log loudly with payload key names so the
+  // next session can find where Resend actually put the body in this case.
+  if (!text && !html) {
+    console.warn(
+      '[inbound-email] BODY-CAPTURE EMPTY for',
+      reply.from,
+      're:',
+      reply.subject,
+      '— data keys:',
+      Object.keys(data || {}),
+      '— payload keys:',
+      Object.keys(payload || {}),
+    );
+  }
 
   const result = await appendReply(reply);
   if (!result.success) {
@@ -101,6 +159,8 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: 'Storage failed', detail: result.error });
   }
 
-  console.log(`[inbound-email] stored reply from ${reply.from} re: "${reply.subject}" (count=${result.count})`);
+  console.log(
+    `[inbound-email] stored reply from ${reply.from} re: "${reply.subject}" (count=${result.count}, text=${text.length}b, html=${html.length}b)`,
+  );
   return res.status(200).json({ ok: true, count: result.count, healed: result.healed || false });
 }
