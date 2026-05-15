@@ -170,8 +170,8 @@ def main() -> int:
             rows.append(ev)
 
     print(f"# track-blob-stats", file=sys.stderr)
-    print(f"  blob:    {TRACK_BLOB_ID}", file=sys.stderr)
-    print(f"  total:   {len(events)} events in blob", file=sys.stderr)
+    print(f"  source:  {TRACK_EVENTS_URL}", file=sys.stderr)
+    print(f"  total:   {len(events)} events in store", file=sys.stderr)
     print(f"  matched: {len(rows)} events after filters", file=sys.stderr)
     if since_dt:
         print(f"  since:   {since_dt.isoformat()}", file=sys.stderr)
