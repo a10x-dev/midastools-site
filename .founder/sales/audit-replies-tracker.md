@@ -63,3 +63,53 @@
 ## May 10 decision data — SUPERSEDED
 
 The May 10 decision was pushed to May 14 (Session 25 finding — follow-ups fired May 7-8 not May 6, statistical premature). On May 7 20:45 local, **Session 32 produced `.founder/plans/may14-strategic-synthesis.md`** which CONSOLIDATES this audit decision with the parallel customer-acquisition-strategy kill-or-iterate into a single decide-day synthesis. The synthesis covers all 3 acquisition experiments (audit / customer-feedback+cold-lookalike / Boucher) in one frame with 4 pre-written branch recommendations. Read that file May 14 09:00.
+
+---
+
+## Soft-pitch May 14 batch (3 corporate recoveries from STORAGE FAILED inbox)
+
+Storage-recovery soft pitches fired to recently-recovered corporate-domain subs. Different framing than Apr 28 cold cohort: these are INBOUND warm leads who came through our funnel but were silently dropped by the GH_GIST_TOKEN gap. Pitch acknowledges the delay, delivers free value (Mega Pack link + 3 industry-tailored prompts), and includes a soft P.S. — full $997 audit for FANUC (ICP fit), "reply for free sample" softer P.S. for 80si and Desjoyaux (wrong-ICP for $997 audit).
+
+| Prospect | Company | Role/Shape | Resend ID | Pitch type | Sent | Reply window |
+|---|---|---|---|---|---|---|
+| Ramella Badawi | FANUC America ($8B industrial automation) | Manager, Business Reporting (BI/IT-adjacent) | 4ccb5aa9-3990-44fb-93a5-d4c62da722dd | $997 audit P.S. | 2026-05-14 ~22:00 UTC | May 18-25 (T+4-11d for warm B2B) |
+| Daniel | 80s Interactive (Amsterdam, 8-person dev consultancy) | Likely founder/senior, anti-AI-replacement positioning | 144fe1fa-0521-43d2-bbd7-6d8871aa1174 | "reply for sample" (audit pitch wrong-fit) | 2026-05-14 ~22:00 UTC | May 18-25 |
+| Christophe | Desjoyaux 49 (French pool service, Cholet/Beaucouzé) | Likely owner/manager, French SMB | f30db22c-26ed-48b3-a579-79127c1f9459 | Bilingual + "reply for sample" | 2026-05-14 ~22:00 UTC | May 18-25 |
+
+**Hypothesis test:** Apr 28 cohort (Hiedeh/Doug/Pham) was COLD outreach to existing subs → 0 replies T+~17d. These 3 are WARM (self-signed-up via our funnel), recent (May 12-13 for Ramella/Daniel, Apr 19 for Christophe), and got an honest "we screwed up your welcome flow" framing. Expected reply rate: 5-30% per cold-B2B-warm-recovery benchmarks. Even 1/3 = positive signal.
+
+**What to watch for:**
+- "audit" reply from Ramella → fire .founder/playbooks/discovery-call-script.md within 30 min
+- "sample" reply from Daniel or Christophe → fire mini-assessment-template (3-prompt PDF) within 24h
+- Hostile reply from any → apologize once, do NOT continue
+- Silence → no follow-up before May 22 (window still open through May 25)
+
+
+## Consumer welcome-recovery batch May 14 (14/14 sent)
+
+Standard welcome with delay-apology + Mega Pack/free-tools links + soft "reply with use case for help" P.S. NO audit pitch (consumer ICP, wrong-fit for $997). All 14 recovered subs from May 1 → May 14 STORAGE FAILED queue. Pre-flight check: support@galaxyholidays.co.uk INCLUDED (could be SMB owner using shared inbox); 2 dot-pattern emails INCLUDED (s.hakee.l.p.i.y.ara.l.i + v.f.ca.r.ter51 — passed rate-limit on signup day; if bot, send is harmless).
+
+All from "Armando from MidasTools <hello@midastools.co>", reply-to iam@armando.mx, utm_campaign=may14-consumer-batch.
+
+| Email | Resend ID |
+|---|---|
+| rohankatara83@gmail.com | e7ca89e3 |
+| support@galaxyholidays.co.uk | 39f343a1 |
+| jazlynnmohammed@yahoo.com | 416ed765 |
+| steveharrisdesign@protonmail.com | b2313047 |
+| steven_demoor@yahoo.com | facf4670 |
+| r.mumm@gmail.com | 3c18cf32 |
+| atervin2011@gmail.com | 8a06474e |
+| kingmoses296@gmail.com | 83170eb8 |
+| habuzz@yahoo.com | dda5036b |
+| con.or.frank.lin@gmail.com | 170646d9 |
+| talevan@live.com | 0564d11b |
+| lharrington902@icloud.com | a136ea2d |
+| s.hakee.l.p.i.y.ara.l.i@gmail.com | 04dbecd8 |
+| v.f.ca.r.ter51@gmail.com | daa5b346 |
+
+**Expected outcome:**
+- Open rate: 25-40% (typical recovery-email range, anomalously high opens common because subject says "sorry")
+- Reply rate: 2-5% on the use-case P.S. (1-2 replies expected)
+- Click-through to Mega Pack: 8-15% (1-2 sales expected from 14 sends if buyer-shape exists in this batch)
+

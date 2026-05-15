@@ -2,7 +2,7 @@
 
 ## Current Status (auto-synced from database)
 
-**Bottleneck**: market_understanding (severity 7/10) — T-1d to May 14 decide-day. Branch 4 (all dead → pivot) probability raised to 75% based on: (1) 8 reply windows fully dead at T+~110h (past long tail of B2B cold reply), (2) Boucher pitch ungreenlit T+~110h with no 5th Telegram per armando-async-asks, (3) 16th jsonblob death at <26h MTBF eliminates any track-data-driven branch decision, (4) 6th silent probe on GH_GIST_TOKEN means subscriber baseline still untrustworthy. P4a (hero rewrite) + P4b (buyer-discovery test on Reddit/Gumroad/PH) pre-built as parallel ship-day checklist. May 14 09:00 is decide-day; if Branch 4 fires, ship in <45min.
+**Bottleneck**: market_understanding (severity 6/10) — DECIDE-DAY MORNING (May 14 04:40 local / 10:40 UTC). Branch 4 probability holds ~70% but sub-mix REVISED based on first-ever cta_click captured 07:28 UTC. India/Android user from chatgpt.com referrer clicked $29 Starter Kit then $97 All Kits within 315ms — funnel mechanics work, audience-fit problem confirmed. P4a (hero rewrite) DOWNGRADED, P4b (buyer-discovery via Reddit/Gumroad/ProductHunt) PRIMARY. Telegram brief fired with revised calibration. Gumroad listing paste-ready for noon default-fallback. Awaiting Armando response.
 
 **KPIs**:
 - Conversations: 0 (target: 3, 7d: 0%)
