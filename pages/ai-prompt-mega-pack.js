@@ -28,10 +28,10 @@ export default function AIPromptMegaPack() {
   return (
     <Layout>
       <Head>
-        <title>AI Prompt Mega Pack — 200+ Ready-to-Use Prompts | Midas Tools</title>
-        <meta name="description" content="200+ battle-tested AI prompts for copywriting, social media, content creation, business operations, personal branding, and productivity. Works with ChatGPT, Claude, Gemini. $29 one-time." />
-        <meta property="og:title" content="AI Prompt Mega Pack — 200+ Ready-to-Use AI Prompts" />
-        <meta property="og:description" content="The most comprehensive collection of AI prompts for entrepreneurs, creators, and professionals. 200+ prompts across 6 categories. $29." />
+        <title>AI Prompt Mega Pack — 145+ Production-Grade Prompts | Midas Tools</title>
+        <meta name="description" content="145+ battle-tested AI prompts for copywriting, social media, content creation, business operations, personal branding, and productivity. Works with ChatGPT, Claude, Gemini. $29 one-time." />
+        <meta property="og:title" content="AI Prompt Mega Pack — 145+ Production-Grade AI Prompts" />
+        <meta property="og:description" content="The most comprehensive collection of AI prompts for entrepreneurs, creators, and professionals. 145+ prompts across 6 categories. $29." />
         <meta property="og:url" content="https://www.midastools.co/ai-prompt-mega-pack" />
         <meta property="og:image" content="https://www.midastools.co/og-image.png" />
         <meta property="og:type" content="website" />
@@ -44,7 +44,7 @@ export default function AIPromptMegaPack() {
           "@context": "https://schema.org",
           "@type": "Product",
           "name": "AI Prompt Mega Pack",
-          "description": "200+ battle-tested AI prompts for business, content, and productivity",
+          "description": "145+ battle-tested AI prompts for business, content, and productivity",
           "url": "https://www.midastools.co/ai-prompt-mega-pack",
           "image": "https://www.midastools.co/og-image.png",
           "offers": {
@@ -103,7 +103,7 @@ export default function AIPromptMegaPack() {
           "@type": "FAQPage",
           "mainEntity": [
             { "@type": "Question", "name": "What AI tools do these prompts work with?", "acceptedAnswer": { "@type": "Answer", "text": "Every prompt works with ChatGPT (GPT-4, GPT-4o), Claude, Google Gemini, Microsoft Copilot, and any other LLM that accepts text prompts." }},
-            { "@type": "Question", "name": "How many prompts are included?", "acceptedAnswer": { "@type": "Answer", "text": "200+ prompts across 6 categories: Copywriting & Sales, Social Media, Content Creation, Business Operations, Personal Branding, and Productivity & Automation." }},
+            { "@type": "Question", "name": "How many prompts are included?", "acceptedAnswer": { "@type": "Answer", "text": "145+ prompts across 6 categories: Copywriting & Sales, Social Media, Content Creation, Business Operations, Personal Branding, and Productivity & Automation." }},
             { "@type": "Question", "name": "Is this different from the niche AI kits?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. The Mega Pack covers broad categories for any professional. Our niche kits go deep on specific industries (real estate, freelancing, etc.) with industry-specific templates." }},
             { "@type": "Question", "name": "Is there a money-back guarantee?", "acceptedAnswer": { "@type": "Answer", "text": "Yes — 30-day money-back guarantee, no questions asked. If the prompts don't save you time, we'll refund you." }},
           ]
@@ -161,12 +161,12 @@ export default function AIPromptMegaPack() {
 
       {/* HERO */}
       <section style={{textAlign:'center', paddingBottom: 60}}>
-        <div className="badge" style={{marginBottom:24}}>200+ AI Prompts · Works With Any LLM</div>
+        <div className="badge" style={{marginBottom:24}}>145+ AI Prompts · Works With Any LLM</div>
         <h1 style={{fontSize:'clamp(32px, 5vw, 52px)', fontWeight:900, lineHeight:1.1, marginBottom:16}}>
           The Only Prompt Pack<br/>You'll <span>Ever Need</span>
         </h1>
         <p style={{fontSize:18, color:'var(--gray-400)', maxWidth:560, margin:'0 auto 40px', lineHeight:1.7}}>
-          200+ battle-tested AI prompts for copywriting, social media, content, operations, branding, and productivity. Copy. Paste. Get results.
+          145+ battle-tested AI prompts for copywriting, social media, content, operations, branding, and productivity. Copy. Paste. Get results.
         </p>
         <a href={STRIPE_URL} className="btn-primary">Get the Mega Pack — $29 →</a>
         <p style={{marginTop:12,fontSize:14,color:'var(--text-tertiary)'}}>Secure Stripe checkout &middot; Works with ChatGPT, Claude, Gemini</p>
@@ -189,7 +189,7 @@ export default function AIPromptMegaPack() {
             You're leaving <span>80% of AI's power</span> on the table
           </h2>
           <p style={{color:'var(--gray-400)', fontSize:17, maxWidth:540, margin:'0 auto'}}>
-            Most people type vague prompts and get vague results. The difference between "meh" AI output and <strong style={{color:'var(--gold)'}}>revenue-generating content</strong> is the prompt. Our 200+ prompts are engineered for specific business outcomes.
+            Most people type vague prompts and get vague results. The difference between "meh" AI output and <strong style={{color:'var(--gold)'}}>revenue-generating content</strong> is the prompt. Our 145+ prompts are engineered for specific business outcomes.
           </p>
         </div>
       </section>
@@ -198,7 +198,7 @@ export default function AIPromptMegaPack() {
       <section style={{paddingTop:0}}>
         <div className="section-label">What's Inside</div>
         <h2 style={{fontSize:'clamp(24px, 3.5vw, 36px)', fontWeight:900, marginBottom:8}}>
-          6 categories. <span>200+ prompts.</span> Zero fluff.
+          6 categories. <span>145+ prompts.</span> Zero fluff.
         </h2>
         <p style={{color:'var(--gray-400)', fontSize:16, marginBottom:48}}>
           Every prompt is ready to use — just fill in the brackets and paste into your AI tool.
@@ -208,32 +208,32 @@ export default function AIPromptMegaPack() {
           {[
             {
               icon: '✍️', title: 'Copywriting & Sales',
-              count: '35+',
+              count: '20+',
               desc: 'Headlines, sales pages, email sequences, ad copy, product descriptions, cold emails, pricing pages, upsell copy, and testimonial frameworks.'
             },
             {
               icon: '📱', title: 'Social Media & Growth',
-              count: '35+',
+              count: '20+',
               desc: 'Twitter threads, LinkedIn posts, Instagram carousels, TikTok scripts, 30-day content calendars, viral hooks, bio optimization, and hashtag strategy.'
             },
             {
               icon: '📝', title: 'Content Creation',
-              count: '35+',
+              count: '20+',
               desc: 'SEO blog posts, YouTube scripts, newsletters, podcast outlines, content repurposing, headline A/B testing, content briefs, and pillar strategies.'
             },
             {
               icon: '⚙️', title: 'Business Operations',
-              count: '35+',
+              count: '20+',
               desc: 'Professional emails, SOPs, meeting agendas, hiring posts, financial analysis, customer service templates, project plans, and crisis communication.'
             },
             {
               icon: '🎯', title: 'Personal Branding',
-              count: '35+',
+              count: '20+',
               desc: 'Brand strategy, LinkedIn optimization, resume writing, thought leadership articles, elevator pitches, speaking prep, portfolio case studies, and networking.'
             },
             {
               icon: '🚀', title: 'Productivity & Automation',
-              count: '35+',
+              count: '20+',
               desc: 'Decision frameworks, weekly planning, research analysis, workflow automation, learning plans, inbox zero systems, goal tracking, and data analysis.'
             },
           ].map(f => (
@@ -254,11 +254,11 @@ export default function AIPromptMegaPack() {
           Look inside. <span>Real prompts.</span> No screenshots.
         </h2>
         <p style={{color:'var(--gray-400)', fontSize:16, marginBottom:32}}>
-          Every prompt is engineered like this — specific structures, output rules, variables you fill in. Copy, customize, paste into your AI tool. Here are 2 of the 200+.
+          Every prompt is engineered like this — specific structures, output rules, variables you fill in. Copy, customize, paste into your AI tool. Here are 2 of the 145+.
         </p>
 
         <div className="sample-card">
-          <div className="sample-label">Sample · Copywriting & Sales · Prompt 1 of 35+</div>
+          <div className="sample-label">Sample · Copywriting & Sales · Prompt 1 of 20+</div>
           <div className="sample-title">Cold Outreach Email — 3-Variation Split Test</div>
           <div className="sample-code">{`Write a cold outreach email for `}<span className="var">[PRODUCT/SERVICE]</span>{` targeting `}<span className="var">[TARGET AUDIENCE]</span>{`.
 
@@ -282,7 +282,7 @@ Rules:
         </div>
 
         <div className="sample-card">
-          <div className="sample-label">Sample · Content Creation · Prompt 1 of 35+</div>
+          <div className="sample-label">Sample · Content Creation · Prompt 1 of 20+</div>
           <div className="sample-title">SEO Blog Post — Research-Backed, 1500+ Words</div>
           <div className="sample-code">{`Write a 1500-word SEO blog post targeting the primary keyword `}<span className="var">[KEYWORD]</span>{`
 for `}<span className="var">[TARGET AUDIENCE]</span>{`.
@@ -311,7 +311,7 @@ Rules:
           <p style={{color:'var(--gray-400)', fontSize:15, marginBottom:16}}>
             <strong style={{color:'var(--gold)'}}>198 more prompts</strong> like this — across 6 categories. Ready to paste into ChatGPT, Claude, or Gemini right now.
           </p>
-          <a href={STRIPE_URL} className="btn-primary">Unlock All 200+ Prompts — $29 →</a>
+          <a href={STRIPE_URL} className="btn-primary">Unlock All 145+ Prompts — $29 →</a>
         </div>
       </section>
 
@@ -371,12 +371,12 @@ Rules:
         <div style={{background:'var(--gray-900)', border:'2px solid rgba(59,95,255,0.4)', borderRadius:20, padding:48, textAlign:'center', maxWidth:500, margin:'0 auto'}}>
           <div className="badge" style={{marginBottom:16}}>Most Popular</div>
           <h2 style={{fontSize:24, fontWeight:900, marginBottom:4}}>AI Prompt Mega Pack</h2>
-          <p style={{color:'var(--gray-400)', fontSize:15, marginBottom:16}}>200+ prompts across 6 categories</p>
+          <p style={{color:'var(--gray-400)', fontSize:15, marginBottom:16}}>145+ prompts across 6 categories</p>
           <div style={{fontSize:48, fontWeight:900, color:'var(--gold)', margin:'16px 0 4px'}}>$29</div>
           <p style={{color:'var(--gray-400)', fontSize:14, marginBottom:24}}>One-time payment</p>
           <ul style={{listStyle:'none', textAlign:'left', marginBottom:32, maxWidth:320, margin:'0 auto 32px'}}>
             {[
-              '200+ ready-to-use AI prompts',
+              '145+ ready-to-use AI prompts',
               '6 categories (copy, social, content, ops, brand, productivity)',
               'Works with ChatGPT, Claude, Gemini, and any LLM',
               'Fill-in-the-bracket format — zero learning curve',
