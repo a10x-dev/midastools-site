@@ -265,7 +265,7 @@ Also provide:
         </div>
 
         <div style={{ background: 'linear-gradient(135deg, #EEF2FF 0%, #E0E7FF 100%)', borderRadius: '12px', padding: '32px', margin: '40px 0', textAlign: 'center' }}>
-          <h3 style={{ marginTop: 0, fontSize: '1.3rem' }}>200+ Business Prompts Including PM Templates</h3>
+          <h3 style={{ marginTop: 0, fontSize: '1.3rem' }}>145+ Business Prompts Including PM Templates</h3>
           <p style={{ color: '#4B5563', marginBottom: '20px' }}>The Mega Pack includes status reports, stakeholder updates, risk registers, sprint reviews, retrospectives, project charters, and dozens more &mdash; all tested and ready to use.</p>
           <a href={STRIPE_MEGA} style={{ display: 'inline-block', background: '#3B5FFF', color: '#fff', padding: '14px 32px', borderRadius: '100px', textDecoration: 'none', fontWeight: '700', fontSize: '16px' }}>Get the Mega Pack &mdash; $29 &rarr;</a>
         </div>

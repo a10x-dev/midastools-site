@@ -118,7 +118,7 @@ export default async function handler(req, res) {
 
           <div style="background:#3B5FFF;border-radius:12px;padding:24px;margin:32px 0;text-align:center;">
             <p style="color:#FFF;font-size:18px;font-weight:700;margin:0 0 8px;">These 5 prompts are from our free collection. Want the full arsenal?</p>
-            <p style="color:rgba(255,255,255,0.85);font-size:14px;margin:0 0 16px;">500+ prompts with the same level of detail — for sales, marketing, ops, hiring, content, and more.</p>
+            <p style="color:rgba(255,255,255,0.85);font-size:14px;margin:0 0 16px;">145+ prompts with the same level of detail — for sales, marketing, ops, hiring, content, and more.</p>
             <a href="https://buy.stripe.com/4gMbJ0dgz4aJ1qkb46cMM0d" style="display:inline-block;background:#FFF;color:#3B5FFF;font-weight:700;font-size:16px;padding:12px 32px;border-radius:100px;text-decoration:none;">Get the Mega Pack — $29</a>
           </div>
 

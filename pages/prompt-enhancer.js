@@ -818,7 +818,7 @@ export default function PromptEnhancer() {
         }}>
           <div style={{ flex: '1 1 260px', color: '#FFF' }}>
             <div style={{ fontSize: 11, fontWeight: 800, letterSpacing: 1, color: '#FCD34D', marginBottom: 4 }}>⚡ SKIP THE ENHANCER</div>
-            <div style={{ fontSize: 16, fontWeight: 700, lineHeight: 1.35 }}>250+ already-enhanced expert prompts across 8 categories. Copy &amp; paste ready.</div>
+            <div style={{ fontSize: 16, fontWeight: 700, lineHeight: 1.35 }}>145+ already-enhanced expert prompts across 6 categories. Copy &amp; paste ready.</div>
           </div>
           <a href={STRIPE_MEGA_PACK} style={{
             display: 'inline-block',
@@ -942,7 +942,7 @@ export default function PromptEnhancer() {
       <section className="upsell">
         <div className="upsell-card">
           <div className="upsell-badge">Skip the Enhancing</div>
-          <h2>Want 500+ Pre-Written Expert Prompts?</h2>
+          <h2>Want 145+ Pre-Written Expert Prompts?</h2>
           <p>
             Every prompt in our Mega Pack is already engineered with role assignment, context,
             format instructions, and quality constraints built in. Just copy, paste, and get results.
@@ -1009,7 +1009,7 @@ export default function PromptEnhancer() {
           borderTop: '1px solid rgba(255,255,255,0.1)',
         }}>
           <span style={{ color: '#fff', fontSize: 14, fontWeight: 600 }}>
-            500+ expert prompts ready to copy & paste
+            145+ expert prompts ready to copy & paste
           </span>
           <a href={STRIPE_MEGA_PACK} style={{
             background: '#3B5FFF', color: '#fff', padding: '8px 20px',

@@ -10,7 +10,7 @@ const PRODUCTS = {
   creator: { name: 'Content Creator Kit', price: 39, url: '/content-creator-kit', stripe: 'https://buy.stripe.com/eVq7sK90j36F4CwdcecMM09', color: '#EC4899', emoji: '🎬', tagline: 'Create more content in less time. Repurpose everything.' },
   saas: { name: 'SaaS Founder AI Kit', price: 39, url: '/saas-founder-kit', stripe: 'https://buy.stripe.com/fZudR8dgz8qZ5GAfkmcMM0f', color: '#3B82F6', emoji: '🚀', tagline: 'Launch faster. Onboard better. Reduce churn.' },
   smallBiz: { name: 'Small Business AI Kit', price: 39, url: '/small-business-kit', stripe: 'https://buy.stripe.com/3cIaEW6SbcHfed6egicMM0c', color: '#10B981', emoji: '🏪', tagline: 'Run your business smarter with AI-powered operations.' },
-  megaPack: { name: 'AI Prompt Mega Pack', price: 29, url: '/ai-prompt-mega-pack', stripe: 'https://buy.stripe.com/4gMbJ0dgz4aJ1qkb46cMM0d', color: '#3B5FFF', emoji: '⚡', tagline: '200+ prompts for every business task. The Swiss Army knife of AI.' },
+  megaPack: { name: 'AI Prompt Mega Pack', price: 29, url: '/ai-prompt-mega-pack', stripe: 'https://buy.stripe.com/4gMbJ0dgz4aJ1qkb46cMM0d', color: '#3B5FFF', emoji: '⚡', tagline: '145+ prompts for every business task. The Swiss Army knife of AI.' },
 };
 
 const BUNDLE = { name: 'All 8 Kits Bundle', price: 97, value: 302, stripe: 'https://buy.stripe.com/bJe7sK0tNdLjgle0pscMM0b', url: '/bundle' };

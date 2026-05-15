@@ -95,7 +95,7 @@ def main():
 
     # --- BOTTOM: subhead + offer chip ---
     f_sub = load_font(34, bold=False)
-    subhead = "250+ ready for ChatGPT, Claude, Gemini"
+    subhead = "145+ engineered for ChatGPT, Claude, Gemini"
     sw = text_w(draw, subhead, f_sub)
     draw.text(((W - sw) // 2, 870), subhead, fill=GRAY, font=f_sub)
 

@@ -478,7 +478,7 @@ export default function Home() {
           {[
             { name: 'Video Prompt Pack', price: '$29', desc: 'Veo 3.1, Kling 3.0, Runway prompts', href: '/ai-video-prompt-pack', bg: 'var(--card-cyan)' },
             { name: 'Image Prompt Pack', price: '$29', desc: 'ChatGPT, Midjourney, DALL-E', href: '/ai-image-prompt-pack', bg: 'var(--card-pink)' },
-            { name: 'Prompt Mega Pack', price: '$29', desc: '200+ prompts for any business', href: '/ai-prompt-mega-pack', bg: 'var(--card-amber)' },
+            { name: 'Prompt Mega Pack', price: '$29', desc: '145+ prompts for any business', href: '/ai-prompt-mega-pack', bg: 'var(--card-amber)' },
             { name: 'Notion Templates Kit', price: '$39', desc: '150+ Notion templates & systems', href: '/notion-templates-kit', bg: 'var(--card-purple)' },
             { name: 'Social Media Kit', price: '$39', desc: 'Calendars, captions, viral content', href: '/social-media-kit', bg: 'var(--card-cyan)' },
             { name: 'Email Marketing Kit', price: '$29', desc: 'Sequences, newsletters, outreach', href: '/email-marketing-kit', bg: 'var(--card-amber)' },
@@ -519,7 +519,7 @@ export default function Home() {
         <div className="pricing-grid">
           {[
             { label: 'Try Us For $9', price: '$9', term: 'one-time', name: 'Starter Pack', desc: '20 hand-picked AI prompts. Cold outreach, landing pages, content, AI images, sales, productivity. Instant download.', href: '/starter-pack', cta: 'Get 20 Prompts \u2192', featured: false },
-            { label: 'Most Popular', price: '$29', term: 'one-time', name: 'AI Prompt Mega Pack', desc: '200+ prompts across every business function. The full prompt library.', href: STRIPE_URL, cta: 'Get the Kit \u2192', featured: false },
+            { label: 'Most Popular', price: '$29', term: 'one-time', name: 'AI Prompt Mega Pack', desc: '145+ prompts across every business function. The full prompt library.', href: STRIPE_URL, cta: 'Get the Kit \u2192', featured: false },
             { label: 'Best Value', price: '$97', term: 'one-time', name: 'All Kits Bundle', desc: '16 AI kits + all future kits free. Save 83% vs buying separately.', href: 'https://buy.stripe.com/aEUbJ01xR0YxgligkocMM0g', cta: 'Get the Bundle \u2192', featured: true },
           ].map(p => (
             <div key={p.name} className={`pricing-card${p.featured ? ' featured' : ''}`}>

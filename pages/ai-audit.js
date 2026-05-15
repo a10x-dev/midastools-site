@@ -272,7 +272,7 @@ export default function AIAssessment() {
             <div className="tier-tag">DIY-ASSIST</div>
             <h4>Coach Mega Pack</h4>
             <div className="price">$97<small>/once</small></div>
-            <p>200+ done-for-you prompts so the recommended tools immediately produce on-brand output.</p>
+            <p>145+ done-for-you prompts so the recommended tools immediately produce on-brand output.</p>
             <a href={MEGA_PACK} style={{display:'block',textAlign:'center',marginTop:16,padding:'10px 14px',background:'rgba(255,200,0,0.08)',border:'1px solid rgba(255,200,0,0.2)',borderRadius:99,fontSize:13,fontWeight:700,color:'var(--gold)',textDecoration:'none'}}>Add to assessment →</a>
           </div>
           <div className="ladder-card">
