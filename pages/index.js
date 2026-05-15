@@ -73,15 +73,15 @@ export default function Home() {
     <Layout>
       <Head>
         <title>Midas Tools — Free AI Tools, Prompts & Lifetime Kits</title>
-        <meta name="description" content="22+ free AI tools, 250+ expert prompts, and 21 lifetime kits for ChatGPT, Claude, Midjourney & more. No subscription, no fluff — used by creators, coaches, and founders." />
+        <meta name="description" content="22+ free AI tools, 145+ expert prompts, and 21 lifetime kits for ChatGPT, Claude, Midjourney & more. No subscription, no fluff — used by creators, coaches, and founders." />
         <meta property="og:title" content="Midas Tools — Free AI Tools, Prompts & Lifetime Kits" />
-        <meta property="og:description" content="22+ free AI tools, 250+ expert prompts, 21 lifetime kits. ChatGPT, Claude, Midjourney. Lifetime ownership, no subscription. Starting at $9." />
+        <meta property="og:description" content="22+ free AI tools, 145+ expert prompts, 21 lifetime kits. ChatGPT, Claude, Midjourney. Lifetime ownership, no subscription. Starting at $9." />
         <meta property="og:url" content="https://www.midastools.co" />
         <meta property="og:image" content="https://www.midastools.co/og-image.png" />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Midas Tools — Free AI Tools, Prompts & Lifetime Kits" />
-        <meta name="twitter:description" content="22+ free AI tools, 250+ expert prompts, 21 lifetime kits. Lifetime ownership, no subscription." />
+        <meta name="twitter:description" content="22+ free AI tools, 145+ expert prompts, 21 lifetime kits. Lifetime ownership, no subscription." />
         <meta name="twitter:image" content="https://www.midastools.co/og-image.png" />
         <link rel="icon" type="image/png" href="/favicon.png" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -91,7 +91,7 @@ export default function Home() {
           "@context": "https://schema.org",
           "@type": "WebPage",
           "name": "Midas Tools — Free AI Tools, Prompts & Lifetime Kits",
-          "description": "22+ free AI tools, 250+ expert prompts, and 21 lifetime kits for ChatGPT, Claude, Midjourney & more. No subscription, no fluff.",
+          "description": "22+ free AI tools, 145+ expert prompts, and 21 lifetime kits for ChatGPT, Claude, Midjourney & more. No subscription, no fluff.",
           "url": "https://www.midastools.co",
           "publisher": { "@id": "https://www.midastools.co/#organization" },
           "mainEntity": {
@@ -229,11 +229,11 @@ export default function Home() {
         <div className="badge" style={{ marginBottom: 32 }}>Free AI Tools &middot; Lifetime Kits</div>
         <h1>AI tools &amp; prompts<br />that <span>actually work.</span></h1>
         <p className="hero-sub">
-          22+ free AI tools, 250+ expert prompts, and lifetime kits for ChatGPT, Claude, Midjourney &amp; more. Used by creators, marketers, founders. No subscription, ever.
+          22+ free AI tools, 145+ expert prompts, and lifetime kits for ChatGPT, Claude, Midjourney &amp; more. Used by creators, marketers, founders. No subscription, ever.
         </p>
         <div className="hero-ctas">
           <a href="/tools" className="btn-primary" data-cta="hero-free-tools">Try Free AI Tools &rarr;</a>
-          <a href="https://buy.stripe.com/4gMbJ0dgz4aJ1qkb46cMM0d" className="btn-outline" data-cta="hero-mega-pack-97">Get Mega Pack &mdash; $97</a>
+          <a href="https://buy.stripe.com/4gMbJ0dgz4aJ1qkb46cMM0d" className="btn-outline" data-cta="hero-mega-pack-29">Get Mega Pack &mdash; $29</a>
         </div>
         <p className="price-tag">
           <strong>Just want 20 starter prompts?</strong> <a href="/starter-pack" data-cta="hero-tripwire-9" style={{ color: '#D97706', fontWeight: 700, textDecoration: 'none' }}>Try for $9 &rarr;</a> &middot; 30-day refund
@@ -248,7 +248,7 @@ export default function Home() {
         <div className="stats-bar">
           {[
             { num: '22+', label: 'Free AI tools' },
-            { num: '250+', label: 'Expert prompts' },
+            { num: '145+', label: 'Expert prompts' },
             { num: '21', label: 'Lifetime kits — no subscription' },
           ].map(s => (
             <div key={s.label} className="stat-item">
@@ -329,7 +329,7 @@ export default function Home() {
         }}>
           <div style={{ flex: '1 1 340px', color: '#FFF' }}>
             <div style={{ fontSize: 11, fontWeight: 800, letterSpacing: 1.5, color: '#FCD34D', marginBottom: 8 }}>⚡ TIRED OF USING FREE TOOLS ONE AT A TIME?</div>
-            <div style={{ fontSize: 24, fontWeight: 800, lineHeight: 1.25, marginBottom: 8 }}>Get 250+ expert prompts + 150+ image prompts in one pack.</div>
+            <div style={{ fontSize: 24, fontWeight: 800, lineHeight: 1.25, marginBottom: 8 }}>Get 145+ expert prompts + 165+ image prompts in one pack.</div>
             <div style={{ fontSize: 14, color: '#DBEAFE', lineHeight: 1.5 }}>Copy-paste ready. Works with ChatGPT, Claude, Midjourney, DALL-E. 30-day refund.</div>
           </div>
           <a href="https://buy.stripe.com/4gMbJ0dgz4aJ1qkb46cMM0d" style={{

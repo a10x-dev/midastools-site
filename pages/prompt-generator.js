@@ -823,7 +823,7 @@ export default function PromptGenerator() {
         }}>
           <div style={{ flex: '1 1 260px', color: '#FFF' }}>
             <div style={{ fontSize: 11, fontWeight: 800, letterSpacing: 1, color: '#FCD34D', marginBottom: 4 }}>⚡ SKIP THE GENERATOR</div>
-            <div style={{ fontSize: 16, fontWeight: 700, lineHeight: 1.35 }}>Get 250+ expert prompts — sales, content, images, video, code &amp; more. Copy &amp; paste ready.</div>
+            <div style={{ fontSize: 16, fontWeight: 700, lineHeight: 1.35 }}>Get 145+ expert prompts — sales, content, images, video, code &amp; more. Copy &amp; paste ready.</div>
           </div>
           <a href={STRIPE_MEGA_PACK} style={{
             display: 'inline-block',
