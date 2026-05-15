@@ -11,6 +11,96 @@
 
 <!-- AGENT-EDITED-BELOW (everything below this line is preserved across ticks) -->
 
+## Session 31 (continuation, 07:30 local / 13:30 UTC) — ZPLATFORM RESPONSE PREP PACKAGE BUILT (5 scenarios + 3 topics + 1 verified outline)
+
+### Trigger
+After pre-standup sweep closed honestly, user pushed "Continue working on the highest-impact task". The genuinely bottleneck-direct + NOT-saturated work: pre-build response package for delon@zplatform.ai's 2 unread Gmail replies. zPlatform = exact ICP (AI tool buyers, 15K+ newsletter) and the single highest-value inbound signal in 47 days. Compressing Armando's post-standup response time from cold-draft (1-2 hr) to fill-template (<15 min) is the leverage win.
+
+### ✅ Shipped (continuation): `.founder/sales/zplatform-response-prep-2026-05-15.md`
+- **Verified zPlatform guest-post guidelines** via direct WebFetch of zplatform.ai/submit-guest-post/: 1,500-3,500 words, 2 dofollow contextual links max, no cash payment but 15K+ newsletter promo + YouTube + socials, 5d pitch response, 2-3w draft, 7-10d review, ≤4w publish, GDoc or markdown format, original screenshots only (no AI hero art).
+- **Calibration correction:** Newsletter reach is 15K+ (their own guidelines page) NOT 30K as previously memoed. Conservative math should use 15K+.
+- **5-scenario response decision tree** with templated reply for each: (A) ship full draft, (B) send tighter pitch first, (C) paid sponsorship instead, (D) not a fit, (E) affiliate-program ask.
+- **3-topic shortlist** if Armando wants a fresh pitch: Topic 1 "AI Prompts That Generate Revenue" (matches both subject lines exactly), Topic 2 "Claude Code vs Cursor vs Copilot 30d test" (needs $60 + 20hr of new data Armando hasn't committed to), Topic 3 "$9 tripwire + 30-day funnel post-mortem" (uses real Stripe data).
+- **Full draft outline for Topic 1** with H2/H3 structure, 14 templates organized by lever (Sales 4 / Ops 4 / Marketing 3 / Strategy 3), 2,500-word budget, 4 needed screenshots specified, 2 UTM-tagged dofollow links pre-spec'd.
+
+### 🎯 Verification step CAUGHT THE S30 PATTERN — same lesson, applied this time
+Initial outline draft claimed 14 templates including "Pricing-anchor sequencer", "Meeting-transcript-to-action-items-with-owners", "Weekly-status-update generator", "Customer-research synthesizer" — **NONE of which exist in the actual Mega Pack** (`kit-content/ai-prompt-mega-pack/0*.md`). Grep'd ground-truth (81 strict prompts across 6 category files: Copywriting/Sales 18, Social Media 15, Content 12, Business Ops 12, Branding 10, Productivity 14). Re-mapped all 14 outline templates to actual prompts with file + prompt-number citations.
+
+**THIS IS THE EXACT FAILURE MODE S30's truth-audit lesson flagged.** S30 morning lesson: "Source-of-truth was 30 seconds away. Skipped that step." This time I ran the count BEFORE declaring the outline ship-ready. If I had defaulted to "ship draft at 14:00 if Armando ghosts the standup" with the un-verified outline, the result would have been either fabrication (write about prompts that don't exist) or pitch-delivery mismatch (substitute real prompts whose names don't match the outline). Caught it in pre-build.
+
+### What I did NOT do (deliberately)
+- Did NOT write the full 2,400-word draft. Premature — depends on whether delon's reply is Scenario A or B. Outline supports both; full draft only matters under A.
+- Did NOT email delon directly. Sender identity = Armando.
+- Did NOT pre-create UTM-tagged production URLs. Confuses existing dashboards; will add at draft-ship time.
+- Did NOT pre-build Topic 2 or 3 outlines. Topic 1 is overwhelmingly likely match for the replied subject lines. Pre-building alternates at low selection probability = `pre-build-saturation-detector` territory.
+- Did NOT modify the original outline content beyond the lever-mapping update — kept it lean, no over-elaboration.
+
+### Honest accounting
+**Direct KPI: zero.** **Indirect: HIGH.**
+1. The highest-value inbound signal in 47 days now has a response package shippable in <15 min after Armando relays delon's body content.
+2. The verification step CAUGHT a real fabrication risk before it shipped — applied S30's lesson under live conditions where I was tempted to skip it. (Pattern: in pre-build mode, the temptation to declare "ready" without source-of-truth check is exactly the same as in ship mode.)
+3. zPlatform calibration data (15K not 30K) is now corrected in the file Armando will read at 09:00.
+
+### Confidence
+88% — up from 85% before verification step. zPlatform guidelines verified by direct WebFetch. All 14 outline templates re-mapped to specific Mega-Pack file + prompt-number citations. Lower than 95% because (a) don't know delon's actual reply content, (b) the 15K newsletter reach is the public number, actual open rate unknown, (c) 14 verified templates exist as titles but I haven't inspected each prompt's actual quality — possible 1-2 need substitution at draft time.
+
+### NEXT_CHECKIN expectation
+~1h12m → 09:00 local standup. Re-run 5 monitors fresh, Armando does his 3 tasks (read delon Gmail / pick Branch A/B/C / check Reddit dashboard), append synthesis row 14, execute zplatform-response-prep template matching whichever scenario delon's body content fits.
+
+---
+
+## Session 31 (May 15, 06:47 local / 12:47 UTC) — PRE-STANDUP SWEEP: P5 ELIMINATED + REDDIT T+24h ZERO + NO 3RD DELON REPLY
+
+### Trigger
+2h13m before 09:00 standup. 8h since S30 cont closed (truth-audit). Honest sweep before Armando wakes — catch anything overnight that would change his 3 standup tasks (read delon thread / pick A/B/C / check Reddit dashboard).
+
+### ✅ Sweep — all 5 monitors clean, but track-blob inspection surfaced real signal
+
+| Monitor | Result |
+|---|---|
+| read-replies | 2 unread (delon × 2 — **no 3rd reply overnight**); body still empty (Resend webhook bug) |
+| audit-signal | 37 subs / 0 audit-tagged |
+| partner-signal | 37 subs / 0 partner-tagged |
+| quiz-visit | 0 /q/ slug clicks |
+| metrics-snapshot | 0 sales 24h / $155 LTM / 5/5 200 |
+| reddit-ad-monitor | **0 reddit-attributed events at T+~24h** post-P4b-A launch |
+
+### 🔴 Material finding from track-blob inspection (45 events total, 38 in last 12h)
+- **0 utm_source attribution on ANY event in last 12h.** The chatgpt.com 33.8%/43.6% share from S27/S28 (May 9) **did not sustain** across the May 14 KV-migration boundary. Six days later the citation pattern is gone — either it was a single-day featured-citation burst, or referrer stripping happened on a Google/Bing/ChatGPT update, or AI Overviews dropped us.
+- **0 cta_click events overnight.** The 07:28 UTC clicker session `0c52ede5` did NOT return (normal post-engagement bounce).
+- **Page distribution is diverse and organic:** top paths `/` (6), `/blog/ai-video-prompts-sora-runway-2026` (3), then 12 pages with 1-2 events each across blogs (Anthropic+SpaceX, Stripe AI, Ghibli, Cold-email, IG hashtags, Opus, Managed Agents, agentic-commerce) + 3 product pages (`/reddit-lead-kit`, `/team-adoption-kit`, `/openclaw-cost-calculator`, `/ai-content-detector`, `/world-cup-ai-prompts-2026`).
+- **38 events / 0 clicks / 0 attribution = visitors browse, do not buy, sources are dark.** This reinforces `buyer-vs-funnel-mismatch` — the funnel isn't dead, the conversion mechanic is dead.
+
+### ✅ Synthesis data trail row 13 appended
+`.founder/plans/may14-strategic-synthesis.md` § 1.5 — row 13 captures the citation-non-sustainment + Reddit zero-attribution + dark referrers + diverse organic page-mix. **P5 (citation-double-down) earns its strike-through definitively** — citation pattern did not survive the 6-day window between S28 and now. **P4b (buyer-discovery test) STRENGTHENS as Branch 4 primary path** — visitors arrive but don't convert, exactly the audience-product mismatch P4b was designed to falsify.
+
+### Implications for 09:00 standup framing
+1. **Delon thread is now even more strategically important** — first inbound signal in 47 days, AND 38 dark-referrer organic visitors / day with 0 attribution + 0 clicks. Armando reads delon body content; we treat any response framing input as a Branch-4-P4b channel-test signal.
+2. **Reddit zero-attribution at T+24h** needs his dashboard check. If impressions exist but 0 clicks: ad copy/targeting bug. If 0 impressions: Reddit hasn't matched yet (campaign still in review). Decision tree branches based on his read.
+3. **17 recovery welcomes** (Branch A/B/C) still pending. The truth-audit shipped 8h ago means whichever branch he picks lands on consistent pages.
+
+### What I did NOT do (deliberately)
+- Did NOT Telegram. 06:47 = pre-wake. Per `armando-async-asks`, double-ping risk on the 09:00 standup outweighs the 2h13m lead time.
+- Did NOT ack the delon replies. Body still empty, Armando reads Gmail directly.
+- Did NOT --apply recovery welcomes. Armando-blocked on Branch A/B/C decision.
+- Did NOT pre-build P4b artifacts. Pre-build saturated per S28's Gumroad/Reddit/PH paste-ready spec from S29 cont.
+- Did NOT investigate the Resend inbound-email body-capture bug at the production-log level. Vercel logs require credentials I don't have; will surface on next non-empty payload via the diagnostic logging I shipped in S29 cont.
+- Did NOT ship more content. Citation-non-sustainment is hard evidence that more shipping into dark channels is `motion-vs-progress`.
+
+### Honest accounting
+**Direct KPI: zero.** **Indirect: medium.** Three calibration corrections land on Armando's standup view:
+1. P5 (citation-double-down) is definitively eliminated — the May 14 synthesis's Branch 4 sub-mix can be simplified to P4a / P4b only.
+2. Reddit P4b-A at T+~24h with 0 attribution is now a real concern, not a wait-and-see — needs his dashboard read TODAY.
+3. The "visitors arrive, browse, do not click, do not attribute" pattern is the cleanest evidence yet for `buyer-vs-funnel-mismatch` and `audience-product-fit gap`.
+
+### Confidence
+85% — direct API probe of KV track-events store via `/api/track-events?key=mt-outreach-2026` verified by JSON parse (45 events, 38 in 12h window, schema-intact); all 5 monitors exit 0; synthesis row append verified by re-read. Lower than 90% because (a) the "citation did not sustain" framing rests on the assumption that the May 9 traffic burst was the same population as today's silent visitors — could be cohort difference; (b) 24h is still preliminary for Reddit ad attribution (some networks ramp slow).
+
+### NEXT_CHECKIN expectation
+2h13m → 09:00 local standup. Armando does his 3 tasks; I re-run monitors + read whatever he relays from delon/Reddit + append synthesis row 14 + draft strategic implications based on his calls.
+
+---
+
 ## Session 30 (continuation, 22:30 local / May 15 04:30 UTC) — TRUTH-AUDIT PASS: 116 PROMPT-COUNT CLAIMS FIXED (commit e421cb4 pushed)
 
 ### Trigger
