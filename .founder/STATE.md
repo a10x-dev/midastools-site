@@ -11,6 +11,61 @@
 
 <!-- AGENT-EDITED-BELOW (everything below this line is preserved across ticks) -->
 
+## Session 26 (May 15, 13:34 local / 19:34 UTC) — T+1d POST-DECIDE-DAY STANDUP + AUDIENCE RE-FRAMING FROM KV DATA
+
+### Trigger
+User-prompted at 13:33 local — the 09:00 standup never fired (4.5h overdue). T+1d post-decide-day, T+38h post-Reddit-P4b-A-launch. The bottleneck-direct work at this slot: 5-monitor sweep + inspect KV for new signal + check status of 3 Armando-blocked items (delon body / Reddit dashboard / broken-SKU decision).
+
+### ✅ Monitor sweep — all 5 clean
+| Monitor | Result |
+|---|---|
+| read-replies | 2 unread (delon × 2, no 3rd) — body still empty |
+| audit-signal | 37 / 0 audit-tagged |
+| partner-signal | 37 / 0 partner-tagged |
+| quiz-visit | 0 /q/ slug clicks |
+| metrics-snapshot | 0 sales 24h / $155 LTM / 5/5 uptime |
+
+### 🔴 MATERIAL RECALIBRATION from direct KV inspection (56 events / 42 in last 12h)
+**Country mix across ALL KV events:** US 21 / Singapore 7 / Vietnam 5 / India 4 / China 4 / Sweden 2 / Norway 2 / Netherlands 2. **Device class for US events: 14 desktop / 3 mobile / 4 unknown.** 
+
+**The US-desktop buyer profile (matching all 3 paying customers) is 25% of all events.** Session 28's "India/mobile audience mismatch" framing was specific to chatgpt.com referrer cohort — NOT representative of total funnel. The right audience IS landing on our pages organically; the conversion mechanic (0 cta_clicks in current KV window) is the bottleneck, not audience access.
+
+**Material new evidence:** 2 US-desktop Chrome organic Google visitors landed on `/reddit-lead-kit` at 09:34 + 11:10 UTC — that page is one of 5 broken SKUs (manual:true placeholder, no real ZIP) per task `3400b90c`. The exact buyer profile is hitting broken-SKU pages.
+
+### Branch 4 sub-mix REVISED (third revision in synthesis trail)
+**Pre-evidence (S28 May 14 pre-dawn):** P4b primary (50%), P4a downgraded (15%) — assumed audience mismatch was structural.
+**Post-evidence:** P4a strengthens (35%), P4b weakens (25%), NEW P4c surfaces (30%): fix broken-SKU pages that already get organic buyer traffic. P5 5% / other 5%. Branch 4 overall probability stays ~70%.
+
+### ✅ Synthesis row 14 appended (chronological order corrected after first append)
+`.founder/plans/may14-strategic-synthesis.md` § 1.5 — 14 snapshots over 8.5d. The recalibration logic is captured with explicit Branch 4 sub-mix revision. May 14 N=1 cta_click + S28 chatgpt-cohort findings are now BOTH narrower in scope than originally claimed.
+
+### Armando-blocked items status (T+~17h since delon replies landed)
+1. **delon@zplatform body content** — STILL empty in local capture (Resend webhook bug); Armando must read Gmail directly. Pre-built response package at `.founder/sales/zplatform-response-prep-2026-05-15.md` is fill-template-in-<15-min once body received.
+2. **Reddit Ads dashboard check (T+~38h)** — 0 attributed events in KV. Calendar-triggered ask: he checks impression count today.
+3. **Task `3400b90c` — 5 broken SKUs** — The /reddit-lead-kit finding is fresh evidence this is now a real conversion lever. Decision (deactivate / build / manual) still Armando's call.
+
+### Telegram fired (bundled per `bundle-armando-blocked-escalations`)
+Single message with: (a) the recalibration finding as headline news, (b) all 3 Armando-blocked items as concrete decide-now asks with kill-fallback paths.
+
+### What I did NOT do (deliberately)
+- Did NOT unilaterally deactivate the 5 broken-SKU plinks (task `3400b90c`) — Armando's strategic call, multiple prior sessions deferred deliberately
+- Did NOT pre-build P4c artifacts (broken-SKU content creation) — the decision is reversible and Armando's branch choice prejudges what to build
+- Did NOT pre-execute the zPlatform response — gated on delon body content
+- Did NOT 6th-Telegram on GH_GIST_TOKEN — 5+ silent probes, bundled into prior pings
+- Did NOT migrate /api/track or touch instrumentation — KV migration is stable, no architectural debt to address mid-data-collection
+- Did NOT TodoWrite — short-cycle single-session work, list would add noise
+
+### Honest accounting
+**Direct KPI: zero.** **Indirect: HIGH on framing.** The S28 "audience mismatch" claim has been driving Branch 4 sub-mix decisions for 6 days. The corrected scope (chatgpt-cohort-only vs total-funnel) materially changes which Branch 4 path has highest EV. Without this session's KV deep-dive, May 14's revised sub-mix (P4b primary) would have continued as the working frame even though the underlying data was misspecified.
+
+### Confidence
+85% — direct API probe of KV verified country/device counts (21 US / 14 US-desktop, hand-verified via UA grep); synthesis row append verified by re-read; chronological reorder fixed in same session. Lower than 90% because (a) "5000-event rolling cap" assumption explains the missing May 14 cta_click but isn't directly verified, (b) the 25% US-desktop share is computed from 56 events — small sample compared to S28's 101 events, so the comparison-strength is asymmetric.
+
+### NEXT_CHECKIN expectation
+Tomorrow morning standup (May 16 09:00 local) — Armando ideally has by then: (1) relayed delon body content, (2) checked Reddit dashboard, (3) made a call on the 5 broken SKUs. If 0/3 of those, status is unchanged and we wait. If 1+, execute the matching pre-built action.
+
+---
+
 ## Session 31 (continuation, 07:30 local / 13:30 UTC) — ZPLATFORM RESPONSE PREP PACKAGE BUILT (5 scenarios + 3 topics + 1 verified outline)
 
 ### Trigger
