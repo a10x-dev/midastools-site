@@ -2,6 +2,55 @@
 
 Your long-term memory. Persists across all sessions. This is your brain — treat it well.
 
+## 🚨 SESSION 27 CONTINUATION (May 15, 19:00 local / May 16 01:00 UTC) — FALSIFIER CAUGHT BOT TRAFFIC, REVERSED P4d FRAMING IN REAL-TIME
+
+### Headline
+The +2 subs flagged in the EOD close (below) turned out to be **automated traffic from submitaitools.org's verification crawler**, not real human conversions. Ran my freshly-authored `same-ua-attribution-falsifier` playbook 9 min after authoring it. Smoking-gun pattern: **8 events / 4 distinct session_ids / 3 distinct countries (SE/DE/AT) / 1 distinct UA** (Mac Chrome 142 identical across all 8). A 3rd "signup" landed mid-falsification (`benjamin@korper.nl` from AT — same domain as earlier `timo@korper.nl`, same UA). 3-4 sec page-view→signup latency × zero secondary navigation = automation, not deliberation.
+
+### Branch 4 sub-mix CORRECTED (5th revision)
+P4a 35% (back up — real audience landing via Google organic stands) / P4b 15% / P4c 30% (strengthens by elimination) / ~~P4d 25%~~ → **3% (REVERSED)** / P5 5% / other 12%. Branch 4 overall ~70%.
+
+### Users KPI honest read
+Gist shows 40 raw. ~37 conversion-relevant (3 are bot-attributed: timo@korper.nl + benjamin@korper.nl + r.d.le.vinmd@gmail.com). Did NOT downgrade KPI in dashboard — gist truth-source is 40; the analytical layer is captured in synthesis.
+
+### Telegram fired (reversal)
+S26's earlier bundled Telegram + the initial-row-15 framing would have biased Armando's morning read toward "directory channel working" if uncorrected overnight. Per `armando-async-asks`: material reversal qualifies. Short message bundled with the row 16 correction.
+
+### Playbook validated in real time
+`same-ua-attribution-falsifier` authored at 18:51 local, fired at 19:00 local. Fastest playbook-to-validation cycle I've had. `falsifiability-before-celebration` paid off — avoided ~3 hr of wasted P4d ship-spec drafting tomorrow.
+
+---
+
+## 🟢 SESSION 27 EOD (May 15, 18:51 local / May 16 00:51 UTC) — +2 SUBS VIA submitaitools.org + 17TH JSONBLOB DEATH + REDDIT P4b-A STILL ZERO
+
+### Headline
+First sub growth in 24h+ — 2 new homepage signups (`timo@korper.nl` 20:08 UTC + `r.d.le.vinmd@gmail.com` 22:26 UTC), BOTH attributed to `/?utm_source=submitaitools.org&utm_medium=referral` with utm_source captured cleanly in gist. **N=3 directory-attributed signups across ≤2 distinct UAs since the directory listing went live** (S30 Swedish + tonight's 2 from DE/Chrome142 — same-UA risk caps confidence at "first signal" not "trend confirmed"). **Reddit P4b-A at T+~38h: still 0 attributed events.** **17th jsonblob death** (subscribers fallback blob 404 — gist+KV holding). Per `jsonblob-mtbf-collapsed`: no rotation during active windows. **⚠️ This framing was REVERSED in the continuation block above** — those signups turned out to be a verification crawler from submitaitools.org, not real human conversions.
+
+### Branch 4 sub-mix revised (4th revision in synthesis trail) — LATER REVERSED
+P4a 30% / P4b 15% (down 10pt — directory-organic outperformed Reddit-paid in same window) / P4c 25% / **P4d 25% NEW — directory submissions double-down** (.founder/deliverables/ai-directory-submission-list.md has 154 candidates, 12 submitted, submitaitools.org delivering attribution) / P5 5%. Branch 4 overall ~70%. **CORRECTED in continuation block — see above.**
+
+### What I did NOT do
+- No 2nd Telegram (S26's bundled ping covers + same-UA risk caps confidence)
+- No jsonblob rotation (active-window rule)
+- No new monitor tool (saturation — 5 monitors + N=3 same-UA evidence doesn't justify 6th)
+- No directory submission (Armando's strategic call — P4d is a CANDIDATE)
+- No custom welcome email (subscribe.js already fired the 5-free-prompts welcome)
+
+### Open Armando-blocked items (status unchanged from S26)
+1. delon@zplatform.ai body content — still empty locally (Resend webhook bug); Armando reads Gmail directly
+2. Reddit Ads dashboard check (T+~38h) — 0 attributed events; impressions vs delivery question still open
+3. 5 broken SKUs (task `3400b90c`) — decision still Armando's; /reddit-lead-kit organic traffic finding reinforces urgency
+
+### Files touched
+- `.founder/plans/may14-strategic-synthesis.md` § 1.5 — row 15 appended (directory attribution + 17th jsonblob death + Reddit zero + revised Branch 4 sub-mix with P4d)
+- `.founder/STATE.md` — Session 27 EOD block added below AGENT-EDITED-BELOW marker
+- `.founder/MEMORY.md` — this entry
+
+### NEXT_CHECKIN
+Tomorrow May 16 09:00 local. Falsification test: does a 3rd diverse-UA submitaitools.org signup land overnight? If yes → P4d strengthens materially → start drafting paste-ready next-5-directories submission spec. If no → caveat holds and we wait for more data before doubling-down.
+
+---
+
 ## 🚨 SESSION 26 EOD (May 12, 18:06 local / May 13 00:06 UTC) — 15TH JSONBLOB DEATH AT 7H MTBF — COLLAPSED + T-2D TO MAY 14
 
 ### Trigger

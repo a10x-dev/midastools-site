@@ -11,6 +11,128 @@
 
 <!-- AGENT-EDITED-BELOW (everything below this line is preserved across ticks) -->
 
+## Session 27 CONTINUATION (May 15, 19:00 local / May 16 01:00 UTC) — 🚨 FALSIFIER REVERSES INITIAL FRAMING: BOTS NOT CONVERSIONS
+
+### Trigger
+After initial EOD close (below), user pushed "continue working on highest-impact task." The genuinely-highest-impact move was running my freshly-authored `same-ua-attribution-falsifier` playbook on the +2 finding from 9 min ago — either resolves the same-UA caveat now or strengthens it before tomorrow's standup.
+
+### 🚨 SMOKING-GUN FINDING — directory traffic is AUTOMATED
+Ran falsifier on all submitaitools.org-attributed KV events:
+
+| Metric | Result |
+|---|---|
+| Total events | 8 |
+| Distinct session_ids | 4 |
+| Distinct first_touch_ms | 4 (4 separate browser sessions) |
+| Distinct countries | 3 (SE / DE / AT) |
+| **Distinct user_agents** | **1 (Mac Chrome 142, identical)** |
+| Distinct paths visited | 1 (/?utm_source=submitaitools.org&utm_medium=referral) |
+| Secondary navigation | 0 (no visitor explored beyond homepage) |
+| Signups during falsifier run | +1 NEW: `benjamin@korper.nl` from AT/Vienna at 00:55:21 UTC |
+
+**3 of 8 events sign up; ALL 8 share the EXACT same Mac Chrome 142 UA across 3 countries.** Real human traffic would have mixed UAs (Windows ~70%, mobile ~50%, Linux scattered). 3-4 sec page-view→signup latency × 3 visitors = automation. 2 of 3 signups on same `korper.nl` domain (timo + benjamin) is a burner-domain pattern.
+
+**Pattern interpretation:** submitaitools.org runs a verification crawler that periodically tests directory listings via multiple geographic exit nodes, fills the email form with burner addresses, then walks away. This is NOT real human conversion.
+
+### Branch 4 sub-mix CORRECTED (5th revision)
+- P4a (hero rewrite / fix what real organic landers encounter): **35%** (back up from 30% — S26's "real audience IS landing via Google organic" stands)
+- P4b (paid Reddit): **15%** (unchanged — still 0 attributed at T+~38h)
+- P4c (fix broken SKUs): **30%** (up from 25% — strengthens by elimination)
+- ~~P4d (directory double-down): 25%~~ → **3%** (REVERSED — the "signal" was bot traffic)
+- P5 (citation): 5%
+- Other / undefined: 12%
+
+Branch 4 overall stays ~70%.
+
+### Users KPI honest accounting
+Gist shows **40 subs** after benjamin@korper.nl's just-landed signup. BUT 3 of those (timo@korper.nl + benjamin@korper.nl + r.d.le.vinmd@gmail.com) are bot-attributed. **Effective real-human sub count since recovery is ~37, not 40.** Will downgrade Users KPI from raw 40 to 37 for strategic purposes (gist storage shows 40; conversion-relevant value is 37). Future: a `attribution_class: bot-suspect` tag would help future-self avoid this.
+
+### Telegram fired — reversal of S26 framing
+S26's 13:34 Telegram contained the recalibration + 3 decide-now items. The earlier-this-session synthesis row 15 framing of "first organic conversion signal" would have biased Armando's read if it sat overnight. Per `armando-async-asks`: material new info (especially a reversal) qualifies for follow-up. Single short message bundled with the row 15→16 correction.
+
+### What I did NOT do (deliberately)
+- Did NOT unsubscribe/delete the 3 crawler-attributed gist entries. Irreversible action; bot-pattern data may be useful for future detection.
+- Did NOT ship a bot-filter to subscribe.js. Touching write-path during active windows (delon@ thread + recovery flows + audit experiment) violates `jsonblob-mtbf-collapsed` spirit + this is Armando-strategic ("do we filter directory verification bots or accept them?").
+- Did NOT WebFetch korper.nl. Behavioral fingerprint already conclusive; saturation.
+- Did NOT build a directory-signal-monitor — it would have surfaced bots AS signal (wrong tool). The right pattern is `same-ua-attribution-falsifier` as on-demand playbook, not daily monitor.
+- Did NOT downgrade the Users KPI to 37 in the dashboard. Raw gist count is 40 — the storage truth-source. The "real-human" count is an analytical layer above storage. Surfaced honestly in synthesis but not retroactively edited.
+
+### Honest accounting
+**Direct KPI: Users 37→40 raw / ~37 conversion-relevant.** Mixed. **Indirect: HIGH on calibration.** Avoided shipping a P4d ship-spec tomorrow that would have wasted ~3 hr on bot-attribution data. The `same-ua-attribution-falsifier` playbook was authored 9 minutes before it was used in earnest — fastest playbook-to-validation cycle I've had. `falsifiability-before-celebration` paid off in real-time, not retrospectively.
+
+### Confidence
+90% — direct evidence via KV inspection (4 distinct session_ids + 1 UA across 3 countries is bot-pattern-conclusive). Lower than 95% because: (a) it's *possible* submitaitools.org has a homogeneous Mac-user audience + uses VPN exit nodes that happen to be in EU only — but p<0.1 under any reasonable prior given the secondary-nav=0 pattern, (b) 100% certainty would require IP-class inspection or talking to submitaitools.org operators (not worth the effort).
+
+### NEXT_CHECKIN expectation
+Tomorrow May 16 09:00 standup unchanged from initial EOD close. Falsification test now FIRED early — Branch 4 P4d officially reversed in synthesis row 16. Watch for: (1) delon body relay, (2) Reddit P4b-A still 0 at T+~50h, (3) any other directory referrals (genuine human ones would have diverse UAs), (4) any of 3 Armando-blocked items resolved.
+
+---
+
+## Session 27 (May 15, 18:51 local / May 16 00:51 UTC) — EOD STANDUP: 🟢 +2 SUBS VIA submitaitools.org + 17TH JSONBLOB DEATH + REDDIT P4b-A STILL ZERO
+
+### Trigger
+EOD slot (17:00 DUE → 1h50m overdue when user prompted at 18:50). T+5h since Session 26's bundled Telegram (recalibration + 3 Armando-blocked items). Per `pre-build-saturation-detector` + `armando-async-asks`: no second Telegram, no new content shipped. Legitimate work = 5-monitor sweep + KV inspection + honest close.
+
+### ✅ Monitor sweep — all 5 clean (operational hygiene) + 1 MATERIAL DELTA
+| Monitor | Result |
+|---|---|
+| read-replies | 2 unread (delon × 2, no 3rd, still empty body) |
+| audit-signal | 39 / 0 audit-tagged |
+| partner-signal | 39 / 0 partner-tagged |
+| quiz-visit | 0 /q/ slug clicks |
+| metrics-snapshot | **🟢 +2 NEW SUBS (37→39)** / 0 sales 24h / $155 LTM / 5/5 uptime |
+
+### 🟢 MATERIAL FINDING — first organic conversions since Reddit launch
+Per `verify-truth-source-on-signal-deltas`: cross-checked +2 delta against gist truth-source. Confirmed real (not /api/status flicker). Both subs:
+
+| Email | Time UTC | utm_source | utm_medium | country/region | UA |
+|---|---|---|---|---|---|
+| timo@korper.nl | 20:08:59 | submitaitools.org | referral | DE | Chrome 142 Mac |
+| r.d.le.vinmd@gmail.com | 22:26:29 | submitaitools.org | referral | DE / BY | Chrome 142 Mac |
+
+KV cross-reference shows the matching page_view fired ~3 sec before each signup. Both via `/?utm_source=submitaitools.org&utm_medium=referral`. UTM IS being captured in gist (`utm_source` + `utm_medium` fields populated) — subscribe.js source-tagging works as designed; my prior session's capability-gap claim was wrong.
+
+### ⚠️ Falsifiability caveat — N=3 across ≤2 distinct UAs
+Both new subs share the SAME Chrome 142 Mac UA fingerprint + country=DE. Could be ONE source submitting 2 emails (real or scripted), OR 2 visitors on the same VPN. Combined with S30's prior Swedish submitaitools.org referral, that's **N=3 attributed signups across ≤2 distinct UAs since the directory listing went live**. Per `falsifiability-before-celebration`: this is "first organic conversion signal" not "trend confirmed." Need diverse UA/country evidence over 24-48h.
+
+### 🚨 17th jsonblob death — subscribers fallback blob 404
+`019dee81-1159-7259-86d1-88c201cf5451` now 404. Gist (`b460cc98`) + KV both holding clean per keepalive (`kvOk:true, gistOk:true`). MTBF ~26h since last rotation. Per `jsonblob-mtbf-collapsed`: do NOT rotate during active windows (delon@ thread unread, 17 recovered welcomes still pending Branch A/B/C, audit-experiment kill-or-iterate at May 14+ active). Architectural-debt task `f2aac4b4` (migrate /api/track + subscribers fallback to durable storage) remains the post-window priority.
+
+### Reddit P4b-A still zero at T+~38h
+0 reddit-attributed events in current KV window. Directory-organic delivered 2 signups in 5h while paid-Reddit delivered 0 in 38h. Branch 4 sub-mix implications surfaced in synthesis row 15.
+
+### Branch 4 sub-mix REVISED — NEW P4d directory-organic stratum
+**Caveat: based on N=3 with same-UA risk; don't lock in until 48h more data.**
+- P4a (hero rewrite): 30% (down 5pt from S26 — the right audience IS landing, but P4d is the cheaper test now)
+- P4b (paid distribution / Reddit): 15% (down 10pt — 38h zero attribution + active campaign delivering nothing while directory-organic produces 2)
+- P4c (fix broken SKUs): 25% (unchanged — still high-EV for /reddit-lead-kit-class organic visitors)
+- **P4d (NEW — directory submissions double-down): 25%** — `.founder/deliverables/ai-directory-submission-list.md` has 154 directories, top 30 prioritized; 12 already submitted; submitaitools.org is producing measurable attribution. Cost: ~$0 + 30-60 min per submission. Plan-agnostic with Branch 1-3.
+- P5 (citation): 5%
+
+Branch 4 overall probability stays ~70%.
+
+### ✅ Synthesis row 15 appended
+`.founder/plans/may14-strategic-synthesis.md` § 1.5 — 15 snapshots over 8.5d. Captures the directory-attribution finding with explicit caveat about same-UA evidence, the 17th jsonblob death, the Reddit zero-attribution sustainment.
+
+### What I did NOT do (deliberately)
+- Did NOT send a 2nd Telegram. S26's 5h-old ping bundled 3 decide-now items + a recalibration headline. A second ping with "+2 subs via directory, but caveat is same-UA so this might be 1 source not 2" is sub-threshold for material news per `armando-async-asks` — the bot-suspicion ceiling caps confidence below "tell him now."
+- Did NOT rotate the dead jsonblob fallback. Active-window rule.
+- Did NOT build a directory-signal-monitor tool. Saturation territory — 5 monitors already + N=3 evidence with same-UA risk doesn't justify a 6th yet.
+- Did NOT send a custom welcome to the 2 new subs. subscribe.js already fired the 5-free-prompts email automatically. Custom directory-aware welcome would be valuable IF the N=3 turns into N=10+ diverse sources.
+- Did NOT unilaterally submit to more directories tonight. Strategic call belongs to Armando — P4d 25% sub-mix is a CANDIDATE branch, not a confirmed channel.
+- Did NOT TodoWrite — short-cycle single-session standup, list would add noise.
+
+### Honest accounting
+**Direct KPI: Users +2 (37→39, +5.4% session-over-session).** Real but ambiguous attribution. **Indirect: high.** P4d surfaces as a new Branch 4 candidate stratum at minimal cost, backed by actual attribution data (3 of 3 attributed signups since directory listing went live = 100% directory-attribution for new gist additions). Reddit P4b-A's 38h zero-attribution becomes harder to dismiss as "ad still warming up" — 38h is past most network-side delivery ramp expectations.
+
+### Confidence
+80% — direct gist + KV cross-check confirms the data; subscribe.js source-tagging verified working by reading the actual /api/subscribe handler + finding utm_source captured in fresh gist records; jsonblob 404 verified via HTTP probe. Lower than 85% because: (a) same-UA risk on 2 of 3 directory signals caps confidence in the "directory channel works" framing, (b) Branch 4 P4d weight (25%) is estimation against N=3, (c) the country=DE for a `timo@korper.nl` (.nl domain) hints at either VPN or edge-routing noise — server_country may not equal user_country reliably.
+
+### NEXT_CHECKIN expectation
+Tomorrow May 16 09:00 local standup. Watch: (1) does any 3rd diverse-UA submitaitools.org signup appear overnight (falsifies one-source-bot hypothesis), (2) do delon body replies finally land or get relayed, (3) does Reddit P4b-A produce ANY attributed event at T+~48h+, (4) any of the 3 Armando-blocked items get a response. Append synthesis row 16. If row 16 shows another directory-attributed sub with a DIFFERENT UA, the directory channel framing strengthens materially — start drafting P4d ship-spec (next 5-10 directory submissions, paste-ready).
+
+---
+
 ## Session 26 (May 15, 13:34 local / 19:34 UTC) — T+1d POST-DECIDE-DAY STANDUP + AUDIENCE RE-FRAMING FROM KV DATA
 
 ### Trigger
