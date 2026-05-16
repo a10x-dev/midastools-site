@@ -2,7 +2,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import Layout from '../components/Layout';
 
-const BUNDLE_URL = 'https://buy.stripe.com/4gw5mf0Zl1U5aVW5kp';
+const BUNDLE_URL = 'https://buy.stripe.com/bJe7sK0tNdLjgle0pscMM0b';
 
 const categories = [
   { emoji: '\uD83C\uDF93', name: 'For Students', desc: '30 prompts for essays, studying, exam prep', count: 30, href: '/blog/chatgpt-prompts-students-2026' },

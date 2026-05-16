@@ -12,7 +12,7 @@ const SECRET_KEY = process.env.OUTREACH_SECRET || 'mt-outreach-2026';
 
 const BUNDLE_LINK = 'https://buy.stripe.com/bJe7sK0tNdLjgle0pscMM0b';
 const MEGA_PACK_LINK = 'https://buy.stripe.com/4gMbJ0dgz4aJ1qkb46cMM0d';
-const IMAGE_PACK_LINK = 'https://buy.stripe.com/8x24gy90j22B4Cw9UXcMM0i';
+const IMAGE_PACK_LINK = 'https://buy.stripe.com/8x24gyccv7mVglegoqcMM0i';
 const CLAUDE_KIT_LINK = 'https://buy.stripe.com/8x25kCccv4aJ3ys0pscMM0q';
 const TRIPWIRE_LINK = 'https://buy.stripe.com/fZueVcb8rgXv3ysc8acMM0t';
 

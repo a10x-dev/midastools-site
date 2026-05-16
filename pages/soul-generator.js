@@ -4,8 +4,8 @@ import Link from 'next/link';
 import Layout from '../components/Layout';
 import RelatedKitBanner from '../components/RelatedKitBanner';
 
-const STRIPE_STARTER = 'https://buy.stripe.com/7sI9CDbla7Cx7Bu3ck';
-const STRIPE_BUNDLE = 'https://buy.stripe.com/8wM2abdtg5up7BueVa';
+const STRIPE_STARTER = 'https://buy.stripe.com/cNi28qdgz7mVb0U8VYcMM07';
+const STRIPE_BUNDLE = 'https://buy.stripe.com/bJe7sK0tNdLjgle0pscMM0b';
 
 /* ── Industry Presets ──────────────────────────────────── */
 

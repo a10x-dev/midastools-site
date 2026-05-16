@@ -3,7 +3,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import Layout from '../components/Layout';
 
-const STRIPE_IMAGE_PACK = 'https://buy.stripe.com/8x24gy90j22B4Cw9UXcMM0i';
+const STRIPE_IMAGE_PACK = 'https://buy.stripe.com/8x24gyccv7mVglegoqcMM0i';
 const STRIPE_BUNDLE = 'https://buy.stripe.com/bJe7sK0tNdLjgle0pscMM0b';
 
 /* ── PHOTO STYLES ─────────────────────────────────── */

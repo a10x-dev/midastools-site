@@ -4,7 +4,7 @@ import Link from 'next/link';
 import Layout from '../components/Layout';
 import RelatedKitBanner from '../components/RelatedKitBanner';
 
-const STRIPE_MEGA_PACK = 'https://buy.stripe.com/4gw6qrdtgaODdZS4gw';
+const STRIPE_MEGA_PACK = 'https://buy.stripe.com/4gMbJ0dgz4aJ1qkb46cMM0d';
 
 /* ── Topic Detection ─────────────────────────────────────────── */
 

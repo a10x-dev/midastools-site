@@ -520,7 +520,7 @@ export default function Home() {
           {[
             { label: 'Try Us For $9', price: '$9', term: 'one-time', name: 'Starter Pack', desc: '20 hand-picked AI prompts. Cold outreach, landing pages, content, AI images, sales, productivity. Instant download.', href: '/starter-pack', cta: 'Get 20 Prompts \u2192', featured: false },
             { label: 'Most Popular', price: '$29', term: 'one-time', name: 'AI Prompt Mega Pack', desc: '145+ prompts across every business function. The full prompt library.', href: STRIPE_URL, cta: 'Get the Kit \u2192', featured: false },
-            { label: 'Best Value', price: '$97', term: 'one-time', name: 'All Kits Bundle', desc: '16 AI kits + all future kits free. Save 83% vs buying separately.', href: 'https://buy.stripe.com/aEUbJ01xR0YxgligkocMM0g', cta: 'Get the Bundle \u2192', featured: true },
+            { label: 'Best Value', price: '$97', term: 'one-time', name: 'All Kits Bundle', desc: '16 AI kits + all future kits free. Save 83% vs buying separately.', href: 'https://buy.stripe.com/bJe7sK0tNdLjgle0pscMM0b', cta: 'Get the Bundle \u2192', featured: true },
           ].map(p => (
             <div key={p.name} className={`pricing-card${p.featured ? ' featured' : ''}`}>
               <span className="badge" style={{ fontSize: 11, padding: '4px 10px', letterSpacing: 1 }}>{p.label}</span>

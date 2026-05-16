@@ -2,14 +2,60 @@
 
 ## Current Status (auto-synced from database)
 
-**Bottleneck**: market_understanding (severity 6/10) — Post-decide-day P0 closed: /api/track migrated to Upstash KV, Reddit P4b-A attribution data durable for full 14d run. Subscriber count corrected 20→37 (pair-session recovery surfaced 17 new subs incl. fanucamerica.com B2B). 🚨 2 unread Gmail replies from delon@zplatform.ai to guest-post pitches (May 14 21:27 + May 15 01:13 UTC) — first inbound signal in 47 days. Local body-capture empty (Resend webhook bug); Armando must read Gmail directly. Tomorrow 09:00 standup: re-evaluate branches with NEW data foundation including any Reddit-attributed traffic + delon thread content.
+**Bottleneck**: market_understanding (severity 6/10) — T+5h post-S26 review, +1h since S27 EOD: ran falsifier on directory-attributed signups, found smoking-gun bot pattern (8 events / 4 sessions / 3 countries / 1 UA / 100% homepage-only / 3-4 sec page-view→signup × 3 = submitaitools.org verification crawler, not real conversions). P4d Branch 4 stratum REVERSED 25%→3%. Gist users 40 raw / ~37 real-human. Reddit P4b-A still 0 at T+~38h. All real-channel signals remain dark — no inbound replies, no real human directory conversions, no Reddit attribution. Only remaining measurable signal is 25% US-desktop organic Google traffic landing on broken-SKU pages (P4c, broken-SKU fix as conversion lever).
 
 **KPIs**:
 - Conversations: 0 (target: 3, 7d: 0%)
-- Users: 37 (target: 30, 7d: 85%)
+- Users: 39 (target: 30, 7d: 95%)
 - Revenue: 155 (target: 997, 7d: 0%)
 
 <!-- AGENT-EDITED-BELOW (everything below this line is preserved across ticks) -->
+
+## Session 28 (May 16, 04:28 local / 10:28 UTC) — 🟢 PRE-DAWN VERIFICATION: BOT PATTERN HOLDS + FIRST REAL HUMAN US-DESKTOP RESEARCH SESSION OVERNIGHT
+
+### Trigger
+User-prompted at 04:28 local (T-4h32m before 09:00 standup). Active sprint 563m over 30m budget (last session never closed it). Open-ended "what's next?" — legitimate work: verify yesterday's bot-pattern conclusion against overnight data BEFORE Armando reads anything.
+
+### ✅ KV inspection (101 lifetime events / 16 overnight since 01:00 UTC)
+**Bot pattern STRENGTHENED:** submitaitools.org now N=8 events / **still 1 distinct UA** ("Macintosh Intel Mac OS X 10_15_7 Chrome"). No overnight directory signups. P4d 25%→3% reversal **holds; confidence 90%→95%.**
+
+**Reddit P4b-A at T+~50h+: still 0 attributed events.** Beyond reasonable ramp-delay envelope.
+
+### 🟢 NEW SIGNAL — first multi-page research session in days
+**Mac desktop session 03:56-04:02 UTC** (6+ min, 7 page views, secondary navigation):
+- `/blog/felix-craft-story` → `/soul-generator` → `/soul-generator?preset=realestate` (×2) → `/tools` → `/tools` → `/kits`
+- **The realestate preset on /soul-generator suggests this person is a realtor or has realtor-adjacent interest** (matches Negar Tavassoli S148 audit-fit profile).
+
+**Plus 2 Win10 desktop homepage visits at 08:19 + 09:17 UTC** (1-hour gap = research-then-return). Both = ICP profile (Win10 desktop = our 3-buyer-cohort profile).
+
+**Interpretation:** US-desktop ICP IS landing on free-tool entry points → exploring /tools + /kits → **not converting**. Same pattern as May 14 cta_click finding. Audience access is fine; conversion mechanic is the bottleneck. **P4c (fix broken SKUs in /kits) gains direct evidence** — visitors are clicking into /kits, where 5 of the listed SKUs have broken fulfillment per task `3400b90c`.
+
+### Branch 4 sub-mix STABLE (no revision)
+- P4a (hero rewrite): 35%
+- P4b (paid Reddit): 15% — but 0-attribution at T+50h is approaching dismissal threshold
+- **P4c (fix broken SKUs): 30%** — strengthened by overnight /kits-page navigation
+- P4d (directory double-down): 3% — bot pattern stronger
+- P5 (citation): 5%
+- Other: 12%
+
+### What I did NOT do (deliberately)
+- Did NOT Telegram. Pre-dawn ping with non-decide-now info = noise per `armando-async-asks`. Armando already has 3 unresolved items from yesterday (delon body / Branch A/B/C / 5-broken-SKUs); a 4th ping at 04:28 local compounds silence.
+- Did NOT pre-build P4c artifacts (broken-SKU content/manual-fulfillment emails). Armando's strategic call gates the branch choice; pre-building prejudges the decision per `pre-build-saturation-detector`.
+- Did NOT run the full 5-monitor sweep. Redundant with 09:00 standup which is 4.5h away; better to run them at T-1h30m (07:30) when overnight signal has had time to accumulate.
+- Did NOT inspect the Mac desktop session's referrer or geo — KV proxy is returning `country=?` for all overnight events (vs S26's clean geo tags). Possible KV proxy regression or upstream `/api/track` schema change; logging as capability gap for the architectural-debt sprint.
+- Did NOT append a new synthesis row (row 17 belongs to 09:00 standup with full monitor sweep + Armando's morning reads).
+
+### Honest accounting
+**Direct KPI: zero.** **Indirect: medium.** The bot-pattern conclusion is now more defensible (N=8 / 1 UA over 24h+); the Mac-desktop research session gives Branch 4 P4c its FIRST direct-engagement evidence (not just "visitors land" but "visitors land + browse catalog + bounce"). 09:00 standup starts with strengthened framing instead of overnight ambiguity.
+
+### CAPABILITY GAP — KV proxy geo regression
+`/api/track-events` proxy now returning `country=?` for all events. Previous KV inspections (S26, S27) returned `geo_country=US|SE|DE|AT`. Either the `/api/track` write-path stopped capturing geo OR the proxy stops exposing it OR Vercel edge-geo headers changed format. Log for post-May-14 architectural-debt sprint; do NOT touch instrumentation mid-data-collection.
+
+### Confidence
+88% — direct KV API probe verified by JSON parse; bot pattern strengthened by N=8 hold over ~24h; Mac desktop session navigation pattern verified by 7 sequential event timestamps. Lower than 92% because: (a) `country=?` regression means I can't confirm the Mac session was US-geo (assumed by Mac OS X UA + the typical pattern, but not directly verified), (b) the "Mac desktop = ICP" framing rests on N=1 session, (c) HeadlessChrome event at 01:34 UTC and the Googlebot crawl at 10:22 UTC both got counted in my 16-event overnight total — real-human count is closer to 10-12.
+
+### NEXT_CHECKIN expectation
+~07:30 local (T-1h30m before standup) — run full 5-monitor sweep + check for any 4th submitaitools.org signup with diverse UA (would falsify bot pattern) + check for any new Reddit-attributed events + watch for delon/Armando overnight responses on the 3 blocked items. Append synthesis row 17 with pre-standup data. 09:00 fires standup proper.
 
 ## Session 27 CONTINUATION (May 15, 19:00 local / May 16 01:00 UTC) — 🚨 FALSIFIER REVERSES INITIAL FRAMING: BOTS NOT CONVERSIONS
 
