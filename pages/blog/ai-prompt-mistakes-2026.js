@@ -2,8 +2,8 @@ import Head from 'next/head';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
 
-const STRIPE_MEGA_PACK = 'https://buy.stripe.com/4gw6qrdtgaODdZS4gw';
-const STRIPE_BUNDLE = 'https://buy.stripe.com/8wM2abdtg5up7BueVa';
+const STRIPE_MEGA_PACK = 'https://buy.stripe.com/4gMbJ0dgz4aJ1qkb46cMM0d';
+const STRIPE_BUNDLE = 'https://buy.stripe.com/bJe7sK0tNdLjgle0pscMM0b';
 
 export default function AIPromptMistakes2026() {
   const title = '10 AI Prompt Mistakes That Are Ruining Your ChatGPT Output (2026)';

@@ -3,7 +3,7 @@ import Link from 'next/link';
 import Layout from '../../components/Layout';
 
 const STRIPE_BUNDLE = 'https://buy.stripe.com/bJe7sK0tNdLjgle0pscMM0b';
-const STRIPE_MEGA = 'https://buy.stripe.com/4gMbJ0dgz4aJ1qkb46cMM0a';
+const STRIPE_MEGA = 'https://buy.stripe.com/4gMbJ0dgz4aJ1qkb46cMM0d';
 const STRIPE_SMALLBIZ = 'https://buy.stripe.com/4gMbJ0dgz4aJ1qkb46cMM0d';
 
 export default function AIToolsHRRecruiting2026() {

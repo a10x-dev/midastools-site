@@ -254,7 +254,7 @@ For each scenario: opening message, 2-3 follow-up questions to qualify the visit
         <div style={{ marginTop: '48px', padding: '32px', background: '#F0F4FF', border: '1px solid #93B4FF', borderRadius: '8px' }}>
           <h3 style={{ margin: '0 0 8px', fontSize: '1.1rem' }}>Ready to start? Get every prompt you need in one kit.</h3>
           <p style={{ margin: '0 0 16px', color: '#6B7280', fontSize: '15px' }}>The <strong>All Kits Bundle</strong> includes 145+ prompts for copywriting, social media, sales, client management, and every hustle on this list &mdash; plus 5 niche industry kits. Everything you need to start delivering paid AI work this week. $97 one-time.</p>
-          <a href="https://buy.stripe.com/4gw7sK5O7bD1cOK28ccMM01" style={{ display: 'inline-block', background: '#3B5FFF', color: '#FFFFFF', padding: '12px 24px', borderRadius: '6px', textDecoration: 'none', fontWeight: '700', fontSize: '15px' }}>
+          <a href="https://buy.stripe.com/bJe7sK0tNdLjgle0pscMM0b" style={{ display: 'inline-block', background: '#3B5FFF', color: '#FFFFFF', padding: '12px 24px', borderRadius: '6px', textDecoration: 'none', fontWeight: '700', fontSize: '15px' }}>
             Get the All Kits Bundle &mdash; $97
           </a>
         </div>

@@ -3,7 +3,7 @@ import Link from 'next/link';
 import Layout from '../../components/Layout';
 
 const STRIPE_URL = 'https://buy.stripe.com/8x24gyccv7mVglegoqcMM0i';
-const BUNDLE_URL = 'https://buy.stripe.com/4gw5mf0Zl1U5aVW5kp';
+const BUNDLE_URL = 'https://buy.stripe.com/bJe7sK0tNdLjgle0pscMM0b';
 const IMAGE_PACK_LINK = '/ai-image-prompt-pack';
 
 export default function ChatGPTActionFigurePrompt2026() {

@@ -2,9 +2,9 @@ import Head from 'next/head';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
 
-const STRIPE_BUNDLE = 'https://buy.stripe.com/00g5xY2WM04Ncyw9AH';
-const STRIPE_SMALL_BIZ = 'https://buy.stripe.com/4gw01E9leeJx1TScN3';
-const STRIPE_FREELANCER = 'https://buy.stripe.com/28o3pQgNGcBp5644gy';
+const STRIPE_BUNDLE = 'https://buy.stripe.com/bJe7sK0tNdLjgle0pscMM0b';
+const STRIPE_SMALL_BIZ = 'https://buy.stripe.com/3cIaEW6SbcHfed6egicMM0c';
+const STRIPE_FREELANCER = 'https://buy.stripe.com/7sY3cu7Wfaz71qkfkmcMM0a';
 
 export default function AIToolsVsHiring2026() {
   const title = 'AI Tools vs. Hiring: What Small Businesses Should Automate (and What They Shouldn\'t)';

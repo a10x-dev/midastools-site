@@ -3,8 +3,8 @@ import Link from 'next/link';
 import Layout from '../../components/Layout';
 
 const STRIPE_BUNDLE = 'https://buy.stripe.com/bJe7sK0tNdLjgle0pscMM0b';
-const STRIPE_MEGA = 'https://buy.stripe.com/4gMbJ0dgz4aJ1qkb46cMM0a';
-const STRIPE_SAAS = 'https://buy.stripe.com/4gMbJ0dgz4aJ1qkb46cMM0f';
+const STRIPE_MEGA = 'https://buy.stripe.com/4gMbJ0dgz4aJ1qkb46cMM0d';
+const STRIPE_SAAS = 'https://buy.stripe.com/fZudR8dgz8qZ5GAfkmcMM0f';
 
 export default function AIToolsProjectManagers2026() {
   const title = '8 AI Tools for Project Managers That Eliminate 10+ Hours of Admin Per Week';

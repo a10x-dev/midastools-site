@@ -2,8 +2,8 @@ import Head from 'next/head';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
 
-const STRIPE_MEGA_PACK = 'https://buy.stripe.com/6oE8Aa1SIgRFgOQ5kD';
-const STRIPE_BUNDLE = 'https://buy.stripe.com/00g5xY2WM04Ncyw9AH';
+const STRIPE_MEGA_PACK = 'https://buy.stripe.com/4gMbJ0dgz4aJ1qkb46cMM0d';
+const STRIPE_BUNDLE = 'https://buy.stripe.com/bJe7sK0tNdLjgle0pscMM0b';
 
 export default function ChatGPTTipsTricks2026() {
   const title = '25 ChatGPT Tips and Tricks Most People Don\'t Know in 2026';

@@ -341,7 +341,7 @@ Then tell me: which variant to test first and why, what metric to track, and how
             <a href="https://buy.stripe.com/cNi14mfoH0Yxb0Uc8acMM0e" style={{ display: 'inline-block', background: '#3B5FFF', color: '#fff', padding: '12px 24px', borderRadius: '6px', textDecoration: 'none', fontWeight: '700', fontSize: '15px' }}>
               Get the E-commerce AI Kit &mdash; $39
             </a>
-            <a href="https://buy.stripe.com/aEUbJ01xR0YxgligkocMM0g" style={{ display: 'inline-block', background: '#111827', color: '#fff', padding: '12px 24px', borderRadius: '6px', textDecoration: 'none', fontWeight: '700', fontSize: '15px' }}>
+            <a href="https://buy.stripe.com/bJe7sK0tNdLjgle0pscMM0b" style={{ display: 'inline-block', background: '#111827', color: '#fff', padding: '12px 24px', borderRadius: '6px', textDecoration: 'none', fontWeight: '700', fontSize: '15px' }}>
               Get All Kits Bundle &mdash; $97
             </a>
           </div>

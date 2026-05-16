@@ -335,7 +335,7 @@ Then create a master checklist: "Daily Operations Checklist" that combines the k
             <a href="https://buy.stripe.com/3cIaEW6SbcHfed6egicMM0c" style={{ display: 'inline-block', background: '#3B5FFF', color: '#fff', padding: '12px 24px', borderRadius: '6px', textDecoration: 'none', fontWeight: '700', fontSize: '15px' }}>
               Get the Small Business AI Kit &mdash; $39
             </a>
-            <a href="https://buy.stripe.com/aEUbJ01xR0YxgligkocMM0g" style={{ display: 'inline-block', background: '#111827', color: '#fff', padding: '12px 24px', borderRadius: '6px', textDecoration: 'none', fontWeight: '700', fontSize: '15px' }}>
+            <a href="https://buy.stripe.com/bJe7sK0tNdLjgle0pscMM0b" style={{ display: 'inline-block', background: '#111827', color: '#fff', padding: '12px 24px', borderRadius: '6px', textDecoration: 'none', fontWeight: '700', fontSize: '15px' }}>
               Get All 8 Kits &mdash; $97
             </a>
           </div>

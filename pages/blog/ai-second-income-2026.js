@@ -2,9 +2,9 @@ import Head from 'next/head';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
 
-const STRIPE_MEGA_PACK = 'https://buy.stripe.com/6oE8Aa1SIgRFgOQ5kD';
-const STRIPE_BUNDLE = 'https://buy.stripe.com/00g5xY2WM04Ncyw9AH';
-const STRIPE_FREELANCER = 'https://buy.stripe.com/28o3pQgNGcBp5644gy';
+const STRIPE_MEGA_PACK = 'https://buy.stripe.com/4gMbJ0dgz4aJ1qkb46cMM0d';
+const STRIPE_BUNDLE = 'https://buy.stripe.com/bJe7sK0tNdLjgle0pscMM0b';
+const STRIPE_FREELANCER = 'https://buy.stripe.com/7sY3cu7Wfaz71qkfkmcMM0a';
 
 export default function AISecondIncome2026() {
   const title = 'How to Build a Second Income with AI in 2026 (Step-by-Step Guide)';

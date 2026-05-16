@@ -96,7 +96,7 @@ The question isn't whether this is possible anymore. Felix proved it is — with
 
 The question is: **can you replicate it?**
 
-**Yes.** We packaged the exact templates, workflows, and prompts Felix uses into a kit you can deploy today. **[Get the Starter Kit — $29 →](https://buy.stripe.com/cNi28qdgz7mVb0U8VYcMM07)** or grab **[All 21 Kits for $97 (81% off) →](https://buy.stripe.com/aEUbJ01xR0YxgligkocMM0g)** · [Buy on Gumroad →](https://manduks.gumroad.com/l/iiiwf)
+**Yes.** We packaged the exact templates, workflows, and prompts Felix uses into a kit you can deploy today. **[Get the Starter Kit — $29 →](https://buy.stripe.com/cNi28qdgz7mVb0U8VYcMM07)** or grab **[All 21 Kits for $97 (81% off) →](https://buy.stripe.com/bJe7sK0tNdLjgle0pscMM0b)** · [Buy on Gumroad →](https://manduks.gumroad.com/l/iiiwf)
 
 ## How to Replicate the Felix Model
 
@@ -106,7 +106,7 @@ Felix runs on OpenClaw with:
 - A daily review workflow
 - Access to Stripe, Vercel, GitHub, and email
 
-**Step 1 — Get the blueprints:** The [OpenClaw Entrepreneur Starter Kit ($29)](https://buy.stripe.com/cNi28qdgz7mVb0U8VYcMM07) includes Felix's exact SOUL.md template, HEARTBEAT.md system, daily review workflow, and Stripe/Vercel integration configs. Or get everything we make with [All 21 Kits — $97](https://buy.stripe.com/aEUbJ01xR0YxgligkocMM0g). Prefer Gumroad? [Get it here →](https://manduks.gumroad.com/l/pdcjj)
+**Step 1 — Get the blueprints:** The [OpenClaw Entrepreneur Starter Kit ($29)](https://buy.stripe.com/cNi28qdgz7mVb0U8VYcMM07) includes Felix's exact SOUL.md template, HEARTBEAT.md system, daily review workflow, and Stripe/Vercel integration configs. Or get everything we make with [All 21 Kits — $97](https://buy.stripe.com/bJe7sK0tNdLjgle0pscMM0b). Prefer Gumroad? [Get it here →](https://manduks.gumroad.com/l/pdcjj)
 
 **Step 2 — Configure your agent:** Use our [free SOUL.md Generator](/soul-generator) to customize the config for your industry — 6 presets included.
 
@@ -1168,7 +1168,7 @@ You don't need AIPRM at $30K/year. You don't need a custom prompt management Saa
 3. Context files that eliminate setup friction
 4. Champions who keep momentum going
 
-> **Get everything pre-built:** Our [All Kits Bundle](/bundle) includes 16 AI kits covering marketing, sales, HR, content, e-commerce, real estate, and more — plus the [Claude Cowork Mastery Kit](/claude-cowork-kit) with 115+ prompts and 10 role playbooks. Everything your team needs to adopt AI this week. [Get the Bundle — $97](https://buy.stripe.com/aEUbJ01xR0YxgligkocMM0g)
+> **Get everything pre-built:** Our [All Kits Bundle](/bundle) includes 16 AI kits covering marketing, sales, HR, content, e-commerce, real estate, and more — plus the [Claude Cowork Mastery Kit](/claude-cowork-kit) with 115+ prompts and 10 role playbooks. Everything your team needs to adopt AI this week. [Get the Bundle — $97](https://buy.stripe.com/bJe7sK0tNdLjgle0pscMM0b)
 
 ## The ROI Math
 
@@ -1552,7 +1552,7 @@ export default function BlogPost({ post, slug }) {
         </div>
         <div className="cta-inline">
           <p>Get every AI template, workflow, and prompt we make — in one bundle.</p>
-          <a href="https://buy.stripe.com/aEUbJ01xR0YxgligkocMM0g">Get All 21 Kits — $97 (Save 83%) →</a>
+          <a href="https://buy.stripe.com/bJe7sK0tNdLjgle0pscMM0b">Get All 21 Kits — $97 (Save 83%) →</a>
           <p style={{marginTop:12,fontSize:13,color:'var(--text-tertiary)'}}>Or start with the <a href="https://buy.stripe.com/cNi28qdgz7mVb0U8VYcMM07" style={{color:'var(--accent)'}}>Starter Kit — $29</a></p>
           <p style={{marginTop:8,fontSize:12,color:'var(--text-tertiary)'}}>Secure Stripe checkout &middot; Instant download &middot; 30-day guarantee</p>
         </div>

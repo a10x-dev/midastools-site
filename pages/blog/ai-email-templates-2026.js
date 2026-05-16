@@ -3,8 +3,8 @@ import Link from 'next/link';
 import Layout from '../../components/Layout';
 
 const STRIPE_BUNDLE = 'https://buy.stripe.com/bJe7sK0tNdLjgle0pscMM0b';
-const STRIPE_MEGA = 'https://buy.stripe.com/4gMbJ0dgz4aJ1qkb46cMM0a';
-const STRIPE_FREELANCER = 'https://buy.stripe.com/4gMbJ0dgz4aJ1qkb46cMM0e';
+const STRIPE_MEGA = 'https://buy.stripe.com/4gMbJ0dgz4aJ1qkb46cMM0d';
+const STRIPE_FREELANCER = 'https://buy.stripe.com/7sY3cu7Wfaz71qkfkmcMM0a';
 
 export default function AIEmailTemplates2026() {
   const title = '21 AI Email Templates That Get Replies (Copy, Paste, Send)';

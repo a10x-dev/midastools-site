@@ -2,7 +2,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
 
-const IMAGE_PACK_URL = 'https://buy.stripe.com/8x24gy90j22B4Cw9UXcMM0i';
+const IMAGE_PACK_URL = 'https://buy.stripe.com/8x24gyccv7mVglegoqcMM0i';
 const BUNDLE_URL = 'https://buy.stripe.com/bJe7sK0tNdLjgle0pscMM0b';
 
 export default function ChatGPTCaricatureTrend2026() {

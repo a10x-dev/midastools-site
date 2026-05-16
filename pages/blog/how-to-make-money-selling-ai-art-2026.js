@@ -2,9 +2,9 @@ import Head from 'next/head';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
 
-const STRIPE_BUNDLE = 'https://buy.stripe.com/00g5xY2WM04Ncyw9AH';
+const STRIPE_BUNDLE = 'https://buy.stripe.com/bJe7sK0tNdLjgle0pscMM0b';
 const IMAGE_PACK_LINK = '/ai-image-prompt-pack';
-const STRIPE_MEGA_PACK = 'https://buy.stripe.com/6oE8Aa1SIgRFgOQ5kD';
+const STRIPE_MEGA_PACK = 'https://buy.stripe.com/4gMbJ0dgz4aJ1qkb46cMM0d';
 
 export default function HowToMakeMoneySellingAiArt2026() {
   const title = 'How to Make Money Selling AI Art in 2026: 7 Proven Methods ($500–$10K/Month)';

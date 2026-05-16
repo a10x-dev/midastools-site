@@ -2,8 +2,8 @@ import Head from 'next/head';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
 
-const STRIPE_STARTER = 'https://buy.stripe.com/7sI9CDbla7Cx7Bu3ck';
-const STRIPE_BUNDLE = 'https://buy.stripe.com/00g5xY2WM04Ncyw9AH';
+const STRIPE_STARTER = 'https://buy.stripe.com/cNi28qdgz7mVb0U8VYcMM07';
+const STRIPE_BUNDLE = 'https://buy.stripe.com/bJe7sK0tNdLjgle0pscMM0b';
 
 export default function ClaudeOpenClawPricing() {
   return (

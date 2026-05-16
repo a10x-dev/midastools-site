@@ -7,8 +7,8 @@ export default function AIMarketingTools2026() {
   const description = 'The best AI marketing tools of 2026, reviewed by category: content, analytics, automation, and ads. Pricing, pro tips, and copy-paste prompts included.';
   const url = 'https://www.midastools.co/blog/ai-marketing-tools-2026';
 
-  const STRIPE_CREATOR = 'https://buy.stripe.com/4gMbJ0dgz4aJ1qkb46cMM08';
-  const STRIPE_ECOMMERCE = 'https://buy.stripe.com/4gMbJ0dgz4aJ1qkb46cMM0c';
+  const STRIPE_CREATOR = 'https://buy.stripe.com/eVq7sK90j36F4CwdcecMM09';
+  const STRIPE_ECOMMERCE = 'https://buy.stripe.com/cNi14mfoH0Yxb0Uc8acMM0e';
   const STRIPE_BUNDLE = 'https://buy.stripe.com/bJe7sK0tNdLjgle0pscMM0b';
 
   const jsonLd = [

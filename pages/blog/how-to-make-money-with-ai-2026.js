@@ -2,9 +2,9 @@ import Head from 'next/head';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
 
-const STRIPE_MEGA_PACK = 'https://buy.stripe.com/6oE8Aa1SIgRFgOQ5kD';
-const STRIPE_BUNDLE = 'https://buy.stripe.com/4gw5mf0Zl1U5aVW5kp';
-const STRIPE_FREELANCER = 'https://buy.stripe.com/28o3pQgNGcBp5644gy';
+const STRIPE_MEGA_PACK = 'https://buy.stripe.com/4gMbJ0dgz4aJ1qkb46cMM0d';
+const STRIPE_BUNDLE = 'https://buy.stripe.com/bJe7sK0tNdLjgle0pscMM0b';
+const STRIPE_FREELANCER = 'https://buy.stripe.com/7sY3cu7Wfaz71qkfkmcMM0a';
 
 export default function HowToMakeMoneyWithAI2026() {
   const title = 'How to Make Money with AI in 2026: 12 Proven Methods (With Real Examples)';

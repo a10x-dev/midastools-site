@@ -2,7 +2,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
 
-const BUNDLE_URL = 'https://buy.stripe.com/4gw5mf0Zl1U5aVW5kp';
+const BUNDLE_URL = 'https://buy.stripe.com/bJe7sK0tNdLjgle0pscMM0b';
 
 export default function ChatGPTPromptsStudents2026() {
   const title = '30 ChatGPT Prompts Every Student Needs in 2026 (Study Smarter, Not Harder)';
