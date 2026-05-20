@@ -1432,6 +1432,82 @@ Our free generators give you one prompt at a time. The **AI Image Prompt Pack** 
 - [Browse all 20+ free AI tools →](/tools)
 `,
   },
+
+  'automate-customer-intake-ai': {
+    title: 'How to Automate Your Customer Intake with AI (No Code, Under 30 Minutes)',
+    date: 'May 20, 2026',
+    meta: 'Eliminate the 15-minute new-client back-and-forth forever. Build a full AI intake + instant reply system using Tally, Make.com, and Claude — free tools, no code required.',
+    content: `
+Every service business runs the same invisible tax: endless back-and-forth to book a new client. Phone tag. Generic contact forms. Half-filled emails. If you multiply it out, you are losing 10+ hours a month just onboarding strangers.
+
+This walkthrough eliminates it using AI. No code. Under 30 minutes.
+
+## The Stack (all free tiers)
+
+- **Tally.so** — smart intake form with conditional logic
+- **Make.com** — automation backbone
+- **Claude or GPT-4o** — AI that reads submissions and drafts personalized replies
+- **Calendly** — scheduling
+
+## Step 1: Build a Smart Intake Form (10 min)
+
+Go to Tally.so and create a form with conditional logic. The key is not showing irrelevant questions.
+
+Minimal structure:
+
+- What brings you here? (dropdown)
+- Describe your project briefly (if specific project selected)
+- What is your timeline?
+- Budget range? (ranges, not exact numbers)
+- Best email and phone
+
+This pre-qualifies by design. Someone with no timeline and no budget never gets past your filter.
+
+Embed this on your Services or Contact page instead of a generic form.
+
+## Step 2: Route to Make.com + Filter (5 min)
+
+In Make.com:
+
+1. Trigger: Tally > Watch Responses
+2. Add a filter — only proceed if budget field exceeds your minimum
+3. Done. Tire-kickers never reach your inbox.
+
+## Step 3: Let AI Draft the Reply (10 min)
+
+Add an HTTP module in Make.com calling Claude or the OpenAI API with a prompt like: "You are [Your Name], a [profession]. A potential client submitted this intake: [FORM_DATA]. Write a warm 3-4 sentence reply that acknowledges their specific situation, confirms you can help, and invites them to book a 20-min call at [CALENDLY_LINK]. Sign as [Your Name]."
+
+Map the Tally fields into the prompt. The AI reads their actual words and writes a reply that sounds like you wrote it.
+
+## Step 4: Send the Email (2 min)
+
+Add a Gmail module. Subject: "Re: Your inquiry — [Business Name]". Body: the AI output.
+
+New submission → AI reads it → personalized reply → Calendly link. All within 60 seconds of them hitting Submit.
+
+## What This Looks Like
+
+A client fills your form at 11 PM Sunday. By 11:01 PM they have a reply in their inbox referencing their specific project. Your competitor responds Monday morning. You already have the call booked.
+
+Speed-to-lead is one of the most underrated conversion levers in service businesses. Responding within an hour makes you 7x more likely to qualify a lead. AI makes this trivial.
+
+## Add a Follow-Up Path
+
+Add a second path in Make.com: if someone fills the form but does not book within 48 hours, trigger a follow-up email. A different AI prompt, casual tone. Most service businesses never follow up after the initial reply — this alone recovers 20-30% of stalled leads.
+
+## Cost
+
+Free for most service businesses with under 50 leads per month. Claude or GPT-4o costs $0.01-$0.03 per intake processed.
+
+## The Result
+
+You go from: phone tag, eventually book call, maybe convert
+
+To: submit form, instant personalized reply, self-book call, show up qualified
+
+If you want a done-for-you version, we build this automation, write the prompts, and integrate your calendar at [MidasTools](https://midastools.co/services). Takes us about a day.
+`,
+  },
 };
 
 // Posts for ai-tools-small-business-owners-2026, ai-small-business-automation-2026,
