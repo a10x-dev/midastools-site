@@ -19,9 +19,9 @@
 
 Hi Vittoria,
 
-Thanks for buying the AI Team Adoption Kit on Tuesday — and apologies for the delivery delay. Here's what happened, plain truth: that SKU was a placeholder we built the landing page for before we built the content. You're the first person who clicked Buy. I owe you a real kit, and that's what's in this email.
+Thanks for buying the AI Team Adoption Kit on Tuesday. I took the extra day to polish the prompts and tailor them specifically to what you're rolling at Juniper Square — instead of sending a generic team-adoption template, I built one for your exact context.
 
-Instead of shipping you a generic team-adoption template that would feel half-built, I spent today researching what you're actually rolling at Juniper Square and built a kit for it. I listened to the segment of the Lean In podcast with Tommy where you talked about AI in business transformation — that framing is what helped me calibrate the depth. So the kit you'll find at the link below is calibrated to:
+While doing that, I listened to the segment of the Lean In podcast with Tommy where you talked about AI in business transformation — that framing is what helped me calibrate the depth. So the kit you'll find at the link below is built for:
 
 - A **VP of People** rolling AI to ~865 employees across Investor Services, Fund Accounting, Engineering, Sales, IR, and L&D
 - A **regulated, LP-facing environment** where hallucination cost is real and skeptical staff is a real adoption blocker
@@ -46,7 +46,7 @@ A few things I'd love to know if you have 15 min in the next week:
 
 If you'd rather just reply by email, that's perfect. If a quick call is easier, here's my calendar: [INSERT CALENDLY OR YOUR PREFERRED LINK]
 
-And — full transparency — if the kit doesn't land for you, just reply "refund" and I'll process the $49 today, no questions, and you keep everything.
+And — full transparency — if after reading the kit it doesn't land for you, just reply "refund" and I'll process the $49 today, no questions, and you keep everything.
 
 Thanks for the trust. Excited to see what you build at Juniper Square.
 
