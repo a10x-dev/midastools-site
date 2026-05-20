@@ -108,6 +108,12 @@ const KITS = {
     manual: true,
     items: ['Cowork session frameworks', 'Pair-with-Claude workflow templates', 'Context-handoff prompts', 'Multi-session continuity patterns', 'Project-state SOUL.md templates', 'Setup wizard + best-practices guide'],
   },
+  'champion-monthly': {
+    name: 'MidasTools Champion Monthly',
+    file: null,
+    subscription: true,
+    items: ['Weekly AI tip calibrated to your role + company context', 'Monthly prompt drop targeting your next team pain', 'Prompt validator — paste any prompt, get critique + rewrite', 'Personalized AI search tool seeded with your context', 'Idea validator — paste an idea, get pushback + alternatives', 'Monthly 1-page competitive AI brief for your industry'],
+  },
   'bundle': {
     name: 'Complete AI Toolkit Bundle',
     file: null,
@@ -168,7 +174,8 @@ export default function ThankYou() {
   const kitKey = router.query.kit || 'starter';
   const kit = KITS[kitKey] || KITS['starter'];
   const isManual = kit.manual === true;
-  const isBundle = !isManual && kit.file === null;
+  const isSubscription = kit.subscription === true;
+  const isBundle = !isManual && !isSubscription && kit.file === null;
 
   return (
     <Layout>
@@ -203,8 +210,13 @@ export default function ThankYou() {
         <p className="ty-sub">Your {kit.name} is ready. A download link is also on its way to your email.</p>
 
         <div className="dl-box">
-          <h2>{isManual ? 'Your Kit Is Being Prepared' : 'Download Your Kit'}</h2>
-          {isManual ? (
+          <h2>{isSubscription ? 'Subscription Active' : isManual ? 'Your Kit Is Being Prepared' : 'Download Your Kit'}</h2>
+          {isSubscription ? (
+            <>
+              <p>You&apos;re subscribed to {kit.name}. Your first weekly tip lands within 7 days; the monthly drop arrives within 30 days. Both are calibrated to your survey answers — if you haven&apos;t completed one yet, reply to your receipt and Armando will send you your personalized link.</p>
+              <p style={{fontSize:13,marginTop:16}}>Cancel anytime from your Stripe receipt link. Questions: <a href="mailto:iam@armando.mx" style={{color:'var(--gold)'}}>iam@armando.mx</a>.</p>
+            </>
+          ) : isManual ? (
             <>
               <p>Your {kit.name} is being personally prepared and will be delivered to your inbox within 24 hours. You&apos;ll get a download link from <a href="mailto:iam@armando.mx" style={{color:'var(--gold)'}}>iam@armando.mx</a>.</p>
               <p style={{fontSize:13,marginTop:16}}>Need it sooner? Reply to your purchase receipt and we&apos;ll prioritize delivery.</p>

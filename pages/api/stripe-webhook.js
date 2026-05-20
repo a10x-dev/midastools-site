@@ -297,6 +297,20 @@ const KIT_MAP = {
       'Setup wizard + best-practices guide',
     ],
   },
+  'champion-monthly': {
+    name: 'MidasTools Champion Monthly',
+    file: null,
+    subscription: true,
+    subject: 'Welcome to MidasTools Champion — first drop in 7 days',
+    items: [
+      'Weekly AI tip calibrated to your role + company context',
+      'Monthly prompt drop targeting your next team pain',
+      'Prompt validator — paste any prompt, get critique + rewrite',
+      'Personalized AI search tool seeded with your context',
+      'Idea validator — paste an idea, get pushback + alternatives',
+      'Monthly 1-page competitive AI brief for your industry',
+    ],
+  },
   'bundle': {
     name: 'All Kits Bundle',
     file: null, // Multiple files
@@ -369,6 +383,8 @@ function detectKit(session) {
     'plink_1TKVLDAdkDx8xZMkJzKwgrfQ': 'reddit-lead-kit',
     'plink_1TKNnAAdkDx8xZMkWZMpr8gW': 'team-adoption',
     'plink_1TKL1LAdkDx8xZMkep0Q0e4e': 'cowork-mastery',
+    // MidasTools Champion Monthly — $199/mo recurring subscription (created Session 28, May 20)
+    'plink_1TZGT5AdkDx8xZMkUrG20eAO': 'champion-monthly',
   };
   if (paymentLink && PAYMENT_LINK_MAP[paymentLink]) {
     return KIT_MAP[PAYMENT_LINK_MAP[paymentLink]];
@@ -418,9 +434,16 @@ async function sendDownloadEmail(customerEmail, customerName, kit) {
   const isBundle = kit.file === null && Array.isArray(kit.files);
   const isWebDelivery = kit.file === null && kit.deliveryUrl;
   const isManual = kit.file === null && kit.manual === true;
+  const isSubscription = kit.file === null && kit.subscription === true;
 
   let downloadSection;
-  if (isManual) {
+  if (isSubscription) {
+    downloadSection = `<div style="background:#FEF3C7;border:1px solid #FCD34D;border-radius:12px;padding:20px;margin-bottom:32px;">
+        <p style="color:#92400E;font-size:15px;font-weight:700;margin:0 0 8px;">Subscription active</p>
+        <p style="color:#78350F;font-size:14px;margin:0 0 8px;line-height:1.5;">Your first weekly tip lands within 7 days. Monthly drop within 30 days. Both are calibrated to your survey answers.</p>
+        <p style="color:#78350F;font-size:13px;margin:0;line-height:1.5;">Haven't filled out your survey yet, or want to update it? Reply to this email and we'll send your personalized link.</p>
+      </div>`;
+  } else if (isManual) {
     downloadSection = `<div style="background:#FFF7ED;border:1px solid #FDBA74;border-radius:12px;padding:20px;margin-bottom:32px;">
         <p style="color:#9A3412;font-size:15px;font-weight:700;margin:0 0 8px;">Your kit is being personalized</p>
         <p style="color:#7C2D12;font-size:14px;margin:0;line-height:1.5;">We'll deliver your kit by reply email within 24 hours. Reply to this email if you have any questions or special requests.</p>
