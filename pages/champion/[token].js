@@ -226,7 +226,7 @@ export default function ChampionPage({ recipient, pack, token, monthlyUrl }) {
       <section className="champ">
         <div className="section-label">Inside the kit — {pack.prompts.length} prompts</div>
         <h2>{pack.name}</h2>
-        <p style={{ fontSize: 15, color: 'var(--gray-300)', lineHeight: 1.7, marginBottom: 24 }}>{pack.intro}</p>
+        <p style={{ fontSize: 15, color: 'var(--text-secondary)', lineHeight: 1.7, marginBottom: 24 }}>{pack.intro}</p>
 
         {Object.entries(sections).map(([section, prompts]) => (
           <div key={section} style={{ marginTop: 32 }}>
@@ -269,7 +269,7 @@ export default function ChampionPage({ recipient, pack, token, monthlyUrl }) {
       <section className="champ">
         <div className="section-label">Your turn — 7 questions</div>
         <h2>{recipient.survey_title}</h2>
-        <p style={{ fontSize: 15, color: 'var(--gray-300)', lineHeight: 1.65, marginBottom: 28 }}>{recipient.survey_intro}</p>
+        <p style={{ fontSize: 15, color: 'var(--text-secondary)', lineHeight: 1.65, marginBottom: 28 }}>{recipient.survey_intro}</p>
 
         {submitStatus === 'success' ? (
           <div className="survey-card">
@@ -350,8 +350,8 @@ export default function ChampionPage({ recipient, pack, token, monthlyUrl }) {
 
       {/* FOOTER */}
       <section className="champ" style={{ paddingTop: 0, paddingBottom: 80, textAlign: 'center' }}>
-        <p style={{ fontSize: 13, color: 'var(--gray-400)', maxWidth: 540, margin: '0 auto', lineHeight: 1.6 }}>
-          Questions, or want a faster reply? Email <a href="mailto:iam@armando.mx" style={{ color: 'var(--gold)' }}>iam@armando.mx</a> — a real human reads every one. Usually back within 4 hours, weekdays.
+        <p style={{ fontSize: 13, color: 'var(--text-tertiary)', maxWidth: 540, margin: '0 auto', lineHeight: 1.6 }}>
+          Questions, or want a faster reply? Email <a href="mailto:iam@armando.mx" style={{ color: 'var(--accent)' }}>iam@armando.mx</a> — a real human reads every one. Usually back within 4 hours, weekdays.
         </p>
       </section>
     </Layout>
