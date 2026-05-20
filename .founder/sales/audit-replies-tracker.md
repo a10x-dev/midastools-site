@@ -24,6 +24,7 @@
 | 2026-05-07 18:36 UTC (FOLLOW-UP SENT) | Hiedeh / Negar | n/a (we sent, awaiting reply) | n/a | n/a | n/a | n/a | n/a | Resend `0f2c888f`. Watching gist replies via `python3 .founder/tools/read-replies.py` daily. |
 | 2026-05-07 18:36 UTC (FOLLOW-UP SENT) | Doug Courter | n/a (we sent, awaiting reply) | n/a | n/a | n/a | n/a | n/a | Resend `303c8edd`. Watching gist replies via `python3 .founder/tools/read-replies.py` daily. |
 | 2026-05-08 01:23 UTC (FOLLOW-UP SENT) | Christopher Pham via C. Brannan | n/a (we sent, awaiting reply) | n/a | n/a | n/a | n/a | n/a | Resend `6ae82a8f-47b8-461b-a94f-8b02adf02f82`. T+10d cadence per IP-attorney spec. Body: "sample demand letter" hook. Watching gist replies daily. |
+| 2026-05-20 ~20:39 UTC (KIT DELIVERED) | Vittoria Reimers (vittoria@junipersquare.com) | n/a (kit-delivery email, post-$49 purchase) | n/a | n/a | n/a | n/a | n/a | Resend `1f52942a-b218-49bf-a884-6bff65b3fa76`. FROM=MidasTools <hello@midastools.co>, REPLY_TO=armando@rooxai.com. Kit URL: https://www.midastools.co/champion/vittoria-juniper-square. Reply window: today–May 27. Survey notification path: iam+champion-vittoria@armando.mx. Refund offer included. |
 
 ### Window status updates
 

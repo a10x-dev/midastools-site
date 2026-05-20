@@ -1,0 +1,36 @@
+Hi Vittoria,
+
+Thanks for buying the AI Team Adoption Kit on Tuesday. I took the extra day to polish the prompts and tailor them specifically to what you're rolling at Juniper Square — instead of sending a generic team-adoption template, I built one for your exact context.
+
+While doing that, I listened to the segment of the Lean In podcast with Tommy where you talked about AI in business transformation — that framing is what helped me calibrate the depth. So the kit you'll find at the link below is built for:
+
+- A VP of People rolling AI to ~865 employees across Investor Services, Fund Accounting, Engineering, Sales, IR, and L&D
+- A regulated, LP-facing environment where hallucination cost is real and skeptical staff is a real adoption blocker
+- The JunieAI + AI CRM rollout cadence Juniper Square is publicly running post-Series D
+- The competitive context (Allvue, Anduin, Carta are all shipping fast — your moat is the people layer, not the tooling layer)
+
+Your personalized link: https://www.midastools.co/champion/vittoria-juniper-square
+
+What's on the page:
+
+1. 10 prompts organized into two tracks — Champion Playbook (AI usage policy, 90-day rollout, skeptical-staff talking points, office hours framework, pilot ROI scorecard, vendor evaluation) and Working Team Prompts (LP quarterly update drafter, capital call letter, K-1 plain-English explainer, IR meeting prep). Every prompt is paste-and-run in Claude Opus 4.7 or ChatGPT-5.
+2. A 1-page competitive brief — how Allvue, Anduin, Carta, DealCloud, and eFront are positioning AI, and where Juniper Square's adoption story is the moat.
+3. A 7-question survey I'd love you to fill out (~3-4 min) — it directly shapes what we build for you next month. Not a CRM-data-harvest survey. Honest "what's actually blocking you" stuff.
+
+There's also a $199/mo option at the bottom called MidasTools Champion — personalized monthly drop calibrated to your survey: weekly tips, monthly prompt drop, prompt validator, idea validator, competitive brief. No pressure on that one — the kit and the survey are yours either way, no email gate, no upsell trick.
+
+A few things I'd love to know if you have 15 min in the next week:
+
+1. Is this kit close enough to what you were hoping to find when you bought "AI Team Adoption Kit"? If not, what would have been more useful?
+2. Of the 10 prompts, which two would you actually use this week?
+3. Is there a more specific Juniper Square rollout milestone (e.g. the AI CRM team rollout, JunieAI office hours, an internal policy launch) where you'd want something tailor-built?
+
+If you'd rather just reply by email, that's perfect. If a quick call is easier, here's my calendar: https://calendar.app.google/sAXeeJRmbbUD7Y727
+
+And — full transparency — if after reading the kit it doesn't land for you, just reply "refund" and I'll process the $49 today, no questions, and you keep everything.
+
+Thanks for the trust. Excited to see what you build at Juniper Square.
+
+Armando
+MidasTools
+https://midastools.co
