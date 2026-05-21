@@ -2,7 +2,7 @@ import Head from 'next/head';
 import { useState } from 'react';
 import Layout from '../components/Layout';
 
-const STRIPE_URL = 'https://buy.stripe.com/bJefZg1xRcHf6KE5JMcMM0p';
+const STRIPE_URL = 'https://buy.stripe.com/4gMbJ0dgz4aJ1qkb46cMM0d'; // Mega Pack — original reddit-lead plink deactivated (no content, refund-risk)
 const BUNDLE_STRIPE = 'https://buy.stripe.com/bJe7sK0tNdLjgle0pscMM0b';
 
 export default function RedditLeadKit() {

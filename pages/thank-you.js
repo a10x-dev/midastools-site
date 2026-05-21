@@ -98,9 +98,15 @@ const KITS = {
   },
   'team-adoption': {
     name: 'AI Team Adoption Kit',
-    file: null,
-    manual: true,
-    items: ['Team rollout playbook', 'Use-case discovery prompts', 'Training materials + workshop scripts', 'Policy + governance templates', 'ROI measurement framework', 'Change-management email sequences'],
+    file: 'team-adoption-kit.zip',
+    items: [
+      '8 department playbooks — 48 paste-and-run prompts (Engineering, Sales, Marketing, Support, Product, Finance, HR, Legal)',
+      'AI Proficiency Assessment — L0-L3 rubric + self + manager scorecards',
+      'Weekly AI Usage Leaderboard — Notion + Google Sheets templates',
+      'Internal AI Skills Marketplace — peer-learning + contribution-tracking framework',
+      'ROI Calculator + Quarterly Adoption Report template',
+      'Day 1 Setup Guide, AI Office Hours playbook, Skill Discovery Guide, Best Practices Wiki, 90-Day Rollout Roadmap',
+    ],
   },
   'cowork-mastery': {
     name: 'Claude Cowork Mastery Kit',

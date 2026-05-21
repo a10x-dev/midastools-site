@@ -2,7 +2,7 @@ import Head from 'next/head';
 import { useState } from 'react';
 import Layout from '../components/Layout';
 
-const STRIPE_URL = 'https://buy.stripe.com/28EdR8ccv22B1qk0pscMM0r';
+const STRIPE_URL = 'https://buy.stripe.com/4gMbJ0dgz4aJ1qkb46cMM0d'; // Mega Pack — original muse-spark plink deactivated (no content, refund-risk)
 const BUNDLE_STRIPE = 'https://buy.stripe.com/bJe7sK0tNdLjgle0pscMM0b';
 
 export default function MuseSparkKit() {
