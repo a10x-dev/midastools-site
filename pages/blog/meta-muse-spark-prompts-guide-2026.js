@@ -2,7 +2,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
 
-const STRIPE_MUSE = 'https://buy.stripe.com/28EdR8ccv22B1qk0pscMM0r';
+const STRIPE_MUSE = 'https://buy.stripe.com/4gMbJ0dgz4aJ1qkb46cMM0d';
 const STRIPE_BUNDLE = 'https://buy.stripe.com/bJe7sK0tNdLjgle0pscMM0b';
 
 export default function MetaMuseSparkGuide2026() {

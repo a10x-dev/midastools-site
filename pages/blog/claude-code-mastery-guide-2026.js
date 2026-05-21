@@ -2,7 +2,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
 
-const STRIPE_CODE = 'https://buy.stripe.com/8x25kCccv4aJ3ys0pscMM0q';
+const STRIPE_CODE = 'https://buy.stripe.com/4gMbJ0dgz4aJ1qkb46cMM0d';
 const STRIPE_BUNDLE = 'https://buy.stripe.com/bJe7sK0tNdLjgle0pscMM0b';
 
 export default function ClaudeCodeMasteryGuide() {

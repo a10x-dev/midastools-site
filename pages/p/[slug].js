@@ -6,7 +6,7 @@ import {
   getAllPersonalPageSlugs,
 } from '../../lib/personal-pages';
 
-const ALL_KITS_BUNDLE_STRIPE = 'https://buy.stripe.com/8x25kCccv4aJ3ys0pscMM0q';
+const ALL_KITS_BUNDLE_STRIPE = 'https://buy.stripe.com/4gMbJ0dgz4aJ1qkb46cMM0d';
 
 export default function PersonalPage({ page }) {
   const stripeUrl = `${ALL_KITS_BUNDLE_STRIPE}?utm_source=personal-page&utm_campaign=${page.slug}&utm_medium=cold-email`;

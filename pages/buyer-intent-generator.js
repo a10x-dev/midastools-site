@@ -222,7 +222,7 @@ export default function BuyerIntentGenerator() {
             <div style={{ fontSize: 11, fontWeight: 800, letterSpacing: 1, color: '#FEF08A', marginBottom: 4 }}>⚡ WANT THE COMPLETE SYSTEM?</div>
             <div style={{ fontSize: 16, fontWeight: 700, lineHeight: 1.35 }}>Reddit Lead Gen Kit: 500+ phrases, DM templates, tracking spreadsheet &amp; 30+ niches.</div>
           </div>
-          <a href="https://buy.stripe.com/bJefZg1xRcHf6KE5JMcMM0p" style={{
+          <a href="https://buy.stripe.com/4gMbJ0dgz4aJ1qkb46cMM0d" style={{
             display: 'inline-block',
             background: '#FEF08A',
             color: '#9A3412',
@@ -338,7 +338,7 @@ export default function BuyerIntentGenerator() {
                 50+ phrases (you just saw 15), 25 outreach email templates, 10 niche subreddit maps,
                 daily workflow system, username-to-email finder, and AI automation blueprints.
               </p>
-              <a href="https://buy.stripe.com/bJefZg1xRcHf6KE5JMcMM0p" className="bi-upsell-cta">Get the Full Kit — $49</a>
+              <a href="https://buy.stripe.com/4gMbJ0dgz4aJ1qkb46cMM0d" className="bi-upsell-cta">Get the Full Kit — $49</a>
             </div>
           </div>
         )}

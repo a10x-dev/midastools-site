@@ -3,7 +3,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import Layout from '../components/Layout';
 
-const STRIPE_KIT = 'https://buy.stripe.com/28E3cu90jePn0mg7RUcMM0n';
+const STRIPE_KIT = 'https://buy.stripe.com/4gMbJ0dgz4aJ1qkb46cMM0d';
 const STRIPE_BUNDLE = 'https://buy.stripe.com/bJe7sK0tNdLjgle0pscMM0b';
 
 const ROLES = [

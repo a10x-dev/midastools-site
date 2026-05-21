@@ -2,7 +2,7 @@ import { scorePersona, getResultsForPersona } from '../../lib/quiz-engine';
 import { getPersonalPage } from '../../lib/personal-pages';
 
 const RESEND_URL = 'https://api.resend.com/emails';
-const ALL_KITS_BUNDLE_STRIPE = 'https://buy.stripe.com/8x25kCccv4aJ3ys0pscMM0q';
+const ALL_KITS_BUNDLE_STRIPE = 'https://buy.stripe.com/4gMbJ0dgz4aJ1qkb46cMM0d';
 
 export default async function handler(req, res) {
   if (req.method !== 'POST') {

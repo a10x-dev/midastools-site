@@ -1293,7 +1293,7 @@ One Reddit lead could be worth $5K+. The kit costs $49. Your first reply pays fo
 **Your next client just posted on Reddit. Go find them.**
 
 - [Try the free Buyer Intent Phrase Generator](/buyer-intent-generator)
-- [Get the Reddit Lead Generation Kit — $49](https://buy.stripe.com/bJefZg1xRcHf6KE5JMcMM0p)
+- [Get the Reddit Lead Generation Kit — $49](https://buy.stripe.com/4gMbJ0dgz4aJ1qkb46cMM0d)
 - [Get All Kits — $97](https://buy.stripe.com/bJe7sK0tNdLjgle0pscMM0b)
 `,
   },

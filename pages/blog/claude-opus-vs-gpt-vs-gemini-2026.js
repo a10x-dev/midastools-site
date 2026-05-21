@@ -3,7 +3,7 @@ import Link from 'next/link';
 import Layout from '../../components/Layout';
 
 const STRIPE_MEGA = 'https://buy.stripe.com/bJe7sK0tNdLjgle0pscMM0b';
-const STRIPE_CODE = 'https://buy.stripe.com/8x25kCccv4aJ3ys0pscMM0q';
+const STRIPE_CODE = 'https://buy.stripe.com/4gMbJ0dgz4aJ1qkb46cMM0d';
 
 export default function OpusVsGptVsGemini2026() {
   const title = 'Claude Opus 4.7 vs GPT-5.4 vs Gemini 3.1: 6 Real Tasks, 3 Different Winners (2026)';

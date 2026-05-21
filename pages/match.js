@@ -257,7 +257,7 @@ function ResultBlock({ result, prospect, theme }) {
           The All Kits Bundle is $97 — 14 niche kits covering cold outreach, ops, email, image gen, and more.
         </p>
         <a
-          href="https://buy.stripe.com/8x25kCccv4aJ3ys0pscMM0q?utm_source=match&utm_medium=result"
+          href="https://buy.stripe.com/4gMbJ0dgz4aJ1qkb46cMM0d?utm_source=match&utm_medium=result"
           style={{ display: 'inline-block', background: T.accent, color: '#FFFFFF', padding: '12px 24px', borderRadius: 8, fontWeight: 700, fontSize: 15, textDecoration: 'none' }}
         >
           Get the Bundle — $97

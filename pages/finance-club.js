@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import Layout from '../components/Layout';
 
-const BUNDLE_URL = 'https://buy.stripe.com/8x25kCccv4aJ3ys0pscMM0q';
+const BUNDLE_URL = 'https://buy.stripe.com/4gMbJ0dgz4aJ1qkb46cMM0d';
 const MEGA_PACK_ZIP = '/ai-prompt-mega-pack.zip';
 
 const SAMPLE_PROMPTS = [

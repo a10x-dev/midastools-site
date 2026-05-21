@@ -3,7 +3,7 @@ import { useState } from 'react';
 import Layout from '../components/Layout';
 import Link from 'next/link';
 
-const STRIPE_URL = 'https://buy.stripe.com/28EdR8ccv22B1qk0pscMM0r';
+const STRIPE_URL = 'https://buy.stripe.com/4gMbJ0dgz4aJ1qkb46cMM0d';
 
 const categories = {
   'Visual Coding': {
