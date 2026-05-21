@@ -58,11 +58,11 @@
 6. Run `npx next build` — must be clean, no errors
 7. Commit + push to main
 8. After Vercel deploys (~2 min), verify HTTP 200 via curl
-9. Submit IndexNow:
+9. Submit IndexNow (WORKING KEY verified 2026-05-21 — Bing accepted, the older `a10xdev2026indexnow` key returns 403 UserForbiddedToAccessSite, DO NOT USE):
    ```
    curl -sX POST "https://api.indexnow.org/IndexNow" \
      -H "Content-Type: application/json" \
-     -d '{"host":"www.midastools.co","key":"<from .founder/.indexnow_key or public/<key>.txt>","keyLocation":"https://www.midastools.co/<key>.txt","urlList":["https://www.midastools.co/blog/<slug>"]}'
+     -d '{"host":"www.midastools.co","key":"2935cf832fa6443d608bd993ec83dad9","keyLocation":"https://www.midastools.co/2935cf832fa6443d608bd993ec83dad9.txt","urlList":["https://www.midastools.co/blog/<slug>"]}'
    ```
 10. Log to `.founder/STATE.md` Session entry with: slug, target search cluster, primary keyword, expected GSC indexing window (7-14d), one-week-from-now reminder to check impressions
 
