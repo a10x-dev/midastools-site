@@ -2,12 +2,12 @@
 
 ## Current Status (auto-synced from database)
 
-**Bottleneck**: audience_product_fit (severity 5/10, DOWN from 7) — May 20 BREAKTHROUGH: Vittoria Reimers (VP People @ Juniper Square, $3B fund-admin SaaS, 865 employees) bought AI Team Adoption Kit for $49 cold. Buyer's corporate email + buying-the-SKU-name-as-described + champion role = single most validated B2B signal in 47 days. Shipped personalized champion page + survey system + $199/mo recurring SKU same day. Branch 4 P4c (productize team-adoption for B2B) becomes primary; P4b (consumer Reddit) demoted. ICP narrowed to "Champion/L&D/VP People at growing B2B SaaS." Awaiting 7-14d signal on Vittoria reply + survey completion + sub conversion.
+**Bottleneck**: market_understanding (severity 6/10) — T+5h post-S26 review, +1h since S27 EOD: ran falsifier on directory-attributed signups, found smoking-gun bot pattern (8 events / 4 sessions / 3 countries / 1 UA / 100% homepage-only / 3-4 sec page-view→signup × 3 = submitaitools.org verification crawler, not real conversions). P4d Branch 4 stratum REVERSED 25%→3%. Gist users 40 raw / ~37 real-human. Reddit P4b-A still 0 at T+~38h. All real-channel signals remain dark — no inbound replies, no real human directory conversions, no Reddit attribution. Only remaining measurable signal is 25% US-desktop organic Google traffic landing on broken-SKU pages (P4c, broken-SKU fix as conversion lever).
 
 **KPIs**:
 - Conversations: 0 (target: 3, 7d: 0%)
-- Users: 41 (target: 30, 7d: 100%+)
-- Revenue: $204 (target: $997, 7d: 32% — +$49 today from Vittoria @ Juniper Square)
+- Users: 39 (target: 30, 7d: 95%)
+- Revenue: 155 (target: 997, 7d: 0%)
 
 <!-- AGENT-EDITED-BELOW (everything below this line is preserved across ticks) -->
 

@@ -1,0 +1,105 @@
+# Routing table — Phase 2A of feat/own-harness.
+#
+# Maps task categories (returned by the pre-turn classifier) to a route:
+#   (provider, model, thinking, max_tokens).
+#
+# Resolution at runtime (src-tauri/src/routing.rs):
+#   1. <workspace>/.founder/routing.yml   (this file, seeded per workspace
+#                                          via seed_routing_assets — operator
+#                                          can edit to override)
+#   2. Embedded fallback in routing.rs    (compiled, never refuses)
+#
+# Categories MUST match `CATEGORIES` in src-tauri/src/routing.rs.
+# Providers: anthropic | openrouter.
+# Thinking:  off | minimal | low | medium | high | xhigh.
+# max_tokens: 0 = let the provider pick.
+
+version: 1
+
+# Pre-turn classifier itself. Cheap + fast — Haiku is overkill for picking
+# one of ten short labels, but it's the cheapest model we trust to be
+# deterministic on a constrained vocabulary.
+classify:
+  provider: anthropic
+  model: claude-haiku-4-5
+  thinking: off
+  max_tokens: 64
+
+# Strategic decisions, planning, Chesky 6-gate, reframes, "should we".
+# Opus + xhigh thinking: the one place we pay for the deepest model.
+strategy:
+  provider: anthropic
+  model: claude-opus-4-7
+  thinking: xhigh
+  max_tokens: 0
+
+# Default code lane: write/edit/refactor real source files.
+# Opus + medium thinking: strong default, doesn't burn xhigh on routine edits.
+code:
+  provider: anthropic
+  model: claude-opus-4-7
+  thinking: medium
+  max_tokens: 0
+
+# Hard code lane: stuck-after-N-attempts, perf/concurrency, deep refactor.
+# o3-pro via OpenRouter — different family, often unsticks Opus when it
+# loops on the same wrong approach.
+code_hard:
+  provider: openrouter
+  model: openai/o3-pro
+  thinking: high
+  max_tokens: 0
+
+# Brand-voice copy: cold DM, founder voice, customer-facing prose.
+# Opus + low thinking: voice quality matters more than reasoning depth.
+copy_brand:
+  provider: anthropic
+  model: claude-opus-4-7
+  thinking: low
+  max_tokens: 0
+
+# Conversion copy: landing CTAs, A/B variants with an explicit conversion
+# goal. GPT-5.5 historically reads better for CTAs and short-form punch.
+copy_conversion:
+  provider: openrouter
+  model: openai/gpt-5.5
+  thinking: off
+  max_tokens: 0
+
+# Volume copy: bulk generation — 10+ headline / social / subject variants.
+# Gemini for cost-per-token + speed at high variant counts.
+copy_volume:
+  provider: openrouter
+  model: google/gemini-3.1-pro
+  thinking: off
+  max_tokens: 0
+
+# Live pair chat with the operator: state, status, "what should we do".
+# Sonnet is the right balance — Opus is overkill, Haiku is too thin.
+pair:
+  provider: anthropic
+  model: claude-sonnet-4-6
+  thinking: off
+  max_tokens: 0
+
+# Web research with tools (Firecrawl, search, scrape).
+research:
+  provider: anthropic
+  model: claude-sonnet-4-6
+  thinking: low
+  max_tokens: 0
+
+# Multi-step browser automation (Playwright — LinkedIn, HubSpot, Stripe).
+browser:
+  provider: anthropic
+  model: claude-sonnet-4-6
+  thinking: low
+  max_tokens: 0
+
+# Routine / cheap work — directives bookkeeping, file moves, simple lookups.
+# Haiku is fine; saving tokens here is where the routing layer pays for itself.
+routine:
+  provider: anthropic
+  model: claude-haiku-4-5
+  thinking: off
+  max_tokens: 0

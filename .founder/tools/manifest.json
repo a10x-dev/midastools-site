@@ -1,5 +1,14 @@
 [
   {
+    "name": "stripe-plinks-snapshot.py",
+    "description": "Snapshot of all active Stripe payment links with URL-alias <-> plink_id <-> product <-> price <-> redirect mapping. Closes the S22 capability gap: the buy.stripe.com/<alias> URL is opaque and cannot be reverse-mapped to plink_id from code alone, but the Stripe API exposes both. Without this, label-vs-URL audits (e.g. for-coaches.js had two candidate $97 URLs in S22) require Armando's strategic call. With this, the mapping is one CLI call. Modes: default markdown table, --save writes to deliverables, --json raw, --csv, --find <alias-or-plink-or-product> for one-shot lookup. Smoke-tested 2026-05-20 self-review: resolved the exact S22 ambiguity (bJe7sK0tNdLjgle0pscMM0b -> plink_1TDwTmAdkDx8xZMkmxB9yn55 = MidasTools All Kits Bundle $97 -> /thank-you?kit=bundle).",
+    "language": "python",
+    "path": "stripe-plinks-snapshot.py",
+    "use_count": 1,
+    "created_at": "2026-05-20T22:30:00Z",
+    "approved": true
+  },
+  {
     "name": "reconstruct-recovered-subs.py",
     "description": "Reconstruct synthetic recovery JSON by diffing the live gist subscribers against FALLBACK_SUBSCRIBERS in lib/subscribers.js. Built 2026-05-14 (Session 30) because pair-Session 25 merged 17 STORAGE FAILED subs directly into the gist but the parsed JSON from recover-storage-failed.py was discarded post-merge. Produces the exact input schema send-recovery-welcomes.py expects. Idempotent (gist∖fallback is deterministic). Usage: python3 .founder/tools/reconstruct-recovered-subs.py --out /tmp/recovered.json — then chain to send-recovery-welcomes.py --in /tmp/recovered.json --dry-run | --apply.",
     "language": "python",
