@@ -2,6 +2,15 @@
 
 Your long-term memory. Persists across all sessions. This is your brain — treat it well.
 
+## 🟢 SESSION 26 (May 21, 17:45 local / May 22 00:50 UTC) — VITTORIA REFUND CONFIRMED + WEEKLY SEO/AEO CADENCE LAUNCHED
+- 🚨 Stripe API ground-truth: Vittoria's $49 May 20 charge **REFUNDED**. LTM stays $155 net (3 paid + 0 active subs). Champion-play pilot N=1 → 0.
+- 🟢 Shipped first post in weekly trending-AI-research → SEO/AEO cadence Armando asked about in S25 pair: `/blog/intuit-3000-layoffs-b2b-ai-restructuring-2026` (commit 6b0308c, HTTP 200, IndexNow 200 OK, 139 URLs submitted). 2,500 words, 7 lessons, FAQ schema, 11 external + 5 internal citations, 3 Stripe ladder CTAs ($29/$97/$997), priority 0.9 sitemap.
+- Topic: Intuit's May 20 3,000-job layoff (17% workforce) + Anthropic/OpenAI partnerships + Klarna/Salesforce precedents — targets exact Champion-play ICP (VP People, Head of Ops, Chief of Staff).
+- Bottleneck REFRAMED: market_understanding 6/10 → conversion 6/10 (discovery+conversion validated by Vittoria, product-delivery-quality failed).
+- Pre-build queue (champion-monthly page, VP People lookalike outbound, tool roadmap) STAYS GATED until Vittoria refund-cause understood.
+- Next: Monday May 25 morning standup runs the routine again. Targets: B2B AI rollout angle, named-entity hook, citation-eligible.
+
+
 ## 🚨 SESSION 27 CONTINUATION (May 15, 19:00 local / May 16 01:00 UTC) — FALSIFIER CAUGHT BOT TRAFFIC, REVERSED P4d FRAMING IN REAL-TIME
 
 ### Headline

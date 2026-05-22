@@ -11,6 +11,103 @@
 
 <!-- AGENT-EDITED-BELOW (everything below this line is preserved across ticks) -->
 
+## Session 26 — VITTORIA REFUND CONFIRMED + WEEKLY SEO/AEO ROUTINE LAUNCHED (May 21, 17:45 local / May 22 00:50 UTC)
+
+### Trigger
+Strategic review. Last pair session (S25) Armando asked "am I doing the weekly trending-AI-research → SEO/AEO post routine?" My honest answer was "no, not on a cadence." Pair dropped before close. Today is Thursday May 21; weekly cadence in SCHEDULE is Monday. The unaddressed Armando ask + missed cycle = legitimate session work even though Champion pre-build queue is explicitly gated on Vittoria signal (May 23).
+
+### 🚨 MATERIAL FINDING — Vittoria refund confirmed in Stripe
+Direct Stripe API query (`/tmp/stripe-check.py`):
+- `vittoria@junipersquare.com` $49.00 charge on 2026-05-20 04:57 UTC marked **[REFUNDED]**
+- LTM (paid + non-refunded) = 3 charges / $155 (NOT $204 as S16 implied)
+- 0 active subscriptions (Champion Monthly $199/mo did not convert)
+- 0 sales in last 24h, 0 sales in last 7d
+
+S24 pair note (earlier today): "Vittoria asked for a refund I already did, the refund no extra reason added" — corroborated. The Champion play pilot N=1 → 0. Refund without explanation is the most ambiguous form of signal: kit didn't land OR she changed her mind OR procurement intervened. We don't know which.
+
+### Bottleneck reframing
+Pre-Vittoria: market_understanding 6/10 ("no real buyers in our content funnel, audience-product-fit gap").
+Post-Vittoria + refund:
+- **audience-discovery: validated** (Vittoria found `/team-adoption-kit` by role-named search)
+- **audience-conversion: validated** (she paid $49 one-click via Stripe Link)
+- **product-delivery-quality: failed** (refund without reason)
+
+Real bottleneck downgraded to: `conversion 6/10` — specifically product-delivery quality on B2B SKUs where pages exist but content is thin/missing. Bottleneck updated via directive.
+
+### ✅ Shipped (commit 6b0308c, pushed, HTTP 200, IndexNow submitted)
+**`pages/blog/intuit-3000-layoffs-b2b-ai-restructuring-2026.js`** (354 lines, 10.9 kB static):
+- Title: "Intuit Cut 3,000 Jobs (17% of Staff). Here's What B2B Operators Should Actually Do in May 2026."
+- 2,500 words, 11-min read, 7 lessons with claim+why+action structure
+- Named entities: Intuit, Sasan Goodarzi, Klarna, Sebastian Siemiatkowski, Salesforce, Marc Benioff, Agentforce, Anthropic, OpenAI
+- Hard numbers: 3,000 / 17% / 18,200 / 853 agents / 5,500→3,400 / 1,000+2,000
+- Article + ItemList + FAQPage (7 questions) JSON-LD schema
+- 11 external citations (TechCrunch, CNBC, The Register, HR Director, Entrepreneur, CBS News, Customer Experience Dive, OpenAI Klarna case, Salesforce Ben, Layoffhedge) + 5 internal cross-links to existing blog posts + /ai-audit
+- 3 Stripe ladder CTAs: $29 Mega Pack / $97 Bundle / $997 AI Clarity Assessment
+- Sitemap entry priority 0.9, listed first in /blog index
+- Targets B2B AI restructuring search cluster (VP People, Head of Ops, Chief of Staff queries) — matches the Champion-play ICP that just refunded
+
+### IndexNow submission
+POST `/api/indexnow` → 200 OK, indexnow.org status 200, 139 URLs submitted to Bing/Yandex/IndexNow consortium. Google ping returned 404 (their ping endpoint deprecated — relying on sitemap + GSC discovery for Google).
+
+### Why this is the right work, not motion-vs-progress
+1. **Direct Armando ask unaddressed** — S25 pair he explicitly named the routine; I committed (honestly) to no cadence. Shipping today closes the loop.
+2. **Plan-agnostic to Champion play decision** — Vittoria refund cause is unknown; B2B AI rollout content is useful under every branch (rebuild kit content / pivot ICP / kill SKU).
+3. **Citation-eligible by design** — named entity (Intuit), exact number (3,000 / 17%), specific date (May 20), B2B-operator angle. Matches Stripe Sessions citation cluster pattern that drove the May 7 traffic.
+4. **No homepage flywheel touch** — side-door blog content, not front-door change. Respects `feedback_protect_flywheel`.
+5. **Stripe ladder respects the 3-tier funnel** — $29 / $97 / $997 all linked, no $199/mo Champion CTA (since that SKU just N=1-failed).
+
+### Pre-build queue status (Champion play)
+- 🅰️ public `/champion-monthly` page — STAYS GATED. With Vittoria refunded, validating this page before understanding refund-cause = building on N=0 evidence.
+- 🅱️ outbound to VP People lookalikes (Allvue/Anduin/Carta) — STAYS GATED. Pitching the same SKU that just got refunded without explanation is high-risk for reputation.
+- 🅲 tool roadmap V0 (Competitive Landscape Scanner) — STAYS GATED. This is the "what would the $199/mo sub deliver?" question; gated on Champion-play validation.
+
+### What I did NOT do (deliberately)
+- Did NOT ship a 2nd Telegram (1 bundled message is enough; armando-async-asks rule)
+- Did NOT pre-build the next week's SEO/AEO post (saturation; Monday cycle is 4 days away; Champion gate clears first)
+- Did NOT touch Vittoria's `/champion/vittoria-juniper-square` page (refund processed; her page is still HTTP 200 and would only need touching if she un-refunds or re-engages)
+- Did NOT email Vittoria asking "why did you refund?" — sender attribution belongs to Armando + asking-the-buyer post-refund violates the 4-paying-customers-trust principle in Session 158's lessons
+- Did NOT update STATE.md auto-synced KPIs (those sync from DB)
+- Did NOT TaskCreate any new tasks (queue has 30+ stale; adding more = noise)
+
+### Confidence
+85% — post is live (HTTP 200 verified), IndexNow submitted (200 OK), build clean, push verified by commit hash 9fa1e3e..6b0308c. Lower than 90% because (a) Google indexation is 7-14d minimum from sitemap, can't measure ranking impact this session, (b) the "weekly Monday cadence" claim depends on me actually executing next Monday and the one after — track record on weekly cadences is poor (per Armando's question), (c) Vittoria refund-cause is unknown; the bottleneck reframing rests on "discovery+conversion validated, delivery failed" which is a reasonable inference but not confirmed.
+
+### Sprint metric
+seo_aeo_posts_shipped_this_week: 0 → 1 (target was 1)
+
+### NEXT_CHECKIN expectation
+Monday May 25 morning standup — run trend-watch, pick next week's topic (B2B-AI-rollout angle preferred), draft + ship by Monday EOD. Watch for any Vittoria reply / customer-service ticket / refund-reason note over the weekend. If Armando shares refund-reason context, unblock Champion pre-build queue and pivot back to that line of work.
+
+### Session 26 continuation (May 21, 18:30 local / May 22 01:30 UTC) — VITTORIA REFUND POST-MORTEM SHIPPED + FTC RISK SURFACED
+
+After cleaning 27 stale tasks via TASK_COMPLETE batch (queue now down from 30+ to ~8 genuinely-open) + auditing `pages/team-adoption-kit.js` for the page-vs-delivery gap, shipped `.founder/deliverables/vittoria-refund-post-mortem-2026-05-22.md` (1,781 words, 182 lines, 6-min read).
+
+**Three findings ranked by likelihood as refund driver:**
+1. 🔴 **Expectation gap** — Page advertises "50+ AI skills, 8 department playbooks, Notion template (plug and play), Google Sheets version included" + 25+ specific deliverables. Reality is 10-prompt personalized champion kit + 24h SLA (manual:true webhook routing). Asymmetric.
+2. 🟡 **Schema-only testimonials (FTC risk, independent issue)** — `pages/team-adoption-kit.js:78-100` has `reviewCount:"27"` + 3 reviewBody strings in JSON-LD schema only, never rendered in page content, no author attribution. Same pattern Session 108 flagged on Mega Pack. FTC 16 CFR Part 255 (Aug 2024 final rule on fake reviews) likely applies.
+3. 🟢 **Procurement/policy refund (low probability)** — Juniper Square is $1.1B SaaS with formal vendor processes. Possible but unlikely (Vittoria has VP-level discretionary spend).
+
+**Three decision branches mapped** (A: build content 100-200h / B: deactivate 5 plinks 1-2h / C: honest copy + raise price 4-6h) with action items per branch.
+
+**Recommended priority 2 (independent of Vittoria call)**: site-wide audit of schema-only reviews across all 17 kit pages. FTC exposure is real regardless of which Champion branch Armando picks.
+
+**Sent 2nd Telegram** — bundled the 2 distinct decide-now items (refund branch choice + FTC audit). Per armando-async-asks: new material info (3 new findings + FTC risk) justifies the follow-up vs the morning's weekly-cadence ping.
+
+**Files written this continuation block:**
+- `.founder/deliverables/vittoria-refund-post-mortem-2026-05-22.md` (NEW)
+- `.founder/STATE.md` (this entry)
+- TASK_COMPLETE × 27 (queue cleanup, prior turn)
+
+**What I deliberately refused to do (saturation discipline):**
+- Refused to edit `/team-adoption-kit` page copy unilaterally — Branch choice is `3400b90c`, belongs to Armando
+- Refused to remove schema-only testimonials this session — needs coordinated cross-page audit, not piecemeal
+- Refused to pre-build kit-content/team-adoption-kit/ — that's Branch A execution
+- Refused to email Vittoria post-refund — violates 4-paying-customers-trust principle
+
+**Confidence: 88%** — direct page audit verified via repo Read + curl; FTC citation is current (Aug 2024 final rule on AI-generated/fake reviews); decision branches inherit from `3400b90c`'s existing framing. Higher than the morning's 85% because the new evidence (page audit confirming the gap) materially strengthens the refund-cause inference.
+
+---
+
 ## Session 16 — VITTORIA / JUNIPER SQUARE BREAKTHROUGH + AI CHAMPION SYSTEM SHIPPED (May 20, 22:00 local / May 20 ~04:00 UTC)
 
 ### Trigger
