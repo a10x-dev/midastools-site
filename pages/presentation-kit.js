@@ -83,32 +83,7 @@ export default function PresentationKit() {
                 "transitTime": { "@type": "QuantitativeValue", "minValue": "0", "maxValue": "0", "unitCode": "d" }
               }
             }
-          },
-          "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "4.7",
-            "reviewCount": "19"
-          },
-          "review": [
-            {
-              "@type": "Review",
-              "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-              "author": { "@type": "Person", "name": "Daniel V." },
-              "reviewBody": "Used the pitch deck prompts to create our Series A deck. Investors commented on how well-structured the narrative was. These prompts understand storytelling, not just slide layouts."
-            },
-            {
-              "@type": "Review",
-              "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-              "author": { "@type": "Person", "name": "Christina R." },
-              "reviewBody": "As a consultant, I build 3-4 client presentations per week. This kit turned a 4-hour task into a 45-minute task. The sales deck templates are particularly excellent."
-            },
-            {
-              "@type": "Review",
-              "reviewRating": { "@type": "Rating", "ratingValue": "4", "bestRating": "5" },
-              "author": { "@type": "Person", "name": "Mark S." },
-              "reviewBody": "Great prompts for conference talks and business reports. The slide-by-slide structure it generates is really useful. Good value for $29 — saves significant time on presentation prep."
-            }
-          ]
+          }
         })}} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
           "@context": "https://schema.org",
@@ -221,15 +196,15 @@ export default function PresentationKit() {
           {[
             {
               title: 'Startup Investor Pitch Deck',
-              prompt: 'I\'m building [STARTUP NAME], a [ONE-LINE DESCRIPTION] for [TARGET MARKET]. We\'re raising a [SEED/SERIES A] round of [AMOUNT]. Create a 12-slide investor pitch deck outline. For each slide provide: Slide title | Key message (1 sentence) | 3-4 bullet points | Suggested visual/chart. Slides: 1) Hook/Problem 2) Solution 3) Market Size (TAM/SAM/SOM) 4) Product Demo 5) Business Model 6) Traction & Metrics 7) Competitive Landscape 8) Go-to-Market Strategy 9) Team 10) Financial Projections 11) The Ask 12) Vision/Closing. Tone: confident, data-driven, compelling. Industry: [INDUSTRY].',
+              prompt: 'I\'m building [STARTUP NAME], a [ONE-LINE DESCRIPTION] for [TARGET MARKET]. We\'re raising a [SEED/SERIES A] round of [AMOUNT]. Create a 12-slide investor pitch deck outline. For each slide provide: Slide title | Key message (1 sentence) | 3-4 bullet points | Suggested visual/chart. Slides: 1) Hook/Problem 2) Solution 3) Market Size (TAM/SAM/SOM) 4) Product Demo 5) Business Model 6) Traction & Metrics 7) Competitive Landscape 8) Go-to-Market Strategy 9) Team 10) Financial Projections 11) The Ask 12) Vision/Closing. Tone: confident, data-driven, compelling. Industry: [INDUSTRY].'
             },
             {
               title: 'Sales Demo Presentation',
-              prompt: 'I sell [PRODUCT/SERVICE] at [PRICE POINT] to [TARGET BUYER ROLE] at [COMPANY TYPE]. Create a 10-slide sales presentation structure. For each slide provide: Slide title | Talking points (30 seconds each) | Key visual suggestion. Flow: 1) Attention-grabbing opening stat 2) Their problem (3 pain points) 3) Cost of inaction 4) Your solution overview 5) How it works (3 steps) 6) Feature deep-dive with benefits 7) Case study / social proof 8) ROI calculation 9) Pricing & packages 10) Next steps + CTA. Include objection-handling notes for slides 6-9. Tone: consultative, not salesy.',
+              prompt: 'I sell [PRODUCT/SERVICE] at [PRICE POINT] to [TARGET BUYER ROLE] at [COMPANY TYPE]. Create a 10-slide sales presentation structure. For each slide provide: Slide title | Talking points (30 seconds each) | Key visual suggestion. Flow: 1) Attention-grabbing opening stat 2) Their problem (3 pain points) 3) Cost of inaction 4) Your solution overview 5) How it works (3 steps) 6) Feature deep-dive with benefits 7) Case study / social proof 8) ROI calculation 9) Pricing & packages 10) Next steps + CTA. Include objection-handling notes for slides 6-9. Tone: consultative, not salesy.'
             },
             {
               title: 'Conference Keynote Outline',
-              prompt: 'I\'m giving a [LENGTH]-minute keynote at [CONFERENCE/EVENT] to an audience of [AUDIENCE DESCRIPTION]. My topic is [TOPIC]. Create a complete talk outline with: Opening hook (choose from: surprising stat, personal story, provocative question, or bold prediction) | 3 main sections with key points and transitions | Audience engagement moment (poll, show of hands, or reflection) | Memorable closing with call-to-action. For each section include: Time allocation | Key slide visuals | Speaker notes (2-3 sentences). Also provide: 5 potential talk titles | 2-sentence speaker bio | 3 audience takeaways for the event program. Tone: [STYLE — inspiring/educational/provocative].',
+              prompt: 'I\'m giving a [LENGTH]-minute keynote at [CONFERENCE/EVENT] to an audience of [AUDIENCE DESCRIPTION]. My topic is [TOPIC]. Create a complete talk outline with: Opening hook (choose from: surprising stat, personal story, provocative question, or bold prediction) | 3 main sections with key points and transitions | Audience engagement moment (poll, show of hands, or reflection) | Memorable closing with call-to-action. For each section include: Time allocation | Key slide visuals | Speaker notes (2-3 sentences). Also provide: 5 potential talk titles | 2-sentence speaker bio | 3 audience takeaways for the event program. Tone: [STYLE — inspiring/educational/provocative].'
             },
           ].map((p, i) => (
             <div key={i} style={{background:'var(--gray-900)',border:'1px solid var(--gray-800)',borderRadius:14,padding:28}}>

@@ -83,32 +83,7 @@ export default function SocialMediaKit() {
                 "transitTime": { "@type": "QuantitativeValue", "minValue": "0", "maxValue": "0", "unitCode": "d" }
               }
             }
-          },
-          "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "4.7",
-            "reviewCount": "41"
-          },
-          "review": [
-            {
-              "@type": "Review",
-              "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-              "author": { "@type": "Person", "name": "Brittany N." },
-              "reviewBody": "I manage social media for 4 clients and this kit cut my content planning from a full day to 2 hours. The 30-day content calendar system alone is worth it. Viral hook formulas actually work."
-            },
-            {
-              "@type": "Review",
-              "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-              "author": { "@type": "Person", "name": "Omar J." },
-              "reviewBody": "The caption templates and hashtag strategy prompts helped me grow my Instagram from 2K to 8K followers in two months. These aren't generic prompts — they're engineered for each platform."
-            },
-            {
-              "@type": "Review",
-              "reviewRating": { "@type": "Rating", "ratingValue": "4", "bestRating": "5" },
-              "author": { "@type": "Person", "name": "Stephanie H." },
-              "reviewBody": "Solid kit for social media managers. The paid ad templates are a nice bonus. Would love more TikTok-specific prompts, but the overall quality is excellent for the price."
-            }
-          ]
+          }
         })}} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
           "@context": "https://schema.org",
@@ -244,19 +219,19 @@ export default function SocialMediaKit() {
           {[
             {
               title: '30-Day Instagram Content Calendar',
-              prompt: 'I run an Instagram account for [BUSINESS/NICHE] targeting [AUDIENCE]. Create a 30-day content calendar with: 2 carousel posts, 1 Reel, 1 static post, and 1 promotional post per week. For each post provide: Day | Type | Topic | Caption Hook | Hashtags (mix of small/medium/large) | Best Time. Include daily Story themes and 3 Reels per week.',
+              prompt: 'I run an Instagram account for [BUSINESS/NICHE] targeting [AUDIENCE]. Create a 30-day content calendar with: 2 carousel posts, 1 Reel, 1 static post, and 1 promotional post per week. For each post provide: Day | Type | Topic | Caption Hook | Hashtags (mix of small/medium/large) | Best Time. Include daily Story themes and 3 Reels per week.'
             },
             {
               title: 'Scroll-Stopping Hook Generator',
-              prompt: 'I\'m writing a social media post about [TOPIC] for [PLATFORM]. Generate 10 scroll-stopping hooks using these formulas: Controversial opinion, Number + curiosity, Story hook, Direct challenge, Social proof, FOMO, Question hook, Myth buster, Before/After, Prediction. For each, provide the complete hook line, why it works, and a full caption built around it.',
+              prompt: 'I\'m writing a social media post about [TOPIC] for [PLATFORM]. Generate 10 scroll-stopping hooks using these formulas: Controversial opinion, Number + curiosity, Story hook, Direct challenge, Social proof, FOMO, Question hook, Myth buster, Before/After, Prediction. For each, provide the complete hook line, why it works, and a full caption built around it.'
             },
             {
               title: 'Meta Ad Campaign Generator',
-              prompt: 'I\'m running Meta ads for [BUSINESS]. Product: [DESCRIBE]. Target audience: [DESCRIBE]. Campaign goal: [CONVERSIONS]. Create 3 ad sets (pain point, benefit, social proof) with 3 copy variations each (short, medium, long). Include primary text, headline, description, CTA button, visual direction, and A/B testing priority for each ad.',
+              prompt: 'I\'m running Meta ads for [BUSINESS]. Product: [DESCRIBE]. Target audience: [DESCRIBE]. Campaign goal: [CONVERSIONS]. Create 3 ad sets (pain point, benefit, social proof) with 3 copy variations each (short, medium, long). Include primary text, headline, description, CTA button, visual direction, and A/B testing priority for each ad.'
             },
             {
               title: 'Competitor Analysis Framework',
-              prompt: 'Analyze my competitors on [PLATFORM] in [NICHE]. Competitors: [LIST 3]. For each, analyze: content types, posting frequency, engagement patterns, hooks they use, and reply strategy. Then identify: topics they cover poorly, content formats they don\'t use, audience segments they ignore, and 10 content ideas that position me differently.',
+              prompt: 'Analyze my competitors on [PLATFORM] in [NICHE]. Competitors: [LIST 3]. For each, analyze: content types, posting frequency, engagement patterns, hooks they use, and reply strategy. Then identify: topics they cover poorly, content formats they don\'t use, audience segments they ignore, and 10 content ideas that position me differently.'
             },
           ].map((p, i) => (
             <div key={i} style={{background:'var(--gray-900)',border:'1px solid var(--gray-800)',borderRadius:14,padding:28}}>

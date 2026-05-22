@@ -84,32 +84,7 @@ export default function EmailMarketingKit() {
                 "transitTime": { "@type": "QuantitativeValue", "minValue": "0", "maxValue": "0", "unitCode": "d" }
               }
             }
-          },
-          "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "4.8",
-            "reviewCount": "26"
-          },
-          "review": [
-            {
-              "@type": "Review",
-              "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-              "author": { "@type": "Person", "name": "Hannah W." },
-              "reviewBody": "The welcome sequence templates alone were worth the purchase. I set up a 5-email onboarding flow in 20 minutes that used to take me a full day. Open rates are up 35% with the subject line formulas."
-            },
-            {
-              "@type": "Review",
-              "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-              "author": { "@type": "Person", "name": "Ryan M." },
-              "reviewBody": "I use the cold outreach templates for my B2B sales. Response rate went from 3% to 12% after switching to these prompts. The follow-up sequences are perfectly timed and worded."
-            },
-            {
-              "@type": "Review",
-              "reviewRating": { "@type": "Rating", "ratingValue": "4", "bestRating": "5" },
-              "author": { "@type": "Person", "name": "Emily T." },
-              "reviewBody": "Really well-organized email prompts. The newsletter templates save me hours every week. Would be perfect with more e-commerce specific email flows, but the general templates adapt well."
-            }
-          ]
+          }
         })}} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
           "@context": "https://schema.org",
@@ -222,15 +197,15 @@ export default function EmailMarketingKit() {
           {[
             {
               title: '5-Email Welcome Sequence',
-              prompt: 'I run [BUSINESS/NICHE] and just got a new email subscriber from [LEAD MAGNET/SIGNUP SOURCE]. Create a 5-email welcome sequence sent over 7 days. For each email provide: Subject line (+ 2 A/B variants) | Preview text | Email body (150-250 words) | CTA. Email 1: Deliver value + introduce brand. Email 2: Share origin story + build trust. Email 3: Educate on key problem. Email 4: Social proof + case study. Email 5: Soft pitch with clear CTA. Tone: [BRAND VOICE]. Goal: [CONVERSION GOAL].',
+              prompt: 'I run [BUSINESS/NICHE] and just got a new email subscriber from [LEAD MAGNET/SIGNUP SOURCE]. Create a 5-email welcome sequence sent over 7 days. For each email provide: Subject line (+ 2 A/B variants) | Preview text | Email body (150-250 words) | CTA. Email 1: Deliver value + introduce brand. Email 2: Share origin story + build trust. Email 3: Educate on key problem. Email 4: Social proof + case study. Email 5: Soft pitch with clear CTA. Tone: [BRAND VOICE]. Goal: [CONVERSION GOAL].'
             },
             {
               title: 'Cart Abandonment Recovery Sequence',
-              prompt: 'I sell [PRODUCT] at [PRICE POINT] to [TARGET AUDIENCE]. Create a 3-email cart abandonment sequence. Email 1 (sent 1 hour after): Friendly reminder with product image reference. Email 2 (sent 24 hours after): Address top 3 objections + social proof. Email 3 (sent 48 hours after): Urgency + small incentive. For each email include: Subject line (+ A/B variant) | Preview text | Body copy (100-200 words) | CTA button text. Tone: helpful, not pushy.',
+              prompt: 'I sell [PRODUCT] at [PRICE POINT] to [TARGET AUDIENCE]. Create a 3-email cart abandonment sequence. Email 1 (sent 1 hour after): Friendly reminder with product image reference. Email 2 (sent 24 hours after): Address top 3 objections + social proof. Email 3 (sent 48 hours after): Urgency + small incentive. For each email include: Subject line (+ A/B variant) | Preview text | Body copy (100-200 words) | CTA button text. Tone: helpful, not pushy.'
             },
             {
               title: 'Cold Outreach Email + Follow-Up Cadence',
-              prompt: 'I\'m reaching out to [TARGET ROLE] at [COMPANY TYPE] to offer [YOUR SERVICE/PRODUCT]. Create a 4-email cold outreach sequence. Email 1: Pattern interrupt + value prop in under 80 words. Email 2 (3 days later): Quick follow-up with a relevant case study or stat. Email 3 (5 days later): Different angle — address a specific pain point. Email 4 (7 days later): Breakup email with soft CTA. For each email: Subject line | Body (under 100 words) | CTA. No fluff. No "I hope this finds you well."',
+              prompt: 'I\'m reaching out to [TARGET ROLE] at [COMPANY TYPE] to offer [YOUR SERVICE/PRODUCT]. Create a 4-email cold outreach sequence. Email 1: Pattern interrupt + value prop in under 80 words. Email 2 (3 days later): Quick follow-up with a relevant case study or stat. Email 3 (5 days later): Different angle — address a specific pain point. Email 4 (7 days later): Breakup email with soft CTA. For each email: Subject line | Body (under 100 words) | CTA. No fluff. No "I hope this finds you well."'
             },
           ].map((p, i) => (
             <div key={i} style={{background:'var(--gray-900)',border:'1px solid var(--gray-800)',borderRadius:14,padding:28}}>
@@ -377,7 +352,7 @@ export default function EmailMarketingKit() {
       <section style={{paddingTop:0}}>
         <a href="/email-subject-line-tester" style={{
           display:'block',background:'linear-gradient(135deg, #FFFBEB, #FEF3C7)',border:'2px solid rgba(217,119,6,0.2)',
-          borderRadius:16,padding:'24px 28px',textDecoration:'none',transition:'transform 0.15s',
+          borderRadius:16,padding:'24px 28px',textDecoration:'none',transition:'transform 0.15s'
         }}>
           <div style={{display:'flex',justifyContent:'space-between',alignItems:'center',flexWrap:'wrap',gap:12}}>
             <div>

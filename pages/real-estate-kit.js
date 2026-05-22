@@ -70,32 +70,7 @@ export default function RealEstateKit() {
                 "transitTime": { "@type": "QuantitativeValue", "minValue": "0", "maxValue": "0", "unitCode": "d" }
               }
             }
-          },
-          "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "4.9",
-            "reviewCount": "31"
-          },
-          "review": [
-            {
-              "@type": "Review",
-              "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-              "author": { "@type": "Person", "name": "Robert K." },
-              "reviewBody": "As a solo agent doing 30+ transactions a year, this kit is a lifesaver. The instant lead response templates alone have recovered at least 5 leads that would have gone cold. Worth 100x the price."
-            },
-            {
-              "@type": "Review",
-              "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-              "author": { "@type": "Person", "name": "Diana M." },
-              "reviewBody": "The listing description generator is incredible. I used to spend 30 minutes per listing — now it takes 2 minutes and the descriptions are better than what I was writing. My sellers love them."
-            },
-            {
-              "@type": "Review",
-              "reviewRating": { "@type": "Rating", "ratingValue": "4", "bestRating": "5" },
-              "author": { "@type": "Person", "name": "Greg W." },
-              "reviewBody": "Great templates for lead follow-up and client communication. The 30-day nurture sequence keeps prospects engaged without me having to remember to follow up. Would recommend to any agent."
-            }
-          ]
+          }
         })}} />
       </Head>
 

@@ -50,32 +50,7 @@ export default function Bundle() {
               }
             }
           },
-          "image": "https://www.midastools.co/og-image.png",
-          "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "4.9",
-            "reviewCount": "47"
-          },
-          "review": [
-            {
-              "@type": "Review",
-              "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-              "author": { "@type": "Person", "name": "Sarah M." },
-              "reviewBody": "This bundle is insane value. I use the real estate kit and freelancer kit daily — they've saved me easily 10 hours a week. Having all future kits included sealed the deal."
-            },
-            {
-              "@type": "Review",
-              "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-              "author": { "@type": "Person", "name": "James T." },
-              "reviewBody": "Bought the bundle instead of individual kits and it was the right call. The prompt quality is way above what I was writing myself. My email open rates jumped 40% using the email marketing kit."
-            },
-            {
-              "@type": "Review",
-              "reviewRating": { "@type": "Rating", "ratingValue": "4", "bestRating": "5" },
-              "author": { "@type": "Person", "name": "Priya K." },
-              "reviewBody": "Great collection of prompts across every category. I primarily use the SaaS founder and content creator kits. Would love even more advanced prompts for technical writing, but overall excellent value for $97."
-            }
-          ]
+          "image": "https://www.midastools.co/og-image.png"
         })}} />
       </Head>
 
@@ -190,98 +165,98 @@ export default function Bundle() {
               abbr: 'VP', name: 'AI Video Content Pack', price: '$29', bg: 'var(--card-cyan)',
               desc: '150+ ready-to-use video scripts and production briefs. Paste into Veo 3.1, Kling 3.0, Runway, or Pika — get professional videos without hiring a videographer.',
               link: '/ai-video-prompt-pack',
-              items: ['25 social media video scripts ready to produce', '25 product demo & marketing videos', '25 tutorial & educational videos', '25 cinematic & storytelling videos', '25 corporate & business videos', '25 viral trending-style videos'],
+              items: ['25 social media video scripts ready to produce', '25 product demo & marketing videos', '25 tutorial & educational videos', '25 cinematic & storytelling videos', '25 corporate & business videos', '25 viral trending-style videos']
             },
             {
               abbr: 'IP', name: 'AI Image Content Pack', price: '$29', bg: 'var(--card-pink)',
               desc: '150+ ready-to-generate image briefs for social media, branding, product shots, and viral styles. Paste into ChatGPT or Midjourney — no designer needed.',
               link: '/ai-image-prompt-pack',
-              items: ['25 social media graphics ready to generate', '25 brand & marketing images', '25 e-commerce product shots', '25 blog & content graphics', '25 professional headshots & portraits', '25 viral aesthetic images'],
+              items: ['25 social media graphics ready to generate', '25 brand & marketing images', '25 e-commerce product shots', '25 blog & content graphics', '25 professional headshots & portraits', '25 viral aesthetic images']
             },
             {
               abbr: 'MP', name: 'AI Business Writing Pack', price: '$29', bg: 'var(--card-amber)',
               desc: '145+ ready-to-use business documents — sales copy, social posts, blog drafts, SOPs, and career materials. Open, customize 2-3 words, publish.',
               link: '/ai-prompt-mega-pack',
-              items: ['35 sales & copywriting pieces done', '35 social media posts written', '35 content pieces drafted', '35 business SOPs & ops docs', '35 personal brand assets', '35 productivity workflows built'],
+              items: ['35 sales & copywriting pieces done', '35 social media posts written', '35 content pieces drafted', '35 business SOPs & ops docs', '35 personal brand assets', '35 productivity workflows built']
             },
             {
               abbr: 'SK', name: 'OpenClaw Starter Kit', price: '$29', bg: 'var(--card-blue)',
               desc: 'Deploy your AI entrepreneur. SOUL.md templates, heartbeat system, product launch prompts, revenue ops playbook.',
               link: '/',
-              items: ['5 SOUL.md templates', 'Heartbeat workflow system', 'Product launch prompts', 'Revenue ops playbook', 'Complete setup guide'],
+              items: ['5 SOUL.md templates', 'Heartbeat workflow system', 'Product launch prompts', 'Revenue ops playbook', 'Complete setup guide']
             },
             {
               abbr: 'RE', name: 'Real Estate AI Kit', price: '$49', bg: 'var(--card-green)',
               desc: 'Your listings written, follow-ups drafted, market reports done. Built for agents who want the work handled, not another tool to learn.',
               link: '/real-estate-kit',
-              items: ['50 listing descriptions ready to post', '30-day follow-up email sequences written', 'Market analysis reports pre-built', 'Open house email & social campaigns done', 'Lead response scripts ready to send'],
+              items: ['50 listing descriptions ready to post', '30-day follow-up email sequences written', 'Market analysis reports pre-built', 'Open house email & social campaigns done', 'Lead response scripts ready to send']
             },
             {
               abbr: 'CC', name: 'Content Creator Kit', price: '$39', bg: 'var(--card-purple)',
               desc: 'Your next 90 days of content — written, formatted, and ready to post. Twitter threads, YouTube scripts, newsletters, all done.',
               link: '/content-creator-kit',
-              items: ['30 Twitter threads written', '10 YouTube scripts drafted', '12 newsletter editions ready', '90-day content calendar filled out', 'Cross-platform repurposing done'],
+              items: ['30 Twitter threads written', '10 YouTube scripts drafted', '12 newsletter editions ready', '90-day content calendar filled out', 'Cross-platform repurposing done']
             },
             {
               abbr: 'FL', name: 'Freelancer Automation Kit', price: '$39', bg: 'var(--card-pink)',
               desc: 'Your proposals written, onboarding emails drafted, invoice reminders ready. Close more clients without the admin grind.',
               link: '/freelancer-kit',
-              items: ['10 client proposals pre-written', 'Invoice & payment reminder emails done', 'Client onboarding email sequence ready', 'Scope creep response scripts written', 'Rate negotiation scripts prepared'],
+              items: ['10 client proposals pre-written', 'Invoice & payment reminder emails done', 'Client onboarding email sequence ready', 'Scope creep response scripts written', 'Rate negotiation scripts prepared']
             },
             {
               abbr: 'SB', name: 'Small Business AI Kit', price: '$39', bg: 'var(--card-cyan)',
               desc: 'Your social media, emails, hiring posts, and customer replies — all written and ready to use. Like having a marketing team for $39.',
               link: '/small-business-kit',
-              items: ['60 social media posts pre-written', 'Email marketing campaigns drafted', 'Customer service reply scripts done', 'Job postings & HR emails written', 'Sales follow-up sequences ready'],
+              items: ['60 social media posts pre-written', 'Email marketing campaigns drafted', 'Customer service reply scripts done', 'Job postings & HR emails written', 'Sales follow-up sequences ready']
             },
             {
               abbr: 'EC', name: 'E-commerce AI Kit', price: '$39', bg: 'var(--card-green)',
               desc: 'Your product descriptions written, email sequences built, ad copy ready to run. Launch products faster without hiring a copywriter.',
               link: '/ecommerce-kit',
-              items: ['50 product descriptions written', 'Email marketing sequences done', 'Ad copy for Facebook/Google ready', 'Social media product posts drafted', 'SEO product pages pre-written'],
+              items: ['50 product descriptions written', 'Email marketing sequences done', 'Ad copy for Facebook/Google ready', 'Social media product posts drafted', 'SEO product pages pre-written']
             },
             {
               abbr: 'SF', name: 'SaaS Founder AI Kit', price: '$39', bg: 'var(--card-blue)',
               desc: 'Your Product Hunt launch copy, onboarding emails, churn-prevention sequences — all written. Ship your SaaS faster.',
               link: '/saas-founder-kit',
-              items: ['Product Hunt launch copy written', 'Onboarding & activation emails done', 'Churn prevention email sequences ready', 'Growth marketing campaigns drafted', 'Pricing page & positioning copy finished'],
+              items: ['Product Hunt launch copy written', 'Onboarding & activation emails done', 'Churn prevention email sequences ready', 'Growth marketing campaigns drafted', 'Pricing page & positioning copy finished']
             },
             {
               abbr: 'NT', name: 'Notion AI Templates Kit', price: '$39', bg: 'var(--card-purple)',
               desc: '150+ Notion templates pre-built with AI workflows. Your project management, CRM, and content systems — set up and ready to use.',
               link: '/notion-templates-kit',
-              items: ['Project management system built', 'CRM & sales pipeline configured', 'Content calendar filled out', 'Productivity dashboard ready', 'Business SOPs documented', 'Freelancer workflow set up'],
+              items: ['Project management system built', 'CRM & sales pipeline configured', 'Content calendar filled out', 'Productivity dashboard ready', 'Business SOPs documented', 'Freelancer workflow set up']
             },
             {
               abbr: 'RC', name: 'AI Resume & Career Kit', price: '$29', bg: 'var(--card-green)',
               desc: 'Your resume rewritten, cover letters drafted, LinkedIn optimized, interview answers prepared. Land the job, not learn a tool.',
               link: '/resume-career-kit',
-              items: ['Resume & CV rewrite done', 'Cover letters for 10+ industries written', 'LinkedIn profile sections optimized', 'Interview answers for 50+ questions prepared', 'Job search strategy mapped out', 'Salary negotiation scripts ready'],
+              items: ['Resume & CV rewrite done', 'Cover letters for 10+ industries written', 'LinkedIn profile sections optimized', 'Interview answers for 50+ questions prepared', 'Job search strategy mapped out', 'Salary negotiation scripts ready']
             },
             {
               abbr: 'SM', name: 'AI Social Media Manager Kit', price: '$39', bg: 'var(--card-cyan)',
               desc: 'Your entire social media operation — 90 days of captions, ad copy, engagement replies, and analytics reports. Done, not DIY.',
               link: '/social-media-kit',
-              items: ['90-day content calendar filled out', 'Caption hooks for every post written', 'Viral content scripts ready to shoot', 'Community management replies drafted', 'Paid ad copy for all platforms done', 'Analytics report templates filled'],
+              items: ['90-day content calendar filled out', 'Caption hooks for every post written', 'Viral content scripts ready to shoot', 'Community management replies drafted', 'Paid ad copy for all platforms done', 'Analytics report templates filled']
             },
             {
               abbr: 'EM', name: 'AI Email Marketing Kit', price: '$29', bg: 'var(--card-amber)',
               desc: 'Your entire email funnel — welcome sequence, sales emails, newsletters, cold outreach — written and ready to paste into any email tool.',
               link: '/email-marketing-kit',
-              items: ['7-email welcome sequence written', 'Sales & promotional emails drafted', '12 newsletter editions ready to send', 'Cold outreach sequences with follow-ups', 'Retention & win-back campaigns done', '50+ subject lines pre-written'],
+              items: ['7-email welcome sequence written', 'Sales & promotional emails drafted', '12 newsletter editions ready to send', 'Cold outreach sequences with follow-ups', 'Retention & win-back campaigns done', '50+ subject lines pre-written']
             },
             {
               abbr: 'PK', name: 'AI Presentation & Pitch Deck Kit', price: '$29', bg: 'var(--card-purple)',
               desc: 'Your pitch deck content, sales presentations, and conference talk outlines — structured, written, ready to drop into slides.',
               link: '/presentation-kit',
-              items: ['Pitch deck — all 10 slides written', 'Sales presentation scripts ready', 'Conference talk outlines done', 'Business reports pre-structured', 'Training workshop decks built', 'Slide storytelling frameworks filled'],
+              items: ['Pitch deck — all 10 slides written', 'Sales presentation scripts ready', 'Conference talk outlines done', 'Business reports pre-structured', 'Training workshop decks built', 'Slide storytelling frameworks filled']
             },
             {
               abbr: 'CW', name: 'Claude Cowork Mastery Kit', price: '$29', bg: 'var(--card-blue)',
               desc: 'Your Claude Cowork setup — done. CLAUDE.md files configured, playbooks installed, prompts loaded. Start delegating to Claude immediately.',
               link: '/claude-cowork-kit',
               badge: 'NEW',
-              items: ['115 tasks you can delegate to Claude right now', '10 role playbooks installed (Marketing, Sales, HR...)', '5 CLAUDE.md files ready to drop in', '5 Global Instructions pre-configured', '5 connector setups done', 'Quick-start — working in 5 minutes'],
+              items: ['115 tasks you can delegate to Claude right now', '10 role playbooks installed (Marketing, Sales, HR...)', '5 CLAUDE.md files ready to drop in', '5 Global Instructions pre-configured', '5 connector setups done', 'Quick-start — working in 5 minutes']
             },
           ].map(kit => (
             <div key={kit.name} className="kit-card">

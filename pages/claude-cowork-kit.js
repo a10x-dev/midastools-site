@@ -71,32 +71,7 @@ export default function ClaudeCoworkKit() {
               }
             }
           },
-          "brand": "Midas Tools",
-          "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "4.9",
-            "reviewCount": "41"
-          },
-          "review": [
-            {
-              "@type": "Review",
-              "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-              "author": { "@type": "Person", "name": "Sarah K." },
-              "reviewBody": "Set up Claude Cowork for my entire marketing team in 30 minutes using these playbooks. The CLAUDE.md templates alone saved me hours of trial and error."
-            },
-            {
-              "@type": "Review",
-              "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-              "author": { "@type": "Person", "name": "Marcus T." },
-              "reviewBody": "Best $29 I've spent on my Claude Max subscription. The role playbooks are incredibly detailed — using the PM playbook daily for sprint planning and PRDs."
-            },
-            {
-              "@type": "Review",
-              "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-              "author": { "@type": "Person", "name": "Jennifer L." },
-              "reviewBody": "Finally someone made a proper Claude Cowork resource. The connector cheatsheets for Google Drive and GitHub integrations were exactly what I needed."
-            }
-          ]
+          "brand": "Midas Tools"
         })}} />
       </Head>
 

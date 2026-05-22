@@ -72,32 +72,7 @@ export default function AIVideoPromptPack() {
               }
             }
           },
-          "brand": "Midas Tools",
-          "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "4.8",
-            "reviewCount": "29"
-          },
-          "review": [
-            {
-              "@type": "Review",
-              "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-              "author": { "@type": "Person", "name": "Alex K." },
-              "reviewBody": "These video prompts are a game-changer for my TikTok content. The camera movement and lighting instructions built into each prompt make the output look cinematic. Veo 3.1 + these prompts = unlimited content."
-            },
-            {
-              "@type": "Review",
-              "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-              "author": { "@type": "Person", "name": "Rachel F." },
-              "reviewBody": "I run a small marketing agency and we use these for client product demos and social media videos. The quality difference between these engineered prompts and what we were writing before is night and day."
-            },
-            {
-              "@type": "Review",
-              "reviewRating": { "@type": "Rating", "ratingValue": "4", "bestRating": "5" },
-              "author": { "@type": "Person", "name": "Marcus D." },
-              "reviewBody": "Great variety of video styles and formats. The trending styles section helped me create viral content that actually got views. Wish there were more prompts for longer-form content, but solid pack overall."
-            }
-          ]
+          "brand": "Midas Tools"
         })}} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
           "@context": "https://schema.org",

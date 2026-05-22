@@ -74,32 +74,7 @@ export default function AIImagePromptPack() {
               }
             }
           },
-          "brand": "Midas Tools",
-          "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "4.7",
-            "reviewCount": "38"
-          },
-          "review": [
-            {
-              "@type": "Review",
-              "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-              "author": { "@type": "Person", "name": "Jessica W." },
-              "reviewBody": "Finally, image prompts that actually produce professional results. The e-commerce product photography prompts saved me hundreds on studio shots. My Etsy listings look 10x better now."
-            },
-            {
-              "@type": "Review",
-              "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-              "author": { "@type": "Person", "name": "Tom H." },
-              "reviewBody": "The viral aesthetic styles section is gold. I've been creating Ghibli-style and cyberpunk content for my social media and engagement has tripled. Works great with Midjourney and DALL-E."
-            },
-            {
-              "@type": "Review",
-              "reviewRating": { "@type": "Rating", "ratingValue": "4", "bestRating": "5" },
-              "author": { "@type": "Person", "name": "Nina P." },
-              "reviewBody": "Good collection of image prompts across different use cases. The headshot prompts are surprisingly effective. Some prompts work better on certain tools than others, but overall very useful."
-            }
-          ]
+          "brand": "Midas Tools"
         })}} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
           "@context": "https://schema.org",

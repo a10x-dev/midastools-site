@@ -71,32 +71,7 @@ export default function MuseSparkKit() {
               }
             }
           },
-          "brand": "Midas Tools",
-          "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "4.8",
-            "reviewCount": "27"
-          },
-          "review": [
-            {
-              "@type": "Review",
-              "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-              "author": { "@type": "Person", "name": "Jason R." },
-              "reviewBody": "Got this the day Muse Spark dropped. The visual coding prompts alone saved me hours of trial and error. Way ahead of any free guides out there."
-            },
-            {
-              "@type": "Review",
-              "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-              "author": { "@type": "Person", "name": "Priya M." },
-              "reviewBody": "The Contemplating mode section is incredible — shows you exactly how to structure complex prompts that take advantage of the parallel reasoning. Nothing else like this exists."
-            },
-            {
-              "@type": "Review",
-              "reviewRating": { "@type": "Rating", "ratingValue": "4", "bestRating": "5" },
-              "author": { "@type": "Person", "name": "David K." },
-              "reviewBody": "Great first-mover resource for Muse Spark. The multimodal prompts are excellent. Would love to see more Contemplating mode examples as Meta rolls it out."
-            }
-          ]
+          "brand": "Midas Tools"
         })}} />
       </Head>
 

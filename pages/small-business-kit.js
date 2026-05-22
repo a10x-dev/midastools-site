@@ -70,32 +70,7 @@ export default function SmallBusinessKit() {
                 "transitTime": { "@type": "QuantitativeValue", "minValue": "0", "maxValue": "0", "unitCode": "d" }
               }
             }
-          },
-          "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "4.7",
-            "reviewCount": "28"
-          },
-          "review": [
-            {
-              "@type": "Review",
-              "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-              "author": { "@type": "Person", "name": "Patricia N." },
-              "reviewBody": "I run a small bakery and was spending 3 hours a day on social media and emails. This kit cut that to 30 minutes. The customer service scripts handle most of our Google review responses automatically."
-            },
-            {
-              "@type": "Review",
-              "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-              "author": { "@type": "Person", "name": "Brian D." },
-              "reviewBody": "The hiring templates alone saved me from making a bad hire. The AI-generated interview questions were way better than what I was asking. Social media content engine keeps all our channels active."
-            },
-            {
-              "@type": "Review",
-              "reviewRating": { "@type": "Rating", "ratingValue": "4", "bestRating": "5" },
-              "author": { "@type": "Person", "name": "Karen L." },
-              "reviewBody": "Good all-around kit for small business owners who wear many hats. The email marketing templates and sales follow-up sequences are the features I use most. Solid value for $39."
-            }
-          ]
+          }
         })}} />
       </Head>
 

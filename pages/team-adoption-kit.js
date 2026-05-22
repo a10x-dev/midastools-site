@@ -71,32 +71,7 @@ export default function TeamAdoptionKit() {
               }
             }
           },
-          "brand": "Midas Tools",
-          "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "4.8",
-            "reviewCount": "27"
-          },
-          "review": [
-            {
-              "@type": "Review",
-              "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-              "author": { "@type": "Person", "name": "Daniel K." },
-              "reviewBody": "Rolled out AI across our 40-person engineering org in a week using these playbooks. The skills library alone saved us months of figuring out what prompts actually work."
-            },
-            {
-              "@type": "Review",
-              "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-              "author": { "@type": "Person", "name": "Rachel M." },
-              "reviewBody": "As Head of Operations, I needed a structured way to get 8 departments using AI consistently. This kit gave us the playbooks, tracking, and onboarding flow we needed. Worth 100x the price."
-            },
-            {
-              "@type": "Review",
-              "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-              "author": { "@type": "Person", "name": "Chris P." },
-              "reviewBody": "The AI Proficiency Assessment and usage leaderboard changed how our team thinks about AI adoption. We went from 2 people using AI to the entire team in 3 weeks."
-            }
-          ]
+          "brand": "Midas Tools"
         })}} />
       </Head>
 

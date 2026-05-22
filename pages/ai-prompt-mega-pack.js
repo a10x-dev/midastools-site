@@ -71,32 +71,7 @@ export default function AIPromptMegaPack() {
               }
             }
           },
-          "brand": "Midas Tools",
-          "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "4.8",
-            "reviewCount": "63"
-          },
-          "review": [
-            {
-              "@type": "Review",
-              "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-              "author": { "@type": "Person", "name": "David R." },
-              "reviewBody": "These prompts are not the generic stuff you find online. Each one has specific variables and formatting instructions that actually get useful output from ChatGPT. Worth every penny."
-            },
-            {
-              "@type": "Review",
-              "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-              "author": { "@type": "Person", "name": "Michelle L." },
-              "reviewBody": "I use the copywriting and social media prompts daily for my marketing agency. Cut my content creation time in half. The productivity section alone is worth the $29."
-            },
-            {
-              "@type": "Review",
-              "reviewRating": { "@type": "Rating", "ratingValue": "4", "bestRating": "5" },
-              "author": { "@type": "Person", "name": "Carlos G." },
-              "reviewBody": "Solid prompt pack with great variety. The business operations prompts helped me create SOPs for my entire team. Would recommend to anyone using AI tools regularly."
-            }
-          ]
+          "brand": "Midas Tools"
         })}} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
           "@context": "https://schema.org",

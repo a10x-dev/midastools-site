@@ -10,7 +10,7 @@
   },
   {
     "name": "reconstruct-recovered-subs.py",
-    "description": "Reconstruct synthetic recovery JSON by diffing the live gist subscribers against FALLBACK_SUBSCRIBERS in lib/subscribers.js. Built 2026-05-14 (Session 30) because pair-Session 25 merged 17 STORAGE FAILED subs directly into the gist but the parsed JSON from recover-storage-failed.py was discarded post-merge. Produces the exact input schema send-recovery-welcomes.py expects. Idempotent (gist∖fallback is deterministic). Usage: python3 .founder/tools/reconstruct-recovered-subs.py --out /tmp/recovered.json — then chain to send-recovery-welcomes.py --in /tmp/recovered.json --dry-run | --apply.",
+    "description": "Reconstruct synthetic recovery JSON by diffing the live gist subscribers against FALLBACK_SUBSCRIBERS in lib/subscribers.js. Built 2026-05-14 (Session 30) because pair-Session 25 merged 17 STORAGE FAILED subs directly into the gist but the parsed JSON from recover-storage-failed.py was discarded post-merge. Produces the exact input schema send-recovery-welcomes.py expects. Idempotent (gist\u2216fallback is deterministic). Usage: python3 .founder/tools/reconstruct-recovered-subs.py --out /tmp/recovered.json \u2014 then chain to send-recovery-welcomes.py --in /tmp/recovered.json --dry-run | --apply.",
     "language": "python",
     "path": "reconstruct-recovered-subs.py",
     "use_count": 1,
@@ -192,5 +192,23 @@
     "deps": [
       "nano-banana-ad-gen.py"
     ]
+  },
+  {
+    "name": "schema-review-audit.py",
+    "description": "Audit kit pages for schema-only review FTC exposure. Detects reviewBody+author entries in JSON-LD that are NEVER rendered in page body (16 CFR Part 255 / Aug 2024 fake-review rule risk). Prints markdown table + per-page detail. --save writes to .founder/deliverables/. --json emits raw. Exit 10 = FTC-exposed pages found. Built S26 May 22 after Vittoria refund post-mortem flagged the pattern site-wide.",
+    "language": "python",
+    "path": "schema-review-audit.py",
+    "use_count": 2,
+    "created_at": "2026-05-22T19:33:54.531553Z",
+    "approved": true
+  },
+  {
+    "name": "remove-schema-only-reviews.py",
+    "description": "Surgically remove aggregateRating + review JSON-LD blocks from 19 FTC-exposed kit pages. Balanced-brace parser handles nested objects; preserves trailing newline before close brace so source stays readable. Idempotent (--dry-run | --apply). Built S26 May 22 after schema-review-audit.py confirmed 19 of 20 kit pages had schema-only reviewBody quotes. Applied 2026-05-22: removed 19 aggregateRating + 19 review arrays (57 fake quotes total, 28189 bytes).",
+    "language": "python",
+    "path": "remove-schema-only-reviews.py",
+    "use_count": 1,
+    "created_at": "2026-05-22T19:33:54.531553Z",
+    "approved": true
   }
 ]

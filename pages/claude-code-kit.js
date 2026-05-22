@@ -72,32 +72,7 @@ export default function ClaudeCodeKit() {
               }
             }
           },
-          "brand": "Midas Tools",
-          "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "4.9",
-            "reviewCount": "34"
-          },
-          "review": [
-            {
-              "@type": "Review",
-              "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-              "author": { "@type": "Person", "name": "David K." },
-              "reviewBody": "The CLAUDE.md templates alone saved me 3 hours of trial and error on my React project. The hook recipes are next level — auto-formatting and security guards running on every edit."
-            },
-            {
-              "@type": "Review",
-              "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-              "author": { "@type": "Person", "name": "Priya M." },
-              "reviewBody": "I was burning through tokens like crazy. The optimization playbook cut my costs by 40% without changing my workflow. The subagent patterns are brilliant."
-            },
-            {
-              "@type": "Review",
-              "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-              "author": { "@type": "Person", "name": "Alex R." },
-              "reviewBody": "Best $39 I've spent on dev tools. Went from fumbling with Claude Code to having a structured workflow with hooks, skills, and proper context files in one afternoon."
-            }
-          ]
+          "brand": "Midas Tools"
         })}} />
       </Head>
 

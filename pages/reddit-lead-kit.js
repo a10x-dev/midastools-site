@@ -71,32 +71,7 @@ export default function RedditLeadKit() {
               }
             }
           },
-          "brand": "Midas Tools",
-          "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "4.9",
-            "reviewCount": "34"
-          },
-          "review": [
-            {
-              "@type": "Review",
-              "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-              "author": { "@type": "Person", "name": "Marcus T." },
-              "reviewBody": "Closed my first Reddit lead within 48 hours of using this kit. $8,500 contract from a post in r/startups. The phrase templates are insanely effective."
-            },
-            {
-              "@type": "Review",
-              "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-              "author": { "@type": "Person", "name": "Sarah L." },
-              "reviewBody": "I was spending $2K/month on Apollo for leads that ghosted me. This kit has me finding warm buyers every morning for free. 23% reply rate vs my old 0.5%."
-            },
-            {
-              "@type": "Review",
-              "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-              "author": { "@type": "Person", "name": "James K." },
-              "reviewBody": "The niche subreddit maps alone saved me weeks of research. I found 3 subreddits I didn't know existed where my exact customers hang out."
-            }
-          ]
+          "brand": "Midas Tools"
         })}} />
       </Head>
 

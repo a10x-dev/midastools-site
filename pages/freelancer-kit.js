@@ -70,32 +70,7 @@ export default function FreelancerKit() {
                 "transitTime": { "@type": "QuantitativeValue", "minValue": "0", "maxValue": "0", "unitCode": "d" }
               }
             }
-          },
-          "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "4.8",
-            "reviewCount": "37"
-          },
-          "review": [
-            {
-              "@type": "Review",
-              "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-              "author": { "@type": "Person", "name": "Sophie R." },
-              "reviewBody": "The proposal generator is a game-changer. I went from winning 1 in 5 proposals to 1 in 3. The templates include value-based pricing frameworks that helped me raise my rates by 40%."
-            },
-            {
-              "@type": "Review",
-              "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-              "author": { "@type": "Person", "name": "Jake T." },
-              "reviewBody": "The payment chaser templates are worth the price alone. I used to feel awkward following up on late invoices. Now I have professional sequences that get me paid faster without burning bridges."
-            },
-            {
-              "@type": "Review",
-              "reviewRating": { "@type": "Rating", "ratingValue": "4", "bestRating": "5" },
-              "author": { "@type": "Person", "name": "Elena C." },
-              "reviewBody": "Really practical kit for freelancers. The scope protector templates saved me from a scope creep situation that would have cost me 20+ unpaid hours. Client onboarding docs are also well thought out."
-            }
-          ]
+          }
         })}} />
       </Head>
 

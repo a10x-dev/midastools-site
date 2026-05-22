@@ -70,32 +70,7 @@ export default function ContentCreatorKit() {
                 "transitTime": { "@type": "QuantitativeValue", "minValue": "0", "maxValue": "0", "unitCode": "d" }
               }
             }
-          },
-          "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "4.8",
-            "reviewCount": "45"
-          },
-          "review": [
-            {
-              "@type": "Review",
-              "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-              "author": { "@type": "Person", "name": "Chris B." },
-              "reviewBody": "The repurposing engine is exactly what I needed. I write one blog post and get a Twitter thread, LinkedIn post, and newsletter draft in 10 minutes. My content output tripled without extra effort."
-            },
-            {
-              "@type": "Review",
-              "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-              "author": { "@type": "Person", "name": "Laura G." },
-              "reviewBody": "The YouTube script builder helped me go from one video a month to one per week. The hook formulas and retention bump suggestions make my scripts so much more engaging. Subscriber growth is accelerating."
-            },
-            {
-              "@type": "Review",
-              "reviewRating": { "@type": "Rating", "ratingValue": "4", "bestRating": "5" },
-              "author": { "@type": "Person", "name": "Nate F." },
-              "reviewBody": "Really useful kit for anyone creating content consistently. The 30-day calendar generator saves me from the 'what should I post' paralysis. Twitter thread templates are particularly strong."
-            }
-          ]
+          }
         })}} />
       </Head>
 

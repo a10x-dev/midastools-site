@@ -70,32 +70,7 @@ export default function NotionTemplatesKit() {
                 "transitTime": { "@type": "QuantitativeValue", "minValue": "0", "maxValue": "0", "unitCode": "d" }
               }
             }
-          },
-          "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "4.7",
-            "reviewCount": "56"
-          },
-          "review": [
-            {
-              "@type": "Review",
-              "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-              "author": { "@type": "Person", "name": "Alyssa T." },
-              "reviewBody": "These Notion templates are beautifully organized. The CRM and sales pipeline template replaced a $50/month tool for my team. Having AI prompts built into each template makes them 10x more useful than plain templates."
-            },
-            {
-              "@type": "Review",
-              "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-              "author": { "@type": "Person", "name": "Derek H." },
-              "reviewBody": "The content calendar template is exactly what I needed. I plan my entire month of blog posts, social media, and newsletters in one Notion dashboard. The AI prompts generate content ideas on demand."
-            },
-            {
-              "@type": "Review",
-              "reviewRating": { "@type": "Rating", "ratingValue": "4", "bestRating": "5" },
-              "author": { "@type": "Person", "name": "Kira S." },
-              "reviewBody": "Great collection of Notion templates. The project management and personal productivity systems are my favorites. Some templates could use more customization options, but the foundation is solid."
-            }
-          ]
+          }
         })}} />
       </Head>
 
