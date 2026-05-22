@@ -178,6 +178,37 @@ export default function ContentCreatorKit() {
         <p style={{textAlign:'center',marginTop:24,fontSize:15,color:'var(--gold)',fontWeight:700}}>Save 10+ hours per week. Publish 5x more content.</p>
       </section>
 
+      {/* Prompt Preview */}
+      <section style={{paddingTop:0}}>
+        <div className="section-label">Prompt Preview</div>
+        <h2>See what's inside</h2>
+        <p style={{color:'var(--gray-400)',fontSize:16,marginBottom:32,lineHeight:1.7}}>3 real prompts from the kit. Copy-paste ready.</p>
+
+        <div style={{display:'flex',flexDirection:'column',gap:20}}>
+          {[
+            {
+              title: 'Master Repurposing Prompt (1 blog → 6 platforms)',
+              prompt: 'You are an expert content repurposing strategist. I\'m going to give you a piece of source content. Your job is to transform it into platform-optimized posts for 6 different platforms (Twitter thread, LinkedIn post, Instagram caption + carousel, newsletter section, YouTube script outline, Reddit post). Each post must feel NATIVE to the platform — adjust tone, length, structure, and CTA for each platform\'s culture. MY BRAND: niche [NICHE], audience [AUDIENCE], tone [TONE], primary CTA [CTA]. SOURCE: """[PASTE BLOG/SCRIPT/PODCAST NOTES]""". For each platform, output the final post ready to publish + a brief note on why you made the choices you did.'
+            },
+            {
+              title: 'YouTube Shorts Script — Hook + Value + CTA',
+              prompt: 'Write a YouTube Shorts script (60 seconds max) about [TOPIC]. TARGET AUDIENCE: [AUDIENCE]. GOAL: [drive subscribers / promote video / establish expertise]. STRICT FORMAT: HOOK (0:00-0:05) one punchy sentence that stops the scroll. SETUP (0:05-0:15) why this matters. VALUE (0:15-0:45) 1-3 actionable points, no fluff. CTA (0:45-0:60) tell them exactly what to do next. RULES: 130-160 words total, written for SPOKEN delivery (contractions, short sentences), hook must work with NO context, include [PAUSE] markers and (visual note: ...) suggestions for B-roll. TONE: [TONE]. NICHE: [NICHE].'
+            },
+            {
+              title: 'Scroll-Stopping Hook Generator (10 variants)',
+              prompt: 'I\'m writing a social media post about [TOPIC] for [PLATFORM]. Generate 10 scroll-stopping hooks using these formulas: Controversial opinion, Number + curiosity, Story hook, Direct challenge, Social proof, FOMO, Question hook, Myth buster, Before/After, Prediction. For each: the complete hook line, why it works, and a full caption built around it. Tone [TONE]. Audience [AUDIENCE].'
+            },
+          ].map((p, i) => (
+            <div key={i} style={{background:'var(--gray-900)',border:'1px solid var(--gray-800)',borderRadius:14,padding:28}}>
+              <div style={{fontSize:12,fontWeight:700,color:'var(--gold)',textTransform:'uppercase',letterSpacing:1.5,marginBottom:8}}>Example Prompt</div>
+              <div style={{fontSize:16,fontWeight:700,marginBottom:12}}>{p.title}</div>
+              <div style={{background:'var(--gray-800)',borderRadius:10,padding:20,fontSize:14,color:'var(--gray-400)',lineHeight:1.7,fontFamily:'monospace',whiteSpace:'pre-wrap'}}>{p.prompt}</div>
+            </div>
+          ))}
+        </div>
+        <p style={{textAlign:'center',marginTop:24,fontSize:14,color:'var(--gray-400)'}}>+ 50 more prompts across repurposing, YouTube, Twitter threads, newsletters, calendars, and hooks.</p>
+      </section>
+
       {/* Pricing */}
       <section id="buy">
         <div style={{background:'var(--gray-900)',border:'2px solid rgba(59,95,255,0.4)',borderRadius:20,padding:48,textAlign:'center',maxWidth:500,margin:'0 auto'}}>
