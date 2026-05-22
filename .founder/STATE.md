@@ -11,6 +11,101 @@
 
 <!-- AGENT-EDITED-BELOW (everything below this line is preserved across ticks) -->
 
+## Session 27 — FTC SCHEMA-ONLY REVIEW AUDIT COMPLETE + 19-PAGE FIX SHIPPED (May 22, 12:30 local / 19:30 UTC)
+
+### Trigger
+Friday standup. Last session (S26 May 21 evening) flagged FTC schema-only-review risk across 17 kit pages as an "independent priority 2" but explicitly deferred removal because "needs coordinated cross-page audit, not piecemeal." The audit was the natural next step + plan-agnostic with Armando's pending Vittoria branch call (3400b90c) + reversible per-page + doesn't touch homepage flywheel. Right work for this slot.
+
+### 🚨 MATERIAL FINDING — FTC exposure is 19 pages wide, not just team-adoption-kit
+Built `.founder/tools/schema-review-audit.py` (FTC 16 CFR Part 255 detector). Ran across all kit pages. Result:
+- **19 of 20 kit pages** had schema-only review pattern
+- **57 fake/unverifiable `reviewBody` quotes** (3 per page × 19 pages)
+- **19 fake `aggregateRating` blocks** with `reviewCount` totals ranging 19→63
+- **Total claimed reviews across all pages: ~750** (sum of reviewCount values)
+- Quote text NEVER rendered in page body on any of the 19 pages — Google saw the reviews; the visitor did not. Exact failure mode the Aug 2024 FTC final rule targets.
+
+Worst case examples:
+- `ai-prompt-mega-pack.js`: claimed 63 reviews, 4.8★ — 0 rendered, 3 schema-only ("David R.", "Michelle L.", "Carlos G.")
+- `notion-templates-kit.js`: claimed 56 reviews, 4.7★ — 0 rendered, 3 schema-only
+- `bundle.js`: claimed 47 reviews, 4.9★ — 0 rendered, 3 schema-only
+
+### ✅ Shipped (commit 30361b6, pushed)
+Built `.founder/tools/remove-schema-only-reviews.py` — balanced-brace parser surgically removes `aggregateRating: {...}` + `review: [...]` blocks from JSON-LD. Idempotent (--dry-run | --apply). Preserves trailing newline before close brace so source stays readable. Verified by post-fix audit re-run (0 FTC-exposed pages remaining) + npx next build clean + all 19 pages render at expected static sizes.
+
+**Files shipped**:
+- 2 new tools (audit + removal)
+- 1 dated deliverable (`.founder/deliverables/schema-only-review-audit-2026-05-22.md`)
+- 19 page edits (28,189 bytes removed)
+- Tools manifest entries
+
+**What I deliberately did NOT do**:
+- Did NOT replace removed reviews with real-customer quotes from Vittoria/Shantae/Arnaud/George — requires consent, sender attribution belongs to Armando, post-Vittoria-refund timing is sensitive
+- Did NOT touch homepage hero (`feedback_protect_flywheel.md`)
+- Did NOT modify pricing, descriptions, or visible body copy on any page
+- Did NOT remove from `resume-career-kit.js` — it never had aggregateRating + review schema (the 1 of 20 that was clean)
+- Did NOT prejudge Vittoria branch choice (3400b90c stays with Armando)
+- Did NOT email any of the 4 real LTM buyers asking for testimonials — same reason as above
+
+### 🟢 SECONDARY FINDING — first real-human gist conversion in weeks
+Inspected the +3 sub delta (39→42 since S26) via raw gist API:
+- **curlylou7@aol.com** (May 18, SE, Mac UA matching submitaitools.org bot fingerprint) = 4th verification crawler signup
+- **Cmyrick25@gmail.com** (May 20, US/Android/Indianapolis, source=`kit-page-capture`, referrer=`manduks.github.io`) — **REAL human conversion from a gist**, first one in weeks. Day-1 nurture email fired today (May 22 09:17 UTC) per `sent_day_1` timestamp in gist record. The gist-as-acquisition-channel framing (S118 documented as our #1 traffic source) is producing real ICP conversions at low volume.
+
+Real-human sub count: 42 raw / **38 real-human** (4 bots subtracted: timo/r.d.le.vinmd/benjamin/curlylou7).
+
+### Why this is bottleneck-direct, not motion
+- **Trust IS conversion** when buyers already arrive at the page (S24's `buyer-vs-funnel-mismatch`: our 4 LTM buyers all used Stripe Link one-click). They scan for legitimacy signals; schema-only reviews are LEGITIMACY THEATER that breaks the moment they look at the page body.
+- **FTC exposure is real exposure**, not theoretical. The Aug 2024 rule lets the agency impose civil penalties per violation. 19 pages × 3 fake quotes = 57 violations exposed; for a 2-person LLC this is existential risk if reported.
+- **Plan-agnostic**: useful under every Vittoria branch (A build / B deactivate / C honest-copy+raise-price) AND across all 19 non-Vittoria kits. The closer we get to attracting real B2B buyers (per Vittoria signal), the more this exposure matters.
+
+### Confidence
+92% — audit verified by 2-pass run (pre-fix 19 risky, post-fix 0 risky), build clean, push confirmed by hash `6b0308c..30361b6`. Lower than 95% because: (a) cosmetic source-readability passed manual inspection on team-adoption-kit but I didn't re-inspect all 19 transformed files individually — relied on the build pass + audit re-run as validation, (b) loss of star-rating rich snippets in Google SERP MAY cost some CTR (estimated <2% based on rich-snippet research), but tradeoff is correct vs FTC exposure.
+
+### Sprint metric
+ftc_exposed_pages_documented: 0 → 19 (target was 0, hypothesis CONFIRMED — audit found at least 3 exposed pages)
+
+### NEXT_CHECKIN expectation
+Monday May 25 09:00 — weekly SEO/AEO post (per S26 launch). Watch over the weekend for: (1) Armando picking 3400b90c branch for Vittoria, (2) any un-refund or response from Vittoria, (3) Cmyrick25 engagement (Day-2 nurture fires May 23, Day-3 May 24 — first real ICP nurture cycle in weeks).
+
+### Optional follow-up (not shipped this session, surfaced to Armando)
+If he wants real testimonials rendered in page body, the path is:
+1. Ask Shantae (Apr 29 buyer, $97 bundle) — happiest buyer, longest LTV
+2. Ask Arnaud (May 2 buyer, $29 Mega Pack)
+3. SKIP George (not midastools customer per S158 attribution)
+4. SKIP Vittoria (refunded, asking now = poor timing)
+Realistic yield: 1-2 quotes. Better than 57 fake ones, real attribution defendable under FTC review.
+
+### Session 27 EXTENSION — Cmyrick25 buyer-journey trace + /content-creator-kit Prompt Preview shipped (commit 6354826)
+Continuation after FTC fix landed: traced Cmyrick25's full session via KV (41 events, session_id `b1d629d0-943`):
+- LAND `/content-creator-kit` (from manduks.github.io) → HOP `/social-media-kit` → SIGNUP in 69 seconds
+- Then 16 minutes of post-signup exploration: 18 pages, 5+ repeat visits to `/ai-income-blueprint` (persona quiz)
+- First reconstructed real-human gist→signup buyer journey since S118
+
+**Material finding**: `/social-media-kit` (page where Cmyrick25 converted) already has visible Prompt Preview section per S108 playbook. `/content-creator-kit` (landing page) did NOT.
+
+**Shipped** (commit `6354826`, pushed): Prompt Preview section on `/content-creator-kit` with 3 real prompts from `kit-content/content-creator-kit/01,03` — Master Repurposing, YouTube Shorts, Hook Generator. Mirrors social-media-kit pattern. Build clean. Plan-agnostic with all pending decisions.
+
+**Deliverable**: `.founder/deliverables/cmyrick25-buyer-journey-2026-05-22.md` (full session reconstruction + 5 strategic implications + ship rationale + falsifiability).
+
+**Did NOT ship** (saturation discipline):
+- Visible-product-proof port to all 16 other kit pages — no evidence yet supporting them; wait for more conversions on those specific pages
+- Email gate on `/ai-income-blueprint` quiz — Armando strategic call
+- Personal email to Cmyrick25 — sender attribution + Day-1 nurture already fired
+
+**Session deliverables (final)**:
+1. `.founder/tools/schema-review-audit.py` (new — FTC audit detector)
+2. `.founder/tools/remove-schema-only-reviews.py` (new — surgical removal)
+3. `.founder/deliverables/schema-only-review-audit-2026-05-22.md` (FTC audit report)
+4. `.founder/deliverables/cmyrick25-buyer-journey-2026-05-22.md` (buyer journey)
+5. 19 kit pages cleaned of fake JSON-LD reviews (commit 30361b6)
+6. 1 kit page gained Prompt Preview (commit 6354826)
+7. Tools manifest entries
+8. Schedule unchanged (Monday SEO/AEO post still on cadence)
+
+**Sprint metric (revised)**:
+- ftc_exposed_pages_documented: 0 → 19 ✓
+- pages_with_visible_product_proof: 1 (social-media-kit) → 2 (added content-creator-kit) ✓
+
 ## Session 26 — VITTORIA REFUND CONFIRMED + WEEKLY SEO/AEO ROUTINE LAUNCHED (May 21, 17:45 local / May 22 00:50 UTC)
 
 ### Trigger
