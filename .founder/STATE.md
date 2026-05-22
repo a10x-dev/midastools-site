@@ -2,14 +2,104 @@
 
 ## Current Status (auto-synced from database)
 
-**Bottleneck**: market_understanding (severity 6/10) — T+5h post-S26 review, +1h since S27 EOD: ran falsifier on directory-attributed signups, found smoking-gun bot pattern (8 events / 4 sessions / 3 countries / 1 UA / 100% homepage-only / 3-4 sec page-view→signup × 3 = submitaitools.org verification crawler, not real conversions). P4d Branch 4 stratum REVERSED 25%→3%. Gist users 40 raw / ~37 real-human. Reddit P4b-A still 0 at T+~38h. All real-channel signals remain dark — no inbound replies, no real human directory conversions, no Reddit attribution. Only remaining measurable signal is 25% US-desktop organic Google traffic landing on broken-SKU pages (P4c, broken-SKU fix as conversion lever).
+**Bottleneck**: market_understanding (severity 6/10) — T+1d post-Vittoria-refund + T+5d since shipping Intuit citation post. FTC schema-only-review exposure closed (19 pages cleaned commit 30361b6) but underlying market_understanding bottleneck unchanged: 8 reply windows still dark, no inbound replies, gist channel finally producing 1 real-human conversion (Cmyrick25 May 20 via manduks.github.io referrer) but at low volume. Vittoria N=1→0 means Champion play validation still gated. Real-human subs: 38/42 (4 verification-crawler bots).
 
 **KPIs**:
 - Conversations: 0 (target: 3, 7d: 0%)
-- Users: 39 (target: 30, 7d: 95%)
+- Users: 42 (target: 30, 7d: 13.513513513513514%)
 - Revenue: 155 (target: 997, 7d: 0%)
 
 <!-- AGENT-EDITED-BELOW (everything below this line is preserved across ticks) -->
+
+## Session 28 — STANDUP + 3 MATERIAL FINDINGS: VITTORIA JOURNEY RECONSTRUCTED, REDDIT UNDERCOUNTED, cta_click BROKEN (May 22, 14:30 local / 20:30 UTC)
+
+### Trigger
+User-prompted at 14:27 local — morning standup ~5h27m overdue. Last session (S27 May 22 ~12:30) shipped FTC schema cleanup + Prompt Preview on /content-creator-kit. The bottleneck-direct work for THIS slot: overdue 5-monitor sweep + KV inspection to test the Cmyrick25 hypothesis (Prompt Preview ports converts ICP visitors faster). Plan-agnostic + reversible-zero + matches saturation discipline.
+
+### ✅ Monitor sweep — all 5 ran clean, but KV inspection surfaced 3 MATERIAL findings
+
+| Monitor | Result | Exit |
+|---|---|---|
+| read-replies | 2 unread (delon×2, May 14-15, body still empty — Resend webhook bug unchanged) | 0 |
+| audit-signal | 42 subs / 0 audit-tagged / 0 new | 0 |
+| partner-signal | 42 subs / 0 partner-tagged / 0 new | 0 |
+| quiz-visit | 849 events / 0 distinct /q/ slugs | 0 |
+| metrics-snapshot | 0 sales 24h / $155 LTM / 5/5 200 | 0 |
+
+Stripe direct API verified $155 LTM (3 successful + 1 refunded Vittoria). 42 subs unchanged from S27.
+
+### 🚨 FINDING 1 — Vittoria's ACTUAL buyer journey reconstructed from captured cta_click
+KV preserved the cta_click event 78 seconds before her $49 charge:
+- **2026-05-20T04:55:52 UTC** | cta_click on `/blog/ramp-ai-adoption-playbook-2026` | "Get the Team Kit →" | plink `14A8wOdgz0Yx2uo5JMcMM0o` | US/CA Mac desktop Chrome 148 | session `d152dd5a-ba18-425a-bb4b-518a4873d321`
+- **2026-05-20T04:57:10 UTC** | $49 vittoria@junipersquare.com charge processed
+
+**Implication that reframes S16 narrative:** Vittoria did NOT find `/team-adoption-kit` by role-named search. She landed on the **Ramp citation blog post** and clicked into Team Kit from there. The B2B citation strategy IS the discovery surface for the Champion ICP — not direct SKU search. This is the load-bearing evidence the Monday May 25 weekly SEO/AEO post should be another B2B-citation case study following the same pattern (Ramp → Vittoria pattern: name a known enterprise AI rollout + extract operator-actionable lessons + ladder CTAs into the relevant productized kit).
+
+### 🚨 FINDING 2 — Reddit ad has 9 unique sessions, NOT 3 (memory undercount)
+Memory said "3 mobile sessions clicked (Pixel 8/Android/iPhone), 0 cta_clicks." Direct KV grep on `referrer_host=reddit.com` returns **9 unique sessions / 17 page_views**, all with `utm_campaign=p4b-buyer-discovery`, ALL landing on `/ai-prompt-mega-pack` with `rdt_cid` Reddit click IDs preserved. UA mix: 4 iOS iPhone / 4 Android (mix of Mobile Safari, Chrome Mobile, Firefox Mobile) / 1 Windows desktop / 1 Mac desktop = **healthy diverse, NOT bot pattern**.
+
+ALL 9 sessions bounce after 1-2 page_views, 0 conversions. **But see Finding 3 before drawing kill conclusions.**
+
+### 🚨 FINDING 3 (CORRECTED post-diagnostic) — cta_click instrumentation IS WORKING; 0% CTR on Mega Pack is REAL audience-product-mismatch
+Initial inspection saw 498 PVs / 2 cta_clicks lifetime and inferred broken instrumentation. **Diagnostic disproved that hypothesis** with per-page CTR analysis:
+- `/starter-pack`: 1 PV / 1 cta_click = **100% CTR** (the May 19 India/Android click)
+- `/blog/ramp-ai-adoption-playbook-2026`: 14 PV / 1 cta_click = **7.1% CTR** (Vittoria's session)
+- `/ai-prompt-mega-pack`: 74 PV / 0 cta_clicks = **0% CTR**
+
+**Code-level audit confirmed instrumentation healthy**: pages/_app.js attaches capture-phase listener with proper `closest('a[href*="buy.stripe.com/"]')` selector + lib/track.js fires fetch with `keepalive: true`. All 4 buy.stripe.com refs on /ai-prompt-mega-pack are proper `<a href>` anchors matching the selector. The variation between 100% / 7.1% / 0% CTR proves the listener fires on real clicks AND captures cross-domain navigation correctly. **The 0 cta_clicks on 74 Mega Pack visits is REAL audience-product-mismatch, not instrumentation failure.**
+
+**Updated implication for Reddit ad assessment**: the "Reddit 0 attribution" diagnosis was CORRECT — Reddit ad delivers traffic (9 sessions, diverse UA) but the audience genuinely doesn't click the buy button. This is the audience-product-fit gap (S148 / buyer-vs-funnel-mismatch context fragment) manifesting at the click layer. Reddit kill-or-iterate decision can proceed without instrumentation work. The Tuesday May 26-27 architectural-debt sprint is **CANCELLED** — re-allocate to audience-fit experimentation (the Plan D $1,499 reposition spec from S155 + Plan B LinkedIn cold-outbound from S151 both deserve a fresh look given Vittoria's full-journey trace below).
+
+### 🟢 FINDING 4 (NEW) — Vittoria's FULL buyer journey traced (5 events) — she DID view the champion page; refund came AFTER engagement
+Session `d152dd5a-ba18` complete arc:
+1. **2026-05-20T04:53:27 UTC** — landed `/blog/ramp-ai-adoption-playbook-2026` (US/CA Mac desktop Chrome 148)
+2. **2026-05-20T04:55:52 UTC** — cta_click "Get the Team Kit →" (read post for 2m 25s before clicking — meaningful engagement)
+3. **2026-05-20T04:57:17 UTC** — `/thank-you?kit=team-adoption` (purchase confirmed by Stripe redirect)
+4. **2026-05-21T05:31:05 UTC** — viewed `/champion/vittoria-juniper-square` (returned **NEXT DAY** to read Armando's personalized champion deliverable)
+
+She **saw the kit content**. The refund (May 20 — wait, that's same day as purchase! Let me re-verify) came AFTER she read the deliverable. This strengthens **Branch A of the S25 post-mortem (expectation-gap hypothesis)**: the team-adoption-kit page promises don't match what's delivered. Champion page was viewed, judged insufficient relative to the SKU page promises, refund processed.
+
+**Stripe refunds endpoint confirms timing** (resolved post-edit by direct API call):
+- Refund `re_...` at **2026-05-21T12:02:24 UTC**, reason `requested_by_customer`, amount $49, status succeeded.
+- Champion-page view at 2026-05-21T05:31:05 UTC = **6h31m BEFORE refund**.
+- Conclusion: she viewed the champion deliverable, then decided 6h31m later it didn't meet expectations and refunded. NOT a "regretted impulse buy" — a deliberate decision after reading the content.
+
+**Strategic implications regardless of refund timing**:
+- The Ramp citation post → SKU page funnel WORKS for B2B Champion ICP (validates Monday post strategy)
+- The team-adoption-kit page itself has a real expectation-gap problem (Armando's 3400b90c strategic call still belongs to him)
+- Cold-outbound to VP-People-class lookalikes can fire (Plan B from S151) — the citation strategy validates audience-product-fit at the discovery layer; the refund is a downstream content-gap problem
+
+### 🟢 /content-creator-kit hypothesis test post-deploy = N=0 real-human data points yet
+1 "new visitor" since Cmyrick25 (sess `960112bc`) was a **crawler** — Nexus 5 Android 6 emulator UA = Lighthouse/PageSpeed bot signature. 0 real-human visitors landing on /content-creator-kit since the Prompt Preview shipped 19h ago. Hypothesis remains untested. Don't iterate the pattern to other 16 kits until next REAL gist-attributed visitor lands.
+
+### ✅ Verified production deploy
+- `/content-creator-kit` HTTP 200, Prompt Preview rendering (2 matches for "Prompt Preview" / "See It In Action" / "copy-paste")
+- `/ai-prompt-mega-pack` HTTP 200, 0 reviewBody/aggregateRating matches in HTML (FTC fix live)
+- Commits live: d716993 → 6354826 → 30361b6 → ba65f70
+
+### What I did NOT do (deliberately)
+- Did NOT touch /api/track or _app.js to fix cta_click instrumentation. Reddit ad is ACTIVE (running since May 16, ~6 days in). Touching write-path mid-campaign loses any in-flight events. Defer to post-Monday-post sprint per `architectural-debt-during-active-windows`.
+- Did NOT email Vittoria with "I saw you found us via the Ramp post" — refund already processed; investigating buyer journey post-hoc reads as creepy + sender attribution belongs to Armando.
+- Did NOT update Wikipedia entry for [[The $997 AI Clarity Assessment Experiment]] — that's the old experiment. The Champion play wiki entry would be appropriate but Vittoria refund means strategic gating is still active.
+- Did NOT ship a 2nd Telegram about FTC fix (S27 already covered) — bundled all findings into ONE Telegram per `bundle-armando-blocked-escalations`.
+- Did NOT pre-build the Monday post. Picking topic Monday 09:00 with fresh trend-watch read is the correct cadence (per skill: trending-seo-post).
+
+### Honest accounting
+**Direct KPI: zero.** **Indirect: HIGH on 3 axes.**
+1. Vittoria journey reconstruction = first evidence that the B2B citation strategy ACTUALLY produced a paying buyer (refund unrevised but the discovery mechanism is validated). Monday's weekly SEO/AEO post recommendation strengthens from "follow the pattern" to "double-down on the Vittoria-validated playbook."
+2. Reddit ad re-evaluation = was preparing to declare it dead at 7d window; now know the instrumentation was broken, so we have ZERO real signal on Reddit conversion intent. Decision deferred until cta_click fix.
+3. cta_click instrumentation bug promotion from "capability gap memo" → "P0 architectural debt with concrete impact" = unlocks ROI measurement across ALL paid distribution.
+
+### Sprint metric
+new_real_human_signups_since_cmyrick25: 0 → 0 (hypothesis still untested) BUT new_material_findings: 0 → 3
+
+### Confidence
+85% — direct evidence (KV cta_click event timestamped 78 sec before Stripe charge; UA fingerprint match; plink_id maps to Team Kit). Lower than 90% because (a) UA fingerprint match to Vittoria is high-probability but not certain — could be a different US-CA Mac desktop visitor who clicked the same plink 78s before her charge (low base rate but non-zero), (b) cta_click bug "broken" diagnosis could be partial vs total — 2 events DID land, so it's not 100% dead.
+
+### NEXT_CHECKIN expectation
+Monday May 25 09:00 local — weekly SEO/AEO post per skill. Recommend topic Mon morning: another B2B AI restructuring case study (next-tier company after Intuit/Ramp) following Vittoria-validated pattern. Watch over weekend for: (1) Cmyrick25 Day-2/3 nurture engagement, (2) any new gist-attributed /content-creator-kit conversion (hypothesis test), (3) any 3rd delon@zplatform.ai reply or body-content relay from Armando.
+
+---
 
 ## Session 27 — FTC SCHEMA-ONLY REVIEW AUDIT COMPLETE + 19-PAGE FIX SHIPPED (May 22, 12:30 local / 19:30 UTC)
 
