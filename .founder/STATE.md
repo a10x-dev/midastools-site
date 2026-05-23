@@ -56,6 +56,30 @@ Probed kit-content/ structure for the deferred bundle-aggregate "500+ across N k
 ### NEXT_CHECKIN expectation
 Sunday May 24 ~17:00 local (~26h away) — light monitor sweep + 5-min spot-check on Monday's BILL Holdings / Coinbase / Accenture content candidates haven't been superseded by weekend news. Monday May 25 09:00 — ship BILL post following Intuit template at `pages/blog/intuit-3000-layoffs-b2b-ai-restructuring-2026.js`. Bundle-aggregate audit gets its own dedicated session post-Monday.
 
+### Continuation (15:00 local / 21:00 UTC) — SCHEDULE.md HYGIENE: 14 STALE DUE-NOW ENTRIES DISABLED (commit 7bdd642 pushed)
+
+User pushed "continue working on highest-impact task" after the bound-and-close above. Honest re-evaluation found two prior queued items already shipped (metrics-snapshot retry-once fix landed in commit 3bb2ec6 by a parallel agent, not by me; chatgpt-prompts.js audit turned out to be strategic-naming-ambiguous like the bundle-aggregate question I already deferred). The genuinely Armando-independent, session-sized, signal-improving work available: clean stale `once-mayN` entries in SCHEDULE.md that were rendering as "DUE NOW" in the dashboard despite past dates.
+
+**Diff**: 27 active entries → 13 active entries (14 disabled). All disabled entries preserved with status notes (DONE / PAST DATE / superseded) — the lines remain greppable, just no longer flagged as DUE NOW.
+
+**Kept active**:
+- Daily cadence: morning standup, customer reply check, /match inbound traffic, trend-watch digest, partner-signal monitor
+- Weekly: Monday SEO/AEO research + ship + Friday retro
+- Once-when-unblocked: storage recovery flow (still pending Armando inbox dump)
+- Future-dated: June 4 D+30 to Shantae+Arnaud, June 6 Boucher 30d gate, August 3 D+90
+
+**Disabled (representative)**:
+- May 6/8 audit-pitch follow-ups (windows closed, 0/3 replies)
+- May 8 batch-1 D+2 cold-outbound nudge (channel killed, 0/5 replies)
+- May 13 Hunter.io reassess (cold-outbound channel dead)
+- May 14 DECIDE-DAY (fired in pair session)
+- May 15 Plan B LinkedIn wave (superseded by Vittoria/Champion play)
+- May 22 Plan A retro + Boucher 14d kill (Plan A killed, Boucher never started)
+- Daily Hunter-restriction probe (batch fired May 6, channel dead)
+- May 8/12 Boucher pilot fire + fallback (never greenlit)
+
+**Honest accounting**: Direct KPI movement zero. Indirect: removes ~14 false DUE NOW alerts from every future agent read of the dashboard. Saturation discipline check: this IS session-sized hygiene work, NOT pre-build, NOT shipping into a dark channel, NOT Armando-blocked — exactly the shape of legitimate continuation work the user asked for. Confidence 90% (cleanup verified by `grep -c '| true$'` returning 13 + `| false$` returning 15; commit + push verified by `3bb2ec6..7bdd642 main -> main`).
+
 ---
 
 ## Session 30 — SATURDAY MORNING HONEST CLOSE + METRICS-SNAPSHOT FALSE-POSITIVE CAUGHT (May 23, 06:32 local / 13:32 UTC)
