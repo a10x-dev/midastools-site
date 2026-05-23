@@ -11,6 +11,49 @@
 
 <!-- AGENT-EDITED-BELOW (everything below this line is preserved across ticks) -->
 
+## Session 29 CONTINUATION — 🚨 TRUTH-AUDIT MISS CAUGHT: 8 PRODUCT-SPECIFIC 500+ OVERSTATEMENTS FIXED (May 23, 23:50 local / May 24 06:50 UTC, commit a8d6c55 pushed)
+
+### Trigger
+User pushed "Continue working on highest-impact task" after S29 honest-close. The KV deep-check from the close surfaced top-3-traffic pages all blog content with 0 cta_clicks — bottleneck-direct work is auditing the conversion mechanic on the highest-traffic page (`/blog/viral-ai-art-trends-april-2026`, the chatgpt.com AI Overview citation winner).
+
+### 🚨 MATERIAL FINDING — S31 truth-audit (May 14) MISSED 8 instances at higher overstatement than the Mega Pack catch
+Audited the [slug].js file containing the chatgpt-citation-winner. Found "500+" claimed for Image Pack and Mega Pack in 8 product-specific places:
+- **Image Pack 500+ overstated 3.3x** (actual = 150+ per `kit-content/ai-image-prompt-pack/README.md` line 1, verified by 160 ### entries across 6 category files). 5 instances.
+- **Mega Pack 500+ overstated 3.4x** (actual = 145+ per S31 confirmation). 3 instances.
+- The 3.3x ratio is MORE egregious than the Mega Pack 200+→145+ that S31 caught (1.4x).
+- All 8 instances on pages getting real organic traffic; viral-ai-art-trends specifically is the chatgpt.com referrer winner per Session 28 KV inspection.
+
+### Why S31 missed these
+S31 May 14 was pattern-based ("find 200+ → 145+, find 150+ → 65+, etc.). It didn't sweep "500+" because that wasn't a documented stale variant. Same root cause as the lesson `numeric-claim-audit-by-product-not-pattern`: pattern audits leak; product audits catch all variants. S29 continuation found "500+" by reading the actual page surface that gets the most chatgpt-citation traffic, not by pre-pattern grep.
+
+### ✅ Shipped (commit a8d6c55, pushed)
+| File | Instances | Change |
+|---|---|---|
+| `pages/blog/[slug].js` | 3 | viral-ai-art-trends top blockquote + H2 heading + bottom CTA paragraph: 500+ → 150+ |
+| `pages/blog/hug-younger-self-ai-trend-2026.js` | 1 | inline Image Pack CTA: 500+ → 150+ |
+| `pages/blog/chatgpt-caricature-trend-2026.js` | 1 | FINAL CTA Image Pack pitch: 500+ → 150+ |
+| `pages/blog/how-to-write-better-ai-prompts-2026.js` | 3 | Mega Pack CTA + section heading + inline link: 500+ → 145+ |
+
+**Build verify**: `npx next build` clean. Push verified by `d716993..a8d6c55 main -> main`.
+
+### What I deliberately did NOT do (saturation discipline)
+- Did NOT fix the 11 BUNDLE-AGGREGATE "500+ across 8/13/16/21 kits" claims (in [slug].js:790, chatgpt-action-figure, ai-tools-hr-recruiting, ai-tools-nonprofit-leaders, chatgpt-tips-tricks, cold-email-templates, chatgpt-image-prompts, prompt-engineering-guide, tools.js's 1,500+). These need cumulative-count verification across the actual catalog. Separate audit + separate session.
+- Did NOT touch `pages/chatgpt-prompts.js` (7 "500+" instances + page title + meta + og tags). Whole-page branding question; needs source verification on what THIS specific landing page actually displays.
+- Did NOT resolve the kit-count inconsistency (8 vs 13 vs 16 vs 21 kits across copy). Strategic-naming question; belongs to Armando.
+- Did NOT touch unrelated "$500+/mo tools" or "500+ designs" context — those are reader-strategy framings or pricing facts, correct as-is.
+- Did NOT skip-context-check, then 3-pass-style-fix like S31 did. The 8 fixes were verified by reading the surrounding context line-by-line first; safer for the smaller scope.
+
+### Honest accounting
+**Direct KPI: zero (no new sale yet).** **Indirect: meaningful.** The chatgpt.com AI Overview citation winner (the single most-trusted organic traffic stream we have) now displays consistent honest counts on the Image Pack ladder. The trust cost of 3.3x overstated on an AI-Overview-referred visitor is high — they're already trust-skeptical of AI-generated promises, then they land on a page making 3.3x-overstated product claims. Closing that trust leak on the highest-trust traffic stream is the right shape of work even when the direct-KPI delta is unmeasurable for 7-14d.
+
+### Confidence
+92% — source-of-truth verified by file inspection (kit-content README + actual ### count); each fix verified by re-grep; build clean; push verified by commit hash. Lower than 95% because (a) the broader bundle-aggregate question is still open — a single 500+ claim on the BUNDLE could be truthful if cumulative-count is ≥500, so "lots of remaining 500+ in codebase" doesn't automatically mean "lots of remaining false claims"; (b) one Image Pack 500+ claim I missed could exist on a page I didn't audit (didn't grep ALL files in the codebase, only pages/).
+
+### NEXT_CHECKIN expectation
+Sunday May 24 ~17:00 local (~41h away) — light monitor sweep + 5-min spot-check that BILL/Coinbase/Accenture haven't been superseded by weekend news. Monday May 25 09:00 ship BILL post. Bundle-aggregate audit + chatgpt-prompts.js audit + kit-count resolution belong to post-Monday cycles.
+
+---
+
 ## Session 29 — FRIDAY-NIGHT HONEST CLOSE (May 23, 22:30 local / May 23 07:32 UTC)
 
 ### Trigger
