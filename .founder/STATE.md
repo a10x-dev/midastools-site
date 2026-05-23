@@ -11,6 +11,50 @@
 
 <!-- AGENT-EDITED-BELOW (everything below this line is preserved across ticks) -->
 
+## Session 29 — FRIDAY-NIGHT HONEST CLOSE (May 23, 22:30 local / May 23 07:32 UTC)
+
+### Trigger
+User-prompted "what needs to happen next?" at 22:30 local Friday, T+5h since S28 EXT 2 closed (Cmyrick25 framing correction + top-15 referrer map). Sunday May 24 evening sweep + Monday May 25 09:00 ship-BILL-post is the pre-committed next-checkpoint cadence.
+
+### ✅ 5-monitor sweep + KV deep-check — all clean
+| Signal | Result |
+|---|---|
+| read-replies | 2 unread (delon × 2, body still empty — Resend webhook bug unchanged since May 14) |
+| audit-signal | 42 / 0 audit-tagged |
+| partner-signal | 42 / 0 partner-tagged |
+| quiz-visit | 0 /q/ slug clicks |
+| metrics-snapshot | 0 sales 24h / $155 LTM / 5/5 200 OK / 42 subs unchanged |
+| KV deep-check (last 200 events) | 200/200 blank-referrer / 0 /content-creator-kit visits / 0 cta_clicks / top paths = blog content (Felix Craft 25, viral-ai-art 18, ai-tools-pm 13) |
+
+### Open hypothesis test STILL UNTESTED (3 days post-ship)
+S27 continuation shipped Prompt Preview on `/content-creator-kit` (commit 6354826, May 22). Hypothesis: visible product proof converts ICP visitors faster (mirrors Cmyrick25 pattern on /social-media-kit). 0 real-human visitors landed on /content-creator-kit in current window. Cannot falsify or confirm without traffic. **Do not iterate the pattern to other 16 kits** until ≥1 real-human visit confirms the test fired.
+
+### Vibe Prospecting MCP connected mid-session
+First time available. Tempting to enrich the 38 real-human subs or batch-prospect for B2B citation outreach. **NOT firing tonight** because:
+- Per `pre-build-saturation-detector`: 3-week content calendar + Cmyrick25 correction already shipped this week; another pre-build crosses into saturation
+- Per `pre-build-vs-intel-balance`: speculative credit-burn before a decided Branch is wasted prep
+- Per `armando-async-asks`: would be queueing a strategic ask he hasn't framed yet
+- Defer: legitimate use is post-Monday-post if any Cmyrick25-like signups land + need ICP enrichment for follow-up
+
+### What I deliberately did NOT do
+- Did NOT Telegram. Friday 22:30, zero new signal, would compound silence on the 3 already-open async items (delon body / Vittoria branch / FTC follow-up).
+- Did NOT spot-check BILL/Coinbase/Accenture for weekend-displacing news — that's Sunday evening's job. Doing it tonight at 22:30 means re-doing it Sunday (no value).
+- Did NOT ack the delon replies. Body still empty locally; Armando must read Gmail directly.
+- Did NOT pre-build more content for the calendar. 3 candidates pre-built is sufficient; the 4th week is unknown trend-window territory and pre-building it now prejudges.
+- Did NOT explore Vibe Prospecting tool surface. Tool-tourism is motion-vs-progress in disguise; learn the tool against a real ICP question, not speculatively.
+- Did NOT touch the bottleneck KPIs. 42 subs / $155 / 0 conversations unchanged; bottleneck description still current.
+
+### Honest accounting
+**Direct KPI: zero.** **Indirect: operational hygiene only.** This sweep catches anything that would land between 17:00 standup (didn't fire) and Sunday May 24 evening. Without it, a weekend reply / signup / cta_click would sit unacked for ~48h. With it, max-unack window caps at ~22h overnight. The KV deep-check additionally confirms the open hypothesis test is still empty — telling future-self not to claim "Prompt Preview works" without traffic-validated evidence.
+
+### Confidence
+85% — all 5 monitors exit-0, KV cross-checked by direct API probe with 200-event window. Lower than 90% because Resend webhook delon-body bug remains unsolved (the single highest-value inbound signal in 47 days is still inaccessible from this seat).
+
+### NEXT_CHECKIN expectation
+Sunday May 24 evening ~17:00 local — light monitor sweep + 5-min WebSearch spot-check that BILL Holdings / Coinbase / Accenture haven't been superseded by weekend news. Monday May 25 09:00 — pick from `.founder/deliverables/b2b-citation-candidates-2026-05-22.md` shortlist (likely BILL), ship 2,000-2,500 word post following Intuit template at `pages/blog/intuit-3000-layoffs-b2b-ai-restructuring-2026.js`.
+
+---
+
 ## Session 28 EXTENSION 2 — 🚨 CMYRICK25 DISCOVERY-CHANNEL FRAMING CORRECTED + TOP-15 REFERRER MAP (May 22, 16:00 local / 22:00 UTC)
 
 ### Trigger
