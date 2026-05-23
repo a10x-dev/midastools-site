@@ -385,7 +385,7 @@ Art style: bright, modern editorial cartoon with bold outlines and a clean color
         {/* FINAL CTA: PAID PRODUCTS */}
         <div style={{ marginTop: '24px', padding: '32px', background: '#111827', borderRadius: '8px', textAlign: 'center' }}>
           <h3 style={{ margin: '0 0 8px', fontSize: '1.1rem', color: '#fff' }}>Want every AI image prompt you will ever need?</h3>
-          <p style={{ margin: '0 0 16px', color: '#9CA3AF', fontSize: '15px' }}>The <strong style={{ color: '#fff' }}>AI Image Prompt Pack</strong> includes 500+ tested prompts for caricatures, action figures, portraits, product shots, social media, and more. Or grab the <strong style={{ color: '#fff' }}>All Kits Bundle</strong> for every prompt pack we make &mdash; image, sales, marketing, content, and beyond. One purchase, lifetime access.</p>
+          <p style={{ margin: '0 0 16px', color: '#9CA3AF', fontSize: '15px' }}>The <strong style={{ color: '#fff' }}>AI Image Prompt Pack</strong> includes 150+ tested prompts for caricatures, action figures, portraits, product shots, social media, and more. Or grab the <strong style={{ color: '#fff' }}>All Kits Bundle</strong> for every prompt pack we make &mdash; image, sales, marketing, content, and beyond. One purchase, lifetime access.</p>
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px', justifyContent: 'center' }}>
             <a href={IMAGE_PACK_URL} style={{ display: 'inline-block', background: '#3B5FFF', color: '#fff', padding: '14px 28px', borderRadius: '6px', textDecoration: 'none', fontWeight: '700', fontSize: '15px' }}>
               AI Image Prompt Pack &mdash; $29

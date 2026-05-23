@@ -1307,7 +1307,7 @@ One Reddit lead could be worth $5K+. The kit costs $49. Your first reply pays fo
 
 Here are the **10 viral AI art trends** dominating 2026, why they work, and how to create them yourself (with free tools).
 
-> **Want the prompts behind every trend below — pre-tested, copy-paste, all 500+?** Skip the trial-and-error: **[Get the AI Image Prompt Pack — $29 →](https://buy.stripe.com/8x24gyccv7mVglegoqcMM0i)** (Ghibli, Funko, action-figure, fantasy maps, tattoos, dioramas, LEGO + more). Or **[get all 21 Midas Tools kits — $97 →](https://buy.stripe.com/bJe7sK0tNdLjgle0pscMM0b)** (85% off — includes the Image Pack). 30-day guarantee.
+> **Want the prompts behind every trend below — pre-tested, copy-paste, all 150+?** Skip the trial-and-error: **[Get the AI Image Prompt Pack — $29 →](https://buy.stripe.com/8x24gyccv7mVglegoqcMM0i)** (Ghibli, Funko, action-figure, fantasy maps, tattoos, dioramas, LEGO + more). Or **[get all 21 Midas Tools kits — $97 →](https://buy.stripe.com/bJe7sK0tNdLjgle0pscMM0b)** (85% off — includes the Image Pack). 30-day guarantee.
 
 > **May 2026 update:** All 10 trends below are still actively viral. The "Hug My Younger Self" trend (#6) crossed 50M+ posts globally in early May. The Action Figure / Funko Pop trend (#3) keeps mutating into new sub-styles (LEGO, Anime, Pokémon). For the freshest May 2026 lineup, see our companion piece: [10 Best AI Tools to Try in May 2026 →](/blog/best-ai-tools-may-2026).
 
@@ -1423,9 +1423,9 @@ Turn yourself into a LEGO minifigure, complete with ABS plastic texture, box art
 
 ---
 
-## Want 500+ Premium AI Image Prompts?
+## Want 150+ Premium AI Image Prompts?
 
-Our free generators give you one prompt at a time. The **AI Image Prompt Pack** gives you **500+ curated prompts** across all these trends — organized, tested, and ready to copy-paste.
+Our free generators give you one prompt at a time. The **AI Image Prompt Pack** gives you **150+ curated prompts** across all these trends — organized, tested, and ready to copy-paste.
 
 - [Get the AI Image Prompt Pack — $29](https://buy.stripe.com/8x24gyccv7mVglegoqcMM0i)
 - [Get All 21 Kits — $97 (85% off)](https://buy.stripe.com/bJe7sK0tNdLjgle0pscMM0b)

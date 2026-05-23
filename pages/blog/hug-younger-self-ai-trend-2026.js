@@ -233,7 +233,7 @@ export default function HugYoungerSelfAITrend() {
 
         <h2 style={sty.h2}>Want more image prompts like this?</h2>
 
-        <p>The <Link href="/hug-younger-self-generator" style={{ color: '#3B5FFF' }}>Hug My Younger Self Generator</Link> is free and gives you unlimited prompt variations. If you want a full library of image prompts &mdash; portraits, product shots, cinematic scenes, viral styles, and more &mdash; the <a href="https://buy.stripe.com/4gMbJ0dgz4aJ1qkb46cMM0d" style={{ color: '#3B5FFF' }}>Image Prompt Pack ($29)</a> has 500+ ready-to-use prompts across every major AI image tool.</p>
+        <p>The <Link href="/hug-younger-self-generator" style={{ color: '#3B5FFF' }}>Hug My Younger Self Generator</Link> is free and gives you unlimited prompt variations. If you want a full library of image prompts &mdash; portraits, product shots, cinematic scenes, viral styles, and more &mdash; the <a href="https://buy.stripe.com/4gMbJ0dgz4aJ1qkb46cMM0d" style={{ color: '#3B5FFF' }}>Image Prompt Pack ($29)</a> has 150+ ready-to-use prompts across every major AI image tool.</p>
 
         <hr style={{ margin: '40px 0', border: 'none', borderTop: '1px solid #eee' }} />
 

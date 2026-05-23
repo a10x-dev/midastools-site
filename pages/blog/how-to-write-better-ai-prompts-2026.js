@@ -643,13 +643,13 @@ Tone: Confident, transparent, forward-looking. Acknowledge challenges but frame 
           <p style={s.p}>
             If you want to skip the learning curve entirely, our{' '}
             <Link href="/prompt-enhancer" style={{ color: 'var(--accent)', textDecoration: 'none', fontWeight: 600 }}>free Prompt Enhancer</Link>{' '}
-            does the CRAFT optimization automatically. Or if you want 500+ ready-to-use expert prompts, the Mega Pack below has you covered.
+            does the CRAFT optimization automatically. Or if you want 145+ ready-to-use expert prompts, the Mega Pack below has you covered.
           </p>
 
           {/* CTA */}
           <div style={s.cta}>
             <p style={{ fontSize: '12px', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '1.5px', color: 'rgba(255,255,255,0.5)', marginBottom: '12px' }}>Stop Writing Prompts From Scratch</p>
-            <p style={{ fontSize: '22px', fontWeight: 900, marginBottom: '8px' }}>Get 500+ Pre-Written Expert Prompts</p>
+            <p style={{ fontSize: '22px', fontWeight: 900, marginBottom: '8px' }}>Get 145+ Pre-Written Expert Prompts</p>
             <p style={{ fontSize: '15px', color: 'rgba(255,255,255,0.6)', marginBottom: '20px', maxWidth: '480px', margin: '0 auto 20px', lineHeight: 1.6 }}>
               Every prompt uses the CRAFT framework. Covers business, marketing, sales, content, images, presentations, resumes, and more. Copy, paste, customize, done.
             </p>
@@ -662,7 +662,7 @@ Tone: Confident, transparent, forward-looking. Acknowledge challenges but frame 
           <p style={s.p}>
             Want even more? Our{' '}
             <Link href="/ai-prompt-mega-pack" style={{ color: 'var(--accent)', textDecoration: 'none', fontWeight: 600 }}>AI Prompt Mega Pack</Link>{' '}
-            includes 500+ prompts across every business category, or{' '}
+            includes 145+ prompts across every business category, or{' '}
             <Link href="/bundle" style={{ color: 'var(--accent)', textDecoration: 'none', fontWeight: 600 }}>get all 16 kits</Link>{' '}
             for the complete toolkit.
           </p>
