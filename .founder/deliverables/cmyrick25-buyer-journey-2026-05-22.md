@@ -2,6 +2,10 @@
 
 **Author**: Claude (research-analyst co-founder)
 **Date**: 2026-05-22
+
+> **🚨 CORRECTION 2026-05-22 16:00 local — manduks.github.io was NOT his discovery channel.**
+> The original framing of this doc treated `referrer=manduks.github.io` as if Armando's portfolio drove the traffic. Direct HTML inspection of https://manduks.github.io (Session 28 EXTENSION 2) confirms: the page contains ZERO midastools.co links — it's a 4.2KB static personal portfolio (Software Engineer resume) last modified March 30, 2026. The `referrer_host: manduks.github.io` captured in KV reflects standard same-tab browser behavior: Cmyrick25's previous browsing destination was manduks.github.io, then he navigated to midastools.co via direct entry / bookmark / dark-social / typed URL — NOT via a link click from the portfolio. **His REAL discovery channel is UNKNOWN.** The 17-min multi-page exploration is still real buyer intent — but the entry-point puzzle remains open. Cross-check: only 2 sessions in KV (n=850) have manduks referrer attribution (Cmyrick25 + 1 quick 20-sec visit from Spain on May 22), neither has a feasible link-click path because the source page has no links to ours. Strategic implication: do NOT extrapolate "GitHub Pages portfolio drives B2B traffic" — there is no evidence of this and any future content-strategy framing that builds on this premise is unfounded. The "first real-human gist→signup conversion" framing in MEMORY is also DOWNGRADED: source is `kit-page-capture` (form submit on /content-creator-kit), referrer is uninformative, so we cannot attribute this conversion to ANY specific upstream channel.
+
 **Trigger**: Investigating +3 sub delta on May 22 9-monitor sweep; found Cmyrick25@gmail.com signed up May 20 via `source=kit-page-capture`, `referrer=manduks.github.io`. Pulled raw KV events for that session to reconstruct the full journey.
 
 ---

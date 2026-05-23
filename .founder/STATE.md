@@ -11,6 +11,93 @@
 
 <!-- AGENT-EDITED-BELOW (everything below this line is preserved across ticks) -->
 
+## Session 28 EXTENSION 2 — 🚨 CMYRICK25 DISCOVERY-CHANNEL FRAMING CORRECTED + TOP-15 REFERRER MAP (May 22, 16:00 local / 22:00 UTC)
+
+### Trigger
+User pushed "continue working on highest-impact task" after S28 EXTENSION (content calendar) closed. Bottleneck-direct probe: investigate the manduks.github.io referrer claim from S27 continuation — it's #3 in our KV referrer-host rankings but the source page has zero midastools links.
+
+### 🚨 MATERIAL FINDING — S27 Cmyrick25 framing was wrong; "first gist→signup" downgraded to "first kit-page-capture signup with unknown upstream"
+Direct curl of manduks.github.io raw HTML confirmed: 4.2KB static personal portfolio (Software Engineer resume for Armando Gonzalez), last modified March 30 2026, **ZERO midastools.co links**. Yet KV shows 39 events / 2 sessions / 4.6% of all tracked traffic attributed to `referrer_host: manduks.github.io`.
+
+**Both sessions identified:**
+- Session `b1d629d0`: **Cmyrick25** (US/Indianapolis, Android 10 Chrome mobile, 37 events over 17 min, multi-page exploration matching documented profile)
+- Session `87a1b949`: Spain/Andalusia, Linux X86 desktop, 2 events over 20 sec on /prompt-enhancer + /soul-generator (brief quick-look, not a conversion)
+
+**Neither session is Armando QA** (his Mac UA wouldn't be Linux X86 or Android 10).
+
+**Resolution:** Standard same-tab browser behavior — both users had manduks.github.io as their previous browsing destination (maybe from a Google search for "Armando Gonzalez software engineer", or a LinkedIn-profile route to his portfolio), then navigated to midastools.co via direct entry / bookmark / dark-social / typed URL. The browser sends the previous page as referrer regardless of whether that page LINKED to the destination.
+
+**Cmyrick25's REAL discovery channel is UNKNOWN.** The 17-min multi-page exploration + signup is real buyer intent, but the entry-point puzzle is open.
+
+### 📊 Top 15 referrer hosts in KV (n=850, last ~5d window)
+| Rank | Host | Events | % | Channel interpretation |
+|---|---|---|---|---|
+| 1 | (blank/empty) | 588 | 69.2% | Direct + referrer-stripped (HTTPS→HTTP, mobile apps, dark social) |
+| 2 | www.google.com | 114 | 13.4% | Organic search ✅ |
+| 3 | manduks.github.io | 39 | 4.6% | ⚠️ Honest referrer attribution but NOT a discovery channel (source has no links) |
+| 4 | gist.github.com | 34 | 4.0% | Our gists ✅ (REAL — they DO link to midastools) |
+| 5 | www.reddit.com | 27 | 3.2% | Reddit ad (P4b-A) ✅ |
+| 6 | chatgpt.com | 26 | 3.1% | AI Overviews / ChatGPT citations ✅ |
+| 7-15 | yandex, bing, github, stripe, teams | 22 total | 2.6% | Tail |
+
+**Adjusted real-channel ranking (excluding the manduks measurement-artifact):** Direct/dark (588) → Google (114) → Gists (34) → Reddit (27) → ChatGPT (26). Gist channel attribution holds; it's our #2 NAMED channel after Google organic.
+
+### ✅ Corrections shipped (no code changes — file edits only)
+1. **`.founder/deliverables/cmyrick25-buyer-journey-2026-05-22.md`** — top-of-file correction block + downgrade language ("first real gist→signup" → "first kit-page-capture signup with unknown upstream"). Strategic implication: do NOT extrapolate "GitHub Pages portfolio drives B2B traffic."
+2. **STATE.md** — this block.
+
+### What I deliberately did NOT do
+- Did NOT correct MEMORY.md headlines (S27 continuation entry). The correction at the deliverable level + STATE makes it explicit; the historical record stays intact so future-self can see the correction trail.
+- Did NOT modify subscribe.js or /api/track to handle "referrer_host without link path" — that's not a bug, it's standard browser behavior. The capability gap is in how we INTERPRET the field, not how we capture it.
+- Did NOT investigate the Spain session beyond the 2-event reading — it's a quick visitor, not a conversion, and the Linux desktop UA doesn't match any known cohort.
+
+### 🟡 Capability gap logged
+KV `referrer_host` field captures previous-browsing-destination NOT discovery-via-link. To differentiate "user clicked a link FROM page A" vs "user had page A open then navigated elsewhere," we'd need either (a) cross-check that the referrer page contains a midastools link (manual or scheduled crawl), or (b) augment client-side to capture `document.referrer` PLUS landing URL params PLUS click-source. Defer to architectural-debt sprint post-decide-day; current interpretation discipline = "referrer is intel, not proof."
+
+### Honest accounting
+**Direct KPI: zero.** **Indirect: medium.** Corrected a S27 framing error before it propagated into Monday's content strategy. Now we know: gist channel is still #2 named channel (34 events real), manduks attribution is a measurement artifact, and Cmyrick25's real entry route is unknown. Future content-strategy decisions won't build on the false "Armando's portfolio is a discovery channel" premise.
+
+### Confidence
+92% — direct curl of manduks.github.io HTML (zero matches for midastools/content/social/income/business/kit/prompt), direct KV inspection of both sessions with UA + geo + page sequence verified. Higher than usual because the disproof is concrete (zero links in 4.2KB static HTML) and the remaining puzzle (real discovery channel) is honestly framed as unknown.
+
+### NEXT_CHECKIN expectation
+Sunday May 24 evening — light monitor sweep + spot-check Monday's content calendar candidates haven't been superseded by weekend news. Monday May 25 09:00 — ship BILL Holdings post.
+
+---
+
+## Session 28 EXTENSION — 3-WEEK B2B CITATION CONTENT CALENDAR PRE-BUILT (May 22, 15:30 local / 21:30 UTC)
+
+### Trigger
+User-prompted "what's next?" 1h after S28 third-continuation closed. Bottleneck-direct + plan-agnostic + non-saturated work available: pre-build candidate research for Monday May 25 09:00 weekly SEO/AEO post. Trend-watch this morning returned ZERO ICP-fit topics. Manual deep-research pass via WebSearch agent surfaces what trend-watch missed.
+
+### ✅ Shipped this session
+**`.founder/deliverables/b2b-citation-candidates-2026-05-22.md`** (~3.5KB, 7 candidates ranked) — research deliverable with 9 cited sources, all validated within Apr 22 – May 22 window. Top 3 selection with full operator-angle framing + ICP fit scores + SEO competition assessment.
+
+### Top 3 picks for the 3-week content calendar
+1. **Monday May 25 → BILL Holdings** (30% cut + $1B buyback same day, CEO declared AI "#1 priority"). DIRECT ICP overlap with Vittoria/Ramp/Intuit cohort (finance ops / VP Finance / CFO orgs). SEO field is empty on operator angle. Highest-conviction pick.
+2. **Week of June 1 → Coinbase** (14% cut, "player-coach" org redesign, Armstrong quote on AI velocity). Strongest org-design story; skews crypto-flavored but the frame is universal.
+3. **Week of June 8 → Accenture × Copilot** (743K employees deployed, 89% MAU, 84% would "deeply miss" tool). Highest direct overlap with Team Adoption Kit upsell — Vittoria's exact buyer profile. Pair with Team Kit CTA.
+
+### Compression impact
+Monday May 25 09:00 standup goes from `trend-watch + research (30 min) → ship (90-120 min)` to `pick from shortlist + ship (90-120 min)`. ~30 min direct savings + higher-quality candidate pool. Plus: 3-week content calendar surfaced as a side-effect.
+
+### What I deliberately did NOT do
+- Did NOT pre-draft the BILL post body. Saturation territory + Monday morning's fresh trend-watch may surface stronger candidate. Pre-drafting prejudges that.
+- Did NOT Telegram Armando. Friday 15:30 with no decide-now framing = noise per `armando-async-asks`. He'll read STATE Monday morning.
+- Did NOT update sitemap or pages/blog/index.js. Premature — those land with the actual post on Monday.
+- Did NOT touch the Vittoria branch decision (3400b90c) — stays with Armando.
+
+### Honest accounting
+**Direct KPI: zero.** **Indirect: medium.** The 3-week content calendar pre-build means each subsequent Monday becomes ship-day-only. Per the Vittoria-validated pattern, BILL Holdings is the highest-conviction next post because it has the strongest CFO-org ICP overlap with our 1 actual buyer-journey-traced conversion. Falsifier: if the BILL post ships and produces zero new gist/SKU-page conversions by June 8, the citation strategy needs a fresh diagnosis (audience-product-fit gap deeper than channel choice).
+
+### Confidence
+85% — every source URL is validated within the 30-day window, every hard number cited; ranking logic matches Vittoria-validated pattern (named entity + hard number + operator angle + ICP fit). Lower than 90% because: (a) one cannot know how the 3-day SEO field shifts over weekend — a competing post may rank for BILL by Monday, (b) candidate "operator angle" is a content-strategy bet, not a measured one.
+
+### NEXT_CHECKIN expectation
+Sunday evening May 24 ~17:00 local — light sweep (5 monitors) + spot-check that BILL/Coinbase/Accenture haven't been superseded by weekend news. Monday May 25 09:00 — ship BILL Holdings post following the Intuit/Ramp template at `/blog/intuit-3000-layoffs-b2b-ai-restructuring-2026.js`.
+
+---
+
 ## Session 28 — STANDUP + 3 MATERIAL FINDINGS: VITTORIA JOURNEY RECONSTRUCTED, REDDIT UNDERCOUNTED, cta_click BROKEN (May 22, 14:30 local / 20:30 UTC)
 
 ### Trigger
