@@ -11,6 +11,53 @@
 
 <!-- AGENT-EDITED-BELOW (everything below this line is preserved across ticks) -->
 
+## Session 31 — SATURDAY AFTERNOON SECOND-SWEEP + GMAIL MCP UNLOCK SURFACED + BUNDLE-AUDIT BOUNDED AS SESSION-SIZED (May 23, 14:33 local / 20:33 UTC)
+
+### Trigger
+User-prompted "what needs to happen next?" at 14:33 local Saturday, ~8h after S30 morning close. Pre-committed next checkpoint is Sunday May 24 ~17:00 evening sweep (~26h away). Saturday afternoon is OUTSIDE planned cadence. Legitimate work at this slot per saturation discipline: verify sweep stability + probe newly-connected MCP servers for real-unlock potential (NOT speculative tool-tourism).
+
+### ✅ 5-monitor sweep — all clean, deltas vs morning
+| Signal | Morning S30 | Afternoon S31 | Delta |
+|---|---|---|---|
+| read-replies | 2 unread (delon×2, empty body) | 2 unread (delon×2, empty body) | unchanged |
+| audit-signal | 42 / 0 audit-tagged | 42 / 0 audit-tagged | unchanged |
+| partner-signal | 42 / 0 partner-tagged | 42 / 0 partner-tagged | unchanged |
+| metrics-snapshot | 0 sales 24h / $155 LTM / 41 subs / false-positive PAGE DOWN | 0 sales 24h / $155 LTM / 42 subs / 5/5 200 | sub count normalized to gist truth (42), no false alerts |
+| Stripe LTM | 3 sales / $155 / arnaud May 2 | 3 sales / $155 / arnaud May 2 | unchanged |
+
+### 🟢 MATERIAL CAPABILITY UNLOCK SURFACED — Gmail MCP available, requires Armando `/mcp`
+`claude.ai Gmail` MCP server appeared this session. Probed `mcp__claude_ai_Gmail__authenticate` → returns "Ask the user to run /mcp and select 'claude.ai Gmail' to authenticate." This is the OAuth dance for Anthropic's hosted Gmail MCP — Armando-side action, not unilaterally executable. **But once he runs it, this directly unlocks the 9-day-old delon@zplatform.ai body-content blocker** (Resend webhook captures empty `text`/`html` for both delon replies; Gmail MCP would read the actual Gmail thread).
+
+Also surfaced: `claude.ai Vibe Prospecting` MCP connected with 12 tools (enrich-business, match-prospects, fetch-businesses-events, etc.). Per saturation discipline + `pre-build-saturation-detector`: NOT firing speculatively. Real ICP question first, then tool. No real ICP question gated on Vibe Prospecting tonight.
+
+### 🟡 BUNDLE-AGGREGATE AUDIT SCOPE-CHECKED → DEFERRED AS SESSION-SIZED
+Probed kit-content/ structure for the deferred bundle-aggregate "500+ across N kits" claim audit:
+- 15 kits have shipped README + content directories (ai-image-pack, ai-prompt-mega-pack, ai-video-pack, content-creator, ecommerce, email-marketing, freelancer, notion, presentation, real-estate, resume-career, saas-founder, small-business, social-media, team-adoption)
+- Counting heuristics vary per kit: some use `## Prompt N` (mega-pack 81, freelancer 47, team-adoption 48, real-estate 13), some use `### N. Title` (image-pack 166 lines but 150+ verified), some use neither (resume-career claims 125+ in H2, no structural markers in body)
+- README headers claim mix of 150+/125+/etc; site copy claims "500+ across 8/13/16/21 kits" depending on page
+- **Honest framing**: a clean cumulative audit needs per-kit inspection of README + content files + actual ZIP deliverable mapping → 30-60 min focused session, not a 15-min Saturday afternoon slot. Site copy also has strategic-naming question (8 vs 13 vs 16 vs 21 listed kits across pages) which belongs to Armando.
+- **Scope-check OUTPUT** (preserved here so future-self has the starting data): 15 kits have content; per-kit verified counts so far → image-pack 150+ (S25), mega-pack 145+ (S31), social-media 65+ (S30). 12 remaining kits unverified.
+
+### What I deliberately did NOT do (saturation discipline, second time today)
+- Did NOT do the kit-by-kit deep enumeration. Slot-mismatch (15-min Saturday afternoon vs 30-60 min focused audit session). The right pattern is dedicating a Monday/Tuesday session to it after the BILL Holdings post ships.
+- Did NOT Telegram about Gmail MCP unlock. He's prompting me here, so a Telegram is redundant — the answer goes in this response.
+- Did NOT probe Vibe Prospecting tool surface. No real ICP question to spend speculative credits on.
+- Did NOT do another monitor sweep in the next hour. The cadence is the cadence; running monitors at sub-hour intervals on zero-signal Saturday adds noise, not insight.
+- Did NOT touch the chatgpt-prompts.js audit (separate session per S29-cont deferral, still right).
+- Did NOT pre-build Monday's BILL post body (saturation, Monday morning's fresh trend-watch read is correct cadence).
+- Did NOT patch metrics-snapshot.py uptime check (TASK queued from morning; safer to fix it during a dedicated 30-min slot, not bolt-on to a check-in).
+
+### Honest accounting
+**Direct KPI: zero.** **Indirect: low.** (1) Sub-count normalized from morning's 41 to gist-truth 42 (the morning's metrics-snapshot showed stale 41; gist now agrees with 42 — verification-crawler bot count unchanged at 4, real-human still 38). (2) Gmail MCP unlock path documented so Armando can run `/mcp` on his next session and unlock delon's body content. (3) Bundle-audit scope bounded as session-sized rather than slot-sized — prevents me from drift-shipping a half-audit in the next prompt.
+
+### Confidence
+85% — 4 monitors verified clean by direct API output + Stripe LTM cross-checked. Higher than 88% would require a measurable KPI movement, which didn't happen this session.
+
+### NEXT_CHECKIN expectation
+Sunday May 24 ~17:00 local (~26h away) — light monitor sweep + 5-min spot-check on Monday's BILL Holdings / Coinbase / Accenture content candidates haven't been superseded by weekend news. Monday May 25 09:00 — ship BILL post following Intuit template at `pages/blog/intuit-3000-layoffs-b2b-ai-restructuring-2026.js`. Bundle-aggregate audit gets its own dedicated session post-Monday.
+
+---
+
 ## Session 30 — SATURDAY MORNING HONEST CLOSE + METRICS-SNAPSHOT FALSE-POSITIVE CAUGHT (May 23, 06:32 local / 13:32 UTC)
 
 ### Trigger
