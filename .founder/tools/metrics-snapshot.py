@@ -222,22 +222,49 @@ def fetch_subs() -> dict:
         return {"count": -1, "error": f"{type(e).__name__}: {e}"}
 
 
+def _probe_uptime(url: str):
+    """Single HEAD probe — returns status code or err:<Exc> string."""
+    try:
+        req = urllib.request.Request(
+            url,
+            method="HEAD",
+            headers={"User-Agent": "midastools-metrics/1.0"},
+        )
+        with urllib.request.urlopen(req, timeout=10) as r:
+            return r.status
+    except urllib.error.HTTPError as e:
+        return e.code
+    except Exception as e:
+        return f"err:{type(e).__name__}"
+
+
 def fetch_uptime() -> dict:
-    """HEAD the key pages, return {url: status_code}."""
+    """HEAD the key pages, return {url: status_code}.
+
+    Retry-once-before-alarming pattern (Session 30, 2026-05-23): single-probe
+    edge-network timeouts produced a false PAGE DOWN alert on /pet-portrait-generator
+    that direct curl 2x disproved (HTTP 200 both probes). Same class of bug as
+    Session 37's sub-count flicker — fix is identical: probe twice with a 5s gap
+    before declaring bad. Suppresses transient blips; preserves true outage detection.
+    Side-effect: also records "retries" so the print path can surface flapping pages.
+    """
     out = {}
+    retries = {}
     for url in UPTIME_PAGES:
-        try:
-            req = urllib.request.Request(
-                url,
-                method="HEAD",
-                headers={"User-Agent": "midastools-metrics/1.0"},
-            )
-            with urllib.request.urlopen(req, timeout=10) as r:
-                out[url] = r.status
-        except urllib.error.HTTPError as e:
-            out[url] = e.code
-        except Exception as e:
-            out[url] = f"err:{type(e).__name__}"
+        status = _probe_uptime(url)
+        if status != 200:
+            first = status
+            time.sleep(5)
+            status = _probe_uptime(url)
+            if status == 200:
+                # transient — first probe was a blip
+                retries[url] = f"first={first} → retry=200 (transient)"
+            else:
+                # sustained — both probes failed
+                retries[url] = f"first={first}, retry={status} (sustained)"
+        out[url] = status
+    if retries:
+        out["_retries"] = retries
     return out
 
 
@@ -274,8 +301,10 @@ def diff(prev: dict | None, cur: dict) -> list[str]:
     p_up = prev.get("uptime", {}) or {}
     c_up = cur.get("uptime", {}) or {}
     for url, status in c_up.items():
+        if url.startswith("_"):  # _retries sentinel, not a real URL
+            continue
         if status != 200:
-            deltas.append(f"🛑 PAGE DOWN — {url} returned {status}")
+            deltas.append(f"🛑 PAGE DOWN — {url} returned {status} (retry also failed)")
 
     return deltas
 
@@ -320,12 +349,20 @@ def main():
     print(f"  Subs:       {subs_d.get('count', 'err')}")
     if subs_d.get("discrepancy"):
         print(f"    ⚠️  {subs_d['discrepancy']}")
-    bad_pages = [(u, c) for u, c in cur["uptime"].items() if c != 200]
+    uptime_urls = {u: c for u, c in cur["uptime"].items() if not u.startswith("_")}
+    retries = cur["uptime"].get("_retries", {})
+    bad_pages = [(u, c) for u, c in uptime_urls.items() if c != 200]
     if bad_pages:
-        print(f"  Uptime:     {len(bad_pages)} bad")
+        print(f"  Uptime:     {len(bad_pages)} bad (after retry)")
         for u, c in bad_pages: print(f"    {c} {u}")
     else:
-        print(f"  Uptime:     all {len(cur['uptime'])} pages 200 OK")
+        print(f"  Uptime:     all {len(uptime_urls)} pages 200 OK")
+    if retries:
+        # transient blips that retry caught (page is fine, first probe was a hiccup)
+        transient = [u for u, info in retries.items() if "transient" in info]
+        if transient:
+            print(f"    🔁 {len(transient)} transient blip(s) suppressed by retry:")
+            for u in transient: print(f"       {u} ({retries[u]})")
 
     print(f"\n--- deltas vs prior snapshot ---")
     for d in deltas: print(f"  {d}")
