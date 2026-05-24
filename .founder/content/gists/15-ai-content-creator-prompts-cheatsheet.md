@@ -1,5 +1,7 @@
 # AI Content Creator Prompts — 14 Copy-Paste Templates for YouTube, Newsletter, Threads & Repurposing (May 2026)
 
+Published: https://gist.github.com/manduks/e1858b89bf4462ad5c2a61b16307bbe2
+
 > **Free prompt enhancer:** [midastools.co/prompt-enhancer](https://www.midastools.co/prompt-enhancer?utm_source=gist&utm_medium=github&utm_campaign=15-ai-content-creator-prompts-cheatsheet) — paste a rough hook or headline, get a tighter, attention-grabbing version back in seconds.
 > **Deep dive:** [The 1-to-10 AI Content Repurposing Workflow (May 2026)](https://www.midastools.co/blog/ai-content-repurposing-2026?utm_source=gist&utm_medium=github&utm_campaign=15-ai-content-creator-prompts-cheatsheet)
 
