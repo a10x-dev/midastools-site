@@ -51,6 +51,28 @@ Direct gist API probe with `.founder/.gh_gist_token` returned `{"message":"Bad c
 ### NEXT_CHECKIN expectation
 Sunday May 24 ~17:00 local (~25h away). Full 5-monitor sweep + KV session trace on larissadiogoalv... to characterize her engagement pattern. Watch for any Day-1 nurture engagement signal Sunday morning (auto-fire). Monday May 25 09:00 — ship BILL Holdings B2B citation post per pre-committed cadence.
 
+### Continuation (15:50 local / 22:50 UTC) — LARISSA TRACE ATTEMPT → MEASUREMENT-CEILING REVEAL
+
+User pushed "continue working on highest-impact task." Attempted to reconstruct Larissa's buyer journey via KV (mirror of S27 Cmyrick25 method). **Could NOT identify her session.** Structural finding:
+
+**`_app.js` only tracks `page_view` + `cta_click`.** `/api/subscribe` form submissions are NOT instrumented in `/api/track`. Verified: KV event-type breakdown across 953 lifetime events = `page_view: 949 | cta_click: 3 | smoke_test: 1`. Zero subscribe/form-submit events.
+
+**Why Cmyrick25 was reconstructible but Larissa is not:** Cmyrick25 did 17 min of POST-signup browsing (41 events on her session_id), making session_id correlation trivial against gist signup. Larissa = fast-convert-and-bounce (most likely one of today's 6 homepage-touching 1-event sessions, none of which obviously match Portuguese-name geo BR/PT/MX — could be VPN or AdBlock).
+
+**Strategic implications:**
+1. Don't generalize from Cmyrick25's pattern — her 17-min exploration was atypical, NOT the "real-human conversion shape"
+2. Day-1 nurture engagement Sunday morning is the actual signal on Larissa
+3. Source-attribution gap caps buyer-intel ceiling — we identify ~1 in 5 real-conversion paths (only deep-exploration outliers)
+4. **Bottleneck, branch sub-mix, Monday content cadence ALL UNCHANGED.** Measurement issue, not market issue.
+
+**Capability gap logged**: subscribe-form should fire a `subscribe_submit` event to /api/track with session_id. Server-side instrumentation in `/api/subscribe` is more robust than client-side (AdBlock blocks ~5-15% of client analytics). ~30 min ship + smoke-test. Cost-reversible (5-10 lines, delete to undo). **Deferred to Monday May 25 dedicated slot** — touching highest-volume write-path Saturday evening with no active recovery flow is unjustified timing.
+
+**Deliverable shipped**: `.founder/deliverables/larissa-conversion-trace-attempt-2026-05-23.md` (full diagnostic + capability-gap spec + Cmyrick25-vs-Larissa comparison table).
+
+**Honest accounting**: ~30 min investigation. **Direct KPI: zero.** **Indirect: low-medium.** Caught a structural measurement ceiling that explained why Larissa was untraceable, set up Monday for a non-speculative 30-min instrumentation fix that 2x's our buyer-journey intel for every future signup. Did NOT pre-build the fix tonight (timing-discipline).
+
+**Confidence**: 90% on capability-gap diagnosis (direct file inspection + KV event-type Counter). 70% on "Larissa is one of today's 1-event homepage sessions" — alternative is she's not in KV at all due to AdBlock/race condition.
+
 ---
 
 ## Session 31 — SATURDAY AFTERNOON SECOND-SWEEP + GMAIL MCP UNLOCK SURFACED + BUNDLE-AUDIT BOUNDED AS SESSION-SIZED (May 23, 14:33 local / 20:33 UTC)

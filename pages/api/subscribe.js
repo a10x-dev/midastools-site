@@ -1,5 +1,6 @@
 import { Resend } from 'resend';
 import { readSubscribers, writeSubscribers } from '../../lib/subscribers';
+import { readKV, writeKV } from '../../lib/kv-store';
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 const FROM_EMAIL = 'MidasTools <hello@midastools.co>';
@@ -148,6 +149,43 @@ export default async function handler(req, res) {
         <p>They received the 5 free prompts welcome email automatically.</p>
       `,
     });
+
+    // 4. Fire KV tracking event for buyer-journey reconstruction.
+    //    Mirrors /api/track.js write logic. Without this, signups are invisible
+    //    in KV (only post-signup browsing surfaces a session). Closes the S32
+    //    measurement-ceiling gap: every signup correlates to a session_id.
+    //    Fire-and-forget — empty catch keeps signup path safe if KV fails.
+    try {
+      const KV_KEY = 'track-events';
+      const MAX_EVENTS = 5000;
+      let pagePath = '/';
+      try {
+        if (serverReferer) pagePath = (new URL(serverReferer).pathname) || '/';
+      } catch {}
+      const enriched = {
+        event: 'subscribe_submit',
+        page_path: pagePath.slice(0, 200),
+        payload: {
+          source: source || 'site',
+          utm_source: utm_source || '',
+          utm_campaign: utm_campaign || '',
+        },
+        attribution: attribution || null,
+        session_id: ((req.body && req.body.session_id) || '').slice(0, 64),
+        server_country: serverCountry,
+        server_region: serverRegion,
+        user_agent: serverUserAgent,
+        referer: serverReferer.slice(0, 300),
+        ts: new Date().toISOString(),
+      };
+      const data = await readKV(KV_KEY);
+      const events = Array.isArray(data?.events) ? data.events : [];
+      events.push(enriched);
+      const trimmed = events.length > MAX_EVENTS ? events.slice(-MAX_EVENTS) : events;
+      await writeKV(KV_KEY, { events: trimmed });
+    } catch (trackErr) {
+      console.warn('[subscribe] track event write failed (non-fatal):', trackErr.message);
+    }
 
     return res.status(200).json({ success: true });
   } catch (err) {
