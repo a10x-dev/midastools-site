@@ -126,7 +126,7 @@ function getSourceBonus(source) {
       { title: "The 'Objection Destroyer' Sales Script", prompt: "I need to handle sales objections for [YOUR PRODUCT/SERVICE at PRICE]. But I don't want generic rebuttals — I want to understand the psychology behind each objection and disarm it before it's even raised.\n\nFirst, list the 8 most common objections for a product like mine (ranked by how often they kill the sale). For each one:\n- THE REAL OBJECTION: What they say vs. what they actually mean (these are always different)\n- THE REFRAME: A single sentence that shifts their perspective without being pushy\n- THE PROOF POINT: What evidence, story, or demonstration would eliminate this objection permanently?\n- THE PREEMPTIVE STRIKE: How do I address this in my marketing/copy so they never even think it?\n\nThen write a 60-second elevator pitch for my product that preemptively destroys the top 3 objections before anyone can raise them. The pitch should sound conversational, not salesy." },
       { title: "The 'Content Engine' System Prompt", prompt: "I want to set up a system where I spend 30 minutes per day on content and get 10x the output of someone spending 3 hours. Build me the complete system.\n\nMy niche: [YOUR NICHE]\nMy goal: [LEADS / BRAND / SALES / AUTHORITY]\nPlatforms I'm on: [LIST THEM]\nMy unfair advantage: [WHAT DO YOU KNOW THAT MOST PEOPLE DON'T?]\n\nDesign a system with:\n1. IDEA BANK — 20 content ideas I can execute this month, categorized by platform and format. Each idea should have the hook, the main point, and the CTA pre-written in one sentence each.\n2. THE DAILY WORKFLOW — A step-by-step 30-minute routine: minute 0-10 (create), minute 10-20 (repurpose), minute 20-30 (distribute + engage). Be specific about what tool to use at each step.\n3. THE RECYCLING SYSTEM — How to take my best-performing content and turn it into 5 new pieces without it feeling repetitive.\n4. THE MEASUREMENT CHEAT SHEET — The only 3 metrics I should track (ignore everything else), what 'good' looks like for each, and when to pivot vs. double down.\n\nI don't want theory. I want a system I can start using tomorrow morning at 8am." },
     ],
-    cta: { text: "Get 500+ Prompts Like These — $29", link: MEGA_PACK_LINK },
+    cta: { text: "Get 145+ Prompts Like These — $29", link: MEGA_PACK_LINK },
   };
 }
 
@@ -140,7 +140,7 @@ const emails = {
       <p style="font-size:24px;font-weight:700;color:#3B5FFF;margin:24px 0;text-align:center;">Role → Context → Output</p>
       <p style="font-size:16px;line-height:1.7;color:#374151;"><strong>Bad:</strong> <em style="color:#6B7280;">"Write me a sales email"</em><br/><strong>Good:</strong> <em style="color:#3B5FFF;">"You're a B2B copywriter. I sell PM software to 50-person agencies. Write a 3-paragraph cold email about missed deadlines. Under 150 words."</em></p>
       <p style="font-size:16px;line-height:1.7;color:#374151;">Night and day. Try it on your next prompt — you'll feel the difference instantly.</p>
-      <p style="font-size:16px;line-height:1.7;color:#374151;">500+ prompts using this exact framework 👇</p>
+      <p style="font-size:16px;line-height:1.7;color:#374151;">145+ prompts using this exact framework 👇</p>
       ${ctaButton("Grab the Mega Pack — $29", MEGA_PACK_LINK, "Worth a look, or totally off base?")}
       <p style="font-size:14px;color:#6B7280;">— MidasTools</p>
     `),
@@ -158,8 +158,8 @@ const emails = {
         </p>
       </div>
       <p style="font-size:16px;line-height:1.7;color:#374151;">This works because it forces AI to diagnose before prescribing. No generic advice possible.</p>
-      <p style="font-size:16px;line-height:1.7;color:#374151;">If that felt useful — imagine 500 more like it.</p>
-      ${ctaButton("500+ Prompts Like This — $29", MEGA_PACK_LINK, "2 min to browse. You'll know if it's for you.")}
+      <p style="font-size:16px;line-height:1.7;color:#374151;">If that felt useful — imagine 145 more like it.</p>
+      ${ctaButton("145+ Prompts Like This — $29", MEGA_PACK_LINK, "2 min to browse. You'll know if it's for you.")}
       <p style="font-size:14px;color:#6B7280;">— MidasTools</p>
     `),
   },
@@ -183,7 +183,7 @@ const emails = {
 
         <p style="font-size:16px;line-height:1.7;color:#374151;"><strong>Copy any of these into ChatGPT, Midjourney, or DALL-E and watch the magic happen.</strong></p>
 
-        <p style="font-size:16px;line-height:1.7;color:#374151;">Want ${source && source.includes('pet') || source && source.includes('ghibli') || source && source.includes('action-figure') ? '150+' : '500+'} more like these?</p>
+        <p style="font-size:16px;line-height:1.7;color:#374151;">Want ${source && source.includes('pet') || source && source.includes('ghibli') || source && source.includes('action-figure') ? '150+' : '145+'} more like these?</p>
 
         ${ctaButton(bonus.cta.text, bonus.cta.link, "Instant download. Works with any AI tool.")}
 
@@ -202,7 +202,7 @@ const emails = {
       <p style="font-size:16px;line-height:1.7;color:#374151;">Every dollar started with a prompt — to write code, design assets, write copy, analyze data.</p>
       <p style="font-size:16px;line-height:1.7;color:#374151;"><a href="https://www.midastools.co/blog/ai-agent-10k-day" style="color:#3B5FFF;font-weight:600;">Full story here</a> (5 min read, worth it).</p>
       <p style="font-size:16px;line-height:1.7;color:#374151;">The toolkit that powers businesses like this:</p>
-      ${ctaButton("500+ Prompts — $29", MEGA_PACK_LINK, "Same techniques Felix used. Your turn.")}
+      ${ctaButton("145+ Prompts — $29", MEGA_PACK_LINK, "Same techniques Felix used. Your turn.")}
       <p style="font-size:14px;color:#6B7280;">— MidasTools</p>
     `),
   },
@@ -225,7 +225,7 @@ const emails = {
       </div>
       <p style="font-size:16px;line-height:1.7;color:#374151;"><a href="https://www.midastools.co/tools" style="color:#3B5FFF;font-weight:600;">See all 20 →</a></p>
       <p style="font-size:16px;line-height:1.7;color:#374151;">When you're ready for the full arsenal:</p>
-      ${ctaButton("All 21 Kits — $97 (85% off)", BUNDLE_LINK, "Worth a quick look?")}
+      ${ctaButton("All 16 AI Kits — $97 (85% off)", BUNDLE_LINK, "Worth a quick look?")}
       <p style="font-size:14px;color:#6B7280;">— MidasTools</p>
     `),
   },
@@ -247,7 +247,7 @@ const emails = {
           Your customer service scripts — <strong>ready</strong>
         </p>
       </div>
-      <p style="font-size:16px;line-height:1.7;color:#374151;">16 business areas. 2,000+ deliverables. Open, customize 2-3 details, use.</p>
+      <p style="font-size:16px;line-height:1.7;color:#374151;">16 business areas. 1,500+ prompts and templates. Open, customize 2-3 details, use.</p>
       <div style="background:#F9FAFB;border:1px solid #E5E7EB;border-radius:12px;padding:24px;margin:20px 0;text-align:center;">
         <p style="font-size:14px;color:#6B7280;margin:0;">Hiring someone to do this work?</p>
         <p style="font-size:36px;font-weight:700;color:#EF4444;margin:4px 0;text-decoration:line-through;">$3,000+</p>
