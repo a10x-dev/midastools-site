@@ -55,6 +55,47 @@ That's the headline. Operators reading the post recognize: "this is what AI rest
 ### NEXT_CHECKIN expectation
 Sunday May 24 ~17:00 local (~9h45m away) — light monitor sweep (5 monitors) + verify no displacing news on BILL/Coinbase + close honestly. Monday May 25 09:00 — ship BILL post with CORRECTED framing per action items above.
 
+### Continuation (07:35 local) — BUNDLE-AGGREGATE AUDIT SHIPPED + 6 NURTURE EMAIL OVERSTATEMENTS FIXED (commit fd39205)
+
+After bounding BILL framing finding, user pushed for highest-impact task continuation. Bounded the deferred bundle-aggregate audit (task `7c912483`) to a 45-min focused pass.
+
+**Method**: 3-heuristic count across all 15 kit-content/ subdirectories (H3 entries + explicit Prompt-N patterns + numbered H2). Reconciled against prior session-verified counts (S25 image-pack 150+, S30 social 65+, S31 mega 145+/freelancer 47/team-adoption 48). Computed cumulative + cross-checked all pages/ "500+/1500+/2000+/21-Kits" claims.
+
+**🟢 KEY FINDING**: Cumulative cross-kit prompt count = **~1,541** across 15 shipped kits. Site claims "500+ across N kits" are DEFENSIBLE for any reasonable subset. The "8 vs 13 vs 16 vs 21 kits" naming variance across pages is strategic-naming (Armando-owned), NOT a count problem.
+
+**🚨 MATERIAL FINDING**: 6 nurture email overstatements caught — same S31-pattern (product-specific claim mismatch with linked SKU):
+| Day | Old claim | New | Linked SKU |
+|---|---|---|---|
+| 1 | "500+ prompts using this framework" | 145+ | Mega Pack (actual=145) |
+| 2 | "500 more like it" + "500+ Prompts Like This" | 145 / 145+ | Mega Pack |
+| 3 default | "Want 500+ more" + "Get 500+ Prompts" | 145+ | Mega Pack |
+| 4 | "500+ Prompts" | 145+ | Mega Pack |
+| 5 | "All 21 Kits — \$97 (85% off)" | "All 16 AI Kits — \$97 (85% off)" | Bundle |
+| 6 | "16 business areas. 2,000+ deliverables" | "1,500+ prompts and templates" | Bundle |
+
+**Impact**: Nurture drip fires automatically to EVERY new subscriber. Cmyrick25 (May 20 real-human gist conversion) already received Day-1+2 with overstated counts; larissadiogoalv... (May 23 signup) gets Day-1 within 24h. This is the same trust-leak pattern S29-cont closed on the chatgpt.com AI Overview citation pages, but applied to the highest-trust ALREADY-converted-once stream.
+
+**Shipped (commit fd39205, pushed)**:
+- `pages/api/nurture.js` — 6 surgical edits, no CTA URLs changed, no Stripe SKU changes
+- `.founder/deliverables/bundle-aggregate-count-audit-2026-05-24.md` — full audit trail with per-kit counts + classification table + lower-priority deferred items
+
+**Build verify**: `npx next build` clean. All routes generate. Push verified by `7bdd642..fd39205 main -> main`.
+
+**Lower-priority follow-ups documented (NOT shipped, in deliverable)**:
+- `pages/buyer-intent-generator.js:223` "Reddit Lead Gen Kit: 500+ phrases" — bundled with task `3400b90c` (broken SKU strategic call)
+- `pages/blog/ai-email-marketing-prompts-2026.js:1280` "Subject line swipe file (500+)" — 5-min ship-day rephrase, lower visibility
+- `pages/chatgpt-prompts.js` — bundled with task `ca6f7b6b` (strategic-naming)
+
+**What I deliberately did NOT do**:
+- Did NOT touch buyer-intent-generator.js — prejudges Armando's `3400b90c` strategic call
+- Did NOT touch chatgpt-prompts.js — bundled with `ca6f7b6b`, strategic-naming
+- Did NOT pre-build any Vibe Prospecting work despite MCP reconnection notice — per `pre-build-saturation-detector` and no decided ICP question to spend on
+- Did NOT Telegram Armando — Sunday morning + no decide-now framing per `armando-async-asks`
+
+**Honest accounting**: Direct KPI = zero. Indirect = medium-high. Closed the trust-leak on the every-new-sub automation path before larissadiogoalv...'s Day-1 fires. Same logic as S31 / S29-cont; same evidence quality. Bundle-aggregate question now answered with audit trail — future-self doesn't need to redo this work.
+
+**Confidence**: 90% — 6 edits verified by re-grep (only 1 remaining "1,500+" reference and that's the intentional new replacement), build clean, push verified by commit hash. Lower than 95% because the 1,541 cumulative count uses conservative H3-or-Prompt-N heuristics that may undercount kits using ambiguous conventions (resume-career-kit, content-creator-kit).
+
 ---
 
 ## Session 33 — SUNDAY PRE-DAWN STANDUP + PHANTOM METRICS ALERT CAUGHT (May 24, 05:12 local / 11:50 UTC)
