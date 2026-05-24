@@ -61,6 +61,45 @@ Top paths: `/` (12), `/blog/viral-ai-art-trends-april-2026?utm_source=chatgpt.co
 ### NEXT_CHECKIN expectation
 Sunday May 24 ~17:00 local (~6h away) — full 5-monitor sweep + 5-min spot-check that BILL/Coinbase haven't been displaced by weekend news. Watch for any additional cta_clicks (would convert N=1 → N≥2 evidence). Monday May 25 09:00 — ship BILL Holdings post with corrected EVERYONE-ELSE-SAYS-AI-vs-BILL-DIDN'T framing per S34 action items.
 
+### Continuation (11:35 local / 17:35 UTC) — 🚨 ATTRIBUTION LEAK CLOSED: 13 untagged Stripe URLs in nurture.js fixed (commit 9974dd8 pushed)
+
+After bound-and-close above, user pushed for highest-impact continuation. Self-audited the morning's claim "nurture engagement is unmeasurable from this seat" by reading nurture.js directly. **The capability gap was bigger than I logged.**
+
+**Finding**: 13 Stripe URL call sites across 7 day-N templates (day1-day7) + 6 broadcast templates (flash, flash_lastcall, tripwire, coach_pivot, trending, flash-PS) were rendering **bare buy.stripe.com URLs with ZERO attribution**. Every nurture-driven click landed at Stripe checkout with no `client_reference_id`, so the existing webhook decoder (`lib/stripe-attribution.js`) saw "NO ATTRIBUTION" on every nurture-attributable sale. Armando's per-sale attribution email — designed in Session 159 to surface "which content surface drove this conversion" — was effectively blind to the entire nurture drip.
+
+**Cost-of-not-fixing**: Cmyrick25 (May 20 real-human signup, Day-3 nurture fired today) + Larissa (May 23 signup, Day-1 fired May 23) + every future signup → if any of them convert, Armando gets `client_reference_id: (empty)` instead of `source=nurture, campaign=day3` or whichever template did the work. Zero learning loop on nurture ROI.
+
+**Fix shipped (commit 9974dd8)**: Added `tagNurture(link, campaign)` helper that packs nurture attribution into `client_reference_id` using the EXACT format the existing on-site packer produces — so the existing webhook decoder unpacks it identically without code change. Wrapped all 13 call sites inline. Format: `att|s=nurture|m=email|c=<dayN|broadcastTemplate>|p=email|f=<unix-seconds>|n=1`.
+
+**End-to-end verified** (before commit):
+1. Helper output decodes correctly via `decodeAttributionFromClientRef()` → `{utm_source: "nurture", utm_medium: "email", utm_campaign: "day1", landing_slug: "email", first_touch_at: "2026-05-24T17:12:56.000Z", session_count: 1}`
+2. Idempotent (re-tagging a pre-tagged URL is a no-op — pass-through)
+3. `npx next build` clean
+4. Caught one bug pre-ship: my initial packer used `Date.now()` (milliseconds) but decoder expects seconds → fixed to `Math.floor(Date.now()/1000)` to match the on-site packer's `attr.first_touch_ms / 1000` convention
+
+**Why this is bottleneck-direct, not saturation**:
+- `market_understanding` bottleneck specifically asks "which surfaces convert?" — closing the nurture-attribution leak is the FIRST instrumentation step toward answering it for the auto-fired drip
+- Plan-agnostic: useful under every Monday outcome (BILL post citation + nurture-drip experiments + Vittoria branch + cold-outbound restart)
+- Reversibility: single revert commit; URL-only change can't corrupt any data
+- Slot-sized: 45-min ship (read + 13 edits + verify + commit)
+- NOT touching active write-path: nurture.js renders email bodies; helper changes only the URL string emitted, doesn't touch the gist/KV write path
+- The N+1 sale pattern: with this fix shipped, the NEXT nurture-attributable sale produces actionable learning instead of a dead-end "no attribution" notification
+
+**Caveat — broadcast aliases inherit day-N tags**:
+`broadcasts.tools` is aliased to `emails[5]` and `broadcasts.bundle` is aliased to `emails[6]` (lines 282-283), so they re-use the day5/day6 HTML render. When fired as broadcasts they get tagged `day5`/`day6` (not `tools`/`bundle`). Minor attribution muddiness; Armando can disambiguate via send timestamp if it ever matters. Documented inline, not blocking.
+
+**What I deliberately did NOT do**:
+- Did NOT also patch lib/stripe-attribution.js for any other untagged surface — `nurture.js` was the audited gap; broad sweep needs separate scoping
+- Did NOT Telegram Armando — user is actively prompting (6th this weekend), the news goes in the response not a separate ping per `armando-async-asks`
+- Did NOT update the auto-drip cron timing or template content — orthogonal to the attribution fix
+- Did NOT add `?utm_source=...` query params alongside `client_reference_id` — Stripe doesn't forward arbitrary query params to the webhook; only `client_reference_id` survives. Adding both would be visual noise in the URL without functional benefit
+
+### Honest accounting (continuation)
+**Direct KPI: zero (no new sale).** **Indirect: HIGH on instrumentation.** Cmyrick25's Day-3 fired today + Larissa's upcoming Day-2/3/4 + every future signup now traceable per-template. If/when any nurture sale lands, Armando gets the email with `source=nurture, campaign=dayN`. Closes a measurement leak that was silently in-place since the nurture drip first shipped.
+
+### Confidence
+92% — end-to-end verified (encoder + decoder + idempotency + build), commit pushed, 13 sites confirmed wrapped via re-grep. Lower than 95% because (a) caveat about broadcasts.tools/bundle aliasing day5/day6 is real but accepted, (b) cannot smoke-test on a real Stripe sale without firing a paid charge through a nurture link — Vercel deploy + first real-world send is the only complete validation.
+
 ---
 
 ## Session 34 — SUNDAY MORNING BILL FRAMING SPOT-CHECK (May 24, 07:18 local / 13:18 UTC)
