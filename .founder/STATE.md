@@ -6,10 +6,90 @@
 
 **KPIs**:
 - Conversations: 0 (target: 3, 7d: 0%)
-- Users: 42 (target: 30, 7d: 0%)
+- Users: 43 (target: 30, 7d: 2.380952380952381%)
 - Revenue: 155 (target: 997, 7d: 0%)
 
 <!-- AGENT-EDITED-BELOW (everything below this line is preserved across ticks) -->
+
+## Session 27 (renderer) — SUNDAY MID-AFTERNOON SUB-CADENCE SWEEP + TASK QUEUE HYGIENE (May 24, 15:08 local / 21:08 UTC)
+
+### Trigger
+User-prompted at 15:08 local, T+1h02min after S26-renderer (gist #15 ship) closed. Pre-committed next-checkpoint is 17:00 sweep (~1h52m away). 11th weekend prompt. Per `pre-build-saturation-detector` + `armando-async-asks`: minimal honest verification + close, no new pre-build, no Telegram. System-reminder surfaced TaskCreate/TaskUpdate suggestion — queue hygiene is session-sized work that compounds (removes false-signal from future dashboard reads).
+
+### ✅ 5-monitor sweep + 2 verifications — all clean, no material delta since 11:01 sweep
+| Signal | Result |
+|---|---|
+| read-replies | 2 unread (delon × 2 — body still empty, no 3rd) |
+| audit-signal | 43 / 0 audit-tagged |
+| partner-signal | 43 / 0 partner-tagged |
+| quiz-visit | 1026 events / 0 distinct /q/ slugs |
+| metrics-snapshot | 0 sales 24h / $155 LTM / 43 subs / 5/5 200 / no deltas |
+| Gist #15 | HTTP 200 (still live, in 24-72h Google indexing window) |
+| Track events | Same single cta_click from 13:31 UTC (S36 catch, no new) + healthy organic mix (22 homepage / 7 chatgpt referrer / 3 stripe-ai-economy / 2 bundle / 2 soul-generator) |
+| GH PAT | OK login=manduks scope=gist (durable probe via check-gh-token.sh) |
+
+### ✅ Task queue hygiene — 15 stale tasks closed (no longer relevant to current strategy)
+Closed via TASK_COMPLETE: 6 DONE-long-ago items (IndexNow 122 pages, IndexNow key file, bundle broadcast, auto-drip catchup, jsonblob migration superseded by KV+Gist, subscriber storage permanently fixed by infra_storage_durability_v2) + 9 PAST-dated/dead-channel items (Apr 24 DFY analysis, Apr 28 GSC refresh, Apr 18-20 indexing check, FutureTools CAPTCHA, ToolPilot badges, TAAFT paid listing, roundup bloggers, Apr 18 indexing confirmation, flash sale creation already executed multiple times). All 15 were either superseded by newer architecture, executed long ago, or in channels that have been decisively killed.
+
+### What I deliberately did NOT do
+- Did NOT close Armando-blocked tasks (3400b90c broken-SKU, 355c3d59 + ca6f7b6b chatgpt-prompts.js naming, 14f9c7fe testimonial outreach, d58121d1 + c04d7329 + 16c8bdac storage-recovery dump, d32bda23 Midas Content recurring) — these legitimately await Armando's strategic input.
+- Did NOT close e4bad307 (Monday BILL ship) — fires tomorrow at 09:00.
+- Did NOT close 5e36ef94 (Armando GSC URL Inspection ask) — Armando-blocked, may still answer.
+- Did NOT close cb926dbc (Monitor first sale) — ongoing operational concern even if individual broadcast tasks are done.
+- Did NOT Telegram. 11th weekend prompt + zero new signal + Armando asleep on multiple async items = pure noise per `armando-async-asks`.
+- Did NOT append a new data-trail synthesis row. Sub-cadence relative to standup; row-by-day is the right granularity.
+- Did NOT pre-build BILL post body, gist #16, or any chatgpt-prompts.js fix.
+
+### Honest accounting
+**Direct KPI: zero.** **Indirect: low-medium.** Catches 1h of potential drift before 17:00 sweep + compresses the task dashboard from 30 visible to ~15 by removing false-signal. Every future agent session reading the dashboard now sees genuine open items instead of dead-channel debris. Same pattern as S31 continuation's SCHEDULE.md cleanup (commit 7bdd642 — 14 stale DUE NOW entries disabled).
+
+### Confidence
+88% — all 5 monitors exit-0, gist HTTP 200 verified, PAT health verified, KV inspection verified by direct API + JSON parse, task closures verified against MEMORY/STATE for which are truly done vs Armando-blocked.
+
+### NEXT_CHECKIN expectation
+17:00 local (~1h52m away) — full 5-monitor sweep + spot-check no BILL/Coinbase weekend displacement + read any Armando response to the gist ship. Monday 09:00 — ship BILL Holdings post with S34-corrected EVERYONE-ELSE-SAYS-AI-vs-BILL-DIDN'T framing. Bundle morning standup brief Telegram: gist #15 live + PAT calibration correction + 5 pending strategic asks.
+
+---
+
+## Session 26 (renderer) — 🟢 GIST #15 SHIPPED LIVE + PAT-WAS-WORKING CALIBRATION MISS (May 24, 14:06 local / 20:06 UTC, commit 7eb6da9 pushed)
+
+### Trigger
+User-prompted at 14:06 local, T+36min after S25 honest-close. S25 plan was "When PAT rotates: publish-gist.sh --all + update-gist.sh --all + IndexNow submit (5 min total)." Per `pre-build-saturation-detector` + `armando-async-asks`: single-probe the PAT first — if rotated → publish immediately, real KPI move; if not → honest close.
+
+### 🚨 CALIBRATION MISS uncovered: PAT was working all along
+S25 close (and S32 EOD, and multiple prior sessions) reported `{"message":"Bad credentials"}` from the GitHub API. Probed today: **HTTP 200 + scope=gist + login=manduks + 14 existing gists visible**. Token bytes are byte-for-byte identical to what S32 said was "revoked" (`ghp_***REDACTED***` — see .founder/.gh_gist_token for actual value; redacted from STATE per never-hardcode-secrets after GitHub push-protection caught the original leak in commit 206010a).
+
+**Most likely cause**: `cat→bat` alias eating curl response bodies + me misinterpreting empty stdout as authentication failure. The user_armando memory entry literally documented this footgun, AND it bit me AGAIN during the commit-message heredoc this session. The fix is to use `--file` for commit messages + `tr -d` then `printf` (not cat) for reading secrets.
+
+**Impact**: 1 task closeable (`ae49f348` PAT rotation), several prior Telegram nudges + STATE entries should be downgraded from "BLOCKED on Armando" → "BLOCKED on my-own-calibration." The 26-day gap between gist #14 (Apr 28) and gist #15 was NOT entirely Armando-blocked — at least the back portion was me incorrectly probing.
+
+### ✅ Shipped (commit 7eb6da9, pushed)
+1. **`bash .founder/tools/publish-gist.sh .founder/content/gists/15-ai-content-creator-prompts-cheatsheet.md`** — POSTed to GitHub Gists API, got back `https://gist.github.com/manduks/e1858b89bf4462ad5c2a61b16307bbe2`, auto-submitted to bing.com/indexnow, prepended Published: header to local file (idempotent re-runs), appended PUBLISHED.md ledger row.
+2. **Live gist verified clean**: HTTP 200, 7 unique midastools.co URLs all UTM-tagged (`utm_source=gist&utm_medium=github&utm_campaign=15-ai-content-creator-prompts-cheatsheet`). 0 untagged.
+3. **`/api/indexnow` consortium relay**: 200 OK, 139 URLs submitted (sitemap-wide refresh; gist URL itself went via bing direct).
+4. **Commit + push**: 7eb6da9 (2 files changed: gist file gets Published: header, PUBLISHED.md gets new row). `89ba11a..7eb6da9 main -> main`.
+
+### What I deliberately did NOT do
+- Did NOT run `update-gist.sh --all` from S25's plan. Verified live gist already has all UTM tags (S25's draft work landed clean to the live API); --all would PATCH all 14 prior gists with possibly stale local content, risk > reward.
+- Did NOT Telegram Armando. Sunday afternoon + gist shipped + no decide-now ask + Monday standup is 18h away. Per `armando-async-asks`: bundle with Monday morning's standup brief.
+- Did NOT pre-build gist #16 candidate. One real-human conversion (Cmyrick25) is N=1; ship gist #15, watch 7-14d indexing + traffic delta as the falsifier, THEN decide on #16 topic.
+- Did NOT update any chatgpt-prompts.js / bundle-naming items (Armando-blocked strategic call per `ca6f7b6b`).
+- Did NOT rotate the PAT — it's working. Task `ae49f348` should be closed.
+
+### Honest accounting
+**Direct KPI: zero new sales/subs/conversations.** **Indirect: HIGH on 2 axes.**
+1. **Gist channel volume**: 0 gists shipped in 26 days → 1 gist shipped today. The #1 traffic source (36%) gets fresh content for the content-creator persona Cmyrick25's May 20 conversion validated. Falsifier: 7-14d organic search indexing + gist-attributed signups on /content-creator-kit or /prompt-enhancer. If 14d shows 0 incremental signups, the content-creator-persona hypothesis weakens.
+2. **Calibration repair**: PAT-bad-credentials false-positive corrected. Future "blocked on Armando token rotation" claims must be cross-checked with a curl that captures HTTP code (not body — body can be eaten by aliases).
+
+**The cat→bat alias bit me TWICE this session** despite the documented user_armando memory entry: once on the initial PAT probe (got `Token file empty` for a non-empty file because tr-d-then-pipe weirdness), once on the heredoc commit message (`(eval):2: command not found: bat`). Authored discipline below.
+
+### Confidence
+92% — gist URL verified live by HTTP 200 + 7 UTM-tagged URLs verified by grep on raw content + IndexNow + commit hash + push hash all verified. Lower than 95% because (a) IndexNow submission ≠ indexed (Google takes 7-14d), (b) the broader claim "PAT was working all along" rests on TODAY's HTTP 200 + S32 EOD reporting Bad credentials — without S32's actual probe trace I can't fully exclude that Armando rotated between then and now to the same prefix.
+
+### NEXT_CHECKIN expectation
+Sunday May 24 ~17:00 local (~2h54m away) — full 5-monitor sweep + watch for any first gist-attributed traffic (won't show until Google indexes, typically 24-72h). Monday May 25 09:00 — ship BILL Holdings post per pre-committed cadence. Telegram Armando in Monday standup brief bundling: (a) gist #15 live, (b) PAT calibration correction (close `ae49f348`), (c) 5 still-pending strategic asks.
+
+---
 
 ## Session 37 — SUNDAY EARLY-AFTERNOON BOUND-AND-CLOSE + "ALL 9 KITS" STRATEGIC-NAMING INCONSISTENCY SURFACED (May 24, 13:01 local / 19:01 UTC)
 
@@ -81,7 +161,7 @@ Per `gist-topic-selection` playbook check:
 **All 8 midastools.co links UTM-tagged** with `utm_source=gist&utm_medium=github&utm_campaign=15-ai-content-creator-prompts-cheatsheet`. All 4 destination URLs verified HTTP 200 pre-write.
 
 ### 🚨 BLOCKED on Armando — GH_GIST_TOKEN rotation needed to publish
-Direct probe of `.founder/.gh_gist_token` against GitHub API returns `Bad credentials` (re-confirmed this session; first flagged S32 EOD 2026-05-23). The classic PAT `ghp_osTgnpxhT08...` is either revoked or expired. Without it, `publish-gist.sh` cannot create the gist.
+Direct probe of `.founder/.gh_gist_token` against GitHub API returns `Bad credentials` (re-confirmed this session; first flagged S32 EOD 2026-05-23). The classic PAT `ghp_osT...` is either revoked or expired. Without it, `publish-gist.sh` cannot create the gist.
 
 The gist draft is committable and shipped-ready. The moment Armando rotates the token (or pastes a new fine-grained PAT with `gist` scope into `.founder/.gh_gist_token`), publishing is one command:
 ```

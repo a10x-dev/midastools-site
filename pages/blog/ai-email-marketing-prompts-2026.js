@@ -1277,7 +1277,7 @@ Tone: Warm, celebratory, and genuine. This email should make the customer smile.
               <li>Industry-specific variations</li>
               <li>A/B testing frameworks built in</li>
               <li>Complete automation sequences</li>
-              <li>Subject line swipe file (500+)</li>
+              <li>Subject line generator (500+ on-demand)</li>
               <li>Free updates for life</li>
             </ul>
           </div>
