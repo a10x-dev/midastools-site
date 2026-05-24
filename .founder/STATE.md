@@ -11,6 +11,61 @@
 
 <!-- AGENT-EDITED-BELOW (everything below this line is preserved across ticks) -->
 
+## Session 26 — 🟢 VITTORIA-LOOKALIKE ICP INTEL SHIPPED + ICAPITAL/ANTHROPIC TIMING SIGNAL SURFACED (May 24, 12:35 local / 18:35 UTC)
+
+### Trigger
+User pushed "continue working on highest-impact task" 30min after S25 closed honestly. Re-read bottleneck (market_understanding 6/10, "Vittoria N=1→0 means Champion play validation still gated") and recognized the gating question — "is Vittoria's ICP class real?" — IS directly answerable with research, not Armando-blocked. The discipline I missed in S25's honest-close was that "no work to invent" was wrong — there was bottleneck-direct research available.
+
+### ✅ Shipped (delegated to general-purpose subagent with Firecrawl + WebSearch)
+**`.founder/deliverables/vittoria-lookalike-icp-intel-2026-05-24.md`** (121 lines, 24 cited sources) — researched 10 B2B vertical SaaS lookalikes of Juniper Square (private capital / fund admin / alt investing, $500M-$2B size band). Output: TL;DR + ranked table + ICP fit rubric + per-company notes + falsifiability framing + sources.
+
+### 🔥 HEADLINE FINDING — iCapital + Anthropic partnership IS the timing signal
+**iCapital scores 9/10 ICP fit:**
+- $7.5B private-capital platform, 2,126 employees (~2.5x Juniper Square)
+- **May 2026: announced Anthropic partnership + Claude Code already deployed in internal eng platform** → "we help your team adopt Claude faster" is a verbatim pitch hook with 7-14 day relevance window
+- **Named CPO: Deborah Wheelock** (Chief People Officer, MD) — owns "talent acquisition, employee relations, performance management, learning and development, HR technology" — exact surface area Vittoria's "JunieAI" represented
+- Vendor relationship is fresh (~2 weeks old) → window to position as the "Champion implementation partner" before they build it internally
+
+### Other named accounts (boundary case — 3 of 10 at ≥7/10)
+- **Allvue Systems (8/10)**: 587 emp, $416M revenue. May 2025 "AI-first" company-wide initiative + dedicated Head of AI (Mack Santora). ⚠️ 3 candidate People leaders surfaced (DeVerna / Plavetic / Farley) — needs disambiguation before pitching.
+- **Carta (8/10)**: 2,033 emp, $3.5B valuation. CPO Paige Bailey named. CEO Henry Ward town-hall AI framing. Aspirational larger sibling.
+- 3 more at 5-6/10 (Forge Global, Republic, AngelList) — adjacent but each has a disqualifier (acquisition, no named leader, role open).
+
+### Strategic implications (per the deliverable's own decision rule)
+- Boundary case: 3 of 10 ≥7/10. Not <3 (Branch B dominant) and not ≥5 (Branch A dominant).
+- **Honest read**: ~10-15 true lookalikes in this exact vertical, expandable to ~30-40 with wider ICP. Not the "50+" hope.
+- **iCapital alone justifies a personalized pitch attempt** because of the Anthropic-partnership timing window. Risk-reversed by Vittoria's existing $49 + champion-kit template (we can deliver a tailored kit in 24-48h).
+- Falsifiability honest: my rubric gave +3 for "named People leader" which is a weak signal. Tighter rubric → only iCapital scores clean.
+
+### Telegram fired — bundled per `bundle-armando-blocked-escalations`
+ONE message to Armando bundling:
+1. Vittoria branch intel headline (3 named accounts + iCapital/Anthropic timing)
+2. Decide-now framing: pitch iCapital this week OR commit to Branch B
+3. Option to commission round 2 (LinkedIn TAM-counting + verify CPOs publicly post about AI)
+
+### What I deliberately did NOT do
+- Did NOT draft an outreach pitch for Wheelock/Bailey. Per `warm-sub-dfy-pitch` and broader sender-attribution rules: pitch identity belongs to Armando.
+- Did NOT use Vibe Prospecting credits. Firecrawl + WebSearch are free for this account today and got the job done.
+- Did NOT pre-build the Champion play `/champion-monthly` public page. Gated on the Branch A/B decision the intel is supposed to inform.
+- Did NOT update homepage hero (per `feedback_protect_flywheel`).
+- Did NOT 2nd-Telegram the morning's cta_click finding as a separate ping — bundled into the same message.
+
+### Why this WASN'T saturation (correcting S25's read)
+Saturation framework: "load-bearing pre-build artifact for X branch + N+ converging decisions = don't pre-build a 4th." The Vittoria branch was Armando-blocked but the **input data** to the branch (does the ICP class exist?) was NOT pre-built or saturated. I'd flagged "Vibe Prospecting tempting but not greenlit" 3 days ago without recognizing that the underlying question survives the Vibe-credit-burn objection — Firecrawl is free, and the question is bottleneck-direct.
+
+**Lesson**: saturation detector applies to artifact pre-build (Stripe SKUs, pages, pitches), NOT to data research. Authored playbook `intel-vs-prebuild-saturation` to compound this.
+
+### Honest accounting
+**Direct KPI: zero.** **Indirect: HIGH on bottleneck.** The Vittoria branch decision moves from "wait for Armando + hope he picks right" to "3 named accounts + 1 fresh timing window + falsifiability-honest rubric ready for Monday." Compresses Armando's Monday read from "should I keep this experiment?" to "iCapital is the next test — yes/no within this week."
+
+### Confidence
+85% — intel deliverable verified by direct file read, 24 cited URLs, rubric explicit + falsifiability flagged. Lower than 90% because: (a) LinkedIn login wall blocked direct CPO profile verification (caveat in deliverable), (b) "internal AI rollout" vs "AI product feature" signal is harder to disambiguate publicly than the rubric weights suggest, (c) iCapital timing window assumes their partnership-to-internal-rollout cycle is fast (likely 30-90d) — could pitch be 4 weeks late and they've already built the playbook internally.
+
+### NEXT_CHECKIN expectation
+Sunday May 24 ~17:00 local (~4.5h away) — full 5-monitor sweep + spot-check that BILL Holdings hasn't been displaced by weekend news + read Armando's response if any. Monday May 25 09:00 ship BILL post AND surface the iCapital pitch decision as part of the Vittoria branch call. iCapital is the live decide-now item that joins Vittoria branch + Gmail /mcp + real-testimonial outreach in the Monday bundle.
+
+---
+
 ## Session 36 — SUNDAY LATE-MORNING SWEEP + 🟢 1st organic cta_click since Vittoria + lands on S29-cont fixed page (May 24, 11:01 local / 17:03 UTC)
 
 ### Trigger
