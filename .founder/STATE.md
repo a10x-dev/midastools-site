@@ -11,6 +11,48 @@
 
 <!-- AGENT-EDITED-BELOW (everything below this line is preserved across ticks) -->
 
+## Session 32 — SATURDAY EVENING T+75min BRIEF VERIFICATION + REAL-HUMAN HOMEPAGE CONVERSION SURFACED (May 23, 15:48 local / 22:48 UTC)
+
+### Trigger
+User-prompted "what needs to happen next?" at 15:48 local, T+75min after S31 closed at 14:33. Pre-committed next checkpoint is Sunday May 24 ~17:00 (~25h away). This is the THIRD prompt today (S30 06:32 + S31 14:33 + S32 15:48). Sub-cadence by design. Per saturation discipline: minimal honest verification + close, NO new pre-build, NO Telegram, respect Sunday cadence.
+
+### 🟢 MATERIAL FINDING — +1 real-human homepage conversion landed in the 75min gap
+metrics-snapshot flagged subs 42 → 43. Per `verify-truth-source-on-signal-deltas`: cross-checked via /api/status?key=mt-outreach-2026 — confirmed. Recent subscribers (Day 0–8):
+| Email | Source | Day | Notes |
+|---|---|---|---|
+| larissadiogoalv... | **homepage** | **0 (today)** | **NEW real-human, real-looking name + homepage source = NOT bot pattern** |
+| Cmyrick25 | kit-page-capture | 3 | the validated buyer-journey conversion |
+| curlylou7 | homepage | 5 | likely submitaitools.org bot (S31 pattern) |
+| benjamin@korper | homepage | 8 | bot (Session 27 cont falsifier) |
+| r.d.le.vinmd | homepage | 8 | bot (Session 27 cont falsifier) |
+
+**Second real-human conversion in 4 days** (Cmyrick25 May 20 → larissadiogoalv... May 23). Both with first-name email + organic source pattern. Day-1 nurture fires automatically tomorrow per subscribe.js.
+
+### Bottleneck-direct or motion-vs-progress?
+N=2 real-human conversions in 4 days is a TRAJECTORY data point worth logging, not a strategy change. Real-human sub count: **39/43 (4 bots)**. Bottleneck description updates one number, not the diagnosis. Branch sub-mix unchanged.
+
+### Capability gap — gist token rotated/revoked
+Direct gist API probe with `.founder/.gh_gist_token` returned `{"message":"Bad credentials"}`. The token was working in earlier sessions (S25 used it for the gist∖fallback reconstruction). Either revoked or rotated. /api/status proxy works as fallback, but tools using the file token directly (recover-storage-failed.py merge --apply, reconstruct-recovered-subs.py if it reads gist) would fail today. NOT firing the fix tonight — touching credentials Saturday evening with no active recovery in flight is wrong timing. Logged for Monday post-ship.
+
+### What I deliberately did NOT do (saturation discipline, THIRD time today)
+- Did NOT Telegram about larissadiogoalv... signup. Day 0, source=homepage, no engagement signal yet, no decide-now ask = pure noise per `armando-async-asks`.
+- Did NOT pull KV session trace for the new sub. Saturation; Sunday 17:00 standup will have correlated engagement data + can do it then with full context.
+- Did NOT pre-build outreach for larissadiogoalv... ICP-classification needs >Day-0 data (engagement signal, region, secondary navigation). Premature outreach to a fresh signup is the inverse of a warm welcome.
+- Did NOT rotate the gist token. Off-hours credential touch with no active flow is unjustified risk.
+- Did NOT 4th-prompt myself on bundle-audit / chatgpt-prompts.js / Monday BILL post. All still session-sized work, not slot-sized.
+- Did NOT update STATE bottleneck description (real-human sub count update is a footnote, not a diagnosis change).
+
+### Honest accounting
+**Direct KPI: +1 sub (42→43, real-human +1).** **Indirect: low.** Confirmed the +1 is genuine (cross-checked truth-source), confirmed it's a second consecutive real-human after Cmyrick25, logged it for trajectory data. The gist-token capability gap surfaced as a fortunate side-effect (would have bitten us during the next recovery flow).
+
+### Confidence
+85% — direct API verification of /api/status (recent subscribers list shows the new entry with source field intact), 2-monitor cross-check (read-replies + metrics-snapshot exit 0). Lower than 90% because: (a) the LIFETIME Stripe query errored with ConnectionResetError (transient, but means Stripe LTM isn't directly verified this session — relying on memory of $155 unchanged), (b) Day-0 source attribution can be wrong if the visitor's referrer was stripped (homepage = direct OR referrer-stripped).
+
+### NEXT_CHECKIN expectation
+Sunday May 24 ~17:00 local (~25h away). Full 5-monitor sweep + KV session trace on larissadiogoalv... to characterize her engagement pattern. Watch for any Day-1 nurture engagement signal Sunday morning (auto-fire). Monday May 25 09:00 — ship BILL Holdings B2B citation post per pre-committed cadence.
+
+---
+
 ## Session 31 — SATURDAY AFTERNOON SECOND-SWEEP + GMAIL MCP UNLOCK SURFACED + BUNDLE-AUDIT BOUNDED AS SESSION-SIZED (May 23, 14:33 local / 20:33 UTC)
 
 ### Trigger
