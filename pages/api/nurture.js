@@ -16,6 +16,22 @@ const IMAGE_PACK_LINK = 'https://buy.stripe.com/8x24gyccv7mVglegoqcMM0i';
 const CLAUDE_KIT_LINK = 'https://buy.stripe.com/4gMbJ0dgz4aJ1qkb46cMM0d';
 const TRIPWIRE_LINK = 'https://buy.stripe.com/fZueVcb8rgXv3ysc8acMM0t';
 
+// Pack nurture-email attribution into Stripe client_reference_id so the webhook
+// (lib/stripe-attribution.js decoder) can tag every nurture-driven sale with its
+// source template. Without this, nurture clicks go to Stripe with no signal and
+// land in the Armando attribution email as "NO ATTRIBUTION".
+function tagNurture(link, campaign) {
+  try {
+    const url = new URL(link);
+    if (url.searchParams.has('client_reference_id')) return url.toString();
+    const packed = `att|s=nurture|m=email|c=${campaign}|p=email|f=${Math.floor(Date.now() / 1000)}|n=1`;
+    url.searchParams.set('client_reference_id', packed);
+    return url.toString();
+  } catch (_) {
+    return link;
+  }
+}
+
 function wrapEmail(content) {
   return `
     <div style="font-family:'Inter',Helvetica,Arial,sans-serif;max-width:600px;margin:0 auto;padding:32px 24px;color:#111827;">
@@ -141,7 +157,7 @@ const emails = {
       <p style="font-size:16px;line-height:1.7;color:#374151;"><strong>Bad:</strong> <em style="color:#6B7280;">"Write me a sales email"</em><br/><strong>Good:</strong> <em style="color:#3B5FFF;">"You're a B2B copywriter. I sell PM software to 50-person agencies. Write a 3-paragraph cold email about missed deadlines. Under 150 words."</em></p>
       <p style="font-size:16px;line-height:1.7;color:#374151;">Night and day. Try it on your next prompt — you'll feel the difference instantly.</p>
       <p style="font-size:16px;line-height:1.7;color:#374151;">145+ prompts using this exact framework 👇</p>
-      ${ctaButton("Grab the Mega Pack — $29", MEGA_PACK_LINK, "Worth a look, or totally off base?")}
+      ${ctaButton("Grab the Mega Pack — $29", tagNurture(MEGA_PACK_LINK, 'day1'), "Worth a look, or totally off base?")}
       <p style="font-size:14px;color:#6B7280;">— MidasTools</p>
     `),
   },
@@ -159,7 +175,7 @@ const emails = {
       </div>
       <p style="font-size:16px;line-height:1.7;color:#374151;">This works because it forces AI to diagnose before prescribing. No generic advice possible.</p>
       <p style="font-size:16px;line-height:1.7;color:#374151;">If that felt useful — imagine 145 more like it.</p>
-      ${ctaButton("145+ Prompts Like This — $29", MEGA_PACK_LINK, "2 min to browse. You'll know if it's for you.")}
+      ${ctaButton("145+ Prompts Like This — $29", tagNurture(MEGA_PACK_LINK, 'day2'), "2 min to browse. You'll know if it's for you.")}
       <p style="font-size:14px;color:#6B7280;">— MidasTools</p>
     `),
   },
@@ -185,7 +201,7 @@ const emails = {
 
         <p style="font-size:16px;line-height:1.7;color:#374151;">Want ${source && source.includes('pet') || source && source.includes('ghibli') || source && source.includes('action-figure') ? '150+' : '145+'} more like these?</p>
 
-        ${ctaButton(bonus.cta.text, bonus.cta.link, "Instant download. Works with any AI tool.")}
+        ${ctaButton(bonus.cta.text, tagNurture(bonus.cta.link, 'day3'), "Instant download. Works with any AI tool.")}
 
         <p style="font-size:14px;color:#6B7280;line-height:1.6;">More good stuff tomorrow,<br/>The MidasTools Team</p>
       `);
@@ -202,7 +218,7 @@ const emails = {
       <p style="font-size:16px;line-height:1.7;color:#374151;">Every dollar started with a prompt — to write code, design assets, write copy, analyze data.</p>
       <p style="font-size:16px;line-height:1.7;color:#374151;"><a href="https://www.midastools.co/blog/ai-agent-10k-day" style="color:#3B5FFF;font-weight:600;">Full story here</a> (5 min read, worth it).</p>
       <p style="font-size:16px;line-height:1.7;color:#374151;">The toolkit that powers businesses like this:</p>
-      ${ctaButton("145+ Prompts — $29", MEGA_PACK_LINK, "Same techniques Felix used. Your turn.")}
+      ${ctaButton("145+ Prompts — $29", tagNurture(MEGA_PACK_LINK, 'day4'), "Same techniques Felix used. Your turn.")}
       <p style="font-size:14px;color:#6B7280;">— MidasTools</p>
     `),
   },
@@ -225,7 +241,7 @@ const emails = {
       </div>
       <p style="font-size:16px;line-height:1.7;color:#374151;"><a href="https://www.midastools.co/tools" style="color:#3B5FFF;font-weight:600;">See all 20 →</a></p>
       <p style="font-size:16px;line-height:1.7;color:#374151;">When you're ready for the full arsenal:</p>
-      ${ctaButton("All 16 AI Kits — $97 (85% off)", BUNDLE_LINK, "Worth a quick look?")}
+      ${ctaButton("All 16 AI Kits — $97 (85% off)", tagNurture(BUNDLE_LINK, 'day5'), "Worth a quick look?")}
       <p style="font-size:14px;color:#6B7280;">— MidasTools</p>
     `),
   },
@@ -254,7 +270,7 @@ const emails = {
         <p style="font-size:36px;font-weight:700;color:#3B5FFF;margin:4px 0;">$97</p>
         <p style="font-size:14px;color:#16A34A;font-weight:600;margin:0;">One-time. Not a subscription.</p>
       </div>
-      ${ctaButton("Get It All Done — $97", BUNDLE_LINK, "Instant download. 30-day money-back guarantee.")}
+      ${ctaButton("Get It All Done — $97", tagNurture(BUNDLE_LINK, 'day6'), "Instant download. 30-day money-back guarantee.")}
       <p style="font-size:14px;color:#6B7280;">— MidasTools</p>
     `),
   },
@@ -268,7 +284,7 @@ const emails = {
       <p style="font-size:16px;line-height:1.7;color:#374151;">Here's the honest pitch:</p>
       <p style="font-size:16px;line-height:1.7;color:#374151;">For $97, you get 40+ hours of business work already done — marketing, sales, content, email, presentations, hiring, everything. Not tools to figure it out. The actual output.</p>
       <p style="font-size:16px;line-height:1.7;color:#374151;">Most people spend that on a single freelancer hour.</p>
-      ${ctaButton("Get Your Work Done — $97", BUNDLE_LINK, "No fake urgency. No countdown timer. Link stays active.")}
+      ${ctaButton("Get Your Work Done — $97", tagNurture(BUNDLE_LINK, 'day7'), "No fake urgency. No countdown timer. Link stays active.")}
       <div style="background:#FEF3C7;border:1px solid #FDE68A;border-radius:12px;padding:20px;margin:24px 0;">
         <p style="font-size:15px;color:#92400E;margin:0;"><strong>One ask:</strong> What's the ONE piece of work you wish was just... done? Hit reply — I read every response and build exactly that.</p>
       </div>
@@ -317,7 +333,7 @@ const broadcasts = {
 
       <p style="font-size:13px;line-height:1.6;color:#6B7280;margin:0 0 24px;font-style:italic;">149 more like this in the pack.</p>
 
-      ${ctaButton("Grab the Pack — $29 →", IMAGE_PACK_LINK, "Price goes back to $49 tomorrow · 30-day refund if you don't love it")}
+      ${ctaButton("Grab the Pack — $29 →", tagNurture(IMAGE_PACK_LINK, 'flash_lastcall'), "Price goes back to $49 tomorrow · 30-day refund if you don't love it")}
 
       <p style="font-size:14px;color:#6B7280;line-height:1.6;">— The MidasTools Team</p>
 
@@ -362,11 +378,11 @@ const broadcasts = {
 
       <p style="font-size:13px;line-height:1.6;color:#6B7280;margin:0 0 24px;font-style:italic;">149 more like this in the pack — pet portraits, action figures, cyberpunk, trading cards, Funko, and more.</p>
 
-      ${ctaButton("Grab the Pack — $29 →", IMAGE_PACK_LINK, "48h only · 30-day money-back guarantee · Instant download")}
+      ${ctaButton("Grab the Pack — $29 →", tagNurture(IMAGE_PACK_LINK, 'flash'), "48h only · 30-day money-back guarantee · Instant download")}
 
       <p style="font-size:15px;line-height:1.7;color:#374151;">After 48 hours it's back to $49. You've been getting free value from us for weeks — this is the easiest way to say thanks.</p>
 
-      <p style="font-size:14px;color:#6B7280;line-height:1.6;">— The MidasTools Team<br/><em>P.S. If you want everything, the <a href="${BUNDLE_LINK}" style="color:#3B5FFF;">All Kits Bundle is $97</a> (normally $661).</em></p>
+      <p style="font-size:14px;color:#6B7280;line-height:1.6;">— The MidasTools Team<br/><em>P.S. If you want everything, the <a href="${tagNurture(BUNDLE_LINK, 'flash-ps')}" style="color:#3B5FFF;">All Kits Bundle is $97</a> (normally $661).</em></p>
     `),
   },
   tripwire: {
@@ -410,7 +426,7 @@ const broadcasts = {
 
       <p style="font-size:13px;line-height:1.6;color:#6B7280;margin:0 0 24px;font-style:italic;">19 more like this — all copy-paste ready, variables in [BRACKETS].</p>
 
-      ${ctaButton("Get the 20 Prompts — $9 →", TRIPWIRE_LINK, "Instant access · 30-day money-back guarantee · Less than a coffee run")}
+      ${ctaButton("Get the 20 Prompts — $9 →", tagNurture(TRIPWIRE_LINK, 'tripwire'), "Instant access · 30-day money-back guarantee · Less than a coffee run")}
 
       <p style="font-size:15px;line-height:1.7;color:#374151;">If you like these, the full <strong>145+ prompt Mega Pack is $29</strong> and the <strong>All-Kits Bundle is $97</strong>. But $9 is the honest starting point. No upsell pressure after.</p>
 
@@ -453,7 +469,7 @@ const broadcasts = {
         </p>
       </div>
 
-      ${ctaButton("Get the $9 Starter Pack →", TRIPWIRE_LINK, "20 prompts · Lifetime · Less than a coffee · 30-day refund")}
+      ${ctaButton("Get the $9 Starter Pack →", tagNurture(TRIPWIRE_LINK, 'coach_pivot'), "20 prompts · Lifetime · Less than a coffee · 30-day refund")}
 
       <p style="font-size:15px;line-height:1.7;color:#374151;">If you're <em>not</em> a coach or consultant — totally fine. The free tools stay free, the kits still work for any AI use case, and you'll keep getting value. Just know what we're building toward.</p>
 
@@ -481,7 +497,7 @@ const broadcasts = {
 
       <p style="font-size:16px;line-height:1.7;color:#374151;">And if you want the full creative arsenal:</p>
 
-      ${ctaButton("Get 150+ Image Prompts — $29", IMAGE_PACK_LINK, "Midjourney, DALL-E, Stable Diffusion, Flux ready")}
+      ${ctaButton("Get 150+ Image Prompts — $29", tagNurture(IMAGE_PACK_LINK, 'trending'), "Midjourney, DALL-E, Stable Diffusion, Flux ready")}
 
       <p style="font-size:14px;color:#6B7280;line-height:1.6;">Keep creating,<br/>The MidasTools Team</p>
     `),

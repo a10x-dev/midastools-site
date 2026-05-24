@@ -11,6 +11,58 @@
 
 <!-- AGENT-EDITED-BELOW (everything below this line is preserved across ticks) -->
 
+## Session 36 — SUNDAY LATE-MORNING SWEEP + 🟢 1st organic cta_click since Vittoria + lands on S29-cont fixed page (May 24, 11:01 local / 17:03 UTC)
+
+### Trigger
+User-prompted at 11:01 local Sunday. **6th prompt this weekend** (S30/S31/S32/S33/S34/S35 + now), T+3h26m after S35 closed at 07:35. Pre-committed next checkpoint is Sunday 17:00 sweep (~6h away) + Monday 09:00 BILL ship. Sub-cadence by design. Per saturation discipline: 5-monitor sweep + honest close, NO pre-build, NO Telegram (Armando just spoke ~4h ago).
+
+### ✅ 5-monitor sweep — all 4 clean + 1 MATERIAL finding in KV
+| Signal | Result |
+|---|---|
+| read-replies | 2 unread (delon × 2, body still empty — Gmail MCP unlock pending Armando `/mcp`) |
+| audit-signal | 43 / 0 audit-tagged |
+| partner-signal | 43 / 0 partner-tagged |
+| quiz-visit | 998 events / 0 distinct /q/ slugs |
+| metrics-snapshot | 0 sales 24h / $155 LTM / 5/5 200 / 43 subs unchanged |
+
+### 🟢 MATERIAL FINDING — 1st organic cta_click since Vittoria (May 20), lands on S29-cont fixed page
+KV inspection: **1 cta_click in last 24h** at 2026-05-24T13:31:17Z (T+13h45m after S29-cont truth-fix shipped at May 23 23:50 local):
+- **Page**: `/blog/viral-ai-art-trends-april-2026?utm_source=chatgpt.com` — THE chatgpt.com AI Overview citation winner I corrected the 500+→150+ overstatements on yesterday
+- **CTA**: Arabic-localized "Get the AI-powered Image Prompt Pack - $29" → plink `8x24gyccv7mVglegoqcMM0i` (AI Image Pack $29)
+- **Geo/Device**: Egypt / Android 10 Chrome mobile
+- **Attribution intact**: `client_reference_id=att|s=chatgpt.com|p=blog/viral-ai-art-trends-april-2026|f=1779629457|n=1` — UTM passthrough working as designed
+- **No corresponding Stripe sale** (LTM unchanged $155 / 3 sales)
+
+### Interpretation — strengthens the diagnosis, doesn't change strategy
+- **Truth-audit fix landed in time**: a real AI Overview-referred visitor clicked through within 14h of the page being corrected. If they'd landed at the un-fixed page they'd have seen 3.3x-overstated Image Pack copy ("500+") before clicking. The S29-cont trust-leak fix is now empirically protecting the highest-trust traffic stream.
+- **Audience-product-fit gap persists, NOT new**: Egypt/Android/mobile clicker on $29 SKU is wallet-stretched (same shape as S28's India/Android pattern). Click→bounce on Mega Pack class SKUs from non-US-desktop = documented in `buyer-vs-funnel-mismatch` context fragment.
+- **N=1 click is "first engagement evidence post-fix" not "trend"**: per `falsifiability-before-celebration`, need N≥3 same-pattern clicks before claiming sustained fix impact.
+- **Bottleneck unchanged**: market_understanding 6/10. The fix-then-click sequence is consistent with the bottleneck diagnosis, doesn't unlock a new branch.
+
+### Other KV context (92 events / 24h, healthy organic)
+Top paths: `/` (12), `/blog/viral-ai-art-trends-april-2026?utm_source=chatgpt.com` (7), `/blog/ai-video-prompts-sora-runway-2026` (5), `/tools` (5), `/blog/stripe-ai-economy-2026-data` (4), `/blog/how-to-make-money-with-ai-2026` (3), `/prompt-enhancer` (3), `/soul-generator` (3), `/bundle` (3). Diverse organic. chatgpt.com referrer still active 5+ days into the citation cluster.
+
+### Larissa Day-1 nurture engagement check
+0 `/thank-you` / `/q/` / nurture-attributable events in last 24h. Either (a) Larissa hasn't opened/clicked her Day-1, (b) the nurture-click path isn't instrumented to `/api/track` (likely — links go direct to Stripe, no intermediate redirect). Logged: nurture engagement is currently unmeasurable from this seat — capability gap, defer.
+
+### What I deliberately did NOT do (saturation discipline, 6th prompt this weekend)
+- Did NOT Telegram Armando. Single cta_click that didn't convert = signal noise on a Sunday morning where he already prompted me 4h ago. Per `armando-async-asks`: bundling with Monday's ship update is correct timing.
+- Did NOT pre-draft Monday's BILL post body. S29 deferred + S33 saturation-closed + S34 framing-corrected. Monday morning's fresh trend-watch + ship is the locked plan.
+- Did NOT append a new synthesis row. Row-by-day cadence; 17:00 sweep + Monday standup are the legitimate row slots.
+- Did NOT touch the `/api/track` nurture-instrumentation gap. Touching write-path on Sunday with active cta_click data flowing in = unjustified risk per `architectural-debt-during-active-windows`.
+- Did NOT investigate the Arabic CTA text further. Localization is intentional (Egypt-geo visitor served Arabic via Next.js i18n). Working as designed.
+
+### Honest accounting
+**Direct KPI: zero.** **Indirect: medium.** Confirmed S29-cont truth-fix is in production AND captured a real click within hours = the load-bearing artifact from yesterday is working as designed. Caught one nurture-engagement instrumentation capability gap. Maintained saturation discipline on the 6th prompt of a low-signal weekend.
+
+### Confidence
+88% — direct KV inspection verified by JSON parse + 4 monitors exit-0; cta_click event ts/page/payload/attribution all schema-intact. Lower than 92% because: (a) N=1 isn't a trend (geo could be coincidence), (b) Larissa nurture engagement remains uninstrumented so claiming "no engagement signal" is technically "no measurable engagement signal."
+
+### NEXT_CHECKIN expectation
+Sunday May 24 ~17:00 local (~6h away) — full 5-monitor sweep + 5-min spot-check that BILL/Coinbase haven't been displaced by weekend news. Watch for any additional cta_clicks (would convert N=1 → N≥2 evidence). Monday May 25 09:00 — ship BILL Holdings post with corrected EVERYONE-ELSE-SAYS-AI-vs-BILL-DIDN'T framing per S34 action items.
+
+---
+
 ## Session 34 — SUNDAY MORNING BILL FRAMING SPOT-CHECK (May 24, 07:18 local / 13:18 UTC)
 
 ### Trigger
