@@ -92,6 +92,7 @@ When cold-outreach lookalikes purchase, port them here under "Active customers" 
 | kris.smith@hearst.com | batch1 D+2 nudge | 2026-05-08 (id `d3c0c1ae`) | — | — | Quiz pivot: /q/kris-smith. Last-touch framing. |
 | asage@pmc.com | batch1 D+2 nudge | 2026-05-08 (id `bebfaf0e`) | — | — | Quiz pivot: /q/alexander-sage. Last-touch framing. |
 | brian.lee@buzzfeed.com | batch1 D+2 nudge | 2026-05-08 (id `14d5f385`) | — | — | Quiz pivot: /q/brian-lee. Last-touch framing. |
+| Cmyrick25@gmail.com | warm-sub-day5-personal | 2026-05-24 19:58 local (id `3118a4ce-0b70-4970-a582-4ebcc5f4678e`) | — | — | First documented real-human gist→signup conversion (May 20, US/Indianapolis/Android-mobile, source=kit-page-capture, 17-min multi-page exploration, 5x repeat visits to /ai-income-blueprint). Day-3 nurture fired today. Personal touch from Armando, intel-focused ("what outcome are you trying to get?"). reply_to=replies@midastools.co. NOT a sales pitch — falsifiable: if 0 reply by 2026-05-31, warm-sub personal-touch pattern is wrong shape OR Cmyrick25 isn't really ICP. |
 
 ---
 

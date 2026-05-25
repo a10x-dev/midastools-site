@@ -83,3 +83,18 @@ Audit experiment IS empirically dead. **Recommended call:** formal Plan C from S
 ## TL;DR for if you only read one line
 
 **6 decide-now items above. Pick yes/no/A/B/C on each. Default fallbacks fire Monday EOD. PAT rotation is the only one that's defense-in-depth (no breakage today). Audit experiment empirically dead — recommend formal kill.**
+
+---
+
+## 🟢 Sunday-night update (May 24, 19:55 local — written before you read this)
+
+**Monday item #6 is DONE.** Per your pair-session call ("get revenue yes or yes") I shipped the BILL Holdings B2B citation post tonight (13h early). Live:
+https://www.midastools.co/blog/bill-holdings-30-percent-ai-layoffs-finance-operators-2026
+
+**What changed from the brief above:** Monday SEO/AEO ship is no longer pending. Removes 90-120 min from your Monday morning. Frees you to focus on items #1-5 + the audit kill recommendation.
+
+**What changed from S34's framing audit:** I verified the primary source — BILL CEO Lacerte directly said *"It is our No. 1 priority"* (re: AI) on the Q3 FY26 earnings call. S34's "BILL didn't say AI" conclusion was overcorrected. The post leads with the stronger 4-way comparison: BILL most explicit (30% cut + $1B buyback same day) / Intuit most defensive (17% + AI denial) / Salesforce cleanest reallocation (1% + 2K hire) / Klarna cautionary reversal (38% + hire-back).
+
+**Falsifiable next 14d:** any cta_click on `data-cta="bill-layoffs-*"` plinks in KV = first-attribution buyer signal. Google indexing 7-14d. Coinbase week-2 post stays scheduled for June 1 — not advanced.
+
+**Bottleneck-direct logic:** target audience (VP Finance / Controllers / Heads of FP&A) matches Vittoria's exact buyer profile from the Ramp citation→cta_click→$49 trace (S16). If the 4-way comparison post earns even one cta_click from a finance-class buyer, the Vittoria-validated discovery pattern compounds onto a 2nd post.
