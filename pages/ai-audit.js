@@ -2,10 +2,10 @@ import Head from 'next/head';
 import Link from 'next/link';
 import Layout from '../components/Layout';
 
-// $997 AI Clarity Assessment — entry-point service
-// Stripe link reused from prior $997 product (re-priced from "AI Audit + Deploy")
-// Updated 2026-04-28: repositioned per "selling clarity, not automation" framework
-const ASSESSMENT_URL = 'https://buy.stripe.com/cNi14m90j6iR7OI8VYcMM03';
+// AUDIT EXPERIMENT KILLED 2026-05-24 (26 days zero captures, 0 reply-window conversions)
+// Page kept for SEO equity on audit-cluster queries; CTAs redirect to productized
+// All Kits Bundle as the natural alternative for audit-curious visitors.
+const ASSESSMENT_URL = 'https://buy.stripe.com/bJe7sK0tNdLjgle0pscMM0b';  // $97 All Kits Bundle
 
 // Implementation upsell tiers (existing DFY links)
 const IMPL_CONTENT = 'https://buy.stripe.com/28EdR84K36iR5GAa02cMM0u';   // $199 Content Month
@@ -121,7 +121,7 @@ export default function AIAssessment() {
           You don&apos;t need another listicle. You need a custom report built around <em>your</em> workflows, your tools, and your bottleneck — telling you the 3-5 AI moves that will save you 5+ hours/week, ranked and ready to implement.
         </p>
         <div className="hero-cta-row">
-          <a href={ASSESSMENT_URL} className="btn-primary">Book Your AI Assessment — $997 →</a>
+          <a href={ASSESSMENT_URL} className="btn-primary">Get the All Kits Bundle — $97 →</a>
         </div>
         <div className="hero-meta">
           <span>One-time payment</span>
@@ -321,7 +321,7 @@ export default function AIAssessment() {
           have a custom report and clear next moves by next week.<br /><br />
           <strong style={{color:'var(--text)'}}>Full refund</strong> if we can&apos;t identify 5+ hours/week of recoverable time. We&apos;ve never had to issue one.
         </p>
-        <a href={ASSESSMENT_URL} className="btn-primary">Book Your AI Assessment →</a>
+        <a href={ASSESSMENT_URL} className="btn-primary">Get the All Kits Bundle →</a>
         <p style={{marginTop:18,fontSize:12,color:'var(--gray-400)'}}>
           Secure Stripe checkout · Discovery call scheduling within 1 hour · 100% money-back guarantee
         </p>
@@ -379,7 +379,7 @@ export default function AIAssessment() {
         <p style={{fontSize:17,color:'var(--gray-300)',maxWidth:540,margin:'0 auto 24px',lineHeight:1.6}}>
           The translation gap between &ldquo;AI can do this&rdquo; and &ldquo;here&apos;s how to set it up for your business&rdquo; won&apos;t stay open forever. The clarity premium is now.
         </p>
-        <a href={ASSESSMENT_URL} className="btn-primary">Book Your $997 AI Assessment →</a>
+        <a href={ASSESSMENT_URL} className="btn-primary">Get the All Kits Bundle — $97 →</a>
       </section>
     </Layout>
   );
