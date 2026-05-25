@@ -7,7 +7,19 @@ Items marked `[cofounder]` were scheduled by you — adjust as needed.
 Format: `- HH:MM | action description | recurrence | source | enabled`
 
 ## Entries
-- 09:00 | Morning standup: review metrics, check Dev.to stats, run audit-signal-monitor.py + metrics-snapshot.py + read-replies.py + partner-signal-monitor.py + quiz-visit-monitor.py, append a new row to `.founder/plans/may14-strategic-synthesis.md` § 1.5 data trail, prioritize day | daily | cofounder | true
+
+# 🔥 PRIMARY DIRECTIVE (locks 2026-05-24, evaluates 2026-06-23)
+# Single-bet 30-day sprint: gist → content-creator persona → $39 kit.
+# Read [strategy_reframe_30day_single_bet_2026_05_24.md] before anything else.
+
+- 09:00 | MONDAY RITUAL (single 30-min session): (1) ship 1 gist targeting content-creator persona [bash .founder/tools/publish-gist.sh <gist-file>] (2) email 1 paying customer for feedback [send-one.py, rotate Shantae→Arnaud→Cmyrick25] (3) verify 1 truth-claim on a live page (4) verify 1 funnel-instrumentation event firing | weekly-monday | cofounder | true
+- 09:00 | 2026-06-23 KILL OR LADDER DECISION (30-day evaluation): 0 gist-attributed paid conversions = formal sunset (redirect domain, archive code). 1+ = ladder to 2 gists/week. 2+ = consider 2nd persona. | once-june23 | cofounder | true
+- 09:00 | Customer reply check: `python3 .founder/tools/read-replies.py` — exit 10 = unread reply, fire reply-handling playbook within 30min | daily | cofounder | true
+- 09:00 | Metrics-snapshot: `python3 .founder/tools/metrics-snapshot.py --json --save` — verify Stripe LTM + uptime, ping if NEW SALE | daily | cofounder | true
+
+# Below: legacy entries — most disabled per REFRAME 2026-05-24. Cleanup deferred.
+
+- 09:00 | Morning standup: review metrics, check Dev.to stats, run audit-signal-monitor.py + metrics-snapshot.py + read-replies.py + partner-signal-monitor.py + quiz-visit-monitor.py, append a new row to `.founder/plans/may14-strategic-synthesis.md` § 1.5 data trail, prioritize day | daily | cofounder | false
 - 09:00 | STORAGE RECOVERY (one-shot, fires when Armando shares STORAGE FAILED inbox dump): (1) `python3 .founder/tools/recover-storage-failed.py parse <inbox-file> --out /tmp/recovered.json` (2) `python3 .founder/tools/recover-storage-failed.py merge --in /tmp/recovered.json --dry-run` then `--apply` (3) `python3 .founder/tools/send-recovery-welcomes.py --in /tmp/recovered.json --dry-run` then `--apply` to fire source-aware welcomes within 4h of merge. NOT before May 14 decide-day if recovery happens to land then (avoid noise on strategic day). | once-when-unblocked | cofounder | true
 - 12:00 | Audit-window check: any reply to Hiedeh/Doug/Pham? Run `python3 .founder/tools/read-replies.py` (now reading from gist storage, fixed 2026-05-07) — if exit 10, fire Reply-Handling Playbook within 30min. Window extended to 2026-05-14 because follow-ups fired May 7 not May 6. — DISABLED May 23: window closed, 0/3 replies (covered by daily customer-reply-check) | daily-until-may14 | cofounder | false
 - 17:00 | EOD review: update STATE.md, log decisions, plan next day | daily | cofounder | true

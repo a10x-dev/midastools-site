@@ -95,6 +95,23 @@ When cold-outreach lookalikes purchase, port them here under "Active customers" 
 
 ---
 
+## REFRAME 2026-05-24 — Customer feedback outreach (first founder-mode contact in 64 days)
+
+Per [strategy_reframe_30day_single_bet_2026_05_24] decision. Direct asks to paying customers for what they bought + what they used + (Arnaud only) $68 upsell offer.
+
+| Email | Type | Sent | Replied | Bought | Notes |
+|---|---|---|---|---|---|
+| sclinton06@yahoo.com | thank-you + testimonial ask | 2026-05-24 (id `dff27735-df68-4ca7-970a-f5663776f65b`) | — | (already bundle) | Subject: "Shantae — quick thank you, one ask". Offers permanent-free future kits in exchange for any one-line testimonial. Reply window May 27–31. |
+| arnaud.ademes@gmail.com | feedback + $68 upsell to Bundle | 2026-05-24 (id `55c655a8-1925-40a7-b54c-9a32b96c7af2`) | — | (Mega Pack $29) | Subject: "Arnaud — what you've actually used from the Mega Pack?". Offers Bundle ($97) at $68 net (his $29 as credit). If yes, create a one-off Stripe price `price_one_off_arnaud_68` and reply with link. Reply window May 27–31. |
+
+**Pre-built response prep for any reply type:**
+- "Yes, send the upgrade link" → create one-off Stripe price for $68, reply within 30 min with the buy URL. Smoke-test the URL works before sending.
+- "I used X kit, loved Y" → send the testimonial extract back for permission to publish ("OK if I quote this on the site? Will credit as 'Shantae C., Mega Pack buyer Apr 2026' unless you prefer otherwise"). On yes, add to /bundle + /ai-prompt-mega-pack pages.
+- "I haven't used it yet" → reply with "Totally fine — what's the #1 prompt or workflow you'd want if you could only run 1 right now?" — opens a real conversation without pressure.
+- No reply by 2026-05-31 → 1 follow-up (single line: "No pressure if you're busy — just wanted to make sure my note didn't get caught by Gmail's promotions tab"). Then close window.
+
+---
+
 ## Operational checklist (run at the top of each session)
 
 ```
