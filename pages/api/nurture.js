@@ -511,7 +511,7 @@ function daysBetween(dateStr) {
 }
 
 export default async function handler(req, res) {
-  const { key, day, to, broadcast, template, drip } = req.query;
+  const { key, day, to, broadcast, template, drip, min_days } = req.query;
 
   if (key !== SECRET_KEY) {
     return res.status(401).json({ error: 'Unauthorized' });
@@ -598,10 +598,19 @@ export default async function handler(req, res) {
       const broadcastTemplate = broadcasts[templateName] || broadcasts.tools;
 
       const allSubs = await readSubscribers();
-      const activeContacts = allSubs.filter(s => !s.unsubscribed);
+      let activeContacts = allSubs.filter(s => !s.unsubscribed);
+
+      // Optional cohort filter: only subs signed up at least N days ago.
+      // Use to skip subs still in active nurture window (avoid email fatigue).
+      if (min_days) {
+        const minDaysNum = parseInt(min_days, 10);
+        if (Number.isFinite(minDaysNum) && minDaysNum > 0) {
+          activeContacts = activeContacts.filter(s => daysBetween(s.date) >= minDaysNum);
+        }
+      }
 
       if (activeContacts.length === 0) {
-        return res.status(200).json({ success: true, sent: 0, message: 'No active subscribers' });
+        return res.status(200).json({ success: true, sent: 0, message: 'No active subscribers in cohort' });
       }
 
       const subject = typeof broadcastTemplate.subject === 'function'
