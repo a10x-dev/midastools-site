@@ -6,10 +6,114 @@
 
 **KPIs**:
 - Conversations: 0 (target: 3, 7d: 0%)
-- Users: 43 (target: 30, 7d: 2.380952380952381%)
+- Users: 44 (target: 30, 7d: 4.761904761904762%)
 - Revenue: 155 (target: 997, 7d: 0%)
 
 <!-- AGENT-EDITED-BELOW (everything below this line is preserved across ticks) -->
+
+## Session 30 — MONDAY EVENING STRATEGIC REVIEW: WEEK 1 OF 30-DAY SINGLE-BET SPRINT (May 25, 21:01 local / May 26 03:01 UTC)
+
+### Trigger
+Monday 21:01 local — 12h past the 09:00 Monday Ritual slot. T+19h since S29-renderer shipped BILL post + Cmyrick25 Day-5 outreach. Schedule shows 9 DUE items including the weekly 4-input ritual, the daily Cmyrick25 reply check, and the June 23 kill-or-ladder reminder. Per `pre-build-saturation-detector`: already shipped 2 things last session; no NEW ship tonight. Right work = strategic review against primary directive + monitor sweep + task queue hygiene per the 30-day reframe.
+
+### 🟢 KPI MOVED: Users 43 → 45 (+2 real-human subs in 48h via viral generators)
+Cross-checked via /api/status:
+- **chazlette_06@ho... TODAY (day=0)** via `/hug-younger-self-generator` (real-name pattern, hotmail)
+- **pacifiqueaoyi@g... YESTERDAY (day=1)** via `/album-cover-generator` (real-name pattern, gmail)
+- Both via DIFFERENT viral generator funnels than Cmyrick25 (kit-page) or larissadiogoalv (homepage). Diverse source-mix.
+
+**Honest framing against primary directive:** these +2 are NOT content-creator persona — they're viral-image-generator users (personal/fun image generation, not professional content workflows). They count toward Users KPI but do NOT advance the 30-day kill criterion (which is "0 paid conversions from gist-attributed traffic"). Real-human signups but off-primary-ICP.
+
+### ✅ 5-monitor sweep — all clean
+| Signal | Result |
+|---|---|
+| read-replies | 2 unread (delon × 2, body still empty — Gmail MCP unlock pending Armando `/mcp`) |
+| audit-signal | 45 / 0 audit-tagged (per primary directive's "soft-kill audit-monitor" call, this monitor is now operational hygiene only) |
+| partner-signal | 45 / 0 partner-tagged (same soft-kill status) |
+| metrics-snapshot | 0 sales 24h / $155 LTM unchanged / 5/5 200 / +1 sub flagged ping-worthy (cross-verified real) |
+| BILL post live | HTTP 200 + "BILL Cut 30" content rendering + sitemap entry present |
+
+### ⏸️ BILL post 0 traffic in KV (last 300 events) — expected
+0 page_views on `/blog/bill-holdings-...`, 0 cta_clicks on bill-layoffs-* plinks. Google indexing window is 7-14d minimum from sitemap submission; BILL shipped 20h ago. Earliest meaningful traffic delta is May 31-Jun 7. Per primary directive's soft-kill on B2B citation cadence — no further citation posts unless gist channel fails June 23.
+
+### 📊 KV referrer distribution (300 events, recent ~24h):
+- 206 blank/direct (69%) — dark social + referrer-stripped
+- 45 www.google.com (15%) — organic search
+- 16 chatgpt.com (5.3%) — AI Overview citation winner still active 5d post-cluster
+- 14 github.com + 13 gist.github.com (9% combined) — OUR PRIMARY CHANNEL per 30-day bet
+
+Gist channel = 9% of measured traffic. Within expected range; gist #15 (content-creator) still in 24-72h indexing window.
+
+### Week 1 of 30-day primary directive — 4-input ritual status
+1. ✅ **1 gist (content-creator persona)**: Gist #15 shipped Sun May 24 (S26-renderer, commit 7eb6da9)
+2. ✅ **1 customer email**: Cmyrick25 Day-5 personal touch fired Sun May 24 night (Resend `3118a4ce`)
+3. ❌ **1 truth-claim audit**: Deferred to Tuesday — saturation says no new ship tonight; queued for tomorrow morning slot
+4. ❌ **1 funnel-instrumentation verify**: Deferred to Tuesday — same reason
+
+**Decision REVISED post-user-push: shipped items 3 + 4 in continuation.** Re-evaluating saturation correctly per Session 25 (renderer) lesson: items 3+4 are session-sized + plan-agnostic + primary-directive-mandated, NOT artifact pre-build on a saturated branch. Right work for the slot.
+
+### ✅ Item 4: Funnel-instrumentation verify — COMPLETE
+Read full chain end-to-end (pages/_app.js + lib/track.js + lib/stripe-attribution.js + pages/api/stripe-webhook.js). All 6 layers operational:
+1. page_view fires on every route change ✓
+2. cta_click fires on capture-phase document listener for any buy.stripe.com anchor ✓
+3. session_id persists per browser via localStorage (S25 cap gap closed) ✓
+4. useStripeAttribution() captures attribution on mount ✓
+5. attributeStripeHref() auto-rewrites href with client_reference_id=att|... on click ✓
+6. decodeAttributionFromClientRef() unpacks server-side in webhook ✓
+
+Empirical proof: today's 13:31 UTC Egypt cta_click on chatgpt-citation page → full att|s=chatgpt.com|p=blog/viral-ai-art-trends-april-2026|f=...|n=1 preserved in KV. /content-creator-kit's 2 Stripe links (`eVq7sK90j36F4CwdcecMM09` $39 + `bJe7sK0tNdLjgle0pscMM0b` $97) will get identical treatment when Cmyrick25 or any content-creator-persona signup clicks. **June 23 kill-or-ladder evaluation IS measurable** — no instrumentation blockers.
+
+### ✅ Item 3: Truth-claim audit — COMPLETE (commit e8bb7f2 pushed)
+Audited /content-creator-kit (Cmyrick25's landing page = primary-directive load-bearing surface). Own claims verified TRUTHFUL (57 numbered formulas in 06-headline-hook-formulas.md ≥ 50+ claim; ~63 total prompts across all 6 files ≥ "3 shown + 50 more" = 53). BUT line 263 cross-link to /social-media-kit claimed "150+ prompts" while /social-media-kit itself (line 419) honestly says "65+" (S30 May 23 fix). **2.3x overstatement at the exact conversion handoff.**
+
+Same trust-leak pattern S31 caught in nurture emails (May 14), recurring on 3 surfaces the pattern-grep missed:
+| Surface | Before | After |
+|---|---|---|
+| `pages/content-creator-kit.js:263` | 150+ social prompts | 65+ social prompts |
+| `pages/blog/ai-social-media-prompts-2026.js:305` | "Want 150+ social media prompts" | "Want 65+ social media prompts" |
+| `pages/api/stripe-webhook.js:329` | "Kit (150+ social media prompts)" | "Kit (65+ social media prompts)" |
+
+Source-of-truth: kit-content/social-media-kit/ = 12+10+12+11+12=57 numbered + 12 README = 69 total. "65+" is correct.
+
+Also verified Class B (ai-image-prompt-pack 150+ → actual 166 ✓), Class C email-marketing 172 ✓, ai-video 199 ✓. Real-estate-kit "150+" potentially overstated (ceiling count 133 by ### + numbered) — DEFERRED to separate session for S31-style per-file inspection (### includes section headers; needs careful audit not ceiling-grep).
+
+Build clean (`npx next build`), 3-surface re-grep verifies 0 "150+ social" remaining + 3 new "65+" claims in place. Commit `e8bb7f2` pushed `5af4595..e8bb7f2 main -> main`.
+
+### 🟢 Week 1 ritual: 4/4 COMPLETE (3 days ahead of Sunday deadline)
+1. ✅ Gist #15 (content-creator persona) — Sun May 24
+2. ✅ Cmyrick25 Day-5 personal touch — Sun May 24
+3. ✅ Truth-claim audit (3 fixes on the load-bearing landing page) — Mon May 25 22:15
+4. ✅ Funnel-instrumentation verify (full 6-layer chain operational) — Mon May 25 21:30
+
+First time I've closed a full weekly ritual since the primary directive locked in May 24. **The 30-day single-bet sprint is on cadence.**
+
+### 🚨 No paid conversions from gist channel yet (Day 2 of 30)
+- Cmyrick25 (May 20 signup, content-creator persona) is mid-nurture as of decision date — Day-3 fired May 22, Day-5 personal touch fired May 24, Day-7 fires May 27
+- Zero gist-attributed Stripe charges in lifetime ($155 LTM = Arnaud + Shantae + George, none gist-attributable per S159 attribution backfill)
+- 28 days remaining until June 23 evaluation
+
+### Per primary directive — what gets pruned from task queue tonight
+Per reframe doc § "What gets killed": directory work, audit-monitor work, cold-outbound work, audit experiment work are formally killed. Closing 18 stale tasks below that reference dead channels. Keep: storage recovery (Armando-blocked), 5-broken-SKU strategic call (Armando-blocked), chatgpt-prompts.js naming (Armando-strategic), real-testimonial outreach (low-pri but useful), Midas Content recurring sub (Armando-strategic).
+
+### What I deliberately did NOT do
+- Did NOT ship a 2nd gist. Saturation per primary directive (1/week, not daily).
+- Did NOT Telegram Armando. Monday 21:01 + no decide-now ask + the +2 subs aren't ICP-aligned enough to surface as material news. Bundling into tomorrow morning's standup brief.
+- Did NOT email a new customer. Cmyrick25 just got Day-5 touch <24h ago; rotating to Shantae/Arnaud this week would step on the Cmyrick25 reply window.
+- Did NOT pre-build gist #16 candidate. Primary directive says 1 gist/week + wait for kill-or-ladder data first.
+- Did NOT touch the BILL post or any other live page. Saturation + correct architectural pattern.
+- Did NOT close storage-recovery tasks (`d58121d1`, `c04d7329`, `16c8bdac`) — still valid if Armando ever shares inbox dump.
+- Did NOT touch the chatgpt-prompts.js Armando-strategic tasks (`355c3d59`, `ca6f7b6b`) — belong to Armando.
+
+### Honest accounting
+**Direct KPI: Users +2 (43→45, +4.7%).** Real-human subs, but off-primary-ICP. **Indirect: medium.** Strategic review against primary directive is operating correctly — Week 1 of single-bet sprint has 2 of 4 ritual inputs complete, gist channel is being measured, kill criteria are locked in for June 23, task queue gets pruned per the reframe. Without this slot, Tuesday morning's standup starts with a polluted queue and unclear week-1 ritual status.
+
+### Confidence
+85% — all monitors verified clean by direct API output; +2 subs verified by /api/status cross-check; BILL post live verified by HTTP 200 + content grep; primary directive correctly understood (read full reframe doc this session). Lower than 90% because (a) cannot yet measure gist #15 indexing/traffic delta (24-72h Google window not closed), (b) the +2 generator subs raise a calibration question — should the primary directive's persona scope expand to include "viral generator users → kit-page upsell"? Honest answer: hold on data; if either converts to paid within their nurture window, then yes.
+
+### NEXT_CHECKIN expectation
+Tuesday May 26 09:00 local — fire morning standup (5 monitors), then complete ritual items 3+4 (truth-claim audit + funnel-instrumentation verify) as the day's main work. Monitor Cmyrick25 daily for reply (Day-7 nurture fires May 27 automatically). Watch for any gist #15-attributed traffic via /api/track-events as it indexes.
+
+---
 
 ## Session 29 (renderer) — 🟢 BILL HOLDINGS B2B CITATION POST SHIPPED LIVE 13h EARLY (commit de807ec, May 24, 19:55 local / May 25 01:55 UTC)
 
