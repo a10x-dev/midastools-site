@@ -326,7 +326,7 @@ const KIT_MAP = {
       'Small Business AI Kit (social + email + operations)',
       'E-commerce AI Kit (product descriptions + email + ads)',
       'SaaS Founder AI Kit (launch + onboarding + churn prevention)',
-      'AI Social Media Manager Kit (150+ social media prompts)',
+      'AI Social Media Manager Kit (65+ social media prompts)',
       'AI Email Marketing Kit (125+ email marketing prompts)',
       'AI Presentation & Pitch Deck Kit (125+ presentation prompts)',
       'All future kits — free, forever',

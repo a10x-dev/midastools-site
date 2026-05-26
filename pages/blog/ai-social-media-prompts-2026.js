@@ -302,7 +302,7 @@ For each gap identified, provide a specific content idea with a working title, f
 
         {/* CTA AFTER CALENDAR SECTION */}
         <div style={ctaBoxStyle}>
-          <p style={{ margin: '0 0 12px', fontSize: '16px', fontWeight: '700' }}>Want 150+ social media prompts with every template built out?</p>
+          <p style={{ margin: '0 0 12px', fontSize: '16px', fontWeight: '700' }}>Want 65+ social media prompts with every template built out?</p>
           <p style={{ margin: '0 0 16px', color: '#6B7280', fontSize: '15px' }}>The <Link href="/social-media-kit" style={{ color: '#3B5FFF' }}>AI Social Media Kit</Link> includes content calendars, caption templates, viral formulas, analytics frameworks, community management scripts, and paid ad copy for every major platform. Copy, paste, post.</p>
           <a href={SOCIAL_MEDIA_KIT_URL} style={{ display: 'inline-block', background: '#3B5FFF', color: '#fff', padding: '14px 28px', borderRadius: '6px', textDecoration: 'none', fontWeight: '700', fontSize: '15px' }}>
             Get the Social Media Kit &mdash; $39

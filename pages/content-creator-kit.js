@@ -260,7 +260,7 @@ export default function ContentCreatorKit() {
       <section style={{paddingTop:0}}>
         <div style={{background:'linear-gradient(135deg, #F0FDFA 0%, #CCFBF1 100%)',borderRadius:12,padding:24,textAlign:'center',marginBottom:32}}>
           <p style={{marginTop:0,fontWeight:700,fontSize:'1.05rem'}}>Need help with social media specifically?</p>
-          <p style={{color:'#4B5563',fontSize:14,marginBottom:16}}>Our <a href="/social-media-kit" style={{color:'#3B5FFF',fontWeight:600}}>AI Social Media Manager Kit</a> has 150+ prompts for content calendars, captions, viral formulas, analytics, community management &amp; paid ads across every platform.</p>
+          <p style={{color:'#4B5563',fontSize:14,marginBottom:16}}>Our <a href="/social-media-kit" style={{color:'#3B5FFF',fontWeight:600}}>AI Social Media Manager Kit</a> has 65+ prompts for content calendars, captions, viral formulas, analytics, community management &amp; paid ads across every platform.</p>
           <a href="/social-media-kit" style={{display:'inline-block',background:'#3B5FFF',color:'#fff',padding:'10px 24px',borderRadius:100,textDecoration:'none',fontWeight:700,fontSize:14}}>See the Social Media Kit — $39 &rarr;</a>
         </div>
       </section>
