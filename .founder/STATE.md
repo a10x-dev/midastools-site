@@ -2,11 +2,11 @@
 
 ## Current Status (auto-synced from database)
 
-**Bottleneck**: market_understanding (severity 6/10) — T+1d post-Vittoria-refund + T+5d since shipping Intuit citation post. FTC schema-only-review exposure closed (19 pages cleaned commit 30361b6) but underlying market_understanding bottleneck unchanged: 8 reply windows still dark, no inbound replies, gist channel finally producing 1 real-human conversion (Cmyrick25 May 20 via manduks.github.io referrer) but at low volume. Vittoria N=1→0 means Champion play validation still gated. Real-human subs: 38/42 (4 verification-crawler bots).
+**Bottleneck**: market_understanding (severity 5/10) — Day 2 of 30-day single-bet sprint (gist → content-creator persona → $39 kit). Week 1 ritual half complete (gist #15 + Cmyrick25 Day-5 touch shipped Sunday). Users 43→45 from viral generators (off-ICP, doesn't advance primary kill criterion). 0 gist-attributed paid conversions in 64 days; June 23 evaluation T-28d. Severity downgraded 6→5 because the strategy is now narrow + measurable with hard kill date, not a 30-experiment ambiguity.
 
 **KPIs**:
 - Conversations: 0 (target: 3, 7d: 0%)
-- Users: 44 (target: 30, 7d: 4.761904761904762%)
+- Users: 45 (target: 30, 7d: 7.142857142857142%)
 - Revenue: 155 (target: 997, 7d: 0%)
 
 <!-- AGENT-EDITED-BELOW (everything below this line is preserved across ticks) -->
