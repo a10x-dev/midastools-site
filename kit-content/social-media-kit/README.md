@@ -1,8 +1,8 @@
 # AI Social Media Manager Kit
 
-## The Complete AI-Powered Social Media Toolkit — 150+ Prompts, Templates & Frameworks
+## The Complete AI-Powered Social Media Toolkit — 65+ Prompts, Templates & Frameworks
 
-Stop staring at a blank screen wondering what to post. This kit gives you 150+ copy-paste AI prompts that cover every aspect of social media management — from content calendars and caption writing to viral formulas, analytics, community management, and paid advertising. Each prompt is platform-specific, engagement-tested, and designed to grow your audience without burning out.
+Stop staring at a blank screen wondering what to post. This kit gives you 65+ copy-paste AI prompts that cover every aspect of social media management — from content calendars and caption writing to viral formulas, analytics, community management, and paid advertising. Each prompt is platform-specific, engagement-tested, and designed to grow your audience without burning out.
 
 ---
 
@@ -10,14 +10,14 @@ Stop staring at a blank screen wondering what to post. This kit gives you 150+ c
 
 | File | Category | Prompts |
 |------|----------|---------|
-| 01 - Content Calendar System | 30-day calendars, posting schedules, weekly themes, batch workflows | 25+ prompts |
-| 02 - Caption Hooks & Templates | Caption formulas, hooks, hashtag strategies, CTAs by platform | 30+ prompts |
-| 03 - Viral Content Formulas | Trend jacking, carousels, threads, reel scripts, meme marketing | 25+ prompts |
-| 04 - Analytics & Growth Prompts | Audience analysis, competitor tracking, engagement optimization | 25+ prompts |
-| 05 - Community Management | Response templates, DM sequences, crisis management, UGC campaigns | 20+ prompts |
-| 06 - Paid Social Ads | Ad copy, audience targeting, A/B testing, budgets, retargeting | 25+ prompts |
+| 01 - Content Calendar System | 30-day calendars, posting schedules, weekly themes, batch workflows | 10+ prompts |
+| 02 - Caption Hooks & Templates | Caption formulas, hooks, hashtag strategies, CTAs by platform | 10+ prompts |
+| 03 - Viral Content Formulas | Trend jacking, carousels, threads, reel scripts, meme marketing | 10+ prompts |
+| 04 - Analytics & Growth Prompts | Audience analysis, competitor tracking, engagement optimization | 10+ prompts |
+| 05 - Community Management | Response templates, DM sequences, crisis management, UGC campaigns | 10+ prompts |
+| 06 - Paid Social Ads | Ad copy, audience targeting, A/B testing, budgets, retargeting | 10+ prompts |
 
-**Total: 150+ prompts, templates, and frameworks**
+**Total: 65+ prompts, templates, and frameworks**
 
 ---
 

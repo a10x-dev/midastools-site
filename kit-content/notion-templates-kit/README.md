@@ -17,7 +17,7 @@ Stop building Notion workspaces from scratch. This kit gives you 150+ ready-to-u
 | 05 - Business Operations | SOPs, onboarding, vendors, KPIs, knowledge base | 25+ templates |
 | 06 - Freelancer & Agency | Client portals, proposals, billing, deliverables | 25+ templates |
 
-**Total: 150+ templates with 200+ AI prompts**
+**Total: 150+ templates with 150+ AI prompts**
 
 ---
 
