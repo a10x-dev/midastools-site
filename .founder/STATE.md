@@ -11,6 +11,78 @@
 
 <!-- AGENT-EDITED-BELOW (everything below this line is preserved across ticks) -->
 
+## Session 33 — POST-STANDUP CONTINUATION: 🚨 14 KIT READMES + 14 ZIPS — POST-PURCHASE TRUST-LEAK CLOSED (May 26, 13:54 local / 19:54 UTC, commit 8390db2 pushed)
+
+### Trigger
+User-prompted at 13:54 local, ~1h after Tuesday 12:50 standup (S32) closed. Sub-cadence check-in. Initial 1h-delta confirmed nothing moved (4 delon unread, $155 LTM unchanged, 45 subs, ping-worthy:no). Per saturation discipline, NOT another monitor sweep — but "what needs to happen next?" deserves a strategic answer. Real-estate-kit "150+" audit had been deferred since S25 close (3 days) as plan-agnostic + session-sized + Armando-independent. Right slot for the dedicated audit session.
+
+### 🚨 AUDIT FOUND BIGGER BUG THAN EXPECTED — 14 deliverables, not 1 kit
+Started auditing real-estate-kit "150+ potentially overstated" per S25 close. Findings:
+1. **real-estate-kit page meta says "50+ templates and workflows"** (line 45) — HONEST against ~53 actual prompts (file 01:5 templates / 02:7 / 03:15 day-N sequences / 04:6 / 05:~10 / 06:10). S25 close's "150+ potentially overstated" was wrong — there's no 150+ claim anywhere on the kit.
+2. **BUT real-estate-kit README has a cross-promo:** "AI Prompt Mega Pack (200+ prompts) — $29" — STALE per S31 truth-audit (Mega Pack is 145+).
+3. **Site-wide grep surfaced the same cross-promo stale "200+" claim in 13 OTHER kit READMEs** (notion / content-creator / social-media / resume-career / ai-video / ai-image / freelancer / presentation / small-business / email-marketing / ecommerce / saas-founder + Mega Pack itself).
+4. **Mega Pack's OWN README internally claimed "200+":** PAGE TITLE = "200+ Ready-to-Use AI Prompts..." + total claim "Total: 200+ prompts". S31 fixed the landing page + nurture emails (May 14) but missed the deliverable buyers receive. Worst-case trust-leak: pay $29, open kit, see same false count internally.
+
+### ✅ Shipped (commit 8390db2, pushed)
+1. **14 kit READMEs**: `AI Prompt Mega Pack (200+ prompts)` → `(145+ prompts)` via sed -i on all 14 files. Verified 0 stale + 14 fixed via grep -c.
+2. **Mega Pack README**: title (line 2) + total (line 29) 200+ → 145+ via Edit tool. Matches landing page + S31 truth.
+3. **build-kits.sh extended**: kit list expanded from 5 → 14 to cover all affected kits.
+4. **14 ZIPs rebuilt** at public/<kit>.zip (May 26 14:00 timestamp). Verified via unzip -p sample on 4 ZIPs — all show "145+ prompts" cross-promo + Mega Pack ZIP internally shows "145+ Ready-to-Use" title + "145+ prompts" total.
+5. **Build verify**: `npx next build` clean.
+6. **Push verified**: e8bb7f2..8390db2 main -> main.
+
+### What I deliberately did NOT do
+- Did NOT fix `notion-templates-kit/README.md:20` "**Total: 150+ templates with 200+ AI prompts**" — INTERNAL claim (not cross-promo). 6-file ### count = 346 markers, so 150+ templates is likely honest understatement. The "200+ AI prompts" sub-claim is plausibly honest (different counting unit than Mega Pack's "prompts"). Queued for verification in a separate session.
+- Did NOT touch 3 legitimate in-prompt template parameters using "200+" (presentation-kit example "Trusted by 200+ companies", email-marketing example "200+ companies reduced churn", saas-founder pro-tip "Reporters get 200+ pitches/day") — these are example content within prompts, not product claims.
+- Did NOT scope-creep into auditing real-estate-kit's own count more deeply (page meta + README both verified honest at ~53 actual / 50+ + 40+ claims).
+- Did NOT Telegram Armando. Tuesday afternoon, 1h after standup, no decide-now ask — bundle into tomorrow's 09:00 standup brief.
+- Did NOT rebuild openclaw-starter-kit ZIP (pre-existing $9 tripwire, separate fulfillment path, not in scope of this trust-leak class).
+
+### Honest accounting
+**Direct KPI: zero.** **Indirect: HIGH on post-purchase trust.** S31 (May 14) closed the trust-leak on landing pages + nurture emails but the SAME bug persisted in the actual delivered ZIPs for 12 days. Every buyer of any of the 14 affected kits during that window opened their ZIP and saw a stale Mega Pack cross-promo. The Mega Pack buyers (Arnaud May 2) had it worst — opened the kit and saw 200+ promised internally vs 145+ actual content.
+
+Pattern: numeric-claim-audit-by-product playbook (S30) catches at multiple abstraction layers. Landing-page-clean ≠ deliverable-clean. Future audit checklist: verify across (a) landing page, (b) nurture email, (c) blog cross-link, (d) sitemap meta, (e) deliverable README, (f) deliverable internal content. Surface-by-surface, not pattern-by-pattern.
+
+### Confidence
+90% — fix verified end-to-end (sed on 14 files + Edit on Mega Pack title/total + build-kits.sh extended + 14 ZIPs rebuilt + unzip -p sample on 4 ZIPs confirms 145+ live + npx next build clean + push hash verified). Lower than 95% only because (a) Vercel auto-deploy hasn't completed at this exact moment — for ~2min, /<kit>.zip download URLs may still serve the previous-deploy ZIP, (b) notion-templates-kit internal count claim remains unverified (queued).
+
+### NEXT_CHECKIN expectation
+Tomorrow May 27 09:00 standup — daily 5-monitor sweep, Cmyrick25 Day-7 auto-nurture fires today (watch for engagement signal), check gist #15 indexing delta + check whether Armando relayed delon body / ran /mcp. Bundle 14-README fix into Wednesday standup brief.
+
+### Session 33 continuation (May 26, 14:11 local / 20:11 UTC, commit 0f9214d pushed) — 2 MORE OVERSTATEMENTS CAUGHT BY ADJACENT-CLAIM SWEEP
+
+Applied the `audit-deliverables-not-just-landing-pages` playbook I just authored in S33 close. Swept ALL `Total:` claims across 14 kit READMEs (not just cross-promo). Found 2 more overstatements pattern-grep missed:
+
+1. **notion-templates-kit line 20**: "Total: 150+ templates with 200+ AI prompts" → "150+ templates with 150+ AI prompts". Templates count HONEST (~156 actual, 26 per file × 6 files matching landing page). AI prompts count was OVERSTATED (155 actual / 135 strict ### count vs 200+ claimed = 29-48% overstate).
+
+2. **social-media-kit MULTIPLE lines** (subtitle, intro, per-file table, total): "150+" → "65+" matching landing page (S30 May 22 fix). Truth: 68 prompts (11+12+10+12+11+12 across 6 files). Worst-case overstate of the audit: 2.2x on a kit that just had its landing page corrected 4 days ago — same trust-leak pattern recurring at deliverable layer the S30 fix didn't touch.
+
+**Verified HONEST in this sweep (no fix needed)**:
+- email-marketing-kit "125+" → 146 actual ✓
+- resume-career-kit "125+" → 132 actual ✓
+- ai-video-prompt-pack "150+" → 150 actual ✓ (boundary)
+- presentation-kit "125+" → 139 actual ✓
+- team-adoption-kit "48 prompts + 9 frameworks" → already precise honest count ✓
+- ai-image-prompt-pack "150+" → 166 actual ✓ (per S25)
+- mega-pack "145+" → 145 actual ✓ (S33 fixed)
+
+**Pattern reinforced**: My S33 audit was scoped to "200+" cross-promo pattern. The adjacent-claim sweep using `Total:` pattern found 2 more overstates the original audit missed. Surface-by-surface, not pattern-by-pattern.
+
+**Shipped (commit 0f9214d, pushed)**:
+- 2 README files edited (notion + social-media)
+- 2 ZIPs rebuilt via build-kits.sh
+- Build clean
+- Push verified `8390db2..0f9214d main -> main`
+
+**Cumulative S33 session output**:
+- commit 8390db2 (S33): 14 kit READMEs cross-promo fix + Mega Pack title/total + 14 ZIPs
+- commit 0f9214d (S33-cont): 2 more total-level overstatements + 2 ZIPs
+- Total: 16 README edits, 14 ZIPs rebuilt (4 of which got 2 edit-rounds), 0 dashboard regressions, build clean throughout
+
+**Confidence**: 90% — both fixes verified via unzip -p sample on rebuilt ZIPs, build clean, push verified. Lower than 95% because (a) the social-media-kit's per-file claims (file 02 "30+", others "20+"/"25+") were rationalized as "10+ each = 60+ summed → 65+ total" which is a clean honest count but loses the framing where file 02 might count 30+ across hooks+templates+CTAs+hashtags — sharp-buyer could argue the 30+ was defensible; conservative truth-aligned fix wins on consistency.
+
+---
+
 ## Session 32 — TUESDAY STANDUP: 🚨 DELON @ ZPLATFORM REPLIED AGAIN + ROOT-CAUSE OF EMPTY-BODY MYSTERY (May 26, 12:50 local / 18:50 UTC)
 
 ### Trigger
