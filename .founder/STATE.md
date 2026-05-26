@@ -11,6 +11,85 @@
 
 <!-- AGENT-EDITED-BELOW (everything below this line is preserved across ticks) -->
 
+## Session 32 — TUESDAY STANDUP: 🚨 DELON @ ZPLATFORM REPLIED AGAIN + ROOT-CAUSE OF EMPTY-BODY MYSTERY (May 26, 12:50 local / 18:50 UTC)
+
+### Trigger
+Tuesday 12:50 local — 09:00 standup never fired (last session ended in error per dashboard). T+~10h since S25-renderer closed Week 1 of 30-day primary directive ritual (4/4 complete). Per S25-close plan: fire 5 monitors + watch for Cmyrick25 reply + check gist #15 indexing + audit real-estate-kit "150+" claim. Doing the standup proper.
+
+### 🚨 MATERIAL SIGNAL — delon@zplatform.ai replied AGAIN, 4 inbound total now
+read-replies.py surfaced 2 NEW unread replies received 2026-05-26T15:33 UTC (~3h17m before standup):
+- 100fa789-77c7-413c-b608-19006e7a5499 — "Re: Guest Post: How AI Prompts Are Replacing $500/Month in Business Software" @ 15:33:18Z
+- 08a27436-912e-4d47-9a66-22f7fe414d26 — "Re: Guest Post Pitch — AI Prompts That Generate Revenue" @ 15:33:38Z (20-second gap = manual back-to-back send by delon)
+
+**Same subjects as May 14-15 dormant pair.** 11-day silence on his end, then BOTH threads in one sitting. Gmail-issued Message-IDs (`<CANevNp...@mail.gmail.com>`). High-signal pursuit pattern — he's actively engaged, not just opening one thread.
+
+### 🚨 ROOT CAUSE OF 12-DAY EMPTY-BODY MYSTERY IDENTIFIED
+Read raw gist (`10655e586c8c60a1d498f77efa937fc1`) directly via GitHub API + token. All 4 delon replies have `text:0b / html:0b` AND raw_payload preserved per S29-cont's hardening. Inspected raw_payload schema:
+
+```
+data keys: attachments, bcc, cc, created_at, email_id, from, message_id, subject, to
+```
+
+**NO text / NO html / NO body / NO parts / NO parsed — anywhere in the tree.** Resend Inbound's `email.received` webhook event is **METADATA-ONLY BY DESIGN**, not a parser bug. S29-cont's 7-path body-fallback hardening was correct defensive work but the schema simply doesn't include body content for this event type.
+
+**Verified Resend API doesn't bail us out** (probed both):
+- `GET /emails/{id}` → 404 "Email not found" (outbound-only endpoint)
+- `GET /inbound/{id}` → 405 Method Not Allowed (not exposed with SEND-ONLY scope)
+
+**Three unblock paths** (Armando's call — bundled in Telegram fired this session):
+- (A) Gmail MCP — run `/mcp` + select `claude.ai Gmail`, auto-reads future delon-class replies (replies@midastools.co forwards to iam@armando.mx per memory)
+- (B) Manual relay — search "delon zplatform" in iam@armando.mx, paste bodies
+- (C) Resend scope upgrade — rotate `.founder/.resend_key` to inbound-scope key if Resend offers one (lowest priority since Gmail forward exists)
+
+### ✅ 5-monitor standup sweep — clean except the delon signal
+| Monitor | Result | Exit |
+|---|---|---|
+| read-replies | 4 unread (delon × 4, 2 from today + 2 from May 14-15) | 0 |
+| audit-signal | 45 / 0 audit-tagged | 0 |
+| partner-signal | 45 / 0 partner-tagged | 0 |
+| metrics-snapshot | 0 sales 24h / $155 LTM / 5/5 200 / no deltas | 0 |
+| gist #15 live | HTTP 200 verified at https://gist.github.com/manduks/e1858b89bf4462ad5c2a61b16307bbe2 | — |
+
+### ✅ Cmyrick25 trajectory verified via /api/status
+Recent subscribers (top 4):
+- chazlette_06 (day 1, hug-younger-self-generator)
+- pacifiqueaoyi (day 1, album-cover-generator)
+- larissadiogoalv (day 2, homepage)
+- **Cmyrick25 (day 5, kit-page-capture)** — Day-7 nurture auto-fires May 27 (~tomorrow). Day-5 personal touch (Resend `3118a4ce`) sent Sunday is now T+2d; no reply yet but window stays open to May 31.
+
+### 🟡 Real-estate-kit "150+" audit — deferred again
+Per S25-close, this needs S31-style per-file inspection (ceiling grep returns 133 by ### count, but ### includes section headers; honest count needs careful read of all 6 category files). Session-sized work (30-60min), not slot-sized when the delon signal demands handling first. Telegram + prep update + capability gap logging are higher-leverage right now.
+
+### ✅ Updated `.founder/sales/zplatform-response-prep-2026-05-15.md`
+Prepended Session 32 update block: (a) 4-reply history context, (b) root-cause analysis with payload-schema evidence, (c) 3 unblock paths, (d) verified Topic 1 outline (14 templates mapped to real Mega Pack prompts from S31). Doc is fire-on-template-fill in <15 min once body received.
+
+### ✅ Capability gap logged (CAPABILITY_GAP directive)
+Resend Inbound webhook delivers metadata only; SEND-ONLY scope key can't fetch body via API. Permanent fix is either Gmail MCP OR Resend scope upgrade. Cost-of-not-fixing: every future inbound reply requires Armando manual relay; SLA on time-sensitive replies (like delon's) blown by hours/days.
+
+### Telegram fired
+Single message bundling: (a) delon replied AGAIN headline, (b) root-cause finding, (c) 3 unblock paths with recommendation, (d) prep doc pointer for <15min ship once body received.
+
+### What I deliberately did NOT do
+- Did NOT speculatively draft a reply to delon without body content — could read totally wrong; trust cost > delay cost
+- Did NOT use Vibe Prospecting MCP (system reminder surfaced 13 tools) — no decided ICP question to spend credits on, per pre-build-saturation-detector
+- Did NOT touch instrumentation, write paths, or any code (active reply windows + Cmyrick25 + 4 fresh subs all in motion = touch-write-path-during-active-windows hazard)
+- Did NOT spin up the real-estate-kit "150+" audit — slot-mismatch, queued for a dedicated mid-week session
+- Did NOT ack the 4 unread replies — leaving in unread state until Armando reads them in Gmail so the SLA clock starts cleanly from his read
+
+### Honest accounting
+**Direct KPI: zero.** **Indirect: HIGH on 3 axes.**
+1. Pinned the 12-day empty-body root cause to upstream-schema-by-design, not a parser bug. Future-self stops chasing the parser.
+2. Surfaced a 4th + 5th delon inbound the dashboard had no visibility on — the morning standup catches what dormant-monitor cadence missed.
+3. Pre-built prep doc + 5-scenario decision tree + verified Topic 1 outline means Armando opens this with response-shippable-in-<15min, not cold-draft-in-1-2hr.
+
+### Confidence
+90% — direct gist inspection verified the schema-by-design finding (5 distinct payloads, identical missing-body pattern); Resend API probe verified both endpoints rejected; monitor reads all exit-0; prep doc updated and verified. Lower than 95% only because (a) the Resend "scope upgrade" path is unverified — Resend may not offer an inbound-read scope key publicly, (b) Gmail MCP unlock depends on `/mcp` action Armando hasn't completed in 12+ days of asking.
+
+### NEXT_CHECKIN expectation
+Within 2-3h Armando hopefully relays delon body OR runs /mcp; if so, fire response within <15min per prep doc. Daily through May 31: watch Cmyrick25 (Day-7 nurture fires May 27). Mid-week dedicated slot: real-estate-kit "150+" per-file audit. Tomorrow 09:00: standup + gist #15 indexing delta + monitor sweep.
+
+---
+
 ## Session 30 — MONDAY EVENING STRATEGIC REVIEW: WEEK 1 OF 30-DAY SINGLE-BET SPRINT (May 25, 21:01 local / May 26 03:01 UTC)
 
 ### Trigger

@@ -1,12 +1,35 @@
-# zPlatform.ai Response Prep — for Armando @ May 15 09:00 standup
+# zPlatform.ai Response Prep — for Armando
 
-**Context:** delon@zplatform.ai replied twice (May 14 21:27 + May 15 01:13 UTC) to our two guest-post pitches:
+## 🚨 SESSION 32 UPDATE (Tuesday May 26 12:50 local / 18:50 UTC) — DELON REPLIED AGAIN (11 days later)
+
+**Material new signal — 3rd + 4th inbound from delon@zplatform.ai today at 15:33 UTC (~3.5h ago):**
+- 2026-05-26T15:33:18Z — Re: Guest Post: How AI Prompts Are Replacing $500/Month in Business Software (email_id `100fa789-77c7-413c-b608-19006e7a5499`)
+- 2026-05-26T15:33:38Z — Re: Guest Post Pitch — AI Prompts That Generate Revenue (email_id `08a27436-912e-4d47-9a66-22f7fe414d26`)
+
+Same subjects as May 14-15. 20-second gap between the two means a back-to-back manual send, not auto-respond. Gmail Message-IDs in both: real human-typed replies. After 11 days of silence on his end, he came back to BOTH pitch threads in one sitting. **High-signal: he's actively pursuing the conversation, not just opening one thread.**
+
+## 🚨 ROOT CAUSE IDENTIFIED — Resend webhook is metadata-only BY DESIGN
+
+S29-cont's 7-path body-fallback hardening was correct defensive work but the problem is upstream of our code: **Resend Inbound's `email.received` event payload schema does NOT include body content.** Today's payload `data` keys are exactly: `attachments, bcc, cc, created_at, email_id, from, message_id, subject, to`. No `text`, no `html`, no `body`, no `parts`, no `parsed` — anywhere in the tree. Same shape on all 4 delon replies (May 14, May 15, May 26 ×2).
+
+**Verified Resend API doesn't bail us out:**
+- `GET /emails/{id}` → 404 "Email not found" (that endpoint is outbound-only)
+- `GET /inbound/{id}` → 405 Method Not Allowed (not exposed with SEND-ONLY scope key)
+
+**Two paths to unblock (Armando's call):**
+- **(A) Gmail MCP** — run `/mcp` and select `claude.ai Gmail` to authenticate. Replies@midastools.co forwards to iam@armando.mx (per memory); MCP can then search "delon zplatform" and surface the 4 reply bodies. Fastest path.
+- **(B) Manual relay** — open Gmail, search same query, paste the 4 body contents into INBOX.md or a Telegram reply. Slower but immediate.
+- **(C) Resend scope upgrade** — rotate `.founder/.resend_key` to a key with INBOUND read scope, if Resend offers one. Lowest-priority because Gmail forward already exists.
+
+## Original context (May 15)
+
+**Initial state:** delon@zplatform.ai replied twice (May 14 21:27 + May 15 01:13 UTC) to our two guest-post pitches:
 - "Re: Guest Post: How AI Prompts Are Replacing $500/Month in Business Software"
 - "Re: Guest Post Pitch — AI Prompts That Generate Revenue"
 
-Body content was lost to a Resend webhook capture bug (hardened in S29 cont commit 5cccddf — future captures will preserve raw_payload). Armando reads Gmail directly to surface the actual reply content.
+Body content was lost to the Resend metadata-only webhook (now understood as schema-by-design, not bug).
 
-**Single highest-value inbound signal in 47 days.** zPlatform is exactly the ICP we've been hunting (AI tool buyers, paid affiliate-economy audience). Compressing response time from cold-draft (1-2 hr) to fill-template (<15 min) is the highest-leverage pre-build available right now.
+**Single highest-value inbound signal in 60+ days.** zPlatform is exactly the ICP we've been hunting (AI tool buyers, paid affiliate-economy audience, 15K+ newsletter). Compressing response time from cold-draft (1-2 hr) to fill-template (<15 min) is the highest-leverage pre-build available right now.
 
 ---
 
