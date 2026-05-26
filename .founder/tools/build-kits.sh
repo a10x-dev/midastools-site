@@ -8,7 +8,7 @@ PUBLIC_DIR="$SITE_DIR/public"
 
 echo "Building kit ZIPs..."
 
-for kit in real-estate-kit content-creator-kit freelancer-kit small-business-kit ai-prompt-mega-pack; do
+for kit in real-estate-kit content-creator-kit freelancer-kit small-business-kit ai-prompt-mega-pack notion-templates-kit social-media-kit resume-career-kit ai-video-prompt-pack ai-image-prompt-pack presentation-kit email-marketing-kit ecommerce-kit saas-founder-kit; do
   if [ -d "$KIT_DIR/$kit" ]; then
     file_count=$(ls -1 "$KIT_DIR/$kit" | wc -l | tr -d ' ')
     echo "  $kit: $file_count files"

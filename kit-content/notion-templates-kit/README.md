@@ -154,6 +154,6 @@ Copyright 2026 MidasTools. All rights reserved.
 
 Like this kit? Check out our other prompt collections:
 
-- AI Prompt Mega Pack (200+ prompts) — $29 — midastools.co/ai-prompt-mega-pack
+- AI Prompt Mega Pack (145+ prompts) — $29 — midastools.co/ai-prompt-mega-pack
 - Real Estate AI Kit (40+ prompts) — $49 — midastools.co/real-estate-kit
 - All Kits Bundle (every kit we make) — $97 — midastools.co/bundle

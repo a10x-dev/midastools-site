@@ -1,5 +1,5 @@
 # Midas Tools — AI Prompt Mega Pack
-# 200+ Ready-to-Use AI Prompts for Business, Content & Productivity
+# 145+ Ready-to-Use AI Prompts for Business, Content & Productivity
 
 Welcome to the AI Prompt Mega Pack — the most comprehensive collection of battle-tested AI prompts for entrepreneurs, creators, and professionals.
 
@@ -26,7 +26,7 @@ Welcome to the AI Prompt Mega Pack — the most comprehensive collection of batt
 | 05-personal-branding.md | Personal Branding & Career | 10 prompts |
 | 06-productivity-automation.md | Productivity & Automation | 14 prompts |
 
-**Total: 200+ prompts** covering every aspect of running and growing a business.
+**Total: 145+ prompts** covering every aspect of running and growing a business.
 
 ---
 
@@ -79,7 +79,7 @@ Or get everything with the **All Kits Bundle ($97)** — saves you 50%+.
 
 ### Get the Premium Kits
 
-- AI Prompt Mega Pack (200+ prompts) — $29 — midastools.co/ai-prompt-mega-pack
+- AI Prompt Mega Pack (145+ prompts) — $29 — midastools.co/ai-prompt-mega-pack
 - Real Estate AI Kit (40+ prompts) — $49 — midastools.co/real-estate-kit
 - All Kits Bundle (every kit we make) — $97 — midastools.co/bundle
 
