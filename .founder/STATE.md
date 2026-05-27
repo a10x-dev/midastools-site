@@ -11,6 +11,68 @@
 
 <!-- AGENT-EDITED-BELOW (everything below this line is preserved across ticks) -->
 
+## Session 26 CONTINUATION — GIST PORTFOLIO CROSS-LINK + 5 SURGICAL TRUTH-FIXES SHIPPED (May 27, 14:50 local / 20:50 UTC, commit 64ab674 pushed)
+
+### Trigger
+User pushed past my 14:48 honest-close with explicit "Continue working on highest-impact task." Re-evaluated saturation read: gist #15's portfolio internal-discoverability is a NEW workstream different from the already-saturated Vittoria/BILL/chatgpt-prompts.js branches. Per `saturation-per-bottleneck-not-session` playbook: cross-linking existing gists to #15 increases the gist channel volume on the content-creator funnel — bottleneck-direct, not motion-vs-progress.
+
+### What I audited
+Gist #15 (content-creator persona, shipped Sunday) has ONE outbound sister-link to #11 (email) but NO older gists link BACK to #15. Per `gist-topic-selection` playbook, sister-gist cross-links are required for portfolio discovery. Asymmetric leverage: a back-link from a higher-traffic older gist surfaces #15 to its existing reader stream.
+
+Identified 3 highest content-creator-audience-overlap gists missing back-link to #15:
+- #11 ai-email-prompts (newsletter creators)
+- #06 prompt-engineering-cheatsheet (creators learning prompts)
+- #13 claude-opus-4-7-prompts (creators using Opus for long-form)
+
+### ✅ Shipped (commit 64ab674, pushed)
+**3 sister-link cross-references added in Resources sections** (PATCHed live via update-gist.sh):
+- #11 line 345: "Sister gist — AI Content Creator Prompts (14 templates for repurposing, threads, YouTube, newsletters) — the daily-tax companion to creator prompts."
+- #06 line 162: "Sister gist — for content creators: AI Content Creator Prompts (14 templates: repurposing, threads, YouTube, newsletters, headlines)"
+- #13 line 513: "AI Content Creator Prompts — sister gist, creator-workflow-focused. Opus is the right pick for the long-form templates inside."
+
+**5 surgical truth-fixes in same edit window** (in-flight per `audit-deliverables-not-just-landing-pages`):
+| File | Before | After |
+|---|---|---|
+| #13 L508 | Mega Pack ($97) | Mega Pack ($29) |
+| #13 L508 | 200+ reusable prompts | 145+ reusable prompts |
+| #13 L516 | ~190 more like them | ~130 more like them |
+| #06 L160 | 500+ production-grade prompts (text, image, video) | 145+ production-grade text prompts across business ops, writing, and research |
+| #06 L164 | full library (500+ prompts | full library (145+ prompts |
+
+Same trust-leak pattern S31 (May 14 landings + nurture) / S33 (May 26 14 ZIPs) / S33-cont (May 26 adjacent-claim sweep) closed at other deliverable surfaces. Gist content IS a deliverable; truth-audit propagation to gist content was the open layer.
+
+### ✅ Verification
+- `bash .founder/tools/check-gh-token.sh -v` → OK, login=manduks, scope=gist, 73 gists
+- All 3 `update-gist.sh` runs returned "✓ Gist patched: <url>"
+- `curl` on all 3 live gist raw URLs returned exactly 1 occurrence of `e1858b89bf4462ad5c2a61b16307bbe2` (gist #15 ID)
+- `curl` on #13 + #06 raw shows truth-fixes live ($29 / 145+ / ~130 / 145+ / 145+)
+- `git push` verified by `383c0a1..64ab674 main -> main`
+- IndexNow auto-resubmitted by update-gist.sh per its post-PATCH curl
+
+### Queue hygiene
+Closed 10 stale status-statement tasks polluting the backlog (e.g. "21 paid kits on Stripe", "~31 email subscribers" which is actually 45 now, "Bot protection on subscribe API" — all observational status, not actionable). Same pattern as S31-renderer's SCHEDULE.md cleanup + S27-renderer's 15-task closure. Removes false-signal from future agent dashboard reads.
+
+### What I deliberately did NOT do
+- Did NOT audit all 14 gist contents for stale truth-claims. Session-sized work (~45 min for full sweep); opportunistically fixed #13 + #06 while editing for cross-links, queued the rest as new TASK_CREATE for next session.
+- Did NOT load Vibe Prospecting MCP despite reconnect mid-session. No decided ICP question to spend credits on (iCapital pitch still gated on Armando greenlight per this morning's Telegram). Same calibration as Friday/Saturday/Sunday — speculative tool-tourism per `pre-build-saturation-detector`.
+- Did NOT add cross-links from older non-overlapping gists (#01 sora, #02 cold-outreach, #03 ghibli, #04 action-figure, #07 midjourney-v7, #09 chatgpt-image, #10 ai-resume). Audience overlap with content-creator persona is too thin; the cross-link would feel forced.
+- Did NOT 3rd-monitor sweep (already 2 today at 12:47 + 14:50; sub-2h cadence is noise).
+- Did NOT Telegram. Wednesday afternoon + 6 Armando-strategic asks already in this morning's bundle + this work is operational hygiene, not strategic news. Per `armando-async-asks`: bundle into tomorrow's standup brief if Armando ghosts the morning Telegram.
+
+### Honest accounting
+**Direct KPI: zero (no sale, no signup, no reply).** **Indirect: small but real.**
+1. **Gist portfolio internal-discoverability now non-zero**: previously zero older gists linked to #15; now 3 highest-overlap gists do. With 21 gist-attributed events / 57h current volume + maybe 5-10% click-through rate on Resources-section sister-links, expect 1-3 incremental /content-creator-kit visitors over 30d. Small EV but compounds across the 30-day primary directive sprint.
+2. **Trust-leak closed at gist deliverable layer**: #13 Opus 4.7 gist gets organic traffic from Anthropic launch search cluster. Every reader clicking the "Mega Pack ($97) — 200+ reusable prompts" link landed on a page saying "$29 — 145+ prompts" — instant trust evaporation. Now consistent.
+3. **Queue hygiene**: 10 stale status-statements closed. Future agent dashboards now show genuine open items instead of observational debris.
+
+### Confidence
+85% — verified end-to-end (PAT health probe + 3 update-gist.sh successes + 3 curl verifications of sister-link presence + 2 curl verifications of truth-fixes + git push hash). Lower than 90% because: (a) the EV of sister-link cross-references is unmeasured — could be near-zero if Resources sections are read by <1% of gist visitors, (b) the truth-audit deferral leaves 12 other gist files potentially carrying same stale-claim pattern; queued as task but not fixed this session.
+
+### NEXT_CHECKIN expectation
+Tomorrow May 28 09:00 local standup — verify Cmyrick25 Day-7 auto-fires at 03:17 local (sent_day_7 marker should appear in gist), re-snapshot gist #15 + BILL post traffic delta (Day 4 of 7-14d Google indexing window — earliest possible signal). Run 5-monitor sweep. Watch for any Armando response to Wednesday Telegram. Bundle queue-hygiene + sister-link + truth-fix into morning brief.
+
+---
+
 ## Session 26 — WEDNESDAY STRATEGIC REVIEW: GIST CHANNEL ALIVE BUT GIST #15 NOT YET MEASURABLE + CMYRICK25 DAY-7 CALIBRATION CORRECTED (May 27, 12:47 local / 18:47 UTC)
 
 ### Trigger
