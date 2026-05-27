@@ -342,6 +342,7 @@ Paste your draft here to try it: [midastools.co/prompt-enhancer](https://www.mid
 - **Free: [midastools.co/prompt-generator](https://www.midastools.co/prompt-generator?utm_source=gist&utm_medium=github&utm_campaign=11-ai-email-prompts-cheatsheet)** — build a reusable email prompt from scratch.
 - **Deep dive: [AI Email Templates Guide (April 2026)](https://www.midastools.co/blog/ai-email-templates-2026?utm_source=gist&utm_medium=github&utm_campaign=11-ai-email-prompts-cheatsheet)** — full walkthrough with live examples.
 - **Paid: [AI Email Marketing Kit — $29](https://www.midastools.co/email-marketing-kit?utm_source=gist&utm_medium=github&utm_campaign=11-ai-email-prompts-cheatsheet)** — 100+ tested email prompts across sales, CS, lifecycle, and internal comms. One-time, no subscription.
+- **Sister gist** — [AI Content Creator Prompts (14 templates for repurposing, threads, YouTube, newsletters)](https://gist.github.com/manduks/e1858b89bf4462ad5c2a61b16307bbe2) — if you run a newsletter or publish content alongside your inbox work, this is the companion pack.
 
 ---
 

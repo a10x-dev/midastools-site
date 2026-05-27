@@ -505,12 +505,13 @@ Tighten any of these before you ship using the [free prompt enhancer](https://ww
 ## Resources
 
 - [Claude Code Kit ($39)](https://www.midastools.co/claude-code-kit?utm_source=gist&utm_medium=github&utm_campaign=13-claude-opus-4-7-prompts-cheatsheet) — 140+ prompts, workflows, and agent recipes for building with Claude end-to-end.
-- [AI Prompt Mega Pack ($97)](https://www.midastools.co/ai-prompt-mega-pack?utm_source=gist&utm_medium=github&utm_campaign=13-claude-opus-4-7-prompts-cheatsheet) — 200+ reusable prompts across research, strategy, writing, and code — the full library these templates come from.
+- [AI Prompt Mega Pack ($29)](https://www.midastools.co/ai-prompt-mega-pack?utm_source=gist&utm_medium=github&utm_campaign=13-claude-opus-4-7-prompts-cheatsheet) — 145+ reusable prompts across research, strategy, writing, and code — the full library these templates come from.
 - [Free Prompt Enhancer](https://www.midastools.co/prompt-enhancer?utm_source=gist&utm_medium=github&utm_campaign=13-claude-opus-4-7-prompts-cheatsheet) — paste any draft, get a tighter version back. No login, no signup.
 - [Claude Code Mastery Guide 2026](https://www.midastools.co/blog/claude-code-mastery-guide-2026?utm_source=gist&utm_medium=github&utm_campaign=13-claude-opus-4-7-prompts-cheatsheet) — deep-dive on using Claude for the full dev workflow.
 - [Claude Code Prompts Cheatsheet](https://gist.github.com/manduks/edeadfd933d284d6f0903459891b2e61) — sister gist, CLI-focused (not the same as this one).
 - [AI SaaS Founder Prompts](https://gist.github.com/manduks/bc445120f5588d30c71c896f0210b00d) — for the 14 writing tasks every founder runs every month.
+- [AI Content Creator Prompts](https://gist.github.com/manduks/e1858b89bf4462ad5c2a61b16307bbe2) — sister gist, creator-workflow-focused (repurposing, threads, YouTube, newsletters). Opus is the right pick for the long-form templates inside.
 
 ---
 
-*Last updated April 2026 by [Midas Tools](https://www.midastools.co). If one of these prompts saves you an hour of Opus tokens, the [AI Prompt Mega Pack](https://www.midastools.co/ai-prompt-mega-pack?utm_source=gist&utm_medium=github&utm_campaign=13-claude-opus-4-7-prompts-cheatsheet) has ~190 more like them.*
+*Last updated April 2026 by [Midas Tools](https://www.midastools.co). If one of these prompts saves you an hour of Opus tokens, the [AI Prompt Mega Pack](https://www.midastools.co/ai-prompt-mega-pack?utm_source=gist&utm_medium=github&utm_campaign=13-claude-opus-4-7-prompts-cheatsheet) has ~130 more like them.*
