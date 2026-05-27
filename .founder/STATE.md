@@ -11,6 +11,108 @@
 
 <!-- AGENT-EDITED-BELOW (everything below this line is preserved across ticks) -->
 
+## Session 26 — WEDNESDAY STRATEGIC REVIEW: GIST CHANNEL ALIVE BUT GIST #15 NOT YET MEASURABLE + CMYRICK25 DAY-7 CALIBRATION CORRECTED (May 27, 12:47 local / 18:47 UTC)
+
+### Trigger
+User-prompted strategic review at 12:47 local Wednesday — 09:00 standup never auto-fired (no agent ran). T+~16h since S25 (audit of parallel-agent commit 383c0a1) closed. Day 65 / hour 1581 / session 248. Day 3 of 30-day primary directive sprint, T-27d to June 23 evaluation.
+
+### ✅ 5-monitor sweep + gist API check + 500-event KV inspection — all clean
+| Signal | Result |
+|---|---|
+| read-replies | 4 unread (delon × 4, body still empty since 12+ days) — no 5th |
+| audit-signal | 45 / 0 audit-tagged |
+| partner-signal | 45 / 0 partner-tagged |
+| metrics-snapshot | 0 sales 24h / $155 LTM / 45 subs / 5/5 200 / no ping-worthy deltas |
+| Gist #15 + BILL post | both HTTP 200 live |
+| Cmyrick25 gist record | sent_day_1..6 all timestamped; sent_day_7 NOT yet present |
+
+### 🚨 CALIBRATION MISS in S25 memory — Day-6 fired today, NOT Day-7
+S25 (and multiple prior sessions) predicted "Cmyrick25 Day-7 auto-fires 03:17 local tomorrow (May 27)." Direct gist inspection: `sent_day_6: 2026-05-27T09:17:11.574Z` — TODAY's cron fired DAY-6 not Day-7. The Day-N counter lags by 1 because Day-1 fired the day AFTER signup (May 22, not May 21). Day-7 actually fires TOMORROW May 28 09:17 UTC. The auto-drip path is healthy (commit 383c0a1 audited clean S25); calibration of which template is firing was off by 1 across multiple sessions. Now corrected.
+
+### 🚨 MATERIAL FINDING — Gist #15 NOT yet measurable in last 500 KV events (~57h window)
+500-event analysis:
+- **Gist channel ALIVE**: 21 gist-attributed events, gist.github.com is #2 referrer (91 google / 19 gist / 16 chatgpt / 15 github).
+- **But ZERO landed on /content-creator-kit** (gist #15's primary funnel destination).
+- All 21 gist-attributed events went to OLDER gists' destinations: `/soul-generator` ×8 (one `?preset=content` from FR/Mac which COULD be gist-#15-attributed via content-creator persona), `/blog/openclaw-entrepreneur-setup-guide` ×3, `/prompt-generator?utm_campaign=05-notion-ai-templates` ×2 (gist #5), `/free-tools/prompt-enhancer` ×2, `/free-tools/soul-generator` ×2, `/blog/openclaw-setup-guide-2026` ×1.
+- **Honest read**: 3 days into 7-14d Google indexing window. The lone FR/Mac `?preset=content` visit on May 25 22:44 UTC is suggestive but N=1. No clear gist #15 traffic yet. Cannot falsify the 30-day premise on Day 3.
+
+### 🚨 BILL post: 0 visits in 500-event window
+Same Saturday May 24 ship + same 7-14d indexing window. Two-surface ship (gist + blog post) both in their cold-start period. Per `motion-vs-progress`: no ship action moves this faster; waiting for indexing is the right state.
+
+### 🟢 SECONDARY FINDING — Truth-audit fix earning sustained clicks
+3 cta_clicks captured in window (May 24/26/26), ALL on `/blog/viral-ai-art-trends-april-2026?utm_source=chatgpt.com`:
+- May 24 13:31 — Arabic CTA → Image Pack $29 (S36 catch)
+- May 26 15:50 — English "Get the AI Image Prompt Pack — $29 →" → Image Pack $29
+- May 26 20:44 — Arabic CTA → Image Pack $29 (2nd Arabic click in 5h)
+
+The S29-cont truth-fix (500+→150+) on the chatgpt.com AI Overview citation winner is empirically converting CLICKS but 0 purchases. Audience-product-fit gap persists (Egypt/Android Image Pack clickers don't complete the $29 charge). Consistent with buyer-vs-funnel-mismatch context fragment.
+
+### 🟢 Week 1 ritual: ALL 4 inputs SHIPPED (3 days ahead of Sunday deadline)
+1. ✅ Gist #15 (content-creator persona) — Sun May 24 (S26-renderer)
+2. ✅ Cmyrick25 Day-5 personal touch — Sun May 24 (Resend 3118a4ce)
+3. ✅ Truth-claim audit (3 fixes on /content-creator-kit) — Mon May 25 (S30 cont)
+4. ✅ Funnel-instrumentation verify (full 6-layer chain) — Mon May 25 (S30 cont)
+
+Week 2 starts Sunday June 1. Pre-build for week 2 is saturated until kill-or-ladder data lands.
+
+### Six Armando-strategic asks STILL queued (bundled in this Wednesday Telegram)
+1. PAT rotation defense-in-depth (S27 cont caught near-leak in pre-session snapshot)
+2. Vittoria branch A/B/C (`3400b90c`)
+3. iCapital pitch greenlight (per vittoria-lookalike intel S25-renderer)
+4. Gmail `/mcp` unlock for delon body content (12+ days blocked)
+5. "All 9 Kits Bundle" canonical naming on chatgpt-prompts.js (`ca6f7b6b` + `355c3d59`)
+6. Real-testimonial outreach to Shantae + Arnaud (`14f9c7fe`)
+
+### What I deliberately did NOT do
+- Did NOT ship gist #16. Week 1 ritual closed Sunday; week 2 starts June 1. Pre-build saturation.
+- Did NOT email a customer. Week 1 ritual already touched Cmyrick25; reply window stays open to May 31; rotating to Shantae/Arnaud now would step on Cmyrick25 reply attention.
+- Did NOT touch the 5 broken SKUs (`3400b90c`), chatgpt-prompts.js naming (Armando-strategic), or any write-path during active Day-6 nurture window for Cmyrick25.
+- Did NOT pre-build gist #16 candidate or BILL post follow-ups. Both indexing windows still open; pre-building prejudges what topic the data should select.
+- Did NOT 2nd-Telegram on individual items. Bundled into single Wednesday brief per `bundle-armando-blocked-escalations` + `armando-async-asks`.
+
+### Honest accounting
+**Direct KPI: zero.** **Indirect: medium.** (1) Caught the Day-6/Day-7 calibration miss in prior session memory — corrects future expectations. (2) Confirmed gist channel volume is intact (21 events/57h ≈ 9/day) supporting the 30-day premise. (3) Confirmed gist #15 + BILL post are in pure indexing-window state with no immediate action available. (4) Saved Armando the ~10min mental context-load by bundling 6 strategic asks + 2 calibration corrections into one Wednesday Telegram.
+
+### Confidence
+85% — direct API probes verified (gist for Cmyrick25 markers + KV 500-event analysis + all monitors exit-0). Lower than 90% because: (a) the lone `?preset=content` visit could be gist #15 driving its first real-human click OR Armando's own QA OR coincidence — can't yet disambiguate, (b) the Day-7 calibration correction relies on the assumption that the cron's day-counter logic matches the gist's sent_day_N markers — not directly verified by reading vercel.json + nurture.js cohort logic this session.
+
+### NEXT_CHECKIN expectation
+Tomorrow May 28 09:00 local standup — verify Cmyrick25 Day-7 fires correctly at 03:17 local (now-corrected expectation). Re-snapshot gist #15 + BILL traffic delta. Run 5-monitor sweep. Watch for any Armando response to Wednesday Telegram. Day 4 of 30-day sprint.
+
+### Continuation (13:08 local / 19:08 UTC) — REAL-ESTATE-KIT DEFERRED AUDIT CLOSES CLEAN
+
+After Wednesday standup STATE update, user pushed for highest-impact continuation. Real-estate-kit "150+" audit was deliberately deferred 3 times (S25-renderer week-1 audit, S33 close note, S33-cont). Today qualified as the session-sized slot per `audit-deliverables-not-just-landing-pages` + `sweep-adjacent-claim-types-before-clean`.
+
+**Method**: enumerated actual prompt count via grep on `## (Template|Prompt|Sequence|Script|Workflow|Phase) N:` heuristic + sub-prompt heuristic for Sequences (Day 1/3/7/14/30 emails) + Scripts (Prompt A/B/C/D variants) + open-house "### Prompt N:" patterns. Cross-checked against landing-page claim + README cross-promo claims + delivered ZIP.
+
+**Findings (verdict per surface)**:
+| Surface | Claim | Actual | Verdict |
+|---|---|---|---|
+| `pages/real-estate-kit.js:45` JSON-LD schema | "50+ templates and workflows" | 56 prompts (01=5, 02=7, 03=15, 04=6, 05=13, 06=10) | HONEST (conservative) |
+| README cross-promo line 148 | "AI Prompt Mega Pack (145+ prompts)" | 145+ post-S31 truth | HONEST |
+| README cross-promo line 150 | "All Kits Bundle ... $97" | Live Stripe SKU $97 confirmed | HONEST |
+| `public/real-estate-kit.zip` (39640 bytes, rebuilt 2026-05-26 14:10 via build-kits.sh) | contains corrected README | unzip -p shows "145+ prompts" | CLEAN |
+
+**Conclusion**: zero overstatement. The S25-renderer "potentially overstated" concern was based on a ceiling-grep that mistook section-header ### counts (96 total across 6 files including "### The Prompt"/"### Example Output") for prompt counts. Actual prompt count = 56 ≥ 50+ claim. The deferred audit closes WITHOUT ship.
+
+**Why this WAS the right work, not motion-vs-progress**:
+- 3-time deferred queue item that compounds (every future agent reading dashboard sees genuine open audit items, not false-alarm debris)
+- Applies the same playbook that S33-cont caught 2 more overstatements with
+- Confirms truth-claim discipline is holding across all 14 kits post-S33's 14-kit rebuild
+- Session-sized (10-15 min focused inspection)
+- Cost of NOT doing it: deferral compounds; future session re-discovers the queue item and re-evaluates whether to defer or do
+
+**What I deliberately did NOT do**:
+- Did NOT touch any files. No fix needed.
+- Did NOT 2nd-audit other kits (saturation; the 14-kit S33 rebuild already swept the cross-promo pattern across all of them)
+- Did NOT escalate to Armando — closure is operational hygiene, not strategic news.
+
+**Honest accounting**: Direct KPI: zero. Indirect: low-medium. Closes a 3-session-deferred audit + confirms truth-claim discipline is intact at all 14 kits. Per `audit-deliverables-not-just-landing-pages`: each new audit pass surfaces overstatements at a different abstraction layer — this one surfaced NONE, which is itself evidence the previous fixes held.
+
+**Confidence**: 90% — direct file inspection of all 6 prompt files + landing page + README + ZIP contents. Lower than 95% because the 56-count uses a sub-prompt heuristic for Sequences/Scripts that could be argued either way; if a sharp buyer counts only TOP-LEVEL units (5+7+3+6+5+6 = 32), the "50+" claim becomes 56% overstated. But "50+ templates and workflows" naturally implies sub-units count (a 30-day sequence with 6 emails is 6 templates, not 1).
+
+---
+
 ## Session 34 — POST-S33-CONT HONEST CLOSE: SATURATION ON TRUTH-AUDIT, NO NEW SIGNAL (May 26, 16:27 local / 22:27 UTC)
 
 ### Trigger
