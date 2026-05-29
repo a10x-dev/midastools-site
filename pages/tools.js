@@ -4,6 +4,14 @@ import Layout from '../components/Layout';
 
 const TOOLS = [
   {
+    title: 'The Outreach Machine',
+    desc: 'Paste what you sell and who you\'re targeting. Get a personalized cold email, a LinkedIn DM, and a 3-touch follow-up sequence engineered to get replies and book sales calls. Your next client is one message away.',
+    href: '/outreach-machine',
+    tag: '💰 Money Tool',
+    categories: 'Email · DM · Follow-ups',
+    bg: 'var(--card-amber)',
+  },
+  {
     title: 'AI Prompt Generator',
     desc: 'Generate expert-level prompts for sales emails, social media, product descriptions, blog outlines, cold outreach, AI images, video scripts, and business strategy. Fill in 3 fields, get a customized prompt, copy with one click.',
     href: '/prompt-generator',

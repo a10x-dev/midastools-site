@@ -226,14 +226,14 @@ export default function Home() {
 
       {/* Hero */}
       <div className="home-hero">
-        <div className="badge" style={{ marginBottom: 32 }}>Free AI Tools &middot; Lifetime Kits</div>
-        <h1>AI tools &amp; prompts<br />that <span>actually work.</span></h1>
+        <div className="badge" style={{ marginBottom: 32 }}>AI Tools &middot; Built to Make You Money</div>
+        <h1>AI tools that<br />make you <span>money.</span></h1>
         <p className="hero-sub">
-          22+ free AI tools, 145+ expert prompts, and lifetime kits for ChatGPT, Claude, Midjourney &amp; more. Used by creators, marketers, founders. No subscription, ever.
+          Free AI tools that win you clients, close more sales, and save you hours. Start with the <strong>Outreach Machine</strong> — paste your offer, get cold emails &amp; DMs that book sales calls.
         </p>
         <div className="hero-ctas">
-          <a href="/tools" className="btn-primary" data-cta="hero-free-tools">Try Free AI Tools &rarr;</a>
-          <a href="https://buy.stripe.com/4gMbJ0dgz4aJ1qkb46cMM0d" className="btn-outline" data-cta="hero-mega-pack-29">Get Mega Pack &mdash; $29</a>
+          <a href="/outreach-machine" className="btn-primary" data-cta="hero-outreach-machine">Try the Outreach Machine &rarr;</a>
+          <a href="/tools" className="btn-outline" data-cta="hero-free-tools">Browse all tools &rarr;</a>
         </div>
         <p className="price-tag">
           <strong>Just want 20 starter prompts?</strong> <a href="/starter-pack" data-cta="hero-tripwire-9" style={{ color: '#D97706', fontWeight: 700, textDecoration: 'none' }}>Try for $9 &rarr;</a> &middot; 30-day refund
