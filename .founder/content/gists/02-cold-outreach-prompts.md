@@ -2,8 +2,8 @@
 
 Published: https://gist.github.com/manduks/9e63ad23fd1884c3c2293025eb5bbb74
 
+> **Free tool — skip the prompts, get the outreach:** [The Outreach Machine](https://www.midastools.co/outreach-machine?utm_source=gist&utm_medium=github&utm_campaign=02-cold-outreach-prompts) — paste what you sell + who you're pitching, and it writes a cold email, a LinkedIn DM, and a 3-touch follow-up sequence built to get replies. Real AI, free to use, no sign-up to start.
 > **Free prompt generator:** [midastools.co/prompt-generator](https://www.midastools.co/prompt-generator?utm_source=gist&utm_medium=github&utm_campaign=02-cold-outreach-prompts) — generates role-specific prompts in one click.
-> **Starter pack ($9):** [midastools.co/starter-pack](https://www.midastools.co/starter-pack?utm_source=gist&utm_medium=github&utm_campaign=02-cold-outreach-prompts) — our 20 highest-converting prompts across outreach, content, and automation.
 
 I've spent 6 months A/B testing cold email prompts with GPT-5 / Claude 4.5 / Gemini 2.5. Here are the patterns that consistently generate reply rates above industry baseline (~1-3%). Model-agnostic. No plugins required.
 
@@ -114,7 +114,7 @@ Constraints:
 | Referral ask | Specific person you want | Makes it easy |
 | Thank-you email | Specific thing they did | Non-transactional |
 
-Each of these 17 has a full prompt template in our paid [AI Prompt Mega Pack](https://www.midastools.co/ai-prompt-mega-pack?utm_source=gist&utm_medium=github&utm_campaign=02-cold-outreach-prompts) ($29, 200+ prompts) or as part of the [$9 starter pack](https://www.midastools.co/starter-pack?utm_source=gist&utm_medium=github&utm_campaign=02-cold-outreach-prompts).
+Each of these 17 has a full prompt template in our paid [AI Prompt Mega Pack](https://www.midastools.co/ai-prompt-mega-pack?utm_source=gist&utm_medium=github&utm_campaign=02-cold-outreach-prompts) ($29, 145+ prompts) — or skip the copy-paste entirely and let [The Outreach Machine](https://www.midastools.co/outreach-machine?utm_source=gist&utm_medium=github&utm_campaign=02-cold-outreach-prompts) write the whole sequence for you, free.
 
 ---
 
@@ -130,10 +130,11 @@ Each of these 17 has a full prompt template in our paid [AI Prompt Mega Pack](ht
 
 ## Resources
 
+- **Free tool — The Outreach Machine:** [write your cold email + DM + follow-ups in one click](https://www.midastools.co/outreach-machine?utm_source=gist&utm_medium=github&utm_campaign=02-cold-outreach-prompts) — real AI, no sign-up to start
 - **Free prompt generator:** [Prompt Generator](https://www.midastools.co/prompt-generator?utm_source=gist&utm_medium=github&utm_campaign=02-cold-outreach-prompts)
 - **Free prompt enhancer:** [Prompt Enhancer](https://www.midastools.co/prompt-enhancer?utm_source=gist&utm_medium=github&utm_campaign=02-cold-outreach-prompts) — tightens any prompt in one click
 - **$9 starter pack:** [20 best prompts across text/image/video](https://www.midastools.co/starter-pack?utm_source=gist&utm_medium=github&utm_campaign=02-cold-outreach-prompts)
-- **$29 Mega Pack:** [500+ prompts across 6 categories](https://www.midastools.co/ai-prompt-mega-pack?utm_source=gist&utm_medium=github&utm_campaign=02-cold-outreach-prompts)
+- **$29 Mega Pack:** [145+ prompts across 6 categories](https://www.midastools.co/ai-prompt-mega-pack?utm_source=gist&utm_medium=github&utm_campaign=02-cold-outreach-prompts)
 - **Blog:** [How to write AI prompts that convert](https://www.midastools.co/blog?utm_source=gist&utm_medium=github&utm_campaign=02-cold-outreach-prompts)
 
 If you test any of these prompts and want to share results, open an issue on this gist — I reply to every one.
