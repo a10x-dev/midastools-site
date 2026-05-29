@@ -326,6 +326,18 @@ export default function BestAIPromptPacks2026() {
 
         <p><strong>If you are an entrepreneur, freelancer, or small business owner</strong> who needs prompts across multiple business functions &mdash; sales, content, operations, customer service, strategy &mdash; the <Link href="/ai-prompt-mega-pack" style={{ color: '#3B5FFF' }}>Midas AI Prompt Mega Pack</Link> is the best value on this list. At $29 for 145+ prompts that work with any LLM, the cost per prompt is under $0.15. Nothing else comes close on a per-prompt, per-category basis.</p>
 
+        <div style={{ marginTop: '24px', padding: '22px 24px', background: '#EEF2FF', border: '1px solid #C7D2FE', borderRadius: '10px' }}>
+          <p style={{ margin: '0 0 12px', fontSize: '15px', color: '#1E3A8A', fontWeight: 700 }}>
+            Prefer a tool over a prompt pack? Try the free Outreach Machine.
+          </p>
+          <p style={{ margin: '0 0 16px', fontSize: '15px', color: '#1E40AF', lineHeight: 1.5 }}>
+            A prompt pack gives you the raw prompts. The <Link href="/outreach-machine" style={{ color: '#3B5FFF', fontWeight: 700 }}>Outreach Machine</Link> does the whole job for you: tell it what you sell and who you&rsquo;re pitching, and it writes a cold email, a LinkedIn DM, and a 3-touch follow-up sequence built to book calls. Real AI, free to start, no sign-up wall.
+          </p>
+          <Link href="/outreach-machine" style={{ display: 'inline-block', background: '#3B5FFF', color: '#fff', padding: '13px 30px', borderRadius: '100px', textDecoration: 'none', fontWeight: 700, fontSize: '15px' }}>
+            Generate your outreach free &rarr;
+          </Link>
+        </div>
+
         <p><strong>If you are a developer</strong> who primarily uses AI for code generation, debugging, and technical tasks, the AI Prompt Engineer Bundle ($49) is worth the premium. It goes deep where the Mega Pack stays broad.</p>
 
         <p><strong>If you are a designer or visual creator</strong> who needs image generation prompts, check out our <Link href="/ai-image-prompt-pack" style={{ color: '#3B5FFF' }}>AI Image Prompt Pack</Link> with 150+ prompts for ChatGPT/DALL-E, Midjourney, and Stable Diffusion. We also have free guides: <Link href="/blog/chatgpt-image-prompts-2026" style={{ color: '#3B5FFF' }}>50 Viral ChatGPT Image Prompts</Link> and <Link href="/blog/best-midjourney-prompts-2026" style={{ color: '#3B5FFF' }}>40+ Best Midjourney Prompts</Link>.</p>

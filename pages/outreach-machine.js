@@ -2,6 +2,7 @@ import Head from 'next/head';
 import { useState, useEffect } from 'react';
 import Layout from '../components/Layout';
 import Link from 'next/link';
+import { trackEvent } from '../lib/track';
 
 const CHANNELS = [
   { id: 'email', label: 'Cold Email', desc: 'Get replies, not just opens' },
@@ -92,6 +93,14 @@ export default function OutreachMachine() {
       } else {
         setResult(data.result);
         setCount(c => c + 1);
+        // Instrument real tool usage — this is the kill-criterion metric
+        // ("200 real tool sessions"). Fire-and-forget; lands in /api/track.
+        trackEvent('outreach_generate', {
+          engine: data.engine || 'unknown',
+          channel,
+          tone,
+          pro: !!data.pro,
+        });
       }
     } catch {
       setError('Network error. Try again.');

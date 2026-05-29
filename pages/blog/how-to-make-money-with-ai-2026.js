@@ -314,6 +314,21 @@ export default function HowToMakeMoneyWithAI2026() {
 
         <p><strong>Real example:</strong> A marketing consultant added &ldquo;AI implementation&rdquo; to her services in late 2025. Within 3 months she had 6 clients on $1,500/month retainers &mdash; $9,000/month in recurring revenue from a service that takes her 2&ndash;3 hours per client per month.</p>
 
+        <p><strong>The real bottleneck for every method on this list is the same: getting clients.</strong> The skill that turns any of these into real income is cold outreach that actually gets replies.</p>
+
+        {/* Outreach Machine — the universal unlock for landing clients */}
+        <div style={{ marginTop: '24px', padding: '22px 24px', background: '#EEF2FF', border: '1px solid #C7D2FE', borderRadius: '10px' }}>
+          <p style={{ margin: '0 0 12px', fontSize: '15px', color: '#1E3A8A', fontWeight: 700 }}>
+            Free tool: The Outreach Machine
+          </p>
+          <p style={{ margin: '0 0 16px', fontSize: '15px', color: '#1E40AF', lineHeight: 1.5 }}>
+            Tell it what you sell and who you&rsquo;re pitching. It writes a cold email, a LinkedIn DM, and a 3-touch follow-up sequence built to book calls &mdash; powered by real AI, free to use, no sign-up to start.
+          </p>
+          <Link href="/outreach-machine" style={{ display: 'inline-block', background: '#3B5FFF', color: '#fff', padding: '13px 30px', borderRadius: '100px', textDecoration: 'none', fontWeight: 700, fontSize: '15px' }}>
+            Write outreach that gets replies &rarr;
+          </Link>
+        </div>
+
         {/* Mid-article CTA */}
         <div style={{ marginTop: '32px', padding: '20px 24px', background: '#ECFDF5', border: '1px solid #A7F3D0', borderRadius: '8px' }}>
           <p style={{ margin: 0, fontSize: '15px', color: '#065F46' }}>
