@@ -17,6 +17,7 @@ const TONES = [
 ];
 
 const FREE_LIMIT = 3; // generations before the email gate
+const PRO_URL = 'https://buy.stripe.com/7sYcN42BVaz70mg0pscMM0A'; // MidasTools Pro Pass — $39 one-time
 
 export default function OutreachMachine() {
   const [offer, setOffer] = useState('');
@@ -31,12 +32,43 @@ export default function OutreachMachine() {
   const [unlocked, setUnlocked] = useState(false);
   const [email, setEmail] = useState('');
   const [captureMsg, setCaptureMsg] = useState('');
+  const [pro, setPro] = useState(false);
+  const [proCode, setProCode] = useState('');
+  const [proInput, setProInput] = useState('');
+  const [proMsg, setProMsg] = useState('');
 
   useEffect(() => {
-    try { if (localStorage.getItem('om_unlocked') === '1') setUnlocked(true); } catch {}
+    try {
+      if (localStorage.getItem('om_unlocked') === '1') setUnlocked(true);
+      const savedCode = localStorage.getItem('om_pro_code');
+      if (savedCode) { setPro(true); setProCode(savedCode); }
+    } catch {}
   }, []);
 
-  const gated = count >= FREE_LIMIT && !unlocked;
+  const gated = !pro && count >= FREE_LIMIT && !unlocked;
+
+  async function handleVerifyPro(e) {
+    e.preventDefault();
+    const code = proInput.trim().toUpperCase();
+    if (!code) return;
+    setProMsg('Checking…');
+    try {
+      const res = await fetch('/api/verify-pro', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ code }),
+      });
+      const data = await res.json();
+      if (data.valid) {
+        try { localStorage.setItem('om_pro_code', code); } catch {}
+        setPro(true); setProCode(code); setProMsg('');
+      } else {
+        setProMsg("That code didn't work. Check your receipt email, or contact iam@armando.mx.");
+      }
+    } catch {
+      setProMsg('Network error — try again.');
+    }
+  }
 
   async function handleGenerate() {
     if (!offer.trim() || offer.trim().length < 5) {
@@ -52,7 +84,7 @@ export default function OutreachMachine() {
       const res = await fetch('/api/outreach-machine', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ offer, prospect, channel, tone }),
+        body: JSON.stringify({ offer, prospect, channel, tone, proCode }),
       });
       const data = await res.json();
       if (!res.ok) {
@@ -323,40 +355,40 @@ export default function OutreachMachine() {
           </div>
         )}
 
-        {/* Pro upsell */}
-        <div className="pro">
-          <div className="badge" style={{ background: 'rgba(59,95,255,0.2)', borderColor: 'rgba(59,95,255,0.4)', color: '#93B4FF', marginBottom: 16 }}>MidasTools Pro</div>
-          <h2>Turn this into a client machine</h2>
-          <p>The free tool writes one great message at a time. Pro runs your whole pipeline.</p>
-          <div className="pro-feats">
-            <div className="pro-feat"><span className="ck">✓</span> Unlimited AI generations (our best model)</div>
-            <div className="pro-feat"><span className="ck">✓</span> Save & reuse winning campaigns</div>
-            <div className="pro-feat"><span className="ck">✓</span> Bulk mode — paste 10 prospects, get 10 tailored emails</div>
-            <div className="pro-feat"><span className="ck">✓</span> Every MidasTools money-tool, unlocked</div>
-          </div>
-          <a href="#" className="pro-cta" onClick={(e) => { e.preventDefault(); document.getElementById('pro-waitlist-email')?.focus(); window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' }); }}>
-            Get early access — 50% off launch →
-          </a>
-          <div className="fine">Launching this week. Founding members lock in the lowest price forever.</div>
-          <form
-            onSubmit={async (e) => {
-              e.preventDefault();
-              const el = document.getElementById('pro-waitlist-email');
-              const v = el?.value || '';
-              if (!v.includes('@')) return;
-              try {
-                await fetch('/api/subscribe', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ email: v, source: 'outreach-pro-waitlist' }) });
-              } catch {}
-              if (el) el.value = '';
-              const note = document.getElementById('pro-waitlist-note');
-              if (note) note.textContent = "You're on the founding-member list. We'll email you the moment Pro opens.";
-            }}
-            style={{ display: 'flex', gap: 8, maxWidth: 420, margin: '22px auto 0' }}
-          >
-            <input id="pro-waitlist-email" type="email" placeholder="you@work.com" required style={{ flex: 1, padding: '14px 16px', border: 'none', borderRadius: 100, fontSize: 15, fontFamily: 'inherit' }} />
-            <button type="submit" style={{ background: '#3B5FFF', color: '#fff', border: 'none', borderRadius: 100, padding: '14px 24px', fontWeight: 800, cursor: 'pointer', fontFamily: 'inherit' }}>Notify me</button>
-          </form>
-          <div id="pro-waitlist-note" style={{ color: '#6EE7B7', fontSize: 14, marginTop: 14, minHeight: 18 }}></div>
+        {/* Pro */}
+        <div className="pro" id="pro">
+          {pro ? (
+            <>
+              <div className="badge" style={{ background: 'rgba(110,231,183,0.2)', borderColor: 'rgba(110,231,183,0.4)', color: '#6EE7B7', marginBottom: 16 }}>⚡ Pro Active</div>
+              <h2>You're Pro. Go get clients.</h2>
+              <p>Unlimited generations on our best model are unlocked on this device. Code: <span style={{ fontFamily: 'monospace', color: '#93B4FF' }}>{proCode}</span></p>
+            </>
+          ) : (
+            <>
+              <div className="badge" style={{ background: 'rgba(59,95,255,0.2)', borderColor: 'rgba(59,95,255,0.4)', color: '#93B4FF', marginBottom: 16 }}>MidasTools Pro Pass</div>
+              <h2>Turn this into a client machine</h2>
+              <p>The free tool writes one message at a time. Pro runs your whole pipeline — one payment, lifetime access, no subscription.</p>
+              <div className="pro-feats">
+                <div className="pro-feat"><span className="ck">✓</span> Unlimited AI generations on our best model</div>
+                <div className="pro-feat"><span className="ck">✓</span> Save & reuse winning campaigns</div>
+                <div className="pro-feat"><span className="ck">✓</span> Bulk mode — paste 10 prospects, get 10 tailored emails</div>
+                <div className="pro-feat"><span className="ck">✓</span> Every MidasTools money-tool, unlocked</div>
+              </div>
+              <a href={PRO_URL} className="pro-cta" data-cta="outreach-pro-pass-39">Get Pro Pass — $39 lifetime →</a>
+              <div className="fine">One payment. Yours forever. 30-day money-back guarantee.</div>
+              <form onSubmit={handleVerifyPro} style={{ display: 'flex', gap: 8, maxWidth: 420, margin: '24px auto 0' }}>
+                <input
+                  type="text"
+                  placeholder="Already Pro? Enter your code"
+                  value={proInput}
+                  onChange={e => setProInput(e.target.value)}
+                  style={{ flex: 1, padding: '14px 16px', border: 'none', borderRadius: 100, fontSize: 15, fontFamily: 'inherit' }}
+                />
+                <button type="submit" style={{ background: '#3B5FFF', color: '#fff', border: 'none', borderRadius: 100, padding: '14px 24px', fontWeight: 800, cursor: 'pointer', fontFamily: 'inherit' }}>Activate</button>
+              </form>
+              {proMsg && <div style={{ color: '#FCA5A5', fontSize: 14, marginTop: 12 }}>{proMsg}</div>}
+            </>
+          )}
         </div>
 
         {/* SEO content */}

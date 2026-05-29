@@ -1,6 +1,8 @@
 import Stripe from 'stripe';
 import nodemailer from 'nodemailer';
+import crypto from 'crypto';
 import { decodeAttributionFromClientRef } from '../../lib/stripe-attribution';
+import { writeKV } from '../../lib/kv-store';
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
 
@@ -310,6 +312,19 @@ const KIT_MAP = {
       'Monthly 1-page competitive AI brief for your industry',
     ],
   },
+  'pro-pass': {
+    name: 'MidasTools Pro Pass',
+    file: null,
+    proPass: true,
+    subject: 'Your MidasTools Pro Pass — unlock code inside',
+    items: [
+      'Unlimited AI generations (our best model)',
+      'Saved & reusable campaigns',
+      'Bulk mode — paste 10 prospects, get 10 tailored messages',
+      'Every MidasTools money-tool, unlocked',
+      'Lifetime access — one payment, no subscription',
+    ],
+  },
   'bundle': {
     name: 'All Kits Bundle',
     file: null, // Multiple files
@@ -384,6 +399,8 @@ function detectKit(session) {
     'plink_1TKL1LAdkDx8xZMkep0Q0e4e': 'cowork-mastery',
     // MidasTools Champion Monthly — $199/mo recurring subscription (created Session 28, May 20)
     'plink_1TZGT5AdkDx8xZMkUrG20eAO': 'champion-monthly',
+    // MidasTools Pro Pass — $39 one-time lifetime unlock (created 2026-05-28)
+    'plink_1TcGuyAdkDx8xZMk0Z7mTOwC': 'pro-pass',
   };
   if (paymentLink && PAYMENT_LINK_MAP[paymentLink]) {
     return KIT_MAP[PAYMENT_LINK_MAP[paymentLink]];
@@ -428,15 +445,23 @@ function buildBundleDownloadLinks(kit) {
   ).join('');
 }
 
-async function sendDownloadEmail(customerEmail, customerName, kit) {
+async function sendDownloadEmail(customerEmail, customerName, kit, opts = {}) {
   const baseUrl = 'https://www.midastools.co';
   const isBundle = kit.file === null && Array.isArray(kit.files);
   const isWebDelivery = kit.file === null && kit.deliveryUrl;
   const isManual = kit.file === null && kit.manual === true;
   const isSubscription = kit.file === null && kit.subscription === true;
+  const isProPass = kit.proPass === true;
 
   let downloadSection;
-  if (isSubscription) {
+  if (isProPass) {
+    downloadSection = `<div style="background:#EFF6FF;border:1px solid #3B5FFF;border-radius:12px;padding:24px;margin-bottom:32px;text-align:center;">
+        <p style="color:#1E3A8A;font-size:14px;font-weight:700;margin:0 0 8px;text-transform:uppercase;letter-spacing:1px;">Your Pro unlock code</p>
+        <p style="color:#3B5FFF;font-size:30px;font-weight:900;letter-spacing:2px;margin:0 0 16px;font-family:monospace;">${opts.unlockCode || 'CONTACT-SUPPORT'}</p>
+        <a href="${baseUrl}/outreach-machine#pro" style="display:inline-block;background:#3B5FFF;color:#FFFFFF;padding:14px 28px;border-radius:100px;font-weight:800;font-size:15px;text-decoration:none;">→ Activate Pro</a>
+        <p style="color:#6B7280;font-size:13px;margin:16px 0 0;line-height:1.5;">Open any MidasTools money-tool, click "Already Pro? Enter code", and paste the code above. It unlocks unlimited AI generations on this device. Keep this email — it's your receipt + key.</p>
+      </div>`;
+  } else if (isSubscription) {
     downloadSection = `<div style="background:#FEF3C7;border:1px solid #FCD34D;border-radius:12px;padding:20px;margin-bottom:32px;">
         <p style="color:#92400E;font-size:15px;font-weight:700;margin:0 0 8px;">Subscription active</p>
         <p style="color:#78350F;font-size:14px;margin:0 0 8px;line-height:1.5;">Your first weekly tip lands within 7 days. Monthly drop within 30 days. Both are calibrated to your survey answers.</p>
@@ -527,9 +552,22 @@ export default async function handler(req, res) {
 
     console.log(`Purchase detected: ${kit.name} for ${email}`);
 
+    // Pro Pass: mint a lifetime unlock code, store it in KV for /api/verify-pro,
+    // and deliver it in the receipt email.
+    let unlockCode = null;
+    if (kit.proPass && email) {
+      unlockCode = 'MIDAS-' + crypto.randomBytes(4).toString('hex').toUpperCase();
+      try {
+        await writeKV(`pro-code:${unlockCode}`, { email, ts: new Date().toISOString(), session: session.id });
+        console.log(`[pro-pass] minted unlock code for ${email}`);
+      } catch (err) {
+        console.error('[pro-pass] KV write failed:', err.message);
+      }
+    }
+
     if (email) {
       try {
-        await sendDownloadEmail(email, name, kit);
+        await sendDownloadEmail(email, name, kit, { unlockCode });
         console.log(`Download email sent to ${email} for ${kit.name}`);
       } catch (err) {
         console.error('Failed to send email:', err);

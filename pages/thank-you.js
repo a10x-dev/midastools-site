@@ -120,6 +120,12 @@ const KITS = {
     subscription: true,
     items: ['Weekly AI tip calibrated to your role + company context', 'Monthly prompt drop targeting your next team pain', 'Prompt validator — paste any prompt, get critique + rewrite', 'Personalized AI search tool seeded with your context', 'Idea validator — paste an idea, get pushback + alternatives', 'Monthly 1-page competitive AI brief for your industry'],
   },
+  'pro-pass': {
+    name: 'MidasTools Pro Pass',
+    file: null,
+    proPass: true,
+    items: ['Unlimited AI generations on our best model', 'Saved & reusable campaigns', 'Bulk mode — 10 prospects, 10 tailored messages', 'Every MidasTools money-tool, unlocked', 'Lifetime access — no subscription'],
+  },
   'bundle': {
     name: 'Complete AI Toolkit Bundle',
     file: null,
@@ -181,7 +187,8 @@ export default function ThankYou() {
   const kit = KITS[kitKey] || KITS['starter'];
   const isManual = kit.manual === true;
   const isSubscription = kit.subscription === true;
-  const isBundle = !isManual && !isSubscription && kit.file === null;
+  const isProPass = kit.proPass === true;
+  const isBundle = !isManual && !isSubscription && !isProPass && kit.file === null;
 
   return (
     <Layout>
@@ -216,8 +223,13 @@ export default function ThankYou() {
         <p className="ty-sub">Your {kit.name} is ready. A download link is also on its way to your email.</p>
 
         <div className="dl-box">
-          <h2>{isSubscription ? 'Subscription Active' : isManual ? 'Your Kit Is Being Prepared' : 'Download Your Kit'}</h2>
-          {isSubscription ? (
+          <h2>{isProPass ? 'Pro Pass Active' : isSubscription ? 'Subscription Active' : isManual ? 'Your Kit Is Being Prepared' : 'Download Your Kit'}</h2>
+          {isProPass ? (
+            <>
+              <p>Welcome to Pro. Your <strong>unlock code</strong> is in your receipt email (from <a href="mailto:iam@armando.mx" style={{color:'var(--gold)'}}>iam@armando.mx</a>). Open the Outreach Machine, click &quot;Already Pro? Enter code&quot;, and paste it to unlock unlimited generations.</p>
+              <a href="/outreach-machine#pro" className="dl-btn" style={{marginTop:8}}>→ Open the Outreach Machine</a>
+            </>
+          ) : isSubscription ? (
             <>
               <p>You&apos;re subscribed to {kit.name}. Your first weekly tip lands within 7 days; the monthly drop arrives within 30 days. Both are calibrated to your survey answers — if you haven&apos;t completed one yet, reply to your receipt and Armando will send you your personalized link.</p>
               <p style={{fontSize:13,marginTop:16}}>Cancel anytime from your Stripe receipt link. Questions: <a href="mailto:iam@armando.mx" style={{color:'var(--gold)'}}>iam@armando.mx</a>.</p>
@@ -249,7 +261,7 @@ export default function ThankYou() {
           </ul>
         </div>
 
-        {!isBundle && !isManual && (
+        {!isBundle && !isManual && !isProPass && (
           <div style={{background:'rgba(59,95,255,0.06)',border:'1px solid rgba(59,95,255,0.2)',borderRadius:12,padding:'20px 24px',marginBottom:24,textAlign:'left'}}>
             <p style={{fontSize:14,fontWeight:700,color:'var(--gold)',marginBottom:6}}>Want all 16 kits? Save 83%</p>
             <p style={{fontSize:14,color:'var(--gray-400)',lineHeight:1.5}}>Get the <a href="https://buy.stripe.com/bJe7sK0tNdLjgle0pscMM0b" style={{color:'var(--gold)',fontWeight:700}}>Complete Bundle for $97</a> — includes every kit plus all future releases free.</p>

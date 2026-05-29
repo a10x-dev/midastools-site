@@ -14,11 +14,21 @@
 
 import { readKV, writeKV } from '../../lib/kv-store';
 
-// Haiku 4.5 — cheap + fast + plenty good for outreach copy. Pro tier can move
-// to Sonnet 4.6 later for the highest-stakes generations.
+// Haiku 4.5 — cheap + fast + plenty good for the free tier.
+// Pro Pass holders get Sonnet 4.6 for the highest-stakes generations.
 const MODEL = 'claude-haiku-4-5-20251001';
-const FREE_DAILY_LLM_CAP = 8; // per IP per day, only enforced on the metered LLM path
+const MODEL_PRO = 'claude-sonnet-4-6';
+const FREE_DAILY_LLM_CAP = 8; // per IP per day, only enforced for non-Pro users
 const MAX_LEN = 1200; // clamp user inputs
+
+async function isProCode(code) {
+  const c = String(code || '').trim().toUpperCase();
+  if (!/^MIDAS-[A-F0-9]{8}$/.test(c)) return false;
+  try {
+    const rec = await readKV(`pro-code:${c}`);
+    return !!(rec && rec.email);
+  } catch { return false; }
+}
 
 function getIp(req) {
   const fwd = req.headers['x-forwarded-for'] || '';
@@ -149,21 +159,26 @@ export default async function handler(req, res) {
     return res.status(200).json({ result: templateFallback({ offer, prospect, channel, tone }), engine: 'framework' });
   }
 
-  // Metered LLM path: protect spend with a per-IP daily cap.
+  const pro = await isProCode(req.body?.proCode);
+  const model = pro ? MODEL_PRO : MODEL;
+
+  // Metered LLM path: protect spend with a per-IP daily cap (Pro skips it).
   const ip = getIp(req);
   const day = new Date().toISOString().slice(0, 10);
   const rlKey = `om-rl:${ip}:${day}`;
   let used = 0;
-  try {
-    const rl = await readKV(rlKey);
-    used = (rl && rl.count) || 0;
-  } catch { /* if KV read fails, fail open but still try LLM */ }
+  if (!pro) {
+    try {
+      const rl = await readKV(rlKey);
+      used = (rl && rl.count) || 0;
+    } catch { /* if KV read fails, fail open but still try LLM */ }
 
-  if (used >= FREE_DAILY_LLM_CAP) {
-    return res.status(429).json({
-      error: 'daily_limit',
-      message: `You've used your ${FREE_DAILY_LLM_CAP} free AI generations today. Go Pro for unlimited.`,
-    });
+    if (used >= FREE_DAILY_LLM_CAP) {
+      return res.status(429).json({
+        error: 'daily_limit',
+        message: `You've used your ${FREE_DAILY_LLM_CAP} free AI generations today. Go Pro for unlimited.`,
+      });
+    }
   }
 
   try {
@@ -175,7 +190,7 @@ export default async function handler(req, res) {
         'anthropic-version': '2023-06-01',
       },
       body: JSON.stringify({
-        model: MODEL,
+        model,
         max_tokens: 1800,
         system: buildSystemPrompt(),
         messages: [{ role: 'user', content: buildUserPrompt({ offer, prospect, channel, tone }) }],
@@ -205,10 +220,15 @@ export default async function handler(req, res) {
         : [],
     };
 
-    // Increment the daily counter (fire-and-forget safe).
-    try { await writeKV(rlKey, { count: used + 1 }); } catch { /* non-fatal */ }
+    // Increment the daily counter for free users (fire-and-forget safe).
+    if (!pro) { try { await writeKV(rlKey, { count: used + 1 }); } catch { /* non-fatal */ } }
 
-    return res.status(200).json({ result, engine: 'ai', remaining: Math.max(0, FREE_DAILY_LLM_CAP - used - 1) });
+    return res.status(200).json({
+      result,
+      engine: pro ? 'ai-pro' : 'ai',
+      pro,
+      remaining: pro ? null : Math.max(0, FREE_DAILY_LLM_CAP - used - 1),
+    });
   } catch (err) {
     console.error('[outreach-machine] LLM error (non-fatal):', err.message);
     return res.status(200).json({ result: templateFallback({ offer, prospect, channel, tone }), engine: 'framework-error' });
