@@ -351,7 +351,15 @@ export default function OutreachMachine() {
               <input type="email" placeholder="you@work.com" value={email} onChange={e => setEmail(e.target.value)} required />
               <button type="submit">Unlock</button>
             </form>
-            {captureMsg && <div className="ok">{captureMsg}</div>}
+            <p style={{ color: 'rgba(255,255,255,0.6)', fontSize: 13, marginTop: 16, marginBottom: 0 }}>
+              Ready to run your whole pipeline? <a href={PRO_URL} data-cta="gate-pro-pass-39" style={{ color: '#93B4FF', fontWeight: 700, textDecoration: 'none' }}>Skip the email — go Pro ($39 lifetime: best AI + bulk mode) →</a>
+            </p>
+          </div>
+        )}
+        {/* Unlock confirmation — persists after the gate closes so the user actually sees the inbox nudge (previously this lived inside the gate block and unmounted the instant unlock flipped, so it never rendered) */}
+        {unlocked && captureMsg && (
+          <div className="gate" style={{ padding: '22px 32px' }}>
+            <p style={{ color: '#6EE7B7', fontSize: 15, margin: 0, fontWeight: 600 }}>{captureMsg}</p>
           </div>
         )}
 
