@@ -235,6 +235,16 @@ export default function AIToolsByProfession2026() {
 
         <p>The professionals who adopt AI first are not replacing themselves &mdash; they are <strong>upgrading themselves</strong>.</p>
 
+        <p>But for freelancers, consultants, coaches, and agency owners, the busywork that eats the most time is the same across every profession: <strong>writing the outreach that lands the next client</strong>. That is the one task AI is genuinely good at right now.</p>
+
+        <div style={{ background: '#f0f4ff', border: '2px solid #3B5FFF', borderRadius: '12px', padding: '24px', textAlign: 'center', margin: '32px 0' }}>
+          <p style={{ fontSize: '18px', fontWeight: '700', marginBottom: '8px' }}>Free: the Outreach Machine</p>
+          <p style={{ color: '#6B7280', marginBottom: '16px' }}>Tell it what you sell and who you&apos;re reaching. Real AI writes the cold email or DM &mdash; specific hook, no fluff, ready to send. Free to try.</p>
+          <a href="/outreach-machine" style={{ display: 'inline-block', background: '#3B5FFF', color: '#fff', padding: '14px 32px', borderRadius: '100px', textDecoration: 'none', fontWeight: '700', fontSize: '16px' }}>
+            Write My Outreach — Free
+          </a>
+        </div>
+
         <hr style={{ margin: '40px 0', border: 'none', borderTop: '1px solid #eee' }} />
 
         <h2 style={{ fontSize: '1.4rem', fontWeight: '700', marginTop: '40px' }}>Get Prompts for Every Profession</h2>
