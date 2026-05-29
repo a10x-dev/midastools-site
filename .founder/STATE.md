@@ -2,7 +2,7 @@
 
 ## Current Status (auto-synced from database)
 
-**Bottleneck**: market_understanding (severity 5/10) — Day 3 of 30-day single-bet sprint. Week 1 ritual ALL 4 inputs shipped (gist #15 + Cmyrick25 Day-5 touch + truth-audit + funnel-verify) — 3 days ahead of Sunday deadline. Gist channel alive (21 events / 57h, #2 referrer). But /content-creator-kit (gist #15 funnel destination) has 0 visits in last 500 KV events — gist is mid 7-14d Google indexing window. BILL post also 0 visits, same window. 3 cta_clicks captured on chatgpt-citation winner (all Image Pack $29), 0 purchases. 0 gist-attributed paid conversions in 65 days; June 23 evaluation T-27d.
+**Bottleneck**: acquisition (severity 7/10) — Money-tools pivot product is BUILT + VERIFIED LIVE (Outreach Machine in real-Claude mode, $39 Pro Pass revenue loop closed end-to-end: checkout→webhook mints MIDAS code→emails it→unlocks Sonnet). Product/conversion mechanic need zero more work. Sole bottleneck is now distribution: 0 real tool sessions fired, 0 Pro sales, $155 LTM unchanged. Requires Armando's outbound DMs (sender attribution is his) — launch kit ready. Kill criterion: 0 Pro sales after 200 sessions/30d; clock at Day 1.
 
 **KPIs**:
 - Conversations: 0 (target: 3, 7d: 0%)
@@ -10,6 +10,45 @@
 - Revenue: 155 (target: 997, 7d: 0%)
 
 <!-- AGENT-EDITED-BELOW (everything below this line is preserved across ticks) -->
+
+## Session 28 — FIRST AGENT-BUILDABLE DISTRIBUTION LEVER: TOOL INSTRUMENTED + ICP BLOG TRAFFIC FUNNELED TO LIVE OUTREACH MACHINE (May 29, 12:10 local / 18:10 UTC, commit 34f0543 pushed + live-verified)
+
+### Trigger
+Second autonomous session after the money-tools pivot. Last session's plan was "watch KV for first tool sessions." Did that FIRST — and the data reframed the whole session.
+
+### 🚨 TWO MATERIAL FINDINGS from signal-check
+1. **Discovery gap is the real shape of the distribution bottleneck.** KV (300-event window, ~14h): only **3 page_views on /outreach-machine**, and **2 of those are Googlebot** (crawling the page — good for indexing, not real users). Net: ~1 real human hit the tool in 14h. Cause: the tool was linked ONLY from homepage/tools/thank-you — **zero blog discovery**, while our ICP-aligned blog posts pull real daily Google+chatgpt traffic and point nowhere useful. Armando's DMs are the warm path; pointing our own ranked traffic at the tool is the AGENT-buildable cold path that needs nobody's permission.
+2. **Measurability gap: the kill-criterion was unmeasurable.** Tool generations are tracked only as `om-rl:{ip}:{day}` KV keys (server-side, unreadable from my seat — KV REST creds are Vercel-only). The readable `/api/track-events` feed showed only page_view + cta_click — **no generation event**. The "200 real tool sessions" kill-criterion had no instrument. Page_views ≠ sessions.
+
+### ✅ Shipped (commit 34f0543, pushed, live-verified on prod)
+1. **Instrumented tool usage** — `pages/outreach-machine.js` now fires `trackEvent('outreach_generate', {engine, channel, tone, pro})` on every successful generation. Reuses the proven track.js plumbing (same path as the 298 page_views that already work). Closes the kill-criterion measurability gap — tool sessions are now countable in the feed I read.
+2. **Pointed our proven organic channel at the live tool for the first time** — added contextual, honest Outreach Machine CTAs (brand-blue boxes + direct `/outreach-machine` links) to two ICP-aligned, ALREADY-RANKED blog posts:
+   - `how-to-make-money-with-ai-2026` → Method 7 (AI consulting): "the real bottleneck for every method on this list is the same: getting clients" → free tool that writes the outreach. Perfect ICP.
+   - `best-ai-prompt-packs-2026` → Verdict: "Prefer a tool over a prompt pack?" — clean bridge for the tool-shopping audience (16 events in window = highest-traffic ICP-adjacent post).
+   - Both convert EXISTING traffic with **no 7-14d indexing wait**. Verified live via curl: both CTA strings render on prod, /outreach-machine HTTP 200.
+
+### Why blog CTAs over a new gist (Monday-ritual substitution, logged honestly)
+The Monday ritual says "ship 1 gist." Shipped blog CTAs + instrumentation instead — MORE bottleneck-direct: converts traffic that ALREADY ranks today, vs a new gist that needs 7-14d to index. The gist remains the compounding follow-up (next session), persona = cold-outreach/sales ICP funneling to the live tool, NOT a dead prompt-pack.
+
+### Honest accounting
+**Direct KPI: zero** (no sale, no confirmed real session yet — deploy minutes old). **Indirect: HIGH.** (1) Kill-criterion now measurable — future sessions count `outreach_generate` events toward 200. (2) Tool finally has organic discovery from our own ranked traffic. Breaks the prior framing that distribution is 100% Armando-gated: his DMs = warm/fast path, ranked-content→tool funnel = agent-buildable cold path.
+
+### What I deliberately did NOT do
+- Did NOT Telegram — no KPI moved + 30+ days near-zero async response. Bundle into next pair session: "shipped first agent-side distribution + DMs remain warm path, kit at .founder/outreach/outreach-machine-launch-dms-2026-05-28.md."
+- Did NOT add CTAs to viral-image posts — that audience (Egypt/Android image-gen) is NOT the cold-outreach ICP; would repeat the audience-product-mismatch. ICP discipline.
+- Did NOT spend Vibe credits (Armando's). Did NOT browser-E2E the trackEvent (reuses proven plumbing; will confirm via real events next session).
+
+### Confidence
+88% — both CTAs verified live on prod via curl, instrumentation reuses proven trackEvent path, build clean, push confirmed (07c737b..34f0543). Lower than 92% because (a) client-side `outreach_generate` not yet confirmed firing on a real prod generation (next session: grep track-events), (b) blog-reader → tool-user conversion unproven.
+
+### Continuation (12:15 local / 18:15 UTC, commit 6a6b148 pushed + live-verified) — #1 CHANNEL POINTED AT THE TOOL
+User pushed for highest-impact continuation. Shipped the compounding move: funneled **gist #02 (cold-outreach-prompts)** — our highest-ICP-match gist on our #1 historical traffic channel (gists = 36% of traffic) — at the live Outreach Machine. The gist teaches "cold outreach that gets replies"; the tool DOES exactly that, yet the gist pointed only at prompt-packs. Added the tool as the lead free-CTA in 3 places (top callout + body + Resources). PATCHed the live gist via GitHub API (token verified healthy: login=manduks, scope=gist) + IndexNow submitted + local source committed.
+Also closed 2 stale truth-leaks that survived prior audits in this deliverable layer: "200+ prompts" → "145+" and "500+ prompts" → "145+" (Mega Pack actual = 145). Same class S29-cont/S33 fixed on blogs/READMEs; the gist content was the open layer.
+**Live-verified:** 3 outreach-machine links in the gist, 0 stale claims remaining, IndexNow HTTP 200.
+**Deliberately stopped here:** the bullseye gist (#02 cold-outreach) is done; spraying the tool CTA into off-ICP gists (ghibli/midjourney) or weak-fit ones (#11 ai-email = inbound/reply flow, not cold outreach) would repeat the audience-product-mismatch I avoided on viral-image blog posts. ICP discipline > surface count.
+
+### NEXT_CHECKIN expectation
+Next session: (1) grep `/api/track-events` for `outreach_generate` events (confirms instrumentation + counts real tool sessions toward 200), (2) check /outreach-machine page_view delta vs ~1-real-human/14h baseline (now fed by 2 blog CTAs + the #1-channel gist), (3) if traffic lifts → the agent-buildable cold path works, ship 1-2 more genuine-ICP-fit surfaces; if flat after a few days → blog/gist conversion is weak and the lever is Armando's DMs after all.
 
 ## Session 27 — POST-PIVOT VERIFICATION: OUTREACH MACHINE + PRO PASS REVENUE LOOP CONFIRMED LIVE END-TO-END (May 28, 21:32 local / May 29 03:32 UTC)
 
