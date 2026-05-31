@@ -117,13 +117,13 @@ export default async function handler(req, res) {
             <p style="font-size:14px;line-height:1.6;color:#374151;margin:0;">I need to create 1 piece of content that I can repurpose into 10 pieces across platforms. Here's how:<br/><br/>Topic: [YOUR TOPIC]<br/>My expertise level: [beginner/intermediate/expert]<br/>Target audience: [WHO]<br/><br/>Step 1: Write a 500-word "pillar post" — an opinionated take on this topic that includes at least one contrarian viewpoint, one specific data point or example, and one framework the reader can immediately use.<br/><br/>Step 2: From that post, extract and write:<br/>- 3 Twitter/X threads (5 tweets each, hook + value + CTA)<br/>- 2 LinkedIn posts (one story-format, one list-format)<br/>- 1 email newsletter edition (subject line + 3-paragraph body)<br/>- 2 Instagram carousel scripts (slide 1 = hook, slides 2-7 = points, slide 8 = CTA)<br/>- 1 YouTube Shorts / TikTok / Reel script (30 seconds, pattern-interrupt opening)<br/>- 1 Reddit post (authentic tone, no self-promotion, value-first — specify the subreddit)<br/><br/>Each piece must feel native to its platform — not like a copy-paste job. The LinkedIn post should NOT read like a tweet, and the Reddit post should NOT read like an ad.</p>
           </div>
 
-          <div style="background:#3B5FFF;border-radius:12px;padding:24px;margin:32px 0;text-align:center;">
-            <p style="color:#FFF;font-size:18px;font-weight:700;margin:0 0 8px;">These 5 prompts are from our free collection. Want the full arsenal?</p>
-            <p style="color:rgba(255,255,255,0.85);font-size:14px;margin:0 0 16px;">145+ prompts with the same level of detail — for sales, marketing, ops, hiring, content, and more.</p>
-            <a href="https://buy.stripe.com/4gMbJ0dgz4aJ1qkb46cMM0d" style="display:inline-block;background:#FFF;color:#3B5FFF;font-weight:700;font-size:16px;padding:12px 32px;border-radius:100px;text-decoration:none;">Get the Mega Pack — $29</a>
+          <div style="background:#3B5FFF;border-radius:12px;padding:28px 24px;margin:32px 0;text-align:center;">
+            <p style="color:#FFF;font-size:20px;font-weight:700;margin:0 0 8px;">Like Prompt #2? We built a free tool that writes it for you.</p>
+            <p style="color:rgba(255,255,255,0.9);font-size:14px;line-height:1.6;margin:0 0 18px;">Paste who you're reaching out to → get a reply-getting cold email or LinkedIn DM in 10 seconds. Real AI, not a template. Free, no signup.</p>
+            <a href="https://www.midastools.co/outreach-machine?utm_source=email&utm_medium=welcome&utm_campaign=welcome_outreach" style="display:inline-block;background:#FFF;color:#3B5FFF;font-weight:700;font-size:16px;padding:14px 36px;border-radius:100px;text-decoration:none;">Try the Outreach Machine — Free →</a>
           </div>
 
-          <p style="font-size:14px;color:#6B7280;line-height:1.6;">Or grab <a href="https://buy.stripe.com/bJe7sK0tNdLjgle0pscMM0b" style="color:#3B5FFF;">all 21 kits for $97</a> (save 85%).</p>
+          <p style="font-size:14px;color:#6B7280;line-height:1.6;text-align:center;">Prefer a prompt library? Grab <a href="https://buy.stripe.com/4gMbJ0dgz4aJ1qkb46cMM0d" style="color:#3B5FFF;">145+ prompts for $29</a> or <a href="https://buy.stripe.com/bJe7sK0tNdLjgle0pscMM0b" style="color:#3B5FFF;">all 16 kits for $97</a>.</p>
 
           <p style="font-size:14px;color:#6B7280;margin-top:32px;">Build something great,<br/>The MidasTools Team</p>
 

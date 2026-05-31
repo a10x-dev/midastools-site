@@ -231,6 +231,7 @@ const emails = {
       <p style="font-size:16px;line-height:1.7;color:#374151;">The ones people love most:</p>
       <div style="background:#F9FAFB;border:1px solid #E5E7EB;border-radius:12px;padding:20px;margin:20px 0;">
         <p style="font-size:15px;line-height:2;color:#374151;margin:0;">
+          💰 <a href="https://www.midastools.co/outreach-machine?utm_source=email&utm_medium=day5&utm_campaign=tools_roundup" style="color:#3B5FFF;font-weight:700;">The Outreach Machine</a> — writes cold emails &amp; DMs that book calls<br/>
           <a href="https://www.midastools.co/ghibli-prompt-generator" style="color:#3B5FFF;">Ghibli Art Generator</a> — 8 Miyazaki film styles<br/>
           <a href="https://www.midastools.co/pet-portrait-generator" style="color:#3B5FFF;">Pet Portrait Generator</a> — 12 art styles<br/>
           <a href="https://www.midastools.co/action-figure-generator" style="color:#3B5FFF;">Action Figure Generator</a> — Barbie Box, Funko Pop<br/>
