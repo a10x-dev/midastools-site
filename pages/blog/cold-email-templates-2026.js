@@ -194,6 +194,16 @@ export default function ColdEmailTemplates2026() {
 
         <p>Let us get into it.</p>
 
+        <div style={{ background: '#3B5FFF', borderRadius: '12px', padding: '24px', margin: '28px 0', textAlign: 'center' }}>
+          <p style={{ color: '#FFF', fontSize: '18px', fontWeight: '700', margin: '0 0 8px' }}>Don&rsquo;t want to fill in the brackets yourself?</p>
+          <p style={{ color: 'rgba(255,255,255,0.9)', fontSize: '14px', lineHeight: '1.6', margin: '0 0 16px' }}>
+            Paste what you sell + who you&rsquo;re targeting. The <strong>Outreach Machine</strong> writes a personalized cold email, a LinkedIn DM, and a follow-up sequence in ~10 seconds. Real AI, free, no signup.
+          </p>
+          <a href="https://www.midastools.co/outreach-machine?utm_source=blog&utm_medium=post&utm_campaign=cold-email-templates" style={{ display: 'inline-block', background: '#FFF', color: '#3B5FFF', fontWeight: '700', fontSize: '15px', padding: '12px 30px', borderRadius: '100px', textDecoration: 'none' }}>
+            Write mine free &rarr;
+          </a>
+        </div>
+
         <hr style={hrStyle} />
 
         {/* ============================================ */}

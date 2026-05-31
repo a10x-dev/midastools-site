@@ -298,6 +298,31 @@ const emails = {
 const broadcasts = {
   tools: emails[5], // free tools showcase
   bundle: emails[6], // bundle math
+  outreach: {
+    subject: "I built you a free tool that writes cold emails (real AI)",
+    html: (source) => wrapEmail(`
+      <p style="font-size:16px;line-height:1.7;color:#374151;">Quick one — I made something I think you'll actually use.</p>
+
+      <p style="font-size:16px;line-height:1.7;color:#374151;">You're on this list because you want AI to do real work. So here's a real tool, not another prompt to copy-paste: <strong>The Outreach Machine.</strong></p>
+
+      <p style="font-size:16px;line-height:1.7;color:#374151;">You paste two things — <em>what you sell</em> and <em>who you're reaching out to</em> — and it writes a personalized cold email, a LinkedIn DM, and a 3-touch follow-up sequence engineered to get replies. Real AI (Claude), about 10 seconds, genuinely good.</p>
+
+      <div style="background:#F9FAFB;border:1px solid #E5E7EB;border-radius:12px;padding:20px 24px;margin:24px 0;">
+        <p style="font-size:14px;line-height:1.7;color:#374151;margin:0;">
+          ✅ Personalized opener that proves you did your homework<br/>
+          ✅ Short enough to read on a phone<br/>
+          ✅ A reply-getting ask, not a "book a 30-min call"<br/>
+          ✅ Email + LinkedIn DM + follow-ups, all at once
+        </p>
+      </div>
+
+      <p style="font-size:16px;line-height:1.7;color:#374151;">It's <strong>free</strong>. No signup, no catch. I'd genuinely love to know if the output is good enough to send.</p>
+
+      ${ctaButton("Try the Outreach Machine — Free", 'https://www.midastools.co/outreach-machine?utm_source=email&utm_medium=broadcast&utm_campaign=outreach_launch', "Paste your offer + a prospect. See what it writes.")}
+
+      <p style="font-size:14px;line-height:1.7;color:#6B7280;">If you do try it — hit reply and tell me what you'd change. I read every one.<br/>— The MidasTools Team</p>
+    `),
+  },
   flash_lastcall: {
     subject: "⏰ 24h left — then the $29 Image Pack goes back to $49",
     html: (source) => wrapEmail(`
