@@ -248,6 +248,14 @@ Rules:
 
         <p>That third email is the secret weapon. The &ldquo;clean break&rdquo; email consistently gets the highest reply rate of any follow-up type &mdash; often 15-25%. People who have been ignoring you will suddenly reply &ldquo;YES actually, let&rsquo;s talk&rdquo; because you gave them a guilt-free way back in.</p>
 
+        <div style={{ background: 'linear-gradient(135deg, #EEF2FF 0%, #F5F3FF 100%)', border: '1px solid #C7D2FE', borderRadius: '10px', padding: '20px 24px', margin: '28px 0' }}>
+          <h3 style={{ margin: '0 0 8px', fontSize: '1.1rem' }}>Skip the copy-pasting &mdash; generate the whole 3-touch sequence in one click</h3>
+          <p style={{ margin: '0 0 14px', fontSize: '15px', color: '#374151' }}>Our free <strong>Outreach Machine</strong> writes the cold email, the LinkedIn DM, and the full Day&nbsp;3 / Day&nbsp;7 / Day&nbsp;12 follow-up sequence for you &mdash; personalized to your offer and your prospect. Real AI, no template hunting. Paste what you sell, hit generate.</p>
+          <a href="/outreach-machine?utm_source=blog&utm_medium=cta&utm_campaign=automate-client-follow-up" style={{ display: 'inline-block', background: '#3B5FFF', color: '#fff', padding: '12px 24px', borderRadius: '6px', textDecoration: 'none', fontWeight: '700', fontSize: '15px' }}>
+            Try the Outreach Machine free &rarr;
+          </a>
+        </div>
+
         <hr style={{ margin: '40px 0', border: 'none', borderTop: '1px solid #eee' }} />
 
         <h2 style={{ fontSize: '1.4rem', fontWeight: '700', marginTop: '40px' }}>Real Numbers: Manual vs. AI Follow-Up</h2>
