@@ -17,6 +17,13 @@ const TONES = [
   { id: 'professional', label: 'Professional', desc: 'Polished & credible' },
 ];
 
+// One-click prefill so a curious visitor sees real AI output in a single click
+// (the "holy shit" first-generation moment) before typing their own offer.
+const EXAMPLE = {
+  offer: 'I help B2B coaches book 10–15 qualified sales calls a month with done-for-you LinkedIn outreach.',
+  prospect: "Sarah Chen, Founder of GrowthLab — a 6-person marketing agency. Their site says 'we scale DTC brands past $1M.'",
+};
+
 const FREE_LIMIT = 3; // generations before the email gate
 const PRO_URL = 'https://buy.stripe.com/7sYcN42BVaz70mg0pscMM0A'; // MidasTools Pro Pass — $39 one-time
 
@@ -197,6 +204,8 @@ export default function OutreachMachine() {
         .om-btn:hover:not(:disabled) { transform: translateY(-1px); box-shadow: 0 4px 24px rgba(59,95,255,0.25); }
         .om-btn:disabled { opacity: 0.55; cursor: not-allowed; }
         .om-err { color: #DC2626; font-size: 14px; margin-top: 12px; text-align: center; }
+        .om-example { display: block; margin: 12px auto 0; background: none; border: none; color: var(--accent); font-family: inherit; font-size: 14px; font-weight: 600; cursor: pointer; text-align: center; width: 100%; }
+        .om-example:hover { text-decoration: underline; }
 
         .out-card { border: 1px solid var(--border); border-radius: 16px; padding: 24px; margin-bottom: 16px; background: var(--bg); }
         .out-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; gap: 12px; }
@@ -299,6 +308,15 @@ export default function OutreachMachine() {
           <button className="om-btn" onClick={handleGenerate} disabled={loading || gated}>
             {loading ? 'Writing your outreach…' : result ? 'Generate Again →' : 'Write My Outreach →'}
           </button>
+          {!offer.trim() && !result && (
+            <button
+              type="button"
+              className="om-example"
+              onClick={() => { setOffer(EXAMPLE.offer); setProspect(EXAMPLE.prospect); setError(''); }}
+            >
+              Not sure what to write? Try an example →
+            </button>
+          )}
           {error && <div className="om-err">{error}</div>}
         </div>
 
