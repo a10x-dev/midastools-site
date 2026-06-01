@@ -563,7 +563,11 @@ export default function Home() {
           <h3>Get free templates + weekly AI insights</h3>
           <p>Join entrepreneurs getting weekly workflows, prompts, and revenue strategies. No spam — unsubscribe anytime.</p>
           {subStatus === 'done' ? (
-            <p style={{ color: 'var(--accent)', fontWeight: 700, fontSize: 16 }}>You're in — check your inbox!</p>
+            <div style={{ textAlign: 'center' }}>
+              <p style={{ color: 'var(--accent)', fontWeight: 700, fontSize: 16, marginBottom: 16 }}>You're in — check your inbox!</p>
+              <p style={{ color: '#374151', fontSize: 15, marginBottom: 16 }}>While you wait — try the tool that writes cold emails &amp; DMs that book sales calls. Paste your offer, see what it writes in ~10 seconds. Free.</p>
+              <a href="/outreach-machine?utm_source=homepage&utm_medium=signup_success&utm_campaign=nurture_bridge" className="btn-primary" data-cta="signup-success-outreach-machine">Try the Outreach Machine &rarr;</a>
+            </div>
           ) : (
             <form className="email-form" onSubmit={handleSubscribe}>
               <input type="text" placeholder="Your name" value={name} onChange={e => setName(e.target.value)} />
