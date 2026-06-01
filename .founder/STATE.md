@@ -11,6 +11,48 @@
 
 <!-- AGENT-EDITED-BELOW (everything below this line is preserved across ticks) -->
 
+## Session 29 — 🟢 DISTRIBUTION STARTED (outreach_launch email broadcast) + INSTRUMENTATION VERIFIED SOUND + FIRST-GENERATION FRICTION-REDUCER SHIPPED (May 31, 23:42 UTC, commit b8a7c84 pushed)
+
+### Trigger
+Continuity plan from S28: grep /api/track-events for outreach_generate events to confirm instrumentation + count real sessions toward the 200 kill-criterion, check /outreach-machine page_view delta. Did exactly that FIRST — data reframed the session.
+
+### 🚨 MATERIAL FINDING 1 — distribution started ~23 min before this session
+KV feed (400 most-recent of 1651 stored, window May 26 22:24 → May 31 23:19 UTC = full 5-day coverage):
+- **An `outreach_launch` email broadcast fired today** — page_view on `/outreach-machine?utm_source=email&utm_medium=broadcast&utm_campaign=outreach_launch` at 23:19:15 UTC (session d2c56a33, fired 2× = one real click + React re-render). **This is the FIRST distribution event for the money-tools pivot.** The dashboard bottleneck text ("0 distribution has started, clock at Day 1") is now STALE — distribution is live as of May 31 23:19 UTC.
+- Plus a 23:18 cluster of **4 distinct sessions in 14 seconds** with obfuscated UTMs (`utm_medium=cebbedbfg&utm_campaign=bhgefbdu_ybhadu`) — classic email-security-scanner / link-prefetch bot fingerprint (4 sessions, sub-15s, garbled UTMs, no interaction). NOT real humans.
+- Net: 10 /outreach-machine page_views in 5 days (3 on May 29 = prior-session QA/Googlebot, 1 May 31 22:51, 4 scanner-bots, 1 real outreach_launch click).
+
+### 🚨 MATERIAL FINDING 2 — instrumentation is SOUND, zero generations is real behavior
+- **Zero `outreach_generate` events across the full 5-day window** (feed has 398 page_view + 2 subscribe_submit; 0 generate).
+- Window covers all 5 days, so the zero is NOT a truncation artifact.
+- Verified instrumentation code (`pages/outreach-machine.js:98`): `trackEvent('outreach_generate', {...})` fires on the `res.ok` success branch via the **identical** plumbing as page_view (`lib/track` → `/api/track`). Since 398 page_views demonstrably land via that exact path, the instrumentation is sound. (Could not browser-E2E — Playwright MCP not connecting this session; code+plumbing logic is the verification.)
+- **Conclusion: landers genuinely have not generated.** Of the real (non-bot) landers, the broadcast click was 23 min old at session time — far too early to read as "landers won't generate."
+
+### ✅ SHIPPED (commit b8a7c84, pushed, build clean, Vercel auto-deploying)
+**One-click "Try an example" prefill on /outreach-machine** — the offer textarea started empty, so a curious email-clicker had to type their own offer before ever seeing Claude output. Added a "Not sure what to write? Try an example →" link (shows only when offer empty + no result) that prefills offer + prospect so a visitor can hit Generate in ONE click and see the "holy shit" moment, then edit. Reversible UI-only change (18 insertions). Targets the 200-session kill-criterion metric directly by lifting first-generation rate from the broadcast traffic arriving NOW.
+
+### Why this is bottleneck-direct, not speculative
+- The `outreach_launch` broadcast is delivering traffic over the next hours; lowering first-generation friction converts that traffic into the exact metric the kill-criterion counts.
+- "See it work in one click before you do work" is a near-universal tool-activation pattern, not a speculative bet. Reversible, zero-risk, ships into live traffic today (per `point-ranked-content-at-new-tool` spirit).
+
+### What I deliberately did NOT do
+- Did NOT redesign the page further or A/B test — N=1 real click is not enough to conclude friction is THE problem; the prefill is a no-regret floor.
+- Did NOT Telegram a decide-now ask — fired one FYI milestone note (distribution started + friction-reducer shipped).
+- Did NOT touch the email broadcast / nurture (Armando's send; sender attribution).
+
+### Confidence
+85% — KV feed verified by direct JSON parse (full 5-day window, 0 generate confirmed); instrumentation soundness verified by code-read + plumbing-shared-with-working-page_views logic; build clean + push confirmed (86e92ef..b8a7c84). Lower than 90% because (a) couldn't browser-E2E the generate event firing (Playwright MCP down), (b) the outreach_launch sender + intended audience size is unconfirmed (likely Armando to the 45-sub list, but not verified).
+
+### NEXT_CHECKIN expectation
+~30-60 min: re-pull /api/track-events for (1) first `outreach_generate` event (= instrumentation confirmed live in prod AND a real session counted toward 200), (2) more outreach_launch-attributed page_views as email recipients open over the next hours. If generations appear → friction-reducer + broadcast working; if page_views climb but 0 generations after several hours → friction is real, iterate the first-gen experience.
+
+### Continuation (00:05 UTC Jun 1, commit c733f9e pushed) — LIVE OUTPUT QUALITY VERIFIED STRONG + 2ND BULLSEYE ORGANIC FUNNEL SHIPPED
+At the distribution-launch moment, verified the product the traffic is hitting actually works: POSTed a real generation to prod `/api/outreach-machine` (HTTP 200, 6.5s, `engine:ai`, free/Haiku tier). Output is genuinely strong — subject referencing the prospect's $1M positioning, pattern-interrupt opener ("you scale DTC brands past $1M. Smart. But..."), names the "founder tax" pain precisely, soft micro-commitment CTA, + 3-touch follow-up with graceful Day-12 breakup. **Conclusion: product quality is NOT the bottleneck — the lever is purely distribution volume + first-gen friction.**
+
+Then shipped the one clean bullseye organic funnel that was missing: `pages/blog/automate-client-follow-up-ai.js` teaches a 3-touch Day1/5/12 re-engagement sequence (the EXACT output the tool generates) but funneled only at $39 prompt packs. Added a free-tool CTA at the highest-intent moment — right after the 3-touch sequence prompts — pointing to `/outreach-machine?utm_source=blog&utm_medium=cta&utm_campaign=automate-client-follow-up`. Build clean, pushed (b8a7c84..c733f9e). 6 blog posts now funnel to the tool (5 prior + this one).
+
+**Stopped here deliberately (ICP discipline > surface count):** the remaining ICP-adjacent posts (ai-freelancer-automation, ai-side-hustles, ai-second-income) and gists (#11 ai-email = inbound/reply, #10 resume = job-seekers) are weaker fits, not bullseyes. Adding them would repeat the audience-product-mismatch S25 avoided. The volume lever beyond the funneled bullseyes is Armando's DMs + the running email broadcast.
+
 ## Session 28 — FIRST AGENT-BUILDABLE DISTRIBUTION LEVER: TOOL INSTRUMENTED + ICP BLOG TRAFFIC FUNNELED TO LIVE OUTREACH MACHINE (May 29, 12:10 local / 18:10 UTC, commit 34f0543 pushed + live-verified)
 
 ### Trigger
