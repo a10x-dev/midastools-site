@@ -296,10 +296,75 @@ const emails = {
   },
 };
 
+// Helper: one method block for The Midas Memo
+function memoMethod(n, headline, whoFor, play, startNow, sourceUrl) {
+  return `<div style="margin:30px 0;padding-bottom:26px;border-bottom:1px solid #E5E7EB;">
+    <h3 style="font-size:18px;color:#111827;margin:0 0 6px;line-height:1.35;">${n}. ${headline}</h3>
+    <p style="font-size:13px;color:#6B7280;margin:0 0 12px;line-height:1.5;"><strong style="color:#374151;">Who it's for:</strong> ${whoFor}</p>
+    <p style="font-size:15px;line-height:1.7;color:#374151;margin:0 0 12px;">${play}</p>
+    <p style="font-size:14px;line-height:1.6;color:#374151;margin:0 0 8px;"><strong>Start this week:</strong> ${startNow}</p>
+    <p style="font-size:13px;margin:0;"><a href="${sourceUrl}" style="color:#3B5FFF;text-decoration:none;">Read the source &rarr;</a></p>
+  </div>`;
+}
+
 // Broadcast templates
 const broadcasts = {
   tools: emails[5], // free tools showcase
   bundle: emails[6], // bundle math
+
+  // The Midas Memo — weekly newsletter. Overwritten each issue; git history +
+  // the blog cross-post keep the archive. Send: ?broadcast=true&template=memo
+  memo: {
+    subject: "5 ways people are making AI money this week",
+    html: () => wrapEmail(`
+      <p style="font-size:13px;font-weight:700;color:#3B5FFF;letter-spacing:0.5px;text-transform:uppercase;margin:0 0 4px;">The Midas Memo · Issue #1</p>
+      <h1 style="font-size:26px;line-height:1.25;color:#111827;margin:0 0 16px;">5 ways people are actually making money with AI right now</h1>
+      <p style="font-size:16px;line-height:1.7;color:#374151;margin:0 0 8px;">No "10x your productivity" fluff. Real names, real numbers, and the honest part most newsletters skip. The fastest AI money in 2026 isn't a clever prompt — it's selling a small, specific service (or doing the grunt-work the AI labs pay for) <em>before</em> you build anything. Fastest cash first, a faceless asset you own last.</p>
+
+      ${memoMethod(1, "Get paid this week to grade AI's homework",
+        "Capital-thin, English-writing people who want money THIS week — zero audience, zero product. Best paid in the US/UK/CA/AU; coding & STEM expertise earns more.",
+        "AI labs need humans to rate chatbot answers and review AI-written code. DataAnnotation.tech, Outlier (Scale AI) and Alignerr (Labelbox) are all confirmed paying in June 2026 — generalist work $15–20/hr, coding/STEM $40+/hr (1,184+ Glassdoor reports). One worker logged ~$14,000 in year one, but that's a self-reported outlier; a realistic part-time outcome is $200–600/mo. Honest catch: onboarding can take weeks and tasks are lumpy — treat it as supplemental.",
+        "Sign up at DataAnnotation.tech (Outlier + Alignerr as backups) and carefully complete the Starter Assessment — you get ONE attempt, graded on thoroughness, not speed. Then grab the highest-paying tasks (code review, complex reasoning) first.",
+        "https://breakingeven.online/blog/is-data-annotation-legit-everything-you-need-to-know-in-2026")}
+
+      ${memoMethod(2, "Sell a $300 FAQ chatbot to the business down the street",
+        "No-code-friendly solo earners who can wire up ManyChat, Voiceflow or Make + GPT over a weekend. Fully remote, international-friendly.",
+        "Small businesses can't staff 24/7 support, so they'll pay for a bot that answers FAQs and books appointments. Documented 2026 rate: $300–$800 setup + a $50–$150/mo maintenance retainer. Not a fad — Upwork's audited In-Demand Skills 2026 report shows AI chatbot development demand grew <strong>+71% YoY</strong> (completed, paid jobs only). The retainer is the real prize: 10 clients ≈ a $500–$1,500/mo base before any new setups.",
+        "Build ONE demo bot for a fictional local business (a dentist's FAQ + booking bot) in Voiceflow or ManyChat, record a 60-second Loom of it working, then approach local businesses leading with the demo — not a pitch.",
+        "https://www.panstag.com/2026/05/ai-freelancing-skills-businesses-pay-for.html")}
+
+      ${memoMethod(3, "Sell faceless videos before you build anything",
+        "Solo creators with no on-camera presence and no audience who can learn one AI video app. Tools have free/cheap tiers — capital-thin friendly.",
+        "Faceless short-form sells as a done-for-you service: beginners charge $150–$300 per video; the consistent ones reach $5,000–$15,000/mo on repeat brand work. Proof of demand: Samuel Rondot built StoryShort ('type text, get a video') to ~$20,000/mo MRR — but the lesson is his <em>move</em>, not his number. He validated demand by manually fulfilling orders with tools FIRST, before writing any code. Do the service version: be the human who delivers.",
+        "Pick ONE faceless-video AI tool, make 3 sample shorts in a single niche (local restaurants, or finance tips), then offer '4 short-form videos for $X/mo' to 10–20 small businesses. Fulfill manually with AI — prove people pay before you productize.",
+        "https://www.indiehackers.com/post/tech/learning-to-code-and-building-a-28k-mo-portfolio-of-saas-products-OA5p18fXtvHGxP9xTAwG")}
+
+      ${memoMethod(4, "Start the niche newsletter nobody can deplatform",
+        "Writers and curators with no audience who want a durable owned asset and will publish weekly. Strong for international creators — it's text and global. A build, not fast cash.",
+        "A niche email list is an asset you own outright, and the platform money is real: beehiiv pays creators over <strong>$1M/month</strong> collectively via its ad network (Variety + eMarketer, 2026). Named solo cases: Geekout (Matt Navarra) made $25K purely from Boosts; Cyber Corsairs (Yaroslav Sobko) reached ~$16.6K/mo. Ignore the splashy '47K subs in 14 days' figures — those are unaudited self-reports. The honest framing: 5,000 subscribers isn't this week, but it compounds and can't be taken from you.",
+        "Pick a sharp niche ('AI tools for accountants'), start a free beehiiv account, ship issue #1 this week (Claude drafts a roundup in ~30 min). Turn on Boosts + the Ad Network from day one; add a $5–8/mo premium tier past ~1,000 subs.",
+        "https://www.beehiiv.com/blog/how-to-make-money-from-your-newsletter")}
+
+      ${memoMethod(5, "The faceless YouTube channel people fall asleep to",
+        "Capital-thin solo earners who can tolerate a 6–12 month ramp and want a high-ceiling faceless asset. Eyes open: most channels run at a loss early — this is the long game.",
+        "Adavia Davis, a 22-year-old Mississippi State dropout, runs faceless channels — flagship 'Boring History,' 6-hour 'history to sleep to' docs. Scripts/visuals from Claude, narration from ElevenLabs; each video costs as little as $60. Fortune (Dec 2025) independently reviewed his AdSense records and verified <strong>$40,000–$60,000/month</strong> on ~2 hrs/day. That's a top-of-distribution outlier — $0 is the norm early, and YouTube tightened demonetization on copy-paste AI channels in March 2026, so a real niche and original assembly matter.",
+        "Pick ONE high-RPM, low-competition niche (sleep/ambient history, finance explainers, true crime). Write one long-form script with Claude, narrate on the free ElevenLabs tier, assemble in CapCut (free), publish 2–3 toward Partner Program eligibility (1K subs / 4K watch hours).",
+        "https://fortune.com/2025/12/30/ai-slop-faceless-youtube-accounts-adavia-davis-user-generated-content/")}
+
+      <div style="background:#F9FAFB;border:1px solid #E5E7EB;border-radius:12px;padding:24px;margin:28px 0;">
+        <h3 style="margin:0 0 10px;font-size:16px;color:#3B5FFF;">🛠️ This week's Midas tool: Buyer-Radar</h3>
+        <p style="font-size:14px;line-height:1.7;color:#374151;margin:0 0 4px;">Three of these five plays (local chatbots, faceless-video DFY, automation builds) live or die on one thing: <strong>finding businesses actively hiring for what you sell.</strong> Our free tool, Buyer-Radar, scans Reddit for exactly those people — point it at "need a chatbot" or "looking for video editor" and it surfaces real posts with someone's hand already up, plus a drafted reply. Skip the cold-spray.</p>
+      </div>
+      ${ctaButton("Find people hiring right now — Free", 'https://www.midastools.co/buyer-radar?utm_source=memo&utm_medium=email&utm_campaign=memo1', "No signup to start. Try 'video editing' or 'chatbot'.")}
+
+      <div style="border:1px dashed #C7D2FE;border-radius:12px;padding:20px 24px;margin:28px 0;">
+        <p style="font-size:14px;line-height:1.7;color:#374151;margin:0;">🗳️ <strong>Help pick what we build next.</strong> Four of this week's methods bottleneck on the same beginner problem: knowing <em>what</em> to sell, to <em>whom</em>, and how to pitch it. We're considering a <strong>Local-Biz Pitch Builder</strong> — type a business type + city, get the 3 highest-ROI AI services that vertical pays for, the hours/dollars each saves, and a ready-to-send cold DM + a scoped price. <a href="mailto:hello@midastools.co?subject=Build%20the%20Local-Biz%20Pitch%20Builder&body=Yes%2C%20build%20it." style="color:#3B5FFF;font-weight:700;text-decoration:none;">Tap here to vote "build it" &rarr;</a></p>
+      </div>
+
+      <p style="font-size:15px;line-height:1.7;color:#374151;margin:24px 0 0;">That's the Memo. One real method beats ten saved-for-later ideas — pick the one that fits your week and take the first step today.</p>
+      <p style="font-size:14px;line-height:1.7;color:#6B7280;margin:14px 0 0;">— The MidasTools team<br/><em>P.S. Yes, method #4 is literally what you're reading. We practice what we print.</em></p>
+    `),
+  },
   outreach: {
     subject: "I built you a free tool that writes cold emails (real AI)",
     html: (source) => wrapEmail(`
@@ -624,6 +689,14 @@ export default async function handler(req, res) {
     if (broadcast === 'true') {
       const templateName = template || 'tools';
       const broadcastTemplate = broadcasts[templateName] || broadcasts.tools;
+
+      // PREVIEW: ?broadcast=true&template=memo&to=email — send ONE copy, skip
+      // the subscriber blast + founder report. Use to proof every issue.
+      if (to) {
+        const subj = typeof broadcastTemplate.subject === 'function' ? broadcastTemplate.subject(null) : broadcastTemplate.subject;
+        await resend.emails.send({ from: FROM_EMAIL, to, subject: `[PREVIEW] ${subj}`, html: broadcastTemplate.html(null) });
+        return res.status(200).json({ success: true, preview: true, template: templateName, to });
+      }
 
       const allSubs = await readSubscribers();
       let activeContacts = allSubs.filter(s => !s.unsubscribed);
