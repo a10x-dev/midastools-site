@@ -11,6 +11,41 @@
 
 <!-- AGENT-EDITED-BELOW (everything below this line is preserved across ticks) -->
 
+## Session 30 — 🟢 ROUTED OUR REAL DISTRIBUTION (day-1 nurture) TO THE OUTREACH MACHINE + AUDIENCE-MISMATCH DIAGNOSIS CONFIRMED (Jun 1, ~18:00 UTC, commit 082c0cd pushed)
+
+### Trigger
+Continuity plan from S25: re-pull /api/track-events for first outreach_generate event + more outreach_launch page_views; if page_views climb but 0 generations → iterate first-gen experience. Did exactly that — the data resolved the if-then and reframed the lever.
+
+### 🚨 DATA RESOLVED THE CONTINUITY IF-THEN
+Pulled 400-event feed (full window May 28 → **Jun 1 17:48 UTC**, so feed IS current):
+- **Site has real, growing daily traffic** — homepage (68 pv) + viral-art/video/image blogs dominate. Latest events June 1 are a live human walking caricature→tools→fantasy-map→prompt-enhancer→kits.
+- **10 `subscribe_submit` events, ALL `src=homepage`, 8 in the last 24h.** Email list growing ~10/day. This is genuine owned distribution.
+- **/outreach-machine: still 10 page_views in 5 days** (4 scanner-bots @ 23:18 May 31 garbled UTM, ~3 QA/Googlebot, 1 real broadcast click @ 23:19). **Page_views did NOT climb** after the broadcast — it was a one-shot email.
+- **0 `outreach_generate` across the entire window.** The money-tool's core action has never fired.
+
+**Conclusion:** the prefill (S25) can't help because the tool gets ~zero traffic. The broadcast was one-time. Our ONE proven channel into the tool is *email* (the only real click came from the broadcast, NOT the homepage hero — which got 68 views and 0 outreach clicks).
+
+### 🚨 AUDIENCE-MISMATCH CONFIRMED (strategic, not urgent)
+The audience the site actually attracts = viral-image / free-prompt / side-hustle / resume seekers (per top pages + homepage signups). The Outreach Machine's ICP = coaches/consultants/agencies doing cold outreach. The homepage hero CTA for the tool pulls 0 clicks from this crowd. This is the documented audience-product-mismatch playing out again. The outreach-machine bet's distribution depends on either (a) Armando DMing the right ICP, or (b) eventually building a money-tool that fits the audience we DO convert (10 homepage signups/day). **Logged as the strategic fork for the next pair session — NOT acted on unilaterally** (the money-tool pivot was Armando's explicit pair-session call S21/S25).
+
+### ✅ SHIPPED (commit 082c0cd, pushed, build clean)
+Routed our real distribution to the tool: added the **Outreach Machine as a free CTA in the day-1 nurture email** (`pages/api/nurture.js`), right after the email's own cold-email framework example ("You're a B2B copywriter… write a 3-paragraph cold email") — the honest bridge, since the tool automates exactly that. Free CTA leads; Mega Pack $29 stays as secondary paid path. Was buried as one bullet on day-5; now hits every ~10/day new signup at peak intent via our proven channel. UTM-tagged `utm_medium=day1&utm_campaign=nurture_bridge`. Reversible, plan-agnostic, attacks the 200-real-session kill-criterion directly.
+
+### What I deliberately did NOT do
+- Did NOT re-broadcast the outreach template to all 45 subs — fired May 31, drove 1 click; re-sending 2 days later = spammy, low marginal yield. The evergreen day-1 funnel is the compounding move.
+- Did NOT swap the day-1 Mega Pack CTA out — kept narrative coherence; added the free tool as the lead, paid pack as secondary.
+- Did NOT Telegram — FYI + no decide-now + I have a default (shipped). Per armando-async-asks (30+ days empirical silence). Bundling the audience-mismatch strategic fork into the next pair/standup.
+- Did NOT pivot the money-tool — Armando's strategic call.
+
+### Confidence
+85% — feed verified current (Jun 1 17:48 UTC), build clean, push confirmed (082c0cd). The edit only benefits FUTURE signups (day-1 already fired for existing 45), so impact is gated on the ~10/day inflow continuing + those subs being even partially ICP-overlapping. Lower than 90% because the audience-mismatch means even perfect funneling may convert poorly — the day-1 free CTA is a no-regret floor, not a guaranteed fix.
+
+### NEXT_CHECKIN expectation
+Next session: re-pull /api/track-events for (1) first `outreach_generate` from a `utm_campaign=nurture_bridge` click (= day-1 funnel working + first session toward 200), (2) continued homepage signup rate. If nurture_bridge drives generations → the day-1 funnel is the lever, consider day-2 reinforcement. If still 0 generations after a few days of fresh signups → audience-mismatch is decisive and the strategic fork (money-tool for the audience we have) needs a pair-session decision.
+
+### Continuation (commit 5baaf8a pushed) — SECOND FUNNEL SURFACE: homepage signup-success → Outreach Machine
+Verified the homepage hero is ALREADY optimized for the tool (primary CTA "Try the Outreach Machine →", H1 "AI tools that make you money", sub leads with the tool) — so 0 homepage→tool clicks is NOT a prominence problem; the email-capture form wins the conversion instead (10 signups, src=homepage). Found the real waste: the inline form's success state was a dead-end ("You're in — check your inbox!"). Shipped a free Outreach Machine CTA there (data-cta=signup-success-outreach-machine, utm_campaign=nurture_bridge) to capture peak intent INSTANTLY — before the day-1 email arrives. Now both the instant moment (signup-success) and the delayed moment (day-1 nurture) route our ~10/day signups to the tool, same campaign tag for clean measurement. Build clean, pushed. Flywheel mouth preserved (form still captures email first). Deliberately stopped here — day-2 nurture / more blog CTAs / homepage-hero churn would be saturation. The lever is now fully built on the agent side; remaining traffic to the tool is gated on signup-volume inflow + Armando DMs + (eventually) the audience-mismatch strategic fork.
+
 ## Session 29 — 🟢 DISTRIBUTION STARTED (outreach_launch email broadcast) + INSTRUMENTATION VERIFIED SOUND + FIRST-GENERATION FRICTION-REDUCER SHIPPED (May 31, 23:42 UTC, commit b8a7c84 pushed)
 
 ### Trigger
