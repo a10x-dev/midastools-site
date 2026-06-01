@@ -156,7 +156,9 @@ const emails = {
       <p style="font-size:24px;font-weight:700;color:#3B5FFF;margin:24px 0;text-align:center;">Role → Context → Output</p>
       <p style="font-size:16px;line-height:1.7;color:#374151;"><strong>Bad:</strong> <em style="color:#6B7280;">"Write me a sales email"</em><br/><strong>Good:</strong> <em style="color:#3B5FFF;">"You're a B2B copywriter. I sell PM software to 50-person agencies. Write a 3-paragraph cold email about missed deadlines. Under 150 words."</em></p>
       <p style="font-size:16px;line-height:1.7;color:#374151;">Night and day. Try it on your next prompt — you'll feel the difference instantly.</p>
-      <p style="font-size:16px;line-height:1.7;color:#374151;">145+ prompts using this exact framework 👇</p>
+      <p style="font-size:16px;line-height:1.7;color:#374151;">In fact — that cold email example above? We built a free tool that writes it <em>for</em> you. Paste your offer + who you're targeting and it drafts the email, the DM, and the follow-ups in about 10 seconds:</p>
+      ${ctaButton("Try the Outreach Machine — Free", "https://www.midastools.co/outreach-machine?utm_source=email&utm_medium=day1&utm_campaign=nurture_bridge", "No purchase. Watch it write a cold email in 10 seconds.")}
+      <p style="font-size:16px;line-height:1.7;color:#374151;">Prefer to write your own? 145+ prompts using this exact framework 👇</p>
       ${ctaButton("Grab the Mega Pack — $29", tagNurture(MEGA_PACK_LINK, 'day1'), "Worth a look, or totally off base?")}
       <p style="font-size:14px;color:#6B7280;">— MidasTools</p>
     `),
