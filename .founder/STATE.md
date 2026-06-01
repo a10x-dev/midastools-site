@@ -2,11 +2,11 @@
 
 ## Current Status (auto-synced from database)
 
-**Bottleneck**: acquisition (severity 7/10) — Money-tools pivot product is BUILT + VERIFIED LIVE (Outreach Machine in real-Claude mode, $39 Pro Pass revenue loop closed end-to-end: checkout→webhook mints MIDAS code→emails it→unlocks Sonnet). Product/conversion mechanic need zero more work. Sole bottleneck is now distribution: 0 real tool sessions fired, 0 Pro sales, $155 LTM unchanged. Requires Armando's outbound DMs (sender attribution is his) — launch kit ready. Kill criterion: 0 Pro sales after 200 sessions/30d; clock at Day 1.
+**Bottleneck**: acquisition (severity 7/10) — DISTRIBUTION STARTED May 31 23:19 UTC — first outreach_launch email broadcast pointed at /outreach-machine (was "0 distribution"). Product + revenue loop verified live; instrumentation (outreach_generate) verified sound via shared plumbing with working page_views. Still 0 real generations (broadcast minutes old at session time) + 0 Pro sales. Lever now = (a) broadcast/DM volume from Armando, (b) agent-side first-generation friction reduction (shipped "Try an example" prefill this session). Kill criterion: 0 Pro sales after 200 real tool sessions/30d.
 
 **KPIs**:
 - Conversations: 0 (target: 3, 7d: 0%)
-- Users: 45 (target: 30, 7d: 7.142857142857142%)
+- Users: 45 (target: 30, 7d: 4.651162790697675%)
 - Revenue: 155 (target: 997, 7d: 0%)
 
 <!-- AGENT-EDITED-BELOW (everything below this line is preserved across ticks) -->

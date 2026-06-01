@@ -359,6 +359,12 @@ Then tell me: which email in this sequence historically has the highest drop-off
 
         <p>The marketers winning right now are not the ones using the most tools. They are the ones who built tight, integrated systems where each tool feeds data to the next. <strong>A three-tool stack that actually works together will outperform a ten-tool stack that does not.</strong></p>
 
+        <div style={{ background: '#F0F4FF', border: '1px solid #3B5FFF', borderRadius: '12px', padding: '24px', margin: '32px 0' }}>
+          <p style={{ margin: '0 0 12px', fontWeight: '700', fontSize: '1.1rem' }}>The bottleneck every marketing stack hits: getting in front of the right people.</p>
+          <p style={{ margin: '0 0 16px' }}>Content, analytics, and ads all assume someone already knows you exist. The fastest way to start conversations is direct outreach &mdash; and it&rsquo;s the part most marketers avoid because writing cold emails and DMs is slow. <strong>The Outreach Machine</strong> writes them for you: paste your offer and a prospect, and it generates a personalized cold email plus a follow-up sequence that books calls.</p>
+          <a href="/outreach-machine?utm_source=blog&utm_medium=cta&utm_campaign=ai-marketing-tools" data-cta="blog-marketing-outreach-machine" style={{ display: 'inline-block', background: '#3B5FFF', color: '#fff', fontWeight: '700', padding: '12px 28px', borderRadius: '100px', textDecoration: 'none' }}>Try the Outreach Machine &mdash; Free &rarr;</a>
+        </div>
+
         <p>Use our <Link href="/ai-roi-calculator" style={{ color: '#3B5FFF' }}>free AI ROI Calculator</Link> to estimate what this kind of stack could mean for your specific business before committing to any subscriptions.</p>
 
         <hr style={{ margin: '40px 0', border: 'none', borderTop: '1px solid #eee' }} />
