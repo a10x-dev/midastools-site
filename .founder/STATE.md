@@ -46,6 +46,12 @@ POST to prod `/api/listing-machine` → HTTP 200, 7.5s, `engine: ai`, `remaining
 ### NEXT_CHECKIN expectation
 Next session: re-pull track-events for (1) first `listing_generate` event (real session toward 200 kill-criterion + confirms instrumentation live in prod), (2) any `ecommerce-descriptions`-attributed click. If generations appear → audience-fit thesis validated, route more surfaces (signup-success CTA, day-1 nurture, side-hustle post, "sell this" CTA on viral-image generators). If 0 after fresh traffic → reconsider which money-tool fits best. Surface to Armando: route homepage signup-success + day-1 nurture to BOTH tools (or split by inferred intent).
 
+### Continuation (commit 74ebcb3 pushed) — ROUTED OUR REAL DISTRIBUTION TO THE AUDIENCE-FIT TOOL
+Re-pointed the two highest-intent distribution moments from the Outreach Machine (S30, ~4h old) to the **Listing Machine**, because our signups are e-commerce/art/side-hustlers for whom listings >> cold outreach:
+1. **Homepage signup-success CTA** (`pages/index.js`) → `/listing-machine` (`data-cta=signup-success-listing-machine`, `utm_campaign=nurture_bridge`). The instant peak-intent moment.
+2. **Day-1 nurture email** (`pages/api/nurture.js`) → reframed the Role→Context→Output example from a cold-email to an **Etsy listing** example (audience-coherent), lead CTA now the Listing Machine, kept a secondary text link to the Outreach Machine for the services minority.
+Both keep `utm_campaign=nurture_bridge`; destination path (/listing-machine vs /outreach-machine) distinguishes the tool in analytics. Build clean, pushed. **Stopped here deliberately** — the bullseye surfaces (tools, sitemap, e-commerce blog, signup-success, day-1) are wired; expanding to viral-image-generator "sell your art" CTAs + side-hustle post is the next workstream but should follow first `listing_generate` signal (avoid the audience-over-reach pattern). Next-session validation gate is DATA: does listing_generate fire from this routed traffic?
+
 ## Session 30 — 🟢 ROUTED OUR REAL DISTRIBUTION (day-1 nurture) TO THE OUTREACH MACHINE + AUDIENCE-MISMATCH DIAGNOSIS CONFIRMED (Jun 1, ~18:00 UTC, commit 082c0cd pushed)
 
 ### Trigger
