@@ -155,6 +155,14 @@ Rules: The copy must sound like a human wrote it. If I can tell keywords were in
 
         <p>This prompt alone has helped store owners rank product pages that were sitting on page 4 of Google. The FAQ section is especially powerful &mdash; those questions often get pulled into featured snippets, which means free traffic.</p>
 
+        <div style={{ marginTop: '32px', padding: '24px', background: '#F0F4FF', border: '1px solid #93B4FF', borderRadius: '8px' }}>
+          <h3 style={{ margin: '0 0 8px', fontSize: '1.1rem' }}>Don&apos;t want to copy-paste prompts? Try the free tool</h3>
+          <p style={{ margin: '0 0 16px', color: '#6B7280', fontSize: '15px' }}>The <strong>Listing Machine</strong> does all of this in one click &mdash; paste your product and get a ready-to-publish title, tags/keywords, description, bullets and a price tip, tuned for Etsy, Shopify, Amazon, Gumroad or eBay. Free, no prompt-wrangling.</p>
+          <a href="/listing-machine?utm_source=blog&utm_medium=cta&utm_campaign=ecommerce-descriptions" style={{ display: 'inline-block', background: '#3B5FFF', color: '#fff', padding: '12px 24px', borderRadius: '6px', textDecoration: 'none', fontWeight: '700', fontSize: '15px' }} data-cta="lm-blog-ecommerce">
+            Try the Listing Machine &mdash; free &rarr;
+          </a>
+        </div>
+
         <hr style={{ margin: '40px 0', border: 'none', borderTop: '1px solid #eee' }} />
 
         <div style={{ marginTop: '48px', padding: '32px', background: '#F0F4FF', border: '1px solid #93B4FF', borderRadius: '8px' }}>

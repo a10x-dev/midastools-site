@@ -4,6 +4,14 @@ import Layout from '../components/Layout';
 
 const TOOLS = [
   {
+    title: 'The Listing Machine',
+    desc: 'Paste any product — an AI-art print, a digital download, a handmade piece, a dropship SKU. Get a ready-to-publish listing built to rank and sell: SEO title, tags/keywords, description, bullets, and a price tip. Works for Etsy, Shopify, Amazon, Gumroad and eBay.',
+    href: '/listing-machine',
+    tag: '💰 Money Tool',
+    categories: 'Etsy SEO · Listings',
+    bg: 'var(--card-amber)',
+  },
+  {
     title: 'The Outreach Machine',
     desc: 'Paste what you sell and who you\'re targeting. Get a personalized cold email, a LinkedIn DM, and a 3-touch follow-up sequence engineered to get replies and book sales calls. Your next client is one message away.',
     href: '/outreach-machine',
