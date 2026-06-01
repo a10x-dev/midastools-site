@@ -3,6 +3,68 @@ import Link from 'next/link';
 import Layout from '../../components/Layout';
 
 const posts = {
+  'make-money-with-ai-5-methods-2026': {
+    title: '5 Ways People Are Actually Making Money With AI Right Now (2026)',
+    date: 'June 1, 2026',
+    meta: 'The Midas Memo #1: five fact-checked ways people are making money with AI in 2026 — grading AI answers, $300 local chatbots, faceless-video services, niche newsletters, and faceless YouTube. Real names, real numbers, honest caveats.',
+    content: `
+*This is **The Midas Memo · Issue #1** — our free weekly on how real people are making money with AI. [Get it every Monday →](/)*
+
+No "10x your productivity" fluff. Real names, real numbers, and the honest part most posts skip. The fastest AI money in 2026 isn't a clever prompt — it's selling a small, specific service (or doing the grunt-work the AI labs pay for) **before** you build anything. Fastest cash first, a faceless asset you own last.
+
+## 1. Get paid this week to grade AI's homework
+
+**Who it's for:** Capital-thin, English-writing people who want money *this week* — zero audience, zero product. Best paid in the US/UK/CA/AU; coding & STEM expertise earns more.
+
+AI labs need humans to rate chatbot answers and review AI-written code. [DataAnnotation.tech](https://breakingeven.online/blog/is-data-annotation-legit-everything-you-need-to-know-in-2026), Outlier (Scale AI) and Alignerr (Labelbox) are all confirmed paying in June 2026 — generalist work $15–20/hr, coding/STEM $40+/hr (1,184+ Glassdoor reports). One worker logged ~$14,000 in year one, but that's a self-reported outlier; a realistic part-time outcome is **$200–600/mo**. Honest catch: onboarding can take weeks and tasks are lumpy — treat it as supplemental.
+
+**Start this week:** Sign up at DataAnnotation.tech (Outlier + Alignerr as backups) and carefully complete the Starter Assessment — you get *one* attempt, graded on thoroughness, not speed. Then grab the highest-paying tasks (code review, complex reasoning) first.
+
+## 2. Sell a $300 FAQ chatbot to the business down the street
+
+**Who it's for:** No-code-friendly solo earners who can wire up ManyChat, Voiceflow or Make + GPT over a weekend. Fully remote, international-friendly.
+
+Small businesses can't staff 24/7 support, so they'll pay for a bot that answers FAQs and books appointments. Documented 2026 rate: **$300–$800 setup + a $50–$150/mo retainer.** Not a fad — Upwork's audited In-Demand Skills 2026 report shows AI chatbot development demand grew **+71% YoY** (completed, paid jobs only). The retainer is the real prize: 10 clients ≈ a $500–$1,500/mo base before any new setups.
+
+**Start this week:** Build *one* demo bot for a fictional local business (a dentist's FAQ + booking bot) in Voiceflow or ManyChat, record a 60-second Loom of it working, then approach local businesses leading with the demo — not a pitch.
+
+## 3. Sell faceless videos before you build anything
+
+**Who it's for:** Solo creators with no on-camera presence and no audience who can learn one AI video app. Tools have free/cheap tiers — capital-thin friendly.
+
+Faceless short-form sells as a done-for-you service: beginners charge **$150–$300 per video**; the consistent ones reach $5,000–$15,000/mo on repeat brand work. Proof of demand: Samuel Rondot built StoryShort ("type text, get a video") to ~$20,000/mo MRR — but the lesson is his *move*, not his number. He validated demand by manually fulfilling orders with tools *first*, before writing any code. Do the service version: be the human who delivers.
+
+**Start this week:** Pick *one* faceless-video AI tool, make 3 sample shorts in a single niche (local restaurants, or finance tips), then offer "4 short-form videos for $X/mo" to 10–20 small businesses. Fulfill manually with AI — prove people pay before you productize.
+
+## 4. Start the niche newsletter nobody can deplatform
+
+**Who it's for:** Writers and curators with no audience who want a durable owned asset and will publish weekly. Strong for international creators — it's text and global. A build, not fast cash.
+
+A niche email list is an asset you own outright, and the platform money is real: [beehiiv pays creators over **$1M/month**](https://www.beehiiv.com/blog/how-to-make-money-from-your-newsletter) collectively via its ad network (Variety + eMarketer, 2026). Named solo cases: Geekout (Matt Navarra) made $25K purely from Boosts; Cyber Corsairs (Yaroslav Sobko) reached ~$16.6K/mo. Ignore the splashy "47K subs in 14 days" figures — those are unaudited self-reports. The honest framing: 5,000 subscribers isn't this week, but it compounds and can't be taken from you.
+
+**Start this week:** Pick a sharp niche ("AI tools for accountants"), start a free beehiiv account, ship issue #1 this week (Claude drafts a roundup in ~30 min). Turn on Boosts + the Ad Network from day one; add a $5–8/mo premium tier past ~1,000 subs.
+
+## 5. The faceless YouTube channel people fall asleep to
+
+**Who it's for:** Capital-thin solo earners who can tolerate a 6–12 month ramp and want a high-ceiling faceless asset. Eyes open: most channels run at a loss early — this is the long game.
+
+Adavia Davis, a 22-year-old Mississippi State dropout, runs faceless channels — flagship "Boring History," 6-hour "history to sleep to" docs. Scripts/visuals from Claude, narration from ElevenLabs; each video costs as little as $60. [Fortune (Dec 2025)](https://fortune.com/2025/12/30/ai-slop-faceless-youtube-accounts-adavia-davis-user-generated-content/) independently reviewed his AdSense records and verified **$40,000–$60,000/month** on ~2 hrs/day. That's a top-of-distribution outlier — $0 is the norm early, and YouTube tightened demonetization on copy-paste AI channels in March 2026, so a real niche and original assembly matter.
+
+**Start this week:** Pick *one* high-RPM, low-competition niche (sleep/ambient history, finance explainers, true crime). Write one long-form script with Claude, narrate on the free ElevenLabs tier, assemble in CapCut (free), publish 2–3 toward Partner Program eligibility (1K subs / 4K watch hours).
+
+## The tool that makes 3 of these easier: Buyer-Radar
+
+Three of these plays (local chatbots, faceless-video DFY, automation builds) live or die on one thing: **finding businesses actively hiring for what you sell.** Our free tool, [**Buyer-Radar**](/buyer-radar?utm_source=blog&utm_medium=cta&utm_campaign=memo1), scans Reddit for exactly those people — point it at "need a chatbot" or "looking for video editor" and it surfaces real posts with someone's hand already up, plus a drafted reply. Skip the cold-spray.
+
+**[Find people hiring right now — free →](/buyer-radar?utm_source=blog&utm_medium=cta&utm_campaign=memo1)**
+
+## Get the Memo every Monday
+
+This was Issue #1. Every Monday we research and fact-check five fresh ways people are making money with AI — and the methods *you* click most decide which tool we build next. It's free. **[Subscribe here →](/)**
+
+*P.S. Yes, method #4 is literally what you're reading. We practice what we print.*
+`,
+  },
   'felix-craft-story': {
     title: 'Felix Craft: The AI Agent Making $300K/Month (2026 Breakdown)',
     date: 'Feb 20, 2026',
