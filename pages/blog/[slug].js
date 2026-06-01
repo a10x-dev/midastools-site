@@ -6,6 +6,7 @@ const posts = {
   'make-money-with-ai-5-methods-2026': {
     title: '5 Ways People Are Actually Making Money With AI Right Now (2026)',
     date: 'June 1, 2026',
+    kitCta: false, // Memo is a newsletter, not a prompt-pack pitch — use the Buyer-Radar + subscribe footer
     meta: 'The Midas Memo #1: five fact-checked ways people are making money with AI in 2026 — grading AI answers, $300 local chatbots, faceless-video services, niche newsletters, and faceless YouTube. Real names, real numbers, honest caveats.',
     content: `
 *This is **The Midas Memo · Issue #1** — our free weekly on how real people are making money with AI. [Get it every Monday →](/)*
@@ -1688,12 +1689,20 @@ export default function BlogPost({ post, slug }) {
             return rendered;
           })()}
         </div>
-        <div className="cta-inline">
-          <p>Get every AI template, workflow, and prompt we make — in one bundle.</p>
-          <a href="https://buy.stripe.com/bJe7sK0tNdLjgle0pscMM0b">Get All 21 Kits — $97 (Save 83%) →</a>
-          <p style={{marginTop:12,fontSize:13,color:'var(--text-tertiary)'}}>Or start with the <a href="https://buy.stripe.com/cNi28qdgz7mVb0U8VYcMM07" style={{color:'var(--accent)'}}>Starter Kit — $29</a></p>
-          <p style={{marginTop:8,fontSize:12,color:'var(--text-tertiary)'}}>Secure Stripe checkout &middot; Instant download &middot; 30-day guarantee</p>
-        </div>
+        {post.kitCta === false ? (
+          <div className="cta-inline">
+            <p>Get the Midas Memo every Monday — free.</p>
+            <a href="/buyer-radar?utm_source=blog&utm_medium=footer&utm_campaign=memo1">Try Buyer-Radar — Free →</a>
+            <p style={{marginTop:12,fontSize:13,color:'var(--text-tertiary)'}}>Five fact-checked AI money methods in your inbox each week. <a href="/" style={{color:'var(--accent)',background:'none',padding:0}}>Subscribe free →</a></p>
+          </div>
+        ) : (
+          <div className="cta-inline">
+            <p>Get every AI template, workflow, and prompt we make — in one bundle.</p>
+            <a href="https://buy.stripe.com/bJe7sK0tNdLjgle0pscMM0b">Get the All Kits Bundle — $97 (Save 83%) →</a>
+            <p style={{marginTop:12,fontSize:13,color:'var(--text-tertiary)'}}>Or start with the <a href="https://buy.stripe.com/cNi28qdgz7mVb0U8VYcMM07" style={{color:'var(--accent)',background:'none',padding:0}}>Starter Kit — $29</a></p>
+            <p style={{marginTop:8,fontSize:12,color:'var(--text-tertiary)'}}>Secure Stripe checkout &middot; Instant download &middot; 30-day guarantee</p>
+          </div>
+        )}
       </div>
     </Layout>
   );
