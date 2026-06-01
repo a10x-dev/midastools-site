@@ -47,11 +47,13 @@ function clamp(s, n = 120) {
 }
 
 // Build buyer-intent search queries from the service the user sells.
+// Phrasing avoids verb-only templates ("need someone to {service}") so noun
+// services ("AI consulting") read correctly too.
 function buildQueries(service) {
   const s = service.toLowerCase();
   return [
     `site:reddit.com looking to hire ${s}`,
-    `site:reddit.com "need a ${s}" OR "need someone to ${s}" OR "recommend a ${s}"`,
+    `site:reddit.com ("need a ${s}" OR "looking for a ${s}" OR "recommend a ${s}")`,
     `site:reddit.com/r/forhire [Hiring] ${s}`,
   ];
 }
@@ -139,8 +141,9 @@ function manualMode(service) {
   const searchUrls = queries.map(q => {
     const inner = q.replace(/^site:reddit\.com\/?/, '').trim();
     return {
-      label: inner.startsWith('r/forhire') ? 'r/forhire [Hiring] posts' : `Reddit: ${inner.slice(0, 60)}`,
-      url: `https://www.google.com/search?q=${encodeURIComponent(q + ' &tbs=qdr:m')}`,
+      label: inner.startsWith('r/forhire') ? 'r/forhire [Hiring] posts (past month)' : `Reddit (past month): ${inner.replace(/^\(|\)$/g, '').slice(0, 64)}`,
+      // tbs=qdr:m must be its own URL param, NOT inside q, or Google treats it as literal text.
+      url: `https://www.google.com/search?tbs=qdr:m&q=${encodeURIComponent(q)}`,
     };
   });
   return { mode: 'manual', service, searchUrls };
