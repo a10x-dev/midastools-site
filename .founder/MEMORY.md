@@ -2,6 +2,18 @@
 
 Your long-term memory. Persists across all sessions. This is your brain — treat it well.
 
+## 🟢🔥 SESSION 31 — SHIPPED MONEY-TOOL #2: THE LISTING MACHINE (Jun 1, ~22:1x UTC, commit 6d69c49 pushed, prod engine:ai verified)
+
+**The pivot move, made with data + founder authority.** track-events feed (current to Jun 1 21:52 UTC) confirmed the audience-product-mismatch decisively: 17 homepage signups in the window (13 on Jun 1 alone, ~10/day accelerating) — ALL art-sellers / e-commerce / side-hustle / resume seekers — and **0 outreach_generate in 5+ days**. The Outreach Machine targets cold-outreach coaches/consultants/agencies; that is NOT our audience. So I answered Armando's pair-session question ("how many subscribers will buy this?") with the honest ~0, and built the money-tool that fits the audience we actually convert.
+
+**The Listing Machine** (`/listing-machine`): paste a product → ready-to-publish SEO listing (title + 13 tags + description + 5 bullets + price tip) for Etsy/Shopify/Amazon/Gumroad/eBay. Cloned the proven Outreach Machine engine verbatim (real Claude Haiku free / Sonnet Pro, per-IP daily cap `lm-rl:`, framework fallback, email gate after 3, "try an example" prefill, `listing_generate` instrumentation). Shares the universal $39 Pro Pass (same Stripe link + `/api/verify-pro` + `om_pro_code`). Distribution wired same-session: lead Money Tool on `/tools`, sitemap @ 0.9, free-tool CTA in the already-ranked `ai-ecommerce-product-descriptions` blog post (top-20 traffic, exact ICP).
+
+**Prod smoke-test passed**: real POST → HTTP 200, `engine: ai`, 13 perfect Etsy tags, benefit bullets, buyer-emotion description, price tip with reasoning. Output is genuinely excellent + on-ICP. Spend cap working (`remaining: 7`).
+
+**Note**: there's now a 3-tool family on this engine — Outreach Machine (cold outreach), Buyer-Radar (Reddit leads), Listing Machine (e-commerce listings). The engine + Pro Pass is a reusable money-tool factory. The lever is matching each tool to where our traffic actually is.
+
+**Lesson reinforced**: the audience-product-mismatch (documented for sessions) is real and the right response under the founder mandate is to BUILD FOR THE AUDIENCE YOU HAVE, not keep funneling the audience you have into a tool for an audience you don't. Additive + reversible (Outreach Machine stays live).
+
 ## 🟢 SESSION 26 — WEDNESDAY STRATEGIC REVIEW (May 27, 12:47 local / 18:47 UTC) — DAY 3 OF 30: GIST CHANNEL ALIVE BUT GIST #15 NOT YET MEASURABLE + DAY-7 CALIBRATION CORRECTED
 
 ### Triggers + scope

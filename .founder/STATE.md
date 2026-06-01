@@ -11,6 +11,41 @@
 
 <!-- AGENT-EDITED-BELOW (everything below this line is preserved across ticks) -->
 
+## Session 31 — 🟢🔥 SHIPPED MONEY-TOOL #2 "THE LISTING MACHINE" FOR THE AUDIENCE WE ACTUALLY CONVERT (Jun 1, ~22:1x UTC, commit 6d69c49 pushed + prod-verified engine:ai)
+
+### Trigger
+S30 continuity: re-pull track-events for first nurture_bridge outreach_generate + check signup inflow. Did exactly that — the data made the strategic fork (logged S30 for "next pair session") unavoidable AND actionable under Armando's standing founder mandate ("you are the founder, decide and build, get revenue yes or yes").
+
+### 🚨 THE DATA RESOLVED THE FORK
+400-event feed (window May 29 → **Jun 1 21:52 UTC**, current):
+- **17 subscribe_submit, ALL src=homepage, 13 on Jun 1 alone.** Real, growing, organic owned distribution (~10/day, accelerating).
+- **0 outreach_generate across the entire 5-day window.** The Outreach Machine's core action has STILL never fired.
+- **0 nurture_bridge-tagged events** — S30's funnel edits only affect future signups + day-1 emails (fire next day); too early, as expected.
+- Top pages = viral AI art (Ghibli/Midjourney/action-figure/album-cover), **ai-ecommerce-product-descriptions**, **ai-side-hustles**, ai-resume, content-creator. Audience = **art-sellers / e-commerce / side-hustlers**, NOT cold-outreach coaches/consultants.
+
+**Conclusion:** answered Armando's pair-session question "how many of our subscribers will buy this?" honestly — ~0 will buy a cold-outreach tool because they're the wrong ICP. Needle-mover = a money-tool that fits the audience we DO convert. The Outreach Machine isn't broken; it's pointed at an audience we don't have.
+
+### ✅ SHIPPED (commit 6d69c49, pushed, build clean, prod-verified)
+**The Listing Machine** (`/listing-machine` + `/api/listing-machine`) — paste a product → ready-to-publish SEO listing: title + tags/keywords + description + 5 bullets + price tip, platform-aware for **Etsy / Shopify / Amazon / Gumroad / eBay** + brand-vibe selector.
+- **Clones the proven Outreach Machine engine**: real Claude (Haiku free / Sonnet Pro), per-IP daily cap (`lm-rl:`), framework fallback, email gate after 3 gens, "try an example" prefill, `listing_generate` instrumentation (kill-criterion metric).
+- **Shares the universal MidasTools Pro Pass** ($39, same Stripe link + `/api/verify-pro` + `om_pro_code` localStorage) — one code unlocks every money-tool. Fits established pattern (Outreach Machine + Buyer-Radar already on this engine).
+- **Distribution wired same-session (no indexing wait):** lead Money Tool on `/tools`, sitemap @ 0.9, free-tool CTA in the already-ranked `ai-ecommerce-product-descriptions` blog post (top-20 traffic, exact ICP, `utm_campaign=ecommerce-descriptions` + `data-cta=lm-blog-ecommerce`).
+
+### ✅ PROD SMOKE-TEST (real generation, engine:ai)
+POST to prod `/api/listing-machine` → HTTP 200, 7.5s, `engine: ai`, `remaining: 7` (spend cap working). Output genuinely excellent + on-ICP: title "Ghibli Cozy Cottage Art Print | Cottagecore Autumn Watercolor Download", **exactly 13 Etsy tags**, 5 benefit bullets (300 DPI, 5 sizes, instant download…), buyer-emotion description, concrete price tip ($5.99–6.99 with reasoning). Product quality is NOT the bottleneck — distribution to the right audience is, and we now have a tool aimed at the audience we have.
+
+### What I deliberately did NOT do
+- Did NOT replace/kill the Outreach Machine — additive + reversible; it stays live for any cold-outreach traffic.
+- Did NOT spray CTAs onto viral-image generator pages or the side-hustle post yet — ICP discipline. E-commerce blog is the bullseye; expand only after v0 shows traffic + generations.
+- Did NOT touch the homepage front door / flywheel.
+- Did NOT branch — push-to-main is this project's deploy model (Vercel auto-deploy); a branch wouldn't ship the tool.
+
+### Confidence
+90% — engine:ai verified by live prod POST, 13-tag Etsy output verified, build clean, push confirmed (b057624..6d69c49). Lower than 95% because (a) zero real-human traffic to the tool yet — impact gated on routing our ~10/day signups + organic discovery, (b) haven't watched a real $39 Pro purchase flow through the webhook for THIS tool specifically (shares the verified Outreach Machine loop, so code path is sound).
+
+### NEXT_CHECKIN expectation
+Next session: re-pull track-events for (1) first `listing_generate` event (real session toward 200 kill-criterion + confirms instrumentation live in prod), (2) any `ecommerce-descriptions`-attributed click. If generations appear → audience-fit thesis validated, route more surfaces (signup-success CTA, day-1 nurture, side-hustle post, "sell this" CTA on viral-image generators). If 0 after fresh traffic → reconsider which money-tool fits best. Surface to Armando: route homepage signup-success + day-1 nurture to BOTH tools (or split by inferred intent).
+
 ## Session 30 — 🟢 ROUTED OUR REAL DISTRIBUTION (day-1 nurture) TO THE OUTREACH MACHINE + AUDIENCE-MISMATCH DIAGNOSIS CONFIRMED (Jun 1, ~18:00 UTC, commit 082c0cd pushed)
 
 ### Trigger
