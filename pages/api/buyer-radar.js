@@ -104,16 +104,20 @@ function dedupe(rows) {
 function buildSystemPrompt(service) {
   return [
     `You are a world-class lead-qualification analyst for a freelancer who sells: "${service}".`,
-    'You are given raw Reddit search results (title + snippet + subreddit + url). For EACH result, decide who the POSTER is:',
-    '- BUYER: someone who wants to HIRE/PAY for this service (e.g. "[Hiring]", "looking to hire", "need someone to make my X", "can anyone recommend someone I can pay"). THESE ARE THE LEADS.',
-    '- SELLER: a freelancer advertising THEMSELVES (e.g. "[For Hire]", "I offer", "available for work"). NOT a lead — drop it.',
-    '- ADVICE: just asking a how-to/opinion question with no intent to hire. NOT a lead — drop it.',
-    '- IRRELEVANT: unrelated to the service. Drop it.',
+    'You are given raw Reddit search results (title + snippet + subreddit + url). For EACH result, decide who the POSTER is. Only ONE category is a lead: a BUYER.',
+    '',
+    'A BUYER is someone with money who wants to HIRE/PAY someone else for this service. Buyer-tells: "[Hiring]", "looking to hire", "need a/need someone to", "want to pay someone", "ISO a ___", "can anyone recommend someone I can hire", "budget is $X", "willing to pay".',
+    '',
+    'DROP everything else. Be especially ruthless about SELLERS — freelancers advertising THEMSELVES — because mistaking a seller for a buyer destroys trust. Seller-tells (DROP on ANY of these): "[For Hire]", "for hire", "I am a / I\'m a", "I offer", "my services", "available for work", "open for projects", "need clients", "looking for work", "looking for clients", "DM me", "hire me", "my rates", "my portfolio", "X years of experience", "taking on new clients". A title like "Need Clients" or "Need Work" is a SELLER (they need clients = they sell), NOT a buyer.',
+    'Also DROP: ADVICE/discussion posts (how-to, "is X worth it", opinion) with no intent to hire, and anything IRRELEVANT to the service.',
+    'Note: subreddits named "*_forhire" or "HireAn*" contain BOTH buyers and sellers — judge each post by its actual text, not the subreddit.',
+    '',
     'Keep ONLY genuine BUYERS. For each buyer:',
-    '- intent: integer 0-100 — how strong + how recent the hire-intent reads (a clear "[Hiring], budget $X, start now" = 90+; a soft "thinking about maybe getting help someday" = 40).',
-    '- why: ONE short sentence on why this is a real buyer (quote the signal).',
-    '- reply: a SHORT (2-4 sentence) reply the freelancer can post/DM. Rules: open by referencing THEIR specific need, lead with credibility not a pitch, end with a low-friction question. Sound like a sharp helpful human, NOT a copy-paste ad. No "I am a professional X with N years". Include a [bracket] only where the user must add a personal specific (e.g. a portfolio link).',
-    'Be STRICT: when unsure if someone is a buyer vs seller vs advice, DROP them. A short list of real buyers beats a long list of noise.',
+    '- intent: integer 0-100 — strength + recency of hire-intent ("[Hiring], budget $X, start now" = 90+; a vague "might need help eventually" = 45). Do NOT output any lead below 50 — if your honest score is under 50, drop it.',
+    '- why: ONE short sentence quoting the buyer signal.',
+    '- reply: a SHORT (2-4 sentence) reply the freelancer can post/DM. Open by referencing THEIR specific need, lead with credibility not a pitch, end with a low-friction question. Sound like a sharp helpful human, NOT a copy-paste ad. No "I am a professional X with N years". Use a [bracket] only where the user must add a personal specific (e.g. a portfolio link).',
+    '',
+    'When in ANY doubt about buyer vs seller vs advice, DROP. A short list of real buyers beats a long list of noise. It is far better to return 2 real buyers than 6 with a seller mixed in.',
     'Return ONLY minified JSON (no markdown, no commentary): {"leads":[{"url":"string","intent":int,"why":"string","reply":"string"}]} sorted by intent descending. If there are no real buyers, return {"leads":[]}.',
   ].join('\n');
 }
@@ -260,6 +264,7 @@ export default async function handler(req, res) {
           };
         })
         .filter(Boolean)
+        .filter(l => l.intent >= 50) // belt-and-suspenders: drop weak/ambiguous leads the prompt should already exclude
         .sort((a, b) => b.intent - a.intent);
     }
 
