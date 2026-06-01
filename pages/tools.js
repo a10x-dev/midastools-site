@@ -12,6 +12,14 @@ const TOOLS = [
     bg: 'var(--card-amber)',
   },
   {
+    title: 'Buyer-Radar',
+    desc: 'Type the service you sell — Buyer-Radar scans Reddit for real, recent posts where someone is asking to hire exactly that, then hands you each lead with a ready-to-send reply. Stop pitching into the void; reply to warm intent.',
+    href: '/buyer-radar',
+    tag: '💰 Money Tool',
+    categories: 'Live Reddit leads',
+    bg: 'var(--card-amber)',
+  },
+  {
     title: 'AI Prompt Generator',
     desc: 'Generate expert-level prompts for sales emails, social media, product descriptions, blog outlines, cold outreach, AI images, video scripts, and business strategy. Fill in 3 fields, get a customized prompt, copy with one click.',
     href: '/prompt-generator',
