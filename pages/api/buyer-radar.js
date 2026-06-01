@@ -87,12 +87,21 @@ async function firecrawlSearch(query, key) {
   }
 }
 
-// Dedupe by Reddit thread URL (strip query/fragment), keep first seen.
+// Hard seller-tells in the THREAD TITLE. We drop these deterministically,
+// regardless of snippet, because the lead's link points AT this thread — even
+// if a buyer commented, we won't send the user into a freelancer's "for hire"
+// thread. NB: "[HIRE]" (someone wanting to hire) is a BUYER tag and must NOT
+// match here; only "[FOR HIRE]" / "for hire" / "need clients/work" do.
+const TITLE_SELLER_RE = /\[for\s?hire\]|\bfor hire\b|need clients?\b|need work\b|looking for (work|clients)|available for (work|hire|projects)/i;
+
+// Dedupe by Reddit thread URL (strip query/fragment), keep first seen, and drop
+// threads whose title is clearly a freelancer advertising themselves.
 function dedupe(rows) {
   const seen = new Set();
   const out = [];
   for (const r of rows) {
     if (!r.url || !/reddit\.com\/r\//i.test(r.url)) continue;
+    if (TITLE_SELLER_RE.test(r.title || '')) continue;
     const key = r.url.split('?')[0].split('#')[0].replace(/\/$/, '');
     if (seen.has(key)) continue;
     seen.add(key);
