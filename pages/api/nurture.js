@@ -154,10 +154,11 @@ const emails = {
       <p style="font-size:16px;line-height:1.7;color:#374151;">Hey — quick one.</p>
       <p style="font-size:16px;line-height:1.7;color:#374151;">Yesterday I sent you 5 prompts. Here's the technique behind all of them, in 3 words:</p>
       <p style="font-size:24px;font-weight:700;color:#3B5FFF;margin:24px 0;text-align:center;">Role → Context → Output</p>
-      <p style="font-size:16px;line-height:1.7;color:#374151;"><strong>Bad:</strong> <em style="color:#6B7280;">"Write me a sales email"</em><br/><strong>Good:</strong> <em style="color:#3B5FFF;">"You're a B2B copywriter. I sell PM software to 50-person agencies. Write a 3-paragraph cold email about missed deadlines. Under 150 words."</em></p>
+      <p style="font-size:16px;line-height:1.7;color:#374151;"><strong>Bad:</strong> <em style="color:#6B7280;">"Write a product description"</em><br/><strong>Good:</strong> <em style="color:#3B5FFF;">"You're an Etsy SEO expert. I sell Ghibli-style cozy cottage art prints (digital download, 5 sizes). Write a listing title + 13 tags + a description for cottagecore buyers."</em></p>
       <p style="font-size:16px;line-height:1.7;color:#374151;">Night and day. Try it on your next prompt — you'll feel the difference instantly.</p>
-      <p style="font-size:16px;line-height:1.7;color:#374151;">In fact — that cold email example above? We built a free tool that writes it <em>for</em> you. Paste your offer + who you're targeting and it drafts the email, the DM, and the follow-ups in about 10 seconds:</p>
-      ${ctaButton("Try the Outreach Machine — Free", "https://www.midastools.co/outreach-machine?utm_source=email&utm_medium=day1&utm_campaign=nurture_bridge", "No purchase. Watch it write a cold email in 10 seconds.")}
+      <p style="font-size:16px;line-height:1.7;color:#374151;">In fact — that listing example above? We built a free tool that writes the <em>whole thing</em> for you — title, tags, description, bullets, even a price tip — for Etsy, Shopify, Amazon &amp; more, in about 10 seconds:</p>
+      ${ctaButton("Try the Listing Machine — Free", "https://www.midastools.co/listing-machine?utm_source=email&utm_medium=day1&utm_campaign=nurture_bridge", "No purchase. Watch it write a full listing in 10 seconds.")}
+      <p style="font-size:15px;line-height:1.7;color:#6B7280;">Selling services, not products? The <a href="https://www.midastools.co/outreach-machine?utm_source=email&utm_medium=day1&utm_campaign=nurture_bridge" style="color:#3B5FFF;font-weight:600;">Outreach Machine</a> writes cold emails &amp; DMs that book calls.</p>
       <p style="font-size:16px;line-height:1.7;color:#374151;">Prefer to write your own? 145+ prompts using this exact framework 👇</p>
       ${ctaButton("Grab the Mega Pack — $29", tagNurture(MEGA_PACK_LINK, 'day1'), "Worth a look, or totally off base?")}
       <p style="font-size:14px;color:#6B7280;">— MidasTools</p>

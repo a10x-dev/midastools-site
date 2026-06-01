@@ -565,8 +565,8 @@ export default function Home() {
           {subStatus === 'done' ? (
             <div style={{ textAlign: 'center' }}>
               <p style={{ color: 'var(--accent)', fontWeight: 700, fontSize: 16, marginBottom: 16 }}>You're in — check your inbox!</p>
-              <p style={{ color: '#374151', fontSize: 15, marginBottom: 16 }}>While you wait — try the tool that writes cold emails &amp; DMs that book sales calls. Paste your offer, see what it writes in ~10 seconds. Free.</p>
-              <a href="/outreach-machine?utm_source=homepage&utm_medium=signup_success&utm_campaign=nurture_bridge" className="btn-primary" data-cta="signup-success-outreach-machine">Try the Outreach Machine &rarr;</a>
+              <p style={{ color: '#374151', fontSize: 15, marginBottom: 16 }}>While you wait — turn anything you sell into a listing that ranks &amp; sells. Paste your product, get a full Etsy/Shopify/Amazon listing in ~10 seconds. Free.</p>
+              <a href="/listing-machine?utm_source=homepage&utm_medium=signup_success&utm_campaign=nurture_bridge" className="btn-primary" data-cta="signup-success-listing-machine">Try the Listing Machine &rarr;</a>
             </div>
           ) : (
             <form className="email-form" onSubmit={handleSubscribe}>
