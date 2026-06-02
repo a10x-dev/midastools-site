@@ -29,8 +29,14 @@ Two on-ICP, self-qualifying bridges (only people with something to sell click):
 1. **`/blog/viral-ai-art-trends-april-2026`** (#1 content page, 68 views/wk, pulls chatgpt.com citation traffic) — added a "For sellers" entry in the existing "How to Ride These Trends" segment → Listing Machine (`utm_campaign=viral-art-trends`). Verified: 2 listing-machine refs render on prod.
 2. **Ghibli generator** unlocked-prompt step — "Selling your art? Turn it into a ready-to-publish Etsy/Gumroad listing — free →" (`utm_campaign=sell-your-art`). Highest seller-intent moment (they just made a product). Low-risk `<li>` add.
 
+### Continuation (commit 6fa8fb7) — verified destination + 1 measured expansion
+- **Verified the Listing Machine first-gen path is sound** (not a false S31 claim): empty form → "Try an example" prefills product+audience → "Write My Listing" generates. `listing_generate` instrumentation real. So the bridges aren't wasted on a friction-y destination.
+- **Added the same self-qualifying bridge to `/pet-portrait-generator`** (16 views/wk — 2nd-highest art generator; pet-portrait Etsy shops are a real seller subculture). Build clean (192/192), pushed.
+- **3 art surfaces now bridge to the Listing Machine.** Holding further generators (action-figure/album-cover/fantasy-map) until first `listing_generate` confirms the bridge works — measured expansion, not spray.
+
 ### What I deliberately did NOT do
-- Did NOT spray the CTA across all 10 art pages/generators. Two surfaces (highest-traffic blog + highest-seller-intent generator) is a balanced expansion countering last session's over-conservatism without becoming spray. Expand to more generators ("sell this") only after these show first `listing_generate`.
+- Did NOT spray the CTA across all 10 art pages/generators — 3 surfaces (highest-traffic blog + 2 highest-traffic seller-fit generators) counters last session's over-conservatism without becoming spray.
+- Did NOT build a 4th money-tool. 3 tools at 0 generations — building tool #4 before any has a single generation is the motion-vs-progress trap. The lever is discovery + first-gen, not more tools.
 - Did NOT touch the homepage flywheel or the already-routed signup-success/day-1 nurture (those affect future signups, fire next day — too early to read).
 - Did NOT re-burn an LLM call to re-verify the Listing Machine engine (verified engine:ai + 13-tag output last session; shares the engine).
 
