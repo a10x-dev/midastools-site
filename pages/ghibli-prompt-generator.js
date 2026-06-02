@@ -534,6 +534,7 @@ export default function GhibliPromptGenerator() {
                     <li>For portraits: upload your photo first</li>
                     <li>Paste this prompt and hit send</li>
                     <li>Share your Ghibli masterpiece!</li>
+                    <li>Selling your art? <a href="/listing-machine?utm_source=ghibli-generator&utm_medium=cta&utm_campaign=sell-your-art" style={{ color: '#3B5FFF', fontWeight: 700 }}>Turn it into a ready-to-publish Etsy/Gumroad listing — free →</a></li>
                   </ol>
                 </div>
 
