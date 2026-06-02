@@ -535,6 +535,7 @@ export default function PetPortraitGenerator() {
                     <li><strong>Upload a clear photo</strong> of your pet</li>
                     <li>Paste this prompt and hit send</li>
                     <li>Share your pet&apos;s portrait and make everyone jealous!</li>
+                    <li>Selling pet portraits? <a href="/listing-machine?utm_source=pet-portrait-generator&utm_medium=cta&utm_campaign=sell-your-art" style={{ color: '#3B5FFF', fontWeight: 700 }}>Turn it into a ready-to-publish Etsy listing — free →</a></li>
                   </ol>
                 </div>
 
