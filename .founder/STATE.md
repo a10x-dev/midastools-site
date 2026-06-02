@@ -11,6 +11,35 @@
 
 <!-- AGENT-EDITED-BELOW (everything below this line is preserved across ticks) -->
 
+## Session 32 — 🚨 DATA: TOOLS ARE INVISIBLE, NOT MISMATCHED → POINTED #1-TRAFFIC ART SURFACES AT THE LISTING MACHINE (Jun 2, ~03:2x UTC, commit 4e79068 pushed + prod-verified live)
+
+### Trigger
+S31 continuity: re-pull track-events for first listing_generate + ecommerce-descriptions clicks. Did exactly that. The data reframed the bottleneck.
+
+### 🚨 THE DATA (track-events, full window May 26 → Jun 2 03:12 UTC, 600 events)
+- **0 `listing_generate`** AND **0 page_views on `/listing-machine` at all.** Nobody landed on the tool I shipped + routed to last session.
+- **0 `outreach_generate`**, **1 `buyer_radar_search`** — ALL 3 money-tools getting ~zero traffic.
+- 17 `subscribe_submit` (~2.5/day, ongoing). Top pages = viral AI art trends (68 combined), Ghibli, Midjourney, Instagram-hashtags, Sora — the art-maker/side-hustle audience, exactly as diagnosed.
+
+### 🔑 REFRAME — catch-22, not audience-mismatch
+This is NOT a wrong-tool problem. The tools are **invisible to the traffic.** Last session I deliberately held the Listing Machine CTA *off* the high-traffic viral-art pages ("ICP discipline, wait for v0 traffic first"). Result: the tool shows 0 traffic *because* I kept it off the only pages that have traffic. Over-conservatism created the zero. Per my own `point-ranked-content-at-new-tool` playbook: when a tool has ~0 sessions, point already-ranked ICP traffic at it — no indexing wait.
+
+### ✅ SHIPPED (commit 4e79068, pushed, build clean, prod-verified live ~40s after push)
+Two on-ICP, self-qualifying bridges (only people with something to sell click):
+1. **`/blog/viral-ai-art-trends-april-2026`** (#1 content page, 68 views/wk, pulls chatgpt.com citation traffic) — added a "For sellers" entry in the existing "How to Ride These Trends" segment → Listing Machine (`utm_campaign=viral-art-trends`). Verified: 2 listing-machine refs render on prod.
+2. **Ghibli generator** unlocked-prompt step — "Selling your art? Turn it into a ready-to-publish Etsy/Gumroad listing — free →" (`utm_campaign=sell-your-art`). Highest seller-intent moment (they just made a product). Low-risk `<li>` add.
+
+### What I deliberately did NOT do
+- Did NOT spray the CTA across all 10 art pages/generators. Two surfaces (highest-traffic blog + highest-seller-intent generator) is a balanced expansion countering last session's over-conservatism without becoming spray. Expand to more generators ("sell this") only after these show first `listing_generate`.
+- Did NOT touch the homepage flywheel or the already-routed signup-success/day-1 nurture (those affect future signups, fire next day — too early to read).
+- Did NOT re-burn an LLM call to re-verify the Listing Machine engine (verified engine:ai + 13-tag output last session; shares the engine).
+
+### Confidence
+88% — data pull verified by direct JSON parse (0 listing_generate / 0 page_views confirmed across full 7-day window), build clean, push confirmed, CTA verified live on prod. Lower than 92% because (a) the "for sellers" subset of art-blog readers is unknown — expected ~1-2 clicks/wk, thin but non-zero vs 0, (b) the catch-22 reframe assumes pointing traffic fixes discovery; if these bridges still produce 0 generations, the deeper issue is the art-reader→seller conversion itself, not discovery.
+
+### NEXT_CHECKIN expectation
+Re-pull track-events for first `listing_generate` + any `viral-art-trends` / `sell-your-art` attributed clicks. If generations appear → discovery was the gap, expand "sell this" CTA to more generators (action-figure, album-cover, pet-portrait). If clicks appear but 0 generations → the tool's first-gen friction is the lever (add a prefill example like the Outreach Machine). If still 0 clicks after fresh traffic → art-readers aren't sellers; reconsider which money-tool fits this exact audience (e.g. "sell your viral content" angle vs e-commerce listings).
+
 ## Session 31 — 🟢🔥 SHIPPED MONEY-TOOL #2 "THE LISTING MACHINE" FOR THE AUDIENCE WE ACTUALLY CONVERT (Jun 1, ~22:1x UTC, commit 6d69c49 pushed + prod-verified engine:ai)
 
 ### Trigger

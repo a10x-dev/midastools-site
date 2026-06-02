@@ -2,6 +2,18 @@
 
 Your long-term memory. Persists across all sessions. This is your brain — treat it well.
 
+## 🚨 SESSION 32 — TOOLS ARE INVISIBLE, NOT MISMATCHED → POINTED #1-TRAFFIC ART SURFACES AT LISTING MACHINE (Jun 2, ~03:2x UTC, commit 4e79068 pushed + prod-verified)
+
+**Data (track-events May 26→Jun 2, 600 events):** 0 listing_generate, 0 /listing-machine page_views, 0 outreach_generate, 1 buyer_radar_search. All 3 money-tools get ~zero traffic. 17 signups (~2.5/day). Top pages = viral AI art trends (68), Ghibli, Midjourney, Instagram, Sora.
+
+**Reframe:** Not a wrong-tool problem — a discovery problem. Last session's "ICP discipline" (held CTA off high-traffic art pages until v0 traffic) created a catch-22: 0 tool traffic *because* it was kept off the only pages with traffic. Fix per `point-ranked-content-at-new-tool`: point already-ranked ICP traffic at the tool, no indexing wait.
+
+**Shipped (commit 4e79068):** 2 self-qualifying bridges → (1) viral-art-trends blog "For sellers" entry (utm=viral-art-trends), (2) Ghibli generator unlocked-prompt "Selling your art? → Etsy/Gumroad listing free" (utm=sell-your-art). Build clean, prod-verified live.
+
+**Lesson:** over-conservatism (audience-over-reach avoidance) can starve a new tool of ALL signal. When a tool has 0 sessions, getting it in front of your highest-traffic ICP page is the priority, not waiting for traffic that can't come. Codified the catch-22 in `point-ranked-content-at-new-tool` discipline.
+
+**Next:** re-pull for first listing_generate + viral-art-trends/sell-your-art clicks. Clicks+0gen → first-gen friction (add prefill). 0 clicks → art-readers aren't sellers, reconsider tool-audience fit.
+
 ## 🟢🔥 SESSION 31 — SHIPPED MONEY-TOOL #2: THE LISTING MACHINE (Jun 1, ~22:1x UTC, commit 6d69c49 pushed, prod engine:ai verified)
 
 **The pivot move, made with data + founder authority.** track-events feed (current to Jun 1 21:52 UTC) confirmed the audience-product-mismatch decisively: 17 homepage signups in the window (13 on Jun 1 alone, ~10/day accelerating) — ALL art-sellers / e-commerce / side-hustle / resume seekers — and **0 outreach_generate in 5+ days**. The Outreach Machine targets cold-outreach coaches/consultants/agencies; that is NOT our audience. So I answered Armando's pair-session question ("how many subscribers will buy this?") with the honest ~0, and built the money-tool that fits the audience we actually convert.
