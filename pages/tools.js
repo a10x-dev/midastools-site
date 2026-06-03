@@ -4,6 +4,14 @@ import Layout from '../components/Layout';
 
 const TOOLS = [
   {
+    title: 'Chatbot Builder',
+    desc: 'Paste any business website — get a working AI chatbot that answers customer questions and captures leads 24/7, embeddable with one line of code. Local businesses pay $300+/mo for this. Build yours free, put it live for $39/mo, and resell as many as you want.',
+    href: '/chatbot-builder',
+    tag: '💰 Money Tool',
+    categories: 'Lead-capture · Embed · Resell',
+    bg: 'var(--card-amber)',
+  },
+  {
     title: 'The Listing Machine',
     desc: 'Paste any product — an AI-art print, a digital download, a handmade piece, a dropship SKU. Get a ready-to-publish listing built to rank and sell: SEO title, tags/keywords, description, bullets, and a price tip. Works for Etsy, Shopify, Amazon, Gumroad and eBay.',
     href: '/listing-machine',
