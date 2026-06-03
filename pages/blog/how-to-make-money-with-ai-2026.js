@@ -249,6 +249,19 @@ export default function HowToMakeMoneyWithAI2026() {
           </a>
         </div>
 
+        {/* Chatbot Builder — deliver the #1 most-requested automation, as recurring revenue */}
+        <div style={{ marginTop: '24px', padding: '22px 24px', background: '#EEF2FF', border: '1px solid #C7D2FE', borderRadius: '10px' }}>
+          <p style={{ margin: '0 0 12px', fontSize: '15px', color: '#1E3A8A', fontWeight: 700 }}>
+            Free tool: The Chatbot Builder
+          </p>
+          <p style={{ margin: '0 0 16px', fontSize: '15px', color: '#1E40AF', lineHeight: 1.5 }}>
+            That &ldquo;AI customer support chatbot&rdquo; above is the most-requested automation &mdash; and the easiest one to sell. Paste any business&rsquo;s website and get a working chatbot that answers customer questions from their real info and captures leads 24/7, live with one line of code. Build it free; local businesses pay $300+/mo for exactly this &mdash; you keep the recurring revenue.
+          </p>
+          <Link href="/chatbot-builder?utm_source=blog&utm_medium=cta&utm_campaign=make-money-chatbots" style={{ display: 'inline-block', background: '#3B5FFF', color: '#fff', padding: '13px 30px', borderRadius: '100px', textDecoration: 'none', fontWeight: 700, fontSize: '15px' }}>
+            Build a sellable chatbot &rarr;
+          </Link>
+        </div>
+
         {/* Method 5 */}
         <h2 style={{ fontSize: '1.4rem', fontWeight: '700', marginTop: '40px' }}>5. AI-Powered Tutoring</h2>
 
