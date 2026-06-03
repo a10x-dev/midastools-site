@@ -2,7 +2,7 @@ import Stripe from 'stripe';
 import nodemailer from 'nodemailer';
 import crypto from 'crypto';
 import { decodeAttributionFromClientRef } from '../../lib/stripe-attribution';
-import { writeKV } from '../../lib/kv-store';
+import { readKV, writeKV } from '../../lib/kv-store';
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
 
@@ -401,6 +401,8 @@ function detectKit(session) {
     'plink_1TZGT5AdkDx8xZMkUrG20eAO': 'champion-monthly',
     // MidasTools Pro Pass — $39 one-time lifetime unlock (created 2026-05-28)
     'plink_1TcGuyAdkDx8xZMk0Z7mTOwC': 'pro-pass',
+    // Chatbot Builder — Live + Leads — $39/mo recurring (created 2026-06-03)
+    'plink_1TeLMeAdkDx8xZMk6MyHUoAx': 'chatbot-pro',
   };
   if (paymentLink && PAYMENT_LINK_MAP[paymentLink]) {
     return KIT_MAP[PAYMENT_LINK_MAP[paymentLink]];
@@ -512,6 +514,66 @@ async function sendDownloadEmail(customerEmail, customerName, kit, opts = {}) {
   });
 }
 
+// Chatbot Builder Pro ($39/mo): flip the purchased bot to 'pro' (white-label +
+// lead-emails + higher limits), map the subscription -> bot for cancellation, and
+// confirm to the subscriber + notify the founder.
+async function handleChatbotProActivation(session, email, name) {
+  const botId = String(session.client_reference_id || '').trim();
+  let botName = '';
+  if (/^cb_[a-f0-9]{12}$/.test(botId)) {
+    try {
+      const bot = await readKV(`chatbot:${botId}`);
+      if (bot) {
+        bot.plan = 'pro';
+        bot.sub_email = email || bot.owner_email;
+        bot.updated = new Date().toISOString();
+        await writeKV(`chatbot:${botId}`, bot);
+        botName = bot.name || '';
+      }
+      if (session.subscription) {
+        await writeKV(`chatbot-sub:${session.subscription}`, { botId, email, ts: new Date().toISOString() });
+      }
+      console.log(`[chatbot-pro] activated bot ${botId} for ${email}`);
+    } catch (err) {
+      console.error('[chatbot-pro] activation KV error:', err.message);
+    }
+  } else {
+    console.error('[chatbot-pro] missing/invalid bot id in client_reference_id:', session.client_reference_id);
+  }
+
+  if (email) {
+    try {
+      await transporter.sendMail({
+        from: `"Midas Tools" <${process.env.GMAIL_ADDRESS}>`,
+        to: email,
+        subject: '👑 Your chatbot is live — leads now come straight to your inbox',
+        html: `<div style="font-family:Inter,sans-serif;max-width:560px;margin:0 auto;background:#fff;color:#111827;padding:40px;border-radius:16px;border:1px solid #E5E7EB;">
+          <h1 style="font-size:26px;font-weight:900;color:#2563EB;margin-bottom:8px;">You're live! 🎉</h1>
+          <p style="color:#374151;font-size:16px;margin-bottom:24px;">Thanks${name ? `, ${name}` : ''} — your ${botName ? `<strong>${botName}</strong> ` : ''}chatbot is now on the Pro plan.</p>
+          <div style="background:#EFF6FF;border:1px solid #93C5FD;border-radius:12px;padding:20px;margin-bottom:24px;">
+            <ul style="color:#374151;font-size:15px;padding-left:18px;line-height:1.8;margin:0;">
+              <li>Your embed stays live on any site</li>
+              <li><strong>Captured leads are emailed to you instantly</strong></li>
+              <li>The "Powered by MidasTools" badge is removed (white-label)</li>
+              <li>Build &amp; run unlimited bots — resell to local businesses</li>
+            </ul>
+          </div>
+          <p style="color:#6B7280;font-size:14px;">Need the embed code again or want to tweak the bot? Reply to this email anytime. $39/mo, cancel whenever.</p>
+        </div>`,
+      });
+    } catch (err) { console.error('[chatbot-pro] confirmation email failed:', err.message); }
+
+    try {
+      await transporter.sendMail({
+        from: process.env.GMAIL_ADDRESS,
+        to: process.env.GMAIL_ADDRESS,
+        subject: `🔁 RECURRING SALE: Chatbot Builder Pro — ${email}`,
+        html: `<h2>New $39/mo subscriber</h2><p><strong>Email:</strong> ${email}</p><p><strong>Bot:</strong> ${botId} ${botName ? `(${botName})` : ''}</p><p><strong>Subscription:</strong> ${session.subscription || 'n/a'}</p>`,
+      });
+    } catch (err) { console.error('[chatbot-pro] founder notify failed:', err.message); }
+  }
+}
+
 export const config = { api: { bodyParser: false } };
 
 export default async function handler(req, res) {
@@ -536,10 +598,35 @@ export default async function handler(req, res) {
     return res.status(400).send(`Webhook Error: ${err.message}`);
   }
 
+  // Subscription cancelled → downgrade the mapped chatbot back to free.
+  if (event.type === 'customer.subscription.deleted') {
+    const sub = event.data.object;
+    try {
+      const map = await readKV(`chatbot-sub:${sub.id}`);
+      if (map && map.botId) {
+        const bot = await readKV(`chatbot:${map.botId}`);
+        if (bot) {
+          bot.plan = 'free';
+          bot.updated = new Date().toISOString();
+          await writeKV(`chatbot:${map.botId}`, bot);
+          console.log(`[chatbot-pro] downgraded bot ${map.botId} (sub ${sub.id} cancelled)`);
+        }
+      }
+    } catch (err) { console.error('[chatbot-pro] downgrade error:', err.message); }
+    return res.status(200).json({ received: true });
+  }
+
   if (event.type === 'checkout.session.completed') {
     const session = event.data.object;
     const email = session.customer_details?.email;
     const name = session.customer_details?.name;
+
+    // Chatbot Builder Pro $39/mo — handle separately (not a kit download).
+    if (session.metadata?.kit_type === 'chatbot-pro' || session.payment_link === 'plink_1TeLMeAdkDx8xZMk6MyHUoAx') {
+      await handleChatbotProActivation(session, email, name);
+      return res.status(200).json({ received: true });
+    }
+
     const kit = detectKit(session);
 
     // Decode client-side attribution that the front-end packed into client_reference_id

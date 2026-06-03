@@ -6,7 +6,32 @@
 // Cost control: per-bot daily message cap so an embedded free bot can never bleed
 // money. Pro bots (active subscription) get a much higher cap.
 
+import nodemailer from 'nodemailer';
 import { readKV, writeKV } from '../../../lib/kv-store';
+
+const mailer = nodemailer.createTransport({
+  service: 'gmail',
+  auth: { user: process.env.GMAIL_ADDRESS, pass: process.env.GMAIL_APP_PASSWORD },
+});
+
+// Email a captured lead to the business owner (Pro bots only — it's the paid value prop).
+async function emailLeadToOwner(bot, lead) {
+  if (bot.plan !== 'pro' || !bot.owner_email || !process.env.GMAIL_ADDRESS) return;
+  try {
+    await mailer.sendMail({
+      from: `"${bot.name} (via MidasTools)" <${process.env.GMAIL_ADDRESS}>`,
+      to: bot.owner_email,
+      subject: `🔔 New lead from your ${bot.name} chatbot`,
+      html: `<div style="font-family:Inter,sans-serif;max-width:520px;margin:0 auto;padding:32px;border:1px solid #E5E7EB;border-radius:14px;">
+        <h2 style="color:#2563EB;margin:0 0 16px;">New lead captured 🎉</h2>
+        <p style="font-size:15px;color:#374151;margin:0 0 6px;"><strong>Name:</strong> ${lead.name || '—'}</p>
+        <p style="font-size:15px;color:#374151;margin:0 0 6px;"><strong>Contact:</strong> ${lead.contact || '—'}</p>
+        <p style="font-size:15px;color:#374151;margin:0 0 16px;"><strong>They want:</strong> ${lead.note || '—'}</p>
+        <p style="font-size:13px;color:#9CA3AF;margin:0;">Captured by your AI chatbot on ${new Date().toLocaleString()}. Follow up fast — speed wins the job.</p>
+      </div>`,
+    });
+  } catch (err) { console.error('[chatbot/respond] lead email failed:', err.message); }
+}
 
 const MODEL = 'claude-haiku-4-5-20251001';
 const FREE_DAILY_MSG_CAP = 40;   // per bot per day on free
@@ -116,6 +141,9 @@ export default async function handler(req, res) {
         ].slice(-200);
         await writeKV(leadsKey, store);
       } catch (e) { console.error('[chatbot/respond] lead store failed:', e.message); }
+      await emailLeadToOwner(bot, {
+        name: clamp(lead.name, 120), contact: clamp(lead.contact, 160), note: clamp(lead.note, 400),
+      });
     }
 
     return res.status(200).json({ reply: clean || "Thanks! How else can I help?", lead_captured: Boolean(lead) });

@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { trackEvent } from '../lib/track';
 
 // Recurring subscription — "put your bot live + capture leads" — $39/mo.
-const PRO_SUB_URL = 'https://buy.stripe.com/7sYcN42BVaz70mg0pscMM0A'; // TODO: replace with $39/mo subscription link
+const PRO_SUB_URL = 'https://buy.stripe.com/bJe28q3FZgXv5GAegicMM0C'; // $39/mo (plink_1TeLMeAdkDx8xZMk6MyHUoAx)
 const EXAMPLE = {
   name: 'Brightside Dental',
   url: 'https://www.adps.com',
@@ -73,6 +73,11 @@ export default function ChatbotBuilder() {
   const [error, setError] = useState('');
   const [bot, setBot] = useState(null);
   const [copied, setCopied] = useState(false);
+  const [upgraded, setUpgraded] = useState(false);
+
+  useEffect(() => {
+    try { if (new URLSearchParams(window.location.search).get('upgraded') === '1') setUpgraded(true); } catch {}
+  }, []);
 
   function setFaq(i, k, v) { setFaqs(f => f.map((x, j) => j === i ? { ...x, [k]: v } : x)); }
   function addFaq() { setFaqs(f => f.length < 5 ? [...f, { q: '', a: '' }] : f); }
@@ -125,6 +130,13 @@ export default function ChatbotBuilder() {
       </Head>
 
       <div style={{ maxWidth: 920, margin: '0 auto', padding: '40px 20px 60px' }}>
+        {upgraded && (
+          <div style={{ background: '#ECFDF5', border: '1px solid #6EE7B7', borderRadius: 14, padding: '14px 18px', marginBottom: 24 }}>
+            <strong style={{ color: '#065F46' }}>🎉 You're live & Pro!</strong>
+            <span style={{ color: '#047857', fontSize: 14 }}> Your bot is white-labeled and captured leads now land in your inbox. Build more bots below — each new client is more recurring income.</span>
+          </div>
+        )}
+
         {/* Hero */}
         <span style={{ display: 'inline-block', background: '#EFF6FF', color: '#2563EB', fontWeight: 700, fontSize: 13, padding: '5px 12px', borderRadius: 100, marginBottom: 16 }}>💰 Money Tool</span>
         <h1 style={{ fontSize: 'clamp(28px,4vw,42px)', fontWeight: 900, lineHeight: 1.12, margin: '0 0 16px', color: '#111827' }}>
@@ -204,7 +216,7 @@ export default function ChatbotBuilder() {
                     <li>Remove the “Powered by MidasTools” badge (white-label & resell)</li>
                     <li>Build unlimited bots — resell to local businesses for $300+/mo each</li>
                   </ul>
-                  <a href={PRO_SUB_URL} style={{ display: 'inline-block', background: '#2563EB', color: '#fff', padding: '12px 26px', borderRadius: 100, textDecoration: 'none', fontWeight: 800, fontSize: 15 }}>
+                  <a href={`${PRO_SUB_URL}?client_reference_id=${encodeURIComponent(bot.id)}${email ? `&prefilled_email=${encodeURIComponent(email)}` : ''}`} style={{ display: 'inline-block', background: '#2563EB', color: '#fff', padding: '12px 26px', borderRadius: 100, textDecoration: 'none', fontWeight: 800, fontSize: 15 }}>
                     Put my bot live — $39/mo →
                   </a>
                 </div>
