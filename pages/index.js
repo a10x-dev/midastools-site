@@ -558,7 +558,7 @@ export default function Home() {
       </section>
 
       {/* Email Capture */}
-      <section style={{ paddingTop: 0 }}>
+      <section id="subscribe" style={{ paddingTop: 0 }}>
         <div className="email-box">
           <h3>Get free templates + weekly AI insights</h3>
           <p>Join entrepreneurs getting weekly workflows, prompts, and revenue strategies. No spam — unsubscribe anytime.</p>
