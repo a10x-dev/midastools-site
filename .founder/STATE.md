@@ -11,6 +11,50 @@
 
 <!-- AGENT-EDITED-BELOW (everything below this line is preserved across ticks) -->
 
+## Session 33 — 🟢 FLYWHEEL TOOL #1 (CHATBOT BUILDER) GIVEN ITS FIRST DISCOVERY: BULLSEYE BLOG BRIDGE + SITEMAP + MONDAY MEMO DRAFTED (Jun 3, ~14:5x local / 20:5x UTC, commit 25bcb8d pushed + prod-verified)
+
+### Trigger
+First autonomous session after today's pair session, which set the **Monday flywheel** as PRIMARY (research money-method → build ONE recurring tool → newsletter sells it) and shipped money-tool #4 the **Chatbot Builder** ($39/mo, loop closed). Grounded in the two new strategy memory files, then pulled track-events to check the new tool's reality.
+
+### 🚨 THE DATA — Chatbot Builder is INVISIBLE (the exact S32 trap)
+600-event feed (current): **549 page_view / 50 subscribe_submit / 1 buyer_radar_search.** Of the 600, **exactly 1 touches /chatbot-builder** (a 20:17 UTC page_view = pair-session QA) and **ZERO `chatbot_build` events.** Meanwhile signups are real and surging — **50 subscribe_submit in the feed ≈ ~15/day** (matches the pair-session finding). Top pages = viral-art/video/ghibli/midjourney + homepage. The tool shipped hours ago with zero discovery — same invisibility trap as Outreach/Listing Machines.
+
+### ✅ SHIPPED (commit 25bcb8d, pushed, build clean, prod-verified)
+Per `point-ranked-content-at-new-tool` — convert ALREADY-ranked ICP traffic, no indexing wait:
+1. **Bullseye blog bridge** in `/blog/how-to-make-money-with-ai-2026` **Method 4 (Build AI Automation Workflows)** — the post already lists "AI customer support chatbots that handle 80% of questions" as the most-requested automation ($1,500 setup + $300/mo retainer, real Reddit example). Added a self-qualifying Chatbot Builder CTA box right there (`utm_campaign=make-money-chatbots`). The reader is *exactly* the buyer. Verified live on prod (CTA renders).
+2. **Sitemap** — added `/chatbot-builder` at priority 0.9 (was missing). IndexNow submitted (200).
+3. Confirmed `/tools` already LEADS with the Chatbot Builder (good positioning, no change needed).
+
+### ✅ DRAFTED (ready-to-send, NOT sent) — the flywheel's "sell" step
+`.founder/content/midas-memo-2026-06-08-chatbot-builder.md` — the Monday Memo selling the Chatbot Builder to the ~45+ warm list (3 subject A/B options, full body with real money-method numbers, lead CTA `utm_campaign=chatbot_launch`, North-Star watch list). This is the explicit "Next" from the flywheel strategy.
+
+### 🚦 ONE GATING ITEM before the Monday send (flagged, not blocking today)
+The $39/mo Pro loop is **closed in code but never tested with a real charge** (per tool memory). Before the Memo drives the warm list at the paywall, smoke-test one real `chatbot-pro` checkout → confirm `handleChatbotProActivation` flips `chatbot:<id>.plan='pro'`. Don't fire a paying customer at an unverified unlock. (Did NOT fire a real charge myself — Armando's Stripe, real money.)
+
+### What I deliberately did NOT do
+- Did NOT send a broadcast today. Flywheel cadence is Monday; the warm-list intro is a one-shot — send it on-cadence + polished + after the charge-test, not as a rushed Wednesday fire.
+- Did NOT spray the chatbot CTA across art-generator pages. ICP discipline — the chatbot buyer is the make-money/side-hustle segment, not the pure-art segment. Started with the single strongest bullseye (make-money post). Expansion candidates if first builds appear: `ai-side-hustles-2026`, `chatgpt-side-hustle-2026`, `ai-freelancer-automation-2026`, and a secondary make-money line in day-1 nurture.
+- Did NOT switch day-1 nurture off the Listing Machine (it correctly serves the majority art/e-commerce audience).
+- Did NOT Telegram — minutes after a live pair session, a non-urgent FYI ping is noise per empirically-validated `armando-async-asks`. Gating item lives in STATE + the Memo draft header.
+
+### Confidence
+88% — build clean, push verified (fa1c2d4..25bcb8d), CTA + IndexNow verified live on prod, track-events parsed directly. Lower than 92% because (a) the make-money post isn't in the current top-15 pages, so the bridge's near-term volume is modest (expected 1-3 clicks/wk) — the Monday Memo is the bigger lever, (b) audience-fit of the chatbot buyer vs our art-heavy traffic is real but unproven; first `chatbot_build` events will tell.
+
+### NEXT_CHECKIN expectation
+Re-pull track-events for first `chatbot_build` event + any `make-money-chatbots` attributed clicks. Before next Monday: smoke-test the real $39 charge, then send the Memo. If builds appear from the blog bridge → discovery was the gap, expand to side-hustle posts. If clicks but 0 builds → first-gen friction on /chatbot-builder is the lever (add a prefill example like the other tools).
+
+### S33 continuation — 🟢 PRO REVENUE LOOP AUDITED CODE-SOUND END-TO-END (no charge needed) + activation prefill already exists
+Hunted for the silent-payment bug that would burn the first Monday sale. Verified the full chain is consistent:
+- **Builder CTA** (`chatbot-builder.js:219`) sets `?client_reference_id=<botId>` (botId = `cb_`+12hex).
+- **Global attribution rewriter** (`stripe-attribution.js:155`) **skips links that already have `client_reference_id`** → botId is NOT clobbered. (This was the feared bug — the site-wide `att|…` auto-rewrite from S159 — and it's correctly guarded.)
+- **Webhook match** (`stripe-webhook.js:625`): `metadata.kit_type==='chatbot-pro' || payment_link==='plink_1TeLMe…'` — the payment_link fallback is the reliable matcher (plink id matches memory).
+- **Activation** (`:520-535`): validates `/^cb_[a-f0-9]{12}$/`, writes `chatbot:<id>.plan='pro'` + maps `chatbot-sub:<subId>`→botId.
+- **config.js:20** + **respond.js:19,99** read the SAME `chatbot:<id>` key and gate on `.plan==='pro'` (badge removal + lead-emails + higher cap). Keys + field consistent across all 5 surfaces.
+- **Founder "🔁 RECURRING SALE" notify fires on every chatbot-pro checkout** regardless of bot-lookup → even the rare bot-not-found edge is monitored, not silent.
+**Verdict: loop is code-sound.** Gating item downgrades from "untested/risky" → "code-verified; a live charge is optional 100%-confidence confirmation, not a blocker." Did NOT touch the live webhook (regression risk > reward before Monday).
+**Also confirmed:** `/chatbot-builder` ALREADY has a "Try an example →" prefill (`chatbot-builder.js:156` `loadExample`) — first-gen friction-reducer already in place; no need to build one (corrects the NEXT_CHECKIN note just above).
+**Net:** all three layers verified/wired this session — discovery (blog bridge + sitemap + IndexNow), activation (prefill exists), revenue-integrity (loop audited). The Monday Memo send is de-risked; only remaining pre-send step is Armando's optional real-charge smoke-test.
+
 ## Session 32 — 🚨 DATA: TOOLS ARE INVISIBLE, NOT MISMATCHED → POINTED #1-TRAFFIC ART SURFACES AT THE LISTING MACHINE (Jun 2, ~03:2x UTC, commit 4e79068 pushed + prod-verified live)
 
 ### Trigger
