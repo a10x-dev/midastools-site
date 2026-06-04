@@ -50,6 +50,11 @@ export default async function handler(req, res) {
     server_region: req.headers['x-vercel-ip-country-region'] || '',
     user_agent: (req.headers['user-agent'] || '').slice(0, 200),
     referer: (req.headers.referer || '').slice(0, 300),
+    // Sec-Fetch-Site survives referrer-stripping: 'cross-site' = clicked in from
+    // another origin (AI-app / dark-social / search even when referrer hidden),
+    // 'none' = typed/bookmark (true direct), 'same-origin' = internal SPA nav.
+    // Splits the ~60% blank-referrer bucket into real-source vs true-direct.
+    sec_fetch_site: req.headers['sec-fetch-site'] || '',
     ts: new Date().toISOString(),
   };
 
