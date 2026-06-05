@@ -305,6 +305,19 @@ export default function AISideHustles2026() {
           </div>
         ))}
 
+        {/* Chatbot Builder — turn "AI Automation Consulting" into a build-it-now path */}
+        <div style={{ marginTop: '24px', padding: '22px 24px', background: '#EEF2FF', border: '1px solid #C7D2FE', borderRadius: '10px' }}>
+          <p style={{ margin: '0 0 12px', fontSize: '15px', color: '#1E3A8A', fontWeight: 700 }}>
+            Free tool: The Chatbot Builder
+          </p>
+          <p style={{ margin: '0 0 16px', fontSize: '15px', color: '#1E40AF', lineHeight: 1.5 }}>
+            The fastest automation to sell in &ldquo;AI Automation Consulting&rdquo; above is a customer-support chatbot. Paste a business&rsquo;s website and get a working bot trained on their real info &mdash; answering questions and capturing leads 24/7, live with one line of code. Build it free, then charge the setup + monthly maintenance. You keep the recurring revenue.
+          </p>
+          <Link href="/chatbot-builder?utm_source=blog&utm_medium=cta&utm_campaign=make-money-chatbots&utm_content=side-hustles-consulting" style={{ display: 'inline-block', background: '#3B5FFF', color: '#fff', padding: '13px 30px', borderRadius: '100px', textDecoration: 'none', fontWeight: 700, fontSize: '15px' }}>
+            Build a sellable chatbot &rarr;
+          </Link>
+        </div>
+
         {/* CTA after hustle #8 — All Kits Bundle */}
         <div style={s.cta}>
           <div style={{ fontSize: 13, fontWeight: 700, color: '#3B5FFF', letterSpacing: 1, marginBottom: 8 }}>LAUNCH FASTER</div>

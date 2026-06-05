@@ -214,6 +214,19 @@ The chatbot should handle these 5 scenarios:
 For each scenario: opening message, 2-3 follow-up questions to qualify the visitor, and a resolution (answer, book a call, or escalate to a human). Tone: friendly, helpful, concise — never robotic. Every response under 50 words. Always offer a human handoff option. Include a lead capture step (name + email) before booking.`}
         </div>
 
+        {/* Chatbot Builder — the tool that does this hustle in one step */}
+        <div style={{ marginTop: '24px', padding: '22px 24px', background: '#EEF2FF', border: '1px solid #C7D2FE', borderRadius: '10px' }}>
+          <p style={{ margin: '0 0 12px', fontSize: '15px', color: '#1E3A8A', fontWeight: 700 }}>
+            Free tool: The Chatbot Builder
+          </p>
+          <p style={{ margin: '0 0 16px', fontSize: '15px', color: '#1E40AF', lineHeight: 1.5 }}>
+            Skip the drag-and-drop flow-building above. Paste a business&rsquo;s website URL and get a working chatbot trained on their real info &mdash; answering their top questions and capturing leads 24/7, live with one line of code. Build it free, then charge the $500 setup + $200&ndash;$500/mo maintenance this section describes. You keep the recurring revenue.
+          </p>
+          <Link href="/chatbot-builder?utm_source=blog&utm_medium=cta&utm_campaign=make-money-chatbots&utm_content=side-hustle-7" style={{ display: 'inline-block', background: '#3B5FFF', color: '#fff', padding: '13px 30px', borderRadius: '100px', textDecoration: 'none', fontWeight: 700, fontSize: '15px' }}>
+            Build a sellable chatbot &rarr;
+          </Link>
+        </div>
+
         <hr style={{ margin: '40px 0', border: 'none', borderTop: '1px solid #eee' }} />
 
         <h2 style={{ fontSize: '1.4rem', fontWeight: '700', marginTop: '40px' }}>The Pattern Behind All 7 Hustles</h2>

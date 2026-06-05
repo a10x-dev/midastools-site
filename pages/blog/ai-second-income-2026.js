@@ -194,6 +194,19 @@ Upcoming events or launches: [IF ANY]`}
           <li>Invoice and proposal generation from form submissions</li>
         </ul>
 
+        {/* Chatbot Builder — ship the #1 most-requested automation as recurring revenue */}
+        <div style={{ marginTop: '24px', padding: '22px 24px', background: '#EEF2FF', border: '1px solid #C7D2FE', borderRadius: '10px' }}>
+          <p style={{ margin: '0 0 12px', fontSize: '15px', color: '#1E3A8A', fontWeight: 700 }}>
+            Free tool: The Chatbot Builder
+          </p>
+          <p style={{ margin: '0 0 16px', fontSize: '15px', color: '#1E40AF', lineHeight: 1.5 }}>
+            That first automation on the list &mdash; AI customer support that handles 80% of questions &mdash; is the easiest one to sell and the fastest to build. Paste any business&rsquo;s website and get a working chatbot trained on their real info, capturing leads 24/7, live with one line of code. Build it free; local businesses pay $300+/mo for exactly this.
+          </p>
+          <Link href="/chatbot-builder?utm_source=blog&utm_medium=cta&utm_campaign=make-money-chatbots&utm_content=second-income-5" style={{ display: 'inline-block', background: '#3B5FFF', color: '#fff', padding: '13px 30px', borderRadius: '100px', textDecoration: 'none', fontWeight: 700, fontSize: '15px' }}>
+            Build a sellable chatbot &rarr;
+          </Link>
+        </div>
+
         {/* Method 6 */}
         <h2 style={{ fontSize: '1.4rem', fontWeight: '700', marginTop: '40px' }}>6. AI-Assisted E-commerce (Dropshipping or Print-on-Demand)</h2>
 
