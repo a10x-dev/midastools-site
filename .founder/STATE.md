@@ -2,7 +2,7 @@
 
 ## Current Status (auto-synced from database)
 
-**Bottleneck**: acquisition (severity 7/10) — DISTRIBUTION STARTED May 31 23:19 UTC — first outreach_launch email broadcast pointed at /outreach-machine (was "0 distribution"). Product + revenue loop verified live; instrumentation (outreach_generate) verified sound via shared plumbing with working page_views. Still 0 real generations (broadcast minutes old at session time) + 0 Pro sales. Lever now = (a) broadcast/DM volume from Armando, (b) agent-side first-generation friction reduction (shipped "Try an example" prefill this session). Kill criterion: 0 Pro sales after 200 real tool sessions/30d.
+**Bottleneck**: acquisition (severity 7/10) — Flywheel tool #1 (Chatbot Builder, $39/mo) shipped Jun 3 but INVISIBLE — track-events shows 1 page_view (QA) / 0 chatbot_build events while signups surge ~15/day. This session pointed already-ranked make-money traffic at it (blog bridge + sitemap + IndexNow, verified live) and drafted the Monday Memo (the flywheel's warm-distribution "sell" step). Levers now: (a) Monday Memo send to the ~45+ warm list, (b) first chatbot_build activation events, (c) first $39/mo Pro sub. GATING: real $39 charge never tested — smoke-test before driving the warm list at the paywall.
 
 **KPIs**:
 - Conversations: 0 (target: 3, 7d: 0%)
