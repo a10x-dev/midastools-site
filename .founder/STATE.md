@@ -11,6 +11,45 @@
 
 <!-- AGENT-EDITED-BELOW (everything below this line is preserved across ticks) -->
 
+## Session 35 — 🟢 FOUND + FIXED A SILENT MONDAY-SEND BUG: chatbot_launch broadcast template was MISSING (Jun 5, ~12:4x local / 18:4x UTC, commit d06cd5f pushed + prod preview fired)
+
+### Trigger
+Per S34 NEXT_CHECKIN: re-pull track-events for first `chatbot_build` + `make-money-chatbots` clicks. Did that FIRST.
+
+### 🚨 THE DATA — unchanged, diagnosis validated
+600-event feed (Jun 2 → Jun 5, 3-day window): **544 page_view / 54 subscribe_submit / 2 cta_click.** Of 600, **exactly 1 touches /chatbot-builder** (same QA page_view), **ZERO `chatbot_build`**, **ZERO `make-money-chatbots` attributed clicks.** Signups still strong: **52 of 54 = homepage** (~15/day engine intact). Top-12 pages are **100% art/content/image** (homepage 112, ghibli 21, content-creators 18, viral-art 16+7, midjourney 12, sora 8, felix-craft 7, chatgpt-image 7) + the submitaitools referral + an outreach-machine email click. **NONE of the 4 chatbot money-method bridges are in the top-12.** The 2 cta_clicks were both the Image Pack $29 on the chatgpt-citation viral-art post (recurring pattern).
+
+### 🔑 STRATEGIC READ (validates S34, sharpens it)
+Our organic traffic is **structurally art-dominated** — there is no high-traffic ICP-fit surface left to bridge to a chatbot-seller tool. Cold blog discovery for the Chatbot Builder is therefore inherently slow. Adding more bridges = either ICP-mismatch spray onto art pages (the trap I've avoided) or 5th-low-traffic-bridge saturation. **The Monday Memo to the warm ~45-list is the dominant near-term lever** (confirmed). Today's highest-EV agent-buildable work = de-risk that Monday send.
+
+### 🚨 REAL BUG FOUND + FIXED (commit d06cd5f, pushed, build clean)
+The Monday Memo draft says "Send via: `?broadcast=true&template=chatbot_launch`". **That template did NOT exist in `nurture.js`** — the send path is `broadcasts[templateName] || broadcasts.tools`, so Monday's one-command send would have **silently fallen through to `broadcasts.tools` and emailed the WRONG email (generic free-tools showcase) to the entire warm list** — wasting the flywheel's one-shot tool-#1 intro. Added the `chatbot_launch` `{subject, html}` broadcast entry (house-style, subject = Memo option A "The $300/mo AI side-business you can start this week (no code)", lead CTA → `/chatbot-builder?utm_campaign=chatbot_launch`). Build clean, pushed (d2fe243..d06cd5f).
+
+### ✅ PROD SMOKE-TEST (real send path, safe)
+nurture.js has a built-in PREVIEW mode: `?broadcast=true&template=chatbot_launch&to=<email>` sends ONE `[PREVIEW]`-labeled copy, skips the list blast + founder report. Fired one to iam@armando.mx against prod → HTTP 200, `preview:true, template:chatbot_launch`. This (a) exercises the real production Resend pipeline end-to-end before Monday's window (smoke-test-deliverability principle), (b) gives Armando the exact Monday copy to approve. **Confirm signal for Armando: the email subject should read "[PREVIEW] The $300/mo AI side-business…" — if it instead reads about "free tools," the Vercel deploy hadn't propagated when the preview fired (re-fire after deploy).**
+
+### Memo state now
+3 layers green: ✅ code-audited loop (S33-cont), ✅ Stripe plink verified live (S33), ✅ **send mechanism wired + preview-tested (this session)**. ⏳ One gate remains: real $39 self-purchase+refund to confirm live webhook delivery flips bot to `pro` — **Armando's call (real money on his live Stripe; I can't fire it)**. Fire the Memo right after that confirms.
+
+### What I deliberately did NOT do
+- Did NOT add a 5th blog bridge or spray art pages — ICP-mismatch / saturation (validated by top-12 being 100% art).
+- Did NOT fire the $39 charge — Armando's live Stripe, real money; loop already code-audited sound.
+- Did NOT send the real broadcast — human-gated, on-cadence Mon Jun 8, one-shot; preview-only today.
+- cat→bat alias bit the commit-message heredoc AGAIN — used Write tool for the message file (the only reliable fix).
+
+### Confidence
+88% — data parsed directly, build clean, push verified (d06cd5f), preview HTTP 200 through prod. Lower than 92% because (a) the preview response echoes `template:chatbot_launch` even if it fell through to tools, so the definitive deploy confirmation is the subject line Armando sees in his inbox, (b) cold-discovery for the chatbot tool remains structurally slow — the Monday Memo is the real test.
+
+### ✅ CONTINUATION — CHATBOT BUILDER CORE ACTION VERIFIED WORKING END-TO-END ON PROD
+Before Monday drives ~45 warm leads at `/chatbot-builder`, smoke-tested the actual build action on prod (mirrors a Memo reader: paste website + name + email + 1 FAQ). The loop was *code*-audited (S33-cont) but the live build had never been confirmed (only 1 QA page_view in 600 events) — driving the warm list at an unverified tool was the real risk.
+- **`POST /api/chatbot/build`** (real local-biz payload, scraped a live site): HTTP 200, 4.0s, `scraped:true`, `botId cb_6bb6faac3ed6` (correct `cb_`+12hex — matches webhook activation regex `/^cb_[a-f0-9]{12}$/`), greeting + knowledge_preview + embed `<script>` + `remaining` rate-limit counter all returned. Full happy path works.
+- **`POST /api/chatbot/respond`** (asked the bot a question): HTTP 200, 2.5s — bot answered **accurately from its knowledge** (walk-ins = emergency only, hours Mon–Fri 9–5), grounded, no hallucination, friendly + soft booking CTA. `lead_captured` field present (lead mechanism wired).
+- **Test artifact is clean**: my curl hit only `/api/chatbot/build` — it does NOT fire the client-side `chatbot_build` track event (page-side, line 106) nor `/api/subscribe` (page-side, line 108). So no false activation event, no fake subscriber — just one harmless orphan KV bot record.
+**Verdict:** Monday's Memo destination is confirmed live + high-quality. All agent-side Monday de-risking is now complete (send mechanism wired + preview-tested + tool verified working). The ONLY remaining gate is human: Armando's real $39 charge test (live webhook delivery) + Memo approval. Did NOT send a 2nd Telegram (already pinged this session; per armando-async-asks, the smoke-test result lives here for the Monday context rather than a same-day double-ping).
+
+### NEXT_CHECKIN expectation
+Mon Jun 8: after Armando's $39 charge smoke-test + Memo approval, send `?broadcast=true&template=chatbot_launch`. Then watch `chatbot_build` events + `utm_campaign=chatbot_launch` page_views + first `chatbot-pro` $39/mo sub (first flywheel MRR) + replies (next Monday's tool-pick signal).
+
 ## Session 34 — 🟢 WIDENED CHATBOT BUILDER DISCOVERY: 3 ICP-BULLSEYE BLOG BRIDGES (Jun 4, ~21:3x local / Jun 5 03:3x UTC, commit d2fe243 pushed + prod-verified live)
 
 ### Trigger
