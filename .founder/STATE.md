@@ -11,6 +11,46 @@
 
 <!-- AGENT-EDITED-BELOW (everything below this line is preserved across ticks) -->
 
+## Session 37 — 🟢🔥 MATERIAL FINDING: LIST IS 115 (NOT 45) + A PROVEN AUDIENCE-MATCHED NO-GATE REVENUE LEVER ALREADY EXISTS → MONDAY REFRAMED (Jun 5, ~15:5x local / 21:5x UTC, no commit)
+
+### Trigger
+Per S36 plan, re-pull data — but instead of a 5th identical track-events pull + honest close, I pulled the FULL funnel with fresh eyes (track-events + `/api/status` metrics + subscriber source + nurture broadcast inventory). Two material findings flipped the Monday plan.
+
+### 🚨 FINDING 1 — the list is 115, not 45 (dashboard undercounts 2.5x)
+`/api/status` metrics (live, gist-real, grade GOOD): **subscribers: 115**. The CEO dashboard shows Users 45 — stale. ~15/day engine confirmed in track-events (49 subscribe_submit / 600-event ~3-day window, 47 of 49 = homepage). The warm-list distribution asset is **2.5x bigger than memory/dashboard assumed and compounding.** KPI updated 45→115.
+
+### 🚨 FINDING 2 — a proven, audience-matched, NO-charge-gate revenue lever is already built
+- Top-15 pages = **100% art** (ghibli 20, content-creators 18, viral-art 16+7, midjourney 11, sora 8, etc.) → the 115 are art/prompt seekers, NOT business-tool buyers. Confirmed by 0 generations on the Listing Machine *even after* we pointed #1-traffic art pages at it (S32).
+- Our only revenue ever ($155 / 3 sales) = **one-time prompt-pack** Stripe-Link impulse buys.
+- `nurture.js` already contains a `flash` broadcast template: subject *"48h only: $29 Image Pack (pet, Ghibli, action figures)"*, H1 *"You've been using the free generators. Here's what's on the other side."*, → IMAGE_PACK_LINK `8x24gy...cMM0i` (verified **HTTP 200**, the exact checkout our real sales came through). Fired cleanly once before (S107, 23/23). One command: `?broadcast=true&template=flash`. Preview-able with `&to=`.
+
+### 🔑 THE REFRAME (vs the scheduled Monday chatbot Memo)
+The scheduled Monday move (task d4cf546c) sells a **$39/mo business tool** to an **art audience**, is **unproven** (0 chatbot_build), and is **gated** on the untested $39 charge. The `flash` $29 Image Pack is **audience-matched + proven + no-gate + already built**. Highest-probability, lowest-risk first-revenue test of the 115-list.
+
+### Recommendation (sequence, not abandon)
+1. **Mon Jun 8:** fire `flash` ($29 Image Pack) to the 115-list → first real revenue test.
+2. **After** Armando verifies the $39 charge: fire `chatbot_launch` Memo as a separate test ~1 wk later (one promo/week — don't burn the list).
+Full brief: `.founder/deliverables/monday-2026-06-08-revenue-decision.md`.
+
+### Default if silent by Monday
+Per founder mandate + 33 days flat: if no input by Monday, **I fire the `flash` $29 broadcast** (NOT the chatbot Memo — stays gated). One email, audience-matched, proven, reversible-enough.
+
+### What I deliberately did NOT do
+- Did NOT fire the broadcast Friday — 2 promos to 115 people in 3 days burns the asset; the chatbot Memo plan is 1 day old (fresh pair call); Monday is the right slot.
+- Did NOT pivot the flywheel or revert nurture — recommending a SEQUENCE.
+- Did NOT do a 5th rote track-events pull + honest close — the fresh full-funnel pull surfaced the 115 + the flash lever, both genuinely new.
+
+### Confidence
+88% — 115 verified gist-real (not fallback) + cross-checked; IMAGE_PACK_LINK HTTP 200; flash template + send mechanism read directly in nurture.js + previously fired. Lower than 92% because the flash→115 conversion is still unproven on THIS list (but it's the best-matched offer we have, and the cohort literally came for these exact generators).
+
+### NEXT_CHECKIN
+Mon Jun 8: Armando picks (or I default to) the flash $29 broadcast to 115. Watch Stripe for first list-attributed sale + flash-campaign clicks. Chatbot Memo runs after the $39 charge test, as a separate week's promo.
+
+### ✅ CONTINUATION — FLASH EMAIL VERIFIED HIGH-QUALITY END-TO-END (last unverified layer)
+Pressure-tested the BODY of the flash email (not just subject + send path) per the S35 lesson. Read `pages/api/nurture.js:476-520` directly. **It is polished + truthful, not a stub:** branded 48h-urgency header → opens by naming the exact free generators the 115 used (Pet Portrait, Ghibli, Action Figure) → lists what the pack covers in those same styles → states current tools (ChatGPT/Midjourney/DALL-E/Flux/SD, all current) → includes ONE real inline Ghibli prompt (validated visible-product-proof pattern) → strong CTA with 30-day guarantee → $97 bundle P.S. **"150+" claim is conservative-truthful** (actual Image Pack = 166 per S25 audit, understated → no trust-leak). Both links verified live: primary IMAGE_PACK_LINK HTTP 200 + P.S. BUNDLE_LINK HTTP 200. Attribution wired (`tagNurture(..., 'flash')` → a sale arrives source-tagged `flash`, measurable in the webhook). **The Monday flash send is now de-risked end-to-end: subject + body + primary link + P.S. link + attribution + send mechanism (fired 23/23 in S107) all confirmed.** No edit needed — the only remaining step is the send itself (Armando's pick or my Monday default).
+
+---
+
 ## Session 36 — 🟢 FRIDAY SIGNAL SWEEP: DATA UNCHANGED, DEPLOY HEALTHY, ALL AGENT-SIDE LEVERS DONE → HONEST CLOSE (Jun 5, ~14:5x local / 20:5x UTC, no commit)
 
 ### Trigger
