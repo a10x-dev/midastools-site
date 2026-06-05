@@ -391,6 +391,45 @@ const broadcasts = {
       <p style="font-size:14px;line-height:1.7;color:#6B7280;">If you do try it — hit reply and tell me what you'd change. I read every one.<br/>— The MidasTools Team</p>
     `),
   },
+  // Midas Memo — Mon Jun 8 2026. Flywheel tool #1 launch (Chatbot Builder, $39/mo).
+  // Send: ?broadcast=true&template=chatbot_launch
+  chatbot_launch: {
+    subject: "The $300/mo AI side-business you can start this week (no code)",
+    html: (source) => wrapEmail(`
+      <p style="font-size:13px;font-weight:700;color:#3B5FFF;letter-spacing:0.5px;text-transform:uppercase;margin:0 0 4px;">The Midas Memo</p>
+      <p style="font-size:16px;line-height:1.7;color:#374151;margin:0 0 16px;">Hey — every Monday I dig into how people are <em>actually</em> making money with AI right now, then build you a tool to do one of those methods. Here's this week's.</p>
+
+      <h1 style="font-size:24px;line-height:1.3;color:#111827;margin:0 0 16px;">Sell AI chatbots to local businesses</h1>
+
+      <p style="font-size:16px;line-height:1.7;color:#374151;margin:0 0 16px;">Every dentist, law firm, gym, and contractor in your town has the same problem — customers ask the same 20 questions (hours, pricing, booking, services) and someone has to answer them, or the lead leaves. A chatbot trained on the business's own website answers those 24/7 and captures the lead's name + contact.</p>
+
+      <div style="background:#F9FAFB;border:1px solid #E5E7EB;border-radius:12px;padding:18px 22px;margin:20px 0;">
+        <p style="font-size:14px;line-height:1.8;color:#374151;margin:0;">The numbers are real:<br/>
+        • White-label chatbot platforms charge resellers <strong>$70–399/mo</strong>.<br/>
+        • Those resellers charge each local business <strong>$300–2,000/mo</strong>.<br/>
+        • One person on Reddit runs 8 of these on retainer — <strong>$2,400/mo recurring</strong> plus setup fees.</p>
+      </div>
+
+      <p style="font-size:16px;line-height:1.7;color:#374151;margin:0 0 16px;">The catch has always been: building the bot took technical work. Not anymore.</p>
+
+      <p style="font-size:16px;line-height:1.7;color:#111827;margin:0 0 8px;"><strong>The tool: the Chatbot Builder.</strong> Here's the whole workflow:</p>
+      <div style="background:#F9FAFB;border-radius:8px;padding:18px 22px;margin:0 0 20px;">
+        <p style="font-size:15px;line-height:1.9;color:#374151;margin:0;">
+          <strong>1.</strong> Paste a business's website. It reads their real info — hours, services, pricing, FAQs.<br/>
+          <strong>2.</strong> Get a working chatbot in ~30 seconds. Test it right on the page — it only answers from the real info, so no made-up prices.<br/>
+          <strong>3.</strong> Put it live with one line of code — a <code>&lt;script&gt;</code> tag that drops onto any site.<br/>
+          <strong>4.</strong> It captures leads — every visitor who leaves a name + contact gets emailed straight to you (or your client).</p>
+      </div>
+
+      <p style="font-size:16px;line-height:1.7;color:#374151;margin:0 0 16px;">Build and preview as many as you want for free. When you're ready to put one live for a client and keep the recurring revenue, <strong>Pro is $39/mo</strong> — it removes our badge (fully white-label, looks like <em>your</em> product), emails you every captured lead, and unlocks unlimited live bots.</p>
+
+      <p style="font-size:16px;line-height:1.7;color:#111827;margin:0 0 20px;">So the math is simple: <strong>$39/mo in, one local client at $300/mo out.</strong> Every client after that is margin.</p>
+
+      ${ctaButton("Build your first chatbot — Free", 'https://www.midastools.co/chatbot-builder?utm_source=email&utm_medium=broadcast&utm_campaign=chatbot_launch', "No sign-up to start. Paste a website (try a local restaurant or dentist) and watch it work.")}
+
+      <p style="font-size:14px;line-height:1.7;color:#6B7280;margin:24px 0 0;">Reply and tell me what business you'd sell it to first — I read every reply, and it tells me what to build next Monday.<br/>— Armando, MidasTools</p>
+    `),
+  },
   flash_lastcall: {
     subject: "⏰ 24h left — then the $29 Image Pack goes back to $49",
     html: (source) => wrapEmail(`

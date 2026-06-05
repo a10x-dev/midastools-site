@@ -3,6 +3,7 @@
 **Status:** DRAFT, ready to send. De-risked Jun 4:
 - ✅ Code path audited end-to-end (botId preserved in `client_reference_id`, not clobbered by the attribution rewriter; webhook matches on `metadata.kit_type==='chatbot-pro'` AND the plink id; activation writes `chatbot:<id>.plan='pro'`; all 5 read surfaces consistent).
 - ✅ Stripe plink config verified live (Jun 4): `plink_1TeLMe…` active, recurring **$39/mo**, `metadata.kit_type=chatbot-pro`, redirects to `/chatbot-builder?upgraded=1`.
+- ✅ Send mechanism wired (Jun 5): `chatbot_launch` broadcast template now exists in `nurture.js` (build-clean, pushed). `?broadcast=true&template=chatbot_launch` is a true one-command send — previously this template was MISSING and would have silently fallen through to `broadcasts.tools` (wrong email). Subject = option A.
 - ⏳ **Remaining gate (Armando's call):** one real $39 self-purchase + immediate refund to confirm Stripe actually delivers the webhook → bot flips to `pro` in production. Everything except live webhook *delivery* is verified. Fire the memo right after that confirms.
 
 **Audience:** full active subscriber list (~45+, growing ~15/day). This is the flywheel's warm channel.
