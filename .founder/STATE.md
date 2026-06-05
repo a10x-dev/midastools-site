@@ -11,6 +11,41 @@
 
 <!-- AGENT-EDITED-BELOW (everything below this line is preserved across ticks) -->
 
+## Session 34 — 🟢 WIDENED CHATBOT BUILDER DISCOVERY: 3 ICP-BULLSEYE BLOG BRIDGES (Jun 4, ~21:3x local / Jun 5 03:3x UTC, commit d2fe243 pushed + prod-verified live)
+
+### Trigger
+First autonomous session after S33 (which gave the Chatbot Builder its first bridge on the make-money post) + the S25 self-review. Per S33 NEXT_CHECKIN: re-pull track-events for first `chatbot_build` event + `make-money-chatbots` clicks. Did that FIRST.
+
+### 🚨 THE DATA — still invisible (S33 bridge too low-traffic for signal)
+600-event feed: **528 page_view / 70 subscribe_submit / 1 buyer_radar_search / 1 cta_click.** Of 600, **exactly 1 touches /chatbot-builder** (the same QA page_view) and **ZERO `chatbot_build`** and **ZERO `make-money-chatbots` attributed clicks.** Signups still surging (**70 subscribe_submit ≈ ~15/day**). The S33 make-money-post bridge is NOT in the top-12 pages (top = homepage 134, ghibli 21, viral-art 18, midjourney 11, sora 11) → its discovery volume is too thin to ever produce signal. Diagnosis unchanged; the lever is **more ICP-fit discovery surface area**, per my own `point-ranked-content-at-new-tool` playbook (one low-traffic bullseye = waiting forever for data).
+
+### ✅ SHIPPED (commit d2fe243, pushed, build clean, prod-verified live)
+3 contextual Chatbot Builder CTAs on already-ranked **money-method** posts where the reader is *literally* reading about selling chatbots/automations — bullseyes, not art-page spray:
+1. **`/blog/chatgpt-side-hustle-2026`** — inserted right inside the existing **"7. AI Chatbot Setup for Small Businesses"** section (the post even teaches manual Tidio+ChatGPT flow-building for $2-6k/mo recurring). Bridge: skip the manual flow-building, paste a URL, get a working bot. `utm_content=side-hustle-7`. THE perfect placement.
+2. **`/blog/ai-second-income-2026`** — after the "Build and Sell AI Automations" section's "most-requested automations" list (top bullet = "AI-powered customer support, 80% of questions"). `utm_content=second-income-5`.
+3. **`/blog/ai-side-hustles-2026`** — after the slice containing hustle #5 "AI Automation Consulting". `utm_content=side-hustles-consulting`.
+All share `utm_campaign=make-money-chatbots` (aggregates with S33's bridge) + distinct `utm_content` (per-surface attribution). Verified live: HTTP 200 + 1 chatbot-CTA ref each. IndexNow submitted (200 OK, 139 URLs).
+
+### What I deliberately did NOT do
+- Did NOT add a 4th bridge to `ai-freelancer-automation-2026` — that post is about a freelancer automating their OWN work, not selling a chatbot service. Weaker fit; ICP discipline.
+- Did NOT spray onto art-generator/viral pages — same ICP discipline as S33.
+- Did NOT send the Monday Memo (d4cf546c) — human-gated, sender=Armando, on-cadence Mon Jun 8, one-shot. Thursday-night fire would be off-cadence + premature (charge smoke-test still pending).
+- Did NOT fire a real $39 charge — Armando's live Stripe, real money. Loop already audited code-sound end-to-end (S33-cont). Optional confirmation, not a blocker.
+- Did NOT Telegram — non-decide-now FYI; per empirically-validated `armando-async-asks`, bundle into the Monday Memo moment.
+
+### Confidence
+88% — build clean, push verified (981de2c..d2fe243), 3 CTAs verified live on prod via curl, IndexNow 200, track-events parsed directly. Lower than 92% because (a) all 3 target posts are ALSO not in the current top-12 — combined they add surface area but each is still modest traffic, so the Monday Memo to the ~45+ warm list remains the bigger near-term lever, (b) chatbot-buyer fit on the make-money/side-hustle audience is real but still unproven — first `chatbot_build` event will tell.
+
+### NEXT_CHECKIN expectation
+Re-pull track-events for first `chatbot_build` + any `make-money-chatbots` attributed clicks (now across 4 surfaces; utm_content tells which surface converts). Before/at Monday: smoke-test the real $39 charge (Armando), then send the Monday Memo — that's the bigger warm-distribution lever. If builds appear from blog bridges → discovery was the gap, the per-surface utm_content tells which money-method post to lean into. If clicks but 0 builds → first-gen friction on /chatbot-builder.
+
+### Continuation — ✅ ACTIVATION INSTRUMENTATION VERIFIED SOUND (protects the discovery investment)
+Before driving 4 surfaces of traffic at the tool, verified its core-action metric actually fires (the S28 "kill-criterion was unmeasurable" trap). `pages/chatbot-builder.js`:
+- **Line 104**: returns early on `data.error` → `chatbot_build` does NOT fire on failure.
+- **Line 105-106**: `setBot(data)` then `trackEvent('chatbot_build', { scraped })` — fires ONLY on the success path, via the same `lib/track` plumbing as the 528 working page_views (same verification logic as S29's outreach_generate).
+- **Line 108 (bonus)**: also POSTs `/api/subscribe` with `source: 'chatbot-builder'` → a real build leaves a SECOND independent signal in the subscriber gist. So activation is double-measurable: `chatbot_build` track event AND a `source=chatbot-builder` sub (the latter monitorable via the partner-signal-monitor pattern, independent of track-events).
+**Verdict**: activation metric is measurable; the routed traffic will produce visible signal when builds happen. Did NOT touch the live builder code (regression risk > reward; instrumentation already correct). Did NOT E2E with a browser (shared-plumbing logic + code-read is sufficient, same standard as S29).
+
 ## Session 33 — 🟢 FLYWHEEL TOOL #1 (CHATBOT BUILDER) GIVEN ITS FIRST DISCOVERY: BULLSEYE BLOG BRIDGE + SITEMAP + MONDAY MEMO DRAFTED (Jun 3, ~14:5x local / 20:5x UTC, commit 25bcb8d pushed + prod-verified)
 
 ### Trigger
