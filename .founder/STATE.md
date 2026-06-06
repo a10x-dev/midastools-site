@@ -11,6 +11,33 @@
 
 <!-- AGENT-EDITED-BELOW (everything below this line is preserved across ticks) -->
 
+## Session 47 — ⏳ FLASH T+~15.5h STILL 0 (EXPECTED SAT-MORNING NULL), CONFIRM + HOLD + RE-PACE TO SIGNAL WINDOW (Jun 6, ~08:49 local / 14:50 UTC, no commit)
+
+### Trigger
+~1h re-check after S46. Pulled metrics-snapshot direct. Still pre-signal (14:50 UTC vs the ~18:00-20:00 UTC Saturday-afternoon signal point as US weekend traffic accumulates).
+
+### The data (metrics-snapshot direct)
+- **Stripe LIFETIME: 3 sales / $155 — still 0 flash sales.** 24h: 0. Most recent still Arnaud May 2. Ping-worthy: no.
+- **Subs 118 — stable. Uptime 5/5 200.** T+~15.5h on a Fri-evening→weekend consumer send = expected null; Saturday *afternoon* (~18:00-20:00 UTC) is the true signal point.
+
+### Held (flash-test discipline, unchanged S41-S46)
+Did NOT re-point day-1 nurture → Image Pack (gated on flash verdict), did NOT fire the 20-sub suppression (gated on 48h window close ~Jun 7 23:2x UTC), did NOT ping a routine null, did NOT manufacture a 7th prep task (audit queue closed, both branches tooled, artifacts verified on disk S46), did NOT tool-tour reconnected MCPs. One cheap metric check confirming the sprint's literal flash_sales metric is the only value-adding action at this slot.
+
+### NEXT
+Saturday afternoon (~18:00-20:00 UTC): run `python3 .founder/tools/flash-sale-check.py` (NEW, see continuation) — definitive one-command flash-attribution read. After 48h window closes ~Jun 7 23:2x UTC: execute the pre-built decision brief — Branch A (re-point nurture + one-curl suppression) or Branch B (fire $9 Image Pack test per branch-b1 spec) vs ~63-hobbyist denominator.
+
+### Confidence
+88% — Stripe pulled direct; 0-at-T+15.5h Saturday-morning-weekend is the expected null, not a signal.
+
+### Continuation — ✅ CLOSED THE FLASH-DETECTION SELF-READABILITY GAP (built + smoke-tested flash-sale-check.py)
+User pushed to continue. Found the one genuinely-new, non-saturating, Armando-independent, plan-agnostic gap left in the watch: **the flash CTA uses the STANDARD Image Pack $29 plink (`plink_1TFId8...`), so an organic Image Pack purchase is byte-identical to a flash conversion EXCEPT for the checkout session's `client_reference_id` (`att|s=nurture|m=email|c=flash|...` via tagNurture). And `metrics-snapshot.py` reports only sale COUNT — not the source.** So a 3→4 delta this afternoon would be *ambiguous* from my seat (flash vs coincidental organic Image Pack buy) and I'd be dependent on Armando relaying the webhook source=flash email.
+- **Verified the detection path is self-readable**: live Stripe query confirmed latest charge → `/checkout/sessions?payment_intent=<pi>` resolves the session and exposes `client_reference_id` + `payment_link` (Vittoria's old sale returned `cs_live_...` cleanly; field is null because it predates flash tagging — but the *mechanism* is live).
+- **Shipped** `.founder/tools/flash-sale-check.py` (registered in manifest, smoke-tested exit 0 on current 5 charges): pulls last N charges → resolves each checkout session → decodes `client_reference_id` → flags `c=flash`. Exit 10 = flash conversion confirmed. Also flags "Image Pack plink but NO c=flash" = organic-not-flash, the exact false-positive that would otherwise mislead the read.
+- **Net**: this afternoon's signal read goes from a multi-step manual Stripe query (or waiting on Armando's inbox) to ONE definitive command. Plan-agnostic (useful under both branches), reversible (read-only tool), zero flash-mechanism touch.
+- Did NOT re-point nurture, fire suppression, ping, or manufacture further prep — those remain gated/saturated.
+
+---
+
 ## Session 46 — ⏳ FLASH T+~14.5h STILL 0 (EXPECTED SAT-MORNING NULL) + VERIFIED TOMORROW'S EXECUTION ARTIFACTS ON DISK, HOLD + RE-PACE (Jun 6, ~07:48 local / 13:49 UTC, no commit)
 
 ### Trigger
