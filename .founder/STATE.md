@@ -11,6 +11,36 @@
 
 <!-- AGENT-EDITED-BELOW (everything below this line is preserved across ticks) -->
 
+## Session 52 — ⏳ FLASH SATURDAY SIGNAL-WINDOW CLOSED AT 0 (test's most-informative single read), LEANS BRANCH B HARD — VERDICT STILL TOMORROW + TEMPO CORRECTION (Jun 6, ~13:54 local / ~19:54 UTC, no commit)
+
+### The data
+- **flash-sale-check.py: 0 flash-attributed sales** at ~19:54 UTC = the BACK EDGE of the 18:00-20:00 UTC Saturday signal window. Full Saturday US-opens accumulation has now landed with zero flash conversions. 5 most-recent charges all pre-flash (Vittoria $49 REFUNDED, Arnaud $29, Shantae $97, George $29×2), none carry `client_reference_id` with `c=flash`. Stripe lifetime unchanged **3 / $155**.
+- This is the single most-informative read of the whole test: the Saturday signal window (where weekend opens peak) has closed at 0. Branch B (art/hobby list won't convert a $29 pack) is now the strongly-leading read (~85%). The buyer-vs-funnel-mismatch hypothesis (list = free-seekers; the 3 real buyers were SKU-page Stripe-Link impulse buyers, not email-nurtured) is being confirmed in real time.
+- It is NOT the formal verdict: the 48h window closes ~Jun 7 23:2x UTC and late Sunday weekend opens can still theoretically land.
+
+### Held (unchanged S40-S51)
+Did NOT re-point day-1 nurture, did NOT fire the 20-sub suppression, did NOT create the $9 SKU or fire the flash9 broadcast, did NOT ping a routine null, did NOT manufacture a new prep task. Both branches are flip-the-switch ready + equalized (S48 Branch-A copy, S51 flash9 template). Firing anything pre-verdict would burn the warm list with a 2nd promo in 2 days AND prejudge the test → confounds the diagnostic. No gated action fires before window close.
+
+### Tempo correction
+Stopping the hourly poll. The Saturday signal window has now closed; there is no productive intra-window action until either (a) the Sunday daytime signal window (~18:00-20:00 UTC Jun 7) to catch late weekend opens, or (b) the verdict at the 48h window close (~Jun 7 23:2x UTC). Hourly waking through a passive ~27h observation is the motion-vs-progress trap — the work is genuinely done until tomorrow.
+
+### NEXT
+Jun 7 (Sunday): optional daytime read ~18:00-20:00 UTC for late weekend opens, then the VERDICT read at ~23:2x UTC window close. Then execute the equalized brief (`.founder/plans/post-flash-decision-2026-06-07.md`): Branch A if 1+ flash sale, Branch B ($9 Image Pack price-test per branch-b1 spec: define FLASH9_LINK → create $9 SKU → paste pre-written flash9 template → npx next build) if 0.
+
+### Confidence
+88% — Stripe pulled direct via flash-sale-check.py (definitive). A 0 at the close of the full Saturday signal window is materially more informative than any earlier null and tilts hard toward Branch B, but the formal verdict holds to the 48h close.
+
+### Continuation — 🚨 SURFACED + PARTIALLY CLOSED THE DELIVERABILITY CONFOUND ON TOMORROW'S VERDICT (commit 1b74f1a pushed)
+Interrogated the Branch B conclusion's hidden assumption: "art audience won't convert" silently assumes the 116 RECEIVED + OPENED the flash. The list has ~20 dead-weight scraped/bot/corporate addresses (S25 segmentation) → a 0 could be a deliverability artifact, not audience-fit. Investigated whether deliverability is knowable:
+- **Read the broadcast loop (`nurture.js:762`)**: it recorded only `{email, status:'sent'}` and **discarded the Resend message id**. `status:'sent'` = "Resend accepted it" ≠ delivered/opened. So the flash's per-message ids that would let us query delivered/spam/bounce were thrown away at send time.
+- **Key scope is SEND-ONLY** (confirmed S32: read endpoints rejected). So the flash's deliverability is **permanently unmeasurable retroactively from our seat**. The only sources are Armando's Resend dashboard (delivered/opened/bounced for the Jun 5 flash broadcast) or a future scope upgrade.
+- **Implication for the verdict**: a 0 cannot be cleanly separated from spam-foldering. Even Branch B's B1 ($9 re-send to the SAME list) does NOT fully control for it — same addresses, same sender reputation → if flash spam-foldered, flash9 likely does too. B1 cleanly varies PRICE but NOT deliverability. **The verdict must carry this caveat explicitly, not silently conclude "audience won't convert."**
+- ✅ **Fixed going forward (commit 1b74f1a, build clean, pushed)**: broadcast loop now captures `sendRes.data.id` (resend v6 shape, `.id` fallback) into results + the founder report email. Every FUTURE broadcast (flash9 under Branch B, re-pointed nurture, etc.) is now queryable. Inert for the fired flash; only affects future sends. Closes the measurement gap permanently per `instrument-funnel-when-channels-go-dark`.
+
+### Continuation NEXT (additions to verdict-day brief)
+1. When messaging Armando the verdict tomorrow, bundle the ask: **"check the Resend dashboard for the Jun 5 flash broadcast — delivered/opened/bounce rate de-confounds the 0."** If open rate was healthy (e.g. >15%) → the 0 is real audience-fit → Branch B is sound. If delivery/open was poor → the 0 is partly deliverability → re-test before pivoting offer.
+2. Under Branch B, flash9 send will auto-capture message ids (this fix) → first natively-measurable broadcast deliverability.
+
 ## Session 51 — ⏳ FLASH T+~19.5h STILL 0 — BACK-OF-WINDOW READ (the informative one), LEANS BRANCH B BUT NOT VERDICT (Jun 6, ~12:53 local / ~18:53 UTC, no commit)
 
 ### The data
