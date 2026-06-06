@@ -11,6 +11,30 @@
 
 <!-- AGENT-EDITED-BELOW (everything below this line is preserved across ticks) -->
 
+## Session 48 — ⏳ FLASH T+~16.5h STILL 0 (DEFINITIVE via flash-sale-check.py) + EQUALIZED BRANCH A DEPTH WITH BRANCH B (Jun 6, ~09:50 local / 15:51 UTC, no commit)
+
+### The data
+- **flash-sale-check.py: 0 flash-attributed sales** — scanned 5 most-recent charges, all pre-flash (Vittoria refunded, Arnaud, Shantae, George×2), none carry `c=flash`. The new tool works end-to-end → afternoon read is now ONE definitive command.
+- **Stripe lifetime 3 / $155** unchanged. **Subs 118 → 119 (+1, routine engine sub, NOT flash recipient — correctly not pinged despite metrics-snapshot flag).** Uptime 5/5. KPI updated 118→119.
+- T+~16.5h Saturday-morning weekend = expected null; true signal point still ~18:00-20:00 UTC.
+
+### ✅ Continuation — pre-wrote Branch A's exact re-point copy (closes a real under-specification)
+Per `pre-build-applies-to-both-plans`: Branch B got a full 39-line B1 spec (S45) but Branch A was glossed as "swap the button, ~5 min." Reading the actual day-1 email (`nurture.js` template `1`), found the same experimental-design-flaw class S45 caught on B1: the email is **narratively built around the Listing Machine** (Etsy-listing framework example → "that *listing example* above? we built a free tool…" → Listing Machine CTA). A button-only swap to the Image Pack = a paragraph about writing listings sitting above a "Get the Image Pack" button = non-sequitur. Branch A is a **coherence-sensitive edit, not a one-button swap.**
+- Appended "Branch A exact re-point copy" to `.founder/plans/post-flash-decision-2026-06-07.md`: resolves the free-vs-paid ambiguity (keep day-1 free-first → lead with `/ghibli-prompt-generator`; demote to Image Pack as paid secondary since it's the proven-converting offer), with two ready-to-paste `ctaButton` blocks.
+- **Verified at source:** `IMAGE_PACK_LINK` (nurture.js:15), `tagNurture(...,'day1')` pattern (matches line-163), `/ghibli-prompt-generator` route exists, "150+" truth-audited. Spec only — NO live edit (gated on Branch A verdict).
+- Net: tomorrow's window-close is now flip-the-switch under BOTH branches.
+
+### Held / did NOT
+Did NOT ping the routine +1 sub, re-point nurture live, fire suppression (gated on 48h window close), build money-tool #5, or tool-tour the freshly-connected Gmail/Slack/Vibe MCPs (no decided question to spend on).
+
+### NEXT
+~18:00-20:00 UTC: run `flash-sale-check.py` for the definitive afternoon read. Jun 7 ~23:2x UTC: execute the now-equalized decision brief.
+
+### Confidence
+88% — Stripe pulled direct via flash-sale-check.py (definitive, not count-only); Branch A copy verified against real constants/routes.
+
+---
+
 ## Session 47 — ⏳ FLASH T+~15.5h STILL 0 (EXPECTED SAT-MORNING NULL), CONFIRM + HOLD + RE-PACE TO SIGNAL WINDOW (Jun 6, ~08:49 local / 14:50 UTC, no commit)
 
 ### Trigger

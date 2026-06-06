@@ -44,3 +44,28 @@ A flash sale self-reports `source=flash` via the webhook `decodeAttributionFromC
 - **Stripe still 3:** Branch B — fire $9 **Image Pack** price-test (B1, clean design — see `branch-b1-9dollar-image-pack-spec.md`) + fix the day-1 Listing Machine CTA (B3); hold B2 strategic pivot until B1 also flats.
 
 **Do NOT:** re-send the flash (burns the list), build money-tool #5 (motion-vs-progress, 4 tools at ~0 activations), or fire suppression before the window closes (corrupts the denominator).
+
+---
+
+## Appendix — Branch A exact re-point copy (S48, equalizes Branch A depth with B1 spec)
+
+**Flaw the original Branch-A action glossed:** it said "swap the primary free CTA button, one edit, ~5 min." But the day-1 email (`nurture.js` template `1`) is narratively built around the Listing Machine: the framework example a few lines up is an **Etsy-listing example** ("You're an Etsy SEO expert… write a listing title + 13 tags + a description"), and the primary CTA paragraph explicitly references it ("that *listing example* above? We built a free tool that writes the whole thing…"). A button-only swap to the Image Pack leaves a paragraph about *writing listings* sitting above a *"Get the Image Pack"* button — a non-sequitur. Branch A is a **coherence-sensitive edit**, not a one-button swap.
+
+**Design decision (resolves the brief's free-vs-paid ambiguity):** keep day-1 **free-first** (lead with a free art generator — engagement before the ask), and make the **Image Pack the paid secondary** (it's the offer that just proved it converts; demote Mega Pack). This points the ~15/day NEW art-seeker signups at exactly what the flash validated, while preserving the free-first nurture structure. The email's Ghibli example already makes this art-coherent.
+
+**Exact replacement — primary CTA block** (`nurture.js` template `1`, the paragraph + `ctaButton` that currently reads "Try the Listing Machine — Free"):
+```js
+      <p style="font-size:16px;line-height:1.7;color:#374151;">That Ghibli print example? The hard part isn't the listing — it's creating art that actually sells. Want to make one free, right now?</p>
+      ${ctaButton("Make Ghibli-style art — Free", "https://www.midastools.co/ghibli-prompt-generator?utm_source=email&utm_medium=day1&utm_campaign=nurture_bridge", "No sign-up. Generate in ~10 seconds.")}
+```
+*(Keep the existing Outreach Machine secondary text-link line directly below for the services minority — unchanged.)*
+
+**Exact replacement — paid secondary block** (the paragraph + `ctaButton` that currently reads "Grab the Mega Pack — $29"):
+```js
+      <p style="font-size:16px;line-height:1.7;color:#374151;">Love it? Here's the full set — 150+ copy-paste image prompts (pet portraits, Ghibli scenes, action figures &amp; more) for Midjourney, DALL·E, Flux &amp; Stable Diffusion 👇</p>
+      ${ctaButton("Get the AI Image Pack — $29", tagNurture(IMAGE_PACK_LINK, 'day1'), "150+ prompts · 30-day money-back guarantee")}
+```
+
+**Verified facts behind this copy:** `IMAGE_PACK_LINK` constant exists (`nurture.js:15`), `tagNurture(..., 'day1')` is the established day-1 attribution pattern (matches the current line-163 Mega Pack call), `/ghibli-prompt-generator` route exists, "150+" is the truth-audited Image Pack count. `MEGA_PACK_LINK` becomes unused in template `1` after this swap — that's fine (still used in day2/day4).
+
+**Status:** spec only — NO live edit (gated on the Branch A verdict; editing day-1 before confirming the flash converted would prejudge it). Under Branch A this is now a ~5-min paste-two-blocks, narratively coherent. Under Branch B, use B3's lighter "free art generator only" variant (same primary block above, leave the paid secondary as Mega Pack or drop it).
