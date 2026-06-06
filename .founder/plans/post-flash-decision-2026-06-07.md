@@ -31,16 +31,16 @@ A flash sale self-reports `source=flash` via the webhook `decodeAttributionFromC
 
 | # | Pivot | Rationale | Cost | Reversible |
 |---|---|---|---|---|
-| **B1** | **$9 tripwire to the list** (existing `/starter-pack`, plink `fZueVcb8rgXv3ysc8acMM0t`) | Tests price-elasticity cleanly: if 0 buy at $29 but some buy at $9, it's price not audience. Tripwire fulfillment already built (lib/starter-pack-prompts.js, 20 prompts). One broadcast, one new template. | ~30 min (clone flash template at $9) | Yes — one email |
+| **B1** | **$9 Image Pack price-test** (SAME product the flash tested, dropped to $9) — full ship-spec at `.founder/plans/branch-b1-9dollar-image-pack-spec.md` | Holds PRODUCT constant, varies only PRICE → isolates price-vs-audience cleanly. ⚠️ Do NOT use the existing $9 *generic* starter pack — it changes price AND product at once, confounding the read (can't tell "won't pay" from "wrong product"). Fulfillment 100% reused (webhook name-fallback `productName.includes('image')` → Image Pack ZIP, S45-verified). | ~20 min (new $9 Stripe price/link + `flash9` template) | Yes — gated on Branch B; spec only, no live SKU until verdict |
 | **B2** | **Stop optimizing the email list for revenue; fix acquisition to target buyers** | If B1 also flats, the list is confirmed a non-revenue asset. The lever moves UPSTREAM: SKU-page-finders convert, free-tool-signups don't. Means investing in SKU-page SEO/naming (the channel all 3 real buyers came through) over more free-tool top-of-funnel. | Strategic, multi-session | n/a |
 | **B3** | **Re-point day-1 nurture to a FREE recurring-value hook, not a pack** | If the list won't buy, at least stop the audience-mismatched Listing Machine CTA. Point day-1 at the art generators they actually want → build engagement/retention before any monetization ask. | ~10 min | Yes |
 
-**Recommended Branch B sequence:** Fire **B1 ($9 tripwire)** first — it's the cheapest test that distinguishes "price too high" from "audience won't pay at all," and it reuses fully-built fulfillment. Only escalate to B2 (the real strategic pivot) if B1 *also* returns 0. Do B3 regardless (the Listing Machine CTA is wrong under every branch).
+**Recommended Branch B sequence:** Fire **B1 ($9 Image Pack price-test, clean design)** first — same product, lower price, so a 0-result is an unambiguous audience verdict, not a confounded one. Reuses fully-built fulfillment (Image Pack ZIP via webhook name-fallback). Only escalate to B2 (the real strategic pivot — move the lever to SKU-page acquisition) if B1 *also* returns 0. Do B3 regardless (the Listing Machine CTA is wrong under every branch).
 
 ---
 
 ## Decision-day one-liner
 - **Stripe 3→4+:** Branch A — re-point nurture to Image Pack + fire suppression curl + log win.
-- **Stripe still 3:** Branch B — fire $9 tripwire test (B1) + fix the day-1 Listing Machine CTA (B3); hold B2 strategic pivot until B1 also flats.
+- **Stripe still 3:** Branch B — fire $9 **Image Pack** price-test (B1, clean design — see `branch-b1-9dollar-image-pack-spec.md`) + fix the day-1 Listing Machine CTA (B3); hold B2 strategic pivot until B1 also flats.
 
 **Do NOT:** re-send the flash (burns the list), build money-tool #5 (motion-vs-progress, 4 tools at ~0 activations), or fire suppression before the window closes (corrupts the denominator).

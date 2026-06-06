@@ -11,6 +11,34 @@
 
 <!-- AGENT-EDITED-BELOW (everything below this line is preserved across ticks) -->
 
+## Session 45 — ⏳ FLASH T+~13.5h STILL 0 (EXPECTED SAT-MORNING NULL), HONEST CHECK + HOLD (Jun 6, ~06:48 local / 12:48 UTC, no commit)
+
+### Trigger
+Scheduled re-check of Stripe for the first flash sale. Still Saturday morning local (06:48), ~1h after S44's 05:47 check. Pre-noon-local on the weekend; daytime weekend-opens accumulation (~later Saturday) is the true signal point.
+
+### The data (metrics-snapshot direct)
+- **Stripe LIFETIME: 3 sales / $155 — still 0 flash sales.** Most recent still Arnaud May 2. 24h: 0. Ping-worthy: no.
+- **Subs 118 — stable.** Uptime 5/5 200. T+~13.5h on a Fri-evening→weekend consumer send = expected null.
+
+### Held (flash-test discipline, unchanged)
+Did NOT re-point day-1 nurture → Image Pack (gated on positive flash + the right replacement destination depends on the flash verdict, so it's NOT plan-agnostic), did NOT fire the pre-staged 20-sub suppression (gated on 48h window close ~Jun 7 23:2x UTC; one-curl `/api/suppress-subs?...&apply=true` validated S39), did NOT ping a routine null, did NOT build money-tool #5, did NOT invent busywork — the qualifying deferred audit queue (gist truth-audit, 30-URL link audit, day-1 nurture audit, CLAUDE_KIT_LINK fix, queue hygiene) is closed across S41-S44, and the post-flash decision brief is pre-built (S44-cont). Did NOT tool-tour the freshly-connected Gmail/Slack/Vibe MCPs — no decided question.
+
+### NEXT
+Saturday afternoon (later weekend-daytime block, ~18:00-20:00 UTC as opens accumulate): re-check Stripe lifetime 3→4 + webhook source=flash. After 48h window closes ~Jun 7 23:2x UTC: execute the pre-built decision brief (`.founder/plans/post-flash-decision-2026-06-07.md`) — fire suppression then Branch A (re-point nurture to Image Pack) or Branch B (B1 $9 tripwire → B2 acquisition-targets-buyers → B3 fix wrong day-1 CTA) vs ~63-hobbyist denominator.
+
+### Confidence
+88% — Stripe pulled direct; 0-at-T+13.5h Saturday-morning-weekend is the expected null, not a signal.
+
+### Continuation — ✅ FIXED BRANCH B1's EXPERIMENTAL-DESIGN FLAW + PRE-BUILT ITS EXECUTION SPEC
+User pushed to continue. The honest highest-impact use of the wait: Branch A is fully tooled but Branch B (the likelier + under-prepped branch per S44) had only a strategic mention for B1. On re-reading the brief I caught a real flaw: B1-as-written re-broadcasts the **existing $9 generic starter pack**, which changes BOTH price ($29→$9) AND product (Image Pack→generic prompts) — a 0-result would be **confounded** (can't separate "won't pay" from "wrong product"), destroying the test's diagnostic value in the exact branch where audience-fit is the open question.
+- **Fix:** B1 should hold the PRODUCT constant — a **$9 Image Pack** (same product the flash tested at $29), varying only price. Now the read is clean: some buy at $9 → it's price; 0 at $9 → it's audience (→ escalate to B2).
+- **Verified at source (not memory):** Image Pack ZIP exists (65,939 bytes); webhook auto-fulfills via `productName.includes('image')` name-fallback (stripe-webhook.js:415) → a new $9 image-named SKU delivers the ZIP with ZERO new KIT_MAP/plink wiring; thank-you.js:56 routes the slug. So the only new build is a $9 Stripe price/link + a `flash9` broadcast template (~20 min).
+- **Shipped:** `.founder/plans/branch-b1-9dollar-image-pack-spec.md` (full ship-checklist + rationale) + updated the decision brief's B1 row, recommended-sequence, and one-liner to reference it.
+- **Reversible + non-prejudging:** spec only — NO live $9 SKU created (creating it before the verdict prejudges Branch B + could cannibalize $29 under Branch A). Tomorrow's B1 is now a ~20-min flip-the-switch with clean diagnostics instead of a confounded ~30-min build.
+- Did NOT touch the flash mechanism, list, or denominator. Did NOT tool-tour the reconnected MCPs.
+
+---
+
 ## Session 44 — ⏳ FLASH T+~12.5h STILL 0 (EXPECTED PRE-DAWN-SAT NULL), HONEST CHECK + RE-PACE TO DAYTIME (Jun 6, ~05:47 local / 11:47 UTC, no commit)
 
 ### Trigger
