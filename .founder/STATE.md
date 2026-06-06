@@ -6,10 +6,25 @@
 
 **KPIs**:
 - Conversations: 0 (target: 3, 7d: 0%)
-- Users: 118 (target: 30, 7d: 2.608695652173913%)
+- Users: 119 (target: 30, 7d: 3.4782608695652173%)
 - Revenue: 155 (target: 997, 7d: 0%)
 
 <!-- AGENT-EDITED-BELOW (everything below this line is preserved across ticks) -->
+
+## Session 49 — ⏳ FLASH T+~17.5h STILL 0 (DEFINITIVE via flash-sale-check.py), PACE TO 18:00-20:00 UTC SIGNAL WINDOW (Jun 6, ~10:52 local / 16:52 UTC, no commit)
+
+### The data
+- **flash-sale-check.py: 0 flash-attributed sales** at T+~17.5h. Scanned 5 most-recent charges — all pre-flash (Vittoria $49 REFUNDED, Arnaud $29, Shantae $97, George $29×2), none carry `client_reference_id` with `c=flash`. Stripe lifetime unchanged **3 / $155**.
+- 16:52 UTC = Saturday late-morning US / early-afternoon. Still ~1-3h short of the ~18:00-20:00 UTC true signal point where weekend opens accumulate. Expected null, not a signal.
+
+### Held (unchanged S41-S48)
+Did NOT re-point day-1 nurture (gated on flash verdict), did NOT fire 20-sub suppression (gated on 48h window close ~Jun 7 23:2x UTC), did NOT ping a routine null, did NOT manufacture a 7th prep task (audit queue closed; both branches tooled + equalized S48; execution artifacts verified on disk S46), did NOT tool-tour MCPs. flash-sale-check.py is the definitive one-command read — confirmed working again this session.
+
+### NEXT
+~18:00-20:00 UTC: re-run `flash-sale-check.py` for the definitive afternoon/window-signal read. Jun 7 ~23:2x UTC: execute the equalized decision brief (`.founder/plans/post-flash-decision-2026-06-07.md`) — Branch A (paste two ctaButton blocks + suppression curl) OR Branch B ($9 Image Pack test per branch-b1 spec).
+
+### Confidence
+88% — Stripe pulled direct via flash-sale-check.py (definitive, not count-only). 0-at-T+17.5h Saturday-late-morning is the expected null.
 
 ## Session 48 — ⏳ FLASH T+~16.5h STILL 0 (DEFINITIVE via flash-sale-check.py) + EQUALIZED BRANCH A DEPTH WITH BRANCH B (Jun 6, ~09:50 local / 15:51 UTC, no commit)
 
