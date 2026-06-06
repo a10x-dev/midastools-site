@@ -6,10 +6,39 @@
 
 **KPIs**:
 - Conversations: 0 (target: 3, 7d: 0%)
-- Users: 116 (target: 30, 7d: 0.8695652173913043%)
+- Users: 117 (target: 30, 7d: 1.7391304347826086%)
 - Revenue: 155 (target: 997, 7d: 0%)
 
 <!-- AGENT-EDITED-BELOW (everything below this line is preserved across ticks) -->
+
+## Session 42 — ⏳ FLASH T+~10h STILL 0 (EXPECTED) + ✅ AUDITED HIGHEST-VOLUME AUTOMATED TOUCH (day-1 nurture) + FIXED LATENT PAYMENT-LINK FOOTGUN (Jun 6, ~03:45 local / 09:45 UTC, commit 61f984b pushed)
+
+### Trigger
+Scheduled re-check of Stripe for the first flash sale. Flash bottleneck saturated (passive weekend watch) → scanned for plan-agnostic + session-sized + Armando-independent work. Two ran: (1) queue hygiene closing 10 stale observational status-statement tasks, (2) the never-before-run truth+link audit of the **evergreen day-1 nurture email** — the company's highest-volume automated touch (~15/day to every new signup).
+
+### The data (metrics-snapshot direct)
+- **Stripe LIFETIME: 3 sales / $155 — still 0 flash sales.** Most recent still Arnaud May 2. 24h: 0. Ping-worthy: no.
+- **Subs 117 — stable. Uptime 5/5 200.** T+~10h on a Fri-evening consumer send = expected null; Saturday daytime is the real signal point.
+
+### ✅ Day-1/Day-2 nurture audit — CLEAN
+Read `pages/api/nurture.js` day-1 + day-2 templates directly. Bodies are **truthful + audience-coherent**: "145+" claims match the truth-audited Mega Pack count (zero stale 200+/500+ — the gist bug class does NOT reach the nurture layer); day-1 framework example is an Etsy/Ghibli listing. **All 3 day-1 destinations verified HTTP 200**: /listing-machine, /outreach-machine, MEGA_PACK_LINK (`4gMbJ0dgz4aJ1qkb46cMM0d`). The $9 TRIPWIRE_LINK used in tripwire + coach_pivot broadcasts also verified 200.
+
+### ✅ SHIPPED — fixed latent payment-link footgun (commit 61f984b pushed)
+`CLAUDE_KIT_LINK` shared the exact same hash as `MEGA_PACK_LINK` (`4gMbJ0dgz...`, the $29 Mega Pack plink). **Dead code today** (0 references → no live leak) BUT a latent S158-class trap: any future Claude Code Kit nurture email reaching for the obviously-named `CLAUDE_KIT_LINK` would charge **$29 for Mega Pack instead of $39 for Claude Code Kit**. Pointed it at the correct live $39 plink `8x25kCccv4aJ3ys0pscMM0q` (verified 200). **Safe mid-flash-test**: unreferenced constant → cannot affect the flash send (IMAGE_PACK_LINK), the subscriber list, or any rendered email. node --check clean, pushed 7900e23..61f984b.
+
+### ✅ Queue hygiene — closed 10 stale observational status-statement tasks
+d7bd76a5, e1944fb9, cd259c3f, f4ced9cc, 8c9ad988, 5800d938, d835d128, 645b719a, 09285166, 7337b64d — dashboard status-statements masquerading as open tasks (e.g. "~31 email subscribers" [stale — 117 now]). Leaves the queue showing genuine open items.
+
+### Held (flash-test discipline)
+Did NOT re-point day-1 nurture → Image Pack (gated on positive flash result), did NOT fire 20-sub suppression (gated on 48h window close ~Jun 7 23:2x UTC), did NOT Slack-ping a routine null, did NOT build money-tool #5.
+
+### NEXT
+Saturday daytime: re-check Stripe lifetime 3→4 + webhook source=flash as weekend opens accumulate. After 48h window: fire one-curl suppression then re-point-or-pivot vs ~63-hobbyist denominator (1 sale ≈ 1.6% → validate + re-point nurture to Image Pack; 0/63 → pivot offer).
+
+### Confidence
+87% — Stripe direct; nurture bodies read directly + 5 links curl-verified 200; CLAUDE_KIT_LINK fix is a single unreferenced-constant swap (node --check clean, push verified). Flash null at T+~10h is the expected weekend-overnight result.
+
+---
 
 ## Session 41 — ⏳ FLASH T+~4h STILL 0 (EXPECTED) + ✅ CLOSED GIST TRUTH-AUDIT (task d5bb4fbf, commit a8187f1) (Jun 6, ~03:20 UTC)
 
