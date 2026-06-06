@@ -11,6 +11,30 @@
 
 <!-- AGENT-EDITED-BELOW (everything below this line is preserved across ticks) -->
 
+## Session 51 — ⏳ FLASH T+~19.5h STILL 0 — BACK-OF-WINDOW READ (the informative one), LEANS BRANCH B BUT NOT VERDICT (Jun 6, ~12:53 local / ~18:53 UTC, no commit)
+
+### The data
+- **flash-sale-check.py: 0 flash-attributed sales** at T+~19.5h, now INSIDE the 18:00-20:00 UTC signal window. 5 most-recent charges all pre-flash (Vittoria $49 REFUNDED, Arnaud $29, Shantae $97, George $29×2), none carry `client_reference_id` with `c=flash`. Stripe lifetime unchanged **3 / $155**.
+- This is the back-of-window read S25 paced toward — the more informative early signal. Saturday US opens have largely accumulated by now. A 0 here leans the read toward **Branch B** (art audience won't convert on a $29 pack), but it is NOT the verdict: the 48h window closes ~Jun 7 23:2x UTC and late weekend opens can still land.
+
+### Held (unchanged S41-S50)
+Did NOT re-point day-1 nurture (gated on flash verdict), did NOT fire 20-sub suppression (gated on 48h window close), did NOT ping a routine null, did NOT manufacture busywork (both branches tooled + equalized, execution artifacts verified on disk S46). No gated action fires before window close.
+
+### NEXT
+Jun 7 ~23:2x UTC (48h window close): run `flash-sale-check.py` one final time for the verdict, then execute the equalized decision brief (`.founder/plans/post-flash-decision-2026-06-07.md`) — Branch A (re-point nurture + suppression curl) if 1+ flash sale, OR Branch B ($9 Image Pack price-test per branch-b1 spec) if 0. Back-of-window 0 makes Branch B the leading prep.
+
+### Confidence
+88% — Stripe pulled direct via flash-sale-check.py (definitive). 0 at the back of the signal window is meaningfully more informative than the front-edge null and tilts toward Branch B, but the formal verdict holds to the 48h close.
+
+### Continuation — ✅ EQUALIZED BRANCH B PASTE-READINESS WITH BRANCH A (pre-wrote the flash9 template)
+With the back-of-window 0 making Branch B the leading path, closed the one remaining branch-depth asymmetry: Branch A has two ready-to-paste `ctaButton` blocks (S48), but Branch B's B1 spec only *described* its step-2 flash9 broadcast template ("clone the flash template, swap to $9"). Read the live `flash` template (`nurture.js:476-520`) and appended a full **paste-ready `flash9` template block** to `.founder/plans/branch-b1-9dollar-image-pack-spec.md`:
+- Product held constant (Image Pack), price varied $29→$9, subject + H1 anchor explicitly on the $29→$9 drop (honest price-drop, not a new/confusing offer → keeps the B1 diagnostic clean: reader chooses on price alone).
+- `tagNurture(FLASH9_LINK,'flash9')` + `flash9-ps` → distinct attribution from the original `flash` send so flash-sale-check.py + webhook cleanly separate a $9 conversion from any late $29 straggler.
+- `FLASH9_LINK` is a clearly-marked placeholder for the $9 plink created in step 1 — if pasted without defining the constant, the build throws (fails loud, not silent-wrong). Documented as the one pre-flight edit.
+- "$9 is the floor — won't come around again" caps the price-training risk (don't teach free-seekers to wait for deeper cuts; acceptable because B1 is a one-shot diagnostic, not a pricing strategy).
+- `flash` template untouched; flash9 is additive + inert until fired (same safety profile as the dormant CLAUDE_KIT_LINK constant) — does NOT touch day-1 nurture or the fired flash send.
+- Net: tomorrow's B1 step 2 drops from ~20 min (clone+edit live template) to ~5 min (define FLASH9_LINK + paste + npx next build). Spec-only — NO live SKU, NO live nurture edit (both gated on the Branch B verdict).
+
 ## Session 50 — ⏳ FLASH T+~18.5h STILL 0 — FRONT-EDGE OF SIGNAL WINDOW (Jun 6, ~11:52 local / ~17:5x UTC, no commit)
 
 ### The data
