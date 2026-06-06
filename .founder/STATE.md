@@ -11,6 +11,36 @@
 
 <!-- AGENT-EDITED-BELOW (everything below this line is preserved across ticks) -->
 
+## Session 46 — ⏳ FLASH T+~14.5h STILL 0 (EXPECTED SAT-MORNING NULL) + VERIFIED TOMORROW'S EXECUTION ARTIFACTS ON DISK, HOLD + RE-PACE (Jun 6, ~07:48 local / 13:49 UTC, no commit)
+
+### Trigger
+Re-check of Stripe for the first flash sale — checked early (13:49 UTC vs the real ~18:00-20:00 UTC Saturday-daytime signal point). Pre-noon-local weekend = expected null window.
+
+### The data (metrics-snapshot direct)
+- **Stripe LIFETIME: 3 sales / $155 — still 0 flash sales.** Most recent still Arnaud May 2. 24h: 0. Ping-worthy: no.
+- **Subs 118 — stable. Uptime 5/5 200.** T+~14.5h on a Fri-evening→weekend consumer send = expected null; Saturday *daytime* (~18:00-20:00 UTC as US opens accumulate) is the true signal point.
+
+### ✅ Verified tomorrow's window-close execution is flip-the-switch ready (plan-relevant, not busywork)
+Confirmed all load-bearing artifacts are on disk (guards against a harness re-seed dropping them before the Jun 7 23:2x UTC execution):
+- `.founder/plans/post-flash-decision-2026-06-07.md` (46 lines) ✅
+- `.founder/plans/branch-b1-9dollar-image-pack-spec.md` (39 lines) ✅
+- `pages/api/suppress-subs.js` (129 lines, prod dry-run validated S39) ✅
+- `pages/api/nurture.js:160` still the Listing Machine re-point target (Branch A) ✅
+
+### Held (flash-test discipline, unchanged)
+Did NOT re-point day-1 nurture → Image Pack (gated on flash verdict — re-pointing new signups at a just-failed $29 pack under Branch B propagates the failure), did NOT fire the 20-sub suppression (gated on 48h window close), did NOT ping the routine null, did NOT manufacture a 6th prep task (audit queue closed S41-S45; both branches fully tooled), did NOT tool-tour the reconnected Gmail/Slack/Vibe MCPs (no decided question).
+
+### NEXT
+Saturday daytime (~18:00-20:00 UTC as weekend opens accumulate): re-check Stripe lifetime 3→4 + webhook source=flash. After 48h window closes ~Jun 7 23:2x UTC: execute the pre-built decision brief — Branch A (re-point nurture + one-curl suppression) or Branch B (fire $9 Image Pack test per branch-b1 spec) vs ~63-hobbyist denominator.
+
+### Confidence
+88% — Stripe pulled direct; all 4 execution artifacts confirmed present. 0-at-T+14.5h Saturday-morning-weekend is the expected null, not a signal.
+
+### Continuation — ✅ CLOSED DELIVERABLES-INTEGRITY AUDIT (task 8f3e78a3), CLEAN
+User pushed to continue. Per deferred-audits-as-legitimate-continuation-work, ran the one qualifying plan-agnostic + session-sized + Armando-independent deferred task: audit `.founder/plans` + `.founder/deliverables` for files lost in a harness re-seed (the re-seed risk is real — confirmed this session by verifying execution artifacts). Result: **23 plans + 51 deliverables on disk; all 6 decision-informing artifacts present** (post-flash brief, B1 spec, midas-memo, list-quality-segmentation, monday-revenue-decision, suppress-subs API route). The lone "MISSING" hit was a false positive — `suppress-subs` is `pages/api/suppress-subs.js` (exists), not a `.founder/tools/` script; no tools/suppress-subs.js should exist. Per clean-close-equals-fix-close: closing 8f3e78a3 removes deferral debt + confirms tomorrow's window-close has no missing-artifact scramble risk. Shipped ONE qualifying task then closed honestly — did not chain-find a 3rd task to look busy (saturation trap).
+
+---
+
 ## Session 45 — ⏳ FLASH T+~13.5h STILL 0 (EXPECTED SAT-MORNING NULL), HONEST CHECK + HOLD (Jun 6, ~06:48 local / 12:48 UTC, no commit)
 
 ### Trigger
