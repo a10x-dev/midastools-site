@@ -11,6 +11,35 @@
 
 <!-- AGENT-EDITED-BELOW (everything below this line is preserved across ticks) -->
 
+## Session 41 — ⏳ FLASH T+~4h STILL 0 (EXPECTED) + ✅ CLOSED GIST TRUTH-AUDIT (task d5bb4fbf, commit a8187f1) (Jun 6, ~03:20 UTC)
+
+### Trigger
+Scheduled re-check of Stripe lifetime for the first flash sale. Per continuation discipline, with the flash bottleneck saturated (waiting on weekend data) I scanned for ONE plan-agnostic + session-sized + Armando-independent deferred task and shipped it.
+
+### The data (metrics-snapshot direct)
+- **Stripe LIFETIME: 3 sales / $155 — still 0 flash sales.** Most recent still Arnaud May 2. 24h: 0. Ping-worthy: no.
+- **Subs 117 — stable.** Uptime 5/5 200. T+~4h on a Fri-evening consumer send = expected null; Saturday AM is the real signal point.
+
+### ✅ SHIPPED — gist truth-audit closed (task d5bb4fbf), commit a8187f1 pushed
+Swept all **15 gist source files** for stale prompt-count claims (the Mega Pack 145+ / Image Pack 150+/166 / SaaS 135+ truth surfaces). Found + fixed **3 stale claims on the #1 traffic channel** (gists funnel to the exact SKUs the flash is promoting → trust-leak risk at the conversion handoff):
+1. **gist 01 (sora):** Mega Pack "200+ text + 150+ image + 150+ video" (that's the $97 *bundle*, not the $29 text pack) → **"145+"**
+2. **gist 03 (ghibli):** Mega Pack "500+ prompts" → **"145+"** (same 500+ overstatement class S29-cont killed on blogs)
+3. **gist 12 (saas):** SaaS Founder Kit "150+ prompts" + "~140 more" → **"135+" / "~120 more"** to match the canonical landing page (135+ across meta/og/schema/hero) + the kit's actual ~140 ### count. Closes a handoff trust-leak (gist said 150+, page says 135+).
+- **Image Pack "150+" claims left as-is** — truthful (166 actual, conservative). Gists 02/06/13 already correct from prior sessions.
+- **Mechanism:** edited local .md → PATCHed each live gist via `update-gist.sh` → **curl-verified all 3 live gists clean** (0 stale, corrected counts present) → final sweep confirms all Mega Pack claims across 15 gists now read "145+", zero stale 200+/250+/500+/1500+/2000+ patterns remain. Committed + pushed (7270a1c..a8187f1). Per `audit-deliverables-not-just-landing-pages`: gist content is a deliverable layer; this closes the last open layer of the Mega Pack truth-audit (pages/READMEs/ZIPs swept S29-S33).
+- **Safe mid-flash-test:** gist content edits don't touch the subscriber list or flash mechanism → don't corrupt the flash denominator.
+
+### Held (flash test discipline, unchanged)
+Did NOT re-point day-1 nurture (gated on positive flash), did NOT fire the 20-sub suppression (gated on 48h window close ~Jun 7 23:2x UTC), did NOT Slack-ping a routine null, did NOT build money-tool #5.
+
+### NEXT
+Saturday AM: re-check Stripe lifetime 3→4 + any webhook source=flash email when weekend opens accumulate. After 48h window closes: fire the one-curl suppression (`/api/suppress-subs?...&apply=true`) then re-point-or-pivot against the ~63-hobbyist denominator (1 sale ≈ 1.6% → validate + re-point; 0/63 → pivot offer).
+
+### Confidence
+88% — Stripe pulled direct; all 3 gist fixes curl-verified live + clean final sweep + commit pushed. 0-at-T+4h is the expected null, not a signal.
+
+---
+
 ## Session 40 — ⏳ FLASH T+3h CHECK: STILL 0 SALES (EXPECTED), HOLDING THROUGH WEEKEND (Jun 6, ~02:20 UTC)
 
 ### Trigger
