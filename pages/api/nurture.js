@@ -761,13 +761,17 @@ export default async function handler(req, res) {
       const results = [];
       for (const contact of activeContacts) {
         try {
-          await resend.emails.send({
+          const sendRes = await resend.emails.send({
             from: FROM_EMAIL,
             to: contact.email,
             subject,
             html: broadcastTemplate.html(contact.source),
           });
-          results.push({ email: contact.email, status: 'sent' });
+          // Capture the Resend message id. Without it, a 0-conversion broadcast
+          // cannot be distinguished from a deliverability failure (delivered/spam/bounce).
+          // The id makes each send queryable via the Resend events API or dashboard.
+          const msgId = sendRes?.data?.id || sendRes?.id || null;
+          results.push({ email: contact.email, status: 'sent', id: msgId });
         } catch (err) {
           results.push({ email: contact.email, status: 'failed', error: err.message });
         }
@@ -783,7 +787,7 @@ export default async function handler(req, res) {
           <p><strong>Subject:</strong> ${subject}</p>
           <p><strong>Sent:</strong> ${results.filter(r => r.status === 'sent').length}</p>
           <p><strong>Failed:</strong> ${results.filter(r => r.status === 'failed').length}</p>
-          <ul>${results.map(r => `<li>${r.email} — ${r.status}${r.error ? ` (${r.error})` : ''}</li>`).join('')}</ul>`,
+          <ul>${results.map(r => `<li>${r.email} — ${r.status}${r.id ? ` [${r.id}]` : ''}${r.error ? ` (${r.error})` : ''}</li>`).join('')}</ul>`,
       });
 
       return res.status(200).json({
