@@ -11,6 +11,42 @@
 
 <!-- AGENT-EDITED-BELOW (everything below this line is preserved across ticks) -->
 
+## Session 40 — ⏳ FLASH T+3h CHECK: STILL 0 SALES (EXPECTED), HOLDING THROUGH WEEKEND (Jun 6, ~02:20 UTC)
+
+### Trigger
+Scheduled wakeup per S39 plan: re-check Stripe lifetime for the first flash sale (3→4 is the only detector — email→Stripe-direct is invisible to track-events).
+
+### The data (metrics-snapshot direct)
+- **Stripe LIFETIME: 3 sales / $155 — still 0 flash sales.** Most recent still Arnaud May 2. 24h: 0 sales. Ping-worthy: no.
+- **Subs 117 — stable** (no new since the S39 +1). Engine quiet overnight, expected.
+- **Uptime: all 5 pages 200.**
+
+### Honest read — null result is on-schedule, not a failure signal
+T+~3h on a Friday-evening UTC send to a consumer/hobby audience. Opens accumulate across the leisure weekend; **Saturday morning is the real signal point**, not Friday night. Too early to call either branch. Held all conditional actions per the test discipline:
+- Did NOT re-point day-1 nurture (Listing Machine → Image Pack) — only flip once the flash actually converts (prejudges the test otherwise).
+- Did NOT suppress the 20 dead-weight subs (task c8402a14) — gated on the 48h-window close (~23:2x UTC Jun 7), and mutating the list mid-test corrupts the deliverability/denominator read.
+- Did NOT Slack-ping — routine null over a quiet Friday night = alert-trust erosion per verify-truth-source-on-signal-deltas.
+- Did NOT build money-tool #5 — tool #4 still 0 activations; motion-vs-progress trap.
+
+### NEXT
+Re-check Stripe lifetime (3→4?) + any webhook source=flash email Saturday AM when weekend opens accumulate. After the 48h window (~Jun 7 23:2x UTC) closes: suppress the 20 dead-weight subs, then re-point-or-pivot against the ~63-real-hobbyist denominator (S25 segmentation): 1 sale ≈ 1.6% → validate + re-point nurture; 0/63 → art audience won't convert on packs → pivot offer.
+
+### Confidence
+85% — Stripe pulled directly; detection path code-verified S39. 0-at-T+3h is the expected null, not a signal.
+
+### Continuation — ✅ PRE-STAGED THE POST-WINDOW DEAD-WEIGHT SUPPRESSION (task c8402a14), one-curl-ready
+Used the flash-wait dead time for the one plan-agnostic, Armando-independent, session-sized item available: built `/api/suppress-subs` (commit 7270a1c, pushed + prod-verified). Resolves the real post-window blocker — suppression needs KV write, and KV creds are Vercel-server-side-only (no local script can do it). The endpoint runs server-side via `writeSubscribers()` (KV + gist), key-gated, **dry-run by default** (`&apply=true` required to write — an accidental hit can't mutate the list mid-test).
+- **Match-by-pattern, not hardcoded emails**: bot-fingerprint domain substrings (securitydelta.nl, chameleongroup.co, a7gi.ru, 7-eleven.com) + 3 exact role addresses + SMS-gateway junk regex. So it ALSO auto-catches future signups from the same scraped clusters (the fingerprint recurs S27/S38/S25) — reusable infra, not a one-off.
+- **Mechanism verified**: broadcast filters `allSubs.filter(s => !s.unsubscribed)` (nurture.js:742) → setting the reversible `unsubscribed` flag is the correct, non-destructive suppression.
+- **Prod dry-run (non-mutating) validated**: `would_suppress: 20` — EXACTLY the S25 segmentation count (16 scraped + 3 role + 1 junk), **zero false positives** (no legit hobbyist caught), 117 → 97 active if applied.
+- **SAFE mid-test**: isolated new endpoint, not called by any flow, dry-run default. Build clean, compiled as serverless fn.
+
+**Post-window action is now ONE CURL** (fire ONLY after flash window closes ~Jun 7 23:2x UTC, after recording the final conversion result against the clean 116-send):
+`curl "https://www.midastools.co/api/suppress-subs?key=mt-outreach-2026&apply=true"`
+Idempotent (re-running = no-op once flags set). Did NOT apply now — mutating mid-test corrupts the flash denominator.
+
+---
+
 ## Session 39 — ⏳ FLASH T+2h CHECK: 0 SALES YET (EXPECTED), DETECTION WIRED, WATCHING 48h WINDOW (Jun 6, ~01:20 UTC / ~19:2x local Fri)
 
 ### Trigger
