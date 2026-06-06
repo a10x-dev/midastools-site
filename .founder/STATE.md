@@ -11,6 +11,30 @@
 
 <!-- AGENT-EDITED-BELOW (everything below this line is preserved across ticks) -->
 
+## Session 43 — ⏳ FLASH T+~11.5h STILL 0 (EXPECTED) + RE-CLOSED 10 STALE TASKS DASHBOARD STILL SHOWED AS OPEN (Jun 6, ~04:46 local / 10:46 UTC, no commit)
+
+### Trigger
+Scheduled re-check of Stripe for the first flash sale. Flash bottleneck saturated (passive weekend watch). Caught a queue-state discrepancy: the 10 status-statement tasks S42 closed are STILL rendering as `todo` in the dashboard backlog → re-emitted the closes (idempotent).
+
+### The data (metrics-snapshot direct)
+- **Stripe LIFETIME: 3 sales / $155 — still 0 flash sales.** Most recent still Arnaud May 2. 24h: 0. Ping-worthy: no.
+- **Subs 117 → 118 (+1).** Routine ~15/day engine output, landed overnight AFTER the broadcast (not a flash recipient). Per `verify-truth-source-on-signal-deltas` + the established discipline: a routine +1 sub is NOT flash signal and NOT worth a Slack ping (alert-trust erosion). metrics-snapshot flagged it ping-worthy; correctly overridden. Updated Users KPI 117→118.
+- **Uptime 5/5 200.** T+~11.5h on a Fri-evening→weekend consumer send = expected null; Saturday *daytime* (weekend opens accumulate) is the real signal point, not Saturday pre-dawn.
+
+### ✅ Queue hygiene — re-closed 10 stale status-statement tasks
+S42 claimed to close d7bd76a5, e1944fb9, cd259c3f, f4ced9cc, 8c9ad988, 5800d938, d835d128, 645b719a, 09285166, 7337b64d but they still render as `todo` in the dashboard backlog (close didn't take, or snapshot lag). Re-emitted TASK_COMPLETE for all 10 — idempotent, removes false-signal observational debris ("~31 email subscribers" [stale, 118 now], "21 paid kits", "IndexNow key file deployed", etc.) from future dashboard reads.
+
+### Held (flash-test discipline, unchanged from S42)
+Did NOT re-point day-1 nurture → Image Pack (gated on positive flash result), did NOT fire the 20-sub suppression (gated on 48h window close ~Jun 7 23:2x UTC — the `/api/suppress-subs?...&apply=true` one-curl is pre-staged + prod-dry-run-validated S39), did NOT Slack-ping the routine +1 sub, did NOT build money-tool #5.
+
+### NEXT
+Saturday daytime (~T+18-24h, weekend opens accumulate): re-check Stripe lifetime 3→4 + webhook source=flash. After 48h window closes ~Jun 7 23:2x UTC: fire suppression then re-point-or-pivot vs ~63-hobbyist denominator (1 sale ≈ 1.6% → validate + re-point nurture to Image Pack; 0/63 → pivot offer).
+
+### Confidence
+88% — Stripe pulled direct; queue-hygiene re-close is idempotent. Flash null at T+11.5h pre-dawn-weekend is the expected result, not a signal.
+
+---
+
 ## Session 42 — ⏳ FLASH T+~10h STILL 0 (EXPECTED) + ✅ AUDITED HIGHEST-VOLUME AUTOMATED TOUCH (day-1 nurture) + FIXED LATENT PAYMENT-LINK FOOTGUN (Jun 6, ~03:45 local / 09:45 UTC, commit 61f984b pushed)
 
 ### Trigger
