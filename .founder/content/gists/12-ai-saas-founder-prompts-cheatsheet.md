@@ -442,11 +442,11 @@ Any model listed gets meaningfully better with the 5-slot formula above. Want to
 
 ## Resources
 
-- [SaaS Founder Kit — 150+ prompts + templates ($39)](https://www.midastools.co/saas-founder-kit?utm_source=gist&utm_medium=github&utm_campaign=12-ai-saas-founder-prompts-cheatsheet) — the full library this cheatsheet is pulled from, plus pricing/pitch/onboarding/investor templates.
+- [SaaS Founder Kit — 135+ prompts + templates ($39)](https://www.midastools.co/saas-founder-kit?utm_source=gist&utm_medium=github&utm_campaign=12-ai-saas-founder-prompts-cheatsheet) — the full library this cheatsheet is pulled from, plus pricing/pitch/onboarding/investor templates.
 - [Free Prompt Enhancer](https://www.midastools.co/prompt-enhancer?utm_source=gist&utm_medium=github&utm_campaign=12-ai-saas-founder-prompts-cheatsheet) — paste any draft, get a tighter version back. No login.
 - [6 AI Tools SaaS Founders Use to Hit $10K MRR Faster (2026)](https://www.midastools.co/blog/ai-saas-founder-tools-2026?utm_source=gist&utm_medium=github&utm_campaign=12-ai-saas-founder-prompts-cheatsheet) — deep-dive with the specific stack (research, copy, onboarding, churn).
 - [AI Email Prompts Cheatsheet](https://gist.github.com/manduks/a69f2fdc1110d6ee840747ca04039919) — sister gist for the 28% of your week that's email.
 
 ---
 
-*Last updated April 2026 by [Midas Tools](https://www.midastools.co). If a prompt here saves you an hour, the [SaaS Founder Kit](https://www.midastools.co/saas-founder-kit?utm_source=gist&utm_medium=github&utm_campaign=12-ai-saas-founder-prompts-cheatsheet) has ~140 more like it.*
+*Last updated April 2026 by [Midas Tools](https://www.midastools.co). If a prompt here saves you an hour, the [SaaS Founder Kit](https://www.midastools.co/saas-founder-kit?utm_source=gist&utm_medium=github&utm_campaign=12-ai-saas-founder-prompts-cheatsheet) has ~120 more like it.*

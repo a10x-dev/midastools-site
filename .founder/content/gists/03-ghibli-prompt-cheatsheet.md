@@ -135,6 +135,6 @@ Full prompt text for all 10 (plus 15 other variants for Totoro / Howl / Kiki / P
 - **Free pet portrait generator:** [midastools.co/pet-portrait-generator](https://www.midastools.co/pet-portrait-generator?utm_source=gist&utm_medium=github&utm_campaign=03-ghibli-prompt-cheatsheet) — same grammar, pet subjects
 - **Free action-figure generator:** [midastools.co/action-figure-generator](https://www.midastools.co/action-figure-generator?utm_source=gist&utm_medium=github&utm_campaign=03-ghibli-prompt-cheatsheet)
 - **Paid Image Pack ($29):** [150+ prompts — Ghibli, flat-lay, photo-dump, product, portrait](https://www.midastools.co/ai-image-prompt-pack?utm_source=gist&utm_medium=github&utm_campaign=03-ghibli-prompt-cheatsheet)
-- **Mega Pack ($29):** [500+ prompts across image, video, text](https://www.midastools.co/ai-prompt-mega-pack?utm_source=gist&utm_medium=github&utm_campaign=03-ghibli-prompt-cheatsheet)
+- **Mega Pack ($29):** [145+ prompts across business, writing, and research](https://www.midastools.co/ai-prompt-mega-pack?utm_source=gist&utm_medium=github&utm_campaign=03-ghibli-prompt-cheatsheet)
 
 If you generate something with these prompts, drop a link in the comments — I love seeing the outputs.

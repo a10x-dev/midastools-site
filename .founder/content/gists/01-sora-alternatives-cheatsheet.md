@@ -102,4 +102,4 @@ This structure works in Veo, Kling, Runway, and Pika because they all share the 
 - **Free prompt generator:** [Prompt Generator](https://www.midastools.co/prompt-generator?utm_source=gist&utm_medium=github&utm_campaign=01-sora-alternatives-cheatsheet)
 - **Free prompt enhancer:** [Prompt Enhancer](https://www.midastools.co/prompt-enhancer?utm_source=gist&utm_medium=github&utm_campaign=01-sora-alternatives-cheatsheet)
 
-If this helped, the full **Mega Pack** bundles 200+ text prompts, 150+ image prompts, and 150+ video prompts together for $29 at [midastools.co/ai-prompt-mega-pack](https://www.midastools.co/ai-prompt-mega-pack?utm_source=gist&utm_medium=github&utm_campaign=01-sora-alternatives-cheatsheet). Everything is model-agnostic so you won't need a new pack next time OpenAI shuts something down.
+If this helped, the full **Mega Pack** bundles 145+ ready-to-use prompts for $29 at [midastools.co/ai-prompt-mega-pack](https://www.midastools.co/ai-prompt-mega-pack?utm_source=gist&utm_medium=github&utm_campaign=01-sora-alternatives-cheatsheet). Everything is model-agnostic so you won't need a new pack next time OpenAI shuts something down.
