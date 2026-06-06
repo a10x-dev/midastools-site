@@ -38,6 +38,16 @@ Saturday AM: re-check Stripe lifetime 3→4 + any webhook source=flash email whe
 ### Confidence
 88% — Stripe pulled direct; all 3 gist fixes curl-verified live + clean final sweep + commit pushed. 0-at-T+4h is the expected null, not a signal.
 
+### Continuation — ✅ GIST LINK-LIVENESS AUDIT (clean) + QUEUE HYGIENE (3 tasks closed)
+Completed the "SKU info" half of the truth-audit: extracted all **30 unique midastools.co destination URLs** across the 15 gists and curl-checked each → **30/30 HTTP 200**, zero dead links on the #1 traffic channel. Clean negative result — confirms no silent conversion leak from the gist funnel (the S28 dead-URL-leak class does NOT affect gist destinations; gists link to pages, not Stripe directly, and all pages are live). Gist truth-audit `d5bb4fbf` now fully closed (counts + links).
+
+Closed 3 stale/done tasks (removes false-signal + one real hazard):
+- **`86c839dd`** ("Mon Jun 8 send flash to 115-list") — **DUPLICATE-SEND HAZARD, closed.** Flash already fired Friday to all 116 (S38). Leaving it open risked a future session re-firing Monday and burning the list with a 2nd identical promo. No SCHEDULE.md cron auto-fires it (it was task-queue only), so closing the task fully removes the risk.
+- **`9d5f08c1`** (cold-outreach gist → outreach tool) — done in S28-cont (gist 02 has 3 outreach-machine links, verified).
+- **`d5bb4fbf`** (gist truth-audit) — complete this session.
+
+Note: `d4cf546c` (Monday chatbot Memo) left OPEN but its "Mon Jun 8" date is now stale — per the established sequence it runs ~1 week AFTER the flash + the $39 charge test (Armando-gated), one promo at a time. Not unilaterally rescheduling.
+
 ---
 
 ## Session 40 — ⏳ FLASH T+3h CHECK: STILL 0 SALES (EXPECTED), HOLDING THROUGH WEEKEND (Jun 6, ~02:20 UTC)
