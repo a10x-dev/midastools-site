@@ -2,14 +2,53 @@
 
 ## Current Status (auto-synced from database)
 
-**Bottleneck**: conversion (severity 7/10) — Acquisition is WORKING — 115 subs (not 45), compounding ~15/day, 100% art/prompt audience. The bottleneck is converting that list to revenue: $155 flat for 33 days. 4 money-tools at 0 activations because they're a business-tool offer to an art audience. The unused lever is the built+proven+no-gate `flash` $29 Image Pack broadcast (audience-matched, our only-ever-converting product). Monday: send flash to the 115 (default if Armando silent); chatbot $39/mo Memo runs a week later after the live charge test.
+**Bottleneck**: conversion (severity 7/10) — The flash $29 Image Pack broadcast — the proven, audience-matched, no-gate lever — is now FIRED to all 116 (was the unused lever). Bottleneck is now purely: does this warm list convert to first list-attributed revenue? Watching Stripe over the 48h flash window. If yes → re-point evergreen day-1 nurture (currently mis-aimed at Listing Machine) to Image Pack. If no → art audience won't convert on packs, pivot offer.
 
 **KPIs**:
 - Conversations: 0 (target: 3, 7d: 0%)
-- Users: 115 (target: 30, 7d: 0%)
+- Users: 116 (target: 30, 7d: 0.8695652173913043%)
 - Revenue: 155 (target: 997, 7d: 0%)
 
 <!-- AGENT-EDITED-BELOW (everything below this line is preserved across ticks) -->
+
+## Session 39 — ⏳ FLASH T+2h CHECK: 0 SALES YET (EXPECTED), DETECTION WIRED, WATCHING 48h WINDOW (Jun 6, ~01:20 UTC / ~19:2x local Fri)
+
+### Trigger
+Per S38 plan: pull Stripe + track-events ~1h after the flash $29 Image Pack broadcast fired to 116. Did exactly that at T+~2h.
+
+### The data
+- **Stripe LIFETIME: 3 sales / $155 — 0 flash sales yet.** Most recent still Arnaud May 2. 24h: 0 sales.
+- **Subs 116 → 117 (+1 organic)** — engine still producing; this signup landed AFTER the broadcast (not a flash recipient). Deliberately did NOT Slack-ping the +1 (routine engine output, not a flash signal; pinging erodes alert-trust per verify-truth-source-on-signal-deltas).
+- **Track-events (400-event window): 0 flash-tagged events.** The only 2 cta_clicks are the recurring chatgpt.com Image Pack click on the viral-art blog — NOT flash email.
+
+### 🔑 Detection mechanics (confirmed, so future checks aren't blind)
+The flash email CTA links **directly to buy.stripe.com** (`tagNurture(IMAGE_PACK_LINK,'flash')`, nurture.js:514). Email→checkout clicks **leave our domain** → they NEVER appear as page_views in track-events. So the ONLY true conversion signal is:
+1. **Stripe lifetime 3→4** (headline detector via metrics-snapshot), AND
+2. webhook `decodeAttributionFromClientRef(session.client_reference_id)` (stripe-webhook.js:633) decodes `c=flash` → emails Armando the source on every sale. A flash sale arrives **self-reporting source=flash**. Verified wired end-to-end. Not blind.
+
+### Honest read
+T+2h, 0 conversions = fully expected for a Friday-evening consumer/hobby send; opens trickle across the leisure weekend. Too early to call either branch. Held all conditional actions:
+- Did NOT re-point day-1 nurture (Listing Machine → Image Pack) — prejudges the test; only flip it once the flash actually converts.
+- Did NOT build money-tool #5 — motion-vs-progress trap; tool #4 still 0 activations.
+- Did NOT ping the +1 sub.
+
+### NEXT
+Re-check Stripe lifetime (3→4?) + any webhook source=flash email across the 48h window. Saturday morning is the real signal point (weekend opens accumulate). If a flash sale lands → re-point day-1 nurture to Image Pack with confidence + list quality validated. If 0 by ~Sun EOD → art audience won't convert on packs, pivot offer.
+
+### Confidence
+85% — Stripe + track-events pulled directly; detection path code-verified. 0-at-T+2h is the expected null result, not a failure signal.
+
+### Continuation — 🔬 SUPPLY-SIDE LIST QUALITY SEGMENTED (makes flash result interpretable)
+Pulled the full 117-sub gist and segmented it (`.founder/deliverables/list-quality-segmentation-2026-06-06.md`). The vague "mix of hobbyists + ~20 corporate tail" is now precise:
+- **63 genuine-hobbyist-likely** (free-provider personal) = the flash's TRUE conversion denominator
+- **34 one-off business/custom domains** = real B2B individuals, mismatched for a $29 art pack (don't read their silence as list failure)
+- **20 near-certain dead weight** = 16 scraped clusters (securitydelta.nl ×6, chameleongroup.co ×4, a7gi.ru ×4, 7-eleven ×2 — corroborates S27/S38 bot-fingerprint exactly) + 3 role + 1 junk
+
+**Reframes the flash math**: denominator is ~63 not 116. So **1 sale ≈ 1.6%** (respectable → validate hobbyist segment, re-point nurture); **0 of ~63 real hobbyists** is a *stronger* pivot signal than 0/116.
+
+**Queued (POST-flash-window ONLY — do NOT mutate the list mid-test):** suppress the 20 dead-weight addresses from future broadcasts (deliverability liability). Task created. Also logged a capability gap: can't measure real deliverability (delivered/bounced/spam) of the 116-send without Resend event access.
+
+---
 
 ## Session 38 — 🚀🔥 FIRED THE FLASH $29 IMAGE PACK BROADCAST TO ALL 116 (Jun 5, ~17:2x local / 23:2x UTC) — FIRST FULL-LIST REVENUE TEST IN COMPANY HISTORY
 
