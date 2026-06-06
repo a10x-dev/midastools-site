@@ -6,10 +6,39 @@
 
 **KPIs**:
 - Conversations: 0 (target: 3, 7d: 0%)
-- Users: 117 (target: 30, 7d: 1.7391304347826086%)
+- Users: 118 (target: 30, 7d: 2.608695652173913%)
 - Revenue: 155 (target: 997, 7d: 0%)
 
 <!-- AGENT-EDITED-BELOW (everything below this line is preserved across ticks) -->
+
+## Session 44 — ⏳ FLASH T+~12.5h STILL 0 (EXPECTED PRE-DAWN-SAT NULL), HONEST CHECK + RE-PACE TO DAYTIME (Jun 6, ~05:47 local / 11:47 UTC, no commit)
+
+### Trigger
+Scheduled re-check of Stripe for the first flash sale. Still pre-dawn Saturday (05:47 local), NOT the Saturday-daytime signal point flagged in S43. Flash bottleneck saturated → passive weekend watch.
+
+### The data (metrics-snapshot direct)
+- **Stripe LIFETIME: 3 sales / $155 — still 0 flash sales.** Most recent still Arnaud May 2. 24h: 0. Ping-worthy: no.
+- **Subs 118 — stable** (no overnight change; matches S43). Uptime 5/5 200.
+- T+~12.5h on a Fri-evening→weekend consumer send = expected null. Saturday *daytime* (weekend opens accumulate) is the true signal point — unchanged from S43.
+
+### Held (flash-test discipline, unchanged)
+Did NOT re-point day-1 nurture → Image Pack (gated on positive flash), did NOT fire the pre-staged 20-sub suppression (gated on 48h window close ~Jun 7 23:2x UTC; one-curl `/api/suppress-subs?...&apply=true` validated S39), did NOT ping a routine null, did NOT build money-tool #5, did NOT invent busywork — the qualifying deferred audit queue (gist truth-audit, 30-URL link audit, day-1 nurture audit, CLAUDE_KIT_LINK fix, queue hygiene) is already closed across S41-S43.
+
+### NEXT
+Saturday daytime (~14:00 UTC+ as weekend opens accumulate): re-check Stripe lifetime 3→4 + webhook source=flash. After 48h window closes ~Jun 7 23:2x UTC: fire suppression then re-point-or-pivot vs ~63-hobbyist denominator (1 sale ≈ 1.6% → validate + re-point nurture to Image Pack; 0/63 → pivot offer).
+
+### Confidence
+88% — Stripe pulled direct; 0-at-T+12.5h pre-dawn-weekend is the expected null, not a signal.
+
+### Continuation — ✅ PRE-BUILT THE POST-FLASH DECISION SYNTHESIS (both branches, pivot branch finally specified)
+User pushed to continue. The flash outcome is locked (email fired Fri, can't re-send), so the only remaining leverage is on the post-window decision (~Jun 7 23:2x UTC, ~40h out). Branch A (converts → re-point nurture + suppress) was fully tooled S38-S43; Branch B (0 sales → pivot) was hand-waved as "pivot offer" with zero actual thinking. Per `pre-build-applies-to-both-plans` that imbalance made the decision dishonest. Wrote `.founder/plans/post-flash-decision-2026-06-07.md`:
+- **Verified the two facts the brief rests on** (not memory): day-1 nurture HTML body `nurture.js:160` leads with `"Try the Listing Machine — Free"` (audience-mismatched, 0 activations) → re-point target confirmed; `pages/api/suppress-subs.js` exists (129 lines, dry-run default, apply=true after window).
+- **Branch A** = re-point day-1 nurture line 160 Listing Machine → Image Pack + fire suppression one-curl + consider recurring flash cadence.
+- **Branch B (the real new thinking)** = 0/63 hobbyists on a matched $29 pack confirms the `buyer-vs-funnel-mismatch` structural hypothesis (list = free-seekers; the 3 real buyers were SKU-page Stripe-Link impulse buyers, not email-nurtured). 3 ranked pivots: **B1** $9 tripwire test (cheapest price-elasticity test, fulfillment already built) → **B2** fix acquisition to target SKU-page buyers not free-seekers (the real strategic pivot, only if B1 also flats) → **B3** fix the wrong Listing Machine day-1 CTA regardless.
+- **Recommended Branch B sequence:** fire B1 first (distinguishes "price too high" from "won't pay at all"), hold B2 until B1 flats, do B3 under every branch.
+This compresses tomorrow night's window-close from a deliberation into a flip-the-switch + forces the honest pivot-thinking up front instead of at the decision moment. Plan-agnostic, reversible (brief on disk, nothing shipped), Armando-independent, doesn't touch the flash mechanism/denominator.
+
+---
 
 ## Session 43 — ⏳ FLASH T+~11.5h STILL 0 (EXPECTED) + RE-CLOSED 10 STALE TASKS DASHBOARD STILL SHOWED AS OPEN (Jun 6, ~04:46 local / 10:46 UTC, no commit)
 
