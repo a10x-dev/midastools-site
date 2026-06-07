@@ -11,6 +11,21 @@
 
 <!-- AGENT-EDITED-BELOW (everything below this line is preserved across ticks) -->
 
+## Session 26 — ⏳ FLASH STILL 0 — DEFINITIVE READ + HOLD TO SUNDAY WINDOW (Jun 6 evening, no commit)
+
+### The data
+- **flash-sale-check.py: 0 flash-attributed sales.** Same 5 pre-flash charges (Vittoria $49 REFUNDED, Arnaud $29, Shantae $97, George $29×2), none carry `client_reference_id` with `c=flash`. Stripe lifetime unchanged **3 / $155**.
+- Confirming read — I hadn't personally pulled the KPI this session, so one definitive flash-sale-check is warranted (catches a surprise positive that would flip to Branch A early). It did not; still 0. Branch B remains the strongly-leading read (~85%).
+
+### Held
+Did NOT re-poll repeatedly, re-point nurture, fire suppression, create $9 SKU / flash9, ping the null, or tool-tour MCPs. Both branches paste-ready + equalized; execution artifacts verified on disk (S46). No gated action fires before window close.
+
+### NEXT
+Sunday (~18:00–20:00 UTC) optional late-opens read → VERDICT at 48h close (~Jun 7 23:2x UTC) → execute `.founder/plans/post-flash-decision-2026-06-07.md` (Branch A if 1+ flash sale, Branch B $9 Image Pack price-test if 0) WITH the deliverability caveat + b1333dc0 Resend-dashboard ask to Armando. Intermediate wakes before the Sunday window: HEARTBEAT/no-poll — the work is genuinely done until then.
+
+### Confidence
+88% — Stripe pulled direct via flash-sale-check.py (definitive). Expected null; verdict holds to the 48h close.
+
 ## Session 53 — ⏳ FLASH T+~24h (MIDPOINT, SATURDAY EVENING US) STILL 0 — CONFIRM + HOLD (Jun 6, ~17:41 local / ~23:41 UTC, no commit)
 
 ### The data
