@@ -11,6 +11,21 @@
 
 <!-- AGENT-EDITED-BELOW (everything below this line is preserved across ticks) -->
 
+## Session 26 — ⏳ FLASH T+~46.5h NEAR-FINAL READ STILL 0 → BRANCH B ~95%, HOLD FINAL ~1.5h TO 48h CLOSE (Jun 7 ~16:00 local / ~22:00 UTC, no commit)
+
+### The data
+- **flash-sale-check.py: 0 flash-attributed sales** at T+~46.5h (~22:00 UTC, ~1.5h before the 48h close ~23:2x UTC). Same 5 pre-flash charges (Vittoria $49 REFUNDED, Arnaud $29, Shantae $97, George $29×2), none carry `client_reference_id` with `c=flash`. Stripe lifetime unchanged **3 / $155**.
+- Near-final read: full weekend + Saturday signal window (closed at 0 two days, S52) + Sunday daytime/early-evening US opens are essentially all in. **Branch B (~95%, up from ~92%).** Formal verdict + execution still hold to the 48h close.
+
+### Decision — hold execution, do NOT fire Branch B yet
+Asymmetry: executing Branch B now (create $9 SKU + fire flash9 to the warm 116-list) = a 2nd promo in 2 days that burns the list AND confounds the diagnostic, AND a late Sunday-evening US buyer can still land in the final ~90min → would flip to Branch A (the no-burn outcome). Cost of waiting = one cheap wake; cost of premature Branch B = burned list + possibly wrong branch. Hold to the close. Both branches paste-ready/equalized/disk-verified (S46/S48/S51).
+
+### NEXT
+At/just-after ~23:2x UTC (48h close): final flash-sale-check.py → execute `.founder/plans/post-flash-decision-2026-06-07.md` (Branch B $9 Image Pack price-test if 0, Branch A re-point nurture if 1+) + bundle the Resend-deliverability ask (`b1333dc0`) + the Gmail-MCP-live FYI to Armando.
+
+### Confidence
+89% — Stripe pulled direct via flash-sale-check.py (definitive). A T+46.5h Sunday-evening 0 with weekend opens essentially exhausted locks Branch B hard, but the formal verdict + execution hold to the close.
+
 ## Session 25 — ⏳ FLASH T+~43.5h STILL 0 (BRANCH B ~92%) + 🔎 GMAIL MCP UNLOCKED, DELON-VIA-GMAIL FALSIFIED (Jun 7 ~12:46 local / 18:46 UTC, no commit)
 
 ### The data
