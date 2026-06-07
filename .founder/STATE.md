@@ -11,6 +11,27 @@
 
 <!-- AGENT-EDITED-BELOW (everything below this line is preserved across ticks) -->
 
+## Session 25 — ⏳ FLASH T+~43.5h STILL 0 (BRANCH B ~92%) + 🔎 GMAIL MCP UNLOCKED, DELON-VIA-GMAIL FALSIFIED (Jun 7 ~12:46 local / 18:46 UTC, no commit)
+
+### The data
+- **flash-sale-check.py: 0 flash-attributed sales** at T+~43.5h (18:46 UTC). Same 5 pre-flash charges, none carry `c=flash`. Lifetime unchanged **3 / $155**. US Sunday-afternoon opens are now largely in → **Branch B (~92%, up from ~90%)**. Formal verdict still holds to the 48h close (~23:2x UTC, ~4.5h out).
+- Verified all 3 execution artifacts on disk (post-flash brief 71L, B1 spec 103L, suppress-subs.js 129L). Verdict brief already bundles the suppression curl + the Resend-deliverability ask to Armando. Verdict-day is flip-the-switch.
+
+### 🔎 Gmail MCP now AUTHENTICATED on iam@armando.mx — but it does NOT unlock delon
+- Confirmed live: `search_threads newer_than:60d` returns the real inbox. Saw a routine homepage signup **katvc@yahoo.com 16:47 UTC** (engine output, ~15/day cadence — NOT pinged, not flash-related).
+- Searched `in:anywhere` for zplatform / delon / "Guest Post" / replies@midastools.co → **ALL EMPTY**. The delon@zplatform replies are **not in Armando's Gmail** (never forwarded; they hit Resend Inbound at replies@midastools.co = metadata-only per S32). **The 12-day assumption that "Gmail /mcp unlock → read delon bodies" is FALSIFIED.** delon bodies remain permanently unrecoverable from our seat; only Armando's Resend dashboard or a Resend scope upgrade can surface them.
+- **Closed task `b49e42ff`** (validated negative). Reframes `12370e73` — Gmail is ruled out as the relay path.
+- **Durable capability win**: Gmail MCP is live → future inbound to iam@armando.mx + iam+midas@armando.mx (subscriber notifications, customer replies) is now self-readable without an Armando relay.
+
+### Held
+Did NOT execute Branch B pre-close (firing the $9 SKU / flash9 now = 2nd promo to the warm list in 2 days that burns it AND confounds the diagnostic), did NOT re-poll flash, did NOT fire suppression (gated on close), did NOT tool-tour Slack/Vibe MCPs (no decided question).
+
+### NEXT
+Heartbeat-hold until ~23:00+ UTC, then VERDICT read via flash-sale-check.py at the 48h close → execute `.founder/plans/post-flash-decision-2026-06-07.md` (Branch B $9 Image Pack price-test if 0, Branch A re-point nurture if 1+) + bundle the Resend-deliverability ask + the Gmail-MCP-live FYI to Armando.
+
+### Confidence
+89% — Stripe pulled direct (definitive); Gmail-empty result verified across 3 searches incl. in:anywhere. A T+43.5h Sunday-afternoon 0 with opens largely in tilts hard to Branch B, but the formal verdict holds to the close.
+
 ## Session 26 — ⏳ FLASH T+~42h LATE-SUNDAY-MORNING READ STILL 0 — LOCKS BRANCH B LEAN (~90%), VERDICT HOLDS TO 48h CLOSE (Jun 7 ~17:29 UTC / 11:29 local, no commit)
 
 ### The data
