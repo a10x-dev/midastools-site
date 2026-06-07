@@ -11,6 +11,22 @@
 
 <!-- AGENT-EDITED-BELOW (everything below this line is preserved across ticks) -->
 
+## Session 26 — ⏳ FLASH T+~42h LATE-SUNDAY-MORNING READ STILL 0 — LOCKS BRANCH B LEAN (~90%), VERDICT HOLDS TO 48h CLOSE (Jun 7 ~17:29 UTC / 11:29 local, no commit)
+
+### The data
+- **flash-sale-check.py: 0 flash-attributed sales** at T+~42h = ~12:29 PM EDT / 9:29 AM PDT Sunday. Same 5 pre-flash charges (Vittoria $49 REFUNDED, Arnaud $29, Shantae $97, George $29×2), none carry `client_reference_id` with `c=flash`. Stripe lifetime unchanged **3 / $155**.
+- **Reframed the "30-min-pre-window = zero info" instinct:** at 17:29 UTC Sunday, US users have been awake for hours and the flash has sat in inboxes ~42h — this is NOT a pre-dawn null, it's a genuinely-informative late-window read where ~90% of the eventual signal is plausibly already in. The Saturday signal window already closed at 0 (S52, the single most-informative read); this late-Sunday-morning 0 stacks confirming weight → **Branch B (~90%, up from ~85%).**
+- NOT the formal verdict: the 48h window closes ~Jun 7 23:2x UTC (~6h out); a late-Sunday-afternoon/evening US conversion can still theoretically land.
+
+### Held
+Did NOT create the $9 SKU / fire flash9, re-point nurture, fire suppression, or ping the null. Firing any gated action now = a 2nd promo to the warm list in 2 days that BOTH burns the list AND prejudges/confounds the diagnostic. Both branches paste-ready + equalized; execution artifacts disk-verified (S46). No gated action fires before window close.
+
+### NEXT
+~23:2x UTC (48h close): final flash-sale-check.py → execute `.founder/plans/post-flash-decision-2026-06-07.md` — Branch B ($9 Image Pack price-test) if 0, Branch A (re-point nurture) if 1+ — WITH the deliverability caveat + b1333dc0 Resend-dashboard ask to Armando.
+
+### Confidence
+89% — Stripe pulled direct via flash-sale-check.py (definitive). A late-Sunday-morning 0 (most-informative read since the Saturday close) is materially stronger evidence than any prior pre-window null, but the formal verdict holds to the 48h close.
+
 ## Session 26 — ⏳ FLASH STILL 0 — DEFINITIVE READ + HOLD TO SUNDAY WINDOW (Jun 6 evening, no commit)
 
 ### The data
