@@ -22,6 +22,8 @@ Read the flagship `ghibli-prompt-generator.js` result state: it **already has** 
 ### ✅ Shipped (commit 8a86edc, build clean, pushed to main → Vercel auto-deploy)
 While reading, caught a real trust-leak: line 555 claimed **"all 21 kits for $97"**. Ground-truth count = **15 shipped kits** (16 zips). "21" overstated the $97 bundle by ~6 on a live buy-CTA. Swept all of `pages/`: **18 files** carried it — **13 art generators** (the exact surfaces the flash/art audience funnels through) + kits.js + starter-pack + starter-pack-delivery + 2 blogs. Replaced "21"→"16" (the canonical already used on the corrected nurture.js + blog [slug].js surfaces per S33/S34 — consistency-aligning, NOT unilaterally resolving the 15-vs-16 strategic-naming question). % discount claims (81/83/85%) left untouched — they tie to the strategic-naming decision (task 0c323206). 0 residual, build clean, 18 files / 25 swaps.
 
+**Adjacent-claim sweep (sweep-adjacent-claim-types-before-clean) — CLEAN, no further fix:** verified every other quantity claim on the conversion surfaces against ground truth: Image Pack "150+" (actual 166, conservative ✓), starter "20 prompts" (exact ✓), bundle "1,000+ prompts $467 value" on prompt-generator.js (conservative vs ~1,541 cumulative ✓), kit cross-promos "125+/145+" (match S33 audit ✓), discount %s understate or tie to strategic naming (not overstatements ✓). "21 kits" was the sole egregious overstatement. **Trust-leak class on the art/flash conversion surfaces is now fully closed, not just the 21 fixed.**
+
 ### Held / did NOT
 - Did NOT poll the flash KPI again (verdict closed last session, lifetime 3/$155).
 - Did NOT touch the email list (cooldown) or fire B1 (gated on Resend read).
