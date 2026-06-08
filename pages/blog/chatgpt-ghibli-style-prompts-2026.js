@@ -202,9 +202,18 @@ export default function GhibliStylePrompts2026() {
           <strong>⚡ Pro tip:</strong> For the best Ghibli portraits, start your prompt with &ldquo;Transform this photo into a Studio Ghibli-style animated character portrait. Preserve the person&apos;s unique features and expression while...&rdquo; This tells the AI to keep the likeness.
         </div>
 
+        {/* ART MACHINE BRIDGE — make the actual image, not just the prompt */}
+        <div style={{ marginTop: 24, padding: 24, background: '#EEF2FF', border: '2px solid #3B5FFF', borderRadius: 8 }}>
+          <h3 style={{ margin: '0 0 8px', fontSize: '1.15rem' }}>🖼️ Skip the prompt-writing — make the actual Ghibli image here, free</h3>
+          <p style={{ margin: '0 0 14px', color: '#374151', fontSize: 15 }}>The prompts above are great if you want to paste into ChatGPT yourself. But if you just want the <strong>finished Ghibli image</strong> — pick the Ghibli style, describe your scene, and <strong>The Art Machine</strong> makes it for you. No prompt engineering, no jumping to another tool. First one&apos;s free.</p>
+          <a href="/ai-art-generator?style=ghibli" data-cta="ghibli-blog-artmachine" style={{ display: 'inline-block', background: '#3B5FFF', color: '#fff', padding: '12px 26px', borderRadius: 100, textDecoration: 'none', fontWeight: 700, fontSize: 15 }}>
+            Make My Ghibli Image — Free →
+          </a>
+        </div>
+
         {/* FREE TOOL CTA */}
         <div style={sty.ctaBox}>
-          <h3 style={{ margin: '0 0 8px', fontSize: '1.1rem' }}>🎨 Build Custom Ghibli Prompts in Seconds</h3>
+          <h3 style={{ margin: '0 0 8px', fontSize: '1.1rem' }}>🎨 Prefer to write the prompt yourself?</h3>
           <p style={{ margin: '0 0 12px', color: '#6B7280', fontSize: 15 }}>Our free <strong>AI Image Prompt Builder</strong> has Studio Ghibli as a built-in style. Pick your mood, lighting, and camera angle — get a perfect prompt optimized for ChatGPT, Midjourney, or DALL·E.</p>
           <a href="/image-prompt-builder" style={{ display: 'inline-block', background: '#059669', color: '#fff', padding: '10px 24px', borderRadius: 100, textDecoration: 'none', fontWeight: 700, fontSize: 14 }}>
             Try the Image Prompt Builder Free →
