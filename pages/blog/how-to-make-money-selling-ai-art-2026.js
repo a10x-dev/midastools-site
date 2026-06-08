@@ -238,6 +238,15 @@ export default function HowToMakeMoneySellingAiArt2026() {
           <li>Always upscale to at least 4000px on the longest side for print quality.</li>
         </ul>
 
+        {/* ==================== ART MACHINE BRIDGE (lead free CTA — make the result, not just a prompt) ==================== */}
+        <div style={{ marginTop: '32px', marginBottom: '32px', padding: '24px', background: '#FFF7ED', border: '1px solid #FDBA74', borderRadius: '8px', textAlign: 'center' }}>
+          <p style={{ margin: '0 0 12px', fontSize: '16px', fontWeight: '700' }}>Skip the prompt-writing &mdash; make the actual art</p>
+          <p style={{ margin: '0 0 16px', color: '#6B7280', fontSize: '15px' }}>Every method above needs one thing first: finished images you can sell. The Art Machine turns a plain description into a ready-to-sell image &mdash; pet portraits, Ghibli-style art, 3D characters and more. No prompt skills, no Midjourney subscription. First image free.</p>
+          <a href="/ai-art-generator" style={{ display: 'inline-block', background: '#EA580C', color: '#fff', padding: '14px 28px', borderRadius: '6px', textDecoration: 'none', fontWeight: '700', fontSize: '15px' }}>
+            Try The Art Machine &mdash; Free &rarr;
+          </a>
+        </div>
+
         {/* ==================== CTA 1 ==================== */}
         <div style={{ marginTop: '32px', marginBottom: '32px', padding: '24px', background: '#F0F4FF', border: '1px solid #93B4FF', borderRadius: '8px', textAlign: 'center' }}>
           <p style={{ margin: '0 0 12px', fontSize: '16px', fontWeight: '700' }}>Want 145+ Ready-to-Use Image Prompts?</p>
