@@ -11,6 +11,32 @@
 
 <!-- AGENT-EDITED-BELOW (everything below this line is preserved across ticks) -->
 
+## Session 28 — ✅ KILLED THE "21 KITS" TRUST-LEAK ON 18 LIVE CONVERSION SURFACES (Jun 8 ~00:1x UTC, commit 8a86edc pushed)
+
+### Continuity + honest situational read
+Last session's plan ("hold; execute B1/B2 on Armando's Resend read") is doubly gated — Armando's read (empirically near-zero async response) + list-burn cooldown (~1wk from Jun 5 flash), both days out. A 26th polling tick is the motion-vs-progress trap. So I scanned for ONE qualifying Armando-independent + plan-agnostic + reversible + bottleneck-direct task and shipped it.
+
+### What I verified (reframes the conversion bottleneck)
+Read the flagship `ghibli-prompt-generator.js` result state: it **already has** a peak-intent direct-Stripe Image Pack $29 CTA at the "Prompt Unlocked!" moment (lines 548-557). So the art audience IS being offered the matched $29 pack at the highest in-product intent moment we have — and still ~0 buy. This **confirms** (doesn't refute) the flash verdict: art free-seekers don't convert on packs even via a well-placed in-product CTA. The conversion fix is a **strategic-pivot decision (Armando's call, task e9e7356c)**, not a missing-CTA problem.
+
+### ✅ Shipped (commit 8a86edc, build clean, pushed to main → Vercel auto-deploy)
+While reading, caught a real trust-leak: line 555 claimed **"all 21 kits for $97"**. Ground-truth count = **15 shipped kits** (16 zips). "21" overstated the $97 bundle by ~6 on a live buy-CTA. Swept all of `pages/`: **18 files** carried it — **13 art generators** (the exact surfaces the flash/art audience funnels through) + kits.js + starter-pack + starter-pack-delivery + 2 blogs. Replaced "21"→"16" (the canonical already used on the corrected nurture.js + blog [slug].js surfaces per S33/S34 — consistency-aligning, NOT unilaterally resolving the 15-vs-16 strategic-naming question). % discount claims (81/83/85%) left untouched — they tie to the strategic-naming decision (task 0c323206). 0 residual, build clean, 18 files / 25 swaps.
+
+### Held / did NOT
+- Did NOT poll the flash KPI again (verdict closed last session, lifetime 3/$155).
+- Did NOT touch the email list (cooldown) or fire B1 (gated on Resend read).
+- Did NOT resolve 15-vs-16 canonical (Armando's strategic call, 0c323206 stays open — but the egregious "21" is now killed everywhere).
+- Did NOT burn Vibe credits / pitch / pivot the flywheel (Armando-strategic).
+
+### Honest accounting
+Direct KPI: zero (this is trust-hygiene at the conversion handoff, not a needle-mover — the audience won't buy regardless per the flash verdict). Indirect: removed a 6-kit overstatement from every live surface the art audience hits, so when the strategic pivot DOES land, the buy-CTAs aren't lying. The real revenue lever remains the Armando-gated audience-mismatch fork (e9e7356c) + Resend read.
+
+### Confidence
+90% — ground-truth count verified by directory inspection, 18-file sweep verified 0 residual, build clean, push confirmed (cb98430..8a86edc).
+
+### NEXT
+On Armando's Resend read: B2 (healthy open → pivot offer for art audience) or re-test B1 on cleaned 107-list after cooldown. Strategic fork e9e7356c is the genuine needle-mover and is his call. Until then: heartbeat-hold — autonomous no-regret levers on this bottleneck are now exhausted.
+
 ## Session 27 — ✅ FLASH VERDICT: BRANCH B (0 SALES @ 48h CLOSE) → SHIPPED B3 + FIRED SUPPRESSION + DELIVERABILITY ASK TO ARMANDO (Jun 7 ~23:0x UTC / ~17:0x local, commit e1b66b4 pushed)
 
 ### The verdict (at the 48h window close)
