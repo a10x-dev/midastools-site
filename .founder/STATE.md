@@ -11,6 +11,34 @@
 
 <!-- AGENT-EDITED-BELOW (everything below this line is preserved across ticks) -->
 
+## Session 27 — ✅ FLASH VERDICT: BRANCH B (0 SALES @ 48h CLOSE) → SHIPPED B3 + FIRED SUPPRESSION + DELIVERABILITY ASK TO ARMANDO (Jun 7 ~23:0x UTC / ~17:0x local, commit e1b66b4 pushed)
+
+### The verdict (at the 48h window close)
+- **flash-sale-check.py @ 23:01 UTC: 0 flash-attributed sales.** Window closes ~23:2x UTC = essentially AT the close. Same 5 pre-flash charges (Vittoria $49 REFUNDED, Arnaud $29, Shantae $97, George $29×2), none carry `client_reference_id` with `c=flash`. **Stripe lifetime unchanged 3 / $155.**
+- **Branch B confirmed.** 0 of ~63 genuine hobbyists buying a perfectly-matched $29 art pack via no-friction direct-Stripe email = strong negative on the "newsletter sells the pack" loop *on this audience*. Consistent with `buyer-vs-funnel-mismatch` (our 3 real buyers were SKU-page Stripe-Link impulse buyers, NOT email-nurtured free-seekers).
+
+### Executed (the no-regret Branch B actions — gates now cleared)
+1. **✅ B3 shipped (commit e1b66b4, pushed, build clean):** re-pointed day-1 nurture (`nurture.js` template 1) primary CTA off the audience-mismatched **Listing Machine** (0 activations across weeks) → **free Ghibli art generator** the art audience actually wants. Narratively coherent (the day-1 framework example is already a Ghibli-print listing). Mega Pack $29 stays as soft paid secondary. Touches ONLY the evergreen drip for the ~15/day NEW art-seeker signups — does NOT broadcast to the list. Reversible single edit. Route + copy S48-verified.
+2. **✅ Suppression fired (window-close gate cleared):** `curl /api/suppress-subs?...&apply=true` → **20 dead-weight subs suppressed, 127→107 active**, KV+gist both written, zero false positives (exact S39 bot/scraped/role cluster: securitydelta.nl ×6, chameleongroup.co ×4, a7gi.ru ×4, 7-eleven ×2, role/SMS junk). Proactively fixes the most-likely deliverability culprit (scraped addresses → sender-reputation drag) before any re-test.
+
+### Held (gated on the deliverability read — the genuine decision-gate)
+- **B1 ($9 Image Pack price-test) HELD.** Per S52 deliverability confound: a 0 could be a spam-folder artifact, not audience-fit. Firing flash9 to the SAME list now would (a) be a 2nd list-burning promo in 2 days AND (b) NOT control for deliverability (same addresses/sender reputation → if flash spam-foldered, flash9 likely does too). The cheaper diagnostic is Armando's Resend dashboard read. Do NOT fire B1 until that returns.
+- **B2 (strategic acquisition pivot to SKU-page buyers) HELD** — only escalate if B1 also flats.
+
+### Sent to Armando (TELEGRAM_SEND)
+Bundled: verdict (Branch B, 0/~63) + the one thing only he can do (Resend dashboard read of the Jun 5 flash broadcast — delivered/opened/bounce de-confounds the 0: >15% open = real audience verdict → pivot offer; poor delivery = partly spam-fold → re-test on the now-cleaned list) + what I shipped (B3 + suppression) + Gmail-MCP-live FYI (durable inbound-reading unlock on iam@armando.mx).
+
+### NEXT
+On Armando's Resend read: if open rate healthy → 0 is real → pivot offer (B2 strategic / new offer for the art audience). If delivery poor → re-test flash on the cleaned 107-list (now with message-id capture per commit 1b74f1a → first natively-measurable broadcast). Until then: heartbeat-hold; B3 + suppression are the complete no-regret action set, B1 is correctly gated.
+
+### Confidence
+90% — Stripe pulled direct via flash-sale-check.py (definitive 0 at the 48h close); B3 build-clean + pushed + route-verified; suppression returned HTTP 200 with exact-match 20 + dual-store write success. The one open variable is the deliverability read, which is precisely what's bundled to Armando.
+
+### Continuation — ✅ EXTENDED B3 ACROSS THE FULL DRIP: day-5 free-tools roundup re-ordered art-first (commit cb98430 pushed)
+Audited all 7 nurture days for audience-mismatched CTAs (the verdict confirmed this list = art/free-seekers). Findings: day-1 ✅ fixed (B3); day-2/3/4 clean (day-3 already source-personalized to art; day-2/4 paired with audience-matched Mega Pack $29 paid, gated); **day-5 mismatch found** — the "20 free tools" roundup LED with the Outreach Machine (cold-email/sales tool) bolded + 💰 emoji as the headline, art generators demoted below. Re-ordered art-first (Ghibli/Pet/Action-figure lead, moved campaign UTM to Ghibli; Outreach Machine + Buyer-Radar demoted to bottom for the services minority). day-6/7 (Bundle $97, business framing) **correctly excluded** — paid CTAs whose framing rewrite would prejudge the deliverability read (not no-regret). node-check + build clean, pushed e1b66b4..cb98430.
+- **Net:** the evergreen drip is now audience-aligned end-to-end for the art-seekers we actually acquire (~15/day). Same no-regret class as B3: mismatched-FREE-tool CTAs → art tools, reversible, plan-agnostic, paid CTAs untouched/gated. Shipped ONE qualifying continuation task then closed — did NOT chain-find day-6/7 framing rewrites (saturation trap + prejudges deliverability).
+- **Still gated (unchanged):** B1 ($9 price-test) on Armando's Resend deliverability read; B2 (acquisition pivot) on B1 also flatting.
+
 ## Session 26 — ⏳ FLASH T+~46.5h NEAR-FINAL READ STILL 0 → BRANCH B ~95%, HOLD FINAL ~1.5h TO 48h CLOSE (Jun 7 ~16:00 local / ~22:00 UTC, no commit)
 
 ### The data
