@@ -2,7 +2,7 @@
 
 ## Current Status (auto-synced from database)
 
-**Bottleneck**: conversion (severity 7/10) — The flash $29 Image Pack broadcast — the proven, audience-matched, no-gate lever — is now FIRED to all 116 (was the unused lever). Bottleneck is now purely: does this warm list convert to first list-attributed revenue? Watching Stripe over the 48h flash window. If yes → re-point evergreen day-1 nurture (currently mis-aimed at Listing Machine) to Image Pack. If no → art audience won't convert on packs, pivot offer.
+**Bottleneck**: conversion (severity 7/10) — Flash $29 verdict in: 0/~63 hobbyists converted via email = warm list does NOT buy packs via newsletter (confirms buyer-vs-funnel-mismatch — real buyers came from SKU pages, not nurture). B3 shipped (day-1 CTA → free art generator) + 20 dead-weight subs suppressed (107 active). Next lever gated on Armando's Resend deliverability read: healthy open rate → 0 is a real audience verdict → pivot the offer for this art audience; poor delivery → re-test the flash on the cleaned 107-list (now with message-id capture per 1b74f1a → first natively-measurable broadcast).
 
 **KPIs**:
 - Conversations: 0 (target: 3, 7d: 0%)
