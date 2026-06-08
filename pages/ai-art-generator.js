@@ -228,11 +228,20 @@ export default function AiArtGenerator() {
         .seo p { font-size: 16px; color: var(--text-secondary); line-height: 1.8; margin-bottom: 14px; }
         .seo li { font-size: 15px; color: var(--text-secondary); line-height: 1.7; margin-bottom: 6px; }
 
+        .am-gallery { margin: 8px 0 28px; }
+        .am-gallery h2 { font-size: 22px; font-weight: 900; text-align: center; color: var(--text); margin-bottom: 6px; }
+        .am-gallery .sub { text-align: center; color: var(--text-secondary); font-size: 15px; margin-bottom: 22px; }
+        .am-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+        .am-card { border-radius: 14px; overflow: hidden; background: #0f172a; box-shadow: 0 4px 20px rgba(0,0,0,0.12); }
+        .am-card img { width: 100%; aspect-ratio: 1; object-fit: cover; display: block; }
+        .am-card .cap { font-size: 12px; font-weight: 700; text-align: center; padding: 9px 4px; color: var(--text-secondary); }
+
         @media(max-width:700px) {
           .am-page { padding: 44px 20px; }
           .am-form { padding: 22px; }
           .chip-grid { grid-template-columns: repeat(2, 1fr); }
           .gate form, .hd form { flex-direction: column; }
+          .am-grid { grid-template-columns: repeat(2, 1fr); }
         }
       `}</style>
 
@@ -246,15 +255,27 @@ export default function AiArtGenerator() {
         </div>
 
         {notConfigured ? (
-          <div className="hd">
-            <h3>Launching this week 🎨</h3>
-            <p>The Art Machine goes live in a few days. Drop your email and you'll be first to make your pet into a Ghibli masterpiece — free.</p>
-            <form onSubmit={handleWaitlist}>
-              <input type="email" placeholder="you@email.com" value={waitEmail} onChange={e => setWaitEmail(e.target.value)} required />
-              <button type="submit">Notify me</button>
-            </form>
-            {waitMsg && <p className="ok" style={{ marginTop: 16, marginBottom: 0 }}>{waitMsg}</p>}
-          </div>
+          <>
+            <div className="am-gallery">
+              <h2>Made with the Art Machine</h2>
+              <p className="sub">Your pet or yourself — turned into real, downloadable art from a few words. Pick a style, we paint it.</p>
+              <div className="am-grid">
+                <div className="am-card"><img src="/art-samples/sample-ghibli.jpg" alt="Ghibli style cat portrait made with the Art Machine" loading="lazy" /><div className="cap">Ghibli</div></div>
+                <div className="am-card"><img src="/art-samples/sample-3d.jpg" alt="3D animated puppy portrait made with the Art Machine" loading="lazy" /><div className="cap">3D Animated</div></div>
+                <div className="am-card"><img src="/art-samples/sample-watercolor.jpg" alt="Watercolor portrait made with the Art Machine" loading="lazy" /><div className="cap">Watercolor</div></div>
+                <div className="am-card"><img src="/art-samples/sample-popart.jpg" alt="Pop art cat portrait made with the Art Machine" loading="lazy" /><div className="cap">Pop Art</div></div>
+              </div>
+            </div>
+            <div className="hd">
+              <h3>Launching this week 🎨</h3>
+              <p>Drop your email and you'll be first to make your pet or yourself into art like the ones above — free.</p>
+              <form onSubmit={handleWaitlist}>
+                <input type="email" placeholder="you@email.com" value={waitEmail} onChange={e => setWaitEmail(e.target.value)} required />
+                <button type="submit">Notify me</button>
+              </form>
+              {waitMsg && <p className="ok" style={{ marginTop: 16, marginBottom: 0 }}>{waitMsg}</p>}
+            </div>
+          </>
         ) : (
           <>
             <div className="am-form">
