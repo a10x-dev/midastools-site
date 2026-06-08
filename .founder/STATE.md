@@ -11,6 +11,48 @@
 
 <!-- AGENT-EDITED-BELOW (everything below this line is preserved across ticks) -->
 
+## Session 26 — 🔑 RESOLVED THE NEEDLE-MOVER FORK WITH MARKET INTEL: PRODUCT-SHAPE MISMATCH, NOT AUDIENCE-MISMATCH (Jun 8 ~02:0x UTC, no commit — intel + spec)
+
+### Continuity + why this wasn't a 26th poll-and-hold
+Last session's plan (B1/B2 on Armando's Resend read) is doubly gated — his read (empirically near-zero async) + list-burn cooldown (~Jun 12). Flash closed (Branch B). Trust-leak class closed. INBOX empty. A 26th polling tick = motion-vs-progress trap. BUT the genuine needle-mover — the audience-mismatch fork (`e9e7356c`) — rested entirely on intuition. Per my own `market-intel-before-decision-day` skill: when the deciding fork rests on no data, STOP waiting, run the intel. Intel ≠ pre-build saturation (per `intel-vs-prebuild-saturation`). So I did the research that turns his open question into a data-backed recommendation.
+
+### Grounded the premise in current numbers
+- **Subs 119 → 127** (~15/day, healthy compounding distribution asset). KPI updated.
+- Lifetime **3 sales / $155**, flat 36+ days.
+- Across 600 track-events: **`outreach_generate: 0`, `listing_generate: 0`, `chatbot_build: 0`** — EVERY money-tool core action is literally zero. 36 subscribe_submit, only 3 cta_clicks. The business-tool flywheel is empirically dead for this audience.
+
+### 🔑 THE REFRAME (changes the bottleneck diagnosis)
+Research (12 cited sources, deliverable `.founder/deliverables/art-audience-monetization-intel-2026-06-08.md`): this impulse art-consumer audience won't pay for **instructions** (prompt packs) OR **business tools** — they pay for **(a) the flattering finished output of themselves/their pet, (b) physical keepsakes**. Lensa: $7.99/50-avatars, ~$8M/day peak. PhotoAI: $19-99/mo, $132K MRR. Etsy custom portraits $15-50. POD prints $19-49. Impulse no-think zone $5-15.
+- A $29 prompt pack converts ~0 because **a prompt is *work*, not a *result***. We've been selling the wrong SHAPE.
+- Bottleneck sharpens: **"audience-mismatch (do they buy?)" → "product-shape mismatch (audience IS monetizable; wrong product)."** More actionable + more optimistic — we have the distribution, just not the offer.
+
+### Ranked recommendation for `e9e7356c` (his direction pick)
+1. **Option 1 — $4.99 "HD unlock / 10 more variations"** in-product gate at the generation moment (Lensa model). Lowest build, highest fit, reuses generators we own. **Flip-the-switch spec at `.founder/plans/hd-unlock-spec.md`** (~half-day ship on greenlight).
+2. **Option 2 — POD "get this as a print"** ($19 mug / $49 canvas). Additive (free gen stays free), higher AOV, needs his supplier acct + spend.
+3. **Hold Option 4 (subscription)** until one-time buyers prove warm.
+
+### Why gated on Armando, not autonomous-shipped
+Option 1 moves the free/paid line on the protected free-tool flywheel (`feedback_protect_flywheel`); Options 2-4 need his supplier/spend calls. The build is de-risked to flip-the-switch; the *direction pick* is genuinely his. Did NOT create a live SKU / touch the flywheel / prejudge (per stripe-product-pre-build: spec lives in .founder/plans, nothing live).
+
+### Held / did NOT
+Did NOT poll flash (closed), touch the list (cooldown), fire B1 (gated on Resend read), or pre-build Options 2-4 specs (saturation — Option 1 is the clear #1; 2-4 depend on his supplier/spend).
+
+### Confidence
+88% — own funnel data pulled direct (tools at literal 0 confirmed); intel triangulated across 12 cited sources incl. verified Lensa pricing/revenue + active Etsy listings. Reframe well-supported; conversion of any new offer still unproven on THIS list (but best-evidenced shape we've had + it's what the audience demonstrably came for).
+
+### NEXT
+On Armando's direction pick: greenlight the corrected Option 1 (close-the-loop image-gen, ~1-2 days + spend cap) → ship hd-unlock-spec. OR B1/B2 on his Resend read still stand. The fork is now a data-backed yes/no, not an open question.
+
+### 🚨 CONTINUATION — CODEBASE CHECK CORRECTED MY OWN RECOMMENDATION (the deeper root cause)
+Before closing, pressure-tested Option 1's load-bearing assumption against the actual code (per `pre-build-catches-spec-drift`). **Finding: our "art generators" output TEXT PROMPTS, not images** (`navigator.clipboard.writeText(prompt)` → "Copy Prompt" → user goes to ChatGPT/Midjourney for the actual image). So:
+- **The real root cause is deeper than "wrong product shape": we're a prompt-vending middleman on the WRONG SIDE of the value chain.** At peak intent ("Prompt Unlocked!") we hand the art-seeker to a *competitor's* image tool and capture $0 of the value they're about to pay for. Lensa/PhotoAI/Etsy all sell the IMAGE; we sell the instruction to go make it elsewhere. That's why everything converts ~0.
+- **My sent recommendation was wrong on build estimate:** Option 1 is NOT a half-day gate on an existing image (there is no image to upscale). It's a product pivot to GENERATE the image ourselves.
+- **The unlock (verified):** we already own the capability — `.founder/.gemini_key` (Nano Banana/Gemini image gen) on disk + proven (7 ad-creative PNGs in public/reddit-ad-v*.png), but **never wired into a user-facing route** (no image-gen API exists in pages/). The pivot: wire Gemini into ONE generator → free low-res/watermarked image → $4.99 unlock HD. ~1-2 day build, uses an asset we own, fixes the root cause.
+- **Corrected** the deliverable + rewrote hd-unlock-spec.md to reflect image-gen wiring + per-gen spend cap (the real gate = Armando's Gemini-spend greenlight). Sent corrected Telegram.
+
+### Honest accounting (continuation)
+Direct KPI: zero. Indirect: HIGH — caught that the recommendation I shipped 5 min earlier rested on a false premise ("reuses what we own" implied images), corrected it fast (S30/S34 self-correction discipline), and the correction makes the thesis STRONGER (we own the image-gen key, just never connected it to users). The strategic fork is now not just data-backed but root-cause-accurate. Saturation reached: the direction + spend pick is genuinely Armando's; no further autonomous lever exists that doesn't prejudge his positioning or spend.
+
 ## Session 28 — ✅ KILLED THE "21 KITS" TRUST-LEAK ON 18 LIVE CONVERSION SURFACES (Jun 8 ~00:1x UTC, commit 8a86edc pushed)
 
 ### Continuity + honest situational read
