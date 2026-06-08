@@ -506,7 +506,7 @@ export default function PhotoRoastGenerator() {
                   <p style={{ fontSize: 18, fontWeight: 700, margin: '0 0 8px' }}>Want 1000+ AI Prompts?</p>
                   <p style={{ fontSize: 14, color: '#9CA3AF', margin: '0 0 20px' }}>Roasts, image prompts, business tools, coding assistants, and 20+ categories — all copy-paste ready.</p>
                   <a href={STRIPE_BUNDLE} style={{ display: 'inline-block', background: '#EF4444', color: '#FFF', fontWeight: 700, fontSize: 16, padding: '14px 32px', borderRadius: 99, textDecoration: 'none' }}>
-                    Get All 21 Kits — $97
+                    Get All 16 Kits — $97
                   </a>
                 </div>
               </div>

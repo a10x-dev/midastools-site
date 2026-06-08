@@ -309,7 +309,7 @@ export default function Kits() {
       <div className="bundle-upsell">
         <div className="bundle-box">
           <div className="badge" style={{ marginBottom: 20 }}>Best Value</div>
-          <h2>Get all 21 kits + future kits for $97</h2>
+          <h2>Get all 16 kits + future kits for $97</h2>
           <p>Video Pack + Image Pack + Notion Templates + Resume &amp; Career + Email Marketing + Presentation Kit + Prompt Mega Pack + Starter + Real Estate + Content Creator + Freelancer + Small Business + E-commerce + SaaS Founder + Social Media Kit — plus every kit we release in the future, free.</p>
           <a href={BUNDLE_STRIPE} className="btn-primary">Get the Bundle — $97 &rarr;</a>
         </div>

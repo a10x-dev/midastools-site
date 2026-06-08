@@ -159,7 +159,7 @@ The question isn't whether this is possible anymore. Felix proved it is — with
 
 The question is: **can you replicate it?**
 
-**Yes.** We packaged the exact templates, workflows, and prompts Felix uses into a kit you can deploy today. **[Get the Starter Kit — $29 →](https://buy.stripe.com/cNi28qdgz7mVb0U8VYcMM07)** or grab **[All 21 Kits for $97 (81% off) →](https://buy.stripe.com/bJe7sK0tNdLjgle0pscMM0b)** · [Buy on Gumroad →](https://manduks.gumroad.com/l/iiiwf)
+**Yes.** We packaged the exact templates, workflows, and prompts Felix uses into a kit you can deploy today. **[Get the Starter Kit — $29 →](https://buy.stripe.com/cNi28qdgz7mVb0U8VYcMM07)** or grab **[All 16 Kits for $97 (81% off) →](https://buy.stripe.com/bJe7sK0tNdLjgle0pscMM0b)** · [Buy on Gumroad →](https://manduks.gumroad.com/l/iiiwf)
 
 ## How to Replicate the Felix Model
 
@@ -169,7 +169,7 @@ Felix runs on OpenClaw with:
 - A daily review workflow
 - Access to Stripe, Vercel, GitHub, and email
 
-**Step 1 — Get the blueprints:** The [OpenClaw Entrepreneur Starter Kit ($29)](https://buy.stripe.com/cNi28qdgz7mVb0U8VYcMM07) includes Felix's exact SOUL.md template, HEARTBEAT.md system, daily review workflow, and Stripe/Vercel integration configs. Or get everything we make with [All 21 Kits — $97](https://buy.stripe.com/bJe7sK0tNdLjgle0pscMM0b). Prefer Gumroad? [Get it here →](https://manduks.gumroad.com/l/pdcjj)
+**Step 1 — Get the blueprints:** The [OpenClaw Entrepreneur Starter Kit ($29)](https://buy.stripe.com/cNi28qdgz7mVb0U8VYcMM07) includes Felix's exact SOUL.md template, HEARTBEAT.md system, daily review workflow, and Stripe/Vercel integration configs. Or get everything we make with [All 16 Kits — $97](https://buy.stripe.com/bJe7sK0tNdLjgle0pscMM0b). Prefer Gumroad? [Get it here →](https://manduks.gumroad.com/l/pdcjj)
 
 **Step 2 — Configure your agent:** Use our [free SOUL.md Generator](/soul-generator) to customize the config for your industry — 6 presets included.
 
@@ -1002,7 +1002,7 @@ Turn yourself into a movie character.
 4. **Add texture** — film grain, canvas, watercolor, holographic foil
 5. **Reference styles** — name specific artists, movies, or aesthetics
 
-**Want 145+ more prompts like these, pre-built and organized by category?** Get the [AI Image Prompt Pack — $29](https://buy.stripe.com/8x24gyccv7mVglegoqcMM0i) or grab [All 21 Kits — $97](https://buy.stripe.com/bJe7sK0tNdLjgle0pscMM0b)
+**Want 145+ more prompts like these, pre-built and organized by category?** Get the [AI Image Prompt Pack — $29](https://buy.stripe.com/8x24gyccv7mVglegoqcMM0i) or grab [All 16 Kits — $97](https://buy.stripe.com/bJe7sK0tNdLjgle0pscMM0b)
 
 **Or build your own prompts visually** with our free [AI Image Prompt Builder](/image-prompt-builder) — 25 styles, mood controls, lighting presets, and platform-specific formatting for ChatGPT, Midjourney, DALL·E, and Stable Diffusion.
 
@@ -1370,7 +1370,7 @@ One Reddit lead could be worth $5K+. The kit costs $49. Your first reply pays fo
 
 Here are the **10 viral AI art trends** dominating 2026, why they work, and how to create them yourself (with free tools).
 
-> **Want the prompts behind every trend below — pre-tested, copy-paste, all 150+?** Skip the trial-and-error: **[Get the AI Image Prompt Pack — $29 →](https://buy.stripe.com/8x24gyccv7mVglegoqcMM0i)** (Ghibli, Funko, action-figure, fantasy maps, tattoos, dioramas, LEGO + more). Or **[get all 21 Midas Tools kits — $97 →](https://buy.stripe.com/bJe7sK0tNdLjgle0pscMM0b)** (85% off — includes the Image Pack). 30-day guarantee.
+> **Want the prompts behind every trend below — pre-tested, copy-paste, all 150+?** Skip the trial-and-error: **[Get the AI Image Prompt Pack — $29 →](https://buy.stripe.com/8x24gyccv7mVglegoqcMM0i)** (Ghibli, Funko, action-figure, fantasy maps, tattoos, dioramas, LEGO + more). Or **[get all 16 Midas Tools kits — $97 →](https://buy.stripe.com/bJe7sK0tNdLjgle0pscMM0b)** (85% off — includes the Image Pack). 30-day guarantee.
 
 > **May 2026 update:** All 10 trends below are still actively viral. The "Hug My Younger Self" trend (#6) crossed 50M+ posts globally in early May. The Action Figure / Funko Pop trend (#3) keeps mutating into new sub-styles (LEGO, Anime, Pokémon). For the freshest May 2026 lineup, see our companion piece: [10 Best AI Tools to Try in May 2026 →](/blog/best-ai-tools-may-2026).
 
@@ -1493,7 +1493,7 @@ Turn yourself into a LEGO minifigure, complete with ABS plastic texture, box art
 Our free generators give you one prompt at a time. The **AI Image Prompt Pack** gives you **150+ curated prompts** across all these trends — organized, tested, and ready to copy-paste.
 
 - [Get the AI Image Prompt Pack — $29](https://buy.stripe.com/8x24gyccv7mVglegoqcMM0i)
-- [Get All 21 Kits — $97 (85% off)](https://buy.stripe.com/bJe7sK0tNdLjgle0pscMM0b)
+- [Get All 16 Kits — $97 (85% off)](https://buy.stripe.com/bJe7sK0tNdLjgle0pscMM0b)
 - [Browse all 20+ free AI tools →](/tools)
 `,
   },

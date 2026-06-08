@@ -525,7 +525,7 @@ export default function HugYoungerSelfGenerator() {
                       Image Pack — $29
                     </a>
                     <a href={STRIPE_BUNDLE} style={{ padding: '12px 24px', fontSize: 15, fontWeight: 700, color: '#7C3AED', background: '#FFF', border: '2px solid #7C3AED', borderRadius: 99, textDecoration: 'none' }}>
-                      All 21 Kits — $97
+                      All 16 Kits — $97
                     </a>
                   </div>
                 </div>

@@ -159,14 +159,14 @@ export default function StarterPack() {
             <div style={{ fontSize: 12, fontWeight: 700, letterSpacing: 2, opacity: 0.8, marginBottom: 10 }}>WANT MORE AFTER THIS?</div>
             <h3 style={{ fontSize: 26, fontWeight: 800, margin: '0 0 12px' }}>Upgrade to the full 145+ prompts</h3>
             <p style={{ fontSize: 16, opacity: 0.9, margin: '0 0 20px' }}>
-              After you buy the starter pack, you can upgrade to the Mega Pack for just the difference ($20). Or grab all 21 kits for $97.
+              After you buy the starter pack, you can upgrade to the Mega Pack for just the difference ($20). Or grab all 16 kits for $97.
             </p>
             <div style={{ display: 'flex', gap: 12, justifyContent: 'center', flexWrap: 'wrap' }}>
               <a href="/ai-prompt-mega-pack" style={{ background: '#FFF', color: '#1E3A8A', fontWeight: 700, padding: '12px 24px', borderRadius: 99, textDecoration: 'none' }}>
                 Mega Pack — $29
               </a>
               <a href="/bundle" style={{ background: 'transparent', color: '#FFF', fontWeight: 700, padding: '12px 24px', borderRadius: 99, textDecoration: 'none', border: '2px solid #FFF' }}>
-                All 21 Kits — $97
+                All 16 Kits — $97
               </a>
             </div>
           </div>
@@ -176,7 +176,7 @@ export default function StarterPack() {
         <section style={{ padding: '40px 24px', maxWidth: 760, margin: '0 auto' }}>
           <h2 style={{ fontSize: 24, fontWeight: 800, margin: '0 0 24px', textAlign: 'center' }}>Quick Questions</h2>
           {[
-            { q: 'Why only $9?', a: 'It\'s a starter pack — we\'d rather you try us for $9, love the prompts, and decide if you want the full 145+ at $29 (or all 21 kits for $97). No pressure.' },
+            { q: 'Why only $9?', a: 'It\'s a starter pack — we\'d rather you try us for $9, love the prompts, and decide if you want the full 145+ at $29 (or all 16 kits for $97). No pressure.' },
             { q: 'What do I actually get?', a: '20 prompts delivered as copy-paste text. Each prompt includes variable placeholders (like [COMPANY_NAME]) so you can customize it to your use case instantly.' },
             { q: 'Works with ChatGPT? Claude? Gemini?', a: 'Yes — all three. Prompts are written to be model-agnostic. If you have a free ChatGPT account, you can use every one of them.' },
             { q: 'Is this the same as the $29 Mega Pack?', a: 'It\'s the best 20 out of the 145+ in the Mega Pack. If you buy this and want the full pack, we\'ll credit your $9 toward the upgrade.' },

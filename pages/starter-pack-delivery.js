@@ -79,14 +79,14 @@ export default function StarterPackDelivery() {
             <div style={{ fontSize: 12, fontWeight: 700, letterSpacing: 2, opacity: 0.8, marginBottom: 10 }}>LIKED THESE?</div>
             <h3 style={{ fontSize: 24, fontWeight: 800, margin: '0 0 12px' }}>Get 180+ more like these</h3>
             <p style={{ fontSize: 15, opacity: 0.9, margin: '0 0 20px' }}>
-              You just got the 20 best of our 145+ prompt Mega Pack. Upgrade to the full pack for $29 (or all 21 kits for $97).
+              You just got the 20 best of our 145+ prompt Mega Pack. Upgrade to the full pack for $29 (or all 16 kits for $97).
             </p>
             <div style={{ display: 'flex', gap: 10, justifyContent: 'center', flexWrap: 'wrap' }}>
               <a href="/ai-prompt-mega-pack" style={{ background: '#FFF', color: '#1E3A8A', fontWeight: 700, padding: '12px 22px', borderRadius: 99, textDecoration: 'none' }}>
                 Mega Pack — $29
               </a>
               <a href="/bundle" style={{ background: 'transparent', color: '#FFF', fontWeight: 700, padding: '12px 22px', borderRadius: 99, textDecoration: 'none', border: '2px solid #FFF' }}>
-                All 21 Kits — $97
+                All 16 Kits — $97
               </a>
             </div>
           </div>

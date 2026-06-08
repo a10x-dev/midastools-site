@@ -593,7 +593,7 @@ export default function CaricatureGenerator() {
                     Get Image Prompt Pack — $29
                   </a>
                   <p style={{ fontSize: 13, color: '#A5B4FC', margin: '8px 0 0' }}>
-                    Or grab <a href={STRIPE_BUNDLE} style={{ color: '#FFF', fontWeight: 600 }}>all 21 kits for $97</a> (save 85%)
+                    Or grab <a href={STRIPE_BUNDLE} style={{ color: '#FFF', fontWeight: 600 }}>all 16 kits for $97</a> (save 85%)
                   </p>
                 </div>
               </div>
