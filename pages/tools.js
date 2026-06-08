@@ -4,6 +4,14 @@ import Layout from '../components/Layout';
 
 const TOOLS = [
   {
+    title: 'The Art Machine',
+    desc: 'Describe your pet, yourself, or any scene — and get the actual image, made right here. Ghibli, pet portrait, anime, watercolor, 3D, oil, pop art and cyberpunk styles. No prompt to copy, no other app. First image free, download instantly.',
+    href: '/ai-art-generator',
+    tag: '💰 Money Tool',
+    categories: 'AI art · Pet portraits · Ghibli',
+    bg: 'var(--card-amber)',
+  },
+  {
     title: 'Chatbot Builder',
     desc: 'Paste any business website — get a working AI chatbot that answers customer questions and captures leads 24/7, embeddable with one line of code. Local businesses pay $300+/mo for this. Build yours free, put it live for $39/mo, and resell as many as you want.',
     href: '/chatbot-builder',
