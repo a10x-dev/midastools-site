@@ -240,7 +240,9 @@ export default function AiArtGenerator() {
         <div className="am-hero">
           <div className="badge" style={{ marginBottom: 20 }}>AI Art · Free</div>
           <h1>The <span>Art Machine</span></h1>
-          <p>Describe your pet, yourself, or any scene — and get <strong>the actual image</strong>, made right here. No prompt to copy, no other app to open. Pick a style, hit generate, download.</p>
+          <p>{notConfigured
+            ? <>Describe your pet, yourself, or any scene — and get <strong>the actual image</strong>, made right here. No prompt to copy, no other app to open. <strong>Free — launching this week.</strong> Get on the list below.</>
+            : <>Describe your pet, yourself, or any scene — and get <strong>the actual image</strong>, made right here. No prompt to copy, no other app to open. Pick a style, hit generate, download.</>}</p>
         </div>
 
         {notConfigured ? (
