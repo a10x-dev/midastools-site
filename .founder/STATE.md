@@ -2,7 +2,7 @@
 
 ## Current Status (auto-synced from database)
 
-**Bottleneck**: conversion (severity 7/10) — Reframed from audience-mismatch to PRODUCT-SHAPE mismatch. We have a healthy growing distribution asset (127 subs, ~15/day art-seekers) but ZERO PMF: every money-tool core action is literally 0 (outreach/listing/chatbot_generate all 0 over 600 events) and prompt packs convert ~0 even at peak in-product intent. Market intel (12 cited sources) shows this impulse art-consumer audience pays for RESULTS (flattering output of themselves/pet) + physical keepsakes — Lensa $7.99/50-avatars at $8M/day peak, Etsy custom portraits $15-50, POD prints $19-49 — never for instructions. The needle-mover is changing the offer SHAPE, not the audience. Recommendation + flip-the-switch spec ready (hd-unlock-spec.md); direction pick gated on Armando (touches free/paid flywheel line).
+**Bottleneck**: conversion (severity 7/10) — The Art Machine (image-gen, the right-shape money-tool per intel) is live but INERT pending Armando's GEMINI_API_KEY, and discovery is now wired: the top-2 art-seeker surfaces (highest-intent how-to-make-money-selling-ai-art + highest-traffic viral-ai-art-trends chatgpt-citation winner) bridge to it. Until the key is set it captures art_waitlist demand signal (was structurally unreachable at 1 page_view/0 signal). Other money-tools (outreach/listing/chatbot) remain 0 — abandoned for this art audience. Needle-mover is: accumulate art_waitlist evidence → Armando sets key → measure image_generate/hd_waitlist vs 30-session kill-criterion → $4.99 paywall if PMF.
 
 **KPIs**:
 - Conversations: 0 (target: 3, 7d: 0%)
@@ -10,6 +10,44 @@
 - Revenue: 155 (target: 997, 7d: 0%)
 
 <!-- AGENT-EDITED-BELOW (everything below this line is preserved across ticks) -->
+
+## Session 29 — ✅ PLACEMENT CORRECTION: BRIDGED THE #3-TRAFFIC GHIBLI BLOG (the real highest-traffic art-GENERATION surface) (Jun 8 ~00:30 local, commit d3ebc47 pushed + prod-verified live)
+
+### The data that corrected last session's placement
+Pulled the readiness probe (`{ready:false}` — GEMINI_API_KEY still unset, Armando async, expected) + a fresh 600-event track-events window (now spanning Jun 4 → **Jun 8 06:07 UTC**, so it DOES include post-bridge traffic). Two reads:
+- **`/ai-art-generator` = 1 page_view, 0 `art_waitlist`.** The 4 existing bridges (2 generators S27-cont + 2 blogs S25) are NOT driving click-through.
+- **The reason, visible in the full top-18 page distribution:** last session bridged on the wrong surfaces. The actual highest-traffic art-GENERATION-intent surfaces were unbridged:
+  - `/blog/chatgpt-ghibli-style-prompts-2026` — **18 views (#3 sitewide)** ← exact-style-match to the Art Machine, unbridged
+  - `/blog/chatgpt-action-figure-prompt-2026` — 13 views, unbridged
+  - `/blog/chatgpt-image-prompts-2026` — 11 views, unbridged
+  - vs. what S25 bridged: viral-ai-art-trends (11+8) + how-to-make-money-selling-ai-art (<6 views). S25 had incomplete data and bridged browse-intent / lower-traffic surfaces.
+
+### 🔑 This is a placement correction, not spray (the S32 lesson)
+S32 proved over-conservatism (holding bridges off high-traffic surfaces) CREATES the zero. The current `/ai-art-generator` 1-view zero is the same failure: the bridges aren't on the traffic. Ghibli is the single best fix — **#3 sitewide traffic + the Art Machine has an exact Ghibli style** + the page funneled 100% to prompt-vending dead-ends (ChatGPT quick-start, `/image-prompt-builder`, $29 pack). Textbook S26 root-cause (hand the buyer a prompt, send them to a competitor to make the result we'd be paid for).
+
+### ✅ Shipped (commit d3ebc47, build clean, prod-verified live)
+Inserted a **lead** honest-bridge box ABOVE the existing free-tool CTA on the Ghibli blog: "🖼️ Skip the prompt-writing — make the actual Ghibli image here, free" → `/ai-art-generator?style=ghibli` (`data-cta=ghibli-blog-artmachine`). Demoted the `/image-prompt-builder` CTA to secondary ("Prefer to write the prompt yourself?"). $29 pack CTA left intact below as paid path. Honest-bridge: inert waitlist now / live generator on key-set. Polled prod → LIVE ✓.
+
+### Capability note (prerequisite for future bridges)
+`/ai-art-generator` does **NOT read `?style=`** (no router.query handling). It defaults to `ghibli` (useState line 24), so THIS bridge lands correctly. ⚠️ Any future bridge to a non-ghibli surface (action-figure, watercolor, etc.) MUST first wire `?style=` reading into the page, else it lands on ghibli regardless.
+
+### Held / did NOT
+- Did NOT bridge action-figure (13 views) — Art Machine has NO action-figure style (styles: ghibli/pet/3D/watercolor/anime/oil/popart/cyberpunk); forcing it = poor UX, not conservatism.
+- Did NOT bridge chatgpt-image-prompts (11 views, general fit) — held as the documented next-expansion candidate AFTER ghibli produces first click-through/waitlist signal (measured-not-spray).
+- Did NOT ping Armando — `art_waitlist` still 0, no material evidence yet (per S25 plan: ping when the count is meaningful).
+- Did NOT build the $4.99 paywall (pre-build saturation, no PMF signal).
+
+### NEXT
+Watch `/ai-art-generator` page_views + `art_waitlist` from the ghibli bridge (the #3-traffic surface should finally feed the tool). If clicks/waitlist accumulate → ping Armando with the count to set GEMINI_API_KEY + expand to chatgpt-image-prompts. On key-set → verify prod generation + measure vs 30-session kill-criterion → $4.99 paywall if PMF.
+
+### Confidence
+90% — probe + track-events pulled direct (1 page_view / 0 art_waitlist confirmed; ghibli = #3 sitewide confirmed); build clean; bridge curl-verified live on prod; exact Ghibli style-match confirmed in ai-art-generator.js. Only unverified: whether art-blog readers convert to waitlist clicks (the demand thesis itself — now finally fed by the actual top art-generation surface).
+
+### Continuation — ✅ COMPLETED THE TOP-2 PLACEMENT CORRECTION: bridged #7-traffic image-prompts (commit f8ca0bd, prod-verified live)
+On "continue," reconsidered the held image-prompts surface and concluded holding it "for ghibli signal" was the same over-conservatism S32 flags — it's a high-traffic (#7 sitewide, 11 views) genuine-fit (Art Machine makes general images) art-generation surface funneling 100% to dead-ends (image-prompt-builder + Mega Pack). Bridging the verified **top-2** art-generation surfaces by traffic+fit is the measured correction, not spray; more surfaces feeding the inert waitlist NOW = faster art_waitlist evidence. Shipped a lead honest-bridge ("Skip the copy-paste — make the actual image here, free", all-8-styles framing, no `?style` since the page covers all styles) above the prompt-builder CTA. Build clean, pushed, curl-verified live.
+- **Net: 2 art-generation blogs now bridged this session (ghibli + image-prompts) = the complete genuine-fit top tier.** /ai-art-generator was at 1 view; it now draws from the #3 + #7 sitewide pages.
+- **Stopped here (honest):** action-figure (13 views) has NO matching Art Machine style → bridging it = broken-promise UX, not conservatism (could revisit IF an action-figure/figurine style is added to the tool — noted candidate). Remaining art surfaces are lower-traffic (spray risk). Wiring `?style=` reading + adding new styles are pre-build on an INERT tool (near-zero value until GEMINI_API_KEY set). Both gates now genuinely passive (traffic accumulation) + Armando-async (key).
+- **Watch:** /ai-art-generator page_views + art_waitlist from BOTH bridges; ping Armando with the count once meaningful → set key → measure vs kill-criterion.
 
 ## Session 28 — ✅ UNBLOCKED ART MACHINE DISCOVERY: BRIDGED THE TOP-2 ART-SEEKER SURFACES (Jun 8, commit ac4e493 pushed + prod-verified live)
 
