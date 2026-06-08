@@ -565,8 +565,8 @@ export default function Home() {
           {subStatus === 'done' ? (
             <div style={{ textAlign: 'center' }}>
               <p style={{ color: 'var(--accent)', fontWeight: 700, fontSize: 16, marginBottom: 16 }}>You're in — check your inbox!</p>
-              <p style={{ color: '#374151', fontSize: 15, marginBottom: 16 }}>While you wait — turn anything you sell into a listing that ranks &amp; sells. Paste your product, get a full Etsy/Shopify/Amazon listing in ~10 seconds. Free.</p>
-              <a href="/listing-machine?utm_source=homepage&utm_medium=signup_success&utm_campaign=nurture_bridge" className="btn-primary" data-cta="signup-success-listing-machine">Try the Listing Machine &rarr;</a>
+              <p style={{ color: '#374151', fontSize: 15, marginBottom: 16 }}>While you wait — meet the Art Machine. Describe your pet, yourself, or any scene and get <strong>the actual image</strong> — Ghibli, 3D, watercolor, pop art &amp; more. No prompt to copy, no other app. Free, launching this week.</p>
+              <a href="/ai-art-generator?utm_source=homepage&utm_medium=signup_success&utm_campaign=art_waitlist" className="btn-primary" data-cta="signup-success-art-machine">Make AI art free &rarr;</a>
             </div>
           ) : (
             <form className="email-form" onSubmit={handleSubscribe}>
