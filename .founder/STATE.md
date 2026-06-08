@@ -11,6 +11,32 @@
 
 <!-- AGENT-EDITED-BELOW (everything below this line is preserved across ticks) -->
 
+## Session 30 — ✅ BROKE THE CIRCULAR DEPENDENCY: SHIPPED A REAL SAMPLE GALLERY ON THE INERT WAITLIST + ESCALATED THE KEY DECISIVELY (Jun 8 ~05:15 local, commit 22886c2 pushed + prod-verified)
+
+### The data that reframed the move
+Pulled readiness probe (`{ready:false}` — key still unset) + 600-event track-events (window Jun 4 → **Jun 8 10:40 UTC**). `/ai-art-generator` = 1 page_view, 0 art_waitlist STILL. BUT the key realization: my 2 new bridges (ghibli d3ebc47 + image-prompts f8ca0bd) only shipped ~06:40 UTC last session — **only ~4h of live exposure in this window.** So the 1-view/0-waitlist is essentially the pre-bridge state; too early to read the bridges as failing. All 4 bridges verified rendering live (ghibli + image-prompts curl-confirmed).
+
+### 🔑 The circular dependency I was trapped in (6 sessions)
+"Wait for art_waitlist signal before escalating the key" — but art_waitlist can't accumulate because the inert page was a **bare "launching soon" email form with nothing compelling to convert on.** The waitlist of an empty-promise page is a weak signal that may never reach "meaningful." Broke the loop with an Armando-independent move.
+
+### ✅ Shipped (commit 22886c2, build clean, prod-verified)
+**A real sample gallery on the inert waitlist state.** Generated 4 genuine Gemini outputs via gemini-art-smoketest.py (my key, ~$0.16 total, within established prod-smoke envelope) — Ghibli cat / 3D puppy / watercolor woman / pop-art cat — all 1024² sellable quality (viewed 2 to confirm), optimized to 376KB web JPEGs in `/public/art-samples/`. Inserted a "Made with the Art Machine" 4-up gallery ABOVE the email form (Lensa show-the-goods-then-ask pattern). Reframed form copy to "make art like the ones above — free." 4 assets verified HTTP 200 on prod, page 200. Same gallery becomes the live tool's quality-proof on key-set (plan-agnostic).
+
+### ✅ Decisive key escalation (the ship-inert-until-one-action moment)
+After 6 sessions of de-risked built work gated on one 2-min env var, sent ONE crisp Telegram leading with the decision + the spend math ($0.04/image, ~$5/day hard cap, fails closed) pre-addressing the likely objection + exact Vercel mechanic + explicit default (stays a free waitlist). Distinct from prior "paste the key" pings (which were buried in shipped-work updates) — this is the playbook-prescribed single-unlock escalation.
+
+### Held / did NOT
+- Did NOT add a 5th bridge (spray; only 4h of bridge data, can't justify).
+- Did NOT iterate bridge copy (premature — 4h data).
+- Did NOT build the $4.99 paywall (pre-build saturation, no PMF).
+- Key file confirmed present (40 bytes, gitignored → genuinely requires Armando's Vercel action, can't self-deploy without committing a secret).
+
+### NEXT
+Watch art_waitlist now that the inert page is compelling (real samples + the 4 bridges now have real exposure). If it accumulates → that's the "meaningful N" for a follow-up key nudge. On key-set → verify prod generation + the gallery doubles as live quality-proof + measure vs 30-session kill-criterion → $4.99 paywall if PMF.
+
+### Confidence
+90% — probe + track-events pulled direct; 4 real images generated + 2 viewed (sellable); build clean; commit pushed; 4 sample assets + page curl-verified 200 on prod. Only unverified: whether the gallery lifts art_waitlist conversion (the thesis — but it's the cheapest test of it and strictly better than a bare form).
+
 ## Session 29 — ✅ PLACEMENT CORRECTION: BRIDGED THE #3-TRAFFIC GHIBLI BLOG (the real highest-traffic art-GENERATION surface) (Jun 8 ~00:30 local, commit d3ebc47 pushed + prod-verified live)
 
 ### The data that corrected last session's placement
