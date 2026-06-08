@@ -2,14 +2,50 @@
 
 ## Current Status (auto-synced from database)
 
-**Bottleneck**: conversion (severity 7/10) — Flash $29 verdict in: 0/~63 hobbyists converted via email = warm list does NOT buy packs via newsletter (confirms buyer-vs-funnel-mismatch — real buyers came from SKU pages, not nurture). B3 shipped (day-1 CTA → free art generator) + 20 dead-weight subs suppressed (107 active). Next lever gated on Armando's Resend deliverability read: healthy open rate → 0 is a real audience verdict → pivot the offer for this art audience; poor delivery → re-test the flash on the cleaned 107-list (now with message-id capture per 1b74f1a → first natively-measurable broadcast).
+**Bottleneck**: conversion (severity 7/10) — Reframed from audience-mismatch to PRODUCT-SHAPE mismatch. We have a healthy growing distribution asset (127 subs, ~15/day art-seekers) but ZERO PMF: every money-tool core action is literally 0 (outreach/listing/chatbot_generate all 0 over 600 events) and prompt packs convert ~0 even at peak in-product intent. Market intel (12 cited sources) shows this impulse art-consumer audience pays for RESULTS (flattering output of themselves/pet) + physical keepsakes — Lensa $7.99/50-avatars at $8M/day peak, Etsy custom portraits $15-50, POD prints $19-49 — never for instructions. The needle-mover is changing the offer SHAPE, not the audience. Recommendation + flip-the-switch spec ready (hd-unlock-spec.md); direction pick gated on Armando (touches free/paid flywheel line).
 
 **KPIs**:
 - Conversations: 0 (target: 3, 7d: 0%)
-- Users: 119 (target: 30, 7d: 3.4782608695652173%)
+- Users: 127 (target: 30, 7d: 10.434782608695652%)
 - Revenue: 155 (target: 997, 7d: 0%)
 
 <!-- AGENT-EDITED-BELOW (everything below this line is preserved across ticks) -->
+
+## Session 25-cont — ✅ TECHNICALLY DE-RISKED THE WHOLE IMAGE-GEN PIVOT END-TO-END (Jun 8 ~02:3x UTC, no prod commit — verification + spec update)
+
+### Why this wasn't an 11th poll-and-hold
+The needle-mover (e9e7356c / hd-unlock Option 1) is gated on Armando's direction + Gemini-spend greenlight. But the spec rested on ONE unverified load-bearing assumption: that we can actually generate the *art-seeker's result* ourselves (their pet/person in-style) — fast, cheap, usable — from a user-facing path. That was NEVER tested (only ad-creative PNGs, possibly via a different path). Per `pre-build-catches-spec-drift`: verify the load-bearing assumption before Armando greenlights a leap of faith. Armando-independent + plan-agnostic (every image-result option — HD-unlock, POD, subscription — depends on it) + root-cause-direct.
+
+### ✅ Verified end-to-end with real artifacts (built `.founder/tools/gemini-art-smoketest.py`, registered)
+One smoke-test image (~$0.04, within established prod-test spend envelope):
+- **Works + sellable**: clean on-style Ghibli orange-tabby-on-windowsill from a plain English description (`/tmp/gemini-art-smoketest.png`, viewed — genuinely $4.99-worthy). Quality is NOT a risk.
+- **Fast**: 6.63s (fits a real-time "generating…" spinner, Lensa-class).
+- **Right shape**: 1024×1024 PNG (square art format, not the 16:9 ad shape).
+- **Known cost**: 1290 image-output tokens ≈ **$0.039/image** (gemini-2.5-flash-image). At $4.99 unlock, margin ~127×. Uncapped free at ~15/day ≈ **$0.59/day / ~$18/mo** before any conversion → a generous global cap (e.g. 200/day = ~$8/day ceiling) closes the only real risk (viral/bot spike).
+- **Free→paid mechanic feasible**: produced the watermarked 512² free preview (49KB, tiled "MIDASTOOLS • PREVIEW" — desirable but un-usable as final, viewed) AND the clean 1024² HD unlock (280KB). The $4.99 tension is real + visible. Server-side = `sharp` in Node (standard).
+
+### 🔑 What this changes
+Armando's greenlight is no longer a leap of faith on unproven tech — it's a **clean business yes/no** on (a) the per-day Gemini spend cap (now precise) and (b) moving the free/paid flywheel line (`feedback_protect_flywheel`). **Zero technical unknowns remain** in generate→watermark→HD. Post-greenlight build drops "1–2 days + unknown risk" → "~½–1 day of known wiring." Updated hd-unlock-spec.md with a VERIFIED block + precise spend math.
+
+### Held / did NOT
+Did NOT wire a live prod route (touches protected flywheel + Gemini scale-spend = Armando's call), did NOT create a live Stripe SKU, did NOT prejudge his direction (verified-feasibility is plan-agnostic across all image-result options), did NOT burn scale Gemini spend (one verification image only).
+
+### Confidence
+90% — every technical link verified with on-disk artifacts I viewed. Only the server-side Node wiring is unbuilt, now de-risked known-pattern work gated on the business greenlight.
+
+### NEXT
+On Armando's direction + spend-cap pick: ship hd-unlock-spec (now ~½–1 day, zero tech risk). Fallback levers unchanged: B1/B2 on his Resend read.
+
+### Continuation — ✅ RESOLVED THE PAYWALL ARCHITECTURE (caught a product-breaking spec gap)
+Pushed the de-risk one layer further (build-plan, not just tech). Per `pre-build-catches-spec-drift`, interrogated the spec's vague "watermarked/low-res preview" and caught a **product-breaking gap: a client-side-only watermark LEAKS the HD** — if the API returns the clean 1024², a user grabs it from the network tab and never pays. A client watermark is not a paywall. Resolved the leak-proof architecture in hd-unlock-spec.md, and it reuses 3 patterns ALREADY proven live in this codebase:
+- **Hold back HD server-side**: `generate-image.js` → Gemini 1024² → store clean in **Vercel Blob** keyed by `hdToken`; return ONLY a server-made 512²+watermark preview. HD never touches the client pre-payment.
+- **Image lib = `jimp`** (pure-JS, serverless-safe; `sharp` is NOT a dep + needs native build — confirmed not in node_modules). The one new dep on build-day.
+- **Unlock = the proven chatbot-pro pattern**: `client_reference_id=<hdToken>` → webhook flips `hd:<token>.paid=true` (mirror `handleChatbotProActivation`) → download endpoint streams the Blob. No new webhook class.
+- Spend guard = KV `om-rl:`/`lm-rl:` pattern; unpaid blobs GC after ~7 days.
+**Net**: the only genuinely-new build pieces are `jimp` + Vercel Blob; everything else clones existing live code. Build estimate is now honest + precise + leak-proof, not hand-wavy. Did NOT add the dep / wire Blob / touch the ghibli UI — that's the direction-gated build (Armando's call); spec-only, reversible.
+
+### Saturation reached (honest close)
+Three distinct de-risk layers shipped this session-arc: **demand** (S26 intel) → **tech** (smoke-test) → **build-architecture** (this). The next step is the actual gated build (jimp dep + Blob + UI swap), which requires Armando's direction pick + spend-cap + touches the protected flywheel. No further Armando-independent, plan-agnostic, reversible lever exists that doesn't prejudge his direction or make a prod/dependency change for an unpicked option. Genuine saturation → hold for his greenlight.
 
 ## Session 26 — 🔑 RESOLVED THE NEEDLE-MOVER FORK WITH MARKET INTEL: PRODUCT-SHAPE MISMATCH, NOT AUDIENCE-MISMATCH (Jun 8 ~02:0x UTC, no commit — intel + spec)
 
