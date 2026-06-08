@@ -11,6 +11,67 @@
 
 <!-- AGENT-EDITED-BELOW (everything below this line is preserved across ticks) -->
 
+## Session 32 — 🎉 GEMINI_API_KEY SET BY ARMANDO → ART MACHINE LIVE + PROD GENERATION VERIFIED END-TO-END (Jun 8 ~14:05 CST, pair session, no commit — env-var + verification)
+
+### The switch is flipped — first earning-ready money-tool in company history
+After 6+ sessions of de-risked-but-gated build work, Armando set `GEMINI_API_KEY` in Vercel (Production) + redeployed during this pair session. The Art Machine (`/ai-art-generator`) auto-flipped from inert waitlist → live working generator. **Verified end-to-end on prod, not assumed:**
+- **Key validated live** (free models.list call before any spend): valid `AIzaSyC…`, 50 models accessible incl. `gemini-2.5-flash-image` (our route's model) + newer `gemini-3-pro-image` / `gemini-3.1-flash-image`.
+- **Readiness probe**: `GET /api/generate-image` → `{ready:true}` HTTP 200 (was `{ready:false}` until the redeploy went live — confirmed the set-var-but-no-redeploy gotcha; flipped after redeploy).
+- **Real prod generation**: `POST /api/generate-image {subject:"orange tabby on a sunny windowsill", style:"ghibli"}` → HTTP 200, **8s**, `engine:gemini` (real, not framework fallback), 2.66MB PNG (1024²), `remaining:3` (per-IP daily spend cap working → can't bleed money).
+- **Image viewed + confirmed sellable**: warm Ghibli watercolor, lush garden, floating-castle detail — genuinely $4.99-worthy. Saved to /tmp/artgen.png.
+- **Page**: `/ai-art-generator` HTTP 200, flipped to live tool.
+
+### Funnel already feeding it (no new work needed to start the test)
+Homepage signup-success CTA (S31, the only proven conversion engine, ~9 signups/day) + top art-blog bridges (ghibli #3, image-prompts #7, viral-art, make-money-selling-ai-art) all route here. Every visitor now gets a **real free image** instead of a waitlist form.
+
+### Bottleneck reframed: gating is GONE, now it's a real PMF read
+The 6-session "accumulate art_waitlist evidence → ping Armando → set key" loop is CLOSED. New needle-mover: **watch `image_generate` (real generations) + `hd_waitlist` (willingness-to-pay) vs the 30-session kill-criterion.** 30 sessions generate with 0 hd_waitlist → even owning the result doesn't convert this audience → escalate (POD / different offer). ANY hd_waitlist conversion = **first real PMF signal in company history** → build the $4.99 HD-unlock paywall (fast-follow, fully de-risked: Vercel Blob hold-back + jimp watermark + chatbot-pro webhook clone, ~½ day).
+
+### Decision this session: drive traffic + watch FIRST, do NOT pre-build the paywall
+Recommended (and holding to) the measured path: free tier flows, watch for first hd_waitlist signal before building the revenue mechanic — pre-building the paywall before any real generation = the motion-vs-progress trap. Paywall is a ½-day fast-follow the moment signal turns positive.
+
+### Noted fast-follow (parked, not done): gemini-3.1-flash-image upgrade
+Key has access to the newer model — potential quality bump on the exact images we sell. One-line swap in generate-image.js, A/B-able, reversible. Park until traffic/PMF read is underway.
+
+### NEXT
+Watch `image_generate` + `hd_waitlist` events as the homepage/blog funnel feeds real generations. At meaningful N: if hd_waitlist > 0 → build $4.99 paywall. If 30 sessions / 0 hd_waitlist → audience won't pay for the result, reconsider offer shape. Optional: gemini-3.1 model A/B; widen bridges only if generation volume is starved.
+
+### Confidence
+95% — every link verified with live prod artifacts this session (key validated, ready:true, real 8s generation, image viewed sellable, rate-limit working, page 200). Only unverified: whether real users convert (the PMF thesis itself — now finally measurable for the first time).
+
+## Session 31 — ✅ RE-POINTED THE ONLY PROVEN CONVERSION ENGINE (HOMEPAGE SIGNUP-SUCCESS) AT THE ART MACHINE (Jun 8 ~10:35 local, commit b6810de pushed + prod-verified live)
+
+### The data that found the genuinely-unpulled lever
+Pulled readiness probe (`{ready:false}` — key still unset, Armando async) + 600-event track-events spanning a **full 3.6 days (Jun 5 01:54 → Jun 8 16:24 UTC)** — so this is real exposure now, NOT the ~4h artifact of last session. The sharpened read:
+- **`/ai-art-generator` = 1 page_view, art_waitlist = 0, image_generate = 0, hd_waitlist = 0.** Still starved.
+- **The bridges aren't broken — they're on low-traffic surfaces.** Bridged art blogs total ~59 views (ghibli 17 #3, action-figure 12, image-prompts 12, viral-art 10+8). At a normal 1-3% blog→tool CTR that's ~0-1.8 click-throughs — i.e. the 1 page_view is roughly *in line* with expected CTR. The problem is **traffic volume**, not the bridge.
+- **The ONLY conversion engine is the homepage.** All **32 subscribe_submit are homepage** (~9/day, ~28% of 115 homepage views). Art blogs/generators convert ~0 emails.
+- **The 2 cta_clicks in 3.6 days both went to the $29/$97 packs** (viral-art blog, chatgpt.com referrer), 0 to the Art Machine. The audience barely clicks buy buttons at all, and the packs convert ~0 (lifetime 3/$155).
+
+### 🔑 The unpulled lever
+The homepage's peak-intent **signup-success CTA pointed art-seekers at the Listing Machine** (`signup-success-listing-machine`) — a documented audience mismatch (0 listing_generate ever; these are art-seekers, not e-commerce sellers). So the single highest-volume + highest-intent + highest-converting surface we own was feeding the *wrong* tool, while the Art Machine (the audience-matched tool, the right shape per intel) was starved on low-traffic blogs. **Per the S32 lesson (over-conservatism creates the zero): the fix is to route the proven engine at the matched tool.**
+
+### ✅ Shipped (commit b6810de, build clean, pushed, prod-verified live)
+Re-pointed homepage signup-success: `/listing-machine` → **`/ai-art-generator?utm_source=homepage&utm_medium=signup_success&utm_campaign=art_waitlist`**, copy rewritten for art-seekers ("meet the Art Machine — describe your pet/yourself/any scene, get the actual image — Ghibli, 3D, watercolor, pop art & more. Free, launching this week."), `data-cta=signup-success-art-machine`. Flywheel mouth preserved (email still captured first; only the post-signup success state changes). Reversible single edit. **Prod-verified: new bundle `index-d9033fa9` serves `signup-success-art-machine` live**; homepage + /ai-art-generator both 200; readiness still `{ready:false}` (correctly inert).
+
+### Why this finally lets art_waitlist accumulate
+The just-subscribed homepage user lands on the inert Art Machine: gallery of 4 real samples ABOVE the "Launching this week 🎨" waitlist form → an art-seeker who re-submits = a **double-intent** signal (newsletter + art early-access) and fires `art_waitlist`. This is the first time the *high-volume* surface feeds the waitlist — the low-traffic blog bridges structurally couldn't.
+
+### Held / did NOT
+- Did NOT add more bridges (saturated — low-traffic surfaces, ~0 CTR; spray).
+- Did NOT add styles to the inert tool (pre-build on inert tool = near-zero value until key set).
+- Did NOT re-ping Armando (decisive escalation sent last session; per armando-async-asks a re-ping with no new evidence = noise — the disciplined ping is when art_waitlist accumulates a meaningful N).
+- Did NOT touch the homepage front-door hero (protected flywheel).
+
+### NEXT
+Watch `art_waitlist` + `/ai-art-generator` page_views now that the homepage engine (the only real volume) feeds it. When art_waitlist accumulates a meaningful N → ping Armando with the count as the evidence to set GEMINI_API_KEY. On key-set → verify prod generation + measure image_generate/hd_waitlist vs 30-session kill-criterion → $4.99 paywall if PMF.
+
+### Confidence
+90% — probe + 3.6-day track-events pulled direct (homepage = sole conversion engine, art tool starved, both confirmed); build clean; commit pushed; new CTA bundle curl-verified live on prod. Only unverified: whether homepage signup-success art-seekers convert to art_waitlist (the thesis — but routing the matched tool at the proven engine is strictly better than routing the mismatched Listing Machine there, and it's the cheapest test of it).
+
+### Continuation — ✅ VERIFIED THE art_waitlist MEASUREMENT PATH IS SOUND (the load-bearing assumption of this session's move, clean — no edit)
+The whole homepage re-point rests on one assumption: that submitting the inert Art Machine waitlist actually produces a measurable `art_waitlist` signal. If it didn't, I'd wait sessions for a signal that can't appear. Verified by **code-read (zero data pollution — a real test submit would falsely inflate the very count I'm measuring)**: `handleWaitlist` (ai-art-generator.js:104-120) POSTs `/api/subscribe {source:'art-machine-waitlist'}` then fires `trackEvent('art_waitlist',{})` on line 114 — on the **success branch** (post-`await`, inside `try`; a network rejection routes to `catch` and correctly suppresses it, fail-closed). It uses the **identical `lib/track` plumbing** as the 566 page_views + 32 subscribe_submit that demonstrably land. So art_waitlist is **double-measurable**: the track event AND a `source=art-machine-waitlist` sub in the gist (same double-signal pattern as the chatbot builder S34). **Verdict: sound, no fix needed** — the funnel shipped this session produces clean measurable signal. Did NOT route day-1 nurture → Art Machine (would degrade UX by sending new subs to an inert waitlist instead of a working free tool — spray), did NOT pre-optimize the double-email-ask (premature — no funnel data yet), did NOT re-ping Armando (art_waitlist still 0, no new evidence). Genuine saturation reached: remaining levers are passive (art_waitlist accumulation over hours/days) + Armando-gated (the key).
+
 ## Session 30 — ✅ BROKE THE CIRCULAR DEPENDENCY: SHIPPED A REAL SAMPLE GALLERY ON THE INERT WAITLIST + ESCALATED THE KEY DECISIVELY (Jun 8 ~05:15 local, commit 22886c2 pushed + prod-verified)
 
 ### The data that reframed the move

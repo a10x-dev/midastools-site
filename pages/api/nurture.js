@@ -391,6 +391,44 @@ const broadcasts = {
       <p style="font-size:14px;line-height:1.7;color:#6B7280;">If you do try it — hit reply and tell me what you'd change. I read every one.<br/>— The MidasTools Team</p>
     `),
   },
+  // Midas Memo — Mon Jun 8 2026. The Art Machine launch (free image-gen, art-audience match).
+  // Send: ?broadcast=true&template=art_launch  (preview: &to=email)
+  art_launch: {
+    subject: "It's live: turn your pet (or yourself) into real art — free 🎨",
+    html: (source) => wrapEmail(`
+      <p style="font-size:13px;font-weight:700;color:#3B5FFF;letter-spacing:0.5px;text-transform:uppercase;margin:0 0 4px;">The Midas Memo</p>
+      <h1 style="font-size:26px;line-height:1.25;color:#111827;margin:0 0 16px;">Make the actual art — not another prompt to copy-paste</h1>
+
+      <p style="font-size:16px;line-height:1.7;color:#374151;margin:0 0 16px;">Every Monday I build you something you can actually use. This week it's the one I'm most excited about — and it's <strong>live right now</strong>.</p>
+
+      <p style="font-size:16px;line-height:1.7;color:#374151;margin:0 0 8px;">Meet <strong>The Art Machine.</strong> Describe your pet, yourself, or any scene in plain English, pick a style, and it makes the <em>real image</em> — not a prompt you have to take somewhere else. Ghibli, 3D Pixar, watercolor, pop-art, anime, oil painting, and more.</p>
+
+      <p style="font-size:14px;line-height:1.6;color:#6B7280;margin:0 0 8px;">All four of these were made with it, from one line of text each:</p>
+
+      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin:8px 0 20px;">
+        <tr>
+          <td width="50%" style="padding:4px;"><img src="https://www.midastools.co/art-samples/sample-ghibli.jpg" width="100%" style="border-radius:10px;display:block;" alt="Ghibli-style cat on a windowsill"/></td>
+          <td width="50%" style="padding:4px;"><img src="https://www.midastools.co/art-samples/sample-3d.jpg" width="100%" style="border-radius:10px;display:block;" alt="3D animated puppy"/></td>
+        </tr>
+        <tr>
+          <td width="50%" style="padding:4px;"><img src="https://www.midastools.co/art-samples/sample-watercolor.jpg" width="100%" style="border-radius:10px;display:block;" alt="Watercolor portrait"/></td>
+          <td width="50%" style="padding:4px;"><img src="https://www.midastools.co/art-samples/sample-popart.jpg" width="100%" style="border-radius:10px;display:block;" alt="Pop-art cat"/></td>
+        </tr>
+      </table>
+
+      <p style="font-size:16px;line-height:1.7;color:#374151;margin:0 0 6px;"><strong>How it works — about 10 seconds:</strong></p>
+      <p style="font-size:15px;line-height:1.7;color:#374151;margin:0 0 18px;">
+        1. Pick a style (Ghibli, 3D, watercolor, pop-art…)<br/>
+        2. Describe it — <em>"my orange tabby on a sunny windowsill"</em><br/>
+        3. Hit generate and download your image. Your first one is <strong>free</strong>.
+      </p>
+
+      ${ctaButton("Make your first image — Free", 'https://www.midastools.co/ai-art-generator?utm_source=email&utm_medium=broadcast&utm_campaign=art_launch', "No sign-up to start. Try your pet, yourself, or anything you can picture.")}
+
+      <p style="font-size:14px;line-height:1.7;color:#6B7280;margin:24px 0 0;">Try it and hit reply with what you made — I read every one, and it tells me what to build next Monday.</p>
+      <p style="font-size:14px;line-height:1.7;color:#6B7280;margin:10px 0 0;">— Armando, MidasTools</p>
+    `),
+  },
   // Midas Memo — Mon Jun 8 2026. Flywheel tool #1 launch (Chatbot Builder, $39/mo).
   // Send: ?broadcast=true&template=chatbot_launch
   chatbot_launch: {
