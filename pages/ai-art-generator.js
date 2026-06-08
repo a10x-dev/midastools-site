@@ -38,7 +38,15 @@ export default function AiArtGenerator() {
   useEffect(() => {
     try {
       if (localStorage.getItem('art_unlocked') === '1') setUnlocked(true);
+      const s = new URLSearchParams(window.location.search).get('style');
+      if (s && STYLES.some(x => x.id === s)) setStyle(s);
     } catch {}
+    // Honest pre-launch state: if the engine isn't configured yet, show the
+    // waitlist on load instead of a working-looking form that fails on submit.
+    fetch('/api/generate-image')
+      .then(r => r.json())
+      .then(d => { if (d && d.ready === false) setNotConfigured(true); })
+      .catch(() => {});
   }, []);
 
   const gated = count >= FREE_LIMIT && !unlocked;

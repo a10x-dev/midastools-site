@@ -528,8 +528,16 @@ export default function PetPortraitGenerator() {
                   <pre style={{ fontSize: 13, color: '#374151', whiteSpace: 'pre-wrap', margin: 0, lineHeight: 1.7 }}>{prompt}</pre>
                 </div>
 
+                <a
+                  href="/ai-art-generator?utm_source=pet-portrait-generator&utm_medium=cta&utm_campaign=art-machine-bridge&style=petportrait"
+                  style={{ display: 'block', background: 'linear-gradient(135deg, #3B5FFF 0%, #5B7BFF 100%)', borderRadius: 12, padding: '16px 20px', marginBottom: 24, textDecoration: 'none', textAlign: 'center' }}
+                >
+                  <span style={{ display: 'block', fontSize: 15, fontWeight: 800, color: '#FFF', marginBottom: 3 }}>✨ New — skip the copy-paste. Make the actual portrait here.</span>
+                  <span style={{ fontSize: 13, color: '#DBE4FF' }}>Turn this into a finished pet portrait right on MidasTools — free →</span>
+                </a>
+
                 <div style={{ background: '#EDE9FE', borderRadius: 12, padding: 16, marginBottom: 24 }}>
-                  <p style={{ fontWeight: 700, fontSize: 15, color: '#4C1D95', margin: '0 0 6px' }}>How to use this prompt:</p>
+                  <p style={{ fontWeight: 700, fontSize: 15, color: '#4C1D95', margin: '0 0 6px' }}>Prefer to do it yourself? How to use this prompt:</p>
                   <ol style={{ margin: 0, paddingLeft: 20, color: '#4C1D95', fontSize: 14, lineHeight: 1.8 }}>
                     <li>Open <strong>ChatGPT</strong> (GPT-4o) or <strong>Midjourney</strong></li>
                     <li><strong>Upload a clear photo</strong> of your pet</li>

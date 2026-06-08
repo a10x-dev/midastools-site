@@ -87,6 +87,12 @@ function clamp(s, n = MAX_SUBJECT) {
 }
 
 export default async function handler(req, res) {
+  // Readiness probe — lets the page show an honest "launching this week" state
+  // (instead of a tease-then-fail) while inert, and auto-activate when the key
+  // is set. No spend, no side effects.
+  if (req.method === 'GET') {
+    return res.status(200).json({ ready: !!getGeminiKey() });
+  }
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' });
   }
