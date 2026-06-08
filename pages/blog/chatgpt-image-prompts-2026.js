@@ -636,10 +636,19 @@ Direction C (Abstract): A pure abstract composition — [flowing paint pours / c
 
         <hr style={{ margin: '40px 0', border: 'none', borderTop: '1px solid #eee' }} />
 
+        {/* ART MACHINE BRIDGE — make the actual image, not just the prompt */}
+        <div style={{ marginTop: '32px', padding: '24px', background: '#EEF2FF', border: '2px solid #3B5FFF', borderRadius: '8px' }}>
+          <h3 style={{ margin: '0 0 8px', fontSize: '1.15rem' }}>🖼️ Skip the copy-paste — make the actual image here, free</h3>
+          <p style={{ margin: '0 0 14px', color: '#374151', fontSize: '15px' }}>The prompts above are perfect if you want to paste into ChatGPT or Midjourney yourself. But if you just want the <strong>finished image</strong> — describe it, pick a style (Ghibli, anime, watercolor, 3D, oil, pop art, cyberpunk + more), and <strong>The Art Machine</strong> generates it for you, right here. No prompt engineering, no second app. First one&apos;s free.</p>
+          <a href="/ai-art-generator" data-cta="imageprompts-blog-artmachine" style={{ display: 'inline-block', background: '#3B5FFF', color: '#fff', padding: '12px 26px', borderRadius: '100px', textDecoration: 'none', fontWeight: '700', fontSize: '15px' }}>
+            Make My Image — Free →
+          </a>
+        </div>
+
         {/* FINAL CTA */}
-        <div style={{ marginTop: '32px', padding: '24px', background: '#ECFDF5', border: '1px solid #6EE7B7', borderRadius: '8px' }}>
-          <h3 style={{ margin: '0 0 8px', fontSize: '1.1rem' }}>🎨 Try Our Free AI Image Prompt Builder</h3>
-          <p style={{ margin: '0 0 12px', color: '#6B7280', fontSize: '15px' }}>Don&apos;t want to write prompts from scratch? Use our <strong>free visual tool</strong> to pick a style (Ghibli, Cyberpunk, Hyperrealistic + 9 more), set mood &amp; lighting, and get a perfect prompt for ChatGPT, Midjourney, or DALL·E in seconds.</p>
+        <div style={{ marginTop: '24px', padding: '24px', background: '#ECFDF5', border: '1px solid #6EE7B7', borderRadius: '8px' }}>
+          <h3 style={{ margin: '0 0 8px', fontSize: '1.1rem' }}>🎨 Prefer to write the prompt yourself?</h3>
+          <p style={{ margin: '0 0 12px', color: '#6B7280', fontSize: '15px' }}>Use our <strong>free visual tool</strong> to pick a style (Ghibli, Cyberpunk, Hyperrealistic + 9 more), set mood &amp; lighting, and get a perfect prompt for ChatGPT, Midjourney, or DALL·E in seconds.</p>
           <a href="/image-prompt-builder" style={{ display: 'inline-block', background: '#059669', color: '#fff', padding: '10px 24px', borderRadius: '100px', textDecoration: 'none', fontWeight: '700', fontSize: '14px' }}>
             Build Your Image Prompt Free →
           </a>
