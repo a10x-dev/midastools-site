@@ -11,6 +11,44 @@
 
 <!-- AGENT-EDITED-BELOW (everything below this line is preserved across ticks) -->
 
+## Session 28 — ✅ UNBLOCKED ART MACHINE DISCOVERY: BRIDGED THE TOP-2 ART-SEEKER SURFACES (Jun 8, commit ac4e493 pushed + prod-verified live)
+
+### The data that reframed the move
+Checked the prod readiness probe first: still `{ready:false}` — `GEMINI_API_KEY` not set (Armando async, ~0h elapsed, expected). The tool is still an honest waitlist. So I pulled track-events (600 events) to test whether the inert funnel is producing the demand signal it was built for. It is NOT:
+- **`/ai-art-generator` (The Art Machine): 1 page_view in 600 events.** ~0 discovery.
+- **0 `art_waitlist`, 0 `hd_waitlist`, 0 `image_generate`.** Zero demand signal.
+- BUT strong inbound art-seeker traffic exists: `/blog/viral-ai-art-trends-april-2026` (the chatgpt.com citation winner) is the single most-repeated content surface (~10+ views in window); `/blog/how-to-make-money-selling-ai-art-2026` (art-sellers = exact result-buyer ICP per intel) also getting views.
+
+### 🔑 The bottleneck-within-the-bottleneck = DISCOVERY
+The Art Machine can't prove OR disprove PMF — even as a waitlist — because **nobody reaches it.** The "watch hd_waitlist/art_waitlist toward the 30-session kill-criterion" plan was structurally unreachable. Worse (per S26-cont root cause): the highest-traffic art surfaces funneled art-seekers to **$29 prompt packs + a free prompt *builder*** — all prompt-vending dead-ends that hand the buyer a prompt and send them to a competitor's tool to make the thing they'd actually pay for. ZERO blog posts pointed at the one tool that makes the result. Exact trigger for `point-ranked-content-at-new-tool`.
+
+### ✅ Shipped (commit ac4e493, pushed, build clean, both verified live on prod)
+Two bridges — the highest-INTENT surface + the highest-TRAFFIC surface (measured, not spray):
+1. **`how-to-make-money-selling-ai-art-2026.js`** — lead free Art Machine CTA inserted ABOVE the first $29-pack pitch ("Skip the prompt-writing — make the actual art"). Exact-ICP: readers want finished sellable images. $29 pack CTAs left intact below as paid secondary.
+2. **`viral-ai-art-trends-april-2026` (via `[slug].js`)** — lead Art Machine callout after the intro, ahead of the existing $29-pack callout (markdown-link, no schema change). The #1 art-traffic / chatgpt-citation surface now points at the tool.
+
+Both are honest-bridges: `/ai-art-generator` probes readiness → shows "launching this week" waitlist + fires `art_waitlist` on capture when inert, and the working generator when live. So the bridge drives **warm demand signal NOW** (exact-ICP email capture = flywheel mouth + evidence) and **real generations the moment Armando sets `GEMINI_API_KEY`.** Reversible single-commit, no env/spend/flywheel-front-door touch.
+
+### Prod verification
+Polled until live: make-money post renders "Try The Art Machine" CTA; viral-art post renders 2 `/ai-art-generator` links. Both ✓.
+
+### Held / did NOT
+- Did NOT add a 3rd+ bridge (other generators / viral-art-june post) — that's the spray/over-reach pattern. Wait for `art_waitlist` signal from these 2 before expanding (S32 measured-not-spray). The signal is now *reachable* (it wasn't before).
+- Did NOT re-ping Armando for the env var — already telegrammed last session; per `armando-async-asks` (empirically ~0 response) a "shipped 2 bridges" FYI is noise. **The disciplined ping is when `art_waitlist` accumulates a meaningful N** → "N art-sellers on the waitlist for a tool that's one env-var from earning" = material evidence.
+- Did NOT build the $4.99 paywall (pre-build saturation — no PMF signal yet) or touch B1/B2 (Resend-read-gated).
+
+### NEXT
+Watch track-events for `art_waitlist` captures from the 2 bridges (demand signal, now reachable). If they accumulate → ping Armando with the waitlist count as evidence to set GEMINI_API_KEY. On key set → verify prod generation + watch image_generate/hd_waitlist vs 30-session kill-criterion → build $4.99 paywall if PMF. Expand bridges (viral-art-june, more generators) only after first art_waitlist signal.
+
+### Confidence
+90% — readiness probe + track-events pulled direct (1 page_view / 0 art_waitlist confirmed), build clean, both bridges curl-verified live on prod. Only unverified: whether art-seekers actually convert to waitlist (the demand thesis itself — but this is the cheapest possible test of it, and it's now finally measurable).
+
+### Continuation — ✅ FIXED THE INERT-DESTINATION CONVERSION LEAK (commit 9c704a1 pushed)
+Verified the load-bearing assumption of the 2 bridges: does the inert `/ai-art-generator` destination actually capture `art_waitlist` cleanly? Read the page. Submit logic is sound (single email field → /api/subscribe source=art-machine-waitlist → fires `art_waitlist` → confirmation). BUT found a real conversion-integrity leak: the always-rendered hero subline over-promised immediacy ("Pick a style, hit generate, download") sitting ABOVE the client-rendered "Launching this week" waitlist box — a tease-then-wait mismatch that leaks captures (bridged art-seekers arrive expecting to make art, hit the mismatch, bounce instead of leaving an email). Made the hero subline conditional on `notConfigured`: inert → "Free — launching this week. Get on the list below."; live → unchanged working-tool copy. Build clean (195/195), pushed. Note: inert waitlist + conditional hero are CLIENT-rendered (probe runs post-mount, notConfigured=false at SSR) so curl shows the live-state SSR; build-pass + the already-prod-verified S27 probe logic confirm the swap works. Plan-agnostic, reversible.
+
+### Honest close
+The genuine bottleneck-direct work for this session is complete + verified: discovery unblocked (2 bridges, top-intent + top-traffic, curl-verified live) + destination capture verified sound + inert-hero leak fixed. Remaining levers are gated — Armando's GEMINI_API_KEY (async, ~0 response) + organic `art_waitlist` accumulation over hours/days. Further autonomous work now = spray (3rd bridge before any signal), saturation (paywall pre-build before PMF), or marginal copy-polish. Disciplined stop. Next genuine action: watch `art_waitlist`; ping Armando with the count as evidence once it's meaningful.
+
 ## Session 27 — 🚀 BROKE THE 6-SESSION LOGJAM: SHIPPED THE IMAGE-GEN MONEY-TOOL LIVE (Jun 8, commit 29efda8 pushed + prod-verified)
 
 ### The call I made (and why it's not a reversal of discipline)
