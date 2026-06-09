@@ -11,7 +11,26 @@
 
 <!-- AGENT-EDITED-BELOW (everything below this line is preserved across ticks) -->
 
-## Session 32 — 🎉 GEMINI_API_KEY SET BY ARMANDO → ART MACHINE LIVE + PROD GENERATION VERIFIED END-TO-END (Jun 8 ~14:05 CST, pair session, no commit — env-var + verification)
+## Session 32 — 🎉 ART MACHINE LIVE + 🚀 FIRST AUDIENCE-MATCHED LAUNCH NEWSLETTER FIRED TO 117 (Jun 8 ~14:30 CST, pair session, commit f5ed16a)
+
+### 🚀 THE ART_LAUNCH MEMO IS OUT — 117 sent / 0 failed
+After GEMINI_API_KEY went live + prod generation verified (below), Armando approved the preview and we fired the **art_launch Midas Memo** to the full active list. `?broadcast=true&template=art_launch` → **sent:117, failed:0**, every recipient accepted by Resend (message IDs captured per the S52 deliverability fix). First time the proven warm channel (117 subs, ~100% art-seekers) has been pointed at a tool that actually matches the audience — and it's a FREE give (no paid ask), so it doubles as goodwill repair after the Jun 5 $29 flash flop.
+- **Template** (commit f5ed16a, build-clean, pushed): `art_launch` in nurture.js — Midas Memo header, 2×2 grid of the 4 live prod sample images, one CTA → `/ai-art-generator?utm_source=email&utm_medium=broadcast&utm_campaign=art_launch`, reply-prompt for next-Monday demand-sensing. Subject: "It's live: turn your pet (or yourself) into real art — free 🎨". Signed Armando.
+- **Preview verified**: 2 previews fired to iam@armando.mx, Armando reviewed the rendered email (4 images + CTA), approved → real send.
+- **Purpose**: front-load the PMF read. One send to 117 warm matched subs ≈ ~⅓–½ of the 30-session kill-criterion in ~48h instead of waiting weeks on organic drip. The prize metric = **hd_waitlist** (willingness to pay $4.99 = the question the whole pivot rests on).
+
+### 🔭 THE WATCH (next 48h) — this is the needle-mover read
+- **`image_generate`** events (real generations, esp. `utm_campaign=art_launch`) → activation
+- **`hd_waitlist`** events → willingness-to-pay = first-ever PMF signal in company history
+- **`/ai-art-generator` page_views** w/ `utm_campaign=art_launch` → email→tool CTR
+- **Replies** to the Memo → demand-sensing for next Monday's tool pick
+- **Decision rule**: ANY hd_waitlist > 0 at meaningful N → build the $4.99 HD-unlock paywall (de-risked ½-day fast-follow). 30 sessions generate / 0 hd_waitlist → matched audience + matched tool + free still won't pay → bigger rethink (physical/print, or audience). $0 expected from THIS send directly (it's free) — we're buying the answer, not revenue.
+
+### Parked fast-follows (not done, deliberate)
+- $4.99 HD-unlock paywall — build ONLY if hd_waitlist signals (motion-vs-progress otherwise)
+- gemini-3.1-flash-image model A/B — one-line swap, quality bump on images we'll sell; park until PMF read underway
+
+### ── (earlier this session) GEMINI_API_KEY SET → ART MACHINE LIVE + PROD GENERATION VERIFIED END-TO-END
 
 ### The switch is flipped — first earning-ready money-tool in company history
 After 6+ sessions of de-risked-but-gated build work, Armando set `GEMINI_API_KEY` in Vercel (Production) + redeployed during this pair session. The Art Machine (`/ai-art-generator`) auto-flipped from inert waitlist → live working generator. **Verified end-to-end on prod, not assumed:**
