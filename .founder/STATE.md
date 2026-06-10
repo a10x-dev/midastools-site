@@ -2,7 +2,7 @@
 
 ## Current Status (auto-synced from database)
 
-**Bottleneck**: conversion (severity 7/10) — The Art Machine (image-gen, the right-shape money-tool per intel) is live but INERT pending Armando's GEMINI_API_KEY, and discovery is now wired: the top-2 art-seeker surfaces (highest-intent how-to-make-money-selling-ai-art + highest-traffic viral-ai-art-trends chatgpt-citation winner) bridge to it. Until the key is set it captures art_waitlist demand signal (was structurally unreachable at 1 page_view/0 signal). Other money-tools (outreach/listing/chatbot) remain 0 — abandoned for this art audience. Needle-mover is: accumulate art_waitlist evidence → Armando sets key → measure image_generate/hd_waitlist vs 30-session kill-criterion → $4.99 paywall if PMF.
+**Bottleneck**: conversion (severity 7/10) — Art Machine LIVE (ready:true) + art_launch memo fired to 117 warm matched subs. Funnel verified end-to-end Jun 9: first-ever email→tool→real-generation chain (1 art_launch-attributed image_generate). hd_waitlist measurement path verified sound (reachable at peak-intent below every result image + double-measured via track event + gist sub). Now in the 24-48h PMF read: watch image_generate volume + hd_waitlist (first-ever willingness-to-pay signal) vs 30-session kill-criterion. ANY hd_waitlist>0 at meaningful N → build $4.99 paywall; 30 sessions/0 hd_waitlist → audience won't pay for the result, escalate offer shape (POD/print). Deliverability of the send still needs Armando's Resend read (b1333dc0) to de-confound trickle vs spam-folder.
 
 **KPIs**:
 - Conversations: 0 (target: 3, 7d: 0%)
