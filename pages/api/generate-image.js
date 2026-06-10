@@ -19,6 +19,8 @@
 // on-disk .founder/.gemini_key so it can be tested before the env var is set.
 
 import fs from 'fs';
+import crypto from 'crypto';
+import Jimp from 'jimp';
 import { readKV, writeKV } from '../../lib/kv-store';
 
 export const config = { maxDuration: 60 };
@@ -186,8 +188,39 @@ export default async function handler(req, res) {
     try { await writeKV(ipKey, { count: ipUsed + 1 }); } catch { /* non-fatal */ }
     try { await writeKV(globalKey, { count: globalUsed + 1 }); } catch { /* non-fatal */ }
 
+    // HD holdback (the $4.99 Sell-It Pack mechanic, Lensa model):
+    // free tier gets a clean 512px preview; the full 1024px HD file is stored
+    // server-side keyed by an unguessable token and released only after the
+    // Stripe purchase (webhook or session-verify flips paid=true).
+    // Fails OPEN: any error here serves the full image like before — a paywall
+    // bug must never break the free product.
+    let imageOut = `data:${mime};base64,${b64}`;
+    let hdToken = null;
+    try {
+      const src = Buffer.from(b64, 'base64');
+      const img = await Jimp.read(src);
+      const hdBuf = await img.clone().resize(1024, 1024).quality(90).getBufferAsync(Jimp.MIME_JPEG);
+      const prevBuf = await img.resize(512, 512).quality(82).getBufferAsync(Jimp.MIME_JPEG);
+      const token = 'art_' + crypto.randomBytes(12).toString('hex');
+      const w = await writeKV(`hd:${token}`, {
+        b64: hdBuf.toString('base64'),
+        mime: 'image/jpeg',
+        paid: false,
+        style: styleId,
+        subject: subject.slice(0, 200),
+        created: new Date().toISOString(),
+      }, 48 * 3600); // unpaid HD files expire in 48h so they can't fill KV
+      if (w && w.success) {
+        hdToken = token;
+        imageOut = `data:image/jpeg;base64,${prevBuf.toString('base64')}`;
+      }
+    } catch (e) {
+      console.warn('[generate-image] HD holdback failed, serving full image:', e.message);
+    }
+
     return res.status(200).json({
-      image: `data:${mime};base64,${b64}`,
+      image: imageOut,
+      hdToken,
       engine: 'gemini',
       style: styleId,
       remaining: Math.max(0, FREE_PER_IP_CAP - ipUsed - 1),

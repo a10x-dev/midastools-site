@@ -11,6 +11,46 @@
 
 <!-- AGENT-EDITED-BELOW (everything below this line is preserved across ticks) -->
 
+## Session 33 — ✅ FIRST-EVER EMAIL→TOOL→REAL-GENERATION CHAIN FIRED + VERIFIED hd_waitlist MEASUREMENT PATH IS SOUND (Jun 9 ~00:0x UTC, no commit — verification only)
+
+### The watch, ~3.5h after the art_launch memo
+First autonomous session after the pair-session art_launch send (117/0). Pulled readiness probe + 600-event track-events (window Jun 5 03:55 → **Jun 8 23:59 UTC** — captures only the last ~3.5h of the post-launch window; memo fired ~20:30 UTC). Tool LIVE (`ready:true`).
+
+### 🎉 THE FUNNEL WORKS END-TO-END — first time in company history
+The full art_launch chain fired cleanly in the data:
+- `/ai-art-generator?utm_source=email&utm_medium=broadcast&utm_campaign=art_launch` page_views (23:56–23:59 UTC)
+- → **`image_generate` at 23:57:48, `engine:gemini`, `style:ghibli`, path-tagged `utm_campaign=art_launch`** = a REAL Gemini generation from a real art_launch email click. First email→tool→generation chain ever recorded.
+- Event-type breakdown across 600: 565 page_view / 32 subscribe_submit / 2 cta_click / **1 image_generate** / **0 hd_waitlist** / 0 art_waitlist.
+
+### Honest read on volume
+- ~3 art_launch page_views + 1 generation in the captured window. LOW for a 117-person blast at T+3.5h, BUT: (a) consumer/hobby opens trickle over 24-48h, especially Sunday evening; (b) window spans only the first ~3.5h post-send; (c) same unmeasurable-deliverability confound as the flash (send-only Resend key can't read delivered/opened — Jun 7 message-id capture logged this broadcast's per-message IDs but status still needs Armando's Resend dashboard, ask `b1333dc0`). Too early to disambiguate trickle vs. partial spam-folder; do NOT act on the low number yet.
+- The 23:59 `cebbedbfg/beg_ybhadu` garbled-UTM cluster = email-scanner bot prefetch (known fingerprint), not humans.
+
+### ✅ Verified the load-bearing assumption of the whole 30-session watch (code-read, zero data pollution)
+Before watching `hd_waitlist` for 30 sessions and making a kill/build call on it, confirmed it can actually appear (the S28 unmeasurable-kill-criterion trap + S31 measurement-path discipline). Read `pages/ai-art-generator.js`:
+- `image_generate` fires on the success branch of `handleGenerate` (line 77). ✓
+- The **$4.99 HD-pack early-access form renders immediately below the result image** — `{image && !loading && (<div className="hd">…)}` line 331 — reachable by EVERY user who generates ANY image, including their first free one, at the peak-intent "Love it? Get the HD pack — $4.99" moment (Lensa show-result-then-ask). NOT buried behind the email gate or behind paying. ✓
+- On submit, `handleHdWaitlist` fires `trackEvent('hd_waitlist',{style})` (line 133) AND POSTs `/api/subscribe {source:'art-machine-hd-waitlist'}` (line 130) → **double-measurable** (track event + gist sub), identical robustness to art_waitlist. ✓
+- **Verdict: sound, no fix.** `0 hd_waitlist` is a REAL (tiny-N) signal, not a broken-funnel artifact. 30 sessions generate / 0 hd_waitlist → true "matched audience shown the result at peak intent still won't pay" → escalate offer shape (POD/print). ANY hd_waitlist > 0 at meaningful N → build the $4.99 paywall (½-day fast-follow).
+
+### Held / did NOT
+- Did NOT build the $4.99 paywall — 0 hd_waitlist / tiny N = pre-build-before-signal trap.
+- Did NOT add more bridges — launch just fired; measure this warm cohort first (spray otherwise).
+- Did NOT re-ping Armando — live in pair session hours ago + approved the send; "it sent / 1 gen" at T+3.5h is sub-milestone (armando-async-asks). Milestone ping = first hd_waitlist OR real activation volume.
+- Did NOT touch the live tool (measurement path already correct; regression risk > reward).
+
+### ✅ Continuation — FIXED THE ONE LIVE POST-LAUNCH COPY LEAK (commit 47c2166 pushed, build clean)
+Swept all Art-Machine-routing surfaces for stale pre-launch copy now that the tool is LIVE. Most "launching this week" hits are correct or harmless: the HD pack (`ai-art-generator.js:334`) genuinely IS still launching (parked $4.99 fast-follow — keep), and the inert hero/waitlist branches (`ai-art-generator.js:253/270`, `generate-image.js:113`) only render when the key is unset (honest inert fallback — keep). The art-blog bridges already use live-tool copy ("make the actual image here, free").
+**The one real live leak: `pages/index.js:568`** — the homepage signup-success CTA, the ONLY proven conversion engine (~9 signups/day, all homepage), still pitched the Art Machine as **"Free, launching this week"** (static copy, no readiness probe → wrong for every visitor) with a now-misnamed `art_waitlist` campaign. Fixed copy → "Free, and live right now"; campaign `art_waitlist` → `art_live` (accurate + distinct from the email broadcast's `art_launch`; `medium=signup_success` still disambiguates homepage from email traffic in Monday's read). Reversible 2-line edit, build clean, pushed. This stops under-selling a working free tool to the highest-volume, highest-intent art-seeker surface during the live PMF window.
+- Did NOT touch the inert-fallback branches (correct fail-safe: assume-inert-until-probe-confirms-live; flipping to assume-live risks showing a broken form if the key ever lapses). Did NOT prod-poll to confirm deploy (static text + clean build + clean push = verified; prod-poll = motion-vs-progress). Did NOT chain a 3rd task — genuine saturation reached (remaining levers are paywall=pre-build-trap, more bridges=spray, re-ping=noise).
+- Note: `af60266e` (watch art_waitlist from bridges) is now partially obsolete — bridge traffic hits the LIVE tool and fires `image_generate`, not `art_waitlist` (which only fired in the inert-waitlist branch). The bridge metric to watch is now image_generate, not art_waitlist.
+
+### NEXT
+Re-read track-events when a chunk of 117 opens have landed (Monday US daytime, ~12-18h out): `image_generate` volume + `hd_waitlist` (first-ever PMF signal) + art_launch email→tool CTR + homepage `art_live` signup-success conversions. At meaningful N: hd_waitlist > 0 → build $4.99 paywall; generations climbing but 0 hd_waitlist → keep counting toward 30-session kill-criterion; generations also flat → bundle the deliverability read (b1333dc0) into one Armando ping to de-confound spam-folder vs. audience.
+
+### Confidence
+92% — probe + track-events pulled direct (1 art_launch-attributed real generation confirmed); hd_waitlist reachability + double-measurement verified by code-read of the live file. Only unverified: whether real subscribers convert to hd_waitlist (the PMF thesis — now finally measurable, just needs N).
+
 ## Session 32 — 🎉 ART MACHINE LIVE + 🚀 FIRST AUDIENCE-MATCHED LAUNCH NEWSLETTER FIRED TO 117 (Jun 8 ~14:30 CST, pair session, commit f5ed16a)
 
 ### 🚀 THE ART_LAUNCH MEMO IS OUT — 117 sent / 0 failed
