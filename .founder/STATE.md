@@ -11,6 +11,37 @@
 
 <!-- AGENT-EDITED-BELOW (everything below this line is preserved across ticks) -->
 
+## Session 34 — 🔴 48h PMF VERDICT: ART MACHINE FUNNELS DEAD ON EVERY SURFACE → EXECUTED AUDIT ITEMS B + A (Jun 10 ~16:1x local / 22:1x UTC, commit 0a39032 pushed)
+
+### The verdict (T+~44h after art_launch, full-window data — this closes the watch)
+Pulled readiness probe (`ready:true`) + 600 events spanning **Jun 7 17:28 → Jun 10 21:53 UTC** (complete post-launch coverage):
+- **Email → tool: DEAD.** ALL 13 /ai-art-generator events occurred Jun 8 23:56 → Jun 9 00:11 (launch night only, several = scanner-bot garbled-UTM cluster). 4 real clicks of 117 (3.4%), **1 image_generate, 0 hd_waitlist — final**. The "opens trickle over 24-48h" theory is falsified: zero tool traffic in the ~45h since.
+- **Homepage signup-success → tool: DEAD.** 58 subscribe_submit in window, every one shown the "Art Machine live right now" CTA (47c2166) at peak intent → **0 `art_live` page_views**. Verified the CTA code is structurally sound (single form, plain anchor, _app.js tracks navigation) — the zero is real behavior, not a broken funnel.
+- **Blog bridges → tool: DEAD** (~0 click-through, unchanged).
+- Top pages: homepage 147, outreach-machine 31 (garbled-UTM bots), art blogs 15-17 each. Subs engine healthy (58 submits ≈ 15/day).
+
+**Conclusion: the conversion failure is not deliverability alone — even on-site, post-signup, peak-intent placement converts at 0.** This empirically seals the Jun 10 pair-audit's diagnosis: this audience will not click into TOOLS; monetize the LIST and the RESULT path. The 30-session kill-criterion is moot (traffic ≈ 0 means it never accumulates); the standalone $4.99 paywall stays parked per audit Tier 2.
+
+### ✅ Shipped (commit 0a39032, build clean, pushed — executes the pair-audit's agreed implementation order)
+1. **Audit item B — "Sell your art" money path** on the Art Machine result screen (`pages/ai-art-generator.js`): under every generated image, "💰 Make money with this" block → Listing Machine (primary, free) + how-to-make-money-selling-ai-art guide (secondary), both `utm_campaign=sell_your_art` + new `sell_path_click` trackEvent (dest + style payload) so the audit's 30-day kill criterion is measurable from day 1. Affiliate slot reserved inline for Printify (audit item 4, Armando-gated). HD-pack waitlist block untouched (measurement path preserved). All 3 destination URLs verified HTTP 200.
+2. **Audit item A — Memo #1 scaffold**: `memo_art_money` broadcast template in `pages/api/nurture.js` ("How people are selling AI art for real money") — money-method first ($15-50 Etsy portraits, $19-49 POD, figures from the cited Jun 8 intel deliverable), 3-step loop with our two free tools as steps 1-2, guide cross-link, reply-prompt. Send = `?broadcast=true&template=memo_art_money` (preview with `&to=`). **Cadence: Mon Jun 15** (one promo/week; art_launch was Jun 8).
+
+### Held / did NOT
+- Did NOT send the Memo (cadence + Armando preview-approval gate).
+- Did NOT build the $4.99 paywall (audit Tier 2, no trigger).
+- Did NOT build any new tool (audit Tier 3: motion).
+- Did NOT touch the HD-waitlist block or homepage flywheel.
+
+### Armando asks (telegrammed, bundled)
+1. **Resend dashboard read on the Jun 8 art_launch broadcast** (b1333dc0) — 2 min. Even though on-site surfaces also read 0 (so the strategic verdict stands regardless), the open-rate tells us whether email is a usable channel at all for the Jun 15 Memo.
+2. **Printify affiliate signup** (~10 min) — the sell-your-art path + Memo both have slots wired; every day without the account is unmonetized clicks once traffic starts.
+
+### NEXT
+Mon Jun 15: preview `memo_art_money` to Armando → send to list (should be ~200 subs by then). Watch `sell_path_click` + listing_generate from the art-machine bridge (30-day kill: 0 affiliate signups + 0 listing activations → audience is hobby-only, pivot to list rental/sponsorship per audit). KPI Users corrected 127→140 (audit-verified count).
+
+### Confidence
+92% — verdict from full-window direct data pull (every funnel surface read separately); CTA soundness verified by code-read; both ships build-clean + pushed + destinations curl-verified. Only unverified: whether the Memo format converts clicks (first measurable Jun 15) and deliverability (Armando's read).
+
 ## Session 33 — ✅ FIRST-EVER EMAIL→TOOL→REAL-GENERATION CHAIN FIRED + VERIFIED hd_waitlist MEASUREMENT PATH IS SOUND (Jun 9 ~00:0x UTC, no commit — verification only)
 
 ### The watch, ~3.5h after the art_launch memo
