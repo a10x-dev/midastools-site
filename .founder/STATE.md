@@ -2,14 +2,43 @@
 
 ## Current Status (auto-synced from database)
 
-**Bottleneck**: conversion (severity 7/10) — Art Machine LIVE (ready:true) + art_launch memo fired to 117 warm matched subs. Funnel verified end-to-end Jun 9: first-ever email→tool→real-generation chain (1 art_launch-attributed image_generate). hd_waitlist measurement path verified sound (reachable at peak-intent below every result image + double-measured via track event + gist sub). Now in the 24-48h PMF read: watch image_generate volume + hd_waitlist (first-ever willingness-to-pay signal) vs 30-session kill-criterion. ANY hd_waitlist>0 at meaningful N → build $4.99 paywall; 30 sessions/0 hd_waitlist → audience won't pay for the result, escalate offer shape (POD/print). Deliverability of the send still needs Armando's Resend read (b1333dc0) to de-confound trickle vs spam-folder.
+**Bottleneck**: conversion (severity 7/10) — 48h PMF verdict (Jun 10): ALL Art Machine funnels read 0 — email 4/117 clicks/1 gen/0 hd_waitlist (launch night only), homepage signup-success ~58 impressions/0 clicks (CTA verified sound), bridges ~0. Audience signs up (~15/day) but never clicks into tools. Strategy per Jun 10 audit: monetize LIST (weekly memo_art_money Memo, sends Mon Jun 15) + RESULT (sell-your-art path live, sell_path_click instrumented, commit 0a39032). Gates: Armando's Resend read (email-channel viability) + Printify affiliate account (monetizes both wired slots). Kill criteria: Memo 4 issues <2% method-CTR → format wrong; sell-path 30d 0 affiliate+0 listing activations → hobby-only audience, pivot to list rental/sponsorship.
 
 **KPIs**:
 - Conversations: 0 (target: 3, 7d: 0%)
-- Users: 127 (target: 30, 7d: 10.434782608695652%)
+- Users: 140 (target: 30, 7d: 21.73913043478261%)
 - Revenue: 155 (target: 997, 7d: 0%)
 
 <!-- AGENT-EDITED-BELOW (everything below this line is preserved across ticks) -->
+
+## Session 26 — ✅ DE-RISKED THE JUN-15 MEMO END-TO-END: SEND-READY + METHOD-CTR PROVEN SELF-MEASURABLE (Jun 10 ~22:1x UTC, no commit — verification only)
+
+### Why this wasn't motion (both needle-movers gated)
+0h after S25. Needle-movers both gated: memo_art_money sends Mon Jun 15 (calendar + Armando preview-approval), sell-path waits on traffic + Armando's Printify acct. The preview fired last session verified SEND-PATH + RENDER — but nobody had verified the Memo's BODY copy, destination links, the Art Machine "free" promise, OR whether the Jul-10 kill criterion (method-CTR <2%) is even measurable. The Memo is the dominant Jun-15 lever + a one-shot warm-list send → verifying body-before-send is the playbook discipline that caught the S35 chatbot_launch wrong-send. Armando-independent, plan-agnostic, session-sized → qualifies (not saturation).
+
+### ✅ 6 load-bearing checks, all pass (live probes + code reads)
+1. **Body** (nurture.js:435): money-method first, 3-step loop with our 2 free tools as steps 1-2, guide cross-link, reply-prompt, signed Armando. Subject solid. Strong, not a stub.
+2. **Money figures vs cited intel** (art-audience-monetization-intel-2026-06-08.md): "$15–50" Etsy = intel "digital downloads $15–$50" ✓; "$19–49" POD = "mug ~$19 / canvas ~$49" ✓. Zero false claims (verify-claims-at-source).
+3. **3 destination links** (ai-art-generator, listing-machine, blog/how-to-make-money-selling-ai-art-2026): all HTTP 200.
+4. **Art Machine live**: `GET /api/generate-image` → `{"ready":true}` HTTP 200. The Memo's "free, ~10s" promise holds → no broken-promise trust leak on the full-list send.
+5. **Send-loop message-id capture** (nurture.js:840, the broadcast loop not the day-N drip): `results.push({email, status:'sent', id: sendRes.data.id})` — the S52 fix is in the path the Jun-15 send uses → deliverability natively queryable.
+6. **🔑 method-CTR MEASURABLE** — all 3 CTAs land on OUR pages carrying `utm_campaign=memo_art_money`; `lib/stripe-attribution.js` (UTM_KEYS line 34 + capture line 108) records utm_campaign into attribution; per S33 precedent (`art_launch`-attributed page_views were read in track-events), method-CTR = page_views[utm_campaign=memo_art_money] ÷ sends is readable from my own seat. **Contrast: the flash CTA went direct to buy.stripe.com (off-domain, invisible, needed flash-sale-check.py); the Memo is on-domain → no Armando relay needed → the Jul-10 kill criterion is genuinely enforceable, NOT the S28 unmeasurable trap.**
+
+### Verdict: send-ready, no leak, no edit
+Clean close (clean-close-equals-fix-close): the dominant Jun-15 lever is now a true flip-the-switch with BOTH axes self-measurable (deliverability via message-ids, method-CTR via on-domain utm clicks). Jun-15 morning = `?broadcast=true&template=memo_art_money` after Armando's preview nod.
+
+### Held / did NOT
+- Did NOT edit the Memo copy (already strong + Armando-preview-pending → editing prejudges his review).
+- Did NOT pre-build Memo issue #2 (issue #1 hasn't sent; the next money-method should be DATA-informed by issue #1's replies+CTR — literally "it decides what I build next Monday" — pre-building prejudges the data).
+- Did NOT pull track-events (0h after S25 = motion, nothing moved).
+- Did NOT Telegram (preview already in Armando's inbox w/ 5-day runway; a "it's verified" FYI is sub-threshold per armando-async-asks).
+- Did NOT touch the POD/affiliate paths (Options 2-4 are Armando: supplier acct + spend per intel).
+
+### NEXT
+Mon Jun 15 (or on Armando approval): send memo_art_money to full list (~200 subs) → read method-CTR (page_views[utm_campaign=memo_art_money]÷sends) vs 2% kill threshold + any sell_path_click from resulting generations. Gates unchanged: Armando preview-nod + Printify acct.
+
+### Confidence
+92% — every check verified with live prod probes (3×200, ready:true) + direct code reads (send-loop id capture, utm capture path). Only unverified: whether subscribers actually click money-method CTRs (the thesis itself — now provably measurable for the first time).
 
 ## Session 34 — 🔴 48h PMF VERDICT: ART MACHINE FUNNELS DEAD ON EVERY SURFACE → EXECUTED AUDIT ITEMS B + A (Jun 10 ~16:1x local / 22:1x UTC, commit 0a39032 pushed)
 
