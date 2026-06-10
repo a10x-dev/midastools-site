@@ -429,6 +429,34 @@ const broadcasts = {
       <p style="font-size:14px;line-height:1.7;color:#6B7280;margin:10px 0 0;">— Armando, MidasTools</p>
     `),
   },
+  // Midas Memo #1 of the list-monetization era — per revenue-audit-2026-06-10 item A.
+  // Money-method: selling AI art (Etsy/POD). CTAs = our free tools; affiliate slot reserved for Printify.
+  // Send: ?broadcast=true&template=memo_art_money  (preview: &to=email). Cadence: Mon Jun 15.
+  memo_art_money: {
+    subject: "People sell AI art for $15–50 a pop. Here's the playbook (free)",
+    html: (source) => wrapEmail(`
+      <p style="font-size:13px;font-weight:700;color:#3B5FFF;letter-spacing:0.5px;text-transform:uppercase;margin:0 0 4px;">The Midas Memo</p>
+      <h1 style="font-size:25px;line-height:1.28;color:#111827;margin:0 0 16px;">How people are selling AI art for real money</h1>
+
+      <p style="font-size:16px;line-height:1.7;color:#374151;margin:0 0 16px;">Every Monday I break down one way people are actually making money with AI right now — and give you the tools to do it. This week: the one closest to home.</p>
+
+      <p style="font-size:16px;line-height:1.7;color:#374151;margin:0 0 8px;"><strong>The method.</strong> Custom AI portraits — pets, couples, "you as a Ghibli character" — sell on Etsy every day for <strong>$15&ndash;50 each</strong>. Print-on-demand shops put the same art on prints, mugs and canvases at <strong>$19&ndash;49</strong>, with zero inventory: the POD service prints and ships, you keep the margin.</p>
+
+      <p style="font-size:16px;line-height:1.7;color:#374151;margin:0 0 6px;"><strong>The whole loop is three steps, and the first two are free:</strong></p>
+      <p style="font-size:15px;line-height:1.8;color:#374151;margin:0 0 18px;">
+        1. <strong>Make the art</strong> — describe it, pick a style, download the image. <a href="https://www.midastools.co/ai-art-generator?utm_source=email&utm_medium=broadcast&utm_campaign=memo_art_money" style="color:#3B5FFF;font-weight:600;">The Art Machine</a> does this in ~10 seconds, free.<br/>
+        2. <strong>Write the listing</strong> — title, tags, description that ranks on Etsy. <a href="https://www.midastools.co/listing-machine?utm_source=email&utm_medium=broadcast&utm_campaign=memo_art_money" style="color:#3B5FFF;font-weight:600;">The Listing Machine</a> writes it for you, free.<br/>
+        3. <strong>List it</strong> — Etsy for digital downloads, or a print-on-demand shop for physical products.
+      </p>
+
+      ${ctaButton("Start step 1 — make the art (free)", 'https://www.midastools.co/ai-art-generator?utm_source=email&utm_medium=broadcast&utm_campaign=memo_art_money', "10 seconds from description to downloadable image. No sign-up to start.")}
+
+      <p style="font-size:15px;line-height:1.7;color:#374151;margin:24px 0 0;">Want the longer version &mdash; niches that sell, pricing, where the buyers are? I wrote the full guide here: <a href="https://www.midastools.co/blog/how-to-make-money-selling-ai-art-2026?utm_source=email&utm_medium=broadcast&utm_campaign=memo_art_money" style="color:#3B5FFF;font-weight:600;">How to make money selling AI art</a>.</p>
+
+      <p style="font-size:14px;line-height:1.7;color:#6B7280;margin:24px 0 0;">Doing this already, or stuck on a step? Hit reply and tell me &mdash; I read every one, and it decides what I build next Monday.</p>
+      <p style="font-size:14px;line-height:1.7;color:#6B7280;margin:10px 0 0;">&mdash; Armando, MidasTools</p>
+    `),
+  },
   // Midas Memo — Mon Jun 8 2026. Flywheel tool #1 launch (Chatbot Builder, $39/mo).
   // Send: ?broadcast=true&template=chatbot_launch
   chatbot_launch: {

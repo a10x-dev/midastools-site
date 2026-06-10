@@ -215,6 +215,14 @@ export default function AiArtGenerator() {
         .hd button { background: var(--accent); color: #fff; border: none; border-radius: 100px; padding: 14px 24px; font-weight: 800; cursor: pointer; font-family: inherit; }
         .hd .ok { color: #6EE7B7; font-size: 15px; font-weight: 600; }
 
+        .sell { border: 1px solid var(--border); border-radius: 20px; padding: 28px 32px; margin: 24px 0; background: var(--bg); }
+        .sell h3 { font-size: 19px; font-weight: 900; margin-bottom: 6px; }
+        .sell p { color: var(--text-secondary); font-size: 14.5px; line-height: 1.6; margin-bottom: 16px; }
+        .sell .sell-links { display: flex; gap: 10px; flex-wrap: wrap; }
+        .sell .sell-links a { display: inline-block; padding: 11px 18px; border-radius: 100px; font-size: 14px; font-weight: 700; text-decoration: none; }
+        .sell .sell-primary { background: var(--accent); color: #fff; }
+        .sell .sell-secondary { border: 1px solid var(--border); color: var(--text); background: transparent; }
+
         .gate { background: var(--text); color: #fff; border-radius: 20px; padding: 36px 32px; text-align: center; margin: 24px 0; }
         .gate h3 { font-size: 22px; font-weight: 900; color: #fff; margin-bottom: 8px; }
         .gate p { color: rgba(255,255,255,0.72); font-size: 15px; margin-bottom: 20px; }
@@ -337,6 +345,31 @@ export default function AiArtGenerator() {
                   <button type="submit">Get early access</button>
                 </form>
                 {hdMsg && <p className="ok" style={{ marginTop: 16, marginBottom: 0 }}>{hdMsg}</p>}
+              </div>
+            )}
+
+            {/* Sell-your-art money path — converts the result into the MidasTools "make money" loop */}
+            {image && !loading && (
+              <div className="sell">
+                <h3>💰 Make money with this</h3>
+                <p>Art like yours sells every day as prints, mugs and digital downloads on Etsy — custom portraits go for $15–50. You just made the product. Here&apos;s the rest:</p>
+                <div className="sell-links">
+                  <a
+                    className="sell-primary"
+                    href="/listing-machine?utm_source=art-machine&utm_medium=sell_path&utm_campaign=sell_your_art"
+                    onClick={() => trackEvent('sell_path_click', { dest: 'listing-machine', style })}
+                  >
+                    Write my Etsy listing — free →
+                  </a>
+                  <a
+                    className="sell-secondary"
+                    href="/blog/how-to-make-money-selling-ai-art-2026?utm_source=art-machine&utm_medium=sell_path&utm_campaign=sell_your_art"
+                    onClick={() => trackEvent('sell_path_click', { dest: 'guide', style })}
+                  >
+                    How people sell AI art →
+                  </a>
+                  {/* Affiliate slot: Printify/Printful signup link goes here the moment Armando creates the account (audit 2026-06-10 item 4) */}
+                </div>
               </div>
             )}
 
