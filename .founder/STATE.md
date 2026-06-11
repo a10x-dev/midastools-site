@@ -11,6 +11,35 @@
 
 <!-- AGENT-EDITED-BELOW (everything below this line is preserved across ticks) -->
 
+## Session 27 — ✅ VERIFIED THE SELL-PATH's JUL-10 KILL CRITERION IS ENFORCEABLE (sell_path_click measurement path SOUND; keepalive closes the navigation-loss trap) (Jun 10 ~22:5x UTC, no commit — verification only)
+
+### Why this wasn't a saturation tick (the one genuinely-unverified load-bearing assumption)
+0h after S26. Both needle-movers gated (memo sends Mon Jun 15 + Armando preview-nod; sell-path waits on traffic + Printify acct). S26 verified the MEMO's method-CTR is self-measurable (closed the S28 unmeasurable-kill trap for the LIST half). But I had NEVER done the same for the RESULT half: the sell-path's Jul-10 kill criterion ("30d: 0 affiliate + 0 listing activations → hobby-only → pivot to list rental/sponsorship") rests entirely on `sell_path_click` firing on a sound measurement path. If it doesn't, the criterion is unenforceable — the exact S28 trap. Armando-independent + plan-agnostic (sell-path is live regardless of memo/Printify) + session-sized + conversion-bottleneck-direct + NOT saturation (different artifact than the 6×-verified memo).
+
+### ✅ 5 load-bearing checks, all pass (code-read only — a test click would pollute the very count the criterion reads, per S33 zero-pollution discipline)
+1. **Reachability** (ai-art-generator.js:352): the sell block is `{image && !loading && (...)}` — surfaces under EVERY generation at peak intent, same condition as the S33-verified HD pack. Not behind email-gate or paywall.
+2. **Plumbing** (line 5): `trackEvent` from `../lib/track` — identical path to the demonstrably-firing `image_generate` (line 77; S33 saw a real one land in track-events).
+3. **🔑 Navigation survival** (track.js:47): `keepalive: true` — the beacon completes even though the anchor immediately navigates to /listing-machine. This is the cta_click-loss trap UNIQUE to sell_path_click (the waitlist events fire on preventDefault'd form handlers, so navigation isn't a factor; the sell links navigate away on click). It's closed.
+4. **Dest disambiguation** (lines 360/367): payload carries `dest: 'listing-machine' | 'guide'` + `style` → listing-click vs guide-click separable in the readout.
+5. **Double-measurable**: both destinations carry `utm_campaign=sell_your_art`, so like the Memo's method-CTR it's readable two ways — the trackEvent itself in track-events AND page_views[utm_campaign=sell_your_art] on /listing-machine + the blog via the S26-confirmed UTM-capture path (lib/stripe-attribution).
+
+### Verdict: sound, no edit (clean-close-equals-fix-close)
+The Jul-10 sell-path criterion's two self-measurable halves — `sell_path_click` (click-through) + `listing_generate` (activation, already instrumented) — are now both enforceable from my own seat. The third half (affiliate signups) is correctly Armando-gated on the Printify account that doesn't exist yet → un-measurable BY DESIGN, not by oversight. Both monetization halves of the Jun-10 audit strategy now have verified-measurable kill criteria: LIST (memo method-CTR, S26) + RESULT (sell_path_click + listing_generate, this session).
+
+### Held / did NOT
+- Did NOT re-verify the memo (S26 did 6 checks; saturated).
+- Did NOT pull track-events (0h since S26 = nothing moved).
+- Did NOT test-click the sell-path (would inflate the sell_path_click count the Jul-10 criterion reads — code-read is the correct verification).
+- Did NOT ping Armando (preview already in inbox w/ 5-day runway; a "sell-path measurement verified" FYI is sub-threshold per armando-async-asks).
+- Did NOT wire the Printify affiliate slot (Armando-gated: his supplier account + payout identity).
+- Did NOT chain a 3rd task — genuine saturation after this one (remaining levers are gated/passive/pre-build-traps).
+
+### NEXT
+Mon Jun 15 (or on Armando approval): send memo_art_money → read method-CTR vs 2% kill threshold + any sell_path_click from resulting generations. Gates unchanged: Armando preview-nod + Printify acct. Jul-10: read sell_path_click + listing_generate[utm_campaign=sell_your_art] for the sell-path 30d verdict.
+
+### Confidence
+92% — every check verified by direct code-read (reachability + plumbing + keepalive + dest payload + utm). Only unverified: whether real users actually click sell_path_click (the thesis itself — now provably measurable, just needs traffic the funnel doesn't yet have).
+
 ## Session 26 — ✅ DE-RISKED THE JUN-15 MEMO END-TO-END: SEND-READY + METHOD-CTR PROVEN SELF-MEASURABLE (Jun 10 ~22:1x UTC, no commit — verification only)
 
 ### Why this wasn't motion (both needle-movers gated)
