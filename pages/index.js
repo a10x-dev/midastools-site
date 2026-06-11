@@ -565,8 +565,9 @@ export default function Home() {
           {subStatus === 'done' ? (
             <div style={{ textAlign: 'center' }}>
               <p style={{ color: 'var(--accent)', fontWeight: 700, fontSize: 16, marginBottom: 16 }}>You're in — check your inbox!</p>
-              <p style={{ color: '#374151', fontSize: 15, marginBottom: 16 }}>Now meet the Art Machine. Describe your pet, yourself, or any scene and get <strong>the actual image</strong> — Ghibli, 3D, watercolor, pop art &amp; more. No prompt to copy, no other app. Free, and live right now.</p>
-              <a href="/ai-art-generator?utm_source=homepage&utm_medium=signup_success&utm_campaign=art_live" className="btn-primary" data-cta="signup-success-art-machine">Make AI art free &rarr;</a>
+              <p style={{ color: '#374151', fontSize: 15, marginBottom: 16 }}>People are selling AI art for <strong>$15&ndash;50 a piece</strong> on Etsy. Here's the exact playbook &mdash; which styles sell, which tools to use, and how to list your first piece.</p>
+              <a href="/blog/how-to-make-money-selling-ai-art-2026?utm_source=homepage&utm_medium=signup_success&utm_campaign=signup_money_guide" className="btn-primary" data-cta="signup-success-money-guide">Show me how to sell AI art &rarr;</a>
+              <p style={{ marginTop: 14, fontSize: 13 }}><a href="/ai-art-generator?utm_source=homepage&utm_medium=signup_success&utm_campaign=art_live" style={{ color: '#6b7280', textDecoration: 'none' }} data-cta="signup-success-art-machine">or make art for free first &rarr;</a></p>
             </div>
           ) : (
             <form className="email-form" onSubmit={handleSubscribe}>
