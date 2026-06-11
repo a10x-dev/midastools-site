@@ -11,6 +11,32 @@
 
 <!-- AGENT-EDITED-BELOW (everything below this line is preserved across ticks) -->
 
+## Session 29 — ✅ RE-POINTED THE PROVEN CONVERSION ENGINE (homepage signup-success) FROM THE DEAD TOOL FUNNEL TO THE MONEY-METHOD STRATEGY (Jun 11 ~02:3x UTC, commit 2a5448e pushed, build clean)
+
+### Why this wasn't a 7th saturation tick (the genuinely un-pulled lever the Jun-10 audit left)
+0h-ish after S28. Pulled fresh track-events (600 events, Jun 8→Jun 11 02:25 UTC, ~3 days): **61 subscribe_submit / 0 art_live page_views / 0 cta_click / 0 sell_path_click / 1 image_generate.** The homepage signup-success CTA — the ONLY proven conversion engine (~15/day) — STILL pushed the Art Machine *tool* at peak intent (`pages/index.js:567-569`, "Now meet the Art Machine… Make AI art free →"). The Jun-10 verdict proved this audience won't click into tools; 0/61 over 3 days confirms it on the highest-volume surface we own. The Jun-10 audit shipped the sell-path (item B) + memo scaffold (item A) but **never re-pointed this surface** — it stayed aimed where the verdict says the audience won't go. That's a distinct, never-addressed artifact → NOT saturation. Autonomous (no Armando/calendar gate), plan-agnostic, reversible, bottleneck-direct.
+
+### ✅ Shipped (commit 2a5448e, build clean, pushed → Vercel auto-deploying)
+Re-pointed the signup-success state from tool-framing → **money-method-first** (the on-site mirror of the Jun-15 memo's thesis):
+- **Primary CTA** → `/blog/how-to-make-money-selling-ai-art-2026?utm_campaign=signup_money_guide` ("People are selling AI art for $15–50 a piece on Etsy. Here's the exact playbook…"). `$15–50` matches cited intel + memo line 436 (verify-claims-at-source). The guide itself funnels to the Art Machine + $97 bundle (audited clean S28-cont).
+- **Secondary link** → kept the Art Machine (`utm_campaign=art_live`, demoted to "or make art for free first →") so the RESULT funnel entry stays open and the **Jul-10 sell-path verdict isn't confounded** (Art Machine isn't starved of its only meaningful traffic vs. the prior state, where it already got 0).
+- **Measurable from my seat**: CTR = page_views[utm_campaign=signup_money_guide] ÷ signups, same on-domain utm path as the (0-reading) art_live, readable via lib/stripe-attribution capture. Tests "does money-framing at peak intent beat tool-framing (0/61)?"
+- Flywheel mouth preserved (email form unchanged); single reversible edit.
+
+### Held / did NOT
+- Did NOT touch the memo (S24/S26 saturated) or sell-path (S27 saturated) or the homepage hero front door (protected flywheel).
+- Did NOT add a trackEvent (destination page_view + utm is the established measured path, consistent with art_live).
+- Did NOT ping Armando (sub-threshold on-site copy iteration; no decide-now).
+
+### NEXT
+Read CTR on `signup_money_guide` vs the art_live 0/61 baseline once a chunk of new signups land (~24-48h). Mon Jun 15: send memo_art_money (calendar + Armando preview-nod). Jul-10: sell-path 30d verdict. Gates unchanged: Armando preview-nod + Printify acct + Resend read.
+
+### Confidence
+90% — fresh data pulled direct (0/61 tool-CTA confirmed over full 3-day window); route + money figure verified at source; build clean + pushed. Only unverified: whether money-framing converts the click (the thesis — now measurable for the first time on the highest-volume surface).
+
+### Continuation — ✅ VERIFIED THE MONEY-GUIDE LANDING MATCHES THE CTA PROMISE (load-bearing assumption of the ship, clean — no edit)
+Pushed to continue → verified the assumption the re-point rests on: does the money guide's above-the-fold deliver the "$15–50 playbook" the new CTA promises, or is it a tease-then-wait mismatch (S28 art-hero leak class)? Read `pages/blog/how-to-make-money-selling-ai-art-2026.js:104-123` directly. **Sound, no fix.** H1 = "How to Make Money Selling AI Art in 2026: 7 Proven Methods"; opener = "AI art is not a hobby anymore. It is a real business."; immediately states "$500 to $10,000 per month… copy-paste prompts… this is your playbook." The freshly-subscribed peak-intent visitor lands on a strong money-method hook that matches the CTA word-for-intent — no mismatch, value above the fold. The Art Machine cross-link sits mid-page (line 244) as the RESULT-funnel entry, correctly secondary. **The ship doesn't earn clicks into a dead end.** Did NOT touch the page (already strong); did NOT re-point day-1 nurture money-first (would be spray across surfaces in one session + prejudges the dedicated Jun-15 memo test) — genuine saturation after this verification.
+
 ## Session 28 — ✅ CLOSED THE EXECUTION-SURFACING GAP: HARD-WIRED THE JUN-15 MEMO SEND INTO SCHEDULE.md (the dominant revenue lever was at silent-miss risk) (Jun 10 ~23:1x UTC, SCHEDULE.md edit only — no commit needed, .founder/ not deployed)
 
 ### Why this wasn't a 7th saturation tick (the one genuinely-unaddressed layer)
