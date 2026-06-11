@@ -31,6 +31,26 @@ const SUPPRESS_EXACT = new Set([
   'support@rubimicrocafe.com',
 ]);
 
+// Exact addresses that BOUNCED (9) or were Resend-SUPPRESSED (21) on the Jun-8
+// art_launch broadcast — verified directly from the Resend send export
+// (2026-06-09). Real deliverability ground-truth: these never reach an inbox,
+// so flag them so the nurture drip stops attempting them (repeated bounces
+// drag sender reputation) and the active count stays honest.
+const SUPPRESS_RESEND_DEAD = new Set([
+  // 9 hard bounces
+  'abelousova@a7gi.ru', 'anouk@80i.com', 'antonio.tulelli@seastema.it',
+  'atredesign83@orange.fr', 'bapslady@yahoo.com', 'jboulanger11@verizon.net',
+  'jlawyer@pacificcrest.us', 'kdtyson68@yahoo.com', 'shannon.heenan@lakecountyca.gov',
+  // 21 Resend-suppressed (prior bounce / spam complaint)
+  'aj_haywood@yahoo.co.uk', 'ann.macon@outlook.com', 'ballweg_nicole@yahoo.com',
+  'chad@rivercityrush.com', 'curlylou7@aol.com', 'dyeaegr9440@wowway.com',
+  'habuzz@yahoo.com', 'hanygoba@yahoo.com', 'info@sigizmundgrp.com',
+  'irma.hernandez@oncor.com', 'joey.wang@shadow-caster.com', 'katvc@yahoo.com',
+  'lmartin753@aol.com', 'mo.m13nan.cy@gmail.com', 'pastordoug@valleygrace.net',
+  'r.mumm@gmail.com', 'rkmadhu@yahoo.com', 'susan.martyn@vision33.com',
+  't.kovach@yahoo.com', 'timo@korper.nl', 'tnicole@adt.co.za',
+].map((e) => e.toLowerCase()));
+
 const SUPPRESS_REASON = 'dead-weight-scraped-2026-06';
 
 // Junk: SMS email-gateway addresses + purely-numeric local-parts (e.g.
@@ -49,6 +69,7 @@ function matchesSuppression(email) {
   const lower = String(email || '').toLowerCase().trim();
   if (!lower || !lower.includes('@')) return null;
   if (SUPPRESS_EXACT.has(lower)) return 'role-shared-inbox';
+  if (SUPPRESS_RESEND_DEAD.has(lower)) return 'resend-bounced-or-suppressed';
   const domain = lower.split('@')[1] || '';
   for (const sub of SUPPRESS_DOMAIN_SUBSTRINGS) {
     if (domain.includes(sub)) return `scraped-cluster:${sub}`;
