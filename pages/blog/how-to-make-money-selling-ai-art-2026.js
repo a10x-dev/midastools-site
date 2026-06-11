@@ -249,7 +249,7 @@ export default function HowToMakeMoneySellingAiArt2026() {
 
         {/* ==================== CTA 1 ==================== */}
         <div style={{ marginTop: '32px', marginBottom: '32px', padding: '24px', background: '#F0F4FF', border: '1px solid #93B4FF', borderRadius: '8px', textAlign: 'center' }}>
-          <p style={{ margin: '0 0 12px', fontSize: '16px', fontWeight: '700' }}>Want 145+ Ready-to-Use Image Prompts?</p>
+          <p style={{ margin: '0 0 12px', fontSize: '16px', fontWeight: '700' }}>Want 150+ Ready-to-Use Image Prompts?</p>
           <p style={{ margin: '0 0 16px', color: '#6B7280', fontSize: '15px' }}>Our AI Image Prompt Pack includes prompts for portraits, products, stock photography, social media, and more &mdash; tested and optimized for Midjourney and ChatGPT.</p>
           <a href={IMAGE_PACK_LINK} style={{ display: 'inline-block', background: '#3B5FFF', color: '#fff', padding: '14px 28px', borderRadius: '6px', textDecoration: 'none', fontWeight: '700', fontSize: '15px' }}>
             Get the AI Image Prompt Pack &mdash; $29
@@ -321,14 +321,14 @@ export default function HowToMakeMoneySellingAiArt2026() {
 
         <p><strong>Revenue potential:</strong> $500&ndash;$5,000/month. At $19&ndash;$49 per pack, you need 25&ndash;100 sales/month to hit $1,000+. Top sellers on Gumroad with multiple packs and good SEO report $3,000&ndash;$10,000/month.</p>
 
-        <p>This is exactly what we do at Midas Tools. Our <Link href="/ai-image-prompt-pack" style={{ color: '#3B5FFF' }}>AI Image Prompt Pack</Link> includes 145+ tested prompts for <Link href="/blog/chatgpt-image-prompts-2026" style={{ color: '#3B5FFF' }}>ChatGPT image generation</Link> and <Link href="/blog/best-midjourney-prompts-2026" style={{ color: '#3B5FFF' }}>Midjourney</Link>, organized by use case. If you want to see what a professional prompt pack looks like &mdash; or skip straight to generating great images &mdash; start there.</p>
+        <p>This is exactly what we do at Midas Tools. Our <Link href="/ai-image-prompt-pack" style={{ color: '#3B5FFF' }}>AI Image Prompt Pack</Link> includes 150+ tested prompts for <Link href="/blog/chatgpt-image-prompts-2026" style={{ color: '#3B5FFF' }}>ChatGPT image generation</Link> and <Link href="/blog/best-midjourney-prompts-2026" style={{ color: '#3B5FFF' }}>Midjourney</Link>, organized by use case. If you want to see what a professional prompt pack looks like &mdash; or skip straight to generating great images &mdash; start there.</p>
 
         <p>Want the full toolkit? The <Link href="/bundle" style={{ color: '#3B5FFF' }}>Midas Tools Bundle</Link> includes the Image Prompt Pack plus every other prompt pack we sell, at a discount.</p>
 
         {/* ==================== CTA 2 ==================== */}
         <div style={{ marginTop: '32px', marginBottom: '32px', padding: '24px', background: '#F0F4FF', border: '1px solid #93B4FF', borderRadius: '8px', textAlign: 'center' }}>
           <p style={{ margin: '0 0 12px', fontSize: '16px', fontWeight: '700' }}>Skip the Trial and Error &mdash; Get Prompts That Actually Work</p>
-          <p style={{ margin: '0 0 16px', color: '#6B7280', fontSize: '15px' }}>145+ image prompts tested on ChatGPT and Midjourney. Portraits, products, stock photos, social media, and more. Copy, paste, sell.</p>
+          <p style={{ margin: '0 0 16px', color: '#6B7280', fontSize: '15px' }}>150+ image prompts tested on ChatGPT and Midjourney. Portraits, products, stock photos, social media, and more. Copy, paste, sell.</p>
           <a href={IMAGE_PACK_LINK} style={{ display: 'inline-block', background: '#3B5FFF', color: '#fff', padding: '14px 28px', borderRadius: '6px', textDecoration: 'none', fontWeight: '700', fontSize: '15px' }}>
             Get the AI Image Prompt Pack &mdash; $29
           </a>
@@ -450,7 +450,7 @@ export default function HowToMakeMoneySellingAiArt2026() {
         {/* ==================== FINAL CTA ==================== */}
         <div style={{ marginTop: '16px', marginBottom: '32px', padding: '24px', background: '#F0F4FF', border: '1px solid #93B4FF', borderRadius: '8px', textAlign: 'center' }}>
           <p style={{ margin: '0 0 12px', fontSize: '16px', fontWeight: '700' }}>Ready to Start Selling AI Art?</p>
-          <p style={{ margin: '0 0 16px', color: '#6B7280', fontSize: '15px' }}>Get 145+ tested image prompts for portraits, products, stock photos, and social media. Works with ChatGPT and Midjourney.</p>
+          <p style={{ margin: '0 0 16px', color: '#6B7280', fontSize: '15px' }}>Get 150+ tested image prompts for portraits, products, stock photos, and social media. Works with ChatGPT and Midjourney.</p>
           <a href={IMAGE_PACK_LINK} style={{ display: 'inline-block', background: '#3B5FFF', color: '#fff', padding: '14px 28px', borderRadius: '6px', textDecoration: 'none', fontWeight: '700', fontSize: '15px' }}>
             Get the AI Image Prompt Pack &mdash; $29
           </a>
