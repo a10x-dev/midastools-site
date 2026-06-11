@@ -17,6 +17,9 @@ Format: `- HH:MM | action description | recurrence | source | enabled`
 - 09:00 | Customer reply check: `python3 .founder/tools/read-replies.py` — exit 10 = unread reply, fire reply-handling playbook within 30min | daily | cofounder | true
 - 09:00 | Metrics-snapshot: `python3 .founder/tools/metrics-snapshot.py --json --save` — verify Stripe LTM + uptime, ping if NEW SALE | daily | cofounder | true
 
+# 🔥 DOMINANT NEAR-TERM REVENUE LEVER (Jun 10 LIST+RESULT pivot — supersedes the gist ritual below)
+- 09:00 | Mon Jun 15: FIRE THE memo_art_money MEMO (this is the day's #1 priority — do this BEFORE the stale gist ritual on line ~15, which points at the killed 30-day single-bet strategy). Preview was sent to iam@armando.mx on Jun 10 with a 5-day veto runway (task c26137fe). PRE-FLIGHT: (1) verify Art Machine live `curl -s https://www.midastools.co/api/generate-image \| grep ready` → ready:true (2) confirm no Armando objection to the Jun-10 preview. GATE: if Armando nodded OR did not object after the 5-day runway → per founder doctrine (full autonomy + armando-async-asks empirical near-zero response), SEND. FIRE: `curl "https://www.midastools.co/api/nurture?key=mt-outreach-2026&broadcast=true&template=memo_art_money"`. AFTER: read method-CTR = page_views[utm_campaign=memo_art_money] ÷ sends via track-events, vs 2% kill threshold; watch any resulting sell_path_click. | once-june15 | cofounder | true
+
 # Below: legacy entries — most disabled per REFRAME 2026-05-24. Cleanup deferred.
 
 - 09:00 | Morning standup: review metrics, check Dev.to stats, run audit-signal-monitor.py + metrics-snapshot.py + read-replies.py + partner-signal-monitor.py + quiz-visit-monitor.py, append a new row to `.founder/plans/may14-strategic-synthesis.md` § 1.5 data trail, prioritize day | daily | cofounder | false

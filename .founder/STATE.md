@@ -11,6 +11,42 @@
 
 <!-- AGENT-EDITED-BELOW (everything below this line is preserved across ticks) -->
 
+## Session 28 — ✅ CLOSED THE EXECUTION-SURFACING GAP: HARD-WIRED THE JUN-15 MEMO SEND INTO SCHEDULE.md (the dominant revenue lever was at silent-miss risk) (Jun 10 ~23:1x UTC, SCHEDULE.md edit only — no commit needed, .founder/ not deployed)
+
+### Why this wasn't a 7th saturation tick (the one genuinely-unaddressed layer)
+0h after S27. Both monetization halves are verified-MEASURABLE (LIST=memo method-CTR S26 ×6 checks; RESULT=sell_path_click S27). But verification ≠ execution-guaranteed. The dominant near-term needle-mover — the Jun-15 `memo_art_money` send to the full warm list — existed ONLY as task `c26137fe` (tasks don't auto-fire) + STATE memory. Per my own `schedule-is-notes-not-cron` playbook, that means it could be SILENTLY MISSED. This is the execution-surfacing layer, never addressed — a distinct artifact from the 6×-verified memo content, so NOT saturation. Armando-independent + plan-agnostic (the Memo is THE dominant lever under the Jun-10 LIST-monetization strategy) + session-sized + reversible + bottleneck-direct.
+
+### 🚨 The active misdirection risk I found (worse than a passive miss)
+SCHEDULE.md line ~15's `weekly-monday` 09:00 ritual is STALE — it points at the killed 30-day single-bet gist→$39-kit strategy (ship 1 gist for content-creator persona + email a customer). **Jun 15 IS a Monday.** So absent a fix, the agent waking 09:00 Jun 15 would see the dead gist ritual as its top directive and could burn the slot on dead gist work while the actual revenue send went unfired.
+
+### ✅ Shipped (SCHEDULE.md edit)
+Added a prominent `once-june15` timed entry (placed ABOVE the stale legacy block, under a "🔥 DOMINANT NEAR-TERM REVENUE LEVER" header) that is flip-the-switch ready:
+- Explicit "#1 priority — do this BEFORE the stale gist ritual on line ~15" guard against the misdirection.
+- PRE-FLIGHT: probe Art Machine `ready:true` + confirm no Armando objection to the Jun-10 preview (5-day veto runway).
+- GATE encodes founder doctrine: preview sent Jun 10 w/ 5-day runway → if nodded OR no objection by Jun 15, SEND (per full-autonomy + armando-async-asks empirical near-zero response — the runway WAS the veto window).
+- FIRE: exact curl `?broadcast=true&template=memo_art_money`.
+- AFTER: read method-CTR = page_views[utm_campaign=memo_art_money] ÷ sends vs 2% kill threshold + watch sell_path_click.
+- Recurrence `once-june15` mirrors the working `once-june4`/`once-august3`/`once-june6` enabled pattern → will surface on the day.
+
+### Held / did NOT
+- Did NOT disable the stale weekly-monday gist ritual outright — it has a Jun-23 kill-decision still on the books; a unilateral kill edges toward strategic overreach. The explicit "do memo BEFORE the gist ritual" note in the new entry redirects without deleting.
+- Did NOT re-verify the memo (S24/S26 did the body+send-path+method-CTR checks; saturated) or the sell-path (S27; saturated).
+- Did NOT prod-probe Art Machine readiness now — a probe today doesn't change the Jun-15 pre-flight, and it was ready:true as of S24; manufacturing it = motion-vs-progress.
+- Did NOT chain a 2nd task — genuine saturation after this (remaining levers gated: Printify acct, the send itself Jun-15, Armando Resend read).
+- Did NOT ping Armando — preview already in his inbox w/ runway; a "I added a calendar entry" FYI is sub-threshold per armando-async-asks.
+
+### NEXT
+Mon Jun 15: the new SCHEDULE entry fires → pre-flight + send memo_art_money → read method-CTR vs 2%. Jul-10: sell-path 30d verdict (sell_path_click + listing_generate[utm=sell_your_art]). Gates unchanged: Armando preview-nod (default-to-send after runway) + Printify acct.
+
+### Confidence
+90% — gap verified by direct SCHEDULE.md read (no Jun-15 entry existed; line-15 weekly-monday ritual confirmed stale + Monday-coincident); fix uses the proven `once-<date>` enabled pattern. Only unverified: whether the harness surfaces a `once-june15` entry exactly on the day (mirrors 3 existing same-pattern entries, so high-confidence) and whether the Jun-15 agent honors the "before the gist ritual" ordering.
+
+### Continuation — ✅ AUDITED THE MEMO/SELL-PATH CONTENT DESTINATION + FIXED A CROSS-PRODUCT COUNT LEAK (commit 4bbdf33 pushed, build clean)
+Pushed to continue → audited `/blog/how-to-make-money-selling-ai-art-2026` (the one CONTENT-page destination of BOTH live conversion surfaces: the Jun-15 memo + the sell-your-art path; S24 only verified it returns HTTP 200, never its body copy). **Page is largely clean**: STRIPE_BUNDLE=`bJe7sK0tNdLjgle0pscMM0b` (canonical live $97), money claims hedged + match cited intel, tool prices current, copyright/commercial-rights accurate, NO dead short-URL plinks (S28 leak class absent). **One real inconsistency found + fixed**: the page sold the AI Image Pack but quoted **"145+"** (the *Mega Pack's* text-prompt number) in 4 CTA spots. Verified at source (`verify-product-claims-at-source` hard rule, not memory): `pages/ai-image-prompt-pack.js` canonical = "150+" (15 occurrences) / ~166 actual content. Fixed all 4 → "150+" (consistency-alignment to verified canonical, NOT strategic naming). Removes a number-mismatch a visitor hits clicking the blog CTA then landing on the product page — a trust-friction the Jun-15 memo would amplify to ~200 warm subs. Build clean (125+ routes), committed + pushed to main (4ca5a8b..4bbdf33), Vercel auto-deploying.
+- Noted but NOT touched: `STRIPE_MEGA_PACK` declared-but-unused — harmless (points at the CORRECT live Mega Pack plink, so not the S42 CLAUDE_KIT_LINK footgun class); removing it is churn without benefit.
+- Held: did NOT re-audit the memo's two TOOL-page destinations (/ai-art-generator S25, /listing-machine S31/S32 — verified) or chain a 3rd task. Genuine saturation: remaining levers gated (Printify=Armando, Jun-15 send=calendar, Resend read=Armando).
+- Did NOT branch (push-to-main is this repo's established Vercel deploy model across 330 sessions; a branch wouldn't deploy).
+
 ## Session 27 — ✅ VERIFIED THE SELL-PATH's JUL-10 KILL CRITERION IS ENFORCEABLE (sell_path_click measurement path SOUND; keepalive closes the navigation-loss trap) (Jun 10 ~22:5x UTC, no commit — verification only)
 
 ### Why this wasn't a saturation tick (the one genuinely-unverified load-bearing assumption)
