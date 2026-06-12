@@ -446,7 +446,7 @@ const broadcasts = {
       <p style="font-size:15px;line-height:1.8;color:#374151;margin:0 0 18px;">
         1. <strong>Make the art</strong> — describe it, pick a style, download the image. <a href="https://www.midastools.co/ai-art-generator?utm_source=email&utm_medium=broadcast&utm_campaign=memo_art_money" style="color:#3B5FFF;font-weight:600;">The Art Machine</a> does this in ~10 seconds, free.<br/>
         2. <strong>Write the listing</strong> — title, tags, description that ranks on Etsy. <a href="https://www.midastools.co/listing-machine?utm_source=email&utm_medium=broadcast&utm_campaign=memo_art_money" style="color:#3B5FFF;font-weight:600;">The Listing Machine</a> writes it for you, free.<br/>
-        3. <strong>List it</strong> — Etsy for digital downloads, or a print-on-demand shop for physical products.
+        3. <strong>List it</strong> — Etsy for digital downloads, or a print-on-demand shop like <a href="https://try.printify.com/g84tb0f40uy0" style="color:#3B5FFF;font-weight:600;">Printify</a> for physical products (they print + ship, you keep the margin — no inventory).
       </p>
 
       ${ctaButton("Start step 1 — make the art (free)", 'https://www.midastools.co/ai-art-generator?utm_source=email&utm_medium=broadcast&utm_campaign=memo_art_money', "10 seconds from description to downloadable image. No sign-up to start.")}

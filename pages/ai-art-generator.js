@@ -222,6 +222,8 @@ export default function AiArtGenerator() {
         .sell .sell-links a { display: inline-block; padding: 11px 18px; border-radius: 100px; font-size: 14px; font-weight: 700; text-decoration: none; }
         .sell .sell-primary { background: var(--accent); color: #fff; }
         .sell .sell-secondary { border: 1px solid var(--border); color: var(--text); background: transparent; }
+        .sell .sell-affiliate { border: 1px solid #16A34A; color: #16A34A; background: rgba(22,163,74,0.06); }
+        .sell .sell-disclosure { color: var(--text-secondary); font-size: 11.5px; line-height: 1.5; margin: 12px 0 0; opacity: 0.85; }
 
         .gate { background: var(--text); color: #fff; border-radius: 20px; padding: 36px 32px; text-align: center; margin: 24px 0; }
         .gate h3 { font-size: 22px; font-weight: 900; color: #fff; margin-bottom: 8px; }
@@ -368,8 +370,18 @@ export default function AiArtGenerator() {
                   >
                     How people sell AI art →
                   </a>
-                  {/* Affiliate slot: Printify/Printful signup link goes here the moment Armando creates the account (audit 2026-06-10 item 4) */}
+                  {/* Affiliate slot: Printify POD seller referral (PartnerStack, audit 2026-06-10 item 4) */}
+                  <a
+                    className="sell-affiliate"
+                    href="https://try.printify.com/g84tb0f40uy0"
+                    target="_blank"
+                    rel="noopener sponsored"
+                    onClick={() => trackEvent('sell_path_click', { dest: 'printify', style })}
+                  >
+                    Put it on mugs &amp; prints — no inventory →
+                  </a>
                 </div>
+                <p className="sell-disclosure">The print-on-demand link is an affiliate link — we may earn a commission, at no cost to you.</p>
               </div>
             )}
 
