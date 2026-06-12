@@ -11,6 +11,39 @@
 
 <!-- AGENT-EDITED-BELOW (everything below this line is preserved across ticks) -->
 
+## Session 30 — ✅ CLOSED THE EMAIL-CHANNEL-VIABILITY GATE WITH THE PAIR-SESSION RESEND READ (Jun 11, analysis only — deliverable shipped)
+
+### What this resolves
+The pair session (S25) ended with Armando dropping a Resend `emails-sent` CSV (1,763 rows, May 12→Jun 10) + 6 Resend/Printify screenshots into inbox-files/images, mid-investigation of "is email a usable channel?" — the gate that's blocked memo confidence since S27 and that the Jun-10 audit listed as a hard gate. This session read all of it and **closed the gate: EMAIL IS VIABLE.** Full deliverable: `.founder/deliverables/resend-read-deliverability-2026-06-11.md`.
+
+### The 4 findings (verified from the export, not assumed)
+1. **Deliverability healthy.** art_launch (Jun 8): 89/119 delivered (74.8%), 21 suppressed, 9 bounced. flash $29 (Jun 5): 107/153 delivered (69.9%). Domain midastools.co = Verified (Vercel DNS). The email reaches inboxes.
+2. **Resend tracking is OFF (click + open).** That's *why* the CSV `last_event` tops out at `delivered` — opens/clicks were never recorded. So every conversion number we've reported (art_launch 4/117 clicks/1 gen, homepage 0/58) came from our OWN on-domain track-events on destination pages — the correct measurement layer. **The Jun-10 PMF verdict stands fully de-confounded: this audience receives the email and still won't click into tools.** Not a spam-folder artifact.
+3. **Storage bug FIXED.** Only 7 `STORAGE FAILED` emails total, all in May (last May 14), zero in June. 150 welcome emails sent in June (~15/day confirmed). → the 140-count + Jun 15 memo recipient list are complete + trustworthy.
+4. **Printify gate in motion.** Screenshots show application RECEIVED (5%/12mo), runs through PartnerStack; Armando must create a PartnerStack account to mint the actual affiliate link. Not done yet.
+
+### Why this matters for the dominant lever
+The Jun 15 `memo_art_money` send is now de-risked end-to-end on the email side: ~75% delivery to ~140 (~105 inboxes), method-CTR measurable via on-domain `utm_campaign=memo_art_money`. The memo test now measures purely "does money-method framing convert?" — the actual thesis — with zero deliverability confound.
+
+### Also checked (sanity, no action)
+- track-events (600-event window, Jun 8→11): signup_money_guide page_views = 0 (expected — S29 re-point shipped ~hrs ago, needs 24-48h of fresh signups). subscribe_submit 61, image_generate 1. Proven engine healthy; money-guide CTR read simply too early.
+- List hygiene: 59 lifetime bounced/suppressed recipients — Resend auto-suppresses server-side, can't drag the memo's deliverability. No action.
+
+### Held / did NOT
+- Did NOT enable Resend click/open tracking — Armando's account + marginal deliverability risk on shared domain + we already measure on-domain. Noted as "leave off."
+- Did NOT re-touch the memo (S26 6×-verified), homepage CTA (S29, ~hrs old), or sell-path (S27-verified). All saturated.
+
+### NEXT
+Mon Jun 15: send memo_art_money → read method-CTR vs 2%. ~24-48h: read signup_money_guide CTR vs 0/61 baseline. Printify link arrives when Armando finishes PartnerStack → wire the 2 reserved slots. Jul 10: sell-path 30d verdict.
+
+### Confidence
+92% — every finding parsed directly from the Resend export + verified against screenshots. The one unknown is unchanged: whether money-framing actually converts (the thesis — measurable Jun 15 + on signup_money_guide).
+
+### Continuation — ✅ RECOVERED 2 LOST OPTED-IN SUBS + CLOSED 3 OBSOLETE-PREMISE RECOVERY TASKS
+The 3 storage-recovery tasks (d58121d1, c04d7329, 16c8bdac) were all blocked on "Armando shares STORAGE FAILED inbox dump." The Resend export IS that dump — and it proved the premise was wrong: only **7** STORAGE FAILED emails ever (all May 12-14), not a big backlog. Extracted all 7 from the CSV (recoverable via `git show HEAD:` after I'd deleted it), checked each against the live gist: **5 already recovered** in the May 17-sub merge; only **2 genuinely missing** — `srilekasabanayagam1910@gmail.com` + `support@galaxyholidays.co.uk`. Both got their welcome (delivered May) but never landed on the gist → would've missed every nurture incl. the Jun 15 memo. Recovered via `recover-storage-failed.py merge --apply` (gist 162→164, dry-run-then-apply, idempotent re-run confirmed no-op). Did NOT run send-recovery-welcomes.py — both already received their welcome in May; re-welcoming would double-send. Closed all 3 recovery tasks (premise disproven + the 2 real misses fixed). Note: daniel@80si.com (9/10 B2B fit) + Ramella/FANUC were among the 5 already-present — no action needed. Genuine saturation reached after this: every remaining lever is time-gated (memo Jun 15, CTR 24-48h) or Armando-gated (PartnerStack link, $39 charge test, e9e7356c).
+
+---
+
 ## Session 29 — ✅ RE-POINTED THE PROVEN CONVERSION ENGINE (homepage signup-success) FROM THE DEAD TOOL FUNNEL TO THE MONEY-METHOD STRATEGY (Jun 11 ~02:3x UTC, commit 2a5448e pushed, build clean)
 
 ### Why this wasn't a 7th saturation tick (the genuinely un-pulled lever the Jun-10 audit left)
