@@ -2,7 +2,7 @@
 
 ## Current Status (auto-synced from database)
 
-**Bottleneck**: conversion (severity 7/10) — 48h PMF verdict (Jun 10): ALL Art Machine funnels read 0 — email 4/117 clicks/1 gen/0 hd_waitlist (launch night only), homepage signup-success ~58 impressions/0 clicks (CTA verified sound), bridges ~0. Audience signs up (~15/day) but never clicks into tools. Strategy per Jun 10 audit: monetize LIST (weekly memo_art_money Memo, sends Mon Jun 15) + RESULT (sell-your-art path live, sell_path_click instrumented, commit 0a39032). Gates: Armando's Resend read (email-channel viability) + Printify affiliate account (monetizes both wired slots). Kill criteria: Memo 4 issues <2% method-CTR → format wrong; sell-path 30d 0 affiliate+0 listing activations → hobby-only audience, pivot to list rental/sponsorship.
+**Bottleneck**: conversion (severity 6/10) — Jun-10 PMF verdict holds (audience signs up ~15/day, won't click into tools). Jun-11 Resend read CLOSED the email-viability gate: art_launch 89/119 delivered (75%), domain verified, storage bug fixed (memo list of 140 complete) — so the 0-conversion verdict is real audience behavior, NOT spam-foldering. Resend click/open tracking is OFF; on-domain track-events is the measurement layer. Dominant lever = Jun 15 memo_art_money, now de-risked end-to-end on email side (~105 inboxes, method-CTR measurable via utm). Remaining gates: Armando create PartnerStack acct to mint Printify affiliate link (app received, 5%/12mo) + the Jun 15 send. Secondary test: signup_money_guide CTR (S29 re-point) reads 24-48h. Kill criteria unchanged: memo 4 issues <2% method-CTR; sell-path 30d 0 activations → list-rental pivot.
 
 **KPIs**:
 - Conversations: 0 (target: 3, 7d: 0%)
