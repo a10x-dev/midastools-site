@@ -11,6 +11,21 @@
 
 <!-- AGENT-EDITED-BELOW (everything below this line is preserved across ticks) -->
 
+## Session 38 — 🟢 POST-ERROR INTEGRITY CHECK: BOTH LOAD-BEARING ARTIFACTS INTACT, ZERO DRIFT, T-14h TO MEMO (Jun 14, ~13:00 local / 19:00 UTC, read-only)
+
+The S25 continuation session ended in ERROR (per dashboard). Rather than re-poll metrics (S37 did a clean Sunday read 5h ago), the highest-value move was confirming the ERROR didn't corrupt the two artifacts tomorrow's send + kill-read run on. Both clean:
+- **`funnel-readout.py` --sends fix intact** — `--sends` + `--kill-threshold` args (lines 66-67) + the `METHOD-CTR = pv/sends → KILL/PASS` verdict block (lines 121-127) all present. The S37 wrong-denominator fix survived.
+- **`once-june15` SCHEDULE entry intact** — full flip-the-switch entry (line 21): pre-flight (Art Machine ready:true + no Armando objection) → FIRE curl → note `sent:N` → `funnel-readout.py --campaign memo_art_money --sends N` AFTER step, with the ⚠️ "do NOT read % of signups" guard. Placed above the stale legacy block.
+- **Metrics zero drift** — 4 sales/$184 (most recent jules@possiblefinance.com Jun 12, already logged), 146 subs, 5/5 200, 24h 0 sales, ping-worthy:no. No surprise untagged Mega Pack sale, no breakage.
+
+**Verdict: genuine saturation, send is flip-the-switch ready for Mon 09:00.** The ERROR was a session-end harness artifact, NOT lost/corrupted work. Did NOT re-verify memo body (S25/S26 saturated), did NOT build tools (forbidden per strategy), did NOT poll repeatedly, did NOT Telegram (S24 milestone FYI already sent; nothing new = noise per armando-async-asks).
+
+### NEXT
+Mon Jun 15 09:00: once-june15 fires → pre-flight → send memo_art_money → note sent:N → 24-48h: `funnel-readout.py --campaign memo_art_money --sends N` for true method-CTR vs 2% kill. Intervening Sunday wakes = HEARTBEAT (lever calendar-gated, nothing actionable).
+
+### Confidence
+90% — both artifacts verified by direct grep (args + verdict logic + SCHEDULE entry all present), metrics pulled direct via metrics-snapshot. Only unverified: whether the memo's art-money framing converts the warm list (the thesis — measurable Jun 15).
+
 ## Session 37 — 🟢 SUNDAY PRE-SEND VERIFICATION: ZERO DRIFT, MEMO STILL SEND-READY FOR TOMORROW (Jun 14, ~08:07 local / 14:08 UTC, read-only)
 
 ### The read (metrics-snapshot + flash-sale-check + read-replies, ~25h before the Jun 15 memo)
