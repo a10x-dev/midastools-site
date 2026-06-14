@@ -11,6 +11,33 @@
 
 <!-- AGENT-EDITED-BELOW (everything below this line is preserved across ticks) -->
 
+## Session 36 — 🟢 FIRST SALE IN ~40 DAYS ($29 MEGA PACK, B2B UNTAGGED) + MEMO RE-VERIFIED POST-PRINTIFY EDIT, FIRES TOMORROW (Jun 14, ~02:2x local / 13:17 UTC, read-only + KPI/baseline update)
+
+### The read (metrics-snapshot + read-replies + flash-sale-check, ~30h before the Jun 15 memo)
+Opened with an honest pre-memo verification sweep. Three material findings:
+1. **🟢 FIRST SALE IN ~40 DAYS**: `jules@possiblefinance.com` bought $29 on **2026-06-12**. Stripe LTM **3/$155 → 4/$184**. Resolved via flash-sale-check.py: plink = `plink_1TEF84…` (the **Mega Pack $29**, same plink as Arnaud) with **`client_reference_id=None`** → an **UNtagged** buy (did NOT come through the tagged nurture CTA, which packs client_reference_id via tagNurture). A **B2B fintech professional** (Possible Finance) one-clicked the *business* prompt pack from an untagged surface (gist/direct/Stripe-Link). **Textbook buyer-vs-funnel-mismatch**: our actual buyers are seasoned digital-goods impulse buyers of BUSINESS packs, not art-seekers in our content funnel. N=1 — logged, not over-rotated on.
+2. **📧 +6 subs** (140 → 146). Engine healthy.
+3. **2 auto-replies** (Jon.Lien@bigriverresources, Ben.Durfee@biourja) with subjects "90% of people use AI wrong…" + "3 exclusive prompts…" = **routine out-of-office bounces from the evergreen day-1/day-3 nurture drip** (nurture.js:152/192) hitting corporate-tail addresses. **NOT a special broadcast → NO list-burn conflict with the Jun 15 memo.** (Initially looked like a rogue promo; resolved by mapping subjects to the drip templates.)
+
+### ✅ Dominant lever re-verified through its most recent change
+Commit `a0b14d3` wired the **Printify affiliate link** (`try.printify.com/g84tb0f40uy0`) into the `memo_art_money` body AFTER my S26 6-check verification. Since the dominant lever's body changed, did a targeted read of nurture.js:435-459 (not a full re-audit — just the load-bearing edit). **Clean**: 3-step loop intact (Art Machine → Listing Machine → list it w/ Printify in step 3, line 449), subject + $15–50/$19–49 figures match cited intel, all 3 method-CTR links land on-domain with `utm_campaign=memo_art_money` (off-domain Printify affiliate is intentional), reply-prompt + Armando sig intact. **Send-ready, no edit.**
+
+### Verdict — Jun 15 plan unchanged
+The sale is a Mega-Pack business buyer, **orthogonal** to the art-money memo (which targets the warm art list). Auto-replies are routine drip, not a conflicting promo. Memo body verified through its latest change. **Jun 15 SCHEDULE once-june15 entry fires the send as planned** (pre-flight: Art Machine ready + no Armando objection to the Jun-10 preview — INBOX empty, no objection). KPIs updated: Revenue 155→184, Users 140→146. New metrics baseline banked (snapshot --save).
+
+### Held / did NOT
+- Did NOT fire the memo today (cadence + Armando 5-day preview runway ends Jun 15).
+- Did NOT re-point on-site CTA or build a tool (forbidden per strategy).
+- Did NOT over-rotate on the N=1 B2B sale (it's confirming evidence for buyer-vs-funnel-mismatch + the e9e7356c fork, not a new strategy trigger).
+- Did NOT re-audit the full memo (only the changed Printify block).
+- Sent ONE clean milestone Telegram (first sale in 40d + memo fires tomorrow + Printify payout still Armando-gated) — milestone FYI, not an ask.
+
+### NEXT
+Mon Jun 15: once-june15 fires → pre-flight → send memo_art_money → read method-CTR via funnel-readout.py vs 2% kill. Jul 10: sell-path 30d verdict. Watch for any further untagged Mega Pack sales (the one untapped revenue stream that actually converts).
+
+### Confidence
+90% — sale + attribution pulled direct via Stripe (flash-sale-check.py), auto-reply subjects mapped to exact nurture templates, memo change read at source. Only unverified: whether the memo's art-money framing converts the warm list (the actual thesis — measurable Jun 15).
+
 ## Session 35 — 🔴 SATURDAY STRATEGIC REVIEW: S29 MONEY-FRAMING CTA FALSIFIED (0/28) → ON-SITE POST-SIGNUP CTA IS A DEAD SURFACE ACROSS ALL FRAMINGS (Jun 13, ~16:3x, read-only)
 
 ### The read (funnel-readout.py, 600 events / 3977 stored, ~48h after S29 re-point)
