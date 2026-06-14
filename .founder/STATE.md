@@ -6,10 +6,44 @@
 
 **KPIs**:
 - Conversations: 0 (target: 3, 7d: 0%)
-- Users: 140 (target: 30, 7d: 10.236220472440944%)
-- Revenue: 155 (target: 997, 7d: 0%)
+- Users: 146 (target: 30, 7d: 14.960629921259844%)
+- Revenue: 184 (target: 997, 7d: 18.70967741935484%)
 
 <!-- AGENT-EDITED-BELOW (everything below this line is preserved across ticks) -->
+
+## Session 37 — 🟢 SUNDAY PRE-SEND VERIFICATION: ZERO DRIFT, MEMO STILL SEND-READY FOR TOMORROW (Jun 14, ~08:07 local / 14:08 UTC, read-only)
+
+### The read (metrics-snapshot + flash-sale-check + read-replies, ~25h before the Jun 15 memo)
+Light Sunday-morning sweep to catch any new untagged Mega Pack sale or breakage before tomorrow's send. **Everything is byte-identical to S25 — zero drift:**
+- **Stripe LIFETIME 4 sales / $184**, most recent still `jules@possiblefinance.com` ($29 Mega Pack, Jun 12, already logged S25). 24h: 0 sales. ping-worthy: no.
+- **Subs 146 — unchanged.** Uptime 5/5 200.
+- **flash-sale-check: 0 flash-attributed.** jules' charge = plink_1TEF84 (Mega Pack $29), client_reference_id=None → untagged, confirms the buyer-vs-funnel-mismatch read once more. No new Mega Pack sale since.
+- **read-replies: same 2 auto-replies** (Jon.Lien@bigriverresources, Ben.Durfee@biourja, empty body) = the routine day-1/day-3 nurture out-of-office bounces already resolved in S25. NOT a new signal, NO list-burn conflict with tomorrow's memo.
+
+### Verdict — Jun 15 plan unchanged, nothing to do today
+Dominant lever (memo_art_money) verified send-ready end-to-end across S24 (send-path + render), S25 (body re-verified through a0b14d3 Printify edit), S26 (6 load-bearing checks + method-CTR self-measurability). `once-june15` SCHEDULE entry confirmed present (renders in Coming Up). Genuine saturation: lever is calendar-gated to tomorrow, nothing moved overnight, building tools is forbidden per strategy, Printify is Armando-gated. This is the heartbeat-hold state — intervening wakes until the Monday send window should be HEARTBEAT, not hourly polls (motion-vs-progress).
+
+### Held / did NOT
+- Did NOT fire the memo (cadence + 5-day Armando preview runway ends Jun 15).
+- Did NOT re-verify the memo body again (S25/S26 saturated; re-reading is churn).
+- Did NOT prod-probe Art Machine readiness (it's tomorrow's pre-flight step, not today's; was ready:true as of S24; manufacturing the probe today = motion-vs-progress).
+- Did NOT Telegram (S25 already sent the milestone FYI; nothing new = noise per armando-async-asks).
+- Did NOT poll repeatedly — one definitive read, then close.
+
+### NEXT
+Mon Jun 15 09:00: once-june15 fires → pre-flight (Art Machine ready:true + no Armando objection to the Jun-10 preview) → send `memo_art_money` → read method-CTR via funnel-readout.py vs 2% kill. Watch for any further untagged Mega Pack sales.
+
+### Confidence
+90% — all three reads pulled direct (metrics-snapshot + flash-sale-check + read-replies), every value matches S25 exactly. Only unverified: whether the memo's art-money framing converts the warm list (the actual thesis — measurable Jun 15).
+
+### Continuation — ✅ VERIFIED + FIXED THE KILL-CRITERION MEASUREMENT TOOL FOR TOMORROW'S READ (verify-measurement-path-before-watch)
+S26 proved the memo's method-CTR is self-measurable via the utm capture path, but I'd never verified the actual tool tomorrow's kill decision runs on — `funnel-readout.py`. Read it + smoke-tested against prod:
+- ✅ Read path works (600 events / 4093 stored), `_utm_campaign()` correctly extracts `memo_art_money` from the on-domain CTA page_path query string.
+- ✅ **Baseline confirmed 0 memo_art_money page_views pre-send** → tomorrow's count is purely the memo's (re-confirms S24's clean baseline).
+- 🚨 **Caught a wrong-denominator trap:** the tool printed campaign page_views as "% of signups-in-window" (22), but the S26 kill criterion is `page_views ÷ SENDS (~105 inboxes)`. Proven dangerous by sanity check — `welcome_outreach` 2 page_views reads as "9.1% of signups" (looks PASS) but the true method-CTR is 1.90% of 105 sends → KILL. A 4.8× discrepancy that would have flipped tomorrow's kill call for a fresh instance.
+- ✅ **Fixed:** added `--sends N` + `--kill-threshold` flags that compute the true method-CTR = pv/sends and print an explicit `METHOD-CTR = X.XX% -> KILL/PASS (threshold 2.0%)` verdict, encoding the S26 criterion directly into the tool. Docstring + arg-help warn against the "% of signups" misread. Smoke-tested both branches.
+- ✅ **Wired the corrected single command into the once-june15 SCHEDULE AFTER step**: `funnel-readout.py --campaign memo_art_money --sends N` (N = the `sent:N` the FIRE broadcast returns), with the ⚠️ do-not-read-% -of-signups guard. Tomorrow's kill read is now flip-the-switch + unambiguous.
+Plan-agnostic, reversible (tool-only edit), Armando-independent, bottleneck-direct (kill-criterion enforceability). Genuine saturation after this — measurement path verified, trap closed, send remains calendar-gated to Mon 09:00.
 
 ## Session 36 — 🟢 FIRST SALE IN ~40 DAYS ($29 MEGA PACK, B2B UNTAGGED) + MEMO RE-VERIFIED POST-PRINTIFY EDIT, FIRES TOMORROW (Jun 14, ~02:2x local / 13:17 UTC, read-only + KPI/baseline update)
 

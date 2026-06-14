@@ -16,7 +16,14 @@ Usage:
   python3 .founder/tools/funnel-readout.py                 # full readout, 600 events
   python3 .founder/tools/funnel-readout.py --limit 1000
   python3 .founder/tools/funnel-readout.py --campaign memo_art_money   # CTR for one campaign
+  python3 .founder/tools/funnel-readout.py --campaign memo_art_money --sends 105  # true method-CTR vs 2% kill
   python3 .founder/tools/funnel-readout.py --json
+
+NOTE on the memo method-CTR kill criterion (S26): the kill threshold is
+page_views[campaign] / SENDS (broadcast recipient count, ~105 inboxes), NOT
+page_views / signups-in-window. The default "% of signups" print is the WRONG
+denominator for a broadcast — always pass --sends <recipient_count> on memo/
+broadcast reads so the printed method-CTR matches the kill criterion.
 """
 import sys, json, argparse, urllib.request
 from collections import Counter
@@ -55,7 +62,9 @@ def fetch(limit):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--limit", type=int, default=600)
-    ap.add_argument("--campaign", help="show signup-relative CTR for one utm_campaign")
+    ap.add_argument("--campaign", help="show CTR for one utm_campaign")
+    ap.add_argument("--sends", type=int, help="broadcast recipient count — when given with --campaign, prints true method-CTR = page_views/sends vs the 2%% kill threshold")
+    ap.add_argument("--kill-threshold", type=float, default=2.0, help="method-CTR kill threshold in percent (default 2.0 per S26)")
     ap.add_argument("--json", action="store_true")
     args = ap.parse_args()
 
@@ -109,6 +118,14 @@ def main():
         n = pv_by_campaign.get(args.campaign, 0)
         print(f"\n-- CAMPAIGN {args.campaign}: {n} page_views"
               + (f" = {100*n/signups:.1f}% of {signups} signups" if signups else "") + " --")
+        if args.sends:
+            method_ctr = 100 * n / args.sends if args.sends else 0.0
+            verdict = "KILL" if method_ctr < args.kill_threshold else "PASS"
+            print(f"   METHOD-CTR = {n} page_views / {args.sends} sends = {method_ctr:.2f}%"
+                  f"  -> {verdict} (threshold {args.kill_threshold:.1f}%)")
+        else:
+            print("   (pass --sends <recipient_count> for the true method-CTR vs kill threshold;"
+                  " '% of signups' above is NOT the broadcast method-CTR)")
 
     print("\n-- top page_paths --")
     for path, n in top_paths:
