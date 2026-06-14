@@ -11,6 +11,37 @@
 
 <!-- AGENT-EDITED-BELOW (everything below this line is preserved across ticks) -->
 
+## Session 35 — 🔴 SATURDAY STRATEGIC REVIEW: S29 MONEY-FRAMING CTA FALSIFIED (0/28) → ON-SITE POST-SIGNUP CTA IS A DEAD SURFACE ACROSS ALL FRAMINGS (Jun 13, ~16:3x, read-only)
+
+### The read (funnel-readout.py, 600 events / 3977 stored, ~48h after S29 re-point)
+The one bottleneck-direct lever that had matured was the S29 `signup_money_guide` CTR test. Pulled it:
+- **`signup_money_guide` = 0 page_views from 28 signups (0/28).** NOT in the campaign list at all — and the list renders down to 1 page_view (jfydbzf at 1), so this is a genuine zero, not below-threshold. The secondary `art_live` link is also absent (0).
+- **Verdict on the S29 hypothesis ("does money-framing at peak intent beat tool-framing 0/61?"): NO.** Money-framing at the post-signup success moment converts at 0, same as tool-framing.
+- **All 7 money-tool activations still 0** this window (outreach/listing/chatbot/image/sell_path/art_waitlist/hd_waitlist) — consistent with the de-confounded PMF verdict.
+- Engine healthy: 28 subscribe_submit, 567 page_views, 5 cta_click. Homepage `/` = 102 views (still the sole conversion engine).
+
+### 🔑 The sharpened verdict (this is the strategic output)
+Three framings of the homepage post-signup success-state CTA have now each converted at ~0:
+- Listing Machine (0 listing_generate, weeks)
+- Art Machine tool (0/58, S34)
+- Money-guide (0/28, this session)
+**Cumulative ≈ 0/147 across three distinct framings.** This is no longer "audience won't click into tools" — it's **"audience won't click ANY on-site post-signup CTA."** The success-state is a structurally dead surface: people complete the email form and bounce, full stop, regardless of the offer. The moment is dead, not the framing.
+
+**Implication (locks the strategy tighter):** stop iterating the on-site post-signup CTA — it is SATURATED at 0 across 3 framings; re-pointing it a 4th time = churn. The list is monetizable ONLY via the EMAIL surface (the memo), where the person opted into the inbox, NOT via on-site CTAs competing with a "you're subscribed!" moment. This is a leading-indicator *risk* flag on the memo's money-framing too — but email ≠ on-site (different surface, different intent, opted-in inbox), so it does NOT prejudge the Jun 15 memo. The memo remains the dominant lever and the only un-falsified monetization path.
+
+### Held / did NOT (discipline)
+- Did NOT re-point the signup-success CTA a 4th time (saturated at 0/147 — churn, not signal). Left it on the money-guide (on-strategy for LIST monetization, reversible-neutral since 0=0).
+- Did NOT build/bridge another tool (primary directive + the verdict says tools are dead for this audience).
+- Did NOT pre-build memo issue #2 (prejudges issue #1's Jun-15 data).
+- Did NOT Telegram Armando — 0/28 is sub-threshold, not decide-now; the 2 gated items (Printify, Jun-15 send preview-nod) are already in his inbox/SCHEDULE; armando-async response rate empirically near-zero.
+- Did NOT change the memo kill criterion — the on-site 0/28 is a different surface than email; the "<2% method-CTR over 4 issues" criterion stands.
+
+### NEXT
+Mon Jun 15: SCHEDULE entry fires → pre-flight (Art Machine ready:true + no Armando objection to the Jun-10 preview) → send `memo_art_money` → read method-CTR via `page_views[utm_campaign=memo_art_money] ÷ sends` vs 2% kill threshold. This is the first un-falsified monetization test. Jul 10: sell-path 30d verdict. Printify link wires the 2 reserved slots when Armando finishes PartnerStack.
+
+### Confidence
+90% — read pulled direct via funnel-readout.py (which survived the harness churn and ran clean); 0/28 verified as genuine zero (campaign list renders to 1); the 0/147-cumulative sharpening is well-supported. Only unverified: whether the memo's email-surface money-framing converts (the actual remaining thesis — measurable Jun 15).
+
 ## Session 30 — ✅ CLOSED THE EMAIL-CHANNEL-VIABILITY GATE WITH THE PAIR-SESSION RESEND READ (Jun 11, analysis only — deliverable shipped)
 
 ### What this resolves
