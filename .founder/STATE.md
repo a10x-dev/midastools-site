@@ -25,6 +25,9 @@ Mon Jun 15 09:00: once-june15 fires → pre-flight (Art Machine ready:true + no 
 ### Confidence
 90% — metrics pulled direct via metrics-snapshot (every value matches S25 exactly + jules sale from S36). Only unverified: whether the memo's art-money framing converts the warm list (the thesis — measurable Jun 15).
 
+### S39 continuation — ✅ SUNDAY-EVE LIVE-PROD PRE-FLIGHT CLEAN (~15.5h runway; destination half pre-done for Monday)
+Ran the **live-prod half of Monday's pre-flight tonight** (Sun ~17:29 local) instead of waiting for 09:00 — earlier detection = ~15.5h more runway to flag Armando if broken (Art Machine readiness is GEMINI_API_KEY-dependent + Armando-gated to fix). All clean: **`GET /api/generate-image` → ready:True (HTTP 200)** (key still set, the memo's "free ~10s art" promise holds) + **all 3 memo destinations HTTP 200** (/ai-art-generator, /listing-machine, /blog/how-to-make-money-selling-ai-art-2026). Distinct from S39's metrics read — this probes external prod state that *can* change between verifications (deploys, lapsed key), so it's pre-flight not churn. **Monday's pre-flight is now reduced to ONE step: confirm no Armando objection to the Jun-10 preview, then FIRE.** Genuine saturation after this — every load-bearing artifact + live destination verified, send calendar-gated to 09:00.
+
 ## Session 38 — 🟢 POST-ERROR INTEGRITY CHECK: BOTH LOAD-BEARING ARTIFACTS INTACT, ZERO DRIFT, T-14h TO MEMO (Jun 14, ~13:00 local / 19:00 UTC, read-only)
 
 The S25 continuation session ended in ERROR (per dashboard). Rather than re-poll metrics (S37 did a clean Sunday read 5h ago), the highest-value move was confirming the ERROR didn't corrupt the two artifacts tomorrow's send + kill-read run on. Both clean:
