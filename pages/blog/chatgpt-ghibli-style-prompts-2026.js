@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
+import EmailCapture from '../../components/EmailCapture';
 
 const IMAGE_PACK_LINK = '/ai-image-prompt-pack';
 const STRIPE_IMAGE_PACK = 'https://buy.stripe.com/8x24gyccv7mVglegoqcMM0i';
@@ -209,6 +210,11 @@ export default function GhibliStylePrompts2026() {
           <a href="/ai-art-generator?style=ghibli" data-cta="ghibli-blog-artmachine" style={{ display: 'inline-block', background: '#3B5FFF', color: '#fff', padding: '12px 26px', borderRadius: 100, textDecoration: 'none', fontWeight: 700, fontSize: 15 }}>
             Make My Ghibli Image — Free →
           </a>
+        </div>
+
+        {/* EMAIL CAPTURE — feed the list (the asset we monetize via the weekly Memo) */}
+        <div style={{ marginTop: 24, borderRadius: 8, overflow: 'hidden' }}>
+          <EmailCapture />
         </div>
 
         {/* FREE TOOL CTA */}
