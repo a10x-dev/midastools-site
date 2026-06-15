@@ -2,14 +2,40 @@
 
 ## Current Status (auto-synced from database)
 
-**Bottleneck**: conversion (severity 6/10) — Jun-10 PMF verdict holds (audience signs up ~15/day, won't click into tools). Jun-11 Resend read CLOSED the email-viability gate: art_launch 89/119 delivered (75%), domain verified, storage bug fixed (memo list of 140 complete) — so the 0-conversion verdict is real audience behavior, NOT spam-foldering. Resend click/open tracking is OFF; on-domain track-events is the measurement layer. Dominant lever = Jun 15 memo_art_money, now de-risked end-to-end on email side (~105 inboxes, method-CTR measurable via utm). Remaining gates: Armando create PartnerStack acct to mint Printify affiliate link (app received, 5%/12mo) + the Jun 15 send. Secondary test: signup_money_guide CTR (S29 re-point) reads 24-48h. Kill criteria unchanged: memo 4 issues <2% method-CTR; sell-path 30d 0 activations → list-rental pivot.
+**Bottleneck**: conversion (severity 6/10) — Jun-15 memo_art_money FIRED to 153 (sent:153/0 failed) — the dominant lever (first warm-list money-method send in 40+ days) is now LIVE; method-CTR kill-read vs 2% runs Jun 16-17 via funnel-readout.py --campaign memo_art_money --sends 153. PMF verdict holds: audience won't click into tools, so monetization rides the LIST (memo) + RESULT (sell-path). Email de-confounded (75% delivery, on-domain track-events = measurement layer). Remaining gates: 24-48h CTR read; Armando PartnerStack acct to mint Printify affiliate link. Kill criteria: memo <2% method-CTR over 4 issues → list-rental pivot; sell-path 30d 0 activations.
 
 **KPIs**:
 - Conversations: 0 (target: 3, 7d: 0%)
-- Users: 146 (target: 30, 7d: 14.960629921259844%)
+- Users: 153 (target: 30, 7d: 9.285714285714286%)
 - Revenue: 184 (target: 997, 7d: 18.70967741935484%)
 
 <!-- AGENT-EDITED-BELOW (everything below this line is preserved across ticks) -->
+
+## Session 41 — 🟢 T+~2.3h POST-SEND PIPELINE HEALTH CHECK: memo TRAFFIC IS FLOWING + MEASURABLE, EARLY CTR TRENDING PASS (Jun 15, ~16:13 local / ~22:13 UTC, read-only)
+
+### Why this wasn't an early kill-read (and wasn't churn)
+~2.3h after the memo_art_money send to 153. The kill-read is deliberately gated to ~T+12-18h (Jun 16) because consumer/hobby opens trickle over 24-48h (S33) — reading CTR for the verdict now would be uninformative. BUT one check IS worth doing once post-send: confirm the measurement pipeline is actually RECEIVING memo-attributed traffic (links work + people clicking + instrument reads the clean `memo_art_money` campaign correctly). This is the verify-measurement-path discipline applied to live data for the first time, and it de-risks tomorrow's verdict read. NOT the kill call.
+
+### The read (funnel-readout.py, 600 events / 4519 stored)
+- **memo_art_money = 6 page_views at T+~2.3h** → pipeline confirmed alive: links work, people are clicking the memo, the instrument extracts the clean campaign name correctly.
+- **Early METHOD-CTR = 6 / 153 = 3.92% → trending PASS** (>2% kill threshold). ⚠️ NOT the verdict — at T+2.3h only a fraction of opens have landed; the count will GROW over 24-48h, so 3.92% is an encouraging floor, not the call.
+- **0 sell_path_click / 0 image_generate / all 7 money-tool activations 0** — expected: the memo drives to free tools FIRST; monetization actions (generate → sell-path) trickle later, if at all. **Disambiguated via live probe: Art Machine `ready:True` + all 3 memo destinations HTTP 200 → the 0 image_generate is TIMING (too early), NOT a broken tool. The memo's "free ~10s art" promise to the 153 cohort holds during the open window.**
+- Engine healthy: 13 subscribe_submit in window, homepage `/` = 72 views (still the sole conversion engine). The garbled-UTM clusters (zfzb_beg_zbafl 26, gbbyf_ebhaehc 7, jfydbzf_bhgefbdu 5) = the known email-scanner-bot prefetch fingerprint, NOT humans — and they are NOT tagged memo_art_money, so they don't contaminate the 6.
+
+### Verdict — pipeline healthy, hold for the real read
+The dominant lever fired clean AND its traffic is now provably flowing + measurable. The instrument (funnel-readout.py --sends 153) is verified against live post-send data. Genuine saturation: the real kill/pass call is gated to Jun 16 (~T+12-18h+); Printify affiliate slot is Armando-gated; building/bridging another tool is forbidden per the LIST+RESULT strategy. Intervening wakes = heartbeat.
+
+### Held / did NOT
+- Did NOT make a kill/pass call off the 3.92% — T+2.3h is far too early (opens trickle 24-48h); calling it now would violate falsifiability-before-celebration.
+- Did NOT re-poll repeatedly — one definitive health check, then close. Further CTR polling before tomorrow = motion-vs-progress.
+- Did NOT Telegram — early non-verdict signal at T+2.3h is sub-threshold (the S40 milestone FYI already went; the verdict is tomorrow's news). Per armando-async-asks.
+- Did NOT touch the list, the memo, or any tool.
+
+### NEXT
+Jun 16 (~T+12-18h+, ideally ~14:00 UTC when bulk of day-1 opens have landed): `python3 .founder/tools/funnel-readout.py --campaign memo_art_money --sends 153` for the true METHOD-CTR verdict vs 2%. Also watch: memo replies (demand-sensing) + any sell_path_click from resulting Art Machine generations.
+
+### Confidence
+92% — read pulled direct via funnel-readout.py; 6 memo_art_money page_views confirmed flowing + the --sends 153 verdict logic runs clean. Only unverified: whether the 3.92% holds/grows as the full open-window lands (the actual thesis — measurable tomorrow).
 
 ## Session 40 — 🚀🔥 FIRED THE DOMINANT LEVER: memo_art_money SENT TO 153 / 0 FAILED (Jun 15, 13:47 local / 19:50 UTC) — FIRST WARM-LIST MONEY-METHOD SEND, 40+ DAYS IN THE MAKING
 
