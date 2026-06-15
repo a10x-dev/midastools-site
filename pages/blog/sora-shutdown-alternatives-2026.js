@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
+import EmailCapture from '../../components/EmailCapture';
 
 export default function SoraShutdownAlternatives2026() {
   const title = 'Sora Is Shutting Down April 26, 2026 — Here Are the Best Alternatives (Tested)';
@@ -269,6 +270,10 @@ export default function SoraShutdownAlternatives2026() {
           <li><Link href="/blog/chatgpt-image-prompts-2026" style={{ color: '#3B5FFF' }}>50 Viral ChatGPT Image Prompts That Broke the Internet in 2026</Link></li>
         </ul>
       </div>
+        {/* EMAIL CAPTURE — feed the warm list (monetized via the weekly Memo) */}
+        <div style={{ margin: '32px 0 8px', borderRadius: 8, overflow: 'hidden' }}>
+          <EmailCapture />
+        </div>
     </Layout>
   );
 }

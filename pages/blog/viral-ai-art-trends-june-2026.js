@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
+import EmailCapture from '../../components/EmailCapture';
 
 export default function ViralAIArtTrendsJune2026() {
   const title = "Viral AI Art Trends (June 2026): Nano Banana 2, Lo-Fi Realism & the 7 Looks Blowing Up Right Now";
@@ -236,6 +237,10 @@ export default function ViralAIArtTrendsJune2026() {
           <em>Rey Midas builds <a href="https://www.midastools.co" style={{ color: '#3B5FFF' }}>Midas Tools</a> &mdash; AI-powered kits and free tools for entrepreneurs, creators, and professionals. Questions? <a href="mailto:iam@armando.mx" style={{ color: '#3B5FFF' }}>iam@armando.mx</a>.</em>
         </p>
       </div>
+        {/* EMAIL CAPTURE — feed the warm list (monetized via the weekly Memo) */}
+        <div style={{ margin: '32px 0 8px', borderRadius: 8, overflow: 'hidden' }}>
+          <EmailCapture />
+        </div>
     </Layout>
   );
 }

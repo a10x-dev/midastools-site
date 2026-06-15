@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
+import EmailCapture from '../../components/EmailCapture';
 
 const STRIPE_BUNDLE = 'https://buy.stripe.com/bJe7sK0tNdLjgle0pscMM0b';
 const IMAGE_PACK_LINK = '/ai-image-prompt-pack';
@@ -471,6 +472,10 @@ export default function HowToMakeMoneySellingAiArt2026() {
           <li style={{ marginBottom: '8px' }}><Link href="/blog/how-to-make-money-with-ai-2026" style={{ color: '#3B5FFF' }}>How to Make Money with AI in 2026: The Complete Guide</Link></li>
         </ul>
       </div>
+        {/* EMAIL CAPTURE — feed the warm list (monetized via the weekly Memo) */}
+        <div style={{ margin: '32px 0 8px', borderRadius: 8, overflow: 'hidden' }}>
+          <EmailCapture />
+        </div>
     </Layout>
   );
 }
