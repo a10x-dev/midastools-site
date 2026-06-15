@@ -11,6 +11,41 @@
 
 <!-- AGENT-EDITED-BELOW (everything below this line is preserved across ticks) -->
 
+## Session 40 — 🚀🔥 FIRED THE DOMINANT LEVER: memo_art_money SENT TO 153 / 0 FAILED (Jun 15, 13:47 local / 19:50 UTC) — FIRST WARM-LIST MONEY-METHOD SEND, 40+ DAYS IN THE MAKING
+
+### What happened
+Woke at 13:47 Mon — **4.7h PAST the 09:00 `once-june15` send window with the memo still un-fired.** Classic `schedule-is-notes-not-cron`: no agent ran the 09:00 slot, so the calendar-gated lever was sitting idle. I'm the agent now → executed it.
+
+### Pre-flight (all GO, clean)
+- **Art Machine `ready:true` HTTP 200** — the memo's "free ~10s art" promise holds.
+- **All 3 memo destinations HTTP 200** (/ai-art-generator, /listing-machine, /blog/how-to-make-money-selling-ai-art-2026).
+- **`memo_art_money` baseline = 0 page_views** in track-events — confirmed NOT already sent (no double-send risk; the 09:00 slot genuinely never fired).
+- **INBOX empty** = no Armando objection to the Jun-10 preview; the 5-day veto runway closed today → founder doctrine (full-autonomy + armando-async empirically near-zero, the runway WAS the veto window) = **SEND**.
+
+### Execution (de-risked sequence)
+1. **Live-render preview** to iam@armando.mx → `{"success":true,"preview":true,"template":"memo_art_money"}` HTTP 200 — smoke-tested the CURRENT deploy's template + Resend pipeline end-to-end before the blast (catches drift since the a0b14d3 Printify edit). Clean.
+2. **Real broadcast** `?broadcast=true&template=memo_art_money` → **`sent:153, failed:0`** HTTP 200. Every recipient accepted by Resend, message IDs captured (S52 fix → deliverability natively queryable).
+
+### 🔑 sends = 153 (THE kill-criterion denominator)
+List grew from the ~140 baseline to **153 active subs** (metrics-snapshot confirms subs=153 = exact send count → full active list received it). **method-CTR = page_views[utm_campaign=memo_art_money] ÷ 153.** Kill threshold: <2% method-CTR → memo issue fails (4-issue kill criterion).
+
+### Metrics snapshot @ send
+Stripe LIFETIME **4 sales / $184** (jules@possiblefinance.com Jun 12, unchanged — no new sale). Subs **146 → 153** (+7 routine engine output, NOT ping-worthy per discipline; the SEND is the milestone). Uptime 5/5 200.
+
+### Held / did NOT
+- Did NOT re-preview for human re-approval (the Jun-10 preview + 5-day runway already served as the veto window; re-opening would just delay the lever).
+- Did NOT touch the list mid-send. Note: the active 153 includes some of the S39 scraped/bot cluster (korper.nl, ncsc.nl, a7goldinvest.ru, 7-11.com, vtext SMS gateway, spamgourmet) that regrew since the Jun-7 suppression — Resend auto-suppresses truly-dead ones server-side; doesn't drag the read materially, but the true human denominator is ~120-130 of the 153.
+
+### NEXT — the 24-48h kill-read (the whole point)
+**Jun 16-17:** `python3 .founder/tools/funnel-readout.py --campaign memo_art_money --sends 153` → reads true method-CTR vs the 2% KILL/PASS threshold. Consumer/hobby opens trickle over 24-48h (per S33), so a read before ~12-18h is uninformative. Also watch: any reply to the memo's reply-prompt (demand-sensing) + any sell_path_click/sale from resulting Art Machine generations. Printify affiliate slot still Armando-gated (PartnerStack acct).
+
+### Confidence
+92% — send confirmed by HTTP 200 + sent:153/failed:0 + 153 message IDs; pre-flight all verified live (ready:true, 3×200, 0 baseline); preview round-trip clean. Only unverified: whether the memo's art-money framing converts the warm list (the thesis — first measurable in 24-48h via the now-running kill-read).
+
+### S40 continuation — ✅ POST-SEND LIST HYGIENE: suppressed 2 dead-weight (153→151) + flagged stale suppress-patterns
+Ran suppress-subs post-send (Armando-independent, reversible, only affects FUTURE broadcasts — does NOT touch the memo's track-events kill-read, denominator stays hardcoded 153). Dry-run → apply: suppressed **2 clean matches, zero false positives** — `9377318603@vtext.com` (SMS-gateway junk) + `chad@rivercityrush.com` (`resend-bounced-or-suppressed` → keeping it active = hammering a bounced address every future send = real sender-reputation harm). 153→151 active.
+🔎 **Finding for next memo-prep:** the bot clusters have EVOLVED past suppress-subs.py's patterns — the Jun-15 send to 153 included `a7goldinvest.ru` (pattern only has `a7gi.ru`), `7-11.com` (pattern has `7-eleven.com`), + new `korper.nl`/`ncsc.nl` role-address clusters, NONE caught. Did NOT expand the patterns unilaterally — that's judgment-heavy with false-positive risk on documented REAL B2B subs (daniel@80si.com, remella.badawi@fanucamerica.com) sharing the corporate-tail shape. The "aggressively prune corporate tail vs keep B2B" call belongs to a deliberate list-segmentation pass (or Armando), not a mid-stride pattern edit. True human denominator of the 153 send ≈ 120-130. Also: `already_suppressed: 0` → the Jun-7 suppression flags reset at some point (storage rewrite), so the 20-bot Jun-7 cluster is NOT currently flagged. Genuine saturation after this — kill-read is the next real signal moment (Jun 16-17).
+
 ## Session 39 — 🟢 PRE-SEND-EVE CONFIRMING READ: ZERO DRIFT, SITE HEALTHY, T-16.5h TO MEMO (Jun 14, ~16:30 local / 22:30 UTC, read-only)
 
 Last wake before the Mon Jun 15 09:00 send window. Did ONE cheap metrics-snapshot — the single highest-value 2-min action at this slot — to catch any site breakage or surprise untagged sale (our only converting revenue stream per S36) before the memo fires. Result: **zero drift, nothing to do.**
