@@ -11,6 +11,38 @@
 
 <!-- AGENT-EDITED-BELOW (everything below this line is preserved across ticks) -->
 
+## Session 42 — 🟢 GROWTH-MANDATE KICKOFF: ACQUISITION READOUT + FIXED HOMEPAGE-ATTRIBUTION GAP (Jun 16, 04:14 UTC, commit d318d34 pushed)
+
+### Trigger
+Autonomous wake 04:14 UTC Jun 16 (T+8.4h post memo send). Memo kill-read is calendar-gated to ~14:00 UTC (opens trickle 24-48h) so reading now is non-verdict. Picked Armando's fresh **2-week growth mandate** ("10x daily growth, monitor where users come from") — the only thing actionable at 4 AM.
+
+### Kill-read status (non-verdict)
+memo_art_money = **6 page_views, METHOD-CTR 6/153 = 3.92% → trending PASS** (>2%). Flat at 6 since T+2.3h (overnight US, expected). Real verdict ~14:00 UTC. All 7 money-tool activations 0. `ts` regression resolved.
+
+### 🚨 Acquisition readout
+600-event window. **84% direct/dark (506/600)** — homepage brand traffic, unscalable as a channel. Attributable: **Google 45 (7.5%) = #1 lever**, gist 11, AI-search (chatgpt/claude.ai/notebooklm/bing/brave/yandex) ~8 emerging, edgepilot 10 = scanner bot. **All 15 signups have ZERO acquisition attribution**; 11/15 convert on homepage `/`.
+
+### Root cause found + fixed (commit d318d34, build clean, pushed)
+`getLandingSlug()` stripped leading slash → homepage `/` → `''` (falsy) → dropped from attribution, so homepage-direct signups = indistinguishable from missing attribution. Fixed: root now records `landing_slug='home'`. Reversible 1-liner. NOT a dropped-attribution bug elsewhere — track.js already attaches getAttribution() to every event (line 36 verified); empty attribution is genuine direct traffic.
+
+### Diagnosis + plan (deliverable: growth-acquisition-readout-2026-06-16.md)
+- Direct/dark 84% can't be dialed. Only SEO/gist/AI-search scalable + attributable.
+- **10x in 2 weeks from organic alone NOT realistic** (SEO lags 4-12wk). Only in-window 10x lever = paid/viral.
+- Lever A = near-daily two-surface SEO content (autonomous, durable, lands wk3-4); Lever B = ~$50 paid test (Armando's budget call, only realistic in-window 10x); Lever C = UTM-sweep gist/blog CTAs (autonomous).
+- Growth coherent w/ LIST strategy: bigger warm list → more memo method-CTR absolute + sell-path revenue.
+
+### Decision surfaced to Armando
+~$50 paid distribution test? yes/no. Default if silent: scale organic Lever A regardless.
+
+### NEXT
+~14:00 UTC Jun 16: real memo kill-read verdict (funnel-readout.py --sends 153). Then begin Lever A + Lever C. Watch for paid-test green-light.
+
+### Confidence
+88% — data direct, fix build-clean+pushed+verified, root cause code-confirmed. Unverified: whether 'home' tag materially helps (most traffic stays dark) + whether organic can move the 2-week number without paid.
+
+### Continuation — closed the kit-page attribution gap (commit 5493d29, build clean, pushed)
+Audited the full subscribe chain: backend (subscribe.js:46-56) persists attribution onto the subscriber record, but only what the client sends. Homepage (index.js:65) sends full getAttribution(); but the ~30 OTHER call sites send only {email, source, business} (kit pages) or +referrer (generators) — dropping utm/landing_slug/attribution entirely. So kit/generator signups landed on the list channel-blind. Built `lib/subscribe.js` (`submitSubscribe` shared helper attaching getAttribution() to every call) + migrated the 4 kit pages that actually converted signups this window (mega-pack, content-creator, notion, email-marketing). Remaining ~25 generator/kit call sites = one-line migration each via the helper, tracked as follow-up (deferred: 0 generator signups this window, varied code shapes, rising-risk/low-current-value at 4:30 AM). Net: homepage + 4 converting kit pages now list-attributable; the 2-week sprint can answer "which channel grew the list" at the subscriber level. Did NOT Telegram (sub-threshold vs the session's main brief per armando-async-asks).
+
 ## Session 41 — 🟢 T+~2.3h POST-SEND PIPELINE HEALTH CHECK: memo TRAFFIC IS FLOWING + MEASURABLE, EARLY CTR TRENDING PASS (Jun 15, ~16:13 local / ~22:13 UTC, read-only)
 
 ### Why this wasn't an early kill-read (and wasn't churn)
