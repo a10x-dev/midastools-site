@@ -2,6 +2,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { useState } from 'react';
 import Layout from '../components/Layout';
+import { submitSubscribe } from '../lib/subscribe';
 
 const STRIPE_URL = 'https://buy.stripe.com/6oUcN40tN0Yxgle0pscMM0l';
 const BUNDLE_URL = 'https://buy.stripe.com/bJe7sK0tNdLjgle0pscMM0b';
@@ -16,11 +17,7 @@ export default function EmailMarketingKit() {
     if (!email) return;
     setLoading(true);
     try {
-      await fetch('/api/subscribe', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email, source: 'email-marketing-kit-lead', business: 'Email Marketing' })
-      });
+      await submitSubscribe({ email, source: 'email-marketing-kit-lead', business: 'Email Marketing' });
       setSent(true);
     } catch {}
     setLoading(false);

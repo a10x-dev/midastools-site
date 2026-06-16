@@ -2,6 +2,7 @@ import Head from 'next/head';
 import { useState } from 'react';
 import Link from 'next/link';
 import Layout from '../components/Layout';
+import { submitSubscribe } from '../lib/subscribe';
 
 const STRIPE_URL = 'https://buy.stripe.com/aFa14mfoH8qZ6KEgoqcMM0h';
 
@@ -15,11 +16,7 @@ export default function NotionTemplatesKit() {
     if (!email) return;
     setLoading(true);
     try {
-      await fetch('/api/subscribe', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email, source: 'notion-templates-kit-lead' })
-      });
+      await submitSubscribe({ email, source: 'notion-templates-kit-lead' });
       setSent(true);
     } catch {}
     setLoading(false);

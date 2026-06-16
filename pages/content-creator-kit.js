@@ -2,6 +2,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { useState } from 'react';
 import Layout from '../components/Layout';
+import { submitSubscribe } from '../lib/subscribe';
 
 const STRIPE_URL = 'https://buy.stripe.com/eVq7sK90j36F4CwdcecMM09';
 
@@ -15,11 +16,7 @@ export default function ContentCreatorKit() {
     if (!email) return;
     setLoading(true);
     try {
-      await fetch('/api/subscribe', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email, source: 'content-creator-kit-lead', business: 'Content Creator' })
-      });
+      await submitSubscribe({ email, source: 'content-creator-kit-lead', business: 'Content Creator' });
       setSent(true);
     } catch {}
     setLoading(false);

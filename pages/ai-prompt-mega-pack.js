@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import { useState } from 'react';
 import Layout from '../components/Layout';
+import { submitSubscribe } from '../lib/subscribe';
 
 // TODO: Founder — create Stripe product "AI Prompt Mega Pack" at $29 and paste Payment Link here
 const STRIPE_URL = 'https://buy.stripe.com/4gMbJ0dgz4aJ1qkb46cMM0d';
@@ -15,11 +16,7 @@ export default function AIPromptMegaPack() {
     if (!email) return;
     setLoading(true);
     try {
-      await fetch('/api/subscribe', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email, source: 'prompt-mega-pack-lead', business: 'General' })
-      });
+      await submitSubscribe({ email, source: 'prompt-mega-pack-lead', business: 'General' });
       setSent(true);
     } catch {}
     setLoading(false);
