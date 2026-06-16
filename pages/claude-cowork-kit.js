@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import { useState } from 'react';
 import Layout from '../components/Layout';
+import { submitSubscribe } from '../lib/subscribe';
 
 const STRIPE_URL = 'https://buy.stripe.com/4gMbJ0dgz4aJ1qkb46cMM0d'; // Mega Pack — original cowork-mastery plink deactivated (no content, refund-risk)
 const BUNDLE_STRIPE = 'https://buy.stripe.com/bJe7sK0tNdLjgle0pscMM0b';
@@ -15,11 +16,7 @@ export default function ClaudeCoworkKit() {
     if (!email) return;
     setLoading(true);
     try {
-      await fetch('/api/subscribe', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email, source: 'claude-cowork-kit-lead', business: 'General' })
-      });
+      await submitSubscribe({ email, source: 'claude-cowork-kit-lead', business: 'General' });
       setSent(true);
     } catch {}
     setLoading(false);

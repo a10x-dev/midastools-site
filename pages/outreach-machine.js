@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import Layout from '../components/Layout';
 import Link from 'next/link';
 import { trackEvent } from '../lib/track';
+import { submitSubscribe } from '../lib/subscribe';
 
 const CHANNELS = [
   { id: 'email', label: 'Cold Email', desc: 'Get replies, not just opens' },
@@ -127,11 +128,7 @@ export default function OutreachMachine() {
     if (!email.includes('@')) return;
     setCaptureMsg('');
     try {
-      await fetch('/api/subscribe', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email, source: 'outreach-machine' }),
-      });
+      await submitSubscribe({ email, source: 'outreach-machine' });
       try { localStorage.setItem('om_unlocked', '1'); } catch {}
       setUnlocked(true);
       setCaptureMsg('Unlocked. Keep generating — and check your inbox for 5 money-prompts.');

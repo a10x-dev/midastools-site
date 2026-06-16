@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import { useState } from 'react';
 import Layout from '../components/Layout';
+import { submitSubscribe } from '../lib/subscribe';
 
 const STRIPE_URL = 'https://buy.stripe.com/cNi6oGgsLfTrfha2xAcMM0g';
 
@@ -14,11 +15,7 @@ export default function AIVideoPromptPack() {
     if (!email) return;
     setLoading(true);
     try {
-      await fetch('/api/subscribe', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email, source: 'video-prompt-pack-lead', business: 'Video Content' })
-      });
+      await submitSubscribe({ email, source: 'video-prompt-pack-lead', business: 'Video Content' });
       setSent(true);
     } catch {}
     setLoading(false);

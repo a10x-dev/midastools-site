@@ -2,6 +2,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { useState } from 'react';
 import Layout from '../components/Layout';
+import { submitSubscribe } from '../lib/subscribe';
 
 const STRIPE_URL = 'https://buy.stripe.com/7sY3cu7Wfaz71qkfkmcMM0a';
 
@@ -15,11 +16,7 @@ export default function FreelancerKit() {
     if (!email) return;
     setLoading(true);
     try {
-      await fetch('/api/subscribe', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email, source: 'freelancer-kit-lead', business: 'Freelancer' })
-      });
+      await submitSubscribe({ email, source: 'freelancer-kit-lead', business: 'Freelancer' });
       setSent(true);
     } catch {}
     setLoading(false);

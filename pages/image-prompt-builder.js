@@ -3,6 +3,7 @@ import { useState, useRef, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 import Layout from '../components/Layout';
+import { submitSubscribe } from '../lib/subscribe';
 
 const STRIPE_IMAGE_PACK = 'https://buy.stripe.com/8x24gyccv7mVglegoqcMM0i';
 
@@ -146,7 +147,7 @@ export default function ImagePromptBuilder() {
     if (!captureEmail || !captureEmail.includes('@')) return;
     setCaptureLoading(true);
     try {
-      await fetch('/api/subscribe', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ email: captureEmail, source: 'image-prompt-builder' }) });
+      await submitSubscribe({ email: captureEmail, source: 'image-prompt-builder' });
       setCaptureSubmitted(true);
     } catch { /* silent */ }
     setCaptureLoading(false);

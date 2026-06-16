@@ -3,6 +3,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import Layout from '../components/Layout';
 import RelatedKitBanner from '../components/RelatedKitBanner';
+import { submitSubscribe } from '../lib/subscribe';
 
 const STRIPE_IMAGE_PACK = 'https://buy.stripe.com/8x24gyccv7mVglegoqcMM0i';
 const STRIPE_BUNDLE = 'https://buy.stripe.com/bJe7sK0tNdLjgle0pscMM0b';
@@ -125,11 +126,7 @@ export default function ActionFigureGenerator() {
     setLoading(true);
     setError('');
     try {
-      const res = await fetch('/api/subscribe', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email, source: 'action-figure-generator', referrer: document.referrer || '' }),
-      });
+      const res = await submitSubscribe({ email, source: 'action-figure-generator', referrer: document.referrer || '' });
       if (res.ok) {
         setUnlocked(true);
       } else {

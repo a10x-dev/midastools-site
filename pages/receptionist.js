@@ -2,6 +2,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { useState } from 'react';
 import Layout from '../components/Layout';
+import { submitSubscribe } from '../lib/subscribe';
 
 const CAL_LINK = 'https://cal.com/manduks/midastools';
 
@@ -17,11 +18,7 @@ function LeadForm() {
     if (!email || !biz) return;
     setLoading(true);
     try {
-      await fetch('/api/subscribe', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email, source: 'receptionist-free-script', business: biz })
-      });
+      await submitSubscribe({ email, source: 'receptionist-free-script', business: biz });
       setSent(true);
     } catch {}
     setLoading(false);

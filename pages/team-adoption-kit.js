@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import { useState } from 'react';
 import Layout from '../components/Layout';
+import { submitSubscribe } from '../lib/subscribe';
 
 const STRIPE_URL = 'https://buy.stripe.com/14A8wOdgz0Yx2uo5JMcMM0o';
 const BUNDLE_STRIPE = 'https://buy.stripe.com/bJe7sK0tNdLjgle0pscMM0b';
@@ -15,11 +16,7 @@ export default function TeamAdoptionKit() {
     if (!email) return;
     setLoading(true);
     try {
-      await fetch('/api/subscribe', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email, source: 'team-adoption-kit-lead', business: 'General' })
-      });
+      await submitSubscribe({ email, source: 'team-adoption-kit-lead', business: 'General' });
       setSent(true);
     } catch {}
     setLoading(false);

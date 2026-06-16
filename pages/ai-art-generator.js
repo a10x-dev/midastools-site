@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import Layout from '../components/Layout';
 import Link from 'next/link';
 import { trackEvent } from '../lib/track';
+import { submitSubscribe } from '../lib/subscribe';
 
 const STYLES = [
   { id: 'ghibli', label: 'Ghibli', desc: 'Soft & whimsical' },
@@ -88,11 +89,7 @@ export default function AiArtGenerator() {
     if (!email.includes('@')) return;
     setCaptureMsg('');
     try {
-      await fetch('/api/subscribe', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email, source: 'art-machine' }),
-      });
+      await submitSubscribe({ email, source: 'art-machine' });
       try { localStorage.setItem('art_unlocked', '1'); } catch {}
       setUnlocked(true);
       setCaptureMsg('Unlocked. Keep creating — and check your inbox.');
@@ -106,11 +103,7 @@ export default function AiArtGenerator() {
     if (!waitEmail.includes('@')) return;
     setWaitMsg('');
     try {
-      await fetch('/api/subscribe', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email: waitEmail, source: 'art-machine-waitlist' }),
-      });
+      await submitSubscribe({ email: waitEmail, source: 'art-machine-waitlist' });
       trackEvent('art_waitlist', {});
       setWaitMsg("You're on the list. We'll email you the moment it's live.");
       setWaitEmail('');
@@ -124,11 +117,7 @@ export default function AiArtGenerator() {
     if (!hdEmail.includes('@')) return;
     setHdMsg('');
     try {
-      await fetch('/api/subscribe', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email: hdEmail, source: 'art-machine-hd-waitlist' }),
-      });
+      await submitSubscribe({ email: hdEmail, source: 'art-machine-hd-waitlist' });
       // Willingness-to-pay signal — who wants the paid HD pack.
       trackEvent('hd_waitlist', { style });
       setHdMsg('Got it — you\'ll get early access to the HD pack ($4.99) the day it launches.');

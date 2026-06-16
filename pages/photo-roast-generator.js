@@ -3,6 +3,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import Layout from '../components/Layout';
 import RelatedKitBanner from '../components/RelatedKitBanner';
+import { submitSubscribe } from '../lib/subscribe';
 
 const ACCENT = '#3B5FFF';
 const STRIPE_BUNDLE = 'https://buy.stripe.com/bJe7sK0tNdLjgle0pscMM0b';
@@ -132,11 +133,7 @@ export default function PhotoRoastGenerator() {
     setLoading(true);
     setError('');
     try {
-      const res = await fetch('/api/subscribe', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email, source: 'photo-roast-generator', referrer: document.referrer || '' }),
-      });
+      const res = await submitSubscribe({ email, source: 'photo-roast-generator', referrer: document.referrer || '' });
       if (res.ok) setUnlocked(true);
       else setError('Something went wrong. Try again.');
     } catch {

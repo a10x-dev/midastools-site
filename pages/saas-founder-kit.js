@@ -2,6 +2,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { useState } from 'react';
 import Layout from '../components/Layout';
+import { submitSubscribe } from '../lib/subscribe';
 
 // TODO: Replace with actual Stripe payment link for SaaS Founder Kit
 const STRIPE_URL = 'https://buy.stripe.com/fZudR8dgz8qZ5GAfkmcMM0f';
@@ -16,11 +17,7 @@ export default function SaasFounderKit() {
     if (!email) return;
     setLoading(true);
     try {
-      await fetch('/api/subscribe', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email, source: 'saas-founder-kit-lead', business: 'SaaS Founder' })
-      });
+      await submitSubscribe({ email, source: 'saas-founder-kit-lead', business: 'SaaS Founder' });
       setSent(true);
     } catch {}
     setLoading(false);

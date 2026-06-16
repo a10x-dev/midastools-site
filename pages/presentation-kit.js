@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import { useState } from 'react';
 import Layout from '../components/Layout';
+import { submitSubscribe } from '../lib/subscribe';
 
 const STRIPE_URL = 'https://buy.stripe.com/8x228q6Sb36F2uofkmcMM0m';
 const BUNDLE_URL = 'https://buy.stripe.com/bJe7sK0tNdLjgle0pscMM0b';
@@ -15,11 +16,7 @@ export default function PresentationKit() {
     if (!email) return;
     setLoading(true);
     try {
-      await fetch('/api/subscribe', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email, source: 'presentation-kit-lead', business: 'Presentations' })
-      });
+      await submitSubscribe({ email, source: 'presentation-kit-lead', business: 'Presentations' });
       setSent(true);
     } catch {}
     setLoading(false);

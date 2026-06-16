@@ -2,6 +2,7 @@ import Head from 'next/head';
 import { useState } from 'react';
 import Link from 'next/link';
 import Layout from '../components/Layout';
+import { submitSubscribe } from '../lib/subscribe';
 
 const PRODUCTS = {
   freelancer: { name: 'Freelancer Automation Kit', price: 39, url: '/freelancer-kit', stripe: 'https://buy.stripe.com/7sY3cu7Wfaz71qkfkmcMM0a', color: '#8B5CF6', emoji: '💼', tagline: 'Win more clients. Deliver faster. Get paid on time.' },
@@ -154,11 +155,7 @@ export default function Quiz() {
     e.preventDefault();
     if (!email) return;
     try {
-      await fetch('/api/subscribe', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email, source: 'quiz', referrer: document.referrer || '', answers: JSON.stringify(answers) }),
-      });
+      await submitSubscribe({ email, source: 'quiz', referrer: document.referrer || '', answers: JSON.stringify(answers) });
       setEmailSent(true);
     } catch (err) { setEmailSent(true); }
   };

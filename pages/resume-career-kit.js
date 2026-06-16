@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import { useState } from 'react';
 import Layout from '../components/Layout';
+import { submitSubscribe } from '../lib/subscribe';
 
 const STRIPE_URL = 'https://buy.stripe.com/4gM8wO6Sb4aJ4Cw3BEcMM0j';
 const BUNDLE_URL = 'https://buy.stripe.com/bJe7sK0tNdLjgle0pscMM0b';
@@ -15,11 +16,7 @@ export default function ResumeCareerKit() {
     if (!email) return;
     setLoading(true);
     try {
-      await fetch('/api/subscribe', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email, source: 'resume-career-kit-lead', business: 'Resume & Career' })
-      });
+      await submitSubscribe({ email, source: 'resume-career-kit-lead', business: 'Resume & Career' });
       setSent(true);
     } catch {}
     setLoading(false);

@@ -2,6 +2,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { useState } from 'react';
 import Layout from '../components/Layout';
+import { submitSubscribe } from '../lib/subscribe';
 
 // TODO: Replace with actual Stripe payment link for E-commerce AI Kit
 const STRIPE_URL = 'https://buy.stripe.com/cNi14mfoH0Yxb0Uc8acMM0e';
@@ -16,11 +17,7 @@ export default function EcommerceKit() {
     if (!email) return;
     setLoading(true);
     try {
-      await fetch('/api/subscribe', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email, source: 'ecommerce-kit-lead', business: 'E-commerce' })
-      });
+      await submitSubscribe({ email, source: 'ecommerce-kit-lead', business: 'E-commerce' });
       setSent(true);
     } catch {}
     setLoading(false);

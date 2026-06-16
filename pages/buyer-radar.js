@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import Layout from '../components/Layout';
 import Link from 'next/link';
 import { trackEvent } from '../lib/track';
+import { submitSubscribe } from '../lib/subscribe';
 
 // One-click prefill so a curious visitor sees real leads in a single click.
 const EXAMPLES = ['video editing', 'logo design', 'Shopify development', 'short-form content', 'web design', 'copywriting'];
@@ -105,11 +106,7 @@ export default function BuyerRadar() {
     if (!email.includes('@')) return;
     setCaptureMsg('');
     try {
-      await fetch('/api/subscribe', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email, source: 'buyer-radar' }),
-      });
+      await submitSubscribe({ email, source: 'buyer-radar' });
       try { localStorage.setItem('br_unlocked', '1'); } catch {}
       setUnlocked(true);
       setCaptureMsg('Unlocked. Keep hunting — and check your inbox for 5 money-prompts.');

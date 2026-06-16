@@ -3,6 +3,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import Layout from '../components/Layout';
 import RelatedKitBanner from '../components/RelatedKitBanner';
+import { submitSubscribe } from '../lib/subscribe';
 
 const STRIPE_MEGA_PACK = 'https://buy.stripe.com/4gMbJ0dgz4aJ1qkb46cMM0d';
 const STRIPE_BUNDLE = 'https://buy.stripe.com/bJe7sK0tNdLjgle0pscMM0b';
@@ -290,7 +291,7 @@ export default function PromptGenerator() {
     if (!captureEmail || !captureEmail.includes('@')) return;
     setCaptureLoading(true);
     try {
-      await fetch('/api/subscribe', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ email: captureEmail, source: 'prompt-generator' }) });
+      await submitSubscribe({ email: captureEmail, source: 'prompt-generator' });
       setCaptureSubmitted(true);
     } catch { /* silent */ }
     setCaptureLoading(false);

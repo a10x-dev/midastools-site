@@ -2,6 +2,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { useState } from 'react';
 import Layout from '../components/Layout';
+import { submitSubscribe } from '../lib/subscribe';
 
 const ASSESSMENT_URL = 'https://buy.stripe.com/cNi14m90j6iR7OI8VYcMM03';
 const STRIPE_STARTER = 'https://buy.stripe.com/fZueVcb8rgXv3ysc8acMM0t';
@@ -90,16 +91,12 @@ export default function AuditTemplate() {
         utm_medium: params.get('utm_medium') || '',
         utm_campaign: params.get('utm_campaign') || '',
       } : {};
-      await fetch('/api/subscribe', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
+      await submitSubscribe({
           email,
           source: 'audit-template',
           referrer: typeof document !== 'undefined' ? document.referrer || '' : '',
           ...utm,
-        }),
-      });
+        });
       setStatus('success');
       setUnlocked(true);
     } catch {

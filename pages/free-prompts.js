@@ -2,6 +2,7 @@ import Head from 'next/head';
 import { useState } from 'react';
 import Link from 'next/link';
 import Layout from '../components/Layout';
+import { submitSubscribe } from '../lib/subscribe';
 
 const STRIPE_MEGA_PACK = 'https://buy.stripe.com/4gMbJ0dgz4aJ1qkb46cMM0d';
 const STRIPE_BUNDLE = 'https://buy.stripe.com/bJe7sK0tNdLjgle0pscMM0b';
@@ -128,11 +129,7 @@ export default function FreePrompts() {
     if (!email) return;
     setStatus('loading');
     try {
-      await fetch('/api/subscribe', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email, source: 'free-prompts-page', referrer: document.referrer || '' }),
-      });
+      await submitSubscribe({ email, source: 'free-prompts-page', referrer: document.referrer || '' });
       setStatus('success');
       setUnlocked(true);
     } catch {

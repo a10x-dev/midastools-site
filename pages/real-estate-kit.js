@@ -2,6 +2,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { useState } from 'react';
 import Layout from '../components/Layout';
+import { submitSubscribe } from '../lib/subscribe';
 
 const STRIPE_URL = 'https://buy.stripe.com/fZueVcb8r6iR5GAfkmcMM08';
 
@@ -15,11 +16,7 @@ export default function RealEstateKit() {
     if (!email) return;
     setLoading(true);
     try {
-      await fetch('/api/subscribe', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email, source: 'real-estate-kit-lead', business: 'Real Estate' })
-      });
+      await submitSubscribe({ email, source: 'real-estate-kit-lead', business: 'Real Estate' });
       setSent(true);
     } catch {}
     setLoading(false);

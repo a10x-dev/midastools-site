@@ -2,6 +2,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { useState } from 'react';
 import Layout from '../components/Layout';
+import { submitSubscribe } from '../lib/subscribe';
 
 const STRIPE_URL = 'https://buy.stripe.com/6oU5kC6SbdLj4CwegicMM0k';
 
@@ -15,11 +16,7 @@ export default function SocialMediaKit() {
     if (!email) return;
     setLoading(true);
     try {
-      await fetch('/api/subscribe', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email, source: 'social-media-kit-lead', business: 'Social Media Manager' })
-      });
+      await submitSubscribe({ email, source: 'social-media-kit-lead', business: 'Social Media Manager' });
       setSent(true);
     } catch {}
     setLoading(false);

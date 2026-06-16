@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import { useState } from 'react';
 import Layout from '../components/Layout';
+import { submitSubscribe } from '../lib/subscribe';
 
 const STRIPE_URL = 'https://buy.stripe.com/fZubJ01xR8qZed6goqcMM0z';
 const BUNDLE_STRIPE = 'https://buy.stripe.com/bJe7sK0tNdLjgle0pscMM0b';
@@ -15,11 +16,7 @@ export default function ChampionMonthly() {
     if (!email) return;
     setLoading(true);
     try {
-      await fetch('/api/subscribe', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email, source: 'champion-monthly-lead', business: 'B2B Adoption' })
-      });
+      await submitSubscribe({ email, source: 'champion-monthly-lead', business: 'B2B Adoption' });
       setSent(true);
     } catch {}
     setLoading(false);

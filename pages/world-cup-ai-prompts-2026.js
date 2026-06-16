@@ -2,6 +2,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { useState } from 'react';
 import Layout, { DESIGN } from '../components/Layout';
+import { submitSubscribe } from '../lib/subscribe';
 
 const STRIPE_MEGA_PACK = 'https://buy.stripe.com/4gMbJ0dgz4aJ1qkb46cMM0d';
 const STRIPE_BUNDLE = 'https://buy.stripe.com/4gMbJ0dgz4aJ1qkb46cMM0d';
@@ -101,16 +102,12 @@ export default function WorldCupAIPrompts2026() {
     if (!email || !email.includes('@')) return;
     setSubmitting(true);
     try {
-      await fetch('/api/subscribe', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
+      await submitSubscribe({
           email,
           source: 'world-cup-ai-prompts',
           referrer: typeof document !== 'undefined' ? document.referrer : '',
           landing_slug: 'world-cup-ai-prompts-2026',
-        }),
-      });
+        });
       setSubmitted(true);
     } catch (err) {
       // fail-quiet — page still useful even if subscribe broken

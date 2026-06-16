@@ -2,6 +2,7 @@ import Head from 'next/head';
 import { useState } from 'react';
 import Link from 'next/link';
 import Layout from '../components/Layout';
+import { submitSubscribe } from '../lib/subscribe';
 
 const STRIPE_BUNDLE = 'https://buy.stripe.com/bJe7sK0tNdLjgle0pscMM0b';
 
@@ -72,17 +73,13 @@ export default function AIROICalculator() {
     e.preventDefault();
     if (!email) return;
     try {
-      await fetch('/api/subscribe', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
+      await submitSubscribe({
           email,
           source: 'roi-calculator',
           role: role?.label || 'Unknown',
           weeklySavings: weeklySavings.toFixed(0),
           yearlySavings: yearlySavings.toFixed(0),
-        }),
-      });
+        });
       setEmailSent(true);
     } catch {}
   };

@@ -3,6 +3,7 @@ import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import Layout from '../components/Layout';
 import { useRouter } from 'next/router';
+import { submitSubscribe } from '../lib/subscribe';
 
 const STRIPE_BUNDLE = 'https://buy.stripe.com/bJe7sK0tNdLjgle0pscMM0b';
 
@@ -102,7 +103,7 @@ export default function AIJobRisk() {
     if (!captureEmail || !captureEmail.includes('@')) return;
     setCaptureLoading(true);
     try {
-      await fetch('/api/subscribe', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ email: captureEmail, source: 'ai-job-risk' }) });
+      await submitSubscribe({ email: captureEmail, source: 'ai-job-risk' });
       setCaptureSubmitted(true);
     } catch { /* silent */ }
     setCaptureLoading(false);

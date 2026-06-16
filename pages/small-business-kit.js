@@ -2,6 +2,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { useState } from 'react';
 import Layout from '../components/Layout';
+import { submitSubscribe } from '../lib/subscribe';
 
 const STRIPE_URL = 'https://buy.stripe.com/3cIaEW6SbcHfed6egicMM0c';
 
@@ -15,11 +16,7 @@ export default function SmallBusinessKit() {
     if (!email) return;
     setLoading(true);
     try {
-      await fetch('/api/subscribe', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email, source: 'small-business-kit-lead', business: 'Small Business' })
-      });
+      await submitSubscribe({ email, source: 'small-business-kit-lead', business: 'Small Business' });
       setSent(true);
     } catch {}
     setLoading(false);

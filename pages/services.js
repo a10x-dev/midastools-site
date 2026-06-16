@@ -2,6 +2,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import Layout from '../components/Layout';
+import { submitSubscribe } from '../lib/subscribe';
 
 // Stripe payment links (live) — created via /api/setup-dfy, Session 125 (Apr 21)
 const DFY_CONTENT_URL = 'https://buy.stripe.com/28EdR84K36iR5GAa02cMM0u';
@@ -123,11 +124,7 @@ export default function Services() {
     if (!email) return;
     setLoading(true);
     try {
-      await fetch('/api/subscribe', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email, source: 'services-page' }),
-      });
+      await submitSubscribe({ email, source: 'services-page' });
       setSent(true);
     } catch {}
     setLoading(false);

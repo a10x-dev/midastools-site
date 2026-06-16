@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import Layout from '../components/Layout';
 import Link from 'next/link';
 import { trackEvent } from '../lib/track';
+import { submitSubscribe } from '../lib/subscribe';
 
 const PLATFORMS = [
   { id: 'etsy', label: 'Etsy', desc: '13 tags + SEO title' },
@@ -128,11 +129,7 @@ export default function ListingMachine() {
     if (!email.includes('@')) return;
     setCaptureMsg('');
     try {
-      await fetch('/api/subscribe', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email, source: 'listing-machine' }),
-      });
+      await submitSubscribe({ email, source: 'listing-machine' });
       try { localStorage.setItem('lm_unlocked', '1'); } catch {}
       setUnlocked(true);
       setCaptureMsg('Unlocked. Keep generating — and check your inbox for 5 money-prompts.');

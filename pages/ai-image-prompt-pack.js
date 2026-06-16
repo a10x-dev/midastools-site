@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import { useState } from 'react';
 import Layout from '../components/Layout';
+import { submitSubscribe } from '../lib/subscribe';
 
 const STRIPE_URL = 'https://buy.stripe.com/8x24gyccv7mVglegoqcMM0i';
 
@@ -14,11 +15,7 @@ export default function AIImagePromptPack() {
     if (!email) return;
     setLoading(true);
     try {
-      await fetch('/api/subscribe', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email, source: 'image-prompt-pack-lead', business: 'Visual Content' })
-      });
+      await submitSubscribe({ email, source: 'image-prompt-pack-lead', business: 'Visual Content' });
       setSent(true);
     } catch {}
     setLoading(false);
