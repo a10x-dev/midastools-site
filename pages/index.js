@@ -2,6 +2,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { useState } from 'react';
 import Layout from '../components/Layout';
+import { getAttribution } from '../lib/stripe-attribution';
 
 const STRIPE_URL = 'https://buy.stripe.com/cNi28qdgz7mVb0U8VYcMM07';
 
@@ -45,11 +46,22 @@ export default function Home() {
     try {
       // Capture UTM params for attribution (enables real ads measurement later)
       const params = typeof window !== 'undefined' ? new URLSearchParams(window.location.search) : null;
-      const utm = params ? {
+      const liveUtm = params ? {
         utm_source: params.get('utm_source') || '',
         utm_medium: params.get('utm_medium') || '',
         utm_campaign: params.get('utm_campaign') || '',
       } : {};
+      // First-touch attribution persisted in localStorage (mt_attr_v2, 90 days).
+      // This is what recovers the ~90% of signups whose live document.referrer is
+      // empty (direct/bookmark/dark-social/returning visitors). Live URL params
+      // win when present; otherwise fall back to the persisted first-touch source.
+      const attr = typeof window !== 'undefined' ? (getAttribution() || {}) : {};
+      const utm = {
+        utm_source: liveUtm.utm_source || attr.utm_source || '',
+        utm_medium: liveUtm.utm_medium || attr.utm_medium || '',
+        utm_campaign: liveUtm.utm_campaign || attr.utm_campaign || '',
+      };
+      const liveReferrer = typeof document !== 'undefined' ? document.referrer || '' : '';
       const res = await fetch('/api/subscribe', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -57,7 +69,10 @@ export default function Home() {
           email,
           name,
           source: 'homepage',
-          referrer: typeof document !== 'undefined' ? document.referrer || '' : '',
+          // referrer_host from first-touch wins when live referrer is stripped
+          referrer: liveReferrer || attr.referrer_host || '',
+          landing_slug: attr.landing_slug || '',
+          attribution: attr,
           ...utm,
         }),
       });
