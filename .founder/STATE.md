@@ -37,6 +37,16 @@ Tomorrow: resume near-daily two-surface content (Gumroad / Amazon KDP / AI wall-
 ### Confidence
 90% — all reads pulled direct (metrics-snapshot + funnel-readout + track-events channel aggregation); +19 corroborated by two independent counts. Only unverified: whether the content-driven upstream traffic converts to attributable signups vs. the homepage-direct majority (referrer-stripping caps measurement, not the growth itself).
 
+### Continuation — 🚨 FOUND + FIXED THE REAL ATTRIBUTION LEAK: EmailCapture was channel-blind (commit 1797ea0, build clean, pushed)
+On "continue," interrogated WHY all 32 signups read direct/none. The attribution lib itself is sound (captureAttribution fires on _app mount, first-touch persists 90d in localStorage, empty-existing correctly falls through to later UTM). So the leak had to be at the conversion point. Found it: **`components/EmailCapture.js`** (the shared capture on **20 blog posts**, incl. the entire art-money cluster) POSTed only the **current page's URL params** for utm_source (lines 55-57) — never the persisted first-touch attribution. So a gist reader (utm_source=gist) → navigates to a blog post → signs up via EmailCapture → submits utm_source='' → shows as direct/none. **This is exactly why the content/gist cohort is unattributable.** The S43 migration routed kit/generator forms through `submitSubscribe()` (which attaches getAttribution first-touch) but **missed this shared component.**
+- **Fix**: routed EmailCapture through `submitSubscribe({ email, source: ctx.source, website })` — now attaches first-touch utm + referrer_host + landing_slug; caller fields preserved via the helper's trailing spread; honeypot intact. Reversible single-component change, build clean (all routes generate), pushed e27ed19..1797ea0.
+- **Why this is the highest-impact autonomous task (not content over-ship, not phantom bug-hunt):** it's bottleneck-direct for the mandate's literal goal ("monitor where users come from") — closes the channel-blind leak on all 20 content pages the growth sprint drives traffic to, so gist/blog-attributed signups become visible at the subscriber level going forward. Autonomous (no Armando gate), plan-agnostic, reversible.
+- **Closes Lever C structurally** (f529b1d3): gists already carry UTM; the missing half was the capture-side reading first-touch. The full gist→blog→signup attribution chain now works end-to-end. (CTA-UTM completeness audit across all gists is a lower-value follow-up; gists are already tagged.)
+- **Caveat:** existing homepage-direct majority stays direct (genuinely no first-touch utm — they land brand-direct/Google). The fix only recovers attribution for visitors whose FIRST touch carried a utm/referrer (gist/blog/AI-search). So it widens visibility, doesn't reclassify the direct cohort.
+
+### NEXT (revised)
+In 1-2 days, re-run the track-events channel agg — gist/blog-first-touch signups should now show utm_source on subscribe_submit (the fix's falsifiable test). Then resume near-daily two-surface content; Mon Jun 22 memo #2; watch for Armando's Printify + $50 paid-test unlocks.
+
 ## Session 44 — 🟢 GROWTH-MANDATE LEVER A: SHIPPED A TWO-SURFACE ART-MONEY SEO ASSET (blog + gist) IN THE VALIDATED CLUSTER (Jun 16, ~21:20 UTC, commits a506336 + c6822df pushed)
 
 ### Why this was the right session work
