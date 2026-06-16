@@ -11,6 +11,30 @@
 
 <!-- AGENT-EDITED-BELOW (everything below this line is preserved across ticks) -->
 
+## Session 43 — 🟢🔑 KILL-READ VERDICT: memo_art_money PASSED (3.92% > 2%) + COMPLETED THE ATTRIBUTION SWEEP (43 files) (Jun 16, 20:22 UTC, commit c9c35be pushed)
+
+### 🔑 THE VERDICT (the whole point of the Jun-15 send) — PASS
+Ran `funnel-readout.py --campaign memo_art_money --sends 153` at **T+24.5h** (20:22 UTC, squarely in the 24-48h window). **memo_art_money = 6 page_views / 153 sends = 3.92% method-CTR → PASS (threshold 2.0%).** First warm-list money-method send in 40+ days clears its kill bar at ~2× threshold. Sanity-checked NOT a sliding-window artifact: 600-event window spans ~32.7h of traffic at recent ~18ev/h, comfortably covers the full ~24.5h memo life; count stable at 6 across S41 (T+2.3h) / S42 (T+8.4h) / now → 6 is the true count. **This is issue #1 of the 4-issue kill criterion — it PASSED, so the Monday-memo flywheel continues, no kill.**
+
+### 🟡 The honest tension (calibration)
+The memo passed the ENGAGEMENT bar but produced **$0**. Across the 600-event window: **0 sell_path_click, 0 image_generate, 0 listing_generate, 0 of every money-tool activation.** Stripe still 4/$184. Memo replies = corporate auto-responders + a Zendesk auto-ack (no genuine demand-sensing reply). So: the audience WILL click a money-method email above the 2% bar, but the click converts to $0 because (a) the **Printify affiliate link is not wired into the memo** (Armando/PartnerStack-gated — the one mechanism that would monetize a 3.92% click), and (b) the downstream sell-path still reads 0. **Diagnosis sharpens: "does the audience engage a money-method email?" is now ANSWERED YES; the binding constraint is wiring the monetization mechanism + growing the list.**
+
+### ✅ Shipped — completed the Lever-C attribution sweep (commit c9c35be, build clean, pushed)
+Built `.founder/tools/migrate-subscribe-attribution.py` (conservative regex, idempotent, --apply) and migrated **43 files / 45 call sites** from bare `fetch('/api/subscribe', {email, source})` → the shared `submitSubscribe()` helper that attaches getAttribution() (utm_source / landing_slug / referrer_host). Closes the ~27% of signups (generators + long-tail kits) that landed channel-blind. **The full signup funnel is now channel-attributable** so the 2-week growth sprint can answer "which channel grew the list" at the subscriber level.
+- **Excluded index.js (homepage)** — sole working conversion engine, already sends manual attribution; never risk the one surface that converts for a marginal utm-field gain it mostly already has via `attribution: attr`.
+- **Auto-skipped chatbot-builder + finance-club** — irregular shapes (fire-and-forget one-liner / `...utm` spread), ~0 signups, already build UTM manually. Correctly left alone.
+- Spot-verified: ghibli `const res = await submitSubscribe(...)` + `res.ok` preserved (helper returns the fetch promise); ai-art-generator 3 call sites; quiz `answers` field passes through. npx next build clean.
+
+### Held / did NOT
+- Did NOT grind Lever A content this session — acquisition readout already concluded content lags 4-12wk and is NOT the in-window 10x lever; shipping it now is the long-game, not urgent. Resume content cadence next session if Armando hasn't unlocked the in-window levers.
+- Did NOT touch homepage, the memo, or the list.
+
+### NEXT
+Watch for Armando's 2 decision-ready unlocks (Printify affiliate = the revenue mechanism for the validated 3.92% CTR; ~$50 paid test = the only realistic in-window 10x growth lever). Monday Jun 22: memo issue #2 (data-informed by issue #1's 3.92% — keep the art-money framing, it cleared the bar). Accumulate attribution data over the next days now that the full funnel is tagged.
+
+### Confidence
+90% — verdict pulled direct via funnel-readout.py + sliding-window sanity-checked; migration build-clean + pushed + spot-verified across 4 sample files. Only unverified: whether wiring Printify converts the validated 3.92% engagement into actual revenue (the next real test, Armando-gated).
+
 ## Session 42 — 🟢 GROWTH-MANDATE KICKOFF: ACQUISITION READOUT + FIXED HOMEPAGE-ATTRIBUTION GAP (Jun 16, 04:14 UTC, commit d318d34 pushed)
 
 ### Trigger
