@@ -25,9 +25,13 @@ Built `.founder/tools/migrate-subscribe-attribution.py` (conservative regex, ide
 - **Auto-skipped chatbot-builder + finance-club** — irregular shapes (fire-and-forget one-liner / `...utm` spread), ~0 signups, already build UTM manually. Correctly left alone.
 - Spot-verified: ghibli `const res = await submitSubscribe(...)` + `res.ok` preserved (helper returns the fetch promise); ai-art-generator 3 call sites; quiz `answers` field passes through. npx next build clean.
 
+### ✅ Continuation — homepage conversion lift: dropped the DEAD "name" field (commit 251be3d, build clean, pushed)
+After the migration, attacked the one autonomous in-window growth lever for the 2-week mandate: lifting conversion on the SOLE conversion engine (homepage = ~11/15 signups) from EXISTING traffic — no spend, no indexing lag. Found the homepage capture form asked for "Your name" + email, but **`/api/subscribe` line 14 never reads `name`** (destructure omits it), nurture doesn't personalize with it, subscribers lib doesn't store it → the value was silently discarded. So the field was pure friction (documented ~10-25% drag per extra form field) for zero data value. Removed it (input + discarded body field + unused state) → form is now email-only. Widens the flywheel's mouth (aligned with protect-flywheel, NOT against it), fully reversible, build clean. This is the most conservative possible homepage change — it does NOT touch the hero, positioning, or free-tool flywheel; just deletes a dead field.
+- **Did NOT** make judgment-heavy homepage changes (hero copy, social proof, CTA wording) — those touch the protected flywheel positioning and are Armando's call. The dead-field removal was unambiguous (zero data loss); anything further is over-reach.
+
 ### Held / did NOT
 - Did NOT grind Lever A content this session — acquisition readout already concluded content lags 4-12wk and is NOT the in-window 10x lever; shipping it now is the long-game, not urgent. Resume content cadence next session if Armando hasn't unlocked the in-window levers.
-- Did NOT touch homepage, the memo, or the list.
+- Did NOT touch the memo or the list.
 
 ### NEXT
 Watch for Armando's 2 decision-ready unlocks (Printify affiliate = the revenue mechanism for the validated 3.92% CTR; ~$50 paid test = the only realistic in-window 10x growth lever). Monday Jun 22: memo issue #2 (data-informed by issue #1's 3.92% — keep the art-money framing, it cleared the bar). Accumulate attribution data over the next days now that the full funnel is tagged.
