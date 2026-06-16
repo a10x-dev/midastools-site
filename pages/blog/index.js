@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Layout from '../../components/Layout';
 
 const posts = [
+  { slug: 'print-on-demand-ai-art-2026', title: 'Print-on-Demand AI Art in 2026: Sell AI Designs on Mugs, Canvas & Tees ($19–49 Products)', date: 'June 16, 2026', desc: 'How POD works, the best platforms, what products & designs sell, margins, and the free tools to make the designs and write the listings. Copy-paste prompts included.' },
   { slug: 'how-to-sell-ai-art-on-etsy-2026', title: 'How to Sell AI Art on Etsy in 2026: The Complete Guide (Rules, Niches & $15–50 Listings)', date: 'June 16, 2026', desc: 'What Etsy actually allows, the 6 AI art niches selling right now, how to price digital downloads ($15–50), and the free tools to make the art and write a listing that ranks. Copy-paste prompts included.' },
   { slug: 'viral-ai-art-trends-june-2026', title: 'Viral AI Art Trends (June 2026): Nano Banana 2, Lo-Fi Realism & the 7 Looks Blowing Up Right Now', date: 'June 3, 2026', desc: "The viral AI art trends of June 2026 — Nano Banana 2, Lo-Fi Realism, and the 'Imperfect by Design' aesthetic taking over Midjourney and ChatGPT. 7 trending looks with free copy-paste prompts." },
   { slug: 'make-money-with-ai-5-methods-2026', title: '5 Ways People Are Actually Making Money With AI Right Now (2026)', date: 'June 1, 2026', desc: 'The Midas Memo #1: five fact-checked ways people are making money with AI in 2026 — grading AI answers, $300 local chatbots, faceless-video services, niche newsletters, and faceless YouTube. Real names, real numbers, honest caveats.' },

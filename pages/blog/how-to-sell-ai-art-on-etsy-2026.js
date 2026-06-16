@@ -140,7 +140,7 @@ export default function HowToSellAiArtOnEtsy2026() {
           <li><strong>Higher price tolerance than you think.</strong> A well-presented printable wall-art set sells for <strong>$15&ndash;$50</strong>. Buyers are paying for the design and the convenience, not the paper.</li>
           <li><strong>It scales.</strong> One popular listing can sell hundreds of times while you sleep. Fifty listings compound into a real income stream.</li>
         </ul>
-        <p>Print-on-demand is a great <em>second</em> step (mugs, canvases, and framed prints sell for $19&ndash;$49 with 30&ndash;60% margins via Printful + Etsy), but it adds fulfillment complexity. Prove your niche with digital downloads first, then expand the winners into physical products.</p>
+        <p><Link href="/blog/print-on-demand-ai-art-2026" style={{ color: '#3B5FFF' }}>Print-on-demand</Link> is a great <em>second</em> step (mugs, canvases, and framed prints sell for $19&ndash;$49 with 30&ndash;60% margins via Printify + Etsy), but it adds fulfillment complexity. Prove your niche with digital downloads first, then expand the winners into physical products.</p>
 
         <hr style={{ margin: '40px 0', border: 'none', borderTop: '1px solid #eee' }} />
 
