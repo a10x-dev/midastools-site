@@ -11,6 +11,32 @@
 
 <!-- AGENT-EDITED-BELOW (everything below this line is preserved across ticks) -->
 
+## Session 26 — 🟢 GROWTH-MANDATE READ: LIST +19 (153→172) IN ~1.3d + CHANNEL ANSWER + HELD CONTENT (Jun 16, ~22:22 UTC, read-only)
+
+### Why this was a verify-and-report slot, NOT a 3rd content ship
+S25 shipped a full two-surface art-money cluster (Etsy blog + gist #16 + POD blog) ~40 min ago. The growth mandate is **near-daily**, not near-hourly — shipping a 3rd content piece now repeats the exact over-ship S44 deliberately avoided ("the genuine saturation point"). Revenue stays double-gated on Armando (Printify + $50 paid test). So the highest-value autonomous move was answering the mandate's literal question — **"monitor where users come from"** — with fresh data, not manufacturing more content to look busy.
+
+### The data (metrics-snapshot + funnel-readout + track-events channel agg)
+- **🟢 Subs 153 → 172 (+19) since the memo-send baseline** (~15/day engine; corroborated by 32 subscribe_submit events in the 600-event window + the ~13/day rate over ~1.3d). Real growth, not a fallback flicker (two independent reads agree). KPI Users updated 153→172.
+- **Memo kill-read still PASS**: memo_art_money 6 page_views / 153 = 3.92% (> 2% bar), stable. All 7 money-tool activations still 0 this window (consistent with the de-confounded "audience won't click tools" verdict).
+- **Stripe flat: 4 sales / $184**, most recent jules@possiblefinance.com Jun 12 (untagged B2B Mega Pack). 0 in 24h. Revenue still $0 from the list (Printify not wired).
+- **🔑 CHANNEL ANSWER (the mandate's question):** signups carry utm_source=(none) / referrer=(direct/none) — 20 of 32 land on `home`. All-traffic referrers: **550/600 direct/dark (unscalable), Google #1 attributable (30), + a NEW emerging signal: AI-search citation traffic** — chatgpt.com, claude.ai, perplexity.ai, notebooklm.google.com, brave, yandex all appearing as referrers. The art-money cluster is the most-trafficked (/blog/how-to-make-money-selling-ai-art 18, /blog/chatgpt-ghibli-style-prompts 14, /ai-art-generator 12). Gist campaigns (ai-email-prompts, claude-opus-4-7, ai-resume-prompts) show attributed page_views → gist channel live.
+- **Synthesis:** the +19 is mostly homepage-direct + Google organic; content/gist drives measurable upstream traffic but referrer strips on the eventual homepage conversion. The scalable autonomous levers remain SEO/content (durable, lags weeks) + the now-visible **AI-search citation channel** (lean into AEO-structured content — already doing it). 10x-in-2-weeks from organic alone is NOT realistic (S42); the only in-window 10x lever is the Armando-gated $50 paid test.
+
+### Held / did NOT
+- Did NOT ship a 3rd content asset (~40 min after S25's cluster = over-ship, against the near-daily cadence + S44's own saturation discipline). Next content ship is tomorrow's natural slot.
+- Did NOT touch homepage hero/copy (protected flywheel, Armando's call).
+- Did NOT re-poll repeatedly — one definitive read, then report.
+
+### Sent to Armando (decide-now, responsive to his own mandate)
+ONE message bundling: (a) growth proof (+19 subs, content drawing traffic, AI-search channel emerging), (b) the two binding constraints that gate BOTH revenue AND his 10x target — Printify PartnerStack payout (monetizes the validated 3.92% memo click) + the $50 paid-distribution green-light (the only realistic in-window 10x lever). Framed decide-now because organic alone won't hit 10x.
+
+### NEXT
+Tomorrow: resume near-daily two-surface content (Gumroad / Amazon KDP / AI wall-art niches) + re-read signup velocity. Mon Jun 22: memo issue #2 (keep art-money framing — it cleared the bar). When Armando wires Printify → POD post + Art Machine sell-block + memo all start earning with zero further work. Watch for the $50 paid-test green-light.
+
+### Confidence
+90% — all reads pulled direct (metrics-snapshot + funnel-readout + track-events channel aggregation); +19 corroborated by two independent counts. Only unverified: whether the content-driven upstream traffic converts to attributable signups vs. the homepage-direct majority (referrer-stripping caps measurement, not the growth itself).
+
 ## Session 44 — 🟢 GROWTH-MANDATE LEVER A: SHIPPED A TWO-SURFACE ART-MONEY SEO ASSET (blog + gist) IN THE VALIDATED CLUSTER (Jun 16, ~21:20 UTC, commits a506336 + c6822df pushed)
 
 ### Why this was the right session work

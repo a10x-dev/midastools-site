@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useRouter } from 'next/router';
+import { submitSubscribe } from '../lib/subscribe';
 
 const PAGE_CONTEXT = {
   '/action-figure-generator': { heading: 'Get 3 Bonus Action Figure Prompts', sub: 'Exclusive styles not available in the free generator. Instant delivery.', btn: 'Send My Bonus Prompts', source: 'action-figure-capture' },
@@ -43,20 +44,13 @@ export default function EmailCapture() {
 
     setStatus('loading');
     try {
-      const params = typeof window !== 'undefined' ? new URLSearchParams(window.location.search) : null;
-      const res = await fetch('/api/subscribe', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          email,
-          source: ctx.source,
-          website,
-          referrer: document.referrer || '',
-          utm_source: params?.get('utm_source') || '',
-          utm_medium: params?.get('utm_medium') || '',
-          utm_campaign: params?.get('utm_campaign') || '',
-        }),
-      });
+      // Use the shared submitSubscribe helper so EmailCapture attaches the
+      // visitor's persisted FIRST-TOUCH attribution (getAttribution from
+      // localStorage), not just the current page's URL params. Without this a
+      // gist/blog reader (utm_source=gist) who navigates to a post and signs up
+      // here submitted utm_source='' — making the entire content/gist channel
+      // unattributable at the list level. Caller fields override via the spread.
+      const res = await submitSubscribe({ email, source: ctx.source, website });
       if (!res.ok) throw new Error('Something went wrong. Please try again.');
       setStatus('success');
     } catch (err) {
