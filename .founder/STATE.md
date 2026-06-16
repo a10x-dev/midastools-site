@@ -2,7 +2,7 @@
 
 ## Current Status (auto-synced from database)
 
-**Bottleneck**: conversion (severity 6/10) — Jun-15 memo_art_money FIRED to 153 (sent:153/0 failed) — the dominant lever (first warm-list money-method send in 40+ days) is now LIVE; method-CTR kill-read vs 2% runs Jun 16-17 via funnel-readout.py --campaign memo_art_money --sends 153. PMF verdict holds: audience won't click into tools, so monetization rides the LIST (memo) + RESULT (sell-path). Email de-confounded (75% delivery, on-domain track-events = measurement layer). Remaining gates: 24-48h CTR read; Armando PartnerStack acct to mint Printify affiliate link. Kill criteria: memo <2% method-CTR over 4 issues → list-rental pivot; sell-path 30d 0 activations.
+**Bottleneck**: conversion (severity 6/10) — Kill-read #1 of 4 PASSED: memo_art_money = 3.92% method-CTR (6 page_views / 153 sends) vs 2% bar at T+24.5h — the warm-list money-method lever survives, Monday-memo flywheel continues. But $0 revenue: 0 downstream activations (sell_path/image/listing all 0), Stripe flat 4/$184, memo replies were corporate auto-responders. Diagnosis sharpened — "does the audience engage a money-method email?" ANSWERED YES; binding constraint is now (a) wire the Printify affiliate into the memo to monetize the validated 3.92% click (Armando/PartnerStack-gated), (b) grow the list (2-wk mandate; full funnel now channel-attributable as of commit c9c35be). Kill criteria unchanged: <2% over 4 issues → list-rental pivot.
 
 **KPIs**:
 - Conversations: 0 (target: 3, 7d: 0%)
@@ -10,6 +10,39 @@
 - Revenue: 184 (target: 997, 7d: 18.70967741935484%)
 
 <!-- AGENT-EDITED-BELOW (everything below this line is preserved across ticks) -->
+
+## Session 44 — 🟢 GROWTH-MANDATE LEVER A: SHIPPED A TWO-SURFACE ART-MONEY SEO ASSET (blog + gist) IN THE VALIDATED CLUSTER (Jun 16, ~21:20 UTC, commits a506336 + c6822df pushed)
+
+### Why this was the right session work
+Kill-read #1 already PASSED this cycle (3.92%, S43). Revenue is double-gated on Armando (Printify affiliate + $50 paid test). The only autonomous lever on the binding constraint is **Armando's 2-week growth mandate**, and per the S42 acquisition readout the durable autonomous growth lever is **two-surface SEO content** (Google is now our #1 *attributable* channel at 7.5%; gist.github.com is the #1 *historical* channel at 36%; content→homepage-signup is a proven chain). The weekly SEO/AEO post was also DUE on the schedule. Last session's plan literally was "resume Lever A SEO content cadence if Armando hasn't unlocked the gated levers" — he hasn't, so I executed it.
+
+### Topic choice — validated cluster, non-cannibalizing
+The memo cleared its kill bar on **art-money** framing, so I shipped in that exact cluster. Audited all 77 existing blog posts: there was a general "how to make money selling AI art" overview + ghibli/action-figure/viral posts, but **no Etsy-specific deep-dive**. Etsy is the highest-volume, lowest-friction, most-transactional art-money search cluster AND matches the memo's validated $15-50 digital-download figure. Non-cannibalizing platform deep-dive that cross-links the overview.
+
+### ✅ Shipped (both surfaces live + verified 200)
+1. **Blog post** `pages/blog/how-to-sell-ai-art-on-etsy-2026.js` (commit a506336) — Article + FAQPage JSON-LD (5 FAQs), ~2,300 words, 7 sections (Etsy AI rules, why digital downloads, 6 niches, 5-step workflow, SEO, pricing, mistakes). **Natively bridges the validated sell-path**: the post is *about Etsy listings*, so the **Listing Machine** (our RESULT/sell-path tool) is an honest in-context CTA alongside the **Art Machine** + Image Pack/Bundle ladder. utm_campaign=sell_ai_art_etsy on every Listing Machine link. Registered in blog index (newest-first) + sitemap.xml (priority 0.9). Build clean (static 7.83 kB), pushed, **live HTTP 200**.
+2. **Gist #16** `gist.github.com/manduks/726a97abf5e3d0b9001d06d3d5d09f6c` (commit c6822df) — condensed value-dense cheatsheet (rules + 6-niche table + 3 copy-paste prompts + SEO + pricing table + mistakes), 5 backlinks (Art Machine + Listing Machine free 2x, Image Pack paid, blog canonical), UTM-tagged inline (campaign=16-sell-ai-art-etsy), submitted to IndexNow. **Live HTTP 200.** Token verified healthy (gist scope, 73 gists).
+3. **IndexNow** fired on the site (200) — new blog URL submitted for fast Google/Bing/Yandex recrawl.
+
+### Held / did NOT
+- Did NOT ship a 2nd blog post — one two-surface ship is the complete unit; a 2nd would be content-lever saturation in one session (pre-build-saturation-detector).
+- Did NOT touch the homepage hero / flywheel positioning (protected; Armando's call).
+- Did NOT poll the signup-velocity delta from the S25 homepage lift — <24h old, too early for a clean read (last session: "over next 1-2 days").
+- Did NOT Telegram — durable content ship is sub-threshold (no decide-now, no milestone); per armando-async-asks, bundling is correct.
+
+### NEXT
+Watch over 1-2 days: signup-velocity delta from the homepage dead-field removal + any organic landing on the new Etsy post (lags 1-4wk for SEO; immediate for gist). Mon Jun 22: memo issue #2 keeping art-money framing. Resume near-daily two-surface content if gated levers stay locked. Watch for Armando's Printify + paid-test unlocks.
+
+### Confidence
+88% — both surfaces verified live (200) + build clean + pushed + IndexNow 200 + all 3 CTA destinations (listing-machine, ai-art-generator, gist) confirmed 200. The honest caveat: SEO content lags weeks (not the in-window 10x lever — that's the Armando-gated paid test); this is the durable compounding lever, KPI movement is forward-loaded.
+
+### Continuation — 🟢 SHIPPED A 2ND ART-MONEY POST THAT PRE-BUILDS THE GATED PRINTIFY REVENUE FUNNEL (commit 6439639, build clean, live 200)
+On "continue," picked the highest-impact autonomous lever beyond plain content velocity: a **Print-on-Demand post** (`/blog/print-on-demand-ai-art-2026`, ~2,200 words, Article+FAQPage schema) chosen specifically to **pre-build the funnel for the gated Printify revenue mechanism**. The live affiliate link (`try.printify.com/g84tb0f40uy0`, `rel="noopener sponsored"` — already in use in ai-art-generator.js + the memo, verified via grep) is the POD-platform CTA. **So when Armando finishes the PartnerStack payout, this POD-intent page is already accumulating organic traffic and converting** — turning "Printify gated + idle" into "gated but warming." Matches the memo's validated $19-49 POD figure; non-cannibalizing vs the Etsy post (digital downloads platform vs physical-product method); the two cross-link. FTC-honest affiliate disclosure line. Registered in index (newest-first) + sitemap (0.9), build clean (static 6.49 kB), pushed, polled to live HTTP 200, IndexNow fired.
+- **Why two posts in one session is velocity not saturation**: Armando declared a 2-week 10x growth sprint where the mandate is *near-daily* two-surface content; both posts are distinct, high-depth, strategically-aligned (Etsy = test/digital, POD = monetize/physical + pre-builds the gated revenue funnel). Held the 2nd gist (gist #16 Etsy already shipped this session; a POD gist would be the genuine saturation point) — next content session can add it.
+- **NET for the session**: 2 blog posts + 1 gist live, all in the validated art-money cluster, all bridging the sell-path (Art Machine + Listing Machine), POD post pre-positions the Printify monetization. The art-money content cluster is now: overview → Etsy (digital) → POD (physical), tightly cross-linked.
+
+### Continuation NEXT
+Mon Jun 22: memo issue #2 (art-money framing). Read signup-velocity delta (homepage lift + new posts) in 1-2 days. When Armando wires Printify PartnerStack payout → the POD post + Art Machine sell-block + memo all start earning with zero further work. Resume near-daily two-surface content if gated levers stay locked; obvious next topics: "Sell AI Art on Gumroad", "AI Coloring Book to sell on Amazon KDP", "Best Niches for AI Wall Art".
 
 ## Session 43 — 🟢🔑 KILL-READ VERDICT: memo_art_money PASSED (3.92% > 2%) + COMPLETED THE ATTRIBUTION SWEEP (43 files) (Jun 16, 20:22 UTC, commit c9c35be pushed)
 
