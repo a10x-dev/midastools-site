@@ -37,7 +37,6 @@ function FAQItem({ q, a }) {
 
 export default function Home() {
   const [email, setEmail] = useState('');
-  const [name, setName] = useState('');
   const [subStatus, setSubStatus] = useState(null);
 
   async function handleSubscribe(e) {
@@ -67,7 +66,6 @@ export default function Home() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           email,
-          name,
           source: 'homepage',
           // referrer_host from first-touch wins when live referrer is stripped
           referrer: liveReferrer || attr.referrer_host || '',
@@ -586,7 +584,6 @@ export default function Home() {
             </div>
           ) : (
             <form className="email-form" onSubmit={handleSubscribe}>
-              <input type="text" placeholder="Your name" value={name} onChange={e => setName(e.target.value)} />
               <input type="email" placeholder="Your email" value={email} onChange={e => setEmail(e.target.value)} required />
               <button type="submit" disabled={subStatus === 'loading'}>{subStatus === 'loading' ? 'Joining...' : 'Subscribe free \u2192'}</button>
             </form>
