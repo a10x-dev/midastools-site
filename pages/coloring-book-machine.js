@@ -43,7 +43,8 @@ export default function ColoringBookMachine() {
   const [progress, setProgress] = useState({ done: 0, total: 0, label: '' });
   const [genErr, setGenErr] = useState('');
   const [book, setBook] = useState({ title: '', subtitle: '', trim: '8.5x11', pages: [], cover: null });
-  const [pdfUrl, setPdfUrl] = useState(null);
+  const [pdfUrl, setPdfUrl] = useState(null);       // KDP interior (title + pages, no cover)
+  const [bookPdfUrl, setBookPdfUrl] = useState(null); // print-at-home book (cover + title + pages)
   const startedRef = useRef(false);
 
   const runPreview = async () => {
@@ -95,13 +96,40 @@ export default function ColoringBookMachine() {
     return null;
   };
 
-  const buildPdf = useCallback(async (pages, trimId) => {
-    const { PDFDocument } = await import('pdf-lib');
+  // Build a PDF. includeCover=true → print-at-home book (full-bleed cover + title + pages);
+  // includeCover=false → KDP interior (title page + pages only, cover uploaded separately).
+  const buildPdf = useCallback(async ({ pages, cover, title, subtitle, trimId, includeCover }) => {
+    const { PDFDocument, StandardFonts, rgb } = await import('pdf-lib');
     const [Wpt, Hpt] = trimId === '8.5x8.5' ? [612, 612] : [612, 792];
     const imgPt = 489.6; // 6.8" — square image placed at ~300 DPI from 2048px source
     const x = (Wpt - imgPt) / 2;
     const y = (Hpt - imgPt) / 2;
     const pdf = await PDFDocument.create();
+    const bold = await pdf.embedFont(StandardFonts.HelveticaBold);
+    const reg = await pdf.embedFont(StandardFonts.Helvetica);
+
+    // Full-bleed cover (home book only)
+    if (includeCover && cover) {
+      const cj = await pdf.embedJpg(dataUrlToBytes(cover));
+      const cp = pdf.addPage([Wpt, Hpt]);
+      cp.drawImage(cj, { x: 0, y: 0, width: Wpt, height: Hpt });
+    }
+
+    // Title page
+    const tp = pdf.addPage([Wpt, Hpt]);
+    let ts = 30;
+    const t = (title || 'Coloring Book').slice(0, 60);
+    while (ts > 12 && bold.widthOfTextAtSize(t, ts) > Wpt - 80) ts -= 1;
+    tp.drawText(t, { x: (Wpt - bold.widthOfTextAtSize(t, ts)) / 2, y: Hpt * 0.6, size: ts, font: bold, color: rgb(0.1, 0.1, 0.1) });
+    if (subtitle) {
+      const ss = 14, st = subtitle.slice(0, 80);
+      tp.drawText(st, { x: (Wpt - reg.widthOfTextAtSize(st, ss)) / 2, y: Hpt * 0.6 - 28, size: ss, font: reg, color: rgb(0.35, 0.35, 0.35) });
+    }
+    const belongs = 'This book belongs to:';
+    tp.drawText(belongs, { x: (Wpt - reg.widthOfTextAtSize(belongs, 13)) / 2, y: Hpt * 0.4, size: 13, font: reg, color: rgb(0.4, 0.4, 0.4) });
+    tp.drawLine({ start: { x: Wpt * 0.28, y: Hpt * 0.4 - 24 }, end: { x: Wpt * 0.72, y: Hpt * 0.4 - 24 }, thickness: 1, color: rgb(0.6, 0.6, 0.6) });
+
+    // Interior pages
     for (const dataUrl of pages) {
       if (!dataUrl) continue;
       const jpg = await pdf.embedJpg(dataUrlToBytes(dataUrl));
@@ -137,10 +165,13 @@ export default function ColoringBookMachine() {
       setBook((b) => ({ ...b, pages: [...pages] }));
     }
 
-    setProgress({ done: total, total, label: 'Assembling your print-ready PDF…' });
+    setProgress({ done: total, total, label: 'Assembling your print-ready files…' });
     try {
-      const url = await buildPdf(pages, job.trim);
-      setPdfUrl(url);
+      const common = { pages, cover, title: job.title, subtitle: job.subtitle, trimId: job.trim };
+      const homeUrl = await buildPdf({ ...common, includeCover: true });
+      setBookPdfUrl(homeUrl);
+      const kdpUrl = await buildPdf({ ...common, includeCover: false });
+      setPdfUrl(kdpUrl);
     } catch (e) {
       setGenErr('Could not assemble the PDF — your pages are shown below; reply to your receipt email and we’ll send the file.');
     }
@@ -180,12 +211,12 @@ export default function ColoringBookMachine() {
   return (
     <Layout>
       <Head>
-        <title>The Coloring Book Machine — Make a Print-Ready KDP Coloring Book in Minutes | Midas Tools</title>
-        <meta name="description" content="Describe a theme and get a complete, print-ready coloring book — 10–30 themed line-art pages as a KDP-ready PDF interior plus a cover. Sell it on Amazon KDP, Etsy, or anywhere. $9.99 per book." />
+        <title>The Coloring Book Machine — Make a Custom Coloring Book to Gift or Sell | Midas Tools</title>
+        <meta name="description" content="Describe a theme and get a complete, print-ready coloring book — themed line-art pages, a cover, and a title page. Print &amp; staple it at home as a personalized gift for your kids, or sell it on Amazon KDP. $9.99 per book." />
         <meta name="robots" content="index,follow" />
         <link rel="canonical" href="https://www.midastools.co/coloring-book-machine" />
-        <meta property="og:title" content="The Coloring Book Machine — Print-Ready KDP Coloring Books" />
-        <meta property="og:description" content="Type a theme → get a finished, print-ready coloring book PDF + cover, ready to sell on Amazon KDP. $9.99 per book." />
+        <meta property="og:title" content="The Coloring Book Machine — Make a Custom Coloring Book to Gift or Sell" />
+        <meta property="og:description" content="Type a theme → get a finished, print-ready coloring book PDF + cover. Print &amp; gift it to your kids, or sell it on Amazon KDP. $9.99 per book." />
         <meta property="og:url" content="https://www.midastools.co/coloring-book-machine" />
       </Head>
 
@@ -194,11 +225,11 @@ export default function ColoringBookMachine() {
         {/* HERO */}
         <div style={{ textAlign: 'center', marginBottom: 36 }}>
           <div style={{ display: 'inline-block', background: '#FFF7ED', color: ORANGE, fontWeight: 700, fontSize: 13, padding: '6px 14px', borderRadius: 999, marginBottom: 16 }}>
-            💸 A finished product you can sell on Amazon KDP
+            🎁 Gift it to your kids · 💸 or sell it on Amazon KDP
           </div>
           <h1 style={{ fontSize: 38, fontWeight: 900, lineHeight: 1.1, margin: '0 0 14px' }}>The Coloring Book Machine</h1>
-          <p style={{ fontSize: 18, color: '#4B5563', maxWidth: 560, margin: '0 auto', lineHeight: 1.6 }}>
-            Describe a theme and get a <strong>complete, print-ready coloring book</strong> — 10–30 themed line-art pages as a KDP-ready PDF interior, plus a cover. Upload to Amazon KDP and sell it. <strong>$9.99 a book.</strong>
+          <p style={{ fontSize: 18, color: '#4B5563', maxWidth: 580, margin: '0 auto', lineHeight: 1.6 }}>
+            Describe a theme and get a <strong>complete, print-ready coloring book</strong> — themed line-art pages, a cover, and a title page. <strong>Print &amp; staple it at home</strong> as a personalized gift for your kids, sobrinos, or a birthday — or <strong>upload it to Amazon KDP and sell it</strong>. <strong>$9.99 a book.</strong>
           </p>
         </div>
 
@@ -233,23 +264,45 @@ export default function ColoringBookMachine() {
         {phase === 'done' && (
           <div style={panel}>
             <p style={{ fontWeight: 900, fontSize: 24, margin: '0 0 6px', color: ORANGE }}>Your book is ready! 🎉</p>
-            <p style={{ color: '#374151', margin: '0 0 20px' }}>Download both files, then upload them to Amazon KDP (interior + cover). The PDF is print-ready at your chosen trim size.</p>
-            <div style={{ display: 'flex', flexWrap: 'wrap', gap: 12, marginBottom: 18 }}>
-              {pdfUrl && (
-                <a href={pdfUrl} download={`${(book.title || 'coloring-book').replace(/[^a-z0-9]+/gi, '-').toLowerCase()}-interior.pdf`}
-                   style={{ ...cta, background: ORANGE }}>⬇ Download interior PDF</a>
-              )}
-              {book.cover && (
-                <a href={book.cover} download={`${(book.title || 'coloring-book').replace(/[^a-z0-9]+/gi, '-').toLowerCase()}-cover.jpg`}
-                   style={{ ...cta, background: '#111827' }}>⬇ Download cover</a>
-              )}
-            </div>
+            <p style={{ color: '#374151', margin: '0 0 20px' }}>You can <strong>print &amp; gift it at home</strong> — or <strong>sell it on Amazon KDP</strong>. Both files are below, print-ready at {book.trim.replace('x', ' × ')}".</p>
             {genErr && <p style={{ color: '#B91C1C', fontWeight: 600, marginBottom: 12 }}>{genErr}</p>}
-            <div style={{ background: '#FFF7ED', border: '1px solid #FDBA74', borderRadius: 10, padding: 16, fontSize: 14, color: '#7C2D12' }}>
-              <strong>Next steps on KDP:</strong> create a new Paperback → set trim to <strong>{book.trim.replace('x', ' × ')}"</strong>, black &amp; white interior, white paper → upload the interior PDF → use KDP Cover Creator and upload the cover as your front image → answer “yes” to the AI-content question → set your price (~$6.99) and publish. New here?{' '}
-              <a href="/blog/sell-ai-coloring-books-amazon-kdp-2026" style={{ color: ORANGE, fontWeight: 700 }}>Read the full KDP guide →</a>
+
+            {/* PATH A — print & gift at home */}
+            <div style={{ background: '#FFF7ED', border: '1px solid #FDBA74', borderRadius: 12, padding: 18, marginBottom: 16 }}>
+              <p style={{ fontWeight: 800, fontSize: 17, margin: '0 0 6px' }}>🎁 Print it &amp; gift it at home</p>
+              <p style={{ color: '#7C2D12', fontSize: 14, margin: '0 0 14px' }}>One file with the cover, a title page (“This book belongs to…”), and all the pages — ready to print and staple into a real book for your kids, sobrinos, or a birthday gift.</p>
+              {bookPdfUrl && (
+                <a href={bookPdfUrl} download={`${(book.title || 'coloring-book').replace(/[^a-z0-9]+/gi, '-').toLowerCase()}-book.pdf`}
+                   style={{ ...cta, background: ORANGE, marginBottom: 12 }}>⬇ Download the full book (PDF)</a>
+              )}
+              <ol style={{ margin: '8px 0 0', paddingLeft: 18, fontSize: 14, color: '#7C2D12', lineHeight: 1.7 }}>
+                <li>Print <strong>single-sided</strong> on letter (8.5 × 11") paper — use thicker cardstock for the cover page if you have it.</li>
+                <li>Stack the pages in order, cover on top.</li>
+                <li>Bind it: <strong>staple twice down the left edge</strong>, or 3-hole-punch and tie with ribbon, or pop it in a binder.</li>
+                <li>Write the child’s name on the title page and gift it. 🖍️</li>
+              </ol>
             </div>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(90px,1fr))', gap: 8, marginTop: 18 }}>
+
+            {/* PATH B — sell on KDP */}
+            <div style={{ background: '#F0F4FF', border: '1px solid #93B4FF', borderRadius: 12, padding: 18, marginBottom: 16 }}>
+              <p style={{ fontWeight: 800, fontSize: 17, margin: '0 0 6px' }}>💸 Sell it on Amazon KDP</p>
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: 10, margin: '0 0 12px' }}>
+                {pdfUrl && (
+                  <a href={pdfUrl} download={`${(book.title || 'coloring-book').replace(/[^a-z0-9]+/gi, '-').toLowerCase()}-kdp-interior.pdf`}
+                     style={{ ...cta, background: '#3B5FFF' }}>⬇ KDP interior PDF</a>
+                )}
+                {book.cover && (
+                  <a href={book.cover} download={`${(book.title || 'coloring-book').replace(/[^a-z0-9]+/gi, '-').toLowerCase()}-cover.jpg`}
+                     style={{ ...cta, background: '#111827' }}>⬇ Cover image</a>
+                )}
+              </div>
+              <p style={{ color: '#1E3A8A', fontSize: 14, margin: 0 }}>
+                New Paperback → trim <strong>{book.trim.replace('x', ' × ')}"</strong>, B&amp;W interior, white paper → upload the interior PDF → KDP Cover Creator with the cover image → answer “yes” to the AI question → price ~$6.99 → publish.{' '}
+                <a href="/blog/sell-ai-coloring-books-amazon-kdp-2026" style={{ color: '#3B5FFF', fontWeight: 700 }}>Full KDP guide →</a>
+              </p>
+            </div>
+
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(90px,1fr))', gap: 8 }}>
               {book.cover && <img src={book.cover} alt="cover" style={thumb} />}
               {book.pages.filter(Boolean).map((p, i) => <img key={i} src={p} alt={`page ${i + 1}`} style={thumb} />)}
             </div>
@@ -313,7 +366,7 @@ export default function ColoringBookMachine() {
             {/* BUY */}
             <div style={{ ...panel, textAlign: 'center', background: '#FFF7ED', borderColor: '#FDBA74' }}>
               <p style={{ fontSize: 28, fontWeight: 900, margin: '0 0 4px' }}>$9.99</p>
-              <p style={{ color: '#7C2D12', margin: '0 0 16px' }}>A complete {pageCount}-page print-ready book + cover. Yours to sell on KDP, Etsy, anywhere.</p>
+              <p style={{ color: '#7C2D12', margin: '0 0 16px' }}>A complete {pageCount}-page print-ready book + cover. Print &amp; gift it at home, or sell it on KDP — it’s yours.</p>
               <button onClick={startCheckout} disabled={starting} type="button"
                       style={{ ...cta, background: ORANGE, fontSize: 18, padding: '16px 36px', width: '100%', maxWidth: 380, border: 'none', cursor: 'pointer' }}>
                 {starting ? 'Preparing your book…' : 'Make my coloring book →'}
@@ -327,12 +380,12 @@ export default function ColoringBookMachine() {
               <p style={{ fontWeight: 800, fontSize: 17, margin: '0 0 12px' }}>How it works</p>
               <ol style={{ paddingLeft: 18, lineHeight: 1.8, margin: 0 }}>
                 <li>Describe your theme, pick a style, pages, and size.</li>
-                <li>We generate {pageCount} distinct, clean line-art pages + a cover.</li>
-                <li>Download a <strong>print-ready PDF interior</strong> + cover image.</li>
-                <li>Upload to Amazon KDP and publish — Amazon prints &amp; ships on demand.</li>
+                <li>We generate {pageCount} distinct, clean line-art pages + a cover + a title page.</li>
+                <li>Download two files: a <strong>print-at-home book</strong> (cover + pages, ready to staple) and a <strong>KDP interior PDF</strong>.</li>
+                <li><strong>Gift it:</strong> print single-sided, staple, write the child’s name on the title page. <strong>Or sell it:</strong> upload to Amazon KDP — Amazon prints &amp; ships on demand.</li>
               </ol>
               <p style={{ marginTop: 14, fontSize: 14, color: '#6B7280' }}>
-                New to this? Start with our{' '}
+                Want to sell? Start with our{' '}
                 <a href="/blog/sell-ai-coloring-books-amazon-kdp-2026" style={{ color: ORANGE, fontWeight: 700 }}>full guide to selling AI coloring books on KDP →</a>
               </p>
             </div>
