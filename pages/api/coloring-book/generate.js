@@ -90,17 +90,16 @@ export default async function handler(req, res) {
 
     try {
       const base = await Jimp.read(Buffer.from(img.b64, 'base64'));
-      base.greyscale().contrast(0.7).resize(640, 640);
-      // watermark band
-      const band = new Jimp(640, 64, 0x000000a0);
-      const font = await Jimp.loadFont(Jimp.FONT_SANS_32_WHITE);
-      band.print(font, 0, 14, { text: 'PREVIEW · MIDASTOOLS', alignmentX: Jimp.HORIZONTAL_ALIGN_CENTER }, 640);
-      base.composite(band, 0, 288);
-      const out = await base.quality(82).getBufferAsync(Jimp.MIME_JPEG);
+      // Core processing: clean to B&W + downscale. The low res (≈82 DPI at print
+      // size) is itself the anti-theft — a single 700px sample can't print a book.
+      base.greyscale().contrast(0.7).resize(700, 700);
+      // Fontless "sample" marker bar (loadFont is unreliable in serverless trace).
+      try { base.composite(new Jimp(700, 52, 0xea580ccc), 0, 700 - 52); } catch { /* mark optional */ }
+      const out = await base.quality(80).getBufferAsync(Jimp.MIME_JPEG);
       return res.status(200).json({ image: `data:image/jpeg;base64,${out.toString('base64')}`, remaining: Math.max(0, PREVIEW_PER_IP - ipUsed - 1) });
     } catch (e) {
       console.error('[cbook/preview] jimp', e.message);
-      return res.status(200).json({ image: `data:${img.mime};base64,${img.b64}` });
+      return res.status(200).json({ image: `data:${img.mime};base64,${img.b64}`, remaining: Math.max(0, PREVIEW_PER_IP - ipUsed - 1) });
     }
   }
 
@@ -131,12 +130,19 @@ export default async function handler(req, res) {
     try {
       const cover = await Jimp.read(Buffer.from(img.b64, 'base64'));
       cover.cover(2125, 2750); // 8.5x11 ratio, ~250 DPI, full-bleed crop
-      const band = new Jimp(2125, 520, 0x00000099);
-      const tFont = await Jimp.loadFont(Jimp.FONT_SANS_128_WHITE);
-      const sFont = await Jimp.loadFont(Jimp.FONT_SANS_64_WHITE);
-      band.print(tFont, 80, 60, { text: (job.title || 'Coloring Book').toUpperCase(), alignmentX: Jimp.HORIZONTAL_ALIGN_CENTER }, 2125 - 160, 300);
-      if (job.subtitle) band.print(sFont, 80, 380, { text: job.subtitle, alignmentX: Jimp.HORIZONTAL_ALIGN_CENTER }, 2125 - 160, 120);
-      cover.composite(band, 0, 90);
+      // Title overlay is best-effort: bundled fonts don't always load in the
+      // serverless trace. If they fail, deliver clean cover art — the buyer adds
+      // the title in KDP Cover Creator anyway (which is the recommended flow).
+      try {
+        const band = new Jimp(2125, 520, 0x00000099);
+        const tFont = await Jimp.loadFont(Jimp.FONT_SANS_128_WHITE);
+        band.print(tFont, 80, 60, { text: (job.title || 'Coloring Book').toUpperCase(), alignmentX: Jimp.HORIZONTAL_ALIGN_CENTER }, 2125 - 160, 300);
+        if (job.subtitle) {
+          const sFont = await Jimp.loadFont(Jimp.FONT_SANS_64_WHITE);
+          band.print(sFont, 80, 380, { text: job.subtitle, alignmentX: Jimp.HORIZONTAL_ALIGN_CENTER }, 2125 - 160, 120);
+        }
+        cover.composite(band, 0, 90);
+      } catch (fe) { console.warn('[cbook/cover] title overlay skipped:', fe.message); }
       const out = await cover.quality(90).getBufferAsync(Jimp.MIME_JPEG);
       return res.status(200).json({ image: `data:image/jpeg;base64,${out.toString('base64')}` });
     } catch (e) {
