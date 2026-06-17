@@ -457,6 +457,34 @@ const broadcasts = {
       <p style="font-size:14px;line-height:1.7;color:#6B7280;margin:10px 0 0;">&mdash; Armando, MidasTools</p>
     `),
   },
+  // Midas Memo — Mon Jun 22 2026. Coloring Book Machine launch ($9.99/book).
+  // Send: ?broadcast=true&template=coloring_book_launch  (preview: &to=email).
+  coloring_book_launch: {
+    subject: "Make your kid a coloring book — with their name in it",
+    html: (source) => wrapEmail(`
+      <p style="font-size:13px;font-weight:700;color:#EA580C;letter-spacing:0.5px;text-transform:uppercase;margin:0 0 4px;">The Midas Memo</p>
+      <h1 style="font-size:25px;line-height:1.28;color:#111827;margin:0 0 16px;">A coloring book for the kids in your life — made in minutes</h1>
+
+      <p style="font-size:16px;line-height:1.7;color:#374151;margin:0 0 16px;">I built something new this week, and this one's personal. It's called <strong>The Coloring Book Machine</strong>, and it makes a <strong>complete, print-ready coloring book</strong> from a single idea.</p>
+
+      <p style="font-size:16px;line-height:1.7;color:#374151;margin:0 0 16px;">Type a theme &mdash; your kid's favorite dinosaurs, unicorns, trucks, space, animals &mdash; and it generates themed coloring pages, a colorful cover, and a title page that says <em>"This book belongs to: ______"</em>. A real little book, starring exactly what they love.</p>
+
+      <p style="font-size:16px;line-height:1.7;color:#374151;margin:0 0 6px;"><strong>Two ways to use it:</strong></p>
+      <p style="font-size:15px;line-height:1.8;color:#374151;margin:0 0 18px;">
+        🎁 <strong>Gift it.</strong> Print it at home, staple it, write the child's name on the title page. A one-of-a-kind present for your hijo, sobrino, or the birthday this weekend &mdash; for about the cost of a coffee.<br/>
+        💸 <strong>Or sell it.</strong> The same book exports ready for Amazon KDP &mdash; upload it, Amazon prints &amp; ships each copy on demand, and you keep the royalty. No inventory, no shipping.
+      </p>
+
+      <p style="font-size:16px;line-height:1.7;color:#374151;margin:0 0 18px;">You can <strong>see a free sample page</strong> before you decide. A whole book is <strong>$9.99</strong>.</p>
+
+      ${ctaButton("Make a coloring book (free sample)", 'https://www.midastools.co/coloring-book-machine?utm_source=email&utm_medium=broadcast&utm_campaign=coloring_book_launch', "Pick a theme, see a sample page, build the whole book in a couple of minutes.")}
+
+      <p style="font-size:15px;line-height:1.7;color:#374151;margin:24px 0 0;">Thinking of selling them? Here's the full playbook: <a href="https://www.midastools.co/blog/sell-ai-coloring-books-amazon-kdp-2026?utm_source=email&utm_medium=broadcast&utm_campaign=coloring_book_launch" style="color:#EA580C;font-weight:600;">How to sell AI coloring books on Amazon KDP</a>.</p>
+
+      <p style="font-size:14px;line-height:1.7;color:#6B7280;margin:24px 0 0;">What would the first one be for &mdash; which kid, and what theme? Hit reply and tell me. I read every one, and it decides what I build next.</p>
+      <p style="font-size:14px;line-height:1.7;color:#6B7280;margin:10px 0 0;">&mdash; Armando, MidasTools</p>
+    `),
+  },
   // Midas Memo — Mon Jun 8 2026. Flywheel tool #1 launch (Chatbot Builder, $39/mo).
   // Send: ?broadcast=true&template=chatbot_launch
   chatbot_launch: {
