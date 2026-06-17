@@ -19,7 +19,7 @@ const GLOBAL_FREE_CAP = 200;     // ≈ $8/day ceiling on free previews
 const GLOBAL_PAID_CAP = 2000;    // runaway backstop on paid gens (≈70 books/day)
 const COVER_CAP = 2;             // covers per paid job
 
-const LINE = 'Black and white line art coloring book page. Clean bold black outlines on a pure white background. Absolutely no shading, no grayscale, no color, and no fill — only crisp outlines to color in. Centered full-page composition with even margins.';
+const LINE = 'Black and white line art coloring book page. Clean bold black outlines on a pure white background. Absolutely no shading, no grayscale, no color, and no fill — only crisp outlines to color in. Draw the subject artwork only: NO page border, NO frame, NO rectangle around the image, NO straight edge lines. Centered composition with even white margins.';
 
 const STYLE_WRAP = {
   'bold-easy': (s) => `A simple, bold-and-easy coloring page of ${s}. Thick clean outlines, large simple shapes, lots of open space, minimal fine detail — easy for young children, beginners and seniors. ${LINE}`,
