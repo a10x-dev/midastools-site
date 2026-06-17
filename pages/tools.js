@@ -4,6 +4,14 @@ import Layout from '../components/Layout';
 
 const TOOLS = [
   {
+    title: 'The Coloring Book Machine',
+    desc: 'Describe a theme and get a complete, print-ready coloring book — 10–30 themed line-art pages as a KDP-ready PDF interior, plus a cover. Upload to Amazon KDP and sell it; Amazon prints & ships on demand. See a free sample, then make the whole book for $9.99.',
+    href: '/coloring-book-machine',
+    tag: '💰 Money Tool',
+    categories: 'Amazon KDP · Coloring books · Print-ready',
+    bg: 'var(--card-amber)',
+  },
+  {
     title: 'The Art Machine',
     desc: 'Describe your pet, yourself, or any scene — and get the actual image, made right here. Ghibli, pet portrait, anime, watercolor, 3D, oil, pop art and cyberpunk styles. No prompt to copy, no other app. First image free, download instantly.',
     href: '/ai-art-generator',

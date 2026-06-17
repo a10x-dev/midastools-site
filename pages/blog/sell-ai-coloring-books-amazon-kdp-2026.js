@@ -113,6 +113,16 @@ export default function SellAiColoringBooksAmazonKdp2026() {
         <p>The model is simple and durable: you generate black-and-white line art, lay it out as a print-ready book, and upload it to <strong>Kindle Direct Publishing</strong>. Amazon prints each copy on demand and ships it &mdash; <strong>no inventory, no upfront cost</strong>. You earn a royalty every time someone buys. One book might earn $50&ndash;$500 a month; a catalog of 20&ndash;50 focused books is how people reach $1,000&ndash;$5,000/month.</p>
         <p>This guide covers exactly how to do it in 2026: KDP&rsquo;s rules on AI, the niches that sell, the print specs that trip people up, the keywords and categories that get you found, and the free tools to generate the line art and write the listing. For the bigger picture, start with our overview of <Link href="/blog/how-to-make-money-selling-ai-art-2026" style={{ color: '#3B5FFF' }}>how to make money selling AI art</Link> &mdash; this post is the KDP coloring-book deep dive, the third pillar alongside <Link href="/blog/how-to-sell-ai-art-on-etsy-2026" style={{ color: '#3B5FFF' }}>selling on Etsy</Link> (digital downloads) and <Link href="/blog/print-on-demand-ai-art-2026" style={{ color: '#3B5FFF' }}>print-on-demand</Link> (physical merch).</p>
 
+        {/* ==================== COLORING BOOK MACHINE — lead CTA (done-for-you) ==================== */}
+        <div style={{ marginTop: '28px', marginBottom: '8px', padding: '24px', background: '#FFF7ED', border: '1px solid #FDBA74', borderRadius: '8px', textAlign: 'center' }}>
+          <p style={{ margin: '0 0 8px', fontSize: '17px', fontWeight: '700' }}>Want the whole book done for you?</p>
+          <p style={{ margin: '0 0 16px', color: '#7C2D12', fontSize: '15px' }}>The <strong>Coloring Book Machine</strong> does this entire workflow in one go: type a theme, and get a complete <strong>print-ready KDP PDF interior</strong> (10&ndash;30 themed line-art pages) plus a cover &mdash; ready to upload and sell. See a free sample page first, then make the whole book for <strong>$9.99</strong>.</p>
+          <a href="/coloring-book-machine" style={{ display: 'inline-block', background: '#EA580C', color: '#fff', padding: '14px 28px', borderRadius: '6px', textDecoration: 'none', fontWeight: '700', fontSize: '15px' }}>
+            Make a Coloring Book &mdash; Free Sample &rarr;
+          </a>
+          <p style={{ margin: '12px 0 0', fontSize: '13px', color: '#9CA3AF' }}>Prefer to do it by hand? The full step-by-step is below.</p>
+        </div>
+
         <hr style={{ margin: '40px 0', border: 'none', borderTop: '1px solid #eee' }} />
 
         {/* ==================== SECTION 1 ==================== */}

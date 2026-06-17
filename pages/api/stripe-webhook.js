@@ -574,6 +574,55 @@ async function handleChatbotProActivation(session, email, name) {
   }
 }
 
+async function handleColoringBookActivation(session, email, name) {
+  const token = String(session.client_reference_id || '').trim();
+  let job = null;
+  if (/^cbk_[a-f0-9]{28}$/.test(token)) {
+    try {
+      job = await readKV(`cbook:${token}`);
+      if (job) {
+        job.paid = true;
+        job.buyer_email = email || '';
+        job.paid_at = new Date().toISOString();
+        await writeKV(`cbook:${token}`, job, 48 * 3600); // 48h from payment to generate + download
+        console.log(`[coloring-book] activated job ${token} for ${email}`);
+      } else {
+        console.error('[coloring-book] job not found for token', token);
+      }
+    } catch (err) {
+      console.error('[coloring-book] activation KV error:', err.message);
+    }
+  } else {
+    console.error('[coloring-book] missing/invalid token in client_reference_id:', session.client_reference_id);
+  }
+
+  const resumeUrl = `https://www.midastools.co/coloring-book-machine?token=${token}`;
+  if (email) {
+    try {
+      await transporter.sendMail({
+        from: `"Midas Tools" <${process.env.GMAIL_ADDRESS}>`,
+        to: email,
+        subject: '🎨 Your coloring book is ready to generate',
+        html: `<div style="font-family:Inter,sans-serif;max-width:560px;margin:0 auto;background:#fff;color:#111827;padding:40px;border-radius:16px;border:1px solid #E5E7EB;">
+          <h1 style="font-size:26px;font-weight:900;color:#EA580C;margin-bottom:8px;">You're all set! 🎉</h1>
+          <p style="color:#374151;font-size:16px;margin-bottom:24px;">Thanks${name ? `, ${name}` : ''} — your <strong>${(job && job.title) || 'coloring book'}</strong> is ready to build. If the tab didn't reopen automatically, use the button below to generate and download your print-ready PDF + cover.</p>
+          <p style="text-align:center;margin:28px 0;"><a href="${resumeUrl}" style="display:inline-block;background:#EA580C;color:#fff;padding:14px 28px;border-radius:8px;text-decoration:none;font-weight:700;">Generate my book &rarr;</a></p>
+          <p style="color:#6B7280;font-size:14px;">Keep the tab open while it generates (about 2&ndash;3 minutes). Your download link is valid for 48 hours. Reply to this email if anything goes sideways &mdash; we'll sort it out.</p>
+        </div>`,
+      });
+    } catch (err) { console.error('[coloring-book] confirmation email failed:', err.message); }
+
+    try {
+      await transporter.sendMail({
+        from: process.env.GMAIL_ADDRESS,
+        to: process.env.GMAIL_ADDRESS,
+        subject: `🎨 SALE: Coloring Book Machine ($9.99) — ${email}`,
+        html: `<h2>New Coloring Book Machine sale</h2><p><strong>Email:</strong> ${email}</p><p><strong>Theme:</strong> ${(job && job.theme) || '(job not found)'}</p><p><strong>Pages:</strong> ${(job && job.pageCount) || '?'}</p><p><strong>Token:</strong> ${token}</p>`,
+      });
+    } catch (err) { console.error('[coloring-book] founder notify failed:', err.message); }
+  }
+}
+
 export const config = { api: { bodyParser: false } };
 
 export default async function handler(req, res) {
@@ -624,6 +673,12 @@ export default async function handler(req, res) {
     // Chatbot Builder Pro $39/mo — handle separately (not a kit download).
     if (session.metadata?.kit_type === 'chatbot-pro' || session.payment_link === 'plink_1TeLMeAdkDx8xZMk6MyHUoAx') {
       await handleChatbotProActivation(session, email, name);
+      return res.status(200).json({ received: true });
+    }
+
+    // Coloring Book Machine $9.99 — flip the job to paid; the page generates + assembles client-side.
+    if (session.metadata?.kit_type === 'coloring-book' || session.payment_link === 'plink_1Tj8A6AdkDx8xZMkJjnlVfIT') {
+      await handleColoringBookActivation(session, email, name);
       return res.status(200).json({ received: true });
     }
 
