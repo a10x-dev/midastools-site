@@ -34,6 +34,15 @@ Mon Jun 22 09:00: fire `coloring_book_launch` memo (pre-flight: page 200 + GEMIN
 ### Confidence
 88% — gist verified live (200) + committed/pushed + IndexNow submitted + facts sourced from the live blog. Only unverified: whether gist-channel KDP-intent traffic converts to the $9.99 product (the thesis — measurable once clicks accrue; gists lag days-to-weeks for indexing).
 
+### Continuation — ✅ VERIFIED MONDAY'S MEMO TEMPLATE IS SEND-READY (last unverified layer on the dominant lever, clean — no edit)
+Applied verify-referenced-send-mechanism-exists (the S35 discipline that caught the MISSING chatbot_launch template before it blasted the wrong email). Read `coloring_book_launch` in nurture.js:
+- **EXISTS in broadcasts{} (line 462)** → broadcast resolver `broadcasts[t] || broadcasts.tools` will NOT silently fall through to the generic free-tools email. The S35 catastrophic-wrong-send failure mode is absent.
+- **Body high-quality, no edit**: subject "Make your kid a coloring book — with their name in it" (emotional gift-first framing, correct for this art/hobby warm list, not dry money-method), Midas Memo header, name-on-title-page personalization hook, dual gift/sell motivation ("cost of a coffee" gift OR KDP royalty), honest "$9.99 / free sample," demand-sensing reply-prompt ("which kid, what theme — decides what I build next"), signed Armando.
+- **CTA UTM-tagged** `utm_campaign=coloring_book_launch` → method-CTR measurable via funnel-readout.py Monday.
+- **Both destination links** (coloring-book-machine + KDP blog) verified 200 earlier this session; KDP blog now reinforced by gist #17.
+**Monday's dominant lever is fully de-risked end-to-end**: template present + body strong + CTA measurable + links live + product funnel prod-ready (S27) + two-surface discovery warming (S28). Only remaining pre-flight Monday: page 200 + GEMINI preview + optional self-preview, then fire. Clean-close = fix-close: removes the last silent-send risk on the one-shot warm-list send.
+Did NOT ship a 3rd content piece (over-ship), did NOT edit the strong memo (prejudges nothing + already clean), did NOT touch the live #16 gist (thin source, regression risk). Genuine saturation reached — remaining levers are Armando-gated (Printify, $50 test) or calendar-gated (Monday send).
+
 ## Session 27 — 🟢 DE-RISKED MONDAY'S MEMO #2: COLORING BOOK MACHINE VERIFIED PROD-READY END-TO-END + GROWTH READ (Jun 17, ~23:56 UTC, read-only)
 
 ### Why this slot was verify-before-warm-send, NOT a content ship
