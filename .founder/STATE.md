@@ -11,6 +11,38 @@
 
 <!-- AGENT-EDITED-BELOW (everything below this line is preserved across ticks) -->
 
+## Session 29 — 🟢 GROWTH-MANDATE READ (answered the channel question) + SHIPPED THE THURSDAY TWO-SURFACE: GUMROAD POST + GIST #18 (Jun 18, ~20:2x UTC, commits c5b108e + d7fadd8 pushed, both live 200)
+
+### Why this slot: the growth-mandate's literal read + execute its only live autonomous lever
+Thursday — dominant lever (Mon `coloring_book_launch` memo) calendar-gated, revenue double-gated on Armando (Printify + $50 test), gist #17 shipped ~13h ago overnight (that working-period's unit). Per the 2-week growth mandate, the highest-value autonomous move was (a) the read the mandate explicitly asks for ("monitor where users come from") AND (b) the falsifiable test the S26 EmailCapture attribution fix scheduled, then (c) execute the mandate's only live autonomous lever — today's two-surface art-money content unit (S44 precedent: a daytime ship after an overnight gist is velocity, not over-ship, during the sprint).
+
+### The growth read (metrics-snapshot + track-events, Jun 16→18 ~53h window)
+- **🟢 Subs 180 → 189 (+9)** — engine alive (~4/day), real (corroborated by 27 subscribe_submit events). KPI updated 180→189. NOT a 10x trajectory.
+- **Stripe flat 4/$184**, jules Jun 12, 0 new sale.
+- **🔑 Attribution falsifiable test ANSWERED:** all 27 subscribe_submit = `utm_source=(none)` / `landing_slug=home`. The S26 EmailCapture fix is live + correct but **zero conversions this window came through blog/gist EmailCapture — every signup converted homepage-direct.** Confirms the S26 caveat exactly: content drives *upstream* traffic that returns brand-direct (referrer-stripped) and converts on the homepage. The fix widens visibility for first-touch-utm visitors; it doesn't reclassify the homepage-direct majority.
+- **Channel picture (all 600 events):** 526 direct/dark, **Google #1 attributable (59)**, claude.ai (7) + perplexity (1) = AI-search channel alive, **gist.github.com (5)** = gist channel live. Art cluster dominates organic (ghibli #2 @ 29 views).
+- **Bridge accrual:** `sell_ai_coloring_books_kdp` = 1 (KDP blog bridge holds); coloring_book_bridge + gist-17 still 0 (thin/early, days-to-weeks lag — expected).
+- **Synthesis:** content is the confirmed durable autonomous lever (Google #1, gist + AI-search emerging), but organic alone won't hit the 2-week 10x — that lever stays the Armando-gated $50 test.
+
+### ✅ Shipped (the Thursday two-surface, both live + IndexNow)
+1. **Blog `pages/blog/sell-ai-art-on-gumroad-2026.js`** (commit c5b108e) — ~2,000 words, Article + FAQPage JSON-LD (5 FAQs), 7 sections. **Genuinely non-cannibalizing:** Gumroad = creator-direct (own customer, higher margin, bring own traffic) vs Etsy marketplace vs POD physical; frames it as a sequence (prove niche on Etsy → resell same files bundled on Gumroad). Bridges the sell-path (Art Machine + Listing Machine, both free) + Coloring Book Machine ($9.99, ideal Gumroad PDF) + Image Pack/Bundle ladder, all UTM-tagged `sell_ai_art_gumroad` / `coloring_book_bridge`. Blog index (newest-first) + sitemap (0.9). Build clean (static 7.74 kB), live HTTP 200.
+2. **Gist #18** `gist.github.com/manduks/06ded53af42836f888cf2f17f6e88701` (commit d7fadd8) — condensed value-dense cheatsheet (Gumroad-vs-Etsy table + 6-product table + 3 copy-paste prompts + traffic playbook + pricing table + mistakes), 6 UTM-tagged backlinks (Art Machine ×2, Listing Machine, Coloring Book Machine, Image Pack, blog canonical) + sister-gist cross-link to #16 Etsy. Live HTTP 200, IndexNow submitted.
+3. **IndexNow site-wide** fired (200, 139 URLs) → new blog URL submitted for fast recrawl.
+
+### Held / did NOT
+- Did NOT ship a 2nd post — one two-surface unit is the Thursday content unit; a 2nd = saturation (pre-build-saturation-detector).
+- Did NOT ping Armando — +9 routine subs is engine output not a milestone; the two binding levers (Printify + $50 test) are already in his inbox/queue (S16, S42); re-pinging = noise per armando-async-asks (empirically near-zero response).
+- Did NOT touch the homepage hero/flywheel (protected) or the calendar-gated Monday memo.
+
+### NEXT
+Mon Jun 22 09:00: fire `coloring_book_launch` memo (pre-flight: page 200 + GEMINI preview + optional self-preview) → read method-CTR via funnel-readout.py --sends N vs 2% + watch Stripe for first $9.99 sale. Watch track-events for `18-sell-ai-art-gumroad` gist clicks + coloring_book_bridge + gist-17 accrual (thin/early, days-to-weeks indexing). Tomorrow: optional next two-surface art-money content (AI wall-art niches / Best Niches for AI Wall Art). Watch for Armando's Printify + $50-test unlocks.
+
+### Confidence
+88% — both surfaces verified live (HTTP 200) + build clean + pushed + IndexNow 200; growth read pulled direct (metrics-snapshot + track-events, +9 corroborated by 27 events). Only unverified: whether the Gumroad content converts the creator-direct intent to the $9.99/$29 ladder (the thesis — measurable once clicks accrue; gists lag days-to-weeks for indexing).
+
+### Continuation — 🟢 CLOSED A CLUSTER DISCOVERY GAP: routed the #1 art-money hub into all 4 platform deep-dives (commit b8f912b, build clean, pushed)
+On "continue," found the highest-value reversible discovery win: `/blog/how-to-make-money-selling-ai-art-2026` (the #1 art-money traffic page, the cluster hub) had a Related Posts block that linked generic posts but **NONE of the 4 platform deep-dives** (Etsy / Gumroad / POD / KDP) — the exact "where do I sell?" answer its readers want, and the posts that bridge the sell-path tools. Prepended all 4 platform siblings (dropped the 2 least-art-relevant generics to keep it tight at 6), so the hub's already-ranked organic traffic now routes into the deep-dives instead of dead-ending. Pure point-ranked-content-at-new-tool: converts existing traffic with zero indexing wait, helps the fresh Gumroad post get discovered + indexed, and tightens the whole art-money internal-link graph. Build clean (route generated 11.9 kB), pushed. Genuine saturation after this — remaining levers are calendar-gated (Mon memo) or Armando-gated (Printify, $50 test).
+
 ## Session 28 — 🟢 SHIPPED GIST #17 (COLORING BOOK / KDP) — TWO-SURFACE COMPLETION THAT WARMS MONDAY'S MEMO PRODUCT ON THE #1 CHANNEL (Jun 18, ~01:1x UTC, gist live + committed d63dda8)
 
 ### Why this was the right autonomous move
