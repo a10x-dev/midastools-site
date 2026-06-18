@@ -475,11 +475,12 @@ export default function HowToMakeMoneySellingAiArt2026() {
         {/* ==================== RELATED POSTS ==================== */}
         <h2 style={{ fontSize: '1.3rem', fontWeight: '700', marginTop: '40px', marginBottom: '16px' }}>Related Posts</h2>
         <ul style={{ paddingLeft: '20px', marginBottom: '40px' }}>
+          <li style={{ marginBottom: '8px' }}><Link href="/blog/how-to-sell-ai-art-on-etsy-2026" style={{ color: '#3B5FFF' }}>How to Sell AI Art on Etsy in 2026: The Complete Guide</Link></li>
+          <li style={{ marginBottom: '8px' }}><Link href="/blog/sell-ai-art-on-gumroad-2026" style={{ color: '#3B5FFF' }}>How to Sell AI Art on Gumroad: Own the Customer, Keep the Margin</Link></li>
+          <li style={{ marginBottom: '8px' }}><Link href="/blog/print-on-demand-ai-art-2026" style={{ color: '#3B5FFF' }}>Print-on-Demand AI Art: Mugs, Canvases &amp; Prints (2026)</Link></li>
+          <li style={{ marginBottom: '8px' }}><Link href="/blog/sell-ai-coloring-books-amazon-kdp-2026" style={{ color: '#3B5FFF' }}>How to Sell AI Coloring Books on Amazon KDP (2026)</Link></li>
           <li style={{ marginBottom: '8px' }}><Link href="/blog/chatgpt-image-prompts-2026" style={{ color: '#3B5FFF' }}>50 Viral ChatGPT Image Prompts for 2026 (Copy &amp; Paste)</Link></li>
           <li style={{ marginBottom: '8px' }}><Link href="/blog/best-midjourney-prompts-2026" style={{ color: '#3B5FFF' }}>40+ Best Midjourney Prompts for Stunning AI Art in 2026</Link></li>
-          <li style={{ marginBottom: '8px' }}><Link href="/blog/chatgpt-side-hustle-2026" style={{ color: '#3B5FFF' }}>10 ChatGPT Side Hustles You Can Start This Weekend</Link></li>
-          <li style={{ marginBottom: '8px' }}><Link href="/blog/ai-second-income-2026" style={{ color: '#3B5FFF' }}>How to Build a Second Income with AI in 2026</Link></li>
-          <li style={{ marginBottom: '8px' }}><Link href="/blog/how-to-make-money-with-ai-2026" style={{ color: '#3B5FFF' }}>How to Make Money with AI in 2026: The Complete Guide</Link></li>
         </ul>
       </div>
         {/* EMAIL CAPTURE — feed the warm list (monetized via the weekly Memo) */}
