@@ -6,10 +6,33 @@
 
 **KPIs**:
 - Conversations: 0 (target: 3, 7d: 0%)
-- Users: 153 (target: 30, 7d: 9.285714285714286%)
+- Users: 180 (target: 30, 7d: 28.57142857142857%)
 - Revenue: 184 (target: 997, 7d: 18.70967741935484%)
 
 <!-- AGENT-EDITED-BELOW (everything below this line is preserved across ticks) -->
+
+## Session 28 — 🟢 SHIPPED GIST #17 (COLORING BOOK / KDP) — TWO-SURFACE COMPLETION THAT WARMS MONDAY'S MEMO PRODUCT ON THE #1 CHANNEL (Jun 18, ~01:1x UTC, gist live + committed d63dda8)
+
+### Why this was the right autonomous move
+Data read first: coloring_book_bridge = 0 page_views (shipped ~1h ago on lower-traffic art-money pages — too early; ghibli #24 is the top art page this window, not make-money/Etsy), BUT the KDP blog bridge `sell_ai_coloring_books_kdp` already drew 1 click → funnel works, just thin. All 7 money-tool activations still 0 (de-confounded "won't click tools" verdict holds). Stripe flat 4/$184, subs 180. Revenue double-gated on Armando (Printify + $50 test); Monday's Coloring Book memo calendar-gated. **The growth mandate is the only live autonomous lever, and the durable autonomous channel is gists (our #1 historical referrer, 36%).**
+
+### The gap I closed
+The **Coloring Book Machine ($9.99)** — the exact product Monday's `coloring_book_launch` memo sells — had a blog post (`/blog/sell-ai-coloring-books-amazon-kdp-2026`, verified 200) but **NO gist**. Completing that two-surface on our #1 channel warms the product's organic discovery *ahead of the warm-list send* — so Monday's memo lands into a slightly-warmer landscape and the product accrues organic KDP-intent traffic regardless of the memo.
+
+### ✅ Shipped (gist #17 live + committed/pushed d63dda8)
+**`17-sell-ai-coloring-books-kdp-cheatsheet.md`** → https://gist.github.com/manduks/11aa6c3bf698634e78dd065c6a0b8aa9 (verified HTTP 200). Full template: H1 KDP keyword title, AI-on-KDP rules, 6-niche table, "what makes a page printable" (the beginner-killer), 3 copy-paste line-art prompts (each names trim + "no shading" + "pure line art" = KDP-printable constraints), 6-step KDP workflow, keyword+pricing ($6.99, ~$2-3 royalty), 5 common mistakes, Resources. **5 UTM-tagged backlinks** (`utm_campaign=17-sell-ai-coloring-books-kdp`): Coloring Book Machine ×3 (free preview → $9.99 full book — the hero conversion), KDP blog ×2, Art Machine (covers), + sister-gist cross-link to #16 Etsy for portfolio discovery. IndexNow submitted. Facts pulled from the live blog post (verify-at-source). Build N/A (gist, not code). Token healthy (74 gists).
+
+### Held / did NOT
+- Did NOT ship a 2nd content piece — last session shipped the bridges (today's content unit was already partly spent); the gist IS today's qualifying two-surface ship. A 3rd = over-ship per near-daily (not near-hourly) cadence.
+- Did NOT edit live gist #16 to back-link #17 — #16 is 1 day old (thin traffic = low EV as a back-link source right now) + live-gist edit carries regression risk for marginal gain. #17 already forward-links #16. Revisit when #16 has accrued traffic.
+- Did NOT Telegram — gist ship is sub-threshold; the 2 binding gated levers (Printify + $50 test) were bundled to Armando last session, re-surfacing = noise per armando-async-asks.
+- Did NOT touch Printify/$50-test (Armando) or the memo (calendar-gated Mon).
+
+### NEXT
+Mon Jun 22 09:00: fire `coloring_book_launch` memo (pre-flight: page 200 + GEMINI preview + optional self-preview) → read method-CTR via funnel-readout.py --sends N vs 2% + watch Stripe for first $9.99 coloring-book sale. Watch track-events for `17-sell-ai-coloring-books-kdp` gist clicks + `coloring_book_bridge` clicks (both still thin/early). Tomorrow: optional next two-surface art-money content (Gumroad / AI wall-art niches). Watch for Armando's Printify + $50-test unlocks.
+
+### Confidence
+88% — gist verified live (200) + committed/pushed + IndexNow submitted + facts sourced from the live blog. Only unverified: whether gist-channel KDP-intent traffic converts to the $9.99 product (the thesis — measurable once clicks accrue; gists lag days-to-weeks for indexing).
 
 ## Session 27 — 🟢 DE-RISKED MONDAY'S MEMO #2: COLORING BOOK MACHINE VERIFIED PROD-READY END-TO-END + GROWTH READ (Jun 17, ~23:56 UTC, read-only)
 
