@@ -158,6 +158,15 @@ export default function HowToSellAiArtOnEtsy2026() {
         </ul>
         <p>Pick <strong>one</strong> niche to start. A shop with 30 cohesive boho printables will out-earn a shop with 30 random images, because Etsy&rsquo;s algorithm and buyers both reward focus.</p>
 
+        {/* ==================== COLORING BOOK MACHINE BRIDGE (paid keepsake product — printable coloring book) ==================== */}
+        <div style={{ marginTop: '32px', marginBottom: '32px', padding: '24px', background: '#FFF7ED', border: '1px solid #FDBA74', borderRadius: '8px', textAlign: 'center' }}>
+          <p style={{ margin: '0 0 12px', fontSize: '16px', fontWeight: '700' }}>One more niche that sells itself: printable coloring books</p>
+          <p style={{ margin: '0 0 16px', color: '#6B7280', fontSize: '15px' }}>Coloring books and pages are a perennial Etsy digital-download bestseller (and a top Amazon KDP niche). Instead of generating pages one at a time, the Coloring Book Machine turns a single theme &mdash; &ldquo;cute baby dinosaurs,&rdquo; &ldquo;mermaids,&rdquo; &ldquo;monster trucks&rdquo; &mdash; into a complete, print-ready book with line-art pages, a cover, and a title page. Sell the PDF as a download or upload it to KDP. $9.99 a book.</p>
+          <a href="/coloring-book-machine?utm_source=blog&utm_medium=cta&utm_campaign=coloring_book_bridge&utm_content=etsy-niches" style={{ display: 'inline-block', background: '#EA580C', color: '#fff', padding: '14px 28px', borderRadius: '6px', textDecoration: 'none', fontWeight: '700', fontSize: '15px' }}>
+            Make a Coloring Book &rarr;
+          </a>
+        </div>
+
         <hr style={{ margin: '40px 0', border: 'none', borderTop: '1px solid #eee' }} />
 
         {/* ==================== SECTION 4 ==================== */}
@@ -268,6 +277,7 @@ export default function HowToSellAiArtOnEtsy2026() {
         <h2 style={{ fontSize: '1.3rem', fontWeight: '700', marginTop: '40px', marginBottom: '16px' }}>Related Posts</h2>
         <ul style={{ paddingLeft: '20px', marginBottom: '40px' }}>
           <li style={{ marginBottom: '8px' }}><Link href="/blog/how-to-make-money-selling-ai-art-2026" style={{ color: '#3B5FFF' }}>How to Make Money Selling AI Art in 2026: 7 Proven Methods</Link></li>
+          <li style={{ marginBottom: '8px' }}><Link href="/blog/sell-ai-coloring-books-amazon-kdp-2026" style={{ color: '#3B5FFF' }}>How to Sell AI Coloring Books on Amazon KDP (2026)</Link></li>
           <li style={{ marginBottom: '8px' }}><Link href="/blog/chatgpt-ghibli-style-prompts-2026" style={{ color: '#3B5FFF' }}>ChatGPT Ghibli-Style Prompts (Copy &amp; Paste)</Link></li>
           <li style={{ marginBottom: '8px' }}><Link href="/blog/viral-ai-art-trends-june-2026" style={{ color: '#3B5FFF' }}>Viral AI Art Trends (June 2026)</Link></li>
           <li style={{ marginBottom: '8px' }}><Link href="/blog/ai-ecommerce-product-descriptions-2026" style={{ color: '#3B5FFF' }}>AI Product Descriptions That Sell (2026)</Link></li>

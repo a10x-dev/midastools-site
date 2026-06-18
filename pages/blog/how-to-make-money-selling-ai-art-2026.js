@@ -172,6 +172,7 @@ export default function HowToMakeMoneySellingAiArt2026() {
 
         <p><strong>What sells:</strong></p>
         <ul style={{ paddingLeft: '20px', marginBottom: '16px' }}>
+          <li><strong>Printable coloring books &amp; pages</strong> &mdash; one of Etsy&rsquo;s bestselling digital-download categories, and a top Amazon KDP paperback niche.</li>
           <li>Social media templates (Instagram posts, story templates, LinkedIn banners)</li>
           <li>Blog header images and featured images</li>
           <li>Seamless patterns and background textures</li>
@@ -196,6 +197,15 @@ export default function HowToMakeMoneySellingAiArt2026() {
           <li>Check each platform&rsquo;s current AI content policy before uploading &mdash; policies are evolving.</li>
           <li>Consider selling on your own site (Gumroad, Etsy) for higher margins and fewer restrictions.</li>
         </ul>
+
+        {/* ==================== COLORING BOOK MACHINE BRIDGE (paid keepsake product — printable coloring book) ==================== */}
+        <div style={{ marginTop: '32px', marginBottom: '32px', padding: '24px', background: '#FFF7ED', border: '1px solid #FDBA74', borderRadius: '8px', textAlign: 'center' }}>
+          <p style={{ margin: '0 0 12px', fontSize: '16px', fontWeight: '700' }}>Sell printable coloring books &mdash; the fastest digital download to make</p>
+          <p style={{ margin: '0 0 16px', color: '#6B7280', fontSize: '15px' }}>Coloring books are one of the easiest things to sell on Etsy and Amazon KDP. The Coloring Book Machine turns a single theme into a complete, print-ready book &mdash; line-art pages, a cover, and a title page &mdash; in a couple of minutes. Sell it as a digital download or upload the PDF straight to KDP. $9.99 a book.</p>
+          <a href="/coloring-book-machine?utm_source=blog&utm_medium=cta&utm_campaign=coloring_book_bridge&utm_content=make-money-overview" style={{ display: 'inline-block', background: '#EA580C', color: '#fff', padding: '14px 28px', borderRadius: '6px', textDecoration: 'none', fontWeight: '700', fontSize: '15px' }}>
+            Make a Coloring Book &rarr;
+          </a>
+        </div>
 
         <hr style={{ margin: '40px 0', border: 'none', borderTop: '1px solid #eee' }} />
 
