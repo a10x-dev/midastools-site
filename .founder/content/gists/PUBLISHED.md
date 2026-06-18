@@ -17,3 +17,4 @@
 - 2026-05-24T20:08:33Z | [AI Content Creator Prompts — 14 Copy-Paste Templates for YouTube, Newsletter, Threads & Repurposing (May 2026)](https://gist.github.com/manduks/e1858b89bf4462ad5c2a61b16307bbe2) | source: `15-ai-content-creator-prompts-cheatsheet.md`
 - 2026-06-16T21:30:08Z | [How to Sell AI Art on Etsy — The 2026 Cheatsheet (Rules, Niches, $15–50 Listings)](https://gist.github.com/manduks/726a97abf5e3d0b9001d06d3d5d09f6c) | source: `16-sell-ai-art-etsy-cheatsheet.md`
 - 2026-06-18T01:11:49Z | [How to Sell AI Coloring Books on Amazon KDP — The 2026 Cheatsheet (Low-Content, Print-on-Demand, $6.99 Books)](https://gist.github.com/manduks/11aa6c3bf698634e78dd065c6a0b8aa9) | source: `17-sell-ai-coloring-books-kdp-cheatsheet.md`
+- 2026-06-18T20:22:07Z | [How to Sell AI Art on Gumroad — The 2026 Cheatsheet (Own the Customer, Keep the Margin)](https://gist.github.com/manduks/06ded53af42836f888cf2f17f6e88701) | source: `18-sell-ai-art-gumroad-cheatsheet.md`
