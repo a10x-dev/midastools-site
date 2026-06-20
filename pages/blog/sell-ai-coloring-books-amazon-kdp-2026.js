@@ -279,6 +279,7 @@ export default function SellAiColoringBooksAmazonKdp2026() {
         {/* ==================== RELATED POSTS ==================== */}
         <h2 style={{ fontSize: '1.3rem', fontWeight: '700', marginTop: '40px', marginBottom: '16px' }}>Related Posts</h2>
         <ul style={{ paddingLeft: '20px', marginBottom: '40px' }}>
+          <li style={{ marginBottom: '8px' }}><Link href="/blog/sell-printable-coloring-books-etsy-2026" style={{ color: '#3B5FFF' }}>How to Sell Printable Coloring Books on Etsy in 2026 (Digital Downloads)</Link></li>
           <li style={{ marginBottom: '8px' }}><Link href="/blog/how-to-make-money-selling-ai-art-2026" style={{ color: '#3B5FFF' }}>How to Make Money Selling AI Art in 2026: 7 Proven Methods</Link></li>
           <li style={{ marginBottom: '8px' }}><Link href="/blog/how-to-sell-ai-art-on-etsy-2026" style={{ color: '#3B5FFF' }}>How to Sell AI Art on Etsy in 2026 (Digital Downloads)</Link></li>
           <li style={{ marginBottom: '8px' }}><Link href="/blog/print-on-demand-ai-art-2026" style={{ color: '#3B5FFF' }}>Print-on-Demand AI Art in 2026 (Physical Products)</Link></li>
