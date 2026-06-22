@@ -11,6 +11,44 @@
 
 <!-- AGENT-EDITED-BELOW (everything below this line is preserved across ticks) -->
 
+## Session 25 (renderer) — 🚀🔥 FIRED MEMO #2: coloring_book_launch SENT TO 203 / 0 FAILED — FIRST REAL REVENUE TEST OF THE $9.99 COLORING BOOK MACHINE (Jun 22, 14:15 local / 20:15 UTC)
+
+### What happened
+Monday Jun 22 — the pair session Jun 21 closed with Armando's explicit "yes send it!" on the Coloring Book Machine launch, and the schedule had SEND MEMO #2 DUE. I'm the agent on the slot → executed the dominant near-term revenue lever. 2nd money-method warm-list memo (after memo_art_money Jun 15 PASSED 3.92%) and the FIRST real revenue test of the $9.99 Coloring Book Machine.
+
+### Pre-flight (all GO, clean — S27/S28 de-risk paid off)
+- **Page 200**: `/coloring-book-machine` HTTP 200.
+- **GEMINI live**: `POST /api/coloring-book/generate {mode:preview}` → real JPEG + `remaining` counter (key live + spend cap working).
+- **Clean baseline**: funnel-readout shows NO `coloring_book_launch` in campaign list → 0 page_views pre-send (kill-read starts from true zero).
+- **Template resolves**: live-render preview → `{success:true, preview:true, template:coloring_book_launch}` — NOT a silent fall-through to generic (S35 wrong-send mode absent; S28 verified template in broadcasts{} line 462 + body strong).
+- **Armando approval**: explicit "yes send it!" (pair Jun 21) — no veto-window needed.
+
+### Execution
+**Real broadcast** `?broadcast=true&template=coloring_book_launch` → **`sent:203, failed:0`** HTTP 200.
+
+### 🔑 sends = 203 (kill-criterion denominator)
+metrics-snapshot confirms **Subs 203** (gist truth-source, up from 189 dashboard — full active list received it). method-CTR = page_views[utm_campaign=coloring_book_launch] ÷ 203. Kill threshold <2%. KPI Users updated 189→203.
+
+### Metrics @ send
+Stripe LIFETIME **4 sales / $184** (jules Jun 12, unchanged — no surprise sale). Subs 189→**203**. Uptime 5/5 200.
+
+### Held / did NOT
+- Did NOT fire post-send suppression (kill-read denominator hardcoded 203; mutating list post-send doesn't help this read).
+- Did NOT re-preview for re-approval (pair approval + S28 body verification covered it).
+- Did NOT touch the stale memo_art_money kill-read entry (already PASSED Jun 16).
+
+### NEXT — the 24-48h kill-read
+**Jun 23-24** (after ~12-18h): `python3 .founder/tools/funnel-readout.py --campaign coloring_book_launch --sends 203` → method-CTR vs 2% bar. Wired into SCHEDULE as `once-june23`. Also watch Stripe for the FIRST $9.99 coloring-book sale (webhook "🎨 SALE: Coloring Book Machine") — this memo sells a directly-purchasable product (vs free-tool funnel), so a sale is genuinely possible + would be the first list-attributed revenue ever.
+
+### Confidence
+92% — send confirmed by HTTP 200 + sent:203/0; pre-flight all verified live; subs 203 cross-checked via metrics-snapshot. Only unverified: whether the gift-first $9.99 framing converts the warm list (first measurable in 24-48h).
+
+### Continuation — ✅ REVENUE PATH VERIFIED LIVE TODAY (protects the first-ever list-attributed sale)
+On the "continue" push, ran the one genuinely-valuable + Armando-independent + revenue-protecting check on the freshly-fired lever (S27's end-to-end verify was 5 days old; a plink can drift/deactivate, and 203 people are now clicking). Verified the full post-click chain live:
+- `start.js` → token + live `checkoutUrl` carrying `client_reference_id=cbk_<token>` (webhook activation key).
+- **Authoritative Stripe API check**: plink `plink_1Tj8A6AdkDx8xZMkJjnlVfIT` is in the `active=true` list → **active: True**; `after_completion = redirect → /coloring-book-machine?paid=1` (type=redirect ✓, .co not .com ✓ — clean per stripe-plink-audit-before-launch). (Note: a raw-HTML scrape of the Stripe checkout is useless — JS-rendered, so "coloring book"/"9.99" never appear and generic JS strings false-match "expired"; the API `active` field is the only reliable signal.)
+**Verdict: the $9.99 checkout the 203 recipients hit is live + fulfills cleanly. No fix needed.** Genuine saturation after this — kill-read + first-sale watch are calendar-gated to Jun 23-24; reading clicks at T+~10min is uninformative (opens trickle 24-48h); revenue-mechanism (Printify) is Armando-gated; a content unit minutes after the day's headline memo send = over-ship within the near-daily slot (tomorrow is the content slot). Honest close.
+
 ## Session 31 — 🟢 POST-NICHE-GUIDE VERIFICATION CLOSE: ZERO DRIFT, ALL ART-MONEY SURFACES HEALTHY (Jun 18, ~22:57 UTC, read-only)
 
 ### Why this slot was a verification close, not another ship
