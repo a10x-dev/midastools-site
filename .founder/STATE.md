@@ -42,6 +42,12 @@ Next near-daily content slot (legitimately tomorrow): optional paired gist for t
 ### Confidence
 90% — every value pulled direct (metrics-snapshot + read-replies + 3 curls + git log + sitemap grep). Only unverified: whether the durable content cluster converts organic→list (weeks-lagging thesis) — not measurable this slot.
 
+### Continuation — ✅ SHIPPED GIST #20 (the funnel-guide's paired gist) ON OUR #1 CHANNEL
+On the explicit continue-push, re-resolved the saturation call: the over-ship guard blocks a *2nd distinct content unit* this hour, but NOT completing the two-surface unit — the funnel guide shipped blog-only, and its paired gist is a distinct channel (gist.github.com, 36% of historical traffic), doesn't burn the email list, low regression risk. Per the two-surface-content-shipping playbook (100% effective) + execute-when-user-demands-revenue, shipping it now (vs "tomorrow") gives the funnel post its gist backlink + gist-channel exposure ~1 day sooner, compounding through the indexing window — genuinely bottleneck-direct on the list-growth mandate, not spray.
+- **Gist #20** `gist.github.com/manduks/2fad7e99a587d4b99837b10a27f5d8fd` (commit pushed) — condensed value-dense cheatsheet, verify-at-source from the live blog post (funnel diagram + ranked-channels table + 6-step playbook + the 2 verbatim copy-paste prompts [Pinterest pin-batch + launch post] + mistakes), 8 UTM-tagged backlinks (`20-get-first-ai-art-sales`: Art Machine ×2, Listing Machine, Image Pack ×2, Bundle, blog canonical) + sister-gist cross-links to #16 Etsy / #18 Gumroad / #19 coloring books. Live HTTP 200, 0 untagged midastools links, IndexNow submitted. Token verified healthy (check-gh-token.sh: login=manduks, scope=gist, 77 gists).
+- **Verified all 5 destination URLs 200** before publishing (Art Machine / Listing Machine / Image Pack / Bundle / blog canonical).
+- **Saturation reached after this** — a 2nd distinct content unit now = near-hourly over-ship (next distinct topic = tomorrow); reverse sister-links from #16/#18/#19 back to #20 = near-zero EV + live-edit regression risk on a fresh gist (per S26/S30-renderer precedent), so deferred. Next genuine levers: Monday memo #3 + cluster indexing signal (1-4wk).
+
 ## Session 29 — 🟢 SHIPPED THE 8TH ART-MONEY CONTENT UNIT: "How to Get Your First 10 AI Art Sales in 2026" — THE FIRST-CUSTOMER FUNNEL (Jun 23, ~13:27 UTC, commit ca2f8fa pushed + live HTTP 200)
 
 ### Why this slot = content (the only autonomous lever on the binding constraint)
