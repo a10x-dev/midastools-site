@@ -11,6 +11,33 @@
 
 <!-- AGENT-EDITED-BELOW (everything below this line is preserved across ticks) -->
 
+## Session 29 — 🟢 SHIPPED THE 8TH ART-MONEY CONTENT UNIT: "How to Get Your First 10 AI Art Sales in 2026" — THE FIRST-CUSTOMER FUNNEL (Jun 23, ~13:27 UTC, commit ca2f8fa pushed + live HTTP 200)
+
+### Why this slot = content (the only autonomous lever on the binding constraint)
+Grounded first: metrics-snapshot clean — Stripe 4/$184 flat (no surprise sale, last jules Jun 12), subs 209→**210** (+1 routine, NOT ping-worthy), 5/5 uptime 200. Both kill-reads are done (memo_art_money PASS 3.92% / coloring_book_launch FAIL 0.99%). Memo #3 is calendar-gated to Monday + money-method-framed (pre-building prejudges). Printify is wired + LIVE (entity graph confirms tracking active). $50 growth test is Armando-gated. **During Armando's active 2-week velocity mandate, a distinct content unit is the only autonomous lever on the now-binding list-growth constraint** — and the prior working period shipped a content unit too, so per near-daily (NOT near-hourly) cadence today's slot is a fresh distinct unit.
+
+### 🎯 Topic = genuinely distinct, owns the one cluster gap none of the 11 art-money posts cover
+Surveyed the full cluster: every existing post is **what to make** (niches), **where to sell** (Etsy/Gumroad/POD/KDP/coloring), **what to charge** (pricing, shipped S25), or **what's trending**. **NONE owns the post-setup cold-start question: "my shop is live — how do I actually GET the first sale?"** That funnel/traffic gap is the connective tissue that routes readers INTO every platform + pricing guide. Money-method framed (the PROVEN-winning framing per the 4x kill-read learning — not a paid-ask). Targets a new high-intent cluster ("first AI art sale", "how to get traffic to Etsy digital downloads", "Pinterest for Etsy printables", "get first sale on Etsy").
+
+### Content
+~2,000 words, Article + FAQPage (5 FAQs) JSON-LD, 5 sections: why the first sale is hardest + the cold-start funnel diagram (traffic→listing→first buyers→reviews→ranking) / where first buyers actually come from (Pinterest #1 for printables, niche IG/TikTok, own email list, marketplace SEO after reviews, Reddit carefully — paid ads explicitly LAST) / the first-10-sales step-by-step playbook / 2 copy-paste prompts (Pinterest pin-batch generator + launch post) / common first-sale mistakes. Bridges the sell-path (Art Machine **make the art** + Listing Machine **write the converting listing**, both free) + Image Pack/Bundle ladder, all UTM-tagged `get_first_ai_art_sales`.
+
+### Discovery wired same-session (zero indexing wait)
+Blog index (newest-first, Jun 24) + sitemap 0.9 + **routed the #1 hub AND the pricing post into it** (Related Posts, prepended) — pricing→getting-the-sale is the natural reader progression, converts already-ranked traffic immediately + speeds the new post's own indexing. Build clean (route 6.94 kB, 204/204 static, +1 from 203), committed 3159b3e..**ca2f8fa**, pushed to main (repo's Vercel deploy branch), **polled live HTTP 200 + confirmed in live sitemap**, IndexNow POST 200 (googlePing 404 = known-deprecated; urlCount reads cached 139 — new URL confirmed in live sitemap so it's crawled via the normal cycle regardless).
+
+### Held / did NOT
+- Did NOT ship a 2nd unit/paired gist — content-velocity saturation per near-daily cadence (2nd surface in one period = over-ship line); optional pairing = tomorrow.
+- Did NOT pre-build Monday's memo #3 (prejudges + days out; money-method-framing learning is logged for that build).
+- Did NOT spray the link into all cluster posts — hub + pricing are the 2 tightest-fit highest-traffic surfaces; the rest is spray.
+- Did NOT touch the protected homepage flywheel or any Armando-gated lever (Printify payout config / $50 test).
+- Did NOT tool-tour the newly-surfaced PostHog/Vibe/Gmail/Slack MCPs — no decided question they answer better than funnel-readout.
+
+### NEXT
+Tomorrow: optional paired gist for the funnel post OR next distinct art-money topic (stock-site channel; "AI art on Redbubble/Society6"). **Next Monday: memo issue #3 of 4 — money-method framed (the 3.92% winner), NOT a direct paid-ask (the 0.99% loser); read method-CTR via funnel-readout vs 2% bar.** Watch track-events for `get_first_ai_art_sales` bridge clicks + the cluster's first indexing signal (SEO lags 1-4wk). Armando-gated: Printify payout config + $50 growth test.
+
+### Confidence
+88% — build clean, pushed, polled live HTTP 200, new URL verified in live sitemap, IndexNow 200. Only unverified: whether the funnel-guide cluster converts organic→list (the weeks-lagging thesis) — but it's a genuinely distinct high-intent topic + the tightest internal-link hub-and-spoke addition to date (every platform/pricing post is its natural downstream).
+
 ## Session 28 — 🔴🔑 KILL-READ #2 VERDICT: coloring_book_launch FAILED (0.99% < 2%) → DIRECT-PAID-ASK FRAMING LOSES TO MONEY-METHOD FRAMING 4x (Jun 23, T+~14h, read-only)
 
 ### 🔑 THE VERDICT (the whole point of the Jun-22 send)
