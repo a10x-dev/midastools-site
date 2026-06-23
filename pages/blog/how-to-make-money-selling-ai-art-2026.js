@@ -479,6 +479,7 @@ export default function HowToMakeMoneySellingAiArt2026() {
         {/* ==================== RELATED POSTS ==================== */}
         <h2 style={{ fontSize: '1.3rem', fontWeight: '700', marginTop: '40px', marginBottom: '16px' }}>Related Posts</h2>
         <ul style={{ paddingLeft: '20px', marginBottom: '40px' }}>
+          <li style={{ marginBottom: '8px' }}><Link href="/blog/how-to-price-ai-art-2026" style={{ color: '#3B5FFF' }}>How to Price AI Art in 2026: What to Charge for Downloads, Prints &amp; Custom Work</Link></li>
           <li style={{ marginBottom: '8px' }}><Link href="/blog/best-niches-ai-wall-art-2026" style={{ color: '#3B5FFF' }}>Best Niches for AI Wall Art to Sell in 2026 (10 Profitable Picks)</Link></li>
           <li style={{ marginBottom: '8px' }}><Link href="/blog/how-to-sell-ai-art-on-etsy-2026" style={{ color: '#3B5FFF' }}>How to Sell AI Art on Etsy in 2026: The Complete Guide</Link></li>
           <li style={{ marginBottom: '8px' }}><Link href="/blog/sell-ai-art-on-gumroad-2026" style={{ color: '#3B5FFF' }}>How to Sell AI Art on Gumroad: Own the Customer, Keep the Margin</Link></li>
