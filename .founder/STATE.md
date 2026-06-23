@@ -11,6 +11,33 @@
 
 <!-- AGENT-EDITED-BELOW (everything below this line is preserved across ticks) -->
 
+## Session 35 — 🟢🔑 BROKE THE ART TREADMILL: SHIPPED THE FIRST BUSINESS-PACK-BUYER GIST SINCE APRIL (Jun 23, ~13:5x local, gist #21 live + committed eb0869f)
+
+### The decision (the actual move, not a hold)
+Re-invoked ~0h after S25 shipped the best-ai-prompt-packs conversion fix. Refused both a 5th grounding-and-hold AND another art-money unit. Grounded the central contradiction the dashboard keeps flagging — in the PUBLISHED ledger: **gists #16–20 (every June gist) are 100% art-money. The proven business-pack buyer, who is 100% of revenue ($184/4, all untagged Stripe-Link buys of Mega Pack/Bundle/OpenClaw), has had ZERO gist coverage since #12 (April).** Every recent piece of our #1 traffic channel (gists, 36%) funnels the non-buying art audience. 5th time I'd named the "one defensible business gist" lever; first time I executed instead of deferring.
+
+### ✅ Shipped (gist #21, live HTTP 200, IndexNow fired, committed eb0869f, pushed)
+**`gist.github.com/manduks/dfc16ac5670c22fc64ca8fb7d3fe81d9`** — "15 ChatGPT Prompts That Replace $500/Month in Business Tools — 2026 Cheatsheet." Money-SAVING framed (the proven 4x-winning money-method angle, applied to BUSINESS not art). 15 copy-paste prompts grouped by the paid SaaS tool each replaces (sales/social/content/ops/brand/people) + a "what you can stop paying for" cost table (~$450–900/mo) + universal 5-slot formula + model-pick table + Common Mistakes + Resources. Funnels to **the exact SKUs all 4 buyers bought: Mega Pack $29 (145+ business prompts, verified at source) + All Kits Bundle $97**, free Prompt Enhancer ×2, + the best-ai-prompt-packs blog (the page I optimized last session). All links UTM-tagged `21-replace-business-tools` (0 untagged). Sister-cross-links #02/#11/#12. The "$500/mo business software" angle = exactly what delon@zPlatform replied to twice (tested-resonant).
+
+### Why bottleneck-direct, not over-ship/motion
+- Attacks the flagged contradiction: effort → proven buyer (business packs), not proven non-buyer (art warm list).
+- Uses #1 discovery channel + the likely path our untagged impulse buyers actually arrived through (gist→SKU, referrer-stripped).
+- Autonomous, reversible, ADDITIVE (doesn't kill the art engine → doesn't prejudge Armando's R2 fork).
+- Distinct workstream from the art treadmill → not the near-hourly over-ship trap.
+- Honest EV: modest, lags 1-4wk to index, no KPI today — but directionally correct toward where 100% of revenue comes from; first such gist in ~2 months.
+
+### Held / did NOT
+- No 2nd unit (saturation guard). No MCP tool-tour (Gmail/Slack/Vibe/PostHog surfaced — no decided question). No Armando re-ping (gated levers already queued; gist ship sub-threshold).
+
+### NEXT
+Re-point the content engine: next slots favor business-pack-buyer content on the #1 channel over more art-money units (art grows the list but the list is proven non-converting). Monday: fire memo #3 money-method-framed + read method-CTR vs 2% AND first Printify/list-attributed dollar (re-scoped bar, issue #3 of 4). Watch gist #21 for first business-pack-attributed traffic (1-4wk indexing lag).
+
+### Confidence
+85% — gist live (200), 0 untagged links, pushed (eb0869f), token healthy (79 gists), 4 destinations pre-verified 200, Mega Pack 145+ at source. Unverified: whether gists reach business-pack impulse buyers the way they reach art-seekers (the thesis — measurable as first business-attributed traffic over the indexing window).
+
+### Continuation — audited the proven-buyer on-site conversion funnel (clean-negative, no spray)
+On the continue-push, audited a workstream S25 never covered: not active dead-tool diversions (S25 swept those) but whether business/commercial-intent blog posts actively funnel to the **$29 Mega Pack** (the proven lower-friction entry — 2 of 4 sales were Mega Pack vs 1 Bundle). Found 8 business posts with `mega=0` (only the $97 Bundle, no $29 option), incl. ai-audit-checklist (mega=0 bundle=0, no commercial CTA at all). **But 7d traffic killed the fix:** every mega=0 post is bottom-of-distribution (notion-templates-business + ai-freelancer-automation = 8 events/7d; the other 6 don't crack the top-20). The only real commercial-traffic page (best-ai-prompt-packs, 48/7d) was already routed in S25; all high-traffic blog posts are art (ghibli 72, viral-art 21) where a Mega Pack CTA = wrong-audience mismatch. Per S25 discipline (fix the 48-event page, don't spray 8-event pages) the gap doesn't justify a multi-page edit. Logged clean-negative so future-self doesn't re-run; held (no edit). Genuine saturation reached — the day's high-impact unit (gist #21) is shipped; remaining levers are gated or low-EV.
+
 ## Session 34 — 🟢 4TH GROUNDING TODAY = ZERO DRIFT → BREAK THE HOURLY-HOLD TREADMILL (Jun 23, ~18:37 UTC, read-only)
 
 ### Why this slot, and the honest call
