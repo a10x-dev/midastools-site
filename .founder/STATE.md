@@ -2,7 +2,7 @@
 
 ## Current Status (auto-synced from database)
 
-**Bottleneck**: conversion (severity 6/10) — Kill-read #1 of 4 PASSED: memo_art_money = 3.92% method-CTR (6 page_views / 153 sends) vs 2% bar at T+24.5h — the warm-list money-method lever survives, Monday-memo flywheel continues. But $0 revenue: 0 downstream activations (sell_path/image/listing all 0), Stripe flat 4/$184, memo replies were corporate auto-responders. Diagnosis sharpened — "does the audience engage a money-method email?" ANSWERED YES; binding constraint is now (a) wire the Printify affiliate into the memo to monetize the validated 3.92% click (Armando/PartnerStack-gated), (b) grow the list (2-wk mandate; full funnel now channel-attributable as of commit c9c35be). Kill criteria unchanged: <2% over 4 issues → list-rental pivot.
+**Bottleneck**: conversion (severity 6/10) — Framing is the validated conversion lever: memo_art_money money-method framing PASSED 3.92% (issue #1), coloring_book_launch direct-paid-ask FAILED 0.99% (issue #2) — same warm list, 4x gap. Printify gate CLOSED (now LIVE+tracking, wired across all art-money surfaces). Revenue still $0 because the 3 binding constraints are all gated/slow: (1) warm-list broadcast is sender-gated to Armando — the flywheel "sell" step I can prep but not fire, (2) list growth is the 2-wk mandate, content is my only autonomous lever on it, (3) the $50 paid test is the only in-window 10x lever, Armando-gated on spend. Kill tally 1 PASS/1 FAIL of 4; money-method framing must hold >2% across issues #3-4.
 
 **KPIs**:
 - Conversations: 0 (target: 3, 7d: 0%)
@@ -10,6 +10,49 @@
 - Revenue: 184 (target: 997, 7d: 0%)
 
 <!-- AGENT-EDITED-BELOW (everything below this line is preserved across ticks) -->
+
+## Session 32 — 🔑 STRATEGIC RE-DIAGNOSIS (answered the dashboard's stalled-KPI prompt): THE KILL CRITERION MEASURES ENGAGEMENT, NOT REVENUE (Jun 23, ~16:22 UTC, read + analysis, deliverable shipped)
+
+### Why this slot was a re-diagnosis, not a ship or a drift sweep
+Fresh session ~50 min after S31's read-only close. Today's content unit already shipped ~2h ago (S24 gist #20 completing the funnel-guide two-surface) → a 2nd unit now = near-hourly over-ship. Memo #3 calendar-gated Monday. Revenue Armando-gated. A re-run drift sweep 50 min after S31 = sub-hourly noise. BUT the CEO dashboard explicitly flagged stalled KPIs ("is the bottleneck diagnosis wrong? Do you need a different strategy?") after weeks of flat $184/4-sales revenue. The genuinely-highest-leverage, non-saturating, autonomous, research-analyst move was a rigorous re-diagnosis — a different workstream from the content/memo flywheel, so not saturation.
+
+### The read (all grounded at source)
+- **metrics-snapshot: 4/$184 flat**, jules Jun 12 still most recent, 0 in 24h, 5/5 200, subs 210. Nothing moved since S31. No surprise sale.
+- **customer-attribution.py (pulled at Stripe source today)**: all 4 paying customers (Shantae $97 All Kits, Arnaud $29 Mega Pack, jules $29 Mega Pack, George $29 OpenClaw) = **Stripe-Link one-click, NONE on the email list pre-purchase, NONE tagged to the content funnel, ALL business/general prompt packs.** Zero art-product sales, zero list-attributed sales, ever. buyer-vs-funnel-mismatch re-confirmed at source.
+
+### 🔑 The substantive finding (new synthesis, not restated memory)
+Combining the two kill-reads + the buyer attribution + the now-LIVE Printify:
+1. **The conversion bottleneck is right; its sub-diagnosis (framing) is answered + no longer binding.** money-method 3.92% > paid-ask 0.99% (4x) closes the framing question after issues #1-2.
+2. **🔴 The 4-issue kill criterion (method-CTR ≥2%) tests ENGAGEMENT, not REVENUE.** Both fired memos prove the decoupling: memo_art_money 3.92% PASS → $0; coloring_book 0.99% FAIL → also $0 even with a directly-buyable $9.99 product getting 2 clicks. Even if memos #3-4 PASS, the flywheel's revenue thesis stays unvalidated. Passing CTR at $0 = treadmill (kpi-spread-bottleneck-reframe pattern: metric "passing" while the KPI it drives sits flat).
+3. **🟢 Printify now LIVE+tracking** makes the validated 3.92% click monetizable for the first time → memos #3-4 are the FIRST genuine revenue test → the bar can honestly be re-scoped to revenue now.
+
+### Shipped
+`.founder/deliverables/flywheel-revenue-rediagnosis-2026-06-23.md` — exec summary, the central-contradiction table (100% revenue from a buyer-shape we don't cultivate vs 100% build effort on a buyer-shape that's never paid), the kill-criterion-measures-the-wrong-thing argument, the reframe, R1 (re-scope kill criterion, autonomous), R2 (strategic fork on where content points, Armando's call). Confidence-graded per claim.
+
+### Emitted
+- **BOTTLENECK_UPDATE** (conversion 6/10, sharpened): framing answered; binding constraint is now whether the list converts to REVENUE; kill criterion re-scoped to require ≥1 list-attributed dollar by issue #4 (now measurable b/c Printify is wired).
+- **Telegram** (decide-now, organic value): the re-diagnosis headline + the one fork (R2 A/B/C, my lean C: finish #3-4 as the real revenue test + one probe at the proven B2B/general-pack buyer). Default if silent = Fork C.
+
+### Held / did NOT
+- Did NOT ship a content unit (near-hourly over-ship; today's already shipped S24; next distinct = tomorrow).
+- Did NOT pre-build memo #3 (prejudges + days out; the money-method-framing + revenue-bar learnings are logged for that build).
+- Did NOT retroactively count memo #1's $0 as a kill-fail (Printify wasn't wired then; revenue bar starts at memo #3).
+- Did NOT unilaterally pivot content to the B2B audience (Fork B/C is Armando's strategic call; I produced the analysis + recommendation, not the pivot).
+- Did NOT re-run the drift sweep beyond the one grounding metrics check.
+
+### NEXT
+Tomorrow (next near-daily content slot): per Fork C lean, the next distinct unit could be the FIRST B2B/general-prompt-pack probe ("ChatGPT prompts for [business function]" → Mega Pack — the exact product jules bought) instead of a 9th art-money unit — pending Armando's R2 call. **Monday: fire memo #3 money-method-framed + read method-CTR vs 2% AND watch for the first Printify-attributed commission / list-attributed dollar (the re-scoped bar).** Armando-gated: R2 fork + $50 growth test + Printify payout finalization.
+
+### Confidence
+88% — every number pulled at source (metrics-snapshot + Stripe customer-attribution today); the engagement-vs-revenue decoupling is logically airtight (both memos earned $0 regardless of CTR). Only unverified: whether the art list converts to revenue at all once Printify-wired (memos #3-4 are the falsifying test) + whether the B2B-probe fork actually reaches the impulse-buyer audience.
+
+### 🔻 Continuation (~16:35 UTC) — intel DISPROVED my own Fork-C lean (self-correction)
+On the continue-push, de-risked the fork BEFORE tomorrow's ship (market-intel-before-decision-day). Verified Mega Pack at source = 145+ business-function prompts (the jules/Arnaud product, real + strong). Then searched the B2B-prompt CONTENT landscape: **red ocean** — 8/8 SERP results are high-DA incumbents (Upmetrics, LivePlan, AI Academy, Expandi, ChatAE) giving away 35-42+ free all-department business prompts. **This disproves the "B2B content probe" half of my Fork-C lean from 20 min earlier** (S30/S26-cont self-correction pattern): swapping the dark art channel for a saturated one isn't a win, and — critically — all 4 buyers were untagged Stripe-Link impulse buyers who never touched ANY content, so reaching the proven buyer is a DISTRIBUTION problem, not a content-SEO problem. Appended an addendum to the deliverable + revised fork: drop B2B-blog; the real proven-buyer levers are Armando-gated distribution ($50 paid test aimed at business-pack audience, or a Gumroad business-category listing); the single defensible autonomous content nibble is ONE business gist (our #1 channel, different discovery surface), not a blog cluster. **Net: this STRENGTHENS the standing diagnosis (binding constraint = gated distribution) — it does NOT open a new autonomous lever.** Sent a tight Telegram correction revising the stale default.
+
+### Continuation — Held / did NOT
+- Did NOT ship a B2B blog (just disproved it) OR a 9th art unit (over-ship) OR a business gist now (near-hourly over-ship; if done at all it's tomorrow's distinct-unit slot, and modest-EV).
+- Did NOT tool-tour the freshly-connected PostHog MCP (our analytics run on the homegrown /api/track store; no decided question PostHog answers better).
+- Did NOT run a 2nd web search (8/8 red-ocean SERP is conclusive for the saturation call).
 
 ## Session 31 — 🟢 FRESH-SESSION DRIFT SWEEP + SHARPENED THE STALE BOTTLENECK DIAGNOSIS (Jun 23, ~15:29 UTC, read-only + diagnosis update)
 
