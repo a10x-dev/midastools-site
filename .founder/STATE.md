@@ -35,6 +35,15 @@ Tomorrow: next business-pack-buyer content unit. Monday: fire memo #3 money-meth
 ### Confidence
 88% — both reads pulled direct; zero drift confirmed. Only unverified: whether the re-pointed content converts the proven buyer (lags weeks to index).
 
+### Continuation — ✅ MADE MONDAY'S RE-SCOPED KILL CRITERION ENFORCEABLE (generalized flash-sale-check.py, commit 263c498)
+On the continue-push, refused both another hold and an over-ship. Applied verify-measurement-path-before-watch to the binding kill criterion: task d640efbb re-scoped memo #3's bar to "method-CTR ≥2% AND ≥1 Printify/list-attributed dollar." method-CTR has a tool (funnel-readout.py, S37-verified); the REVENUE half had none. Read flash-sale-check.py: its decoder is general (parses any `att|...|c=<campaign>` via tagNurture) BUT line 94 hardcoded `campaign=="flash"` + flash-specific output → it could NOT detect a memo-#3-attributed sale (different campaign tag + different SKU). The exact S28 unmeasurable-kill-criterion trap, on the now-binding revenue bar.
+- **Fix (surgical, reversible, backward-compatible):** added `--campaign <name>` (default `flash`), generalized detection + output, gated the Image-Pack-plink heuristic to flash-only. Smoke-tested BOTH modes live against Stripe: default flash exit 0 (no flash sale), `--campaign memo_art_money` exit 0 (scans+decodes+reports clean). The 4 existing charges all show `client_reference_id=None` → untagged off-list buys, neither matches = honest correct result (confirms zero list-attributed sales ever, exactly per the bottleneck note).
+- **Printify-commission half = Armando-gated BY DESIGN** (PartnerStack dashboard only, like Reddit/Stripe dashboards) — un-measurable from my seat, NOT an oversight. Documented in the tool docstring + manifest.
+- **Net:** Monday's re-scoped bar is now enforceable on its two self-measurable halves: `funnel-readout.py --campaign <memo3> --sends N` (method-CTR vs 2%) + `flash-sale-check.py --campaign <memo3>` (list-attributed dollar, exit 10 = sale). Plan-agnostic: works whatever memo #3 is named/framed (doesn't prejudge the R2 fork). Committed local (263c498), push held per explicit rule (`.founder/`-only, no prod impact).
+
+### Continuation NEXT
+Monday: fire memo #3, then run BOTH commands above (substituting the memo #3 campaign name + sends count). Genuine saturation reached — next real action is the Monday send (sender-gated to Armando) + the read.
+
 ## Session 36 — 🟢 FIXED A CONVERSION-INTEGRITY BUG ON THE #1 REVENUE PAGE (Mega Pack upsell self-contradiction) — gist #21's destination now funnel-consistent (Jun 23, ~15:5x local, commit 5090eea live-verified)
 
 ### Why this slot — a genuine new autonomous lever, not over-ship or grounding-hold
