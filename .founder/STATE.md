@@ -11,6 +11,28 @@
 
 <!-- AGENT-EDITED-BELOW (everything below this line is preserved across ticks) -->
 
+## Session 26 — 🟢 POST-SEND SWEEP + MONETIZED THE #1 ART-MONEY HUB: WIRED THE LIVE PRINTIFY AFFILIATE INTO THE HIGHEST-TRAFFIC ART-MONEY PAGE (Jun 23, ~00:39 UTC, commit defd7ad pushed + live)
+
+### Post-send sweep (T+~4.5h on coloring_book_launch) — all clean, non-verdict
+- **Stripe**: LIFETIME 4/$184 (jules Jun 12 unchanged) — no surprise $9.99 sale yet. Immediate-signal dimension checked clean; impulse buys trickle as opens land 24-48h, so this is non-verdict.
+- **Uptime**: 5/5 200. The dashboard ERROR flag was a harness session-end artifact (S25 work landed). The 2× `keysystems.zendesk.com` ticket auto-acks on the memo subject are corporate noise (NOT demand) but POSITIVELY confirm the memo delivered to real inboxes.
+- **Subs 203→205** (+2 routine engine, post-broadcast, NOT memo-attributed). Tool flagged ping-worthy; correctly overridden (alert-trust). KPI Users updated 203→205.
+- **No genuine human reply.** Did NOT run funnel-readout (T+4.5h, click-CTR trickles — schedule guard says read after ~12-18h). Did NOT ship content (over-ship in the daily slot). Did NOT ping (no decide-now; gated levers already in Armando's queue).
+
+### 🟢 THE SHIP — revenue-mechanism work, the genuine bottleneck-direct move (commit defd7ad)
+On the continue-push, re-checked the revenue mechanism: the context graph flipped Jun-19 → **Printify affiliate is LIVE + actively tracking** (`partner_key d146c93be1ab`), making the bottleneck's "Printify Armando/PartnerStack-gated" framing partially stale. Audited the wiring: the affiliate (`try.printify.com/g84tb0f40uy0`) was in only **3 places** (Art Machine sell-block, the dedicated POD blog post, the memo) — and the **#1 art-money cluster hub** (`/blog/how-to-make-money-selling-ai-art-2026`, highest-traffic art-money page) had **ZERO Printify monetization** despite an explicit "1. Print-on-Demand" section listing POD platforms (Redbubble/Merch/Printful+Etsy) but not Printify.
+- **Fix**: slotted Printify as the **lead POD-platform bullet** in Section 1's existing "best platforms" list (honest — Printify is the most-used Etsy POD integration; the POD post's own FAQ says "most sellers start with Printify connected to an Etsy shop") + an FTC affiliate-disclosure line + `rel="noopener sponsored"`. Natural slot, NOT a bolted-on box. Build clean, pushed, **polled to live (HTTP 200, affiliate present)**, IndexNow fired (200, 139 URLs).
+- **Why this is the highest-impact autonomous move**: monetizes the validated art-money click on the highest-traffic surface, **zero indexing wait** (converts already-ranked traffic), Armando-independent (link live + tracking), reversible (1-commit, 4 insertions). The clicks accrue + convert to revenue regardless of whether the PartnerStack payout-config is fully finalized (the one piece I can't verify from here).
+
+### Held / saturation reached
+Did NOT wire Printify into the niche guide (its own thesis is "choosing the niche, not the platform" → routes POD-intent to the affiliate'd POD post; a CTA there contradicts the post + is a bolted-on box), Etsy/Gumroad (digital-download platforms = forced Printify fit), or coloring-book posts (printable/KDP, not POD). Every remaining art-money surface either already carries the affiliate or correctly funnels to it. Anywhere else = spray. **Genuine saturation on the Printify-wiring task.** Closed stale task 0482ecf1 (affiliate live + wired across 4 surfaces).
+
+### NEXT
+**Jun 23-24 (~T+12-18h+):** `funnel-readout.py --campaign coloring_book_launch --sends 203` → method-CTR vs 2% (issue #2 of 4-issue kill criterion). Watch Stripe for first 🎨 $9.99 sale (immediate signal). Watch for first Printify-attributed click/commission on the hub. Tomorrow = content slot if growth-mandate cadence continues.
+
+### Confidence
+90% — post-send reads pulled direct; the Printify ship is build-clean + pushed + polled-live + the slot is honest (verified against the POD post's own framing). Only unverified: whether the PartnerStack payout-config is finalized (entity graph Jun-19 says yes; older reference said unset) — but the wiring is strictly positive either way.
+
 ## Session 25 (renderer) — 🚀🔥 FIRED MEMO #2: coloring_book_launch SENT TO 203 / 0 FAILED — FIRST REAL REVENUE TEST OF THE $9.99 COLORING BOOK MACHINE (Jun 22, 14:15 local / 20:15 UTC)
 
 ### What happened
