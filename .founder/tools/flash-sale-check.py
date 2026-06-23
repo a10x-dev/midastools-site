@@ -16,8 +16,12 @@ This tool resolves the gap: latest charge -> checkout session -> client_referenc
 in one command instead of waiting on the webhook email to Armando's inbox.
 
 USAGE:
-  python3 .founder/tools/flash-sale-check.py            # scan last 5 charges
+  python3 .founder/tools/flash-sale-check.py                       # scan last 5 charges for c=flash
   python3 .founder/tools/flash-sale-check.py --limit 10
+  python3 .founder/tools/flash-sale-check.py --campaign memo3      # ANY memo: detect its list-attributed sale
+  # ^ Monday memo #3 re-scoped revenue bar (task d640efbb): run with --campaign <memo3-name>
+  #   to detect the "≥1 list-attributed dollar" half. (Printify-commission half is
+  #   PartnerStack-dashboard-only = Armando-gated by design, not measurable here.)
 Exit 10 = at least one FLASH-attributed sale found (the signal we're watching).
 Exit 0  = no flash sale among the scanned charges.
 """
@@ -68,13 +72,25 @@ def main():
         except (ValueError, IndexError):
             pass
 
+    # --campaign <name> generalizes this tool beyond the original flash send.
+    # Any memo broadcast (memo_art_money, coloring_book_launch, memo #3, ...) packs
+    # its campaign into client_reference_id via tagNurture (att|...|c=<campaign>|...),
+    # so a sale attributed to it is detectable here regardless of which SKU it funnels to.
+    # Default stays "flash" for backward compatibility.
+    campaign = "flash"
+    if "--campaign" in sys.argv:
+        try:
+            campaign = sys.argv[sys.argv.index("--campaign") + 1]
+        except IndexError:
+            pass
+
     charges = sget("/charges", {"limit": limit}).get("data", [])
     if not charges:
         print("No charges found.")
         return 0
 
-    flash_found = False
-    print(f"=== Scanning {len(charges)} most-recent charge(s) for flash attribution ===\n")
+    match_found = False
+    print(f"=== Scanning {len(charges)} most-recent charge(s) for campaign '{campaign}' attribution ===\n")
     for c in charges:
         amt = c["amount"] / 100
         email = (c.get("billing_details") or {}).get("email") or "?"
@@ -91,12 +107,15 @@ def main():
             except Exception as e:
                 cref = f"(session lookup failed: {e})"
         attr = decode_clientref(cref)
-        is_flash = attr.get("campaign") == "flash"
-        is_imagepack_plink = (plink == IMAGE_PACK_PLINK)
+        is_match = attr.get("campaign") == campaign
+        # Flash-specific heuristic: the flash CTA used the STANDARD Image Pack plink,
+        # so an organic Image Pack buy is indistinguishable except by c=flash. Only
+        # surface that disambiguation note when actually checking the flash campaign.
+        is_imagepack_plink = (campaign == "flash" and plink == IMAGE_PACK_PLINK)
         tag = ""
-        if is_flash:
-            tag = "  <<< 🔥 FLASH-ATTRIBUTED SALE"
-            flash_found = True
+        if is_match:
+            tag = f"  <<< 🔥 {campaign.upper()}-ATTRIBUTED SALE (list-attributed dollar)"
+            match_found = True
         elif is_imagepack_plink:
             tag = "  <-- Image Pack plink but NO c=flash (organic Image Pack, NOT flash)"
         rf = " [REFUNDED]" if refunded else ""
@@ -106,10 +125,10 @@ def main():
             print(f"    decoded: {json.dumps(attr)}")
         print()
 
-    if flash_found:
-        print(">> RESULT: FLASH CONVERSION CONFIRMED — execute Branch A (re-point nurture + suppress).")
+    if match_found:
+        print(f">> RESULT: '{campaign}' CONVERSION CONFIRMED — list-attributed revenue dollar detected.")
         return 10
-    print(">> RESULT: no flash-attributed sale among scanned charges.")
+    print(f">> RESULT: no '{campaign}'-attributed sale among scanned charges.")
     return 0
 
 if __name__ == "__main__":

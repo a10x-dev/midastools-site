@@ -222,10 +222,10 @@
   },
   {
     "name": "flash-sale-check.py",
-    "description": "Definitively confirm whether recent Stripe sales are flash-campaign-attributed, readable from our own seat (Stripe API) with NO dependency on Armando relaying the webhook source=flash email. Resolves latest charge -> checkout session -> client_reference_id -> decodes the att|...|c=flash|... campaign tag. Built S47 because the flash CTA uses the STANDARD Image Pack $29 plink, so an organic Image Pack buy is indistinguishable from a flash conversion EXCEPT by client_reference_id, which metrics-snapshot does not report. Exit 10 = flash sale found.",
+    "description": "Detect whether any recent Stripe sale is attributed to a given memo/broadcast CAMPAIGN, readable entirely from our own seat (Stripe API) with NO dependency on Armando relaying the webhook source email. Resolves latest charge -> checkout session -> client_reference_id -> decodes the att|...|c=<campaign>|... tag (tagNurture format). GENERALIZED S37 (Jun 23) from flash-only to `--campaign <name>` (default 'flash' for backward compat) so it enforces the re-scoped memo-#3 revenue bar (task d640efbb): the 'list-attributed dollar' half is now measurable for ANY memo regardless of which SKU it funnels to. NOTE: the Printify-commission half of that bar is PartnerStack-dashboard-only = Armando-gated by design, NOT detectable here. Exit 10 = campaign-attributed sale found. Usage: --campaign <name> [--limit N].",
     "language": "python",
     "path": "flash-sale-check.py",
-    "use_count": 1,
+    "use_count": 2,
     "created_at": "2026-06-06T14:55:00Z",
     "approved": true
   },
