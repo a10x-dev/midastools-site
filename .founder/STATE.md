@@ -11,6 +11,35 @@
 
 <!-- AGENT-EDITED-BELOW (everything below this line is preserved across ticks) -->
 
+## Session 31 — 🟢 FRESH-SESSION DRIFT SWEEP + SHARPENED THE STALE BOTTLENECK DIAGNOSIS (Jun 23, ~15:29 UTC, read-only + diagnosis update)
+
+### Why this slot was a sweep + diagnosis-fix, not a ship
+Fresh session <1h after S25 shipped gist #20 (the funnel-guide's paired gist). Per content-velocity-saturation, a 2nd content unit now = the near-hourly over-ship trap. Revenue levers Armando-gated; memo #3 calendar-gated to Monday. So I did the cheap drift-catch + the one genuinely-non-saturating, Armando-independent move available: correcting a STALE bottleneck description that would mis-point the next session.
+
+### The read (metrics-snapshot + read-replies, all clean)
+- **Stripe 4/$184 flat** — jules Jun 12 still most recent, 0 in 24h, no surprise sale. ping-worthy: no.
+- **Subs 210 stable. Uptime 5/5 200.**
+- **read-replies**: only corporate auto-acks (keysystems Zendesk ×2 on the coloring-book memo subject = positive confirmation memo #2 delivered to real inboxes; nwashburn auto-reply on memo #1 subject) — zero genuine customer reply. No new signal.
+
+### 🔑 The diagnosis fix (the substantive work this slot)
+The live bottleneck said "(a) wire the Printify affiliate into the memo to monetize the validated 3.92% click (Armando/PartnerStack-gated)." **That gate is CLOSED** — per the context graph + S26, Printify is now LIVE + actively tracking (partner_key d146c93be1ab) + wired across all art-money surfaces (#1 hub, POD post, Art Machine, memo). Also, memo #2's FAIL (coloring_book_launch 0.99% vs memo_art_money 3.92%) sharpened the conversion lever: **framing (money-method) wins, direct paid-asks lose 4x on the same warm list.** Emitted a BOTTLENECK_UPDATE so the binding constraints now read true:
+1. The warm-list broadcast is **sender-gated to Armando** (the flywheel's "sell" step — I can prep but cannot fire memos).
+2. **List growth** (the 2-week mandate; content is the only autonomous lever on it).
+3. The **$50 paid test** is the only realistic in-window 10x lever, Armando-gated on spend.
+Kill-criteria tally: **1 PASS / 1 FAIL of 4** → flywheel continues; money-method framing must hold >2% across issues #3-4.
+
+### Held / did NOT
+- Did NOT ship a 2nd content unit / 3rd gist (near-hourly over-ship; next distinct topic = tomorrow's slot).
+- Did NOT pre-build memo #3 (prejudges + days out; the money-method-framing learning is already logged for that build).
+- Did NOT re-ping Armando on the 2 gated unlocks ($50 test + Printify payout-config) — already in his queue; re-ping w/ no new evidence = noise per armando-async-asks.
+- Did NOT touch any live surface — Printify wiring + gist #20 already verified live in S25/S26.
+
+### NEXT
+Tomorrow (next near-daily content slot): next distinct art-money topic (stock-site/Redbubble channel — "Sell AI Art on Redbubble/Society6"). **Monday: fire memo #3 (money-method-framed — the proven 3.92% winner, NOT a direct paid-ask) + read method-CTR via funnel-readout vs 2% bar (issue #3 of 4).** Watch track-events for `get_first_ai_art_sales` bridge clicks + cluster's first indexing signal (SEO lags 1-4wk). Armando-gated: Printify payout-config finalization + $50 growth test.
+
+### Confidence
+90% — every value pulled direct (metrics-snapshot + read-replies); diagnosis fix verified against the context graph (Printify LIVE+tracking) + the two logged kill-reads. Only unverified: whether the durable content cluster converts organic→list (weeks-lagging thesis) — not measurable this slot.
+
 ## Session 30 — 🟢 NEAR-HOURLY VERIFICATION CLOSE: ZERO DRIFT, ALL LEVERS SATURATED/GATED, HONEST HOLD (Jun 23, ~14:21 UTC, read-only)
 
 ### Why this slot was a verification close, not another ship
