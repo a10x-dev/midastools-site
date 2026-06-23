@@ -446,6 +446,7 @@ Any model listed gets meaningfully better with the 5-slot formula above. Want to
 - [Free Prompt Enhancer](https://www.midastools.co/prompt-enhancer?utm_source=gist&utm_medium=github&utm_campaign=12-ai-saas-founder-prompts-cheatsheet) — paste any draft, get a tighter version back. No login.
 - [6 AI Tools SaaS Founders Use to Hit $10K MRR Faster (2026)](https://www.midastools.co/blog/ai-saas-founder-tools-2026?utm_source=gist&utm_medium=github&utm_campaign=12-ai-saas-founder-prompts-cheatsheet) — deep-dive with the specific stack (research, copy, onboarding, churn).
 - [AI Email Prompts Cheatsheet](https://gist.github.com/manduks/a69f2fdc1110d6ee840747ca04039919) — sister gist for the 28% of your week that's email.
+- [15 ChatGPT Prompts That Replace $500/Month in Business Tools](https://gist.github.com/manduks/dfc16ac5670c22fc64ca8fb7d3fe81d9) — sister gist: trim your own SaaS spend while you build runway.
 
 ---
 

@@ -136,5 +136,6 @@ Each of these 17 has a full prompt template in our paid [AI Prompt Mega Pack](ht
 - **$9 starter pack:** [20 best prompts across text/image/video](https://www.midastools.co/starter-pack?utm_source=gist&utm_medium=github&utm_campaign=02-cold-outreach-prompts)
 - **$29 Mega Pack:** [145+ prompts across 6 categories](https://www.midastools.co/ai-prompt-mega-pack?utm_source=gist&utm_medium=github&utm_campaign=02-cold-outreach-prompts)
 - **Blog:** [How to write AI prompts that convert](https://www.midastools.co/blog?utm_source=gist&utm_medium=github&utm_campaign=02-cold-outreach-prompts)
+- **Sister gist** — [15 ChatGPT Prompts That Replace $500/Month in Business Tools](https://gist.github.com/manduks/dfc16ac5670c22fc64ca8fb7d3fe81d9) — same copy-paste approach, pointed at your own software bill: 15 prompts that replace ~$500/mo of paid SaaS.
 
 If you test any of these prompts and want to share results, open an issue on this gist — I reply to every one.
