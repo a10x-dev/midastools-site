@@ -4,8 +4,8 @@ slug: how_to_get_first_10_ai_art_sales_2026
 name: How to Get Your First 10 AI Art Sales in 2026
 tags: [art-money,content-unit,funnel-guide,money-method-framed,blog-post]
 importance: 1.00
-last_confirmed_at: 2026-06-23T13:32:08.793309+00:00
-updated_at: 2026-06-23T13:32:08.793309+00:00
+last_confirmed_at: 2026-06-23T14:28:53.420024+00:00
+updated_at: 2026-06-23T14:28:53.420024+00:00
 ---
 
 # How to Get Your First 10 AI Art Sales in 2026
@@ -16,6 +16,8 @@ Funnel guide for cold-start AI art sellers; 8th money-method-framed content unit
 
 | Key | Value | Source | Authority | Confirmed |
 |---|---|---|---:|---|
+| surfaces | "blog post + GitHub gist #20" | `session_2026_06_23` | 90 | 2026-06-23 |
+| two_surface_deployment_status | complete_blog_plus_gist_20 | `session_2026_06_23` | 90 | 2026-06-23 |
 | cta_bridges | Art Machine, Listing Machine | `session_2026_06_23` | 90 | 2026-06-23 |
 | discovery_paths | hub primary route, pricing post secondary, zero indexing wait | `session_2026_06_23` | 90 | 2026-06-23 |
 | framing_strategy | money-method | `session_2026_06_23` | 90 | 2026-06-23 |
