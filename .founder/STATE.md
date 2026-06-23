@@ -11,6 +11,53 @@
 
 <!-- AGENT-EDITED-BELOW (everything below this line is preserved across ticks) -->
 
+## Session 28 — 🔴🔑 KILL-READ #2 VERDICT: coloring_book_launch FAILED (0.99% < 2%) → DIRECT-PAID-ASK FRAMING LOSES TO MONEY-METHOD FRAMING 4x (Jun 23, T+~14h, read-only)
+
+### 🔑 THE VERDICT (the whole point of the Jun-22 send)
+Ran `funnel-readout.py --campaign coloring_book_launch --sends 203` at **T+~14h** (squarely in the T+12-18h window, metrics stamp ~10:11 UTC). **coloring_book_launch = 2 clean page_views / 203 sends = 0.99% method-CTR → KILL (threshold 2.0%).** This is issue **#2 of the 4-issue kill criterion** and it FAILED.
+- **Not a sliding-window artifact**: clean count is **2** — IDENTICAL to S27's T+5.4h floor. It did NOT grow across the open window. A window-drop would have *lowered* it; holding at 2 means 2 is the true count.
+- **De-confounded**: garbled `dbybevat_cbbx_ybhadu` cluster (33) = bot-prefetch fingerprint of coloring_book_launch, tagged as a SEPARATE string → confirms wide delivery, does NOT contaminate the clean 2 (same as S27/S41).
+- **Page is healthy, memo isn't**: `/coloring-book-machine` = #4 path (34 views) → strong organic+bridge discovery; the memo simply didn't drive clicks.
+- All 7 money-tool activations still 0 (consistent with won't-click-tools verdict).
+
+### 🔑 THE STRATEGIC LEARNING (sharpens the flywheel direction)
+| Issue | Send framing | Denom | Method-CTR | Verdict |
+|---|---|---|---|---|
+| #1 memo_art_money | money-method / free-give ("how people sell AI art") | 153 | **3.92%** | ✅ PASS |
+| #2 coloring_book_launch | direct $9.99 paid-product ask (gift-first) | 203 | **0.99%** | 🔴 FAIL |
+
+**Same warm audience, opposite framings, 4x CTR gap.** This audience clicks money-METHOD emails but NOT direct paid-product asks — fully consistent with the de-confounded "won't click a paid ask / pays for results not asks" context. **Running tally: 1 PASS / 1 FAIL of 4 → flywheel CONTINUES (criterion is a 4-issue trend), no list-rental kill yet.** Actionable rule for next Monday's memo: **revert to money-method framing + route to free tools + monetize via affiliate, NOT a direct $9.99 product ask.**
+
+### Revenue
+Stripe LIFETIME **4/$184** unchanged (jules Jun 12) — **NO $9.99 coloring-book sale**, even the 2 clickers didn't buy. Subs 205→**209** (+routine engine; metrics flagged ping-worthy, correctly overridden — routine subs aren't a milestone). 5/5 uptime 200.
+
+### Held / did NOT
+- Did NOT call a list-rental kill — only 2 of 4 issues read; the criterion is a 4-issue trend.
+- Did NOT ship a content unit (this is the verdict slot; near-hourly over-ship guard — tomorrow is the content slot).
+- Did NOT pre-build next Monday's memo (prejudges + days out) — the money-method-framing learning is logged for that build.
+- Did NOT re-poll or re-verify the Printify hub wiring (S26 verified live; churn).
+
+### NEXT
+**Next Monday's memo (issue #3 of 4):** use money-method framing (the 3.92% winner), not a direct paid-product ask — keep framing consistent with issue #1 to build a clean 4-issue read. Watch for Armando's two gated unlocks (Printify payout finalization + the $50 growth test). Tomorrow = content slot if growth cadence continues.
+
+### Confidence
+90% — verdict pulled direct via funnel-readout (2 clean page_views, --sends 203 logic clean); stability across S27→now rules out window artifact; bot-cluster de-confounded. Only unverified: whether money-method framing holds >2% across issues #3-4 (the actual flywheel-survival thesis).
+
+### Continuation — 🟢 SHIPPED THE 7TH ART-MONEY CONTENT UNIT: "How to Price AI Art in 2026" (commit 3159b3e, build clean, pushed, IndexNow fired)
+On the explicit "continue on highest-impact" push, re-resolved the saturation question: every CONVERSION-bottleneck lever is gated (Printify payout, next memo days out, on-site CTAs proven-dead 0/147). The verdict reaffirmed **list growth** as the binding constraint, and during Armando's active 2-week velocity mandate, **distinct two-surface content is the only autonomous lever on it** — and this working period shipped a *read* (verdict), not a content unit, so a unit is due per near-daily cadence.
+- **Topic = genuinely distinct, not a clone**: every existing art-money post is a platform guide (Etsy/Gumroad/POD/KDP) or niche guide; **pricing is the cross-cutting buyer question none of them own**. Money-method framed (the verdict's PROVEN-winning framing — not a paid-ask). Targets a new high-commercial-intent search cluster ("how much to charge for AI art", "AI art pricing", "digital download price").
+- **Content**: ~2,100 words, Article + FAQPage (5 FAQs) JSON-LD, 6 sections (why pricing is the lever / 2026 price ladder by product type / 5-factor formula / 2 copy-paste price-research prompts / anchoring+bundle tactics / mistakes). Price figures match cited intel (downloads $5-50, POD $19-49, custom $50-150). Bridges the sell-path (Art Machine + **Listing Machine — which literally suggests a price**, the tightest tool tie-in in the cluster) + Image Pack/Bundle ladder, all UTM-tagged `how_to_price_ai_art`.
+- **Discovery wired same-session (zero indexing wait)**: blog index (newest-first) + sitemap 0.9 + **routed the #1 hub AND the niches post into it** (Related Posts) — converts already-ranked traffic immediately + speeds the new post's own indexing.
+- Build clean (route 7.11 kB, 203/203 static), committed defd7ad..3159b3e, pushed, IndexNow 200 (139 URLs). Live-poll in flight (Vercel propagation).
+
+### Continuation — held / did NOT
+- Did NOT ship the paired gist tonight — lower marginal value (backlink/faster-index of an asset already IndexNow-submitted) + 2nd surface in one late-night period is the over-ship line; optional pairing = tomorrow.
+- Did NOT spray the pricing link into all 5 cluster posts — hub + niches are the 2 highest-traffic + tightest-fit ("pick niche → price it"); the rest is spray.
+- Did NOT pre-build next Monday's memo (prejudges + days out) or touch the protected homepage flywheel.
+
+### Continuation — NEXT
+Optional paired pricing gist tomorrow OR next distinct art-money topic (e.g. "first 10 AI art sales" funnel, stock-site channel). Next Monday: memo issue #3 with money-method framing. Watch track-events for `how_to_price_ai_art` bridge clicks + the cluster's first indexing signal (SEO lags 1-4wk). Armando-gated: Printify payout + $50 growth test.
+
 ## Session 27 — 🟢 PIPELINE-HEALTH CHECK ON coloring_book_launch: TRAFFIC FLOWING + MEASURABLE, EARLY FLOOR NON-VERDICT (Jun 23, 01:41 UTC / T+~5.4h, read-only)
 
 ### Why this slot was a pipeline-health check, NOT the verdict

@@ -4,8 +4,8 @@ slug: coloring_book_launch_memo
 name: Coloring Book Launch Memo
 tags: [memo-broadcast, two-surface-unit, money-tool-launch, art-money]
 importance: 1.00
-last_confirmed_at: 2026-06-23T01:46:24.257244+00:00
-updated_at: 2026-06-23T01:46:24.257244+00:00
+last_confirmed_at: 2026-06-23T12:56:20.157793+00:00
+updated_at: 2026-06-23T12:56:20.157793+00:00
 ---
 
 # Coloring Book Launch Memo
@@ -16,6 +16,11 @@ Scheduled Jun 22 09:00 broadcast; two-surface unit (blog + Gist #19) with $9.99 
 
 | Key | Value | Source | Authority | Confirmed |
 |---|---|---|---:|---|
+| verdict_status | FAILED | `session_2026_06_23` | 90 | 2026-06-23 |
+| verdict_date | 2026-06-23 | `session_2026_06_23` | 90 | 2026-06-23 |
+| sales_from_coloring_book_machine | 0 | `session_2026_06_23` | 90 | 2026-06-23 |
+| method_ctr_sample | 2/203 | `session_2026_06_23` | 90 | 2026-06-23 |
+| method_ctr_achieved | 0.99 | `session_2026_06_23` | 90 | 2026-06-23 |
 | pipeline_status | traffic_flowing_measurable_confirmed | `session_2026_06_22` | 90 | 2026-06-23 |
 | verdict_window_hours_from_send | 6-12 | `session_2026_06_22` | 90 | 2026-06-23 |
 | verdict_window_start_utc | 2026-06-23T08:15Z | `session_2026_06_22` | 90 | 2026-06-23 |

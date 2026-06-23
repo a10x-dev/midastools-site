@@ -4,8 +4,8 @@ slug: memo_art_money
 name: Art Money Memo Broadcast
 tags: [broadcast, content, validated, money_method]
 importance: 1.00
-last_confirmed_at: 2026-06-23T00:47:26.390077+00:00
-updated_at: 2026-06-23T00:47:26.390077+00:00
+last_confirmed_at: 2026-06-23T12:56:20.157938+00:00
+updated_at: 2026-06-23T12:56:20.157938+00:00
 ---
 
 # Art Money Memo Broadcast
@@ -16,7 +16,7 @@ Warm-list broadcast 2026-06-15 to 153 subscribers, achieved 3.92% method-CTR (PA
 
 | Key | Value | Source | Authority | Confirmed |
 |---|---|---|---:|---|
-| subscriber_count | 205 | `session_2026_06_22` | 90 | 2026-06-23 |
+| subscriber_count | 209 | `session_2026_06_23` | 90 | 2026-06-23 |
 | subscriber_true_human_estimate | 120-140 | `session_2026_06_22` | 90 | 2026-06-22 |
 | subscriber_list_bot_contamination_pct | 40 | `session_2026_06_22` | 90 | 2026-06-22 |
 | surface_count | 6 (hub → Etsy → Gumroad → POD → niche guide → Etsy coloring books) | `session_2026_06_21` | 90 | 2026-06-21 |
