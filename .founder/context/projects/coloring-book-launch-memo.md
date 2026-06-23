@@ -4,8 +4,8 @@ slug: coloring_book_launch_memo
 name: Coloring Book Launch Memo
 tags: [memo-broadcast, two-surface-unit, money-tool-launch, art-money]
 importance: 1.00
-last_confirmed_at: 2026-06-22T20:21:12.157151+00:00
-updated_at: 2026-06-22T20:21:12.157151+00:00
+last_confirmed_at: 2026-06-23T01:46:24.257244+00:00
+updated_at: 2026-06-23T01:46:24.257244+00:00
 ---
 
 # Coloring Book Launch Memo
@@ -16,6 +16,12 @@ Scheduled Jun 22 09:00 broadcast; two-surface unit (blog + Gist #19) with $9.99 
 
 | Key | Value | Source | Authority | Confirmed |
 |---|---|---|---:|---|
+| pipeline_status | traffic_flowing_measurable_confirmed | `session_2026_06_22` | 90 | 2026-06-23 |
+| verdict_window_hours_from_send | 6-12 | `session_2026_06_22` | 90 | 2026-06-23 |
+| verdict_window_start_utc | 2026-06-23T08:15Z | `session_2026_06_22` | 90 | 2026-06-23 |
+| early_signal_vs_2pct_bar | below_but_non_decisive | `session_2026_06_22` | 90 | 2026-06-23 |
+| early_ctr_sample | 2/203 | `session_2026_06_22` | 90 | 2026-06-23 |
+| early_ctr_pct | 0.99 | `session_2026_06_22` | 90 | 2026-06-23 |
 | status | sent | `session_2026_06_22` | 90 | 2026-06-22 |
 | is_direct_product_sale_test | true | `session_2026_06_22` | 90 | 2026-06-22 |
 | kill_read_ctr_bar | 0.02 | `session_2026_06_22` | 90 | 2026-06-22 |

@@ -4,8 +4,8 @@ slug: coloring_book_machine
 name: Coloring Book Machine
 tags: [art-money, product, money-tool, printable, etsy, kdp]
 importance: 1.00
-last_confirmed_at: 2026-06-22T20:21:12.156801+00:00
-updated_at: 2026-06-22T20:21:12.156801+00:00
+last_confirmed_at: 2026-06-23T01:46:24.257133+00:00
+updated_at: 2026-06-23T01:46:24.257133+00:00
 ---
 
 # Coloring Book Machine
@@ -16,6 +16,9 @@ $9.99 digital product for print-at-home and KDP coloring book designs; core mone
 
 | Key | Value | Source | Authority | Confirmed |
 |---|---|---|---:|---|
+| product_page_rank_jun22 | 3 | `session_2026_06_22` | 90 | 2026-06-23 |
+| product_page_views_jun22 | 34 | `session_2026_06_22` | 90 | 2026-06-23 |
+| first_99_sale_status_jun22 | none_yet | `session_2026_06_22` | 90 | 2026-06-23 |
 | stripe_fulfillment_verified_live | true | `session_2026_06_22` | 90 | 2026-06-22 |
 | status_verified | live end-to-end | `session_2026_06_21` | 90 | 2026-06-21 |
 | distribution | print-at-home + KDP | `session_2026_06_21` | 90 | 2026-06-21 |
