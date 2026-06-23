@@ -6,6 +6,7 @@ import EmailCapture from '../../components/EmailCapture';
 const STRIPE_BUNDLE = 'https://buy.stripe.com/bJe7sK0tNdLjgle0pscMM0b';
 const IMAGE_PACK_LINK = '/ai-image-prompt-pack';
 const STRIPE_MEGA_PACK = 'https://buy.stripe.com/4gMbJ0dgz4aJ1qkb46cMM0d';
+const PRINTIFY = 'https://try.printify.com/g84tb0f40uy0';
 
 export default function HowToMakeMoneySellingAiArt2026() {
   const title = 'How to Make Money Selling AI Art in 2026: 7 Proven Methods ($500–$10K/Month)';
@@ -115,6 +116,8 @@ export default function HowToMakeMoneySellingAiArt2026() {
         <p>The barrier to entry is low: a $10&ndash;$20/month AI subscription, a laptop, and a willingness to learn what actually sells. The barrier to <em>success</em> is knowing which methods work, which platforms to use, and what kind of art people are willing to pay for.</p>
         <p>This guide covers seven proven methods for making money with AI art, with real income numbers, platform recommendations, and <strong>copy-paste prompts</strong> you can use immediately. If you want to start a <Link href="/blog/chatgpt-side-hustle-2026" style={{ color: '#3B5FFF' }}>side hustle with AI</Link> or build a <Link href="/blog/ai-second-income-2026" style={{ color: '#3B5FFF' }}>second income stream</Link>, this is your playbook.</p>
 
+        <p style={{ fontSize: '13px', color: '#9CA3AF', fontStyle: 'italic', marginBottom: '32px' }}>Some links below (Printify) are affiliate links. They cost you nothing and help keep this guide free.</p>
+
         <hr style={{ margin: '40px 0', border: 'none', borderTop: '1px solid #eee' }} />
 
         {/* ==================== SECTION 1 ==================== */}
@@ -124,6 +127,7 @@ export default function HowToMakeMoneySellingAiArt2026() {
 
         <p><strong>Best platforms:</strong></p>
         <ul style={{ paddingLeft: '20px', marginBottom: '16px' }}>
+          <li><strong><a href={PRINTIFY} target="_blank" rel="noopener sponsored" style={{ color: '#3B5FFF', fontWeight: 600 }}>Printify + Etsy</a></strong> &mdash; the most beginner-friendly setup and where most sellers start. Connects directly to Etsy, Shopify, eBay &amp; TikTok Shop, has a 900+ product catalog, and lets you compare print providers for price and quality. Free to start, and you set your own price for 30&ndash;60% margins.</li>
           <li><strong>Redbubble</strong> &mdash; Zero cost to start. Upload designs, they handle everything. You earn 20&ndash;30% margins.</li>
           <li><strong>Merch by Amazon</strong> &mdash; Highest traffic (Amazon&rsquo;s entire customer base). Invite-only, but worth applying. Royalties of $2&ndash;$8 per shirt.</li>
           <li><strong>Printful + Etsy</strong> &mdash; Connect Printful to your Etsy shop for custom fulfillment. Higher margins (40&ndash;60%) because you set the price.</li>
