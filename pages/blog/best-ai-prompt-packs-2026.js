@@ -328,13 +328,13 @@ export default function BestAIPromptPacks2026() {
 
         <div style={{ marginTop: '24px', padding: '22px 24px', background: '#EEF2FF', border: '1px solid #C7D2FE', borderRadius: '10px' }}>
           <p style={{ margin: '0 0 12px', fontSize: '15px', color: '#1E3A8A', fontWeight: 700 }}>
-            Prefer a tool over a prompt pack? Try the free Outreach Machine.
+            Why it wins for most people
           </p>
           <p style={{ margin: '0 0 16px', fontSize: '15px', color: '#1E40AF', lineHeight: 1.5 }}>
-            A prompt pack gives you the raw prompts. The <Link href="/outreach-machine" style={{ color: '#3B5FFF', fontWeight: 700 }}>Outreach Machine</Link> does the whole job for you: tell it what you sell and who you&rsquo;re pitching, and it writes a cold email, a LinkedIn DM, and a 3-touch follow-up sequence built to book calls. Real AI, free to start, no sign-up wall.
+            At under $0.15 per prompt across 6 business functions, the <Link href="/ai-prompt-mega-pack" style={{ color: '#3B5FFF', fontWeight: 700 }}>Mega Pack</Link> pays for itself the first time you skip writing a cold email, content calendar, or SOP from scratch &mdash; and it&rsquo;s a one-time $29, not a subscription. Backed by a 30-day money-back guarantee.
           </p>
-          <Link href="/outreach-machine" style={{ display: 'inline-block', background: '#3B5FFF', color: '#fff', padding: '13px 30px', borderRadius: '100px', textDecoration: 'none', fontWeight: 700, fontSize: '15px' }}>
-            Generate your outreach free &rarr;
+          <Link href="/ai-prompt-mega-pack" style={{ display: 'inline-block', background: '#3B5FFF', color: '#fff', padding: '13px 30px', borderRadius: '100px', textDecoration: 'none', fontWeight: 700, fontSize: '15px' }}>
+            See what&rsquo;s inside &mdash; $29 &rarr;
           </Link>
         </div>
 
