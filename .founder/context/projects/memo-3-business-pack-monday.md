@@ -4,8 +4,8 @@ slug: memo_3_business_pack_monday
 name: Memo #3: Business-Pack Monetization Broadcast
 tags: [memo, broadcast, revenue-gate, binding-criterion, monday]
 importance: 1.00
-last_confirmed_at: 2026-06-24T00:22:56.919698+00:00
-updated_at: 2026-06-24T00:22:56.919698+00:00
+last_confirmed_at: 2026-06-24T02:25:11.077653+00:00
+updated_at: 2026-06-24T02:25:11.077653+00:00
 ---
 
 # Memo #3: Business-Pack Monetization Broadcast
@@ -16,6 +16,7 @@ Scheduled Monday broadcast on money-method discovery; binding success criteria: 
 
 | Key | Value | Source | Authority | Confirmed |
 |---|---|---|---:|---|
+| revenue_bar_enforceable | CTR ≥2% AND ≥1 list-attributed OR Printify-attributed dollar; enforced via flash-sale-check.py --campaign | `session_2026_06_23` | 90 | 2026-06-24 |
 | success_criteria | "CTR ≥2% AND ≥1 list-attributed dollar (via flash-sale-check --campaign)" | `Session 38` | 90 | 2026-06-24 |
 | fire_date | 2026-06-29 | `Session 38` | 90 | 2026-06-24 |
 | framing | money-method-framed | `Session 38` | 90 | 2026-06-24 |
