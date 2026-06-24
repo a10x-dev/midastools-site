@@ -11,6 +11,28 @@
 
 <!-- AGENT-EDITED-BELOW (everything below this line is preserved across ticks) -->
 
+## Session 40 — 🟢 SHIPPED TODAY'S BUSINESS-PACK CONTENT UNIT: GIST #22 (MARKETING-HIRE PROMPTS) ON THE #1 CHANNEL (Jun 24, ~13:1x local / 19:1x UTC, gist live + committed b55856a)
+
+### The move (the planned "tomorrow" unit, not a hold)
+Executed S25's literal continuity plan — "Tomorrow Jun 24 ship next business-pack content unit on #1 channel." Grounded clean first (metrics-snapshot: Stripe **4/$184 flat**, jules Jun 12 most recent, no surprise off-list sale; 210 subs; 5/5 200; GH token healthy, 79 gists), then shipped the unit. gist #21 was Jun 23, today (Jun 24) is the next near-daily slot → not over-ship.
+
+### ✅ Shipped (gist #22, live HTTP 200, IndexNow fired, committed+pushed b55856a)
+**`gist.github.com/manduks/0698e46b3cba6883c5ba919df920fb04`** — "10 ChatGPT Prompts That Do the Work of a $4,000/Month Marketing Hire — for Small Business Owners (2026)." **Money-MAKING framed** (the proven 4x-winning money-method angle, applied to business marketing) — deliberately distinct from gist #21's money-SAVING (tool-replacement) angle, so the two form an explicit sister pair (cut your tool bill / do your marketing work). 10 copy-paste prompts covering the full marketing-hire job (positioning, ICP, month of social, email sequence, sales page, local SEO, ad copy, reviews engine, lead magnet, sales follow-up) + a "what a marketing hire costs vs which prompt covers it" value table (~$3,500–6,000/mo equivalent) + the universal 5-slot business-prompt formula + Common Mistakes + Resources. Funnels to **the exact proven-converting SKUs all 4 buyers bought: Mega Pack $29 (145+ business prompts, verified at source) + All Kits Bundle $97**, free Prompt Enhancer ×2, + the best-ai-prompt-packs commercial blog. **All 9 midastools URLs UTM-tagged `22-marketing-hire-prompts` (0 untagged, verified)**; all 9 destinations pre-verified 200; forward sister-links to #21/#12/#02 (cold-outreach full URL corrected from a truncated 404 before publish). Ledger now 22 gists.
+
+### Why bottleneck-direct
+Attacks the flagged contradiction: effort → proven business buyer on the #1 discovery channel (gists, ~36% historical), funneling to the converting SKUs — not the non-converting art warm list. Autonomous, reversible, additive. Today's distinct unit, on cadence.
+
+### Held / did NOT
+- Did NOT re-poll metrics a 2nd time (S37/S38 flagged near-hourly re-poll as the trap).
+- Did NOT do the reverse gist-portfolio-backlink-sweep (re-PATCH #02/#12 → #22). update-gist.sh re-PATCHes the full body from local source, so a stale-local drift would overwrite 2-month-old live content; per the dominant recent posture (S30/S26 defer Resources-section reverse links as near-zero EV + live-edit regression risk) the marginal discovery EV doesn't justify it. #22 already forward-links the sisters → graph is discoverable.
+- Did NOT ship a 2nd content unit (over-ship), touch gated levers (memo #3 Monday, $50 test, Printify, R2 fork — all Armando/calendar).
+
+### NEXT
+Tomorrow Jun 25: next distinct business-pack-buyer content unit (or art unit if the engine rotates). Monday Jun 29: fire memo #3 money-method-framed → `funnel-readout.py --campaign <memo3> --sends N` (method-CTR vs 2%) + `flash-sale-check.py --campaign <memo3>` (first list-attributed dollar = re-scoped revenue bar). Watch gist #22 + #21 + the Mega Pack/Bundle funnel for first business-attributed conversion (1-4wk indexing lag).
+
+### Confidence
+88% — gist live (200), 0 untagged links, 9 destinations pre-verified 200, committed+pushed (b55856a), token healthy. Only unverified: whether business-pack gists convert the proven impulse buyer the way the thesis predicts (measurable as first business-attributed traffic over the indexing window).
+
 ## Session 39 — 🟢 INVESTIGATED A NEW AUTONOMOUS CANDIDATE → RESOLVES TO ARMANDO'S RESERVED NAMING CALL, GENUINE HOLD (Jun 23, ~20:18 local, read-only)
 
 ### Why this slot was investigate-then-hold, not a re-poll or over-ship
