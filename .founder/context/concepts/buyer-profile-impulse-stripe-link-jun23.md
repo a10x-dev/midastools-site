@@ -4,8 +4,8 @@ slug: buyer_profile_impulse_stripe_link_jun23
 name: Untagged Stripe-Link Impulse-Buyer (Primary Revenue Source)
 tags: [revenue buyer-profile]
 importance: 1.00
-last_confirmed_at: 2026-06-24T19:20:16.924795+00:00
-updated_at: 2026-06-24T19:20:16.924795+00:00
+last_confirmed_at: 2026-06-24T21:57:42.037152+00:00
+updated_at: 2026-06-24T21:57:42.037152+00:00
 ---
 
 # Untagged Stripe-Link Impulse-Buyer (Primary Revenue Source)
@@ -16,12 +16,14 @@ updated_at: 2026-06-24T19:20:16.924795+00:00
 
 | Key | Value | Source | Authority | Confirmed |
 |---|---|---|---:|---|
+| checkpoint_2026_06_24 | $184_MRR_4_sales_210_subs_zero_drift | `session_26_jun24` | 90 | 2026-06-24 |
 | bottleneck_confirmed | zero_list_attributed_sales—all 4 customers client_reference_id=None | `session_2026_06_23` | 90 | 2026-06-23 |
 | buyer_psychology | one-click Stripe-Link trust; brand clarity + offer framing > long-form content | `session_2026_06_23` | 90 | 2026-06-23 |
 | likely_discovery_channel | github_gists | `session_2026_06_23` | 90 | 2026-06-23 |
 | primary_organic_traffic_source | best_ai_prompt_packs_2026_blog | `session_2026_06_23` | 90 | 2026-06-23 |
+| most_recent_buyer_date | 2026-06-12 | `session_26_jun24` | 85 | 2026-06-24 |
+| most_recent_buyer_name | Jules | `session_26_jun24` | 85 | 2026-06-24 |
 | bottleneck_diagnosis | "all binding revenue levers human/calendar-gated (memo send, $50 spend, Printify payout); hourly re-poll is motion-vs-progress trap" | `Session 38` | 85 | 2026-06-24 |
-| checkpoint_2026_06_24 | $184 MRR (4 sales, 210 subs, zero drift) | `session_2026_06_24` | 80 | 2026-06-24 |
 | checkpoint_2026_06_23 | "$184 MRR (4 sales, 210 subs, zero drift from S37)" | `Session 38` | 80 | 2026-06-24 |
 
 ## Aliases

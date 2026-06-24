@@ -11,6 +11,39 @@
 
 <!-- AGENT-EDITED-BELOW (everything below this line is preserved across ticks) -->
 
+## Session 42 — 🟢 CONFIRM-AND-HOLD ~50min AFTER S25's SHIP: ZERO DRIFT, NO NEW LEVER (Jun 24, ~15:51 local / 21:51 UTC, read-only)
+
+### Why this slot was a confirm-and-hold, not a 2nd ship
+Re-invoked ~50min after S25 grounded clean + shipped the best-ai-prompts conversion-integrity fix (841fa3d). Today's FULL autonomous high-impact set is shipped (gist #22 + that fix). A 2nd content unit now = the near-hourly over-ship trap; a 3rd metrics re-poll in the series is the motion-vs-progress trap S38 explicitly named. The one cheap move that can genuinely surprise — ground on metrics (catch a surprise off-list business-pack sale, the only converting stream) + read-replies. I hadn't personally pulled either this session, so one read was warranted.
+
+### The read (both clean, zero signal)
+- **metrics-snapshot @ 21:51 UTC**: Stripe **4/$184 flat**, jules Jun 12 most recent (no surprise sale), 0/24h, 210 subs, 5/5 200, ping-worthy: no.
+- **read-replies**: same 3 known auto-acks (keysystems Zendesk ×2 = coloring_book delivery confirmation; nwashburn auto-reply on memo #1) — zero genuine customer reply.
+
+### Verdict — genuine hold
+Binding constraint = human/calendar-gated distribution (memo #3 Monday Jun 29 sender-gated, $50 test spend-gated, Printify payout, R2 fork). S23/S37/S38/S39 already swept for a new autonomous non-saturating lever and found none — remaining candidates resolve to Armando's reserved cross-page-naming call (tasks 0c323206 / 355c3d59 / ca6f7b6b). No new lever this slot. Honest hold until tomorrow's content slot (Jun 25) or Monday's memo #3 — both 12h+ out.
+
+### Held / did NOT
+No 2nd content unit (over-ship; next distinct = tomorrow). No re-diagnosis (S32 rigorous, unchanged). No re-ping (gated levers queued; armando-async empirically near-zero — nothing decide-now). No tool-tour of surfaced PostHog/Gmail/Vibe MCPs (no decided question they answer better than homegrown reads).
+
+### NEXT
+Tomorrow Jun 25: next distinct business-pack-buyer content unit on #1 channel. Monday Jun 29: fire memo #3 money-method-framed → `funnel-readout.py --campaign <memo3> --sends N` (method-CTR vs 2%) + `flash-sale-check.py --campaign <memo3>` (first list-attributed dollar = re-scoped revenue bar). Watch gist #22/#21 + Mega Pack/Bundle funnel for first business-attributed conversion (1-4wk indexing lag).
+
+### Confidence
+90% — both reads pulled direct, zero drift confirmed. Only unverified: whether the re-pointed business-pack content converts the proven buyer (lags 1-4wk to index).
+
+### Continuation — ✅ VERIFIED THE MEASUREMENT PATH FOR THE RE-POINTED BUSINESS-PACK ENGINE IS SOUND + SELF-READABLE (verify-measurement-path-before-watch, clean — no edit)
+On the continue-push, refused both a 2nd content unit (over-ship) and a re-poll. Applied the skill to the load-bearing worry under the whole re-pointed engine: **when a business-pack buyer converts via gist #21/#22 → SKU (1-4wk out), will the sale register as gist-attributed, or land "untagged" like the current 4 — making the re-pointed-content thesis unfalsifiable?** Never verified this path. Traced it end-to-end at source:
+- **Gist CTAs link to on-domain SKU pages** (`/ai-prompt-mega-pack`, `/bundle`) carrying `utm_source=gist&utm_campaign=21-replace-business-tools` / `22-marketing-hire-prompts` — NOT direct-to-Stripe, so there's a page in between to capture the UTM.
+- **`_app.js:13` runs `useStripeAttribution()` globally** → fires on the SKU pages; `stripe-attribution.js:131 getAttribution()` returns **first-touch** (90d localStorage persist) → survives the 1-4wk gist-index→buy lag (a buyer who clicks the gist then returns brand-direct days later still carries `s=gist`).
+- **Both SKU buy buttons are `buy.stripe.com` anchors** (Mega Pack `4gMbJ0dgz4aJ1qkb46cMM0d` $29 + `bJe7sK0tNdLjgle0pscMM0b` $97; Bundle `bJe7sK...0b` $97) — exactly the `STRIPE_DOMAIN='buy.stripe.com'` the rewriter targets (`:32/:163`); no `/api` redirect bypass. `:159` skips already-tagged links (no clobber). So the click rewrites `client_reference_id=att|s=gist|m=github|c=21/22-...`.
+- **Self-readable from my own seat**: `flash-sale-check.py` prints `decoded: {source,medium,campaign}` + raw `client_reference_id` on EVERY charge it scans (lines 122-125), not just campaign-matches → a gist→business-pack sale shows `source=gist` without me having to guess the campaign name, and without depending on Armando relaying the webhook email.
+- **Verdict: SOUND + FALSIFIABLE + self-measurable, no edit.** The first gist-attributed business-pack sale will register `source=gist`, cleanly distinguishable from the current 4 untagged Stripe-Link impulse buys. This removes the latent "is the re-pointed engine even measurable?" worry and makes the Monday+ watch a one-command read. Clean-close-equals-fix-close.
+- **Held**: did NOT re-PATCH old gists, did NOT touch the SKU pages (rewriter already correct; regression risk > reward), did NOT chain-find a 3rd task. Genuine saturation reached — the measurement layer for the entire re-pointed engine is now verified.
+
+### Continuation NEXT
+Weekly (alongside the metrics grounding): `python3 .founder/tools/flash-sale-check.py` and scan the `decoded:` lines for `source=gist` → first gist-attributed business-pack sale = proof the re-pointed-content thesis works (the thing the whole engine is betting on). Combined with Monday's memo #3 reads, the two converting streams (warm-list memo via `--campaign <memo3>`; business-pack via gist `source=gist`) are now both self-measurable.
+
 ## Session 41 — 🟢 CHEAP GROUNDING + HONEST HOLD: ZERO DRIFT, NO NEW AUTONOMOUS LEVER (Jun 24, ~14:50 local / 20:51 UTC, read-only)
 
 ### Why this slot was grounding-and-hold, not a 2nd ship
