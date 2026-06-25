@@ -4,8 +4,8 @@ slug: buyer_profile_impulse_stripe_link_jun23
 name: Untagged Stripe-Link Impulse-Buyer (Primary Revenue Source)
 tags: [revenue buyer-profile]
 importance: 1.00
-last_confirmed_at: 2026-06-24T21:57:42.037152+00:00
-updated_at: 2026-06-24T21:57:42.037152+00:00
+last_confirmed_at: 2026-06-24T23:14:54.153443+00:00
+updated_at: 2026-06-24T23:14:54.153443+00:00
 ---
 
 # Untagged Stripe-Link Impulse-Buyer (Primary Revenue Source)
@@ -16,7 +16,8 @@ updated_at: 2026-06-24T21:57:42.037152+00:00
 
 | Key | Value | Source | Authority | Confirmed |
 |---|---|---|---:|---|
-| checkpoint_2026_06_24 | $184_MRR_4_sales_210_subs_zero_drift | `session_26_jun24` | 90 | 2026-06-24 |
+| checkpoint_2026_06_24 | 4_sales_184_MRR_211_subs_zero_new_sales_since_jun12_no_offlist_surprise | `session_43_jun24` | 90 | 2026-06-24 |
+| current_subscriber_count | 211 | `session_43_jun24` | 90 | 2026-06-24 |
 | bottleneck_confirmed | zero_list_attributed_sales—all 4 customers client_reference_id=None | `session_2026_06_23` | 90 | 2026-06-23 |
 | buyer_psychology | one-click Stripe-Link trust; brand clarity + offer framing > long-form content | `session_2026_06_23` | 90 | 2026-06-23 |
 | likely_discovery_channel | github_gists | `session_2026_06_23` | 90 | 2026-06-23 |

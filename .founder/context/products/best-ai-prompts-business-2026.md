@@ -4,8 +4,8 @@ slug: best_ai_prompts_business_2026
 name: Best AI Prompts for Business 2026
 tags: [conversion_integrity, business_pack_cluster, proven_buyer_funnel]
 importance: 1.00
-last_confirmed_at: 2026-06-24T21:00:22.884007+00:00
-updated_at: 2026-06-24T21:00:22.884007+00:00
+last_confirmed_at: 2026-06-24T23:14:54.152372+00:00
+updated_at: 2026-06-24T23:14:54.152372+00:00
 ---
 
 # Best AI Prompts for Business 2026
@@ -16,6 +16,7 @@ Business-focused prompt pack destination page with $97 /bundle CTA on proven-buy
 
 | Key | Value | Source | Authority | Confirmed |
 |---|---|---|---:|---|
+| conversion_fix_commits | 5090eea_841fa3d_cross_page_trust_leak_verified_live | `session_43_jun24` | 90 | 2026-06-24 |
 | framing_fix_jun24_commit_841fa3d | Headline changed from "2,000+ Prompts" to "Templates & Prompts" for canonical consistency with /bundle destination page; grep audit confirmed this was the only prompts-unit overstatement across all 85 posts | `Session 41` | 85 | 2026-06-24 |
 
 ## Aliases
