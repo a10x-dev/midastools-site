@@ -6,7 +6,7 @@
 
 **KPIs**:
 - Conversations: 0 (target: 3, 7d: 0%)
-- Users: 210 (target: 30, 7d: 16.666666666666664%)
+- Users: 211 (target: 30, 7d: 17.22222222222222%)
 - Revenue: 184 (target: 997, 7d: 0%)
 
 <!-- AGENT-EDITED-BELOW (everything below this line is preserved across ticks) -->
