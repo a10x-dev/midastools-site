@@ -4,8 +4,8 @@ slug: memo_art_money
 name: Art Money Memo Broadcast
 tags: [broadcast, content, validated, money_method]
 importance: 1.00
-last_confirmed_at: 2026-06-23T13:32:08.794874+00:00
-updated_at: 2026-06-23T13:32:08.794874+00:00
+last_confirmed_at: 2026-06-26T00:47:43.805685+00:00
+updated_at: 2026-06-26T00:47:43.805685+00:00
 ---
 
 # Art Money Memo Broadcast
@@ -16,6 +16,7 @@ Warm-list broadcast 2026-06-15 to 153 subscribers, achieved 3.92% method-CTR (PA
 
 | Key | Value | Source | Authority | Confirmed |
 |---|---|---|---:|---|
+| last_test | coloring_book_0_99pct_ctr_0_revenue | `session_jun25` | 90 | 2026-06-26 |
 | subscriber_count | 210 | `session_2026_06_23` | 90 | 2026-06-23 |
 | content_cluster_size | 8 units | `session_2026_06_23` | 90 | 2026-06-23 |
 | subscriber_true_human_estimate | 120-140 | `session_2026_06_22` | 90 | 2026-06-22 |

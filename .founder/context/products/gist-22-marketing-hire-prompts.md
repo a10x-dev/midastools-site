@@ -4,8 +4,8 @@ slug: gist_22_marketing_hire_prompts
 name: 10 ChatGPT Prompts That Do the Work of a $4,000/Month Marketing Hire
 tags: [gist, business-pack, github-gists]
 importance: 0.50
-last_confirmed_at: 2026-06-24T23:14:54.154302+00:00
-updated_at: 2026-06-24T23:14:54.154302+00:00
+last_confirmed_at: 2026-06-26T00:47:43.805927+00:00
+updated_at: 2026-06-26T00:47:43.805927+00:00
 ---
 
 # 10 ChatGPT Prompts That Do the Work of a $4,000/Month Marketing Hire
@@ -16,6 +16,7 @@ Money-making-framed business-pack gist paired with gist #21 (money-saving), funn
 
 | Key | Value | Source | Authority | Confirmed |
 |---|---|---|---:|---|
+| funnel_target | business_pack_impulse_buyers | `session_jun25` | 90 | 2026-06-26 |
 | status | live_verified_shipped_commit_b55856a | `session_43_jun24` | 90 | 2026-06-24 |
 | conversion_integrity_status | clean verified vs destination pages | `session_2026_06_24` | 90 | 2026-06-24 |
 | framing_angle | money-making | `session_2026_06_24` | 90 | 2026-06-24 |
