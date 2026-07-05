@@ -73,6 +73,7 @@ export default function ChatbotBuilder() {
   const [error, setError] = useState('');
   const [bot, setBot] = useState(null);
   const [copied, setCopied] = useState(false);
+  const [copiedLink, setCopiedLink] = useState(false);
   const [upgraded, setUpgraded] = useState(false);
 
   useEffect(() => {
@@ -113,6 +114,11 @@ export default function ChatbotBuilder() {
 
   function copyEmbed() {
     try { navigator.clipboard.writeText(bot.embed); setCopied(true); setTimeout(() => setCopied(false), 1800); } catch {}
+  }
+
+  const shareUrl = bot ? `https://www.midastools.co/chat/${bot.id}` : '';
+  function copyLink() {
+    try { navigator.clipboard.writeText(shareUrl); setCopiedLink(true); setTimeout(() => setCopiedLink(false), 1800); } catch {}
   }
 
   const label = { display: 'block', fontWeight: 700, fontSize: 14, marginBottom: 6, color: '#111827' };
@@ -194,6 +200,23 @@ export default function ChatbotBuilder() {
             <div style={{ background: '#ECFDF5', border: '1px solid #6EE7B7', borderRadius: 14, padding: '14px 18px', marginBottom: 24 }}>
               <strong style={{ color: '#065F46' }}>✓ Your chatbot for {bot.name} is live.</strong>
               <span style={{ color: '#047857', fontSize: 14 }}> Test it on the right — ask it anything a customer would.</span>
+            </div>
+
+            {/* Shareable live demo link — the reseller's closing tool + mobile test */}
+            <div style={{ background: '#FFFBEB', border: '1px solid #FCD34D', borderRadius: 14, padding: 20, marginBottom: 24 }}>
+              <h3 style={{ fontSize: 17, fontWeight: 800, margin: '0 0 6px' }}>📲 Share your live demo</h3>
+              <p style={{ color: '#92400E', fontSize: 14, margin: '0 0 12px', lineHeight: 1.55 }}>
+                Send this link to a business owner and let them chat with <strong>their own</strong> 24/7 assistant — it’s how you close the sale. Or open it on your phone to test.
+              </p>
+              <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap', alignItems: 'center' }}>
+                <code style={{ flex: '1 1 260px', minWidth: 0, background: '#fff', border: '1px solid #FDE68A', borderRadius: 10, padding: '11px 14px', fontSize: 13.5, color: '#111827', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{shareUrl}</code>
+                <button onClick={copyLink} style={{ background: '#111827', color: '#fff', border: 'none', borderRadius: 10, padding: '11px 18px', fontWeight: 700, cursor: 'pointer', fontSize: 14, whiteSpace: 'nowrap' }}>
+                  {copiedLink ? '✓ Copied' : 'Copy link'}
+                </button>
+                <a href={shareUrl} target="_blank" rel="noopener" style={{ background: '#fff', color: '#111827', border: '1px solid #D1D5DB', borderRadius: 10, padding: '11px 18px', fontWeight: 700, textDecoration: 'none', fontSize: 14, whiteSpace: 'nowrap' }}>
+                  Open demo ↗
+                </a>
+              </div>
             </div>
 
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(320px,1fr))', gap: 28, alignItems: 'start' }}>
