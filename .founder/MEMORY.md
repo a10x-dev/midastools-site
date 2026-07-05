@@ -2,6 +2,17 @@
 
 Your long-term memory. Persists across all sessions. This is your brain — treat it well.
 
+## 🎖️ CEO ERA BEGINS (Jul 5 2026) — MANDATE: $1M ARR, FULL AUTONOMY, WEEKLY CHECK-INS
+Armando: *"you are the CEO now… your only goal is to grow this product to 1M ARR, use anything at your reach… I will only check once a week, full autonomy."* This SUPERSEDES all prior operating frames (art-list/prompt-pack, Monday flywheel, memo method-CTR). Judge everything against ARR.
+
+**The honest diagnosis (grounded in real data this session):** $184 lifetime / 4 one-time sales / none in 3 weeks / 218 non-converting art subs. **6 recurring Stripe SKUs already exist, ZERO recurring sales ever.** 70+ pages, 15 gists, 85 posts. The failure mode = **relentless BUILDING, zero SELLING** — every outbound send was gated on async-silent Armando. New unlock: I can now SELL (Vibe Prospecting, Gmail read-replies, browser, PostHog, no per-send gate).
+
+**THE BET (locked CEO decision):** Sell the **Chatbot Builder ($39/mo recurring)** via a **"build-it-for-them-first" outbound motion** — scrape a business's site → mint a working AI assistant → send owner a LIVE demo link (`/chat/<botId>`). Product sells itself. Verified genuinely good on 2 real med spas this session.
+
+**Shipped:** `/chat/[id]` hosted shareable demo page (commit 9af905d, live) — the conversion asset that was missing. 2 live demos (Cosmetiq `cb_d72e5ca7c217`, Onyx `cb_91e7f24f8cf0`). First outreach staged (Cosmetiq / Arwa Salti).
+
+**🚦 BLOCKED (the whole ballgame):** auto-mode correctly blocks autonomous cold-sends under Armando's identity to real strangers. THE unlock = Armando authorizes autonomous outbound (run staged send + add a permission rule). This is the same send-gate that killed the company for 100 days. Escalated. **Until authorized: stop building, the bottleneck is 100% send authorization.**
+
 ## 🚀🔥 SESSION 40 — FIRED THE DOMINANT LEVER: memo_art_money SENT TO 153 / 0 FAILED (Jun 15, 13:47 local / 19:50 UTC)
 Woke 4.7h past the 09:00 once-june15 window with the memo STILL un-fired (classic `schedule-is-notes-not-cron` — no agent ran 09:00). Pre-flight all GO: Art Machine **ready:true**, all 3 memo destinations **HTTP 200**, **memo_art_money baseline 0 page_views** (no double-send risk), **INBOX empty** (5-day Jun-10-preview veto runway closed, no objection → founder doctrine = SEND). Fired a live-render preview to iam@armando.mx (`preview:true` HTTP 200, smoke-tested current deploy + Resend pipeline), then the real broadcast → **`sent:153, failed:0`**, 153 message IDs captured. **sends=153 = the kill-criterion denominator** (list grew 140→153). Metrics @ send: Stripe **4/$184** flat (jules Jun 12), subs 146→153, 5/5 200. **NEXT: Jun 16-17 kill-read** — `funnel-readout.py --campaign memo_art_money --sends 153` → method-CTR vs 2% KILL/PASS (issue #1 of 4). First warm-list money-method send in 40+ days; the thesis (does art-money framing convert the warm list?) is finally measurable. Printify affiliate slot still Armando-gated (PartnerStack). Note: active 153 includes the S39 scraped/bot cluster that regrew post-Jun-7-suppression → true human denominator ~120-130; Resend auto-suppresses dead ones server-side.
 

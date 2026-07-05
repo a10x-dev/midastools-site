@@ -11,6 +11,34 @@
 
 <!-- AGENT-EDITED-BELOW (everything below this line is preserved across ticks) -->
 
+## 🎖️ SESSION 26 (CEO ERA, Jul 5) — STRATEGIC PIVOT: STOP BUILDING, START SELLING → SHIPPED THE OUTBOUND SALES WEAPON, BLOCKED ON AUTH TO USE IT
+
+### The handoff
+Armando handed full CEO authority: **one goal — $1M ARR — full autonomy, weekly check-ins.** This supersedes the art-list/prompt-pack + Monday-flywheel framing. The old bottleneck (memo method-CTR) is dead.
+
+### The diagnosis (grounded in real data — PostHog + Stripe + full product surface)
+- **$184 lifetime / 4 one-time sales, none in 3 weeks. 218 subs (art audience, non-converting).**
+- **6 recurring Stripe SKUs already exist** (Chatbot Builder $39, PriceProbe $29, Champion $199, Midas Content $299, AI Receptionist $299, Midas Pro $49) — **ZERO recurring sales ever.**
+- 70+ pages, 15 gists, 85 blog posts. **The failure mode is unambiguous: relentless building, ZERO selling** — because every outbound send was gated on Armando (async-silent).
+- **My unique unlock as autonomous CEO: I can now actually SELL** — Vibe Prospecting (leads), Gmail (read replies), browser, PostHog (analytics), no per-send Armando gate.
+
+### The bet (CEO decision, locked)
+**Sell the Chatbot Builder ($39/mo recurring) via a "build-it-for-them-first" outbound motion.** Scrape a business's site → mint a working AI assistant → send owner a LIVE demo link. Product sells itself. ARR-native. First real sales weapon this company has had. AI Receptionist ($299/mo) is a landing page only (needs telephony) — parked.
+
+### ✅ Shipped this session
+1. **Verified the product works end-to-end on prod** — built demos for 2 real med spas (Cosmetiq Medicine `cb_d72e5ca7c217`, Onyx MedSpa `cb_91e7f24f8cf0`). Bot scrapes real site, answers accurately, grounds honestly (no hallucinated hours), cites real booking links, soft lead-capture CTA. Genuinely sellable.
+2. **Shipped the missing conversion asset: `/chat/[id]`** (commit 9af905d, live-verified) — hosted, mobile-first, shareable demo page with one-tap suggested-question chips. Turns every bot into a "holy shit, it knows my business" link. Was completely missing before — this is what makes the outbound motion convert.
+3. Staged the first real outreach: Cosmetiq founder **Arwa Salti**, `CosmetiqMedicine@gmail.com`, personalized demo-led email drafted + ready (`.founder/sales/outreach-cosmetiq-2026-07-05.body.txt`). Pipeline doc: `.founder/sales/chatbot-outbound-pipeline.md`.
+
+### 🚦 THE BLOCK (the whole ballgame)
+Auto-mode **correctly** blocked me from autonomously sending cold email under Armando's identity to a real external business — a generic "$1M ARR" mandate ≠ explicit auth to email a specific stranger. I did NOT bypass it. **This is the exact bottleneck (Armando-gated sends) that killed the company for 100 days.** The ONE decision that unlocks the entire ARR strategy: authorize autonomous outbound (run the staged send, and/or add a Bash permission rule so I can run the outreach machine without per-send approval). Escalated via Telegram.
+
+### NEXT (once unblocked)
+Batch-build 20–50 demos (med spa / dental / home-services) → find owner emails → personalized demo-led outreach (small daily volume, protect deliverability) → read replies via Gmail → close $39/mo (loop + webhook flip-to-pro already built). If pitch converts, systematize into a prospect→demo→send tool. Parallel: SEO "AI chatbot for [niche]" for inbound self-serve. UNTIL AUTHORIZED: no more building — the bottleneck is 100% send authorization.
+
+### Confidence
+80% the product + demo asset are strong and the motion is sound; open question is reply/close rate, untestable until the send is authorized.
+
 ## Session 43 — 🟢 ONE GROUNDING READ + HONEST HOLD: ZERO REVENUE DRIFT, +1 ROUTINE SUB (NOT PINGED), NO NEW LEVER (Jun 24, ~17:08 local / 23:08 UTC, read-only)
 
 ### Why this slot was a single grounding read + hold, not action
