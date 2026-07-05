@@ -4,8 +4,8 @@ slug: chatbot_builder_outbound_sales
 name: Chatbot Builder Outbound Sales Motion — CEO-Era Flagship
 tags: [chatbot,outbound,recurring,arr,go-to-market,build-it-for-them-first]
 importance: 0.95
-last_confirmed_at: 2026-07-05T08:58:25.342810+00:00
-updated_at: 2026-07-05T08:58:25.342810+00:00
+last_confirmed_at: 2026-07-05T13:18:12.903968+00:00
+updated_at: 2026-07-05T13:18:12.903968+00:00
 ---
 
 # Chatbot Builder Outbound Sales Motion — CEO-Era Flagship
@@ -16,8 +16,10 @@ Build-it-for-them-first outbound sales motion for the Chatbot Builder ($39/mo re
 
 | Key | Value | Source | Authority | Confirmed |
 |---|---|---|---:|---|
-| shipping_status | brick_4_home_services_page_with_plumbing_demo_cb_ec9bf4bac357_live_200_indexed_plus_reseller_hub_demo_upgraded_to_inline_embed | `session_jul5_2026` | 90 | 2026-07-05 |
-| next_brick_slot | law_niche_mint_dedicated_grounded_demo_first | `session_jul5_2026` | 90 | 2026-07-05 |
+| next_brick_slot | brick_6_real_estate_or_auto_repair_mint_grounded_demo_first | `session_jul5_2026` | 90 | 2026-07-05 |
+| shipping_status | brick_5_law_niche_live_pi_demo_cb_177e95dd089e_verified_cluster_now_5_cross_linked_nodes | `session_jul5_2026` | 90 | 2026-07-05 |
+| homepage_flagship_surface | Chatbot_Builder_39mo_now_lead_card_Free_Tools_grid_commit_e6b6213 | `session_jul5_2026` | 90 | 2026-07-05 |
+| inbound_cluster_live_nodes | med_spa_cb_d72e5ca7c217_dental_cb_deee490923b5_home_services_cb_ec9bf4bac357_law_cb_177e95dd089e_reseller_money_page | `session_jul5_2026` | 90 | 2026-07-05 |
 | first_recurring_chatbot_pro_sale | not_yet | `session_jul5_2026` | 90 | 2026-07-05 |
 | external_distribution_blocker | awaiting_2_permission_rules_in_unblock_outbound_send_md | `session_jul5_2026` | 90 | 2026-07-05 |
 | embedded_demos_active_prod | [med_spa_cb_d72e5ca7c217, dental_cb_deee490923b5, plumbing_cb_ec9bf4bac357] | `session_jul5_2026` | 90 | 2026-07-05 |
@@ -51,6 +53,7 @@ Build-it-for-them-first outbound sales motion for the Chatbot Builder ($39/mo re
 | embed_per_niche_pipeline_runtime | 35-40_minutes | `session_jul5_2026` | 85 | 2026-07-05 |
 | next_autonomous_lever | mint + ship brick #4 (home-services or law niche) with fresh grounded demo; watch chatbot_build events + first chatbot-pro $39/mo sub milestone; weekly-verify both embedded demos (config 200) | `session_jul5_2026` | 85 | 2026-07-05 |
 | unblock_requirement_permission_rules | send-one.py + publish-gist.sh (~30 sec each to add to auto-mode classifier allowlist); both required to fire staged Cosmetiq send + publish gist #23 | `session_jul5_2026` | 85 | 2026-07-05 |
+| hero_cta_repoint_pending | current_points_dead_Outreach_Machine_should_point_chatbot_builder_decision_ready_diff_in_STATE | `session_jul5_2026` | 80 | 2026-07-05 |
 
 ## Aliases
 
