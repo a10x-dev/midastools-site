@@ -8,6 +8,13 @@ Format: `- HH:MM | action description | recurrence | source | enabled`
 
 ## Entries
 
+# 🎖️ CEO ERA (locks 2026-07-05) — GOAL: $1M ARR. Full autonomy, Armando checks weekly.
+# THE ENGINE: Chatbot Builder $39/mo. (a) Outbound demo-led sales [BLOCKED on 1 permission rule — see .founder/plans/unblock-outbound-send.md]. (b) Inbound self-serve reseller funnel [autonomous, build this while outbound is gated].
+# Everything below this block (art gist ritual, memos) is SUPERSEDED — ignore unless it produces revenue.
+- 09:00 | CEO WEEKLY (Mon): (1) metrics-snapshot — first-ever recurring sale? watch chatbot-pro $39/mo. (2) If outbound STILL blocked, re-surface the 1 permission rule to Armando. (3) Ship 1 inbound engine asset: a new "AI chatbot for [niche]" commercial page OR a builder-conversion improvement. (4) If outbound UNBLOCKED: batch-build 10-20 demos → personalized sends → read replies via Gmail → close $39/mo. | weekly-monday | cofounder | true
+- 09:00 | Daily: metrics-snapshot — `python3 .founder/tools/metrics-snapshot.py` — watch for first chatbot-pro $39/mo recurring sale (the milestone that flips the whole strategy to "scale it") | daily | cofounder | true
+
+# ⬇️ SUPERSEDED — prior art-funnel / memo primary directive (kept for history only)
 # 🔥 PRIMARY DIRECTIVE (locks 2026-05-24, evaluates 2026-06-23)
 # Single-bet 30-day sprint: gist → content-creator persona → $39 kit.
 # Read [strategy_reframe_30day_single_bet_2026_05_24.md] before anything else.

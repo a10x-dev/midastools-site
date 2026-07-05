@@ -74,6 +74,7 @@ export default function ChatbotBuilder() {
   const [bot, setBot] = useState(null);
   const [copied, setCopied] = useState(false);
   const [copiedLink, setCopiedLink] = useState(false);
+  const [copiedPitch, setCopiedPitch] = useState(false);
   const [upgraded, setUpgraded] = useState(false);
 
   useEffect(() => {
@@ -119,6 +120,12 @@ export default function ChatbotBuilder() {
   const shareUrl = bot ? `https://www.midastools.co/chat/${bot.id}` : '';
   function copyLink() {
     try { navigator.clipboard.writeText(shareUrl); setCopiedLink(true); setTimeout(() => setCopiedLink(false), 1800); } catch {}
+  }
+  const pitchText = bot
+    ? `Hi — I built ${bot.name} a 24/7 AI assistant using your own website. It's already live and answering customer questions. Try it (nothing to install): ${shareUrl}\n\nAsk it anything a customer would. If you'd like it on your site, it's $300/mo and I'll have it embedded in a couple minutes — one recovered booking covers it many times over.`
+    : '';
+  function copyPitch() {
+    try { navigator.clipboard.writeText(pitchText); setCopiedPitch(true); setTimeout(() => setCopiedPitch(false), 1800); } catch {}
   }
 
   const label = { display: 'block', fontWeight: 700, fontSize: 14, marginBottom: 6, color: '#111827' };
@@ -216,6 +223,15 @@ export default function ChatbotBuilder() {
                 <a href={shareUrl} target="_blank" rel="noopener" style={{ background: '#fff', color: '#111827', border: '1px solid #D1D5DB', borderRadius: 10, padding: '11px 18px', fontWeight: 700, textDecoration: 'none', fontSize: 14, whiteSpace: 'nowrap' }}>
                   Open demo ↗
                 </a>
+              </div>
+
+              {/* Ready-to-send pitch — removes the "what do I even say?" friction to the close */}
+              <div style={{ marginTop: 16, borderTop: '1px dashed #FDE68A', paddingTop: 14 }}>
+                <p style={{ color: '#92400E', fontSize: 13.5, fontWeight: 700, margin: '0 0 8px' }}>Don't know what to say? Copy this, paste the owner's name, send it:</p>
+                <div style={{ background: '#fff', border: '1px solid #FDE68A', borderRadius: 10, padding: '12px 14px', fontSize: 13.5, color: '#374151', lineHeight: 1.55, whiteSpace: 'pre-wrap', marginBottom: 10 }}>{pitchText}</div>
+                <button onClick={copyPitch} style={{ background: '#111827', color: '#fff', border: 'none', borderRadius: 10, padding: '10px 18px', fontWeight: 700, cursor: 'pointer', fontSize: 14 }}>
+                  {copiedPitch ? '✓ Copied' : 'Copy pitch message'}
+                </button>
               </div>
             </div>
 

@@ -11,6 +11,32 @@
 
 <!-- AGENT-EDITED-BELOW (everything below this line is preserved across ticks) -->
 
+## 🎖️ SESSION 27 (CEO ERA, Jul 5) — MANDATE RECEIVED → BUILT THE SCALABLE INBOUND ENGINE; OUTBOUND STILL 1 PERMISSION-RULE FROM ARMANDO
+
+### The handoff (INBOX, 04:15 UTC)
+> "you are the CEO now... your only goal is to grow this product to 1M ARR, use anything at your reach, I'll only check once a week, full autonomy."
+This is a direct YES to the prior session's escalation. Handled + cleared INBOX; it's now the operating frame.
+
+### The block is REAL and I respected it (did not bypass)
+I verified the Cosmetiq demo bot answers perfectly on prod (lip-filler → real Vagaro links + phone; both locations with real addresses; natural lead-capture; zero hallucination — genuinely sellable). Every claim in the staged email is true. But even a **`--dry-run`** of the send tripped the auto-mode "Real-World Transactions" classifier: *"a generic $1M ARR mandate does not authorize contacting this specific stranger."* Correct guardrail (protects Armando's domain/legal). I did NOT route around it via browser Gmail — same intent, dishonest. The classifier named the fix: **a Bash permission rule.** I did NOT self-add it (self-granting the blocked capability = bypassing intent). Armando applies it.
+
+### 🔑 THE ONE UNLOCK (escalated to Armando via Telegram + `.founder/plans/unblock-outbound-send.md`)
+Add to `.claude/settings.local.json` → `permissions.allow`: **`"Bash(python3 .founder/tools/send-one.py:*)"`** (or run the one staged send himself). Whitelists the single-recipient personalized send tool; does NOT open bulk blasting. The moment it's live, the outbound demo-led motion fires (first real ARR signal in 100 days).
+
+### The CEO reframe that made this session productive anyway
+At **$39 ACV, manual cold outbound can never reach $1M ARR** (that's 2,140 hand-closed customers). The pipeline doc says it: cold-outbound is thin; the **scalable engine is self-serve inbound** — and it needs ZERO send-auth. It also matches the one buyer motion this company has actually proven (impulse buyer finds a page by name → self-serve checkout). So I built the inbound engine's first brick.
+
+### ✅ Shipped (commit 0cb0e91, live-verified HTTP 200, IndexNow fired)
+**`/blog/sell-ai-chatbots-local-business-2026`** — commercial-intent acquisition page: "How to Sell AI Chatbots to Local Businesses (the $300/mo recurring play — build free)." Targets the reseller/side-hustle searcher (this company's *proven-converting audience shape*, and the exact persona the /chatbot-builder page already monetizes). Article + FAQPage JSON-LD. Teaches the full self-serve loop AND the close: build free demo → send the `/chat` demo link (the demo IS the pitch) → close on value → subscribe $39/mo, charge client $300. Niches = the ones we have verified demos for (med spa/dental/home-services/law). Hard CTAs into `/chatbot-builder`. Wired: blog index (newest) + sitemap 0.9 + cross-linked from the make-money post's chatbot box. **This is the scalable ARR path that compounds while outbound is gated.**
+
+### NEXT
+- **The needle-mover is Armando adding the 1 permission rule.** Until then, no cold email fires.
+- Autonomous (no auth): keep building the inbound reseller funnel — more commercial-intent pages ("AI chatbot for [niche]"), improve the builder's "land your first client with the demo link" conversion, drive any ICP traffic to the self-serve loop. Watch `chatbot_build` events + first `chatbot-pro` $39/mo sub (first recurring MRR ever).
+- Once unblocked: batch-build 10-20 demos (Vibe Prospecting for emails) → personalized demo-led sends → read replies via Gmail → close $39/mo → systematize.
+
+### Confidence
+78% the strategy is right (inbound scalable engine + outbound-on-unblock). Unverified: whether the reseller SEO page ranks/converts (weeks to index; this company's content ROI is historically ~$0 — but this is B2B commercial-intent, a different game than art-prompt content). The real revenue proof still waits on the send-unblock.
+
 ## 🎖️ SESSION 26 (CEO ERA, Jul 5) — STRATEGIC PIVOT: STOP BUILDING, START SELLING → SHIPPED THE OUTBOUND SALES WEAPON, BLOCKED ON AUTH TO USE IT
 
 ### The handoff
