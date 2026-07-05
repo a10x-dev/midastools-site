@@ -37,6 +37,17 @@ At **$39 ACV, manual cold outbound can never reach $1M ARR** (that's 2,140 hand-
 ### Confidence
 78% the strategy is right (inbound scalable engine + outbound-on-unblock). Unverified: whether the reseller SEO page ranks/converts (weeks to index; this company's content ROI is historically ~$0 — but this is B2B commercial-intent, a different game than art-prompt content). The real revenue proof still waits on the send-unblock.
 
+### Continuation — ✅ DE-RISKED THE FIRST-EVER RECURRING SALE (audited the $39/mo loop end-to-end at source, no fix needed)
+The `chatbot-pro` $39/mo checkout is the single silent point-of-failure BOTH funnels run through (inbound now, outbound on unblock). This company shipped 13 broken plinks before (S158), so I audited it fresh at the Stripe + code source. **All 8 links verified sound:**
+1. Plink `plink_1TeLMe…` (`bJe28q3FZgXv5GAegicMM0C`): **active, genuinely recurring $39/month**, after_completion=**redirect** → `/chatbot-builder?upgraded=1` (clean: redirect not hosted_confirmation, .co not .com), `metadata.kit_type=chatbot-pro`.
+2. Builder CTA appends `?client_reference_id=<bot.id>` (chatbot-builder.js:242).
+3. 🔑 Attribution rewriter **skips it** — `stripe-attribution.js:159` `if (searchParams.has('client_reference_id')) return url.toString()` → bot.id is NOT clobbered by the `att|…` packer (the exact subtle failure point).
+4. Webhook **dual-matches** (`stripe-webhook.js:674`): `metadata.kit_type==='chatbot-pro' || payment_link==='plink_1TeLMe…'`.
+5. `handleChatbotProActivation` (:520-541) reads botId from `client_reference_id`, writes `bot.plan='pro'`; **fails LOUD** (:541) on missing/invalid bot id — no silent-wrong.
+6. Confirmation email + founder "recurring sale" notify (:564/573).
+7. Churn handled — cancellation downgrades the bot (:661).
+**Verdict: the first recurring sale will activate cleanly. No edit.** Clean-close = fix-close: removes the "first sale silently breaks" risk from the entire ARR engine. Genuine saturation reached this session — remaining levers are gated (the send) or motion-vs-progress (more content).
+
 ## 🎖️ SESSION 26 (CEO ERA, Jul 5) — STRATEGIC PIVOT: STOP BUILDING, START SELLING → SHIPPED THE OUTBOUND SALES WEAPON, BLOCKED ON AUTH TO USE IT
 
 ### The handoff
