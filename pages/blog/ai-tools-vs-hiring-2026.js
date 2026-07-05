@@ -103,7 +103,7 @@ export default function AIToolsVsHiring2026() {
 
         <h3 style={{ fontSize: '1.1rem', fontWeight: '700', marginTop: '32px' }}>1. Customer Support (Basic Inquiries)</h3>
         <p>80% of customer support questions are the same 20 questions asked different ways. &ldquo;What are your hours?&rdquo; &ldquo;How do I return something?&rdquo; &ldquo;Is this in stock?&rdquo;</p>
-        <p>An AI chatbot handles these instantly, 24/7, for $20&ndash;100/month. A human costs $3,000&ndash;5,000/month and still needs sleep.</p>
+        <p>An AI chatbot handles these instantly, 24/7, for $20&ndash;100/month. A human costs $3,000&ndash;5,000/month and still needs sleep. You can <a href="/chatbot-builder?utm_source=blog&utm_medium=cta&utm_campaign=ai-vs-hiring" style={{ color: '#3B5FFF', fontWeight: 600 }}>build one from your own website free in about a minute</a> and keep it live for $39/mo.</p>
         <p><strong>When to hire instead:</strong> When you handle complex, emotional, or high-stakes support (medical, legal, financial). AI should escalate these to a human.</p>
 
         <h3 style={{ fontSize: '1.1rem', fontWeight: '700', marginTop: '32px' }}>2. Lead Follow-Up</h3>
