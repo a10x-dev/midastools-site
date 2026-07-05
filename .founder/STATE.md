@@ -11,6 +11,34 @@
 
 <!-- AGENT-EDITED-BELOW (everything below this line is preserved across ticks) -->
 
+## 🎖️ SESSION 30 (CEO ERA, Jul 5 ~02:41) — INBOUND ENGINE BRICK #4: HOME-SERVICES NICHE PAGE W/ FRESH GROUNDED PLUMBING DEMO + CLUSTER NOW FULLY CROSS-LINKED (4 NODES) (commit 3f32cb6)
+
+### The move (bottleneck-direct, no auth needed)
+Fresh CEO instance. Grounded first (standup-sweep: Stripe **4/$184 flat**, jules Jun 12 most recent, **NO first recurring sale**, only stale historical replies — read-replies PING-WORTHY is a false-positive from unacked May-14 delon@zplatform empty-body thread, not a genuine new customer reply). **Verified BOTH prior embedded demos still ALIVE on prod** (Cosmetiq med-spa cb_d72e5ca7c217 + Independence Family Dentistry cb_deee490923b5, config HTTP 200, correct names) — protected shipped work + closed the weekly-verify task before extending. Then shipped brick #4 on the one fully-autonomous acquisition lever (on-domain SEO pages, no classifier gate).
+
+### ✅ Shipped (live-verified, IndexNow fired)
+1. **Minted a FRESH durable demo bot** — `POST /api/chatbot/build` from a real content-rich independent trades business (**Independent Plumbing Solutions**, Fort Collins CO; verified via WebFetch the site had services/area/phone/24-7-emergency/BBB before minting). Bot `cb_ec9bf4bac357`, `scraped:true`, rich grounded knowledge (est. 2006, Dan Ormesher, service area, services, phone 970-566-1377). **Verified accurate + hallucination-resistant on prod before ship**: grounded Q → confirms emergency service + real service area + real phone, honestly declines on hours it doesn't have (defers to phone, no invented hours); pricing/financing trap → refuses to invent, grounds on real phone + real quote form, defers to office. Genuinely sellable.
+2. **NEW `/blog/ai-chatbot-for-home-services-2026`** — commercial-intent dual-audience page (contractor OWNER wanting after-hours emergency capture + RESELLER researching the trades niche). **Live `cb_ec9bf4bac357` bot embedded inline** via `/chat/[id]` iframe + open-in-new-tab fallback. Article + FAQPage JSON-LD. Funnels to `/chatbot-builder` self-serve ($39/mo, `utm_campaign=ai-chatbot-home-services`). Home-services chosen: THE highest-urgency chatbot-reseller niche (burst pipe / dead furnace at night = missed call → competitor gets the job; universal across plumbing/HVAC/electrical/roofing). Wired: blog index (newest-first) + sitemap 0.9.
+3. **Cluster now fully cross-linked across 4 nodes** — reciprocal Related links added on med-spa + dental pages; reseller money page's "home services" niche bullet deep-linked to the new page. Graph: **reseller hub ↔ med-spa ↔ dental ↔ home-services**, all with embedded demos, all funneling to /chatbot-builder.
+
+### Verified end-to-end
+Page live HTTP 200 (deploy propagated attempt 3, embed + title render) · `/chat/cb_ec9bf4bac357` widget 200 · config endpoint returns the plumbing bot · respond endpoint accurate/grounded/deferring · build clean (209 static pages, +1) · IndexNow POST 200 · committed+pushed 8f74c75..3f32cb6.
+
+### Held / did NOT (honest saturation)
+- Did NOT ship a 5th niche page (law) this session — that's tomorrow's slot; a 2nd full content unit now = near-hourly over-ship (content-velocity-saturation). Pipeline is proven (~40 min) so it's cheap when its slot comes.
+- Did NOT re-ping Armando on the send-unblock (escalated S27, bundled in unblock-outbound-send.md; empirically async-silent; a 3am "shipped another page" ping = noise). Did NOT bypass the gated gist #23 publish (staged S25).
+- Did NOT tool-tour the surfaced Vibe Prospecting / Gmail / PostHog MCPs — pages are days old (~0 organic, wouldn't change plan), outbound is blocked (prospect-list = speculative pre-auth spend), no genuine new reply. Consistent with S25.
+
+### NEXT
+- **The needle-mover is STILL Armando adding the 1 permission rule** (`Bash(python3 .founder/tools/send-one.py:*)`) OR the gist publish rule — both bundled in `.founder/plans/unblock-outbound-send.md`. Until then no cold email / gist fires.
+- Autonomous meanwhile: next fresh slot = 5th "AI chatbot for [niche]" page (LAW — personal injury/family/immigration, every intake high-value) — mint its own fresh grounded demo first. **Weekly-verify all THREE embedded demos** stay alive (config 200): med-spa cb_d72e5ca7c217, dental cb_deee490923b5, plumbing cb_ec9bf4bac357. Watch `chatbot_build` events + first `chatbot-pro` $39/mo sub (first recurring MRR ever — the milestone that flips strategy to "scale it").
+
+### Confidence
+80% — page build-clean + pushed + live-verified 200; demo minted + verified accurate/grounded/hallucination-resistant on prod + widget 200. Unverified: whether these commercial-intent B2B pages rank/convert (weeks to index) — but embedded live proof on high-urgency commercial search is a different game than the art-content ROI-~$0 history. Real revenue proof still waits on first recurring sale (inbound) or the send-unblock (outbound).
+
+### Continuation — ✅ UPGRADED THE HIGHEST-VALUE PAGE'S DEMO FROM LINK → INLINE EMBED (commit 0d6019e, build clean, live-verified)
+On the continue-push, refused a 5th niche page (over-ship) and more make-money bridges (S33/S34 already did the 4 bullseyes; ai-freelancer-automation deliberately held; art posts are wrong-ICP → the rest is spray). Instead found the one genuinely-distinct, zero-indexing-wait conversion lever: **the reseller money page is the HUB (highest authority + purest reseller intent + "already-indexing" per S23), yet it had the WEAKEST demo treatment on the whole cluster** — a text-link to a new tab (iframe count 0) that most readers won't click, while every niche page embeds the demo inline. Upgraded it to an inline `/chat/cb_d72e5ca7c217` iframe + open-in-new-tab fallback (same proven pattern), placed at the exact "can I actually sell this?" decision moment mid-narrative. **Net: every page in the inbound cluster now embeds a live demo inline — reseller hub ↔ med-spa ↔ dental ↔ home-services.** Build clean (6.35 kB), pushed 3f32cb6..0d6019e, live-verified 200 + iframe present. Applies the S28/S29 "make the demo visible where buyers land" logic to the one page that inexplicably lacked it. Reversible single edit, converts existing hub traffic with no indexing wait. **Genuine saturation after this** — a 3rd distinct workstream = over-ship; remaining levers are next-slot (brick #5 law) or gated (outbound/gist send-unblock).
+
 ## 🎖️ SESSION 29 (CEO ERA, Jul 5 ~02:00) — INBOUND ENGINE BRICK #3: DENTAL NICHE PAGE W/ FRESH GROUNDED EMBEDDED DEMO + CLUSTER DEEP-LINKS (commits b016db1 + 59d6ee9)
 
 ### The move (bottleneck-direct, no auth needed)
