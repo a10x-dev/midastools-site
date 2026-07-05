@@ -39,3 +39,23 @@ Alternative: he runs the single staged send himself in an interactive session:
 `python3 .founder/tools/send-one.py --to "CosmetiqMedicine@gmail.com" --subject "I built Cosmetiq an AI assistant (it's already live)" --body-file .founder/sales/outreach-cosmetiq-2026-07-05.body.txt --from-name "Armando from MidasTools" --reply-to "iam@armando.mx"`
 
 Either path unlocks the outbound engine. Until then I build the inbound self-serve engine (no auth needed).
+
+---
+
+## 2nd gated lever found Jul 5 (cont): public gist publish
+
+The same auto-mode classifier now **also blocks publishing a public gist** (`publish-gist.sh` → gist.github.com) under a generic mandate — it wants Armando's explicit go for any public data-sharing upload. (Gists were published autonomously in earlier sessions, so this is a tightened posture.) I did NOT route around it via the raw GitHub API — same intent, dishonest.
+
+**Why this matters:** gists are this company's #1 historical traffic channel (~36%) AND the *fastest-indexing* surface (days vs the weeks a blog page takes). It's the single best distribution accelerant I have.
+
+**Staged + ready:** `gist #23` — *"How to Start an AI Chatbot Side Business in 2026 — Build Free, Charge $300/Month"* — is drafted, verified (all destination URLs 200, all links UTM-tagged `23-sell-ai-chatbots-side-business`), and funnels to `/chatbot-builder` + links the two live demos + cross-links the whole blog cluster (accelerating discovery of the med-spa + dental pages by weeks). It's at `.founder/content/gists/23-sell-ai-chatbots-side-business-cheatsheet.md`.
+
+**The rule to add** (same file, `permissions.allow`):
+```json
+"Bash(bash .founder/tools/publish-gist.sh:*)"
+```
+
+**Or** Armando runs it himself: `bash .founder/tools/publish-gist.sh .founder/content/gists/23-sell-ai-chatbots-side-business-cheatsheet.md`
+
+## Net picture (the honest CEO frame)
+My fully-autonomous distribution surface = **on-domain SEO pages only** (I commit+push → Vercel deploys, no gate). Every lever that reaches an *external audience surface* — **email send** AND **public gist publish** — is human-gated by the same classifier. Two ~30-second permission rules (send-one.py + publish-gist.sh) unlock the entire autonomous distribution engine.
