@@ -11,6 +11,41 @@
 
 <!-- AGENT-EDITED-BELOW (everything below this line is preserved across ticks) -->
 
+## 🎖️ SESSION 28 (CEO ERA, Jul 5 night) — INBOUND ENGINE BRICK #2: NICHE PAGE W/ LIVE EMBEDDED DEMO + PUT PROOF ON THE MONEY PAGE (commit d7d3f3b)
+
+### The move (bottleneck-direct, no auth needed)
+Outbound is still 1-permission-rule-from-Armando (S27 escalation unchanged, INBOX empty). So the autonomous lever is the inbound self-serve engine — the scalable path to $1M ARR that needs zero send-auth. S27 shipped brick #1 (the reseller acquisition page). This session shipped brick #2 + closed the biggest conversion gap in the whole funnel.
+
+### Grounded first (standup-sweep, clean)
+Stripe 4/$184 flat (jules Jun 12 most recent, NO first recurring sale yet — the milestone that flips strategy to "scale it" hasn't hit), subs 219, 5/5 200, ping-worthy: no. read-replies: only auto-acks + a launchpadly.co "free listing" solicitation (unverified paid-link-seller shape à la zPlatform — did NOT chase).
+
+### 🔑 The gap I found + closed: NO live proof anywhere in the inbound funnel
+Verified the **Cosmetiq med-spa demo bot is ALIVE + accurate on prod** (asked "lip filler + where located" → real answer: Portland OR + Vancouver WA + real address, grounded, no hallucination). But the reseller money page (S27) linked to /chatbot-builder with **zero embedded live proof**, and there was **no niche page** targeting the business owner who searches "AI chatbot for [niche]". The demo is the single strongest conversion asset ("holy shit it knows the business") and it was invisible on every inbound surface.
+
+### ✅ Shipped (commit d7d3f3b, build clean, pushed, live-verify in flight)
+1. **NEW `/blog/ai-chatbot-for-med-spas-2026`** — commercial-intent SEO page, dual-audience (med-spa OWNER who wants 24/7 lead capture + RESELLER researching the med-spa niche). **Live Cosmetiq bot embedded INLINE via iframe** (`/chat/[id]` is a standalone widget, no Layout → iframe-safe) so visitors chat with a real med-spa bot without leaving the page + a "open in new tab" fallback. Article + FAQPage JSON-LD. Funnels to `/chatbot-builder` self-serve ($39/mo, utm_campaign=ai-chatbot-med-spa). Med spa chosen because it's the ONE niche with a verified-live demo to embed.
+2. **RETROFIT the reseller money page** — added a compact "chat with a real demo bot" callout (links the live Cosmetiq bot) after the intro. The proven-audience page now has live proof it lacked.
+3. Wired: blog index (newest-first) + sitemap 0.9. IndexNow fire pending live-200 confirmation.
+
+### Why this is the right autonomous work (not busywork)
+The demo is verified-good; the only thing missing was making it visible where buyers land. This is a genuinely-new conversion lever (live proof inline), on the scalable no-auth engine, reversible, bottleneck-direct (acquisition/inbound). It compounds while outbound stays gated.
+
+### NEXT
+- **The needle-mover is STILL Armando adding the 1 permission rule** (`Bash(python3 .founder/tools/send-one.py:*)` in settings.local.json) OR running the staged Cosmetiq send himself. Until then no cold email fires.
+- Autonomous meanwhile: more "AI chatbot for [niche]" pages — but each should have a live demo to embed (build a fresh durable demo bot per niche first; the S26 med-spa bots may be the only surviving ones). Watch `chatbot_build` events + first `chatbot-pro` $39/mo sub (first recurring MRR ever).
+- Consider: does PostHog (now connected) give real page-traffic on /chatbot-builder + the two chatbot blog pages? Answer only if a decided question needs it — not tool-tourism.
+
+### Confidence
+80% — page build-clean + pushed + route generated; demo verified alive+accurate on prod. Unverified: whether these commercial-intent pages rank/convert (weeks to index; but this is B2B commercial-intent w/ live proof, a different game than the art-content ROI-~$0 history). Real revenue proof still waits on the first recurring sale (inbound) or the send-unblock (outbound).
+
+### Continuation — de-risked the embed strategy + audited the chokepoint + 1 zero-wait internal link (commit a7a34df)
+On the continue-push, did 3 distinct high-value things (not motion):
+1. **🔑 DURABILITY CONFIRMED (load-bearing for the whole embed-per-niche plan):** `build.js:174` writes `chatbot:<id>` via `writeKV(key, config)` with **NO ttlSeconds** → `writeKV(key,value,ttl=null)` only appends `?EX=` when a TTL is passed → bot configs **persist indefinitely** (no app-level GC/cleanup of chatbot keys either). My earlier "Unknown bot" was a wrong-param-shape test, not eviction. **So the med-spa page's embedded demo won't silently break, and embedding a live demo per niche is a durable pattern.** (Only residual risk = Upstash platform-level maxmemory eviction, out of my control, low.)
+2. **CHOKEPOINT AUDIT — /chatbot-builder is sound, no fix (clean-negative):** it already has the build-it-live demo, "Try an example" prefill, the "Share your live demo" section, and the $39/mo close wired to plink `bJe28q3FZgXv…` with `?client_reference_id=<bot.id>` (the S25-verified loop) + churn handled (`stripe-webhook.js:651` downgrades bot on `subscription.deleted`). Left it untouched → zero regression risk on the proven conversion surface. Every inbound path funnels here cleanly.
+3. **1 surgical internal link (point-ranked-content-at-new-tool, zero indexing wait):** `ai-tools-vs-hiring-2026.js` customer-support section is peak intent (reader deciding hire-human vs use-AI) → added one inline CTA to `/chatbot-builder` (utm=ai-vs-hiring). **Held the other 13 chatbot-mentioning posts** (spray / competing-CTA risk — ICP discipline).
+
+**Genuine saturation after this:** remaining moves are spray (13 more links), a spend-incurring 2nd niche page (better as a fresh slot — needs its own demo mint), or a re-poll (trap). Honest close.
+
 ## 🎖️ SESSION 27 (CEO ERA, Jul 5) — MANDATE RECEIVED → BUILT THE SCALABLE INBOUND ENGINE; OUTBOUND STILL 1 PERMISSION-RULE FROM ARMANDO
 
 ### The handoff (INBOX, 04:15 UTC)
