@@ -156,6 +156,7 @@ export default function AIChatbotForDentalPractices2026() {
         <hr style={{ margin: '40px 0', border: 'none', borderTop: '1px solid #eee' }} />
         <p style={{ fontSize: 14, color: '#6B7280' }}>
           Related: <Link href="/blog/ai-chatbot-for-med-spas-2026" style={{ color: '#3B5FFF' }}>AI Chatbot for Med Spas</Link> &middot;{' '}
+          <Link href="/blog/ai-chatbot-for-home-services-2026" style={{ color: '#3B5FFF' }}>AI Chatbot for Home Services</Link> &middot;{' '}
           <Link href="/blog/sell-ai-chatbots-local-business-2026" style={{ color: '#3B5FFF' }}>How to Sell AI Chatbots to Local Businesses ($300/mo)</Link> &middot;{' '}
           <Link href="/chatbot-builder" style={{ color: '#3B5FFF' }}>Build a free AI chatbot &rarr;</Link>
         </p>

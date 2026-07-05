@@ -143,7 +143,7 @@ export default function SellAIChatbotsLocalBusiness2026() {
         <ul>
           <li><strong>Med spas &amp; aesthetics</strong> &mdash; high deal value (injectables, laser packages), lots of &ldquo;do you offer X / how do I book&rdquo; questions, active on booking platforms like Vagaro. <Link href="/blog/ai-chatbot-for-med-spas-2026" style={{ color: '#3B5FFF' }}>Full breakdown of the med spa niche &rarr;</Link></li>
           <li><strong>Dental &amp; orthodontics</strong> &mdash; new-patient exams, whitening, Invisalign; insurance questions; emergency visits after hours. <Link href="/blog/ai-chatbot-for-dental-practices-2026" style={{ color: '#3B5FFF' }}>Full breakdown of the dental niche &rarr;</Link></li>
-          <li><strong>Home services (HVAC, plumbing, roofing, electrical)</strong> &mdash; emergencies happen at night; a captured lead at 11pm is a job the competitor didn&rsquo;t get.</li>
+          <li><strong>Home services (HVAC, plumbing, roofing, electrical)</strong> &mdash; emergencies happen at night; a captured lead at 11pm is a job the competitor didn&rsquo;t get. <Link href="/blog/ai-chatbot-for-home-services-2026" style={{ color: '#3B5FFF' }}>Full breakdown of the home services niche &rarr;</Link></li>
           <li><strong>Law firms (personal injury, family, immigration)</strong> &mdash; every intake is high-value; 24/7 qualification is worth a premium.</li>
           <li><strong>Real estate teams</strong> &mdash; listing and showing questions; capturing a buyer/seller lead is the entire game.</li>
         </ul>
