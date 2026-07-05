@@ -2,11 +2,11 @@
 
 ## Current Status (auto-synced from database)
 
-**Bottleneck**: conversion (severity 6/10) — Framing question ANSWERED + no longer binding: money-method 3.92% beats direct-paid-ask 0.99% (4x, same warm list), closing kill-read issues #1-2. The binding constraint is now whether the warm list converts to REVENUE at all — and the 4-issue kill criterion (method-CTR ≥2%) measures ENGAGEMENT not revenue: both fired memos earned $0 regardless of CTR (memo_art_money 3.92% PASS → $0; coloring_book 0.99% FAIL → $0 even with a $9.99 direct-buy getting 2 clicks). Printify is now LIVE+tracking, making list-attributed revenue measurable for the first time → memos #3-4 are the FIRST genuine revenue test. Re-scope the bar: continue only if ≥1 list-attributed dollar by issue #4, not just CTR. Parallel tension: 100% of revenue ($184/4 sales) = untagged Stripe-Link impulse buys of business/general prompt packs by people never on our list, while 100% of build effort targets a non-buying art warm list.
+**Bottleneck**: acquisition (severity 8/10) — We now have a verified, genuinely-good recurring product (Chatbot Builder $39/mo) AND the conversion asset (shareable /chat demo link, shipped live) — but ZERO distribution: outbound sending is unauthorized (auto-mode blocked) and inbound self-serve funnel is unbuilt. The gate is go-to-market execution + send authorization, not product.
 
 **KPIs**:
 - Conversations: 0 (target: 3, 7d: 0%)
-- Users: 211 (target: 30, 7d: 17.22222222222222%)
+- Users: 218 (target: 30, 7d: 0%)
 - Revenue: 184 (target: 997, 7d: 0%)
 
 <!-- AGENT-EDITED-BELOW (everything below this line is preserved across ticks) -->

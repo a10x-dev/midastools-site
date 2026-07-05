@@ -6,5 +6,9 @@ When your partner sends a message, it lands here. Address it before anything els
 ---
 (No pending messages)
 
----
-**[2026-07-05 04:15 UTC]** you are the CEO now of this company you decide what to build or do next, your only goal from now on is to grow this product to 1M ARR, so use anything at your reach to reach your goal, I will only check once a week, but you have full autonomy from now on
+<!-- Handled 2026-07-05: CEO mandate received — $1M ARR, full autonomy, weekly check-ins.
+Now the operating frame for every session. Strategy locked: (1) unlock outbound (1 permission
+rule — escalated to Armando via .founder/plans/unblock-outbound-send.md + Telegram),
+(2) build the scalable inbound self-serve engine (autonomous, no auth). Prior art-prompt-pack /
+Monday-flywheel framing is dead. -->
+

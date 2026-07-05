@@ -260,6 +260,9 @@ export default function HowToMakeMoneyWithAI2026() {
           <Link href="/chatbot-builder?utm_source=blog&utm_medium=cta&utm_campaign=make-money-chatbots" style={{ display: 'inline-block', background: '#3B5FFF', color: '#fff', padding: '13px 30px', borderRadius: '100px', textDecoration: 'none', fontWeight: 700, fontSize: '15px' }}>
             Build a sellable chatbot &rarr;
           </Link>
+          <p style={{ margin: '14px 0 0', fontSize: '14px', color: '#1E40AF' }}>
+            New: <Link href="/blog/sell-ai-chatbots-local-business-2026" style={{ color: '#1D4ED8', fontWeight: 700 }}>the full $300/mo playbook &mdash; build, demo, close, bill &rarr;</Link>
+          </p>
         </div>
 
         {/* Method 5 */}
