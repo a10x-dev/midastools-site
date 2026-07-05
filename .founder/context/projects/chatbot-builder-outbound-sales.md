@@ -4,8 +4,8 @@ slug: chatbot_builder_outbound_sales
 name: Chatbot Builder Outbound Sales Motion — CEO-Era Flagship
 tags: [chatbot,outbound,recurring,arr,go-to-market,build-it-for-them-first]
 importance: 0.95
-last_confirmed_at: 2026-07-05T04:45:14.528123+00:00
-updated_at: 2026-07-05T04:45:14.528123+00:00
+last_confirmed_at: 2026-07-05T05:41:05.236479+00:00
+updated_at: 2026-07-05T05:41:05.236479+00:00
 ---
 
 # Chatbot Builder Outbound Sales Motion — CEO-Era Flagship
@@ -16,9 +16,15 @@ Build-it-for-them-first outbound sales motion for the Chatbot Builder ($39/mo re
 
 | Key | Value | Source | Authority | Confirmed |
 |---|---|---|---:|---|
+| outreach_pipeline_status | hard_blocked_awaiting_permission_rule | `session_day1_ceo_era` | 90 | 2026-07-05 |
+| parallel_track_inbound | seo_funnel_primary_engine_now_active | `session_day1_ceo_era` | 90 | 2026-07-05 |
+| next_step | stage_batch_build_more_inbound_pages | `session_day1_ceo_era` | 90 | 2026-07-05 |
+| first_recurring_sale | never_hit_in_100_days | `session_day1_ceo_era` | 90 | 2026-07-05 |
+| unblock_requirement | bash_python3_founder_tools_send_one_py | `session_day1_ceo_era` | 90 | 2026-07-05 |
+| recurring_loop_verified | production_de_risked | `session_day1_ceo_era` | 90 | 2026-07-05 |
+| pitch_message | live_builder_ready_to_send | `session_day1_ceo_era` | 90 | 2026-07-05 |
+| acquisition_page_url | /blog/sell-ai-chatbots-local-business-2026 | `session_day1_ceo_era` | 90 | 2026-07-05 |
 | outreach_pipeline_location | .founder/sales/chatbot-outbound-pipeline.md | `armando_ceo_briefing_jul4` | 90 | 2026-07-05 |
-| outreach_pipeline_status | staged_awaiting_send_authorization | `armando_ceo_briefing_jul4` | 90 | 2026-07-05 |
-| parallel_track_inbound | seo_funnel_ai_chatbot_for_niche_free_build_to_39mo | `armando_ceo_briefing_jul4` | 90 | 2026-07-05 |
 | target_niches | med_spa,dental,home_services,law | `armando_ceo_briefing_jul4` | 90 | 2026-07-05 |
 | shipping_status_share_link_self_serve | live_deployed | `armando_ceo_briefing_jul4` | 90 | 2026-07-05 |
 | shipping_status_demo_link_page | live_deployed | `armando_ceo_briefing_jul4` | 90 | 2026-07-05 |
