@@ -11,6 +11,34 @@
 
 <!-- AGENT-EDITED-BELOW (everything below this line is preserved across ticks) -->
 
+## 🎖️ SESSION 31 (CEO ERA, Jul 5 ~07:00) — INBOUND ENGINE BRICK #5: LAW-FIRM NICHE PAGE W/ FRESH GROUNDED PI DEMO + CLUSTER NOW 5 CROSS-LINKED NODES + ONE WEEKLY-WINDOW UNBLOCK PING (commit 85e1438)
+
+### The move (bottleneck-direct, no auth needed — executed last session's literal plan)
+Fresh CEO instance, Sunday ~07:00. Grounded first (standup-sweep: Stripe **4/$184 flat**, jules Jun 12 most recent, **NO first recurring sale**; read-replies PING-WORTHY = the same stale unacked May-14 delon@zplatform empty-body false-positive, not a genuine customer reply; flash-sale-check clean). **Verified all 3 prior embedded demos ALIVE on prod** (med-spa cb_d72e5ca7c217 + dental cb_deee490923b5 + plumbing cb_ec9bf4bac357, config HTTP 200) — closed the weekly-verify task before extending. Then shipped brick #5 (LAW) per S25's literal "next slot" plan.
+
+### ✅ Shipped (live-verified end-to-end, IndexNow fired, commit 85e1438 pushed)
+1. **Minted a FRESH durable law demo** — `POST /api/chatbot/build` from a real content-rich independent PI firm (**Mullen & Mullen Law Firm**, Dallas; WebFetch-verified the site had practice areas / phone / 43-yr history / fee structure before minting). Bot `cb_177e95dd089e`, `scraped:true`, rich grounded knowledge (PI, Dallas/N-Texas, **29% contingency / $0-unless-collected**, free consult, phone 214-747-5240, named attorneys). **Verified accurate + hallucination-resistant on prod BEFORE ship**: grounded Q (motorcycle accidents + fee) → confirms PI scope + real 29%/$0 fee + defers case-specifics to free evaluation + offers lead capture; **trap** (out-of-scope divorce/custody + impossible "guarantee I'll win $200k") → correctly declines both ("find a family law firm" + never invents a guarantee — which for lawyers is an ethics violation). Genuinely sellable; the honesty IS the compliance feature.
+2. **NEW `/blog/ai-chatbot-for-law-firms-2026`** — commercial-intent dual-audience page (law firm managing-partner wanting 24/7 after-hours intake capture + RESELLER researching the highest-value niche). **Live `cb_177e95dd089e` bot embedded inline** via `/chat/[id]` iframe + open-in-new-tab fallback. Article + FAQPage JSON-LD. Funnels to `/chatbot-builder` self-serve ($39/mo, `utm_campaign=ai-chatbot-law-firms`). Law chosen: THE highest-value chatbot-reseller niche (a single PI/immigration case = 5-figure+ contingency fee → missed after-hours intake is enormous; owners pay $300-500/mo). Wired: blog index (newest-first) + sitemap 0.9.
+3. **Cluster now 5 fully cross-linked nodes** — reciprocal Related links added on med-spa + dental + home-services pages (law prepended); reseller money page's "law firms" niche bullet deep-linked to the new page (matching the S30 home-services pattern). Graph: **reseller hub ↔ med-spa ↔ dental ↔ home-services ↔ law**, all embedding live demos, all funneling to /chatbot-builder.
+
+### Verified end-to-end
+Page live HTTP 200 (deploy propagated attempt 4, embed present) · `/chat/cb_177e95dd089e` widget 200 · config returns the PI bot · respond endpoint accurate/grounded/refuses-legal-advice-and-guarantees · build clean (210 static pages, +1) · IndexNow POST 200 · committed+pushed 0d6019e..85e1438 (7 files, +181/-4).
+
+### One deliberate weekly-window Telegram (NOT a sub-daily re-ping)
+Sent ONE clean, low-pressure Telegram: reports the inbound engine is now built out (5-node cluster verified live) + puts the single unlock (2 permission rules in unblock-outbound-send.md) in front of Armando as a 1-tap decision with an explicit "do nothing = keep me on SEO" default. Justified because (a) it's Sunday = his stated weekly-check window, (b) it carries a genuine "engine built out" milestone (distinct from S28-S30's held sub-daily "shipped another page" pings), (c) first re-surface in ~5 sessions, (d) honest about the tradeoff (cold outreach under his domain = genuinely his call). Aligned with feedback_proactive_comms + the weekly cadence he set.
+
+### Held / did NOT
+- Did NOT ship a 6th niche page this session (over-ship; brick #6 = a fresh slot; real estate / auto repair are candidates, each needs its own fresh grounded demo mint first).
+- Did NOT bypass the gated gist #23 publish (staged S25) or the gated Cosmetiq send.
+- Did NOT tool-tour the surfaced Gmail / Slack / Vibe Prospecting / PostHog MCPs — pages are days old (~0 organic, wouldn't change plan), outbound is classifier-gated (prospect-list = speculative pre-auth spend). Consistent with S24/S25.
+
+### NEXT
+- **The needle-mover is STILL Armando adding the 2 permission rules** (send-one.py + publish-gist.sh) — both bundled in `.founder/plans/unblock-outbound-send.md`. Until then no cold email / gist fires.
+- Autonomous meanwhile: next fresh slot = 6th "AI chatbot for [niche]" page (real estate — every listing lead high-value; OR auto repair) — mint its own fresh grounded demo first. **Weekly-verify all FOUR embedded demos** stay alive (config 200): med-spa cb_d72e5ca7c217, dental cb_deee490923b5, plumbing cb_ec9bf4bac357, **law cb_177e95dd089e**. Watch `chatbot_build` events + first `chatbot-pro` $39/mo sub (first recurring MRR ever — the milestone that flips strategy to "scale it").
+
+### Confidence
+82% — page build-clean + pushed + live-verified 200; demo minted + verified accurate/grounded/hallucination-resistant on prod (grounded fee + refuses legal advice + refuses outcome guarantee) + widget 200. Unverified: whether these commercial-intent B2B pages rank/convert (weeks to index) — but embedded live proof on the highest-value commercial-intent niche is a different game than the art-content ROI-~$0 history. Real revenue proof still waits on first recurring sale (inbound) or the send-unblock (outbound).
+
 ## 🎖️ SESSION 30 (CEO ERA, Jul 5 ~02:41) — INBOUND ENGINE BRICK #4: HOME-SERVICES NICHE PAGE W/ FRESH GROUNDED PLUMBING DEMO + CLUSTER NOW FULLY CROSS-LINKED (4 NODES) (commit 3f32cb6)
 
 ### The move (bottleneck-direct, no auth needed)

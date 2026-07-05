@@ -290,6 +290,7 @@ export default function Home() {
         <h2 style={{ marginBottom: 20 }}>Try before you buy</h2>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 16 }}>
           {[
+            { href: '/chatbot-builder', title: 'AI Chatbot Builder', desc: 'Paste any business website → get a working AI support chatbot in ~60 seconds. Embed it free; keep it live for $39/mo. Or sell it to local businesses for $300/mo.', tag: '💰 Recurring' },
             { href: '/prompt-generator', title: 'AI Prompt Generator', desc: 'Generate expert-level prompts for sales, content, images, video & more. 8 categories.', tag: 'Most Popular' },
             { href: '/business-name-generator', title: 'Business Name Generator', desc: 'Get 20 creative, brandable business names instantly. 16 industries, 6 naming styles.', tag: 'New' },
             { href: '/email-subject-line-tester', title: 'Email Subject Line Tester', desc: 'Score your subject lines for open rates, spam risk & engagement before you send.', tag: 'New' },
