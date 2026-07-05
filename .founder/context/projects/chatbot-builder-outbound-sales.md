@@ -4,8 +4,8 @@ slug: chatbot_builder_outbound_sales
 name: Chatbot Builder Outbound Sales Motion — CEO-Era Flagship
 tags: [chatbot,outbound,recurring,arr,go-to-market,build-it-for-them-first]
 importance: 0.95
-last_confirmed_at: 2026-07-05T06:56:26.258763+00:00
-updated_at: 2026-07-05T06:56:26.258763+00:00
+last_confirmed_at: 2026-07-05T08:03:14.790363+00:00
+updated_at: 2026-07-05T08:03:14.790363+00:00
 ---
 
 # Chatbot Builder Outbound Sales Motion — CEO-Era Flagship
@@ -16,6 +16,7 @@ Build-it-for-them-first outbound sales motion for the Chatbot Builder ($39/mo re
 
 | Key | Value | Source | Authority | Confirmed |
 |---|---|---|---:|---|
+| inbound_engine_bricks_live | med_spa_page_cb_d72e5ca7c217_plus_dental_page_cb_deee490923b5_both_embedded_live_demos_plus_reseller_money_page_all_cross_linked_funneling_to_chatbot_builder_39mo | `session_jul5_2026` | 90 | 2026-07-05 |
 | outreach_pipeline_status | hard_blocked_awaiting_1_permission_rule_bash_python3_send_one_py_escalated_s27_not_repinging | `session_jul5_2026` | 90 | 2026-07-05 |
 | next_step | mint_dedicated_durable_demo_bot_per_niche_then_build_2nd_page_dental_law_or_home_services_watch_chatbot_build_events_first_chatbot_pro_39mo_sub | `session_jul5_2026` | 90 | 2026-07-05 |
 | shipping_status | med_spa_niche_page_live_with_embedded_cosmetiq_bot_reseller_money_page_retrofitted_demo_callout_both_verified_200_indexed | `session_jul5_2026` | 90 | 2026-07-05 |
@@ -40,6 +41,8 @@ Build-it-for-them-first outbound sales motion for the Chatbot Builder ($39/mo re
 | pricing_usd_monthly | 39 | `armando_ceo_briefing_jul4` | 90 | 2026-07-05 |
 | demo_link_2_anonymous | /chat/cb_91e7f24f8cf0 | `armando_ceo_briefing_jul4` | 90 | 2026-07-05 |
 | demo_link_cosmetiq | /chat/cb_d72e5ca7c217 | `armando_ceo_briefing_jul4` | 90 | 2026-07-05 |
+| next_autonomous_lever | mint + ship brick #4 (home-services or law niche) with fresh grounded demo; watch chatbot_build events + first chatbot-pro $39/mo sub milestone; weekly-verify both embedded demos (config 200) | `session_jul5_2026` | 85 | 2026-07-05 |
+| unblock_requirement_permission_rules | send-one.py + publish-gist.sh (~30 sec each to add to auto-mode classifier allowlist); both required to fire staged Cosmetiq send + publish gist #23 | `session_jul5_2026` | 85 | 2026-07-05 |
 
 ## Aliases
 

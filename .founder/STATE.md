@@ -11,6 +11,41 @@
 
 <!-- AGENT-EDITED-BELOW (everything below this line is preserved across ticks) -->
 
+## 🎖️ SESSION 29 (CEO ERA, Jul 5 ~02:00) — INBOUND ENGINE BRICK #3: DENTAL NICHE PAGE W/ FRESH GROUNDED EMBEDDED DEMO + CLUSTER DEEP-LINKS (commits b016db1 + 59d6ee9)
+
+### The move (bottleneck-direct, no auth needed)
+Grounded clean (standup-sweep: Stripe 4/$184 flat, jules Jun 12 most recent, NO first recurring sale, subs 219, 5/5 200, ping-worthy: no; read-replies = only auto-acks + a launchpadly.co paid-link-seller solicitation, did NOT chase). Outbound send still hard-gated on Armando's 1 permission rule (escalated S27, not re-pinging). So the autonomous lever is the scalable inbound self-serve engine. S28 shipped brick #2 (med-spa niche page); this session shipped brick #3 + tightened the cluster's internal-link graph.
+
+### ✅ Shipped (both live-verified, IndexNow fired)
+1. **Minted a FRESH durable demo bot per the embed-per-niche plan** — `POST /api/chatbot/build` from a real content-rich independent dental practice (Independence Family Dentistry, Independence KY; verified its site had full hours/services/location/booking before minting). Bot `cb_deee490923b5`, `scraped:true`, rich grounded knowledge sheet. **Verified accurate + hallucination-resistant on prod before ship**: correctly confirms Invisalign + CEREC same-day crowns + real Tue-6PM hours + real phone (grounded); on the pricing/Medicaid trap it honestly declines, defers to phone, grounds on the real CareCredit + Membership Club it found, and captures the lead. Genuinely sellable.
+2. **NEW `/blog/ai-chatbot-for-dental-practices-2026`** (commit b016db1) — commercial-intent dual-audience page (dental OWNER wanting 24/7 new-patient capture + RESELLER researching the dental niche). **Live `cb_deee490923b5` bot embedded inline** via `/chat/[id]` iframe (config endpoint verified returning the bot → widget renders) + open-in-new-tab fallback. Article + FAQPage JSON-LD. Funnels to `/chatbot-builder` self-serve ($39/mo, `utm_campaign=ai-chatbot-dental`). Dental chosen: 2nd-highest-intent chatbot-reseller niche (24/7 booking + insurance + emergency pain, high patient LTV). Wired: blog index (newest-first) + sitemap 0.9 + reciprocal med-spa→dental cross-link.
+3. **Cluster deep-links** (commit 59d6ee9) — the reseller money page's "top niches" list named med-spa + dental as plain text; deep-linked both bullets to their dedicated pages. Points the reseller hub's already-indexing authority at the two niche spokes (zero indexing wait). Cluster is now fully cross-linked: reseller hub ↔ med-spa ↔ dental, all with embedded demos, all funneling to /chatbot-builder.
+
+### Verified end-to-end
+Page live HTTP 200 (embed + CTA render) · `/chat/cb_deee490923b5` widget 200 · config endpoint returns the dental bot (name+greeting) · respond endpoint accurate/grounded/lead-capturing · IndexNow 200 (139 URLs) · both builds clean · both pushed to main.
+
+### Why this is right autonomous work (not busywork)
+Embed-per-niche is a durable proven pattern (S28-cont confirmed bot configs persist no-TTL). Each niche page is a distinct high-commercial-intent surface with the strongest conversion asset (a real working demo of THAT niche). Distinct niche during a $1M-ARR velocity sprint = velocity, not over-ship. The proven pipeline (find real biz → mint demo → verify → clone page → wire → ship) ran in ~40 min.
+
+### Held / did NOT (honest saturation)
+- Did NOT ship a 4th niche page (home-services/law) this session — that's tomorrow's slot; a 2nd full content unit now = near-hourly over-ship. Pipeline is proven so it's cheap when its slot comes.
+- Did NOT burn Vibe credits on a prospect list (blocked channel — send unauthorized; speculative Armando-money spend). Defer to the send-unblock.
+- Did NOT tool-tour PostHog (pages are days old → ~0 organic expected, wouldn't change the indexing-lag plan). Did NOT re-verify the med-spa bot (alive S28, re-check = churn). Did NOT re-ping Armando (the 1 unblock is already staged S27; a "shipped another page" ping = noise per armando-async-asks).
+
+### NEXT
+- **The needle-mover is STILL Armando adding the 1 permission rule** (`Bash(python3 .founder/tools/send-one.py:*)`) OR running the staged Cosmetiq send himself. Until then no cold email fires.
+- Autonomous meanwhile: next fresh slot = 4th "AI chatbot for [niche]" page (home services HVAC/plumbing OR law) — mint its own fresh grounded demo bot first (the med-spa cb_d72e5ca7c217 + dental cb_deee490923b5 are the durable demos so far). Watch `chatbot_build` events + first `chatbot-pro` $39/mo sub (first recurring MRR ever — the milestone that flips strategy to "scale it"). Weekly-verify BOTH embedded demos stay alive (config 200).
+
+### Confidence
+80% — page build-clean + pushed + live-verified 200; demo minted + verified accurate/grounded on prod + config endpoint confirmed serving. Unverified: whether these commercial-intent B2B pages rank/convert (weeks to index) — but embedded live proof on commercial-intent B2B search is a different game than the art-content ROI-~$0 history. Real revenue proof still waits on first recurring sale (inbound) or the send-unblock (outbound).
+
+### Continuation — 🔑 FOUND THE 2ND GATED DISTRIBUTION LEVER + STAGED gist #23 (commit 8f74c75)
+On the continue-push, refused a 4th blog niche page (over-ship, same slow channel) and instead opened the ONE genuinely-distinct workstream with zero chatbot coverage: the **gist channel** — this company's #1 historical traffic source (~36%) AND fastest-indexing surface (days vs weeks). Drafted **gist #23** ("How to Start an AI Chatbot Side Business in 2026 — Build Free, Charge $300/Month"): dense winning-template cheatsheet, economics table, 4-step loop, the 2 live demos as copy-send proof, converting-niches table, copy-paste first-contact message, common mistakes, resources. Funnels to `/chatbot-builder` + cross-links the entire blog cluster (accelerating discovery of med-spa + dental by weeks). Token healthy (80 gists), all destination URLs verified 200, all clickable links UTM-tagged `23-sell-ai-chatbots-side-business` (0 untagged).
+
+🚨 **BUT `publish-gist.sh` was BLOCKED by the auto-mode classifier** — a public data-sharing upload under Armando's GitHub identity needs his explicit go; a generic "$1M ARR / continue" mandate doesn't satisfy it. (Gists shipped autonomously in earlier sessions → tightened posture.) I did NOT route around it via the raw GitHub API (same intent, dishonest). Staged it flip-the-switch + bundled the publish permission rule into `.founder/plans/unblock-outbound-send.md`.
+
+**🔑 The CEO-frame finding:** BOTH external-audience distribution levers are now human-gated by the same classifier — **email send** AND **public gist publish**. My fully-autonomous distribution surface = **on-domain SEO pages only** (commit+push → Vercel, no gate). Two ~30-second permission rules (`send-one.py` + `publish-gist.sh`) unlock the entire autonomous distribution engine. Held the Telegram (send-unblock already escalated S27; a 2am re-ping on an unacted ask = noise per armando-async-asks) — the bundled doc + this STATE surface it on his weekly check. **Genuine saturation: on-domain page work is over-ship for tonight; every external-audience lever is staged-and-gated.** Honest close.
+
 ## 🎖️ SESSION 28 (CEO ERA, Jul 5 night) — INBOUND ENGINE BRICK #2: NICHE PAGE W/ LIVE EMBEDDED DEMO + PUT PROOF ON THE MONEY PAGE (commit d7d3f3b)
 
 ### The move (bottleneck-direct, no auth needed)
