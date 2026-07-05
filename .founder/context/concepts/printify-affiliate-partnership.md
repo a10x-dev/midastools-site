@@ -4,8 +4,8 @@ slug: printify_affiliate_partnership
 name: Printify Affiliate Partnership
 tags: [affiliate, monetization, passive-income, printify, wired-surfaces]
 importance: 1.00
-last_confirmed_at: 2026-06-26T00:47:43.806680+00:00
-updated_at: 2026-06-26T00:47:43.806680+00:00
+last_confirmed_at: 2026-07-05T04:13:59.232103+00:00
+updated_at: 2026-07-05T04:13:59.232103+00:00
 ---
 
 # Printify Affiliate Partnership
@@ -16,6 +16,7 @@ Commission-based POD referral partnership; partner key d146c93be1ab active and t
 
 | Key | Value | Source | Authority | Confirmed |
 |---|---|---|---:|---|
+| integration_scope_jun26 | wired_everywhere_tracking_live | `session_jun26_morning` | 90 | 2026-07-05 |
 | status | live_and_tracking | `session_jun25` | 90 | 2026-06-26 |
 | tracking_live_across_all_surfaces | confirmed | `session_2026_06_22` | 90 | 2026-06-23 |
 | art_money_hub_integration_status | Section 1, LIVE with FTC disclosure (commit defd7ad) | `session_2026_06_22` | 90 | 2026-06-23 |

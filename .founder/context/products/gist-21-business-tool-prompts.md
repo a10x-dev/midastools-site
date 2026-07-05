@@ -4,8 +4,8 @@ slug: gist_21_business_tool_prompts
 name: 15 ChatGPT Prompts That Replace $500/mo in Business Tools
 tags: [gist business-pack money-method startup-tools]
 importance: 1.00
-last_confirmed_at: 2026-06-26T00:47:43.805856+00:00
-updated_at: 2026-06-26T00:47:43.805856+00:00
+last_confirmed_at: 2026-07-05T04:13:59.231449+00:00
+updated_at: 2026-07-05T04:13:59.231449+00:00
 ---
 
 # 15 ChatGPT Prompts That Replace $500/mo in Business Tools
@@ -16,6 +16,7 @@ First business-pack-buyer gist since April; money-saving framing on #1 traffic c
 
 | Key | Value | Source | Authority | Confirmed |
 |---|---|---|---:|---|
+| status_jun26 | live_with_conversion_optimization | `session_jun26_morning` | 90 | 2026-07-05 |
 | funnel_target | business_pack_impulse_buyers | `session_jun25` | 90 | 2026-06-26 |
 | measurement_path_confirmed | gist_utm_to_sku_capture_to_client_reference_id_to_flash_sale_check_py | `session_26_jun24` | 90 | 2026-06-24 |
 | shipped | 2026-06-23 with reverse sister-links added to proven-buyer catalog | `session_2026_06_23` | 90 | 2026-06-24 |
@@ -30,6 +31,7 @@ First business-pack-buyer gist since April; money-saving framing on #1 traffic c
 | http_status | 200 | `session_2026_06_23` | 90 | 2026-06-23 |
 | commit | eb0869f | `session_2026_06_23` | 90 | 2026-06-23 |
 | gist_url | gist.github.com/manduks/dfc16ac5670c22fc64ca8fb7d3fe81d9 | `session_2026_06_23` | 90 | 2026-06-23 |
+| status | shipped week of Jun 19-26 (first business-pack gist on #1 discovery channel since April) | `session_43_jun26` | 80 | 2026-07-01 |
 
 ## Aliases
 

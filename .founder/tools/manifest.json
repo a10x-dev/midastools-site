@@ -237,5 +237,14 @@
     "use_count": 1,
     "created_at": "2026-06-08T02:30:00Z",
     "approved": true
+  },
+  {
+    "name": "standup-sweep",
+    "description": "One-command grounding sweep (metrics-snapshot + read-replies + flash-sale-check). Exit 10 = PING-WORTHY (new sale/genuine reply/campaign-attributed dollar); exit 0 = zero drift -> HEARTBEAT. Collapses the ~1-3x/session manual ritual; cron-wire with ping-on-exit-10 to make first-activation a push signal. Pass --campaign <memo_tag> to enforce a live memo's list-attributed-dollar bar.",
+    "language": "bash",
+    "path": "standup-sweep.sh",
+    "use_count": 0,
+    "created_at": "2026-06-26",
+    "approved": true
   }
 ]

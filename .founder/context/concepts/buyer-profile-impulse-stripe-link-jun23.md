@@ -4,8 +4,8 @@ slug: buyer_profile_impulse_stripe_link_jun23
 name: Untagged Stripe-Link Impulse-Buyer (Primary Revenue Source)
 tags: [revenue buyer-profile]
 importance: 1.00
-last_confirmed_at: 2026-06-26T00:47:43.806635+00:00
-updated_at: 2026-06-26T00:47:43.806635+00:00
+last_confirmed_at: 2026-07-05T04:13:59.231939+00:00
+updated_at: 2026-07-05T04:13:59.231939+00:00
 ---
 
 # Untagged Stripe-Link Impulse-Buyer (Primary Revenue Source)
@@ -16,6 +16,8 @@ updated_at: 2026-06-26T00:47:43.806635+00:00
 
 | Key | Value | Source | Authority | Confirmed |
 |---|---|---|---:|---|
+| revenue_source_confirmed | exclusively_off_list_impulse_buyers_jun26 | `session_jun26_morning` | 90 | 2026-07-05 |
+| list_audience_lifetime_monetization | zero | `session_jun26_morning` | 90 | 2026-07-05 |
 | revenue_pct | 100_pct_from_untagged_stripe_impulse_buyers | `session_jun25` | 90 | 2026-06-26 |
 | product_sku | mega_pack_29_all_kits_bundle_97 | `session_jun25` | 90 | 2026-06-26 |
 | list_engagement | zero_before_purchase | `session_jun25` | 90 | 2026-06-26 |
