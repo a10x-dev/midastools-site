@@ -98,6 +98,12 @@ export default function SellAIChatbotsLocalBusiness2026() {
 
         <p>Your cost to keep each bot live is <strong>$39/mo</strong>. That&rsquo;s <strong>~$260/mo of recurring margin per client.</strong> Ten clients is about $3,000/mo. Thirty is about $9,000/mo. And because it&rsquo;s embedded in their site and capturing leads, churn is low.</p>
 
+        <div style={{ background: '#FFFBEB', border: '1px solid #FDE68A', borderRadius: 14, padding: '18px 22px', margin: '28px 0' }}>
+          <p style={{ margin: '0 0 8px', fontWeight: 700, fontSize: 15 }}>See what a demo actually looks like</p>
+          <p style={{ margin: '0 0 12px', fontSize: 15, color: '#374151', fontFamily: 'system-ui, sans-serif' }}>Here&rsquo;s a real bot built in ~60 seconds from a real med spa&rsquo;s website &mdash; ask it about lip filler or where it&rsquo;s located. This is the exact kind of link you send an owner.</p>
+          <a href="/chat/cb_d72e5ca7c217" target="_blank" rel="noopener noreferrer" style={{ color: '#3B5FFF', fontWeight: 700, textDecoration: 'none' }}>Chat with a real demo bot &rarr;</a>
+        </div>
+
         <div style={ctaBox}>
           <p style={{ margin: '0 0 14px', fontWeight: 700, fontSize: 16 }}>Build your first bot free &mdash; in about 60 seconds</p>
           <p style={{ margin: '0 0 16px', fontSize: 15, color: '#374151', fontFamily: 'system-ui, sans-serif' }}>Paste any business website. Get a working, lead-capturing AI chatbot plus a live demo link you can send the owner. Free to build. $39/mo only when you put one live for a paying client.</p>
