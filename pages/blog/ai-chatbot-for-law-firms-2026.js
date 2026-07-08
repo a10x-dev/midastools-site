@@ -155,7 +155,8 @@ export default function AIChatbotForLawFirms2026() {
 
         <hr style={{ margin: '40px 0', border: 'none', borderTop: '1px solid #eee' }} />
         <p style={{ fontSize: 14, color: '#6B7280' }}>
-          Related: <Link href="/blog/ai-chatbot-for-home-services-2026" style={{ color: '#3B5FFF' }}>AI Chatbot for Home Service Businesses</Link> &middot;{' '}
+          Related: <Link href="/blog/ai-chatbot-for-real-estate-agents-2026" style={{ color: '#3B5FFF' }}>AI Chatbot for Real Estate Agents</Link> &middot;{' '}
+          <Link href="/blog/ai-chatbot-for-home-services-2026" style={{ color: '#3B5FFF' }}>AI Chatbot for Home Service Businesses</Link> &middot;{' '}
           <Link href="/blog/ai-chatbot-for-dental-practices-2026" style={{ color: '#3B5FFF' }}>AI Chatbot for Dental Practices</Link> &middot;{' '}
           <Link href="/blog/ai-chatbot-for-med-spas-2026" style={{ color: '#3B5FFF' }}>AI Chatbot for Med Spas</Link> &middot;{' '}
           <Link href="/blog/sell-ai-chatbots-local-business-2026" style={{ color: '#3B5FFF' }}>How to Sell AI Chatbots to Local Businesses ($300/mo)</Link> &middot;{' '}
