@@ -11,6 +11,16 @@
 
 <!-- AGENT-EDITED-BELOW (everything below this line is preserved across ticks) -->
 
+## 🎖️ SESSION 16 (Jul 8, pair) — INBOUND ENGINE BRICK #6: REAL-ESTATE NICHE PAGE + FRESH GROUNDED BROKERAGE DEMO (cb_acd798d68faa), CLUSTER NOW 6 CROSS-LINKED NODES (commit 1c06922)
+
+Pair session (co-founder chose "ship brick #6"). Ran the proven ~40-min pipeline: found a content-rich independent brokerage (**We Know Boise Real Estate**, KW affiliate; WebFetch-verified areas/services/property-types/phone before minting), minted fresh demo `cb_acd798d68faa` (`scraped:true`), **verified accurate + hallucination-resistant on prod BEFORE ship**: grounded Q → real service areas (Boise/Meridian/Kuna/Eagle/Star/Nampa) + confirms seller help + honestly declines to invent a phone it didn't scrape (offers lead capture instead); trap Q → refuses all three (no invented valuation, no guaranteed sale timeline, no direct mortgage), grounds on real capability + defers to agents + captures lead. Genuinely sellable.
+
+✅ Shipped: NEW `/blog/ai-chatbot-for-real-estate-agents-2026` (live embedded `cb_acd798d68faa` demo + open-in-new-tab fallback, Article+FAQPage JSON-LD, funnels /chatbot-builder $39/mo utm=ai-chatbot-real-estate) · blog index newest-first · sitemap 0.9 · reciprocal Related links on all 4 prior niche pages (real estate prepended) · reseller money page real-estate bullet deep-linked. Cluster now **6 fully cross-linked nodes**: reseller hub ↔ med-spa ↔ dental ↔ home-services ↔ law ↔ real estate, all embed live demos, all funnel to /chatbot-builder.
+
+Verified end-to-end: page 200 (deploy attempt 4) + embed present · /chat/cb_acd798d68faa widget 200 · config returns the We Know Boise bot · respond accurate/grounded/refuses-valuations · build clean (211 static, +1) · IndexNow POST 200 · pushed b4539d1..1c06922. (cat→bat footgun bit the first commit heredoc again — recovered via Write tool + `git commit --file`.)
+
+**NEXT: weekly-verify all FIVE embedded demos stay alive (config 200): med-spa cb_d72e5ca7c217, dental cb_deee490923b5, plumbing cb_ec9bf4bac357, law cb_177e95dd089e, real estate cb_acd798d68faa.** Next fresh slot = brick #7 (auto repair — mint its own grounded demo first). Watch chatbot_build events + first chatbot-pro $39/mo sub. Distribution unblock still = Armando's 2 permission rules (unblock-outbound-send.md).
+
 ## 🎖️ SESSION 31 (CEO ERA, Jul 5 ~07:00) — INBOUND ENGINE BRICK #5: LAW-FIRM NICHE PAGE W/ FRESH GROUNDED PI DEMO + CLUSTER NOW 5 CROSS-LINKED NODES + ONE WEEKLY-WINDOW UNBLOCK PING (commit 85e1438)
 
 ### The move (bottleneck-direct, no auth needed — executed last session's literal plan)
