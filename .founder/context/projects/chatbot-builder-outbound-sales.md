@@ -4,8 +4,8 @@ slug: chatbot_builder_outbound_sales
 name: Chatbot Builder Outbound Sales Motion — CEO-Era Flagship
 tags: [chatbot,outbound,recurring,arr,go-to-market,build-it-for-them-first]
 importance: 0.95
-last_confirmed_at: 2026-07-05T13:18:12.903968+00:00
-updated_at: 2026-07-05T13:18:12.903968+00:00
+last_confirmed_at: 2026-07-08T23:58:26.219850+00:00
+updated_at: 2026-07-08T23:58:26.219850+00:00
 ---
 
 # Chatbot Builder Outbound Sales Motion — CEO-Era Flagship
@@ -16,8 +16,9 @@ Build-it-for-them-first outbound sales motion for the Chatbot Builder ($39/mo re
 
 | Key | Value | Source | Authority | Confirmed |
 |---|---|---|---:|---|
-| next_brick_slot | brick_6_real_estate_or_auto_repair_mint_grounded_demo_first | `session_jul5_2026` | 90 | 2026-07-05 |
-| shipping_status | brick_5_law_niche_live_pi_demo_cb_177e95dd089e_verified_cluster_now_5_cross_linked_nodes | `session_jul5_2026` | 90 | 2026-07-05 |
+| shipping_status | brick_6_real_estate_niche_live_demo_cb_acd798d68faa_verified_cluster_now_6_nodes | `session-present` | 90 | 2026-07-08 |
+| inbound_cluster_nodes | 6 | `session-present` | 90 | 2026-07-08 |
+| hero_cta_repoint_status | drafted_pending_armando_approval | `session-present` | 90 | 2026-07-08 |
 | homepage_flagship_surface | Chatbot_Builder_39mo_now_lead_card_Free_Tools_grid_commit_e6b6213 | `session_jul5_2026` | 90 | 2026-07-05 |
 | inbound_cluster_live_nodes | med_spa_cb_d72e5ca7c217_dental_cb_deee490923b5_home_services_cb_ec9bf4bac357_law_cb_177e95dd089e_reseller_money_page | `session_jul5_2026` | 90 | 2026-07-05 |
 | first_recurring_chatbot_pro_sale | not_yet | `session_jul5_2026` | 90 | 2026-07-05 |
@@ -54,6 +55,7 @@ Build-it-for-them-first outbound sales motion for the Chatbot Builder ($39/mo re
 | next_autonomous_lever | mint + ship brick #4 (home-services or law niche) with fresh grounded demo; watch chatbot_build events + first chatbot-pro $39/mo sub milestone; weekly-verify both embedded demos (config 200) | `session_jul5_2026` | 85 | 2026-07-05 |
 | unblock_requirement_permission_rules | send-one.py + publish-gist.sh (~30 sec each to add to auto-mode classifier allowlist); both required to fire staged Cosmetiq send + publish gist #23 | `session_jul5_2026` | 85 | 2026-07-05 |
 | hero_cta_repoint_pending | current_points_dead_Outreach_Machine_should_point_chatbot_builder_decision_ready_diff_in_STATE | `session_jul5_2026` | 80 | 2026-07-05 |
+| next_brick_slot | brick_7_auto_repair | `session-present` | 30 | 2026-07-08 |
 
 ## Aliases
 
