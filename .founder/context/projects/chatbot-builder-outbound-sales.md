@@ -4,8 +4,8 @@ slug: chatbot_builder_outbound_sales
 name: Chatbot Builder Outbound Sales Motion — CEO-Era Flagship
 tags: [chatbot,outbound,recurring,arr,go-to-market,build-it-for-them-first]
 importance: 0.95
-last_confirmed_at: 2026-07-10T03:40:22.859172+00:00
-updated_at: 2026-07-10T03:40:22.859172+00:00
+last_confirmed_at: 2026-07-10T03:45:27.738736+00:00
+updated_at: 2026-07-10T03:45:27.738736+00:00
 ---
 
 # Chatbot Builder Outbound Sales Motion — CEO-Era Flagship
@@ -16,6 +16,10 @@ Build-it-for-them-first outbound sales motion for the Chatbot Builder ($39/mo re
 
 | Key | Value | Source | Authority | Confirmed |
 |---|---|---|---:|---|
+| med_spa_batch_in_progress | 5_prospects_sourcing | `user_direct` | 90 | 2026-07-10 |
+| first_pitch_date | 2026_07_09 | `user_direct` | 90 | 2026-07-10 |
+| first_pitch_person | arwa_salti | `user_direct` | 90 | 2026-07-10 |
+| first_pitch_company | cosmetiq | `user_direct` | 90 | 2026-07-10 |
 | external_distribution_blocker | unblocked_Jul9 | `session-direct` | 90 | 2026-07-10 |
 | follow_ups_scheduled | 2026-07-16 | `session-direct` | 90 | 2026-07-10 |
 | outbound_motion_status | live_repeatable | `session-direct` | 90 | 2026-07-10 |
