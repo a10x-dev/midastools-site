@@ -22,3 +22,6 @@ subscribers.csv
 
 .gemini_key
 .founder/.gemini_key
+
+# Claude Code local permission overrides (machine-local, not shared)
+.claude/settings.local.json

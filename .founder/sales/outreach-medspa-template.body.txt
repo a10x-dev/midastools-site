@@ -1,0 +1,16 @@
+Hi {OWNER_FIRST},
+
+I run MidasTools, and I built a 24/7 AI assistant for {BUSINESS} using your own website — it's already live and answering questions about your services.
+
+Try it here (nothing to install): https://www.midastools.co/chat/{BOT_ID}
+
+Ask it anything a patient would — "{Q1}", "{Q2}", "{Q3}" It answers instantly, points people toward booking, and knows {LOCATION_LINE}.
+
+The reason I built it: most med spa inquiries come in after hours or while you're back-to-back with patients — and those leads quietly slip away. This assistant answers 24/7 and captures the visitor's name + contact so nothing gets missed.
+
+If you'd like to keep it live on {DOMAIN}, it's $39/month, cancel anytime — one recovered booking covers it many times over.
+
+Worth a look? Just reply "yes" and I'll have it embedded on your site in about 2 minutes.
+
+— Armando
+MidasTools

@@ -1,5 +1,7 @@
 # How to Start an AI Chatbot Side Business in 2026 — Build Free, Charge Local Businesses $300/Month (Cheatsheet)
 
+Published: https://gist.github.com/manduks/2116c2abbd4074ad44f39f4cef8eb8e6
+
 Every local business — a dentist, a med spa, an HVAC company — loses leads every single day to questions that come in after hours or while the front desk is slammed. Someone lands on their site at 9pm, wonders *"do they take new patients / do they do X / how much is it?"*, gets no answer, and closes the tab. That lost lead is worth hundreds to thousands.
 
 You can fix that for them with a no-code AI chatbot — and it's one of the cleanest recurring side businesses of 2026: **build a working bot free, charge the owner $300/mo, pay $39/mo to keep it live.** No code, no inventory, no ad spend. This is the whole playbook.
