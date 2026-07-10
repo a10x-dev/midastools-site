@@ -4,8 +4,8 @@ slug: chatbot_builder_outbound_sales
 name: Chatbot Builder Outbound Sales Motion — CEO-Era Flagship
 tags: [chatbot,outbound,recurring,arr,go-to-market,build-it-for-them-first]
 importance: 0.95
-last_confirmed_at: 2026-07-08T23:58:26.219850+00:00
-updated_at: 2026-07-08T23:58:26.219850+00:00
+last_confirmed_at: 2026-07-10T03:40:22.859172+00:00
+updated_at: 2026-07-10T03:40:22.859172+00:00
 ---
 
 # Chatbot Builder Outbound Sales Motion — CEO-Era Flagship
@@ -16,13 +16,17 @@ Build-it-for-them-first outbound sales motion for the Chatbot Builder ($39/mo re
 
 | Key | Value | Source | Authority | Confirmed |
 |---|---|---|---:|---|
+| external_distribution_blocker | unblocked_Jul9 | `session-direct` | 90 | 2026-07-10 |
+| follow_ups_scheduled | 2026-07-16 | `session-direct` | 90 | 2026-07-10 |
+| outbound_motion_status | live_repeatable | `session-direct` | 90 | 2026-07-10 |
+| first_batch_count | 4 | `session-direct` | 90 | 2026-07-10 |
+| first_batch_sent | 2026-07-09 | `session-direct` | 90 | 2026-07-10 |
 | shipping_status | brick_6_real_estate_niche_live_demo_cb_acd798d68faa_verified_cluster_now_6_nodes | `session-present` | 90 | 2026-07-08 |
 | inbound_cluster_nodes | 6 | `session-present` | 90 | 2026-07-08 |
 | hero_cta_repoint_status | drafted_pending_armando_approval | `session-present` | 90 | 2026-07-08 |
 | homepage_flagship_surface | Chatbot_Builder_39mo_now_lead_card_Free_Tools_grid_commit_e6b6213 | `session_jul5_2026` | 90 | 2026-07-05 |
 | inbound_cluster_live_nodes | med_spa_cb_d72e5ca7c217_dental_cb_deee490923b5_home_services_cb_ec9bf4bac357_law_cb_177e95dd089e_reseller_money_page | `session_jul5_2026` | 90 | 2026-07-05 |
 | first_recurring_chatbot_pro_sale | not_yet | `session_jul5_2026` | 90 | 2026-07-05 |
-| external_distribution_blocker | awaiting_2_permission_rules_in_unblock_outbound_send_md | `session_jul5_2026` | 90 | 2026-07-05 |
 | embedded_demos_active_prod | [med_spa_cb_d72e5ca7c217, dental_cb_deee490923b5, plumbing_cb_ec9bf4bac357] | `session_jul5_2026` | 90 | 2026-07-05 |
 | inbound_engine_bricks_live | med_spa_page_cb_d72e5ca7c217_plus_dental_page_cb_deee490923b5_both_embedded_live_demos_plus_reseller_money_page_all_cross_linked_funneling_to_chatbot_builder_39mo | `session_jul5_2026` | 90 | 2026-07-05 |
 | outreach_pipeline_status | hard_blocked_awaiting_1_permission_rule_bash_python3_send_one_py_escalated_s27_not_repinging | `session_jul5_2026` | 90 | 2026-07-05 |

@@ -21,6 +21,7 @@ Owner/founder of Cosmetiq (med spa). First cold outreach target for Chatbot Buil
 
 ## Aliases
 
+- **email**: CosmetiqMedicine@gmail.com
 - **name**: Arwa Salti
 
 ---
