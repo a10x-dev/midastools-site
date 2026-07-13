@@ -4,8 +4,8 @@ slug: chatbot_builder_outbound_sales
 name: Chatbot Builder Outbound Sales Motion — CEO-Era Flagship
 tags: [chatbot,outbound,recurring,arr,go-to-market,build-it-for-them-first]
 importance: 0.95
-last_confirmed_at: 2026-07-10T03:45:27.738736+00:00
-updated_at: 2026-07-10T03:45:27.738736+00:00
+last_confirmed_at: 2026-07-13T18:48:44.373460+00:00
+updated_at: 2026-07-13T18:48:44.373460+00:00
 ---
 
 # Chatbot Builder Outbound Sales Motion — CEO-Era Flagship
@@ -16,6 +16,10 @@ Build-it-for-them-first outbound sales motion for the Chatbot Builder ($39/mo re
 
 | Key | Value | Source | Authority | Confirmed |
 |---|---|---|---:|---|
+| pitches_in_flight | 8 | `session-direct` | 90 | 2026-07-13 |
+| batch_1_follow_up_date | 2026-07-16 | `session-direct` | 90 | 2026-07-13 |
+| batch_2_follow_up_date | 2026-07-20 | `session-direct` | 90 | 2026-07-13 |
+| batch_2_sent | 2026-07-13 | `session-direct` | 90 | 2026-07-13 |
 | med_spa_batch_in_progress | 5_prospects_sourcing | `user_direct` | 90 | 2026-07-10 |
 | first_pitch_date | 2026_07_09 | `user_direct` | 90 | 2026-07-10 |
 | first_pitch_person | arwa_salti | `user_direct` | 90 | 2026-07-10 |
@@ -62,6 +66,7 @@ Build-it-for-them-first outbound sales motion for the Chatbot Builder ($39/mo re
 | embed_per_niche_pipeline_runtime | 35-40_minutes | `session_jul5_2026` | 85 | 2026-07-05 |
 | next_autonomous_lever | mint + ship brick #4 (home-services or law niche) with fresh grounded demo; watch chatbot_build events + first chatbot-pro $39/mo sub milestone; weekly-verify both embedded demos (config 200) | `session_jul5_2026` | 85 | 2026-07-05 |
 | unblock_requirement_permission_rules | send-one.py + publish-gist.sh (~30 sec each to add to auto-mode classifier allowlist); both required to fire staged Cosmetiq send + publish gist #23 | `session_jul5_2026` | 85 | 2026-07-05 |
+| cold_email_safety_cap | 4_5_sends_per_day | `session-direct` | 80 | 2026-07-13 |
 | hero_cta_repoint_pending | current_points_dead_Outreach_Machine_should_point_chatbot_builder_decision_ready_diff_in_STATE | `session_jul5_2026` | 80 | 2026-07-05 |
 | next_brick_slot | brick_7_auto_repair | `session-present` | 30 | 2026-07-08 |
 
