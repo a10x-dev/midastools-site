@@ -11,10 +11,18 @@ Follow-up rule: if no reply ~5 business days after send, send ONE follow-up. The
 | 2 | B. Beautiful Aesthetics | Brie Peterson, NP | briepetersonnp@gmail.com | cb_520cdb7f731a | /chat/cb_520cdb7f731a | 2026-07-09 | 083c3c39… | 🕓 sent, awaiting reply | 2026-07-16 |
 | 3 | Miami Elegance Medspa | Annette Bode | annette@miamielegance.com | cb_92bb9abb0bc9 | /chat/cb_92bb9abb0bc9 | 2026-07-09 | faa68d50… | 🕓 sent, awaiting reply | 2026-07-16 |
 | 4 | The Aesthetic Center (Sarasota) | Linda Goforth, PA-C | info@lookamazingsarasota.com | cb_31faae163cd6 | /chat/cb_31faae163cd6 | 2026-07-09 | b34b5e4c… | 🕓 sent, awaiting reply | 2026-07-16 |
+| 5 | Boutiq Medical Clinic | Karen Buckalew, APRN-C | info@btqclinic.com | cb_d21ce26913cc | /chat/cb_d21ce26913cc | 2026-07-13 | 39f6b99d… | 🕓 sent, awaiting reply | 2026-07-20 |
+| 6 | Glo Med Spa (Austin) | Sherry Salehi | info.glomedspaaustin@gmail.com | cb_8a308d4aa8e2 | /chat/cb_8a308d4aa8e2 | 2026-07-13 | 4ff908bb… | 🕓 sent, awaiting reply | 2026-07-20 |
+| 7 | The Beauty Spot Medspa (North Haven CT) | Maria Liuzzi, NP | maria@thebeautyspotmedspa.com | cb_2bcf59d9fd02 | /chat/cb_2bcf59d9fd02 | 2026-07-13 | b2137887… | 🕓 sent, awaiting reply | 2026-07-20 |
+| 8 | The Rural Aesthetic Med Spa (Carver MN) | Danica Holscher, NP | theruralaestheticmedspa@gmail.com | cb_831c3fc49932 | /chat/cb_831c3fc49932 | 2026-07-13 | cd25f80c… | 🕓 sent, awaiting reply | 2026-07-20 |
 
 ## Warm bench (verified, NOT yet contacted — ready for next batch)
-- **Boutiq Medical Clinic** (Orlando FL) — Karen Buckalew, APRN-C — info@btqclinic.com — boutiqclinic.com. Confidence: MED (generic inbox, owner-founded single location).
-- **Glo Med Spa** (Austin TX) — Sherry Salehi — info.glomedspaaustin@gmail.com — glomedspaaustin.com. Confidence: MED-HIGH (business gmail, owner-managed).
+_(Bench empty. 8 pitches now in flight. Next: work follow-ups Jul 16 [batch 1] + Jul 20 [batch 2], then source batch 3.)_
+
+## Discarded this round (agent-vetted, not usable)
+- Medical Spa NP (Lancaster OH) — owner named (Lindsay Eckles Hoffman) but NO published email.
+- Milford Med Spa (Milford CT) — only a mismatched-domain front-desk inbox.
+- Skin Clinic Med Spa (Riverside CA) — site 403s to fetch; email unverifiable. Retry via browser if bench runs dry.
 
 ## On a "yes" reply
 1. Confirm the $39/mo close → send the `/chatbot-builder?client_reference_id=<bot_id>` checkout (webhook flips bot to pro on payment).
