@@ -10,6 +10,9 @@
 // Key-gated, dry-run by default. Idempotent — re-running is a no-op.
 //   GET /api/clean-subscribers?key=SECRET            -> dry run (report only)
 //   GET /api/clean-subscribers?key=SECRET&apply=true -> mark + persist
+//   &bounced=a@x.com,b@y.com  -> ALSO suppress these explicit addresses even
+//     if they pass validation (for pasting hard-bounce reports from Resend —
+//     random-string addresses bounce but pass format validation).
 
 import { readSubscribers, writeSubscribers } from '../../lib/subscribers';
 import { validateEmail } from '../../lib/subscribe-guard';
@@ -22,16 +25,24 @@ export default async function handler(req, res) {
   }
 
   const apply = req.query.apply === 'true';
+  const bouncedList = new Set(
+    String(req.query.bounced || '')
+      .split(',')
+      .map((e) => e.trim().toLowerCase())
+      .filter(Boolean)
+  );
 
   try {
     const subs = await readSubscribers();
     const flagged = [];
 
     const cleaned = subs.map((s) => {
-      const bad = !validateEmail(s.email).ok;
+      const emailLc = String(s.email || '').trim().toLowerCase();
+      const invalid = !validateEmail(s.email).ok;
+      const explicitBounce = bouncedList.has(emailLc);
       const alreadyOut = s.unsubscribed === true;
-      if (bad && !alreadyOut) {
-        flagged.push({ email: s.email, reason: validateEmail(s.email).reason });
+      if ((invalid || explicitBounce) && !alreadyOut) {
+        flagged.push({ email: s.email, reason: invalid ? validateEmail(s.email).reason : 'explicit-bounce' });
         return { ...s, unsubscribed: true, bounced: true, cleaned_at: new Date().toISOString() };
       }
       return s;
