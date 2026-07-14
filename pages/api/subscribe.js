@@ -1,6 +1,7 @@
 import { Resend } from 'resend';
 import { readSubscribers, writeSubscribers } from '../../lib/subscribers';
 import { readKV, writeKV } from '../../lib/kv-store';
+import { validateEmail, checkRateLimit } from '../../lib/subscribe-guard';
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 const FROM_EMAIL = 'MidasTools <hello@midastools.co>';
@@ -26,16 +27,30 @@ export default async function handler(req, res) {
     return res.status(200).json({ success: true });
   }
 
-  if (!email || !email.includes('@')) {
+  if (!email || typeof email !== 'string') {
     return res.status(400).json({ error: 'Valid email required' });
   }
 
-  // Rate limit: reject if email has suspicious dot patterns (e.g. d.g.r.av.e.r)
-  const localPart = email.split('@')[0];
-  const dotCount = (localPart.match(/\./g) || []).length;
-  const letterCount = localPart.replace(/[^a-zA-Z]/g, '').length;
-  if (dotCount > 3 && dotCount / letterCount > 0.3) {
-    return res.status(200).json({ success: true }); // Silent reject
+  // Abuse guard (added 2026-07-14 after a bot sprayed fake/taunt addresses that
+  // hard-bounced and degraded Resend sender reputation). All rejections return
+  // a silent 200 success so the bot gets NO signal it's being blocked, and —
+  // critically — skip the welcome-email send below, protecting deliverability.
+
+  // Layer 1: format + scam-token + fake-TLD + disposable
+  const v = validateEmail(email);
+  if (!v.ok) {
+    console.warn(`[subscribe] rejected (${v.reason}): ${email}`);
+    return res.status(200).json({ success: true });
+  }
+
+  // Layer 2: per-IP rate limit — catches bursts (incl. random-string addresses
+  // that pass format validation). Real humans sign up once; bots spray.
+  const clientIp = (req.headers['x-forwarded-for'] || req.headers['x-real-ip'] || '')
+    .split(',')[0].trim();
+  const rl = await checkRateLimit(clientIp);
+  if (!rl.ok) {
+    console.warn(`[subscribe] rate-limited ip=${clientIp || 'unknown'} email=${email} count=${rl.count}`);
+    return res.status(200).json({ success: true });
   }
 
   try {

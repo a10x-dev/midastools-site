@@ -5,6 +5,7 @@
 
 import { Resend } from 'resend';
 import { readSubscribers, writeSubscribers } from '../../lib/subscribers';
+import { validateEmail } from '../../lib/subscribe-guard';
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 const FROM_EMAIL = 'MidasTools <hello@midastools.co>';
@@ -751,7 +752,9 @@ export default async function handler(req, res) {
     // ==========================================
     if (drip === 'true') {
       const allSubs = await readSubscribers();
-      const subscribers = allSubs.filter(s => !s.unsubscribed);
+      // Skip unsubscribed AND anything the abuse guard would now reject —
+      // protects sender reputation from re-sending to fake/bounced addresses.
+      const subscribers = allSubs.filter(s => !s.unsubscribed && validateEmail(s.email).ok);
 
       if (subscribers.length === 0) {
         return res.status(200).json({ success: true, sent: 0, message: 'No active subscribers' });
@@ -833,7 +836,9 @@ export default async function handler(req, res) {
       }
 
       const allSubs = await readSubscribers();
-      let activeContacts = allSubs.filter(s => !s.unsubscribed);
+      // Skip unsubscribed AND anything the abuse guard would now reject —
+      // protects sender reputation from re-sending to fake/bounced addresses.
+      let activeContacts = allSubs.filter(s => !s.unsubscribed && validateEmail(s.email).ok);
 
       // Optional cohort filter: only subs signed up at least N days ago.
       // Use to skip subs still in active nurture window (avoid email fatigue).
