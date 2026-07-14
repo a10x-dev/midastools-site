@@ -3,6 +3,7 @@ import nodemailer from 'nodemailer';
 import crypto from 'crypto';
 import { decodeAttributionFromClientRef } from '../../lib/stripe-attribution';
 import { readKV, writeKV } from '../../lib/kv-store';
+import { signDownloadUrl } from '../../lib/download-token';
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
 
@@ -441,7 +442,7 @@ function detectKit(session) {
 
 function buildBundleDownloadLinks(kit) {
   return kit.files.map(f =>
-    `<a href="https://www.midastools.co/${f.file}" style="display:block;background:#F9FAFB;border:1px solid #E5E7EB;border-radius:8px;padding:14px 20px;margin-bottom:8px;color:#3B5FFF;font-weight:700;font-size:15px;text-decoration:none;">
+    `<a href="${signDownloadUrl(f.file)}" style="display:block;background:#F9FAFB;border:1px solid #E5E7EB;border-radius:8px;padding:14px 20px;margin-bottom:8px;color:#3B5FFF;font-weight:700;font-size:15px;text-decoration:none;">
       ⬇ ${f.name}
     </a>`
   ).join('');
@@ -482,7 +483,7 @@ async function sendDownloadEmail(customerEmail, customerName, kit, opts = {}) {
   } else if (isBundle) {
     downloadSection = `<p style="color:#ccc;font-size:15px;margin-bottom:16px;">Download each kit below:</p>${buildBundleDownloadLinks(kit)}`;
   } else {
-    downloadSection = `<a href="${baseUrl}/${kit.file}" style="display:inline-block;background:#3B5FFF;color:#FFFFFF;padding:16px 32px;border-radius:10px;font-weight:800;font-size:16px;text-decoration:none;margin-bottom:32px;">
+    downloadSection = `<a href="${signDownloadUrl(kit.file)}" style="display:inline-block;background:#3B5FFF;color:#FFFFFF;padding:16px 32px;border-radius:10px;font-weight:800;font-size:16px;text-decoration:none;margin-bottom:32px;">
         ⬇ Download Your Kit
       </a>`;
   }

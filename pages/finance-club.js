@@ -4,7 +4,6 @@ import { useEffect, useState } from 'react';
 import Layout from '../components/Layout';
 
 const BUNDLE_URL = 'https://buy.stripe.com/4gMbJ0dgz4aJ1qkb46cMM0d';
-const MEGA_PACK_ZIP = '/ai-prompt-mega-pack.zip';
 
 const SAMPLE_PROMPTS = [
   {
@@ -200,7 +199,7 @@ export default function FinanceClub() {
           <div className="download-box">
             <h3>Mega Pack unlocked.</h3>
             <p>145+ prompts across 6 categories — copywriting, social, content, business operations, personal branding, productivity. ZIP file, ~80KB.</p>
-            <a href={MEGA_PACK_ZIP} className="download-btn" download>Download .zip \u2193</a>
+            <p style={{fontSize:13,marginTop:8,opacity:0.85}}>Your secure download link is on its way to <strong>{email}</strong> right now (from iam@armando.mx) \u2014 usually within a minute. Don&apos;t see it? Check spam or email iam@armando.mx.</p>
           </div>
         )}
       </div>

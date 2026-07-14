@@ -2,6 +2,7 @@ import { Resend } from 'resend';
 import { readSubscribers, writeSubscribers } from '../../lib/subscribers';
 import { readKV, writeKV } from '../../lib/kv-store';
 import { validateEmail, checkRateLimit } from '../../lib/subscribe-guard';
+import { signDownloadUrl } from '../../lib/download-token';
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 const FROM_EMAIL = 'MidasTools <hello@midastools.co>';
@@ -92,7 +93,28 @@ export default async function handler(req, res) {
       console.error('Storage error (non-fatal):', blobErr.message);
     }
 
-    // 2. Send welcome email with 5 free prompts
+    // 2a. finance-club cross-promo: deliver the free Mega Pack via a signed,
+    //     purchase-gated download link (the ZIP is no longer world-downloadable
+    //     from public/). Send this instead of the generic 5-prompts welcome.
+    if ((source || '').includes('finance-club')) {
+      const dl = signDownloadUrl('ai-prompt-mega-pack.zip');
+      await resend.emails.send({
+        from: FROM_EMAIL,
+        to: email,
+        subject: 'Your MidasTools Mega Pack — download inside',
+        html: `
+          <div style="font-family:'Inter',Helvetica,Arial,sans-serif;max-width:600px;margin:0 auto;padding:32px 24px;color:#111827;">
+            <h1 style="font-size:24px;font-weight:700;margin:0 0 16px;">Your Mega Pack is ready</h1>
+            <p style="font-size:16px;line-height:1.6;color:#374151;">145+ AI prompts for finance pros — reporting, scenario modelling, audit prep, board narrative, and ops automation. Click below to download the ZIP.</p>
+            <div style="text-align:center;margin:28px 0;">
+              <a href="${dl}" style="display:inline-block;background:#3B5FFF;color:#FFF;font-weight:700;font-size:16px;padding:14px 36px;border-radius:100px;text-decoration:none;">⬇ Download the Mega Pack</a>
+            </div>
+            <p style="font-size:13px;color:#9CA3AF;line-height:1.6;">This link is unique to you and expires in 7 days. Need a fresh one? Just reply to this email.</p>
+            <p style="font-size:14px;color:#6B7280;margin-top:24px;">Enjoy,<br/>The MidasTools Team</p>
+          </div>`,
+      });
+    } else {
+    // 2b. Send welcome email with 5 free prompts
     await resend.emails.send({
       from: FROM_EMAIL,
       to: email,
@@ -148,6 +170,7 @@ export default async function handler(req, res) {
         </div>
       `,
     });
+    }
 
     // 3. Notify founder
     await resend.emails.send({

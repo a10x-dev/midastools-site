@@ -1,10 +1,13 @@
 #!/bin/bash
 # Build ZIP files for all kits from kit-content/ directory
-# Outputs to public/ for direct download
+# Outputs to private-kits/ (NOT public/) — the ZIPs are paid products and must
+# NOT be world-downloadable by direct URL. They are served only through the
+# purchase-gated /api/download route (signed HMAC link, minted by the Stripe
+# webhook). Moving output back to public/ would re-open the 2026-07-14 vuln.
 
 SITE_DIR="/Users/armando/Documents/code/midastools-site"
 KIT_DIR="$SITE_DIR/kit-content"
-PUBLIC_DIR="$SITE_DIR/public"
+PUBLIC_DIR="$SITE_DIR/private-kits"
 
 echo "Building kit ZIPs..."
 

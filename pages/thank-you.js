@@ -239,17 +239,10 @@ export default function ThankYou() {
               <p>Your {kit.name} is being personally prepared and will be delivered to your inbox within 24 hours. You&apos;ll get a download link from <a href="mailto:iam@armando.mx" style={{color:'var(--gold)'}}>iam@armando.mx</a>.</p>
               <p style={{fontSize:13,marginTop:16}}>Need it sooner? Reply to your purchase receipt and we&apos;ll prioritize delivery.</p>
             </>
-          ) : isBundle ? (
-            <>
-              <p>Download each kit below:</p>
-              {kit.files.map(f => (
-                <a key={f.file} href={`/${f.file}`} className="bundle-link" download>⬇ {f.name}</a>
-              ))}
-            </>
           ) : (
             <>
-              <p>Click below to download all files (ZIP)</p>
-              <a href={`/${kit.file}`} className="dl-btn" download>⬇ Download {kit.name}</a>
+              <p>Your secure download link {isBundle ? 'for every kit is' : 'is'} on its way to your inbox right now — it usually lands within a minute (from <a href="mailto:iam@armando.mx" style={{color:'var(--gold)'}}>iam@armando.mx</a>). The link is unique to your purchase.</p>
+              <p style={{fontSize:13,marginTop:16}}>Don&apos;t see it in a couple of minutes? Check spam, or reply to your Stripe receipt / email <a href="mailto:iam@armando.mx" style={{color:'var(--gold)'}}>iam@armando.mx</a> and we&apos;ll send it instantly.</p>
             </>
           )}
         </div>
