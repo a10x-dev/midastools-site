@@ -264,20 +264,13 @@ export default function Layout({ children }) {
             <Link href="/blog/ai-chatbot-for-real-estate-agents-2026">For Real Estate</Link>
           </div>
           <div className="footer-col">
-            <h4>Resources</h4>
-            <Link href="/prompt-generator">Prompt Generator</Link>
-            <Link href="/business-name-generator">Name Generator</Link>
+            <h4>Free Tools</h4>
+            <Link href="/tools">All Free Tools</Link>
+            <Link href="/business-name-generator">Business Name Generator</Link>
             <Link href="/hashtag-generator">Hashtag Generator</Link>
-            <Link href="/prompt-scorer">Prompt Scorer</Link>
-            <Link href="/prompt-enhancer">Prompt Enhancer</Link>
-            <Link href="/image-prompt-builder">Image Prompt Builder</Link>
-            <Link href="/prompt-roaster">Prompt Roaster</Link>
+            <Link href="/email-subject-line-tester">Subject Line Tester</Link>
+            <Link href="/ai-job-risk">AI Job Risk Calculator</Link>
             <Link href="/soul-generator">SOUL.md Generator</Link>
-            <Link href="/ai-income-blueprint">Income Blueprint</Link>
-            <Link href="/ai-job-risk">AI Job Risk</Link>
-            <Link href="/prompts">Prompt Templates</Link>
-            <Link href="/chatgpt-prompts">ChatGPT Prompts</Link>
-            <Link href="/free-prompts">Free AI Prompts</Link>
             <Link href="/blog">Blog</Link>
             <a href="https://cal.com/manduks/midastools" target="_blank" rel="noopener">Book a Call</a>
           </div>
