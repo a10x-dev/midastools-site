@@ -1367,7 +1367,7 @@ Tone: Warm, celebratory, and genuine. This email should make the customer smile.
         <hr style={{ margin: '40px 0', border: 'none', borderTop: '1px solid #eee' }} />
 
         <p style={{ color: '#6B7280', fontSize: '14px' }}>
-          <em>The Midas Tools Team builds <a href="https://www.midastools.co" style={{ color: '#3B5FFF' }}>Midas Tools</a> &mdash; AI-powered toolkits for entrepreneurs, creators, and professionals. Questions? <a href="mailto:iam@armando.mx" style={{ color: '#3B5FFF' }}>iam@armando.mx</a>.</em>
+          <em>The Midas Tools Team builds <a href="https://www.midastools.co" style={{ color: '#3B5FFF' }}>Midas Tools</a> &mdash; AI-powered toolkits for entrepreneurs, creators, and professionals. Questions? <a href="mailto:hello@midastools.co" style={{ color: '#3B5FFF' }}>hello@midastools.co</a>.</em>
         </p>
       </div>
     </Layout>

@@ -29,7 +29,7 @@ export default function EmailMarketingKit() {
     { q: 'Can I use this for client work?', a: 'Yes. The templates are designed to be customized with different brand voices, audiences, and industries. Freelancers and agencies use this kit across all their client accounts.' },
     { q: 'What AI tools does this work with?', a: 'ChatGPT, Claude, Gemini, or any LLM. The templates are plain text prompts — they work everywhere.' },
     { q: 'How is this different from email templates?', a: 'Static email templates give you the same copy everyone else uses. AI prompt templates generate unique, tailored content every time — customized to your brand, audience, and offer. You never send generic emails again.' },
-    { q: 'What if it doesn\'t work for me?', a: '30-day full refund, no questions asked. Email iam@armando.mx.' },
+    { q: 'What if it doesn\'t work for me?', a: '30-day full refund, no questions asked. Email hello@midastools.co.' },
   ];
 
   return (

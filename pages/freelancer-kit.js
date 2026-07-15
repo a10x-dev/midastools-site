@@ -252,7 +252,7 @@ export default function FreelancerKit() {
             { q: 'Will these work for my type of freelancing?', a: 'Yes. The templates are designed for any service-based freelancer — design, development, writing, marketing, consulting, coaching, and more.' },
             { q: 'How is this different from using ChatGPT directly?', a: 'ChatGPT gives generic outputs. These templates include industry-specific language, proven frameworks (like value-based pricing), and professional formatting that wins clients.' },
             { q: 'What AI tools does this work with?', a: 'ChatGPT, Claude, Gemini, or any LLM. The templates are plain text prompts — they work everywhere.' },
-            { q: 'What if it doesn\'t work for me?', a: '30-day full refund, no questions asked. Email iam@armando.mx.' },
+            { q: 'What if it doesn\'t work for me?', a: '30-day full refund, no questions asked. Email hello@midastools.co.' },
           ].map(f => (
             <div key={f.q} style={{borderBottom:'1px solid var(--gray-800)',paddingBottom:24}}>
               <div style={{fontSize:16,fontWeight:700,marginBottom:8}}>{f.q}</div>

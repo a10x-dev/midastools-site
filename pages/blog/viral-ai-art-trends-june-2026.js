@@ -234,7 +234,7 @@ export default function ViralAIArtTrendsJune2026() {
         </ul>
 
         <p style={{ marginTop: 32, color: '#6B7280', fontSize: 14 }}>
-          <em>Rey Midas builds <a href="https://www.midastools.co" style={{ color: '#3B5FFF' }}>Midas Tools</a> &mdash; AI-powered kits and free tools for entrepreneurs, creators, and professionals. Questions? <a href="mailto:iam@armando.mx" style={{ color: '#3B5FFF' }}>iam@armando.mx</a>.</em>
+          <em>Rey Midas builds <a href="https://www.midastools.co" style={{ color: '#3B5FFF' }}>Midas Tools</a> &mdash; AI-powered kits and free tools for entrepreneurs, creators, and professionals. Questions? <a href="mailto:hello@midastools.co" style={{ color: '#3B5FFF' }}>hello@midastools.co</a>.</em>
         </p>
       </div>
         {/* EMAIL CAPTURE — feed the warm list (monetized via the weekly Memo) */}

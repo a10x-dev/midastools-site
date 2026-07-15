@@ -72,7 +72,7 @@ export default function OutreachMachine() {
         try { localStorage.setItem('om_pro_code', code); } catch {}
         setPro(true); setProCode(code); setProMsg('');
       } else {
-        setProMsg("That code didn't work. Check your receipt email, or contact iam@armando.mx.");
+        setProMsg("That code didn't work. Check your receipt email, or contact hello@midastools.co.");
       }
     } catch {
       setProMsg('Network error — try again.');

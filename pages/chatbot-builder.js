@@ -292,7 +292,7 @@ export default function ChatbotBuilder() {
         </div>
 
         <p style={{ marginTop: 36, color: '#6B7280', fontSize: 14 }}>
-          Part of <Link href="/tools" style={{ color: '#2563EB' }}>MidasTools</Link> — AI tools that make you money. Questions? <a href="mailto:iam@armando.mx" style={{ color: '#2563EB' }}>iam@armando.mx</a>.
+          Part of <Link href="/tools" style={{ color: '#2563EB' }}>MidasTools</Link> — AI tools that make you money. Questions? <a href="mailto:hello@midastools.co" style={{ color: '#2563EB' }}>hello@midastools.co</a>.
         </p>
       </div>
     </Layout>

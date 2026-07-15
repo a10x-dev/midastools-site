@@ -280,7 +280,7 @@ export default function Layout({ children }) {
             <Link href="/services">Done For You</Link>
             <Link href="/ai-audit">AI Audit ($997)</Link>
             <a href="https://cal.com/manduks/midastools" target="_blank" rel="noopener">Book a Call</a>
-            <a href="mailto:iam@armando.mx">Contact</a>
+            <a href="mailto:hello@midastools.co">Contact</a>
           </div>
           <div className="footer-col">
             <h4>Products</h4>
@@ -323,7 +323,7 @@ export default function Layout({ children }) {
         <div className="footer-bottom">
           <p>&copy; {new Date().getFullYear()} Midas Tools. All rights reserved.</p>
           <div style={{ display: 'flex', gap: 24 }}>
-            <a href="mailto:iam@armando.mx">iam@armando.mx</a>
+            <a href="mailto:hello@midastools.co">hello@midastools.co</a>
             <a href="https://www.aitoolzdir.com" target="_blank" rel="noopener">AI Tools Directory</a>
             <a href="https://submitaitools.org" target="_blank" rel="noopener">Submit AI Tools</a>
           </div>

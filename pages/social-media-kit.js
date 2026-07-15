@@ -28,7 +28,7 @@ export default function SocialMediaKit() {
     { q: 'Can I use this for multiple client accounts?', a: 'Yes. The templates are designed to be customized with different brand voices, audiences, and niches. Freelancers and agencies use this kit across all their client accounts.' },
     { q: 'What AI tools does this work with?', a: 'ChatGPT, Claude, Gemini, or any LLM. The templates are plain text prompts — they work everywhere.' },
     { q: 'How is this different from generic social media templates?', a: 'These are AI prompt templates, not static templates. You customize them with your brand details and the AI generates unique, tailored content every time. Plus they cover the full workflow — calendars, captions, analytics, community management, and paid ads.' },
-    { q: 'What if it doesn\'t work for me?', a: '30-day full refund, no questions asked. Email iam@armando.mx.' },
+    { q: 'What if it doesn\'t work for me?', a: '30-day full refund, no questions asked. Email hello@midastools.co.' },
   ];
 
   return (

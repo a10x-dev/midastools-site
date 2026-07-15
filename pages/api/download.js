@@ -29,14 +29,14 @@ export default function handler(req, res) {
     return res.status(404).json({ error: 'Not found' });
   }
   if (!verifyDownload(file, exp, sig)) {
-    return res.status(403).json({ error: 'Invalid or expired download link. Check your purchase email for a fresh link, or contact iam@armando.mx.' });
+    return res.status(403).json({ error: 'Invalid or expired download link. Check your purchase email for a fresh link, or contact hello@midastools.co.' });
   }
 
   // path.basename strips any traversal; ALLOWED already guarantees safety.
   const filePath = path.join(process.cwd(), 'private-kits', path.basename(file));
   if (!fs.existsSync(filePath)) {
     console.error(`[download] file missing on disk: ${filePath}`);
-    return res.status(500).json({ error: 'File temporarily unavailable — contact iam@armando.mx.' });
+    return res.status(500).json({ error: 'File temporarily unavailable — contact hello@midastools.co.' });
   }
 
   const stat = fs.statSync(filePath);

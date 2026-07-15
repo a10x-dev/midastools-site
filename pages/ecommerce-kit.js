@@ -29,7 +29,7 @@ export default function EcommerceKit() {
     { q: 'How is this different from using ChatGPT directly?', a: 'ChatGPT gives generic outputs. These templates include e-commerce-specific language, conversion-tested frameworks, and professional formatting designed to drive sales and improve customer experience.' },
     { q: 'Will this work for my product niche?', a: 'Yes. The templates are designed to be customized for any product category — fashion, electronics, home goods, beauty, food, digital products, and more. You fill in your details and the AI handles the rest.' },
     { q: 'What AI tools does this work with?', a: 'ChatGPT, Claude, Gemini, or any LLM. The templates are plain text prompts — they work everywhere.' },
-    { q: 'What if it doesn\'t work for me?', a: '30-day full refund, no questions asked. Email iam@armando.mx.' },
+    { q: 'What if it doesn\'t work for me?', a: '30-day full refund, no questions asked. Email hello@midastools.co.' },
   ];
 
   return (

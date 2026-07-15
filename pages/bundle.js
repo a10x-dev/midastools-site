@@ -413,8 +413,8 @@ export default function Bundle() {
             { q: 'How is this different from ChatGPT?', a: 'ChatGPT is a blank canvas. This is the painting. We\'ve already done the work of crafting, testing, and optimizing every piece of content. You get the finished output — not a tool to figure it out yourself. Think of it as hiring a marketing team that already did 40 hours of work for you.' },
             { q: 'What are "future kits"?', a: 'We release new kits for emerging business needs regularly. Bundle buyers get every new kit automatically at no extra cost, delivered to the same email.' },
             { q: 'Do I need all sixteen kits?', a: 'If you only need one area covered, buy it individually. The bundle makes sense if you want your marketing, sales, email, and content all handled — or if you want every future kit we release.' },
-            { q: 'Can I share this with my team?', a: 'The license is for one person. For team licenses, email iam@armando.mx and we\'ll set up a custom plan.' },
-            { q: 'What if it doesn\'t work for me?', a: '30-day full refund, no questions asked. Email iam@armando.mx.' },
+            { q: 'Can I share this with my team?', a: 'The license is for one person. For team licenses, email hello@midastools.co and we\'ll set up a custom plan.' },
+            { q: 'What if it doesn\'t work for me?', a: '30-day full refund, no questions asked. Email hello@midastools.co.' },
           ].map(f => (
             <div key={f.q} style={{borderBottom:'1px solid var(--border)',paddingBottom:24}}>
               <div style={{fontSize:16,fontWeight:700,marginBottom:8,color:'var(--text)'}}>{f.q}</div>

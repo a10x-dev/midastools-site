@@ -199,7 +199,7 @@ export default function FinanceClub() {
           <div className="download-box">
             <h3>Mega Pack unlocked.</h3>
             <p>145+ prompts across 6 categories — copywriting, social, content, business operations, personal branding, productivity. ZIP file, ~80KB.</p>
-            <p style={{fontSize:13,marginTop:8,opacity:0.85}}>Your secure download link is on its way to <strong>{email}</strong> right now (from iam@armando.mx) \u2014 usually within a minute. Don&apos;t see it? Check spam or email iam@armando.mx.</p>
+            <p style={{fontSize:13,marginTop:8,opacity:0.85}}>Your secure download link is on its way to <strong>{email}</strong> right now (from hello@midastools.co) \u2014 usually within a minute. Don&apos;t see it? Check spam or email hello@midastools.co.</p>
           </div>
         )}
       </div>
@@ -262,7 +262,7 @@ export default function FinanceClub() {
 
       <section style={{paddingTop:0,paddingBottom:80,textAlign:'center'}}>
         <p style={{fontSize:13,color:'var(--gray-400)',maxWidth:540,margin:'0 auto',lineHeight:1.6}}>
-          Questions? Reply to any of our emails or write iam@armando.mx \u2014 a real human reads every one.
+          Questions? Reply to any of our emails or write hello@midastools.co \u2014 a real human reads every one.
         </p>
       </section>
     </Layout>

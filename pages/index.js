@@ -4,8 +4,6 @@ import { useState } from 'react';
 import Layout from '../components/Layout';
 import { getAttribution } from '../lib/stripe-attribution';
 
-const STRIPE_URL = 'https://buy.stripe.com/cNi28qdgz7mVb0U8VYcMM07';
-
 function FAQItem({ q, a }) {
   const [open, setOpen] = useState(false);
   return (
@@ -25,7 +23,7 @@ function FAQItem({ q, a }) {
         }}>+</div>
       </div>
       <div style={{
-        maxHeight: open ? 200 : 0, overflow: 'hidden',
+        maxHeight: open ? 240 : 0, overflow: 'hidden',
         transition: 'max-height 0.3s ease, opacity 0.2s ease',
         opacity: open ? 1 : 0,
       }}>
@@ -51,9 +49,6 @@ export default function Home() {
         utm_campaign: params.get('utm_campaign') || '',
       } : {};
       // First-touch attribution persisted in localStorage (mt_attr_v2, 90 days).
-      // This is what recovers the ~90% of signups whose live document.referrer is
-      // empty (direct/bookmark/dark-social/returning visitors). Live URL params
-      // win when present; otherwise fall back to the persisted first-touch source.
       const attr = typeof window !== 'undefined' ? (getAttribution() || {}) : {};
       const utm = {
         utm_source: liveUtm.utm_source || attr.utm_source || '',
@@ -67,7 +62,6 @@ export default function Home() {
         body: JSON.stringify({
           email,
           source: 'homepage',
-          // referrer_host from first-touch wins when live referrer is stripped
           referrer: liveReferrer || attr.referrer_host || '',
           landing_slug: attr.landing_slug || '',
           attribution: attr,
@@ -85,16 +79,16 @@ export default function Home() {
   return (
     <Layout>
       <Head>
-        <title>Midas Tools — Free AI Tools, Prompts & Lifetime Kits</title>
-        <meta name="description" content="22+ free AI tools, 145+ expert prompts, and 21 lifetime kits for ChatGPT, Claude, Midjourney & more. No subscription, no fluff — used by creators, coaches, and founders." />
-        <meta property="og:title" content="Midas Tools — Free AI Tools, Prompts & Lifetime Kits" />
-        <meta property="og:description" content="22+ free AI tools, 145+ expert prompts, 21 lifetime kits. ChatGPT, Claude, Midjourney. Lifetime ownership, no subscription. Starting at $9." />
+        <title>Midas Tools — AI Chatbot Builder + Free AI Tools That Make You Money</title>
+        <meta name="description" content="Paste any business website and get a working AI support chatbot in ~60 seconds. Embed it free, keep it live for $39/mo, or sell chatbots to local businesses for $300/mo. Plus 22+ free AI tools for founders, creators, and consultants." />
+        <meta property="og:title" content="Midas Tools — AI Chatbot Builder + Free AI Tools" />
+        <meta property="og:description" content="Build a working AI support chatbot from any website in ~60 seconds. Free to try, $39/mo to keep it live, or resell to local businesses. Plus 22+ free AI tools." />
         <meta property="og:url" content="https://www.midastools.co" />
         <meta property="og:image" content="https://www.midastools.co/og-image.png" />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Midas Tools — Free AI Tools, Prompts & Lifetime Kits" />
-        <meta name="twitter:description" content="22+ free AI tools, 145+ expert prompts, 21 lifetime kits. Lifetime ownership, no subscription." />
+        <meta name="twitter:title" content="Midas Tools — AI Chatbot Builder + Free AI Tools" />
+        <meta name="twitter:description" content="Build a working AI support chatbot from any website in ~60 seconds. Free to try, $39/mo to keep it live." />
         <meta name="twitter:image" content="https://www.midastools.co/og-image.png" />
         <link rel="icon" type="image/png" href="/favicon.png" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -103,21 +97,16 @@ export default function Home() {
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "WebPage",
-          "name": "Midas Tools — Free AI Tools, Prompts & Lifetime Kits",
-          "description": "22+ free AI tools, 145+ expert prompts, and 21 lifetime kits for ChatGPT, Claude, Midjourney & more. No subscription, no fluff.",
+          "name": "Midas Tools — AI Chatbot Builder + Free AI Tools",
+          "description": "Build a working AI support chatbot from any business website in ~60 seconds. Free to try, $39/mo to keep it live, or resell to local businesses. Plus 22+ free AI tools.",
           "url": "https://www.midastools.co",
           "publisher": { "@id": "https://www.midastools.co/#organization" },
           "mainEntity": {
-            "@type": "ItemList",
-            "name": "AI Prompt Kits",
-            "numberOfItems": 15,
-            "itemListElement": [
-              { "@type": "Product", "name": "AI Toolkit Bundle", "url": "https://www.midastools.co/bundle", "offers": { "@type": "Offer", "price": "97", "priceCurrency": "USD" }},
-              { "@type": "Product", "name": "Real Estate AI Kit", "url": "https://www.midastools.co/real-estate-kit", "offers": { "@type": "Offer", "price": "49", "priceCurrency": "USD" }},
-              { "@type": "Product", "name": "Content Creator Kit", "url": "https://www.midastools.co/content-creator-kit", "offers": { "@type": "Offer", "price": "39", "priceCurrency": "USD" }},
-              { "@type": "Product", "name": "Freelancer Automation Kit", "url": "https://www.midastools.co/freelancer-kit", "offers": { "@type": "Offer", "price": "39", "priceCurrency": "USD" }},
-              { "@type": "Product", "name": "Small Business AI Kit", "url": "https://www.midastools.co/small-business-kit", "offers": { "@type": "Offer", "price": "39", "priceCurrency": "USD" }}
-            ]
+            "@type": "Product",
+            "name": "AI Chatbot Builder",
+            "description": "Paste any business website and get a working, embeddable AI support chatbot in about 60 seconds. Free to build; $39/mo to keep it live.",
+            "url": "https://www.midastools.co/chatbot-builder",
+            "offers": { "@type": "Offer", "price": "39", "priceCurrency": "USD", "priceSpecification": { "@type": "UnitPriceSpecification", "price": "39", "priceCurrency": "USD", "billingDuration": "P1M" } }
           }
         })}} />
       </Head>
@@ -126,7 +115,7 @@ export default function Home() {
         .home-hero { max-width: 860px; margin: 0 auto; padding: 80px 40px 64px; text-align: center; }
         .home-hero h1 { font-size: clamp(36px, 6vw, 64px); font-weight: 900; line-height: 1.05; letter-spacing: -2px; margin-bottom: 24px; color: var(--text); }
         .home-hero h1 span { color: var(--accent); }
-        .hero-sub { font-size: 18px; color: var(--text-secondary); max-width: 560px; margin: 0 auto 40px; line-height: 1.7; }
+        .hero-sub { font-size: 18px; color: var(--text-secondary); max-width: 600px; margin: 0 auto 40px; line-height: 1.7; }
         .hero-ctas { display: flex; gap: 16px; justify-content: center; align-items: center; flex-wrap: wrap; }
         .price-tag { font-size: 14px; color: var(--text-secondary); margin-top: 20px; }
         .price-tag strong { color: var(--text); }
@@ -143,32 +132,9 @@ export default function Home() {
         .tech-logos { display: flex; justify-content: center; align-items: center; gap: 40px; flex-wrap: wrap; }
         .tech-logo { font-size: 14px; font-weight: 600; color: var(--text-tertiary); letter-spacing: -0.3px; }
 
-        .proof-card { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 40px; max-width: 680px; margin: 0 auto 0; text-align: left; position: relative; }
-        .proof-quote { font-size: 16px; line-height: 1.7; color: var(--text-secondary); margin-bottom: 20px; font-style: italic; }
-        .proof-author { font-size: 14px; color: var(--text-secondary); font-weight: 600; }
-        .proof-author span { color: var(--accent); }
-
-        /* Results cards */
-        .results-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 40px; }
-        .result-card { border-radius: 16px; padding: 28px; text-align: center; }
-        .result-card:nth-child(1) { background: var(--card-green); }
-        .result-card:nth-child(2) { background: var(--card-blue); }
-        .result-card:nth-child(3) { background: var(--card-purple); }
-        .result-num { font-size: 32px; font-weight: 900; color: var(--text); letter-spacing: -1px; }
-        .result-label { font-size: 13px; color: var(--text-secondary); margin-top: 4px; font-weight: 500; }
-        .result-note { font-size: 12px; color: var(--text-tertiary); margin-top: 8px; }
-
         section { max-width: 860px; margin: 0 auto; padding: 80px 40px; }
         h2 { font-size: clamp(28px, 4vw, 40px); font-weight: 800; line-height: 1.15; letter-spacing: -1px; margin-bottom: 16px; color: var(--text); }
         .section-sub { font-size: 17px; color: var(--text-secondary); margin-bottom: 48px; line-height: 1.6; }
-
-        .kit-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; margin-bottom: 48px; }
-        .kit-card { background: var(--bg); border: 1px solid var(--border); border-radius: 16px; padding: 28px; transition: border-color 0.2s ease, box-shadow 0.2s ease; }
-        .kit-card:hover { border-color: var(--text-tertiary); box-shadow: 0 4px 16px rgba(0,0,0,0.06); }
-        .kit-icon { width: 44px; height: 44px; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 14px; font-size: 13px; font-weight: 800; color: var(--text); letter-spacing: -0.5px; }
-        .kit-icon svg { width: 20px; height: 20px; }
-        .kit-title { font-size: 16px; font-weight: 700; margin-bottom: 8px; color: var(--text); }
-        .kit-desc { font-size: 14px; color: var(--text-secondary); line-height: 1.6; }
 
         .steps { display: flex; flex-direction: column; }
         .step { display: flex; gap: 24px; padding: 28px 0; border-bottom: 1px solid var(--border); }
@@ -176,11 +142,6 @@ export default function Home() {
         .step-num { flex-shrink: 0; width: 40px; height: 40px; background: rgba(59,95,255,0.08); border: 1px solid rgba(59,95,255,0.15); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 15px; font-weight: 800; color: var(--accent); }
         .step-body h3 { font-size: 17px; font-weight: 700; margin-bottom: 6px; color: var(--text); }
         .step-body p { font-size: 15px; color: var(--text-secondary); line-height: 1.6; }
-
-        .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
-        .pricing-card { background: var(--bg); border: 1px solid var(--border); border-radius: 16px; padding: 28px; display: flex; flex-direction: column; gap: 12px; transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease; }
-        .pricing-card:hover { border-color: var(--text-tertiary); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.06); }
-        .pricing-card.featured { border-color: var(--accent); box-shadow: 0 0 0 1px var(--accent), 0 8px 32px rgba(59,95,255,0.1); }
 
         /* Founder section */
         .founder-section { display: flex; gap: 40px; align-items: center; }
@@ -207,62 +168,37 @@ export default function Home() {
         .trust-signals { display: flex; justify-content: center; gap: 32px; margin-top: 24px; flex-wrap: wrap; }
         .trust-signal { font-size: 13px; color: rgba(255,255,255,0.6); font-weight: 500; display: flex; align-items: center; gap: 6px; }
 
-        /* Guarantee box */
-        .guarantee { display: flex; gap: 20px; align-items: flex-start; background: rgba(59,95,255,0.04); border: 1px solid rgba(59,95,255,0.12); border-radius: 14px; padding: 28px; margin-top: 48px; }
-        .guarantee-icon { flex-shrink: 0; width: 44px; height: 44px; border-radius: 10px; background: rgba(59,95,255,0.08); border: 1px solid rgba(59,95,255,0.15); display: flex; align-items: center; justify-content: center; }
-        .guarantee h4 { font-size: 16px; font-weight: 800; margin-bottom: 6px; color: var(--text); }
-        .guarantee p { font-size: 14px; color: var(--text-secondary); line-height: 1.6; }
-
-        /* Decorative elements */
-        .deco { position: absolute; pointer-events: none; }
-
         @media(max-width:700px) {
           .home-hero { padding: 48px 20px 48px; }
           section { padding: 60px 20px; }
           .cta-bottom { padding: 60px 24px; margin: 0 20px 60px; }
           .stats-bar { gap: 24px; }
           .stat-num { font-size: 22px; }
-          .results-grid { grid-template-columns: 1fr; }
           .tech-logos { gap: 24px; }
           .founder-section { flex-direction: column; text-align: center; }
         }
       `}</style>
-
-      {/* Urgency Banner — $9 Tripwire (low-friction entry) */}
-      <div style={{ background: 'linear-gradient(90deg, #F59E0B, #D97706)', padding: '10px 40px', textAlign: 'center', fontSize: 13, fontWeight: 600 }}>
-        <a href="/starter-pack" style={{ color: '#FFFFFF', textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: 8 }}>
-          <span style={{ background: 'rgba(255,255,255,0.25)', padding: '2px 8px', borderRadius: 4, fontSize: 11, fontWeight: 800, letterSpacing: 0.5 }}>TRY FOR $9</span>
-          20 hand-picked AI prompts — instant download, 30-day guarantee
-          <span style={{ fontWeight: 800, marginLeft: 4 }}>&rarr;</span>
-        </a>
-      </div>
 
       {/* Hero */}
       <div className="home-hero">
         <div className="badge" style={{ marginBottom: 32 }}>AI Tools &middot; Built to Make You Money</div>
         <h1>AI tools that<br />make you <span>money.</span></h1>
         <p className="hero-sub">
-          Free AI tools that win you clients, close more sales, and save you hours. Start with the <strong>Outreach Machine</strong> — paste your offer, get cold emails &amp; DMs that book sales calls.
+          Start with the <strong>AI Chatbot Builder</strong> — paste any business website and get a working AI support chatbot in about 60 seconds. Embed it free, keep it live for $39/mo, or sell chatbots to local businesses for $300/mo.
         </p>
         <div className="hero-ctas">
-          <a href="/outreach-machine" className="btn-primary" data-cta="hero-outreach-machine">Try the Outreach Machine &rarr;</a>
-          <a href="/tools" className="btn-outline" data-cta="hero-free-tools">Browse all tools &rarr;</a>
+          <a href="/chatbot-builder" className="btn-primary" data-cta="hero-chatbot-builder">Build a free chatbot &rarr;</a>
+          <a href="/tools" className="btn-outline" data-cta="hero-free-tools">Browse all free tools &rarr;</a>
         </div>
         <p className="price-tag">
-          <strong>Just want 20 starter prompts?</strong> <a href="/starter-pack" data-cta="hero-tripwire-9" style={{ color: '#D97706', fontWeight: 700, textDecoration: 'none' }}>Try for $9 &rarr;</a> &middot; 30-day refund
-        </p>
-        <p style={{ marginTop: '12px', fontSize: '14px', color: '#6B7280', fontFamily: "'Inter', sans-serif" }}>
-          Browse: <a href="/bundle" style={{ color: '#3B5FFF', fontWeight: 700, textDecoration: 'none' }}>21 lifetime kits</a> &middot; <a href="/prompts" style={{ color: '#3B5FFF', fontWeight: 600, textDecoration: 'none' }}>Free prompt library</a> &middot; <a href="/quiz" style={{ color: '#3B5FFF', fontWeight: 600, textDecoration: 'none' }}>Take the quiz</a>
-        </p>
-        <p style={{ marginTop: '6px', fontSize: '13px', color: '#9CA3AF', fontFamily: "'Inter', sans-serif" }}>
-          Coaches &amp; consultants? <a href="/for-coaches" style={{ color: '#9CA3AF', fontWeight: 600, textDecoration: 'underline' }}>Curated kit collection</a> &middot; <a href="/ai-audit" style={{ color: '#9CA3AF', fontWeight: 600, textDecoration: 'underline' }}>$997 AI audit</a>
+          Free to build &middot; <strong>$39/mo</strong> to keep it live &middot; cancel anytime
         </p>
 
         <div className="stats-bar">
           {[
+            { num: '~60s', label: 'To build a working chatbot' },
             { num: '22+', label: 'Free AI tools' },
-            { num: '145+', label: 'Expert prompts' },
-            { num: '21', label: 'Lifetime kits — no subscription' },
+            { num: '$39/mo', label: 'Keep it live — no lock-in' },
           ].map(s => (
             <div key={s.label} className="stat-item">
               <div className="stat-num">{s.num}</div>
@@ -279,15 +215,36 @@ export default function Home() {
           <span className="tech-logo">ChatGPT</span>
           <span className="tech-logo">Claude</span>
           <span className="tech-logo">Gemini</span>
-          <span className="tech-logo">OpenClaw</span>
-          <span className="tech-logo">Any LLM</span>
+          <span className="tech-logo">Any website</span>
         </div>
       </div>
 
+      {/* Flagship — AI Chatbot Builder */}
+      <section>
+        <div className="section-label">The Product</div>
+        <h2>Turn any website into a 24/7 AI support agent</h2>
+        <p className="section-sub">Paste a business URL. We read the site, build a grounded chatbot that answers real customer questions and captures leads, and give you a one-line embed. Keep it on your own site, or resell it to local businesses on a monthly retainer.</p>
+        <div className="steps">
+          {[
+            { n: '1', h: 'Paste a website', p: 'Drop in any business URL. The builder reads the pages and learns the services, hours, pricing, and FAQs — no manual setup.' },
+            { n: '2', h: 'Get a working bot in ~60 seconds', p: 'You get a live, grounded chatbot you can test right away. It answers from the real site content and honestly says when it does not know.' },
+            { n: '3', h: 'Embed it free — or sell it', p: 'Copy one line of code to embed it. Keep it live for $39/mo, or charge local businesses $300/mo and pocket the difference.' },
+          ].map((s) => (
+            <div className="step" key={s.n}>
+              <div className="step-num">{s.n}</div>
+              <div className="step-body"><h3>{s.h}</h3><p>{s.p}</p></div>
+            </div>
+          ))}
+        </div>
+        <div style={{ textAlign: 'center', marginTop: 40 }}>
+          <a href="/chatbot-builder" className="btn-primary" data-cta="flagship-chatbot-builder">Build your first chatbot — free &rarr;</a>
+        </div>
+      </section>
+
       {/* Free Tools Section */}
-      <section style={{ paddingBottom: 0 }}>
+      <section style={{ paddingTop: 0 }}>
         <div className="section-label">Free AI Tools</div>
-        <h2 style={{ marginBottom: 20 }}>Try before you buy</h2>
+        <h2 style={{ marginBottom: 20 }}>More free tools to grow your business</h2>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 16 }}>
           {[
             { href: '/chatbot-builder', title: 'AI Chatbot Builder', desc: 'Paste any business website → get a working AI support chatbot in ~60 seconds. Embed it free; keep it live for $39/mo. Or sell it to local businesses for $300/mo.', tag: '💰 Recurring' },
@@ -297,11 +254,8 @@ export default function Home() {
             { href: '/hashtag-generator', title: 'AI Hashtag Generator', desc: 'Generate optimized hashtags for Instagram, TikTok, Twitter & more. 22 niches.', tag: 'New' },
             { href: '/prompt-scorer', title: 'AI Prompt Scorer', desc: 'Score any prompt 1-100 with specific feedback. Improve your prompts instantly.', tag: 'New' },
             { href: '/prompt-enhancer', title: 'AI Prompt Enhancer', desc: 'Paste any prompt, get 5 enhanced versions — Professional, Creative, Data-Driven, Viral & Expert.', tag: 'New' },
-            { href: '/prompt-roaster', title: 'AI Prompt Roaster', desc: 'Get your bad prompts hilariously roasted, then get a fixed expert-level version. 10 "prompt sins" detected.', tag: '🔥 Viral' },
             { href: '/soul-generator', title: 'SOUL.md Generator', desc: 'Build your OpenClaw AI agent config in 60 seconds. 6 industry presets, production-ready output.', tag: '🔥 NEW' },
             { href: '/image-prompt-builder', title: 'AI Image Prompt Builder', desc: 'Build perfect prompts for ChatGPT, Midjourney & DALL·E. 12 viral styles including Ghibli & Cyberpunk.', tag: '🔥 Trending' },
-            { href: '/ai-income-blueprint', title: 'AI Income Blueprint', desc: 'Answer 3 questions, discover your AI founder archetype & estimated monthly income. Shareable results.', tag: '🔥 NEW' },
-            { href: '/ai-job-risk', title: 'Will AI Replace My Job?', desc: 'Check your job\'s AI replacement risk score. 40+ jobs analyzed with real 2026 data, timelines & safe skills.', tag: '🔥 VIRAL' },
           ].map(tool => (
             <a key={tool.href} href={tool.href} style={{
               display: 'block', background: 'linear-gradient(135deg, #EEF2FF, #F0F5FF)', border: '2px solid rgba(59,95,255,0.15)',
@@ -326,227 +280,10 @@ export default function Home() {
             </a>
           ))}
         </div>
-      </section>
-
-      {/* Homepage Conversion Bridge — between Free Tools and Free Prompts */}
-      <section style={{ paddingTop: 32, paddingBottom: 0 }}>
-        <div style={{
-          background: 'linear-gradient(135deg, #3B5FFF 0%, #1E3AE0 100%)',
-          borderRadius: 20,
-          padding: '32px 40px',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'space-between',
-          gap: 24,
-          flexWrap: 'wrap',
-          boxShadow: '0 12px 32px rgba(59,95,255,0.22)',
-        }}>
-          <div style={{ flex: '1 1 340px', color: '#FFF' }}>
-            <div style={{ fontSize: 11, fontWeight: 800, letterSpacing: 1.5, color: '#FCD34D', marginBottom: 8 }}>⚡ TIRED OF USING FREE TOOLS ONE AT A TIME?</div>
-            <div style={{ fontSize: 24, fontWeight: 800, lineHeight: 1.25, marginBottom: 8 }}>Get 145+ expert prompts + 165+ image prompts in one pack.</div>
-            <div style={{ fontSize: 14, color: '#DBEAFE', lineHeight: 1.5 }}>Copy-paste ready. Works with ChatGPT, Claude, Midjourney, DALL-E. 30-day refund.</div>
-          </div>
-          <a href="https://buy.stripe.com/4gMbJ0dgz4aJ1qkb46cMM0d" style={{
-            display: 'inline-block',
-            background: '#FCD34D',
-            color: '#1E3AE0',
-            fontWeight: 800,
-            fontSize: 16,
-            padding: '16px 32px',
-            borderRadius: 99,
-            textDecoration: 'none',
-            whiteSpace: 'nowrap',
-            boxShadow: '0 6px 16px rgba(252,211,77,0.4)',
-          }}>Get Mega Pack — $29 →</a>
-        </div>
-      </section>
-
-      {/* Prompt Templates Section */}
-      <section style={{ paddingBottom: 0 }}>
-        <div className="section-label">Free Prompt Templates</div>
-        <h2 style={{ marginBottom: 8 }}>160+ copy-paste prompts — free, no signup</h2>
-        <p className="section-sub" style={{ marginBottom: 24 }}>Tested with ChatGPT, Claude, and Gemini. Grab a prompt, paste it, get results.</p>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))', gap: 12 }}>
-          {[
-            { href: '/prompts/chatgpt-coding-prompts', label: 'Coding & Programming' },
-            { href: '/prompts/chatgpt-email-subject-lines', label: 'Email Subject Lines' },
-            { href: '/prompts/chatgpt-social-media-captions', label: 'Social Media Captions' },
-            { href: '/prompts/chatgpt-cold-email', label: 'Cold Emails' },
-            { href: '/prompts/chatgpt-youtube-video-scripts', label: 'YouTube Scripts' },
-            { href: '/prompts/chatgpt-seo-content', label: 'SEO Content' },
-            { href: '/prompts/chatgpt-resume-cover-letter', label: 'Resumes & Cover Letters' },
-            { href: '/prompts/chatgpt-business-plan', label: 'Business Plans' },
-          ].map(t => (
-            <a key={t.href} href={t.href} style={{
-              display: 'block', background: 'var(--surface)', border: '1px solid var(--border)',
-              borderRadius: 12, padding: '16px 20px', textDecoration: 'none',
-              fontSize: 14, fontWeight: 600, color: 'var(--text)', transition: 'border-color 0.2s',
-            }}
-              onMouseEnter={e => { e.currentTarget.style.borderColor = 'var(--accent)'; }}
-              onMouseLeave={e => { e.currentTarget.style.borderColor = 'var(--border)'; }}
-            >
-              {t.label} &rarr;
-            </a>
-          ))}
-        </div>
-        <div style={{ textAlign: 'center', marginTop: 20 }}>
-          <a href="/prompts" style={{ color: 'var(--accent)', fontWeight: 700, textDecoration: 'none', fontSize: 15 }}>
-            Browse all 16 categories &rarr;
-          </a>
-        </div>
-      </section>
-
-      {/* Social Proof */}
-      <section>
-        <div className="section-label">Real Results</div>
-        <h2>This isn't theory — it's already working</h2>
-        <p className="section-sub">Felix Craft started as a proof-of-concept AI agent on OpenClaw. $14,718 in 3 weeks → now <strong>$300,000+/month in revenue</strong> across multiple autonomous businesses. Verified via Stripe + on-chain ETH.</p>
-
-        <div className="proof-card">
-          <p className="proof-quote">"In those two and a half weeks, he's earned $14,718. Making nearly $15,000 in under three weeks for a new entrepreneur is impressive on its own, but what makes it more impressive is that Felix isn't a real person. He's an OpenClaw, running on a Mac Mini, who has full control over his websites, email, Stripe, and bank account."</p>
-          <p className="proof-author">&mdash; <span>Nat Eliason</span>, Entrepreneur &amp; Author</p>
-          <p style={{ marginTop: '12px', fontSize: '14px', color: '#6B7280', fontStyle: 'italic' }}>Update (April 2026): Felix now generates $300K+/month across Clawcommerce, ClawMart, and other ventures. <a href="/blog/ai-agent-10k-day" style={{ color: '#3B5FFF' }}>Read the full story →</a></p>
-        </div>
-
-        <div className="results-grid">
-          <div className="result-card">
-            <div className="result-num">$300K/mo</div>
-            <div className="result-label">Total Revenue</div>
-            <div className="result-note">From $14K in 3 weeks</div>
-          </div>
-          <div className="result-card">
-            <div className="result-num">0 hrs</div>
-            <div className="result-label">Human Work Required</div>
-            <div className="result-note">Fully autonomous</div>
-          </div>
-          <div className="result-card">
-            <div className="result-num">~$50/mo</div>
-            <div className="result-label">Operating Cost</div>
-            <div className="result-note">Compute + API costs</div>
-          </div>
-        </div>
-      </section>
-
-      {/* What's Inside */}
-      <section id="kit" style={{ paddingTop: 0 }}>
-        <div className="section-label">What's Inside</div>
-        <h2>Everything you need to deploy your agent and start earning</h2>
-        <p className="section-sub">Skip the weeks of trial and error. Get the exact files that make an AI entrepreneur actually work.</p>
-        <div className="kit-grid">
-          {[
-            { abbr: 'SM', title: '5 SOUL.md Templates', desc: 'Pre-built identity files for entrepreneur, content creator, SaaS builder, community manager, and service business.', bg: 'var(--card-blue)' },
-            { abbr: 'HB', title: 'Heartbeat Workflow System', desc: 'Makes your agent proactively check emails, monitor revenue, track tasks — and alert you when something needs attention.', bg: 'var(--card-green)' },
-            { abbr: 'DR', title: 'Daily Review Template', desc: 'The exact morning report structure: revenue stats, open blockers, and the top 5 priorities — ready every morning.', bg: 'var(--card-purple)' },
-            { abbr: 'PL', title: 'Product Launch Prompts', desc: 'Word-for-word prompts to tell your agent to create and launch a digital product overnight — the same approach Felix used.', bg: 'var(--card-amber)' },
-            { abbr: 'RO', title: 'Revenue Ops Playbook', desc: 'How to give your agent access to Stripe, email, and hosting safely. The minimal permission set for running a real business.', bg: 'var(--card-pink)' },
-            { abbr: 'SG', title: 'Complete Setup Guide', desc: 'Step-by-step: zero to a deployed, revenue-focused OpenClaw agent with exact tools, accounts, and configurations.', bg: 'var(--card-cyan)' },
-          ].map((item) => (
-            <div className="kit-card" key={item.title}>
-              <div className="kit-icon" style={{ background: item.bg }}>
-                <span>{item.abbr}</span>
-              </div>
-              <div className="kit-title">{item.title}</div>
-              <div className="kit-desc">{item.desc}</div>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* How It Works */}
-      <section style={{ paddingTop: 0 }}>
-        <div className="section-label">How It Works</div>
-        <h2>From zero to deployed in one day</h2>
-        <p className="section-sub">No coding required. Install OpenClaw, drop in the templates, and point your agent at a mission.</p>
-        <div className="steps">
-          {[
-            { n: '1', h: 'Install OpenClaw', p: 'Download and install OpenClaw on any Mac. Takes about 10 minutes, no programming knowledge needed.' },
-            { n: '2', h: 'Drop in the templates', p: 'Copy the SOUL.md and HEARTBEAT.md files into your workspace. Fill in your name and mission. That\'s it.' },
-            { n: '3', h: 'Give it a mission', p: 'Use the Product Launch Prompts. Go to sleep. Wake up to a deployed product with a payment link.' },
-            { n: '4', h: 'Review and iterate', p: 'Your agent sends you a daily report. You spend 10 minutes reviewing. The rest is handled autonomously.' },
-          ].map((s) => (
-            <div className="step" key={s.n}>
-              <div className="step-num">{s.n}</div>
-              <div className="step-body"><h3>{s.h}</h3><p>{s.p}</p></div>
-            </div>
-          ))}
-        </div>
-
-        {/* Guarantee */}
-        <div className="guarantee">
-          <div className="guarantee-icon">
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 1L12.5 4H17V8.5L20 11L17 13.5V18H12.5L10 21L7.5 18H3V13.5L0 11L3 8.5V4H7.5L10 1Z" fill="rgba(59,95,255,0.12)" stroke="#3B5FFF" strokeWidth="1.2"/><path d="M7 11l2 2 4-4" stroke="#3B5FFF" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
-          </div>
-          <div>
-            <h4>30-Day Money-Back Guarantee</h4>
-            <p>Try everything risk-free. If the kit doesn't help you deploy a working AI agent, email iam@armando.mx and get a full refund — no questions asked, same day.</p>
-          </div>
-        </div>
-      </section>
-
-      {/* Browse All Kits */}
-      <section style={{ paddingTop: 0 }}>
-        <div className="section-label">AI Kits for Every Role</div>
-        <h2>Find the kit built for your industry</h2>
-        <p className="section-sub">Each kit includes ready-to-use prompts, templates, and workflows — or grab them all with the bundle.</p>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(240px, 1fr))', gap: 12 }}>
-          {[
-            { name: 'Video Prompt Pack', price: '$29', desc: 'Veo 3.1, Kling 3.0, Runway prompts', href: '/ai-video-prompt-pack', bg: 'var(--card-cyan)' },
-            { name: 'Image Prompt Pack', price: '$29', desc: 'ChatGPT, Midjourney, DALL-E', href: '/ai-image-prompt-pack', bg: 'var(--card-pink)' },
-            { name: 'Prompt Mega Pack', price: '$29', desc: '145+ prompts for any business', href: '/ai-prompt-mega-pack', bg: 'var(--card-amber)' },
-            { name: 'Notion Templates Kit', price: '$39', desc: '150+ Notion templates & systems', href: '/notion-templates-kit', bg: 'var(--card-purple)' },
-            { name: 'Social Media Kit', price: '$39', desc: 'Calendars, captions, viral content', href: '/social-media-kit', bg: 'var(--card-cyan)' },
-            { name: 'Email Marketing Kit', price: '$29', desc: 'Sequences, newsletters, outreach', href: '/email-marketing-kit', bg: 'var(--card-amber)' },
-            { name: 'Content Creator Kit', price: '$39', desc: 'Repurpose, schedule, grow', href: '/content-creator-kit', bg: 'var(--card-green)' },
-            { name: 'Freelancer Kit', price: '$39', desc: 'Proposals, invoicing, client mgmt', href: '/freelancer-kit', bg: 'var(--card-blue)' },
-            { name: 'Small Business Kit', price: '$39', desc: 'Operations, hiring, marketing', href: '/small-business-kit', bg: 'var(--card-green)' },
-            { name: 'E-commerce Kit', price: '$39', desc: 'Listings, ads, customer retention', href: '/ecommerce-kit', bg: 'var(--card-pink)' },
-            { name: 'SaaS Founder Kit', price: '$39', desc: 'Launch, onboard, reduce churn', href: '/saas-founder-kit', bg: 'var(--card-cyan)' },
-            { name: 'Real Estate Kit', price: '$49', desc: 'Leads, listings, follow-ups', href: '/real-estate-kit', bg: 'var(--card-purple)' },
-            { name: 'Presentation Kit', price: '$29', desc: 'Pitch decks, sales decks, talks', href: '/presentation-kit', bg: 'var(--card-amber)' },
-            { name: 'Resume & Career Kit', price: '$29', desc: 'Resumes, LinkedIn, interviews', href: '/resume-career-kit', bg: 'var(--card-green)' },
-            { name: 'Starter Kit', price: '$29', desc: 'Deploy your AI entrepreneur', href: '/', bg: 'var(--card-blue)' },
-          ].map(k => (
-            <a key={k.name} href={k.href} style={{ display: 'block', background: k.bg, borderRadius: 12, padding: '20px 20px', textDecoration: 'none', transition: 'transform 0.15s, box-shadow 0.15s' }}
-              onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-2px)'; e.currentTarget.style.boxShadow = '0 4px 16px rgba(0,0,0,0.08)'; }}
-              onMouseLeave={e => { e.currentTarget.style.transform = ''; e.currentTarget.style.boxShadow = ''; }}
-            >
-              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 6 }}>
-                <span style={{ fontSize: 14, fontWeight: 700, color: 'var(--text)' }}>{k.name}</span>
-                <span style={{ fontSize: 13, fontWeight: 800, color: 'var(--accent)' }}>{k.price}</span>
-              </div>
-              <div style={{ fontSize: 13, color: 'var(--text-secondary)', lineHeight: 1.4 }}>{k.desc}</div>
-            </a>
-          ))}
-        </div>
         <div style={{ textAlign: 'center', marginTop: 24 }}>
-          <a href="/bundle" style={{ color: 'var(--accent)', fontSize: 15, fontWeight: 700, textDecoration: 'none' }}>
-            Or get all 16 kits for $97 (save 83%) &rarr;
-          </a>
-        </div>
-      </section>
-
-      {/* Product Ladder */}
-      <section style={{ paddingTop: 0 }}>
-        <div className="section-label">Choose Your Path</div>
-        <h2>Three rungs. Climb at your own pace.</h2>
-        <p className="section-sub">Start for $9. Upgrade anytime — we credit it toward the bundle.</p>
-        <div className="pricing-grid">
-          {[
-            { label: 'Try Us For $9', price: '$9', term: 'one-time', name: 'Starter Pack', desc: '20 hand-picked AI prompts. Cold outreach, landing pages, content, AI images, sales, productivity. Instant download.', href: '/starter-pack', cta: 'Get 20 Prompts \u2192', featured: false },
-            { label: 'Most Popular', price: '$29', term: 'one-time', name: 'AI Prompt Mega Pack', desc: '145+ prompts across every business function. The full prompt library.', href: STRIPE_URL, cta: 'Get the Kit \u2192', featured: false },
-            { label: 'Best Value', price: '$97', term: 'one-time', name: 'All Kits Bundle', desc: '16 AI kits + all future kits free. Save 83% vs buying separately.', href: 'https://buy.stripe.com/bJe7sK0tNdLjgle0pscMM0b', cta: 'Get the Bundle \u2192', featured: true },
-          ].map(p => (
-            <div key={p.name} className={`pricing-card${p.featured ? ' featured' : ''}`}>
-              <span className="badge" style={{ fontSize: 11, padding: '4px 10px', letterSpacing: 1 }}>{p.label}</span>
-              <div>
-                <span style={{ fontSize: 32, fontWeight: 900, letterSpacing: -1, color: 'var(--text)' }}>{p.price}</span>
-                <span style={{ color: 'var(--text-secondary)', fontSize: 14, marginLeft: 8 }}>{p.term}</span>
-              </div>
-              <div style={{ fontWeight: 800, fontSize: 17, color: 'var(--text)' }}>{p.name}</div>
-              <div style={{ color: 'var(--text-secondary)', fontSize: 14, lineHeight: 1.6, flex: 1 }}>{p.desc}</div>
-              <a href={p.href} style={{ display: 'block', textAlign: 'center', background: p.featured ? 'var(--accent)' : 'transparent', color: p.featured ? '#FFFFFF' : 'var(--text)', border: p.featured ? 'none' : '1.5px solid var(--border)', padding: '12px 20px', borderRadius: 100, fontWeight: 700, fontSize: 14, textDecoration: 'none' }}>{p.cta}</a>
-            </div>
-          ))}
+          <Link href="/tools" style={{ color: 'var(--accent)', fontWeight: 700, textDecoration: 'none', fontSize: 15 }}>
+            See all free tools &rarr;
+          </Link>
         </div>
       </section>
 
@@ -558,13 +295,12 @@ export default function Home() {
           <div className="founder-info">
             <h2 style={{ fontSize: 24, marginBottom: 12 }}>Built by Armando</h2>
             <p style={{ color: 'var(--text-secondary)', fontSize: 15, lineHeight: 1.7, marginBottom: 16 }}>
-              I'm an engineer and entrepreneur who's been building AI automation tools since before it was cool. Midas Tools exists because I needed these exact workflows for my own businesses — and realized thousands of other entrepreneurs need them too.
+              I'm an engineer and entrepreneur building practical AI tools that make money — not demos. Midas Tools exists because I needed these exact workflows for my own businesses, and realized thousands of other founders and operators need them too.
             </p>
             <p style={{ color: 'var(--text-secondary)', fontSize: 15, lineHeight: 1.7 }}>
-              Every template in these kits comes from real usage — not theory. They've been tested, refined, and proven to work with actual AI agents generating real revenue.
+              Everything here is built from real usage — tested, refined, and proven to work in production.
             </p>
             <div style={{ display: 'flex', gap: 16, marginTop: 20, flexWrap: 'wrap' }}>
-              <a href="mailto:iam@armando.mx" style={{ color: 'var(--accent)', fontSize: 14, fontWeight: 600, textDecoration: 'none' }}>iam@armando.mx</a>
               <a href="https://cal.com/manduks/midastools" target="_blank" rel="noopener" style={{ color: 'var(--accent)', fontSize: 14, fontWeight: 600, textDecoration: 'none' }}>Book a call &rarr;</a>
             </div>
           </div>
@@ -575,18 +311,17 @@ export default function Home() {
       <section id="subscribe" style={{ paddingTop: 0 }}>
         <div className="email-box">
           <h3>Get free templates + weekly AI insights</h3>
-          <p>Join entrepreneurs getting weekly workflows, prompts, and revenue strategies. No spam — unsubscribe anytime.</p>
+          <p>Join founders and operators getting weekly workflows, tools, and revenue strategies. No spam — unsubscribe anytime.</p>
           {subStatus === 'done' ? (
             <div style={{ textAlign: 'center' }}>
               <p style={{ color: 'var(--accent)', fontWeight: 700, fontSize: 16, marginBottom: 16 }}>You're in — check your inbox!</p>
-              <p style={{ color: '#374151', fontSize: 15, marginBottom: 16 }}>People are selling AI art for <strong>$15&ndash;50 a piece</strong> on Etsy. Here's the exact playbook &mdash; which styles sell, which tools to use, and how to list your first piece.</p>
-              <a href="/blog/how-to-make-money-selling-ai-art-2026?utm_source=homepage&utm_medium=signup_success&utm_campaign=signup_money_guide" className="btn-primary" data-cta="signup-success-money-guide">Show me how to sell AI art &rarr;</a>
-              <p style={{ marginTop: 14, fontSize: 13 }}><a href="/ai-art-generator?utm_source=homepage&utm_medium=signup_success&utm_campaign=art_live" style={{ color: '#6b7280', textDecoration: 'none' }} data-cta="signup-success-art-machine">or make art for free first &rarr;</a></p>
+              <p style={{ color: '#374151', fontSize: 15, marginBottom: 16 }}>While you're here — the fastest thing you can build right now is a working AI chatbot from any website. Free to try.</p>
+              <a href="/chatbot-builder?utm_source=homepage&utm_medium=signup_success&utm_campaign=signup_chatbot" className="btn-primary" data-cta="signup-success-chatbot">Build a free chatbot &rarr;</a>
             </div>
           ) : (
             <form className="email-form" onSubmit={handleSubscribe}>
               <input type="email" placeholder="Your email" value={email} onChange={e => setEmail(e.target.value)} required />
-              <button type="submit" disabled={subStatus === 'loading'}>{subStatus === 'loading' ? 'Joining...' : 'Subscribe free \u2192'}</button>
+              <button type="submit" disabled={subStatus === 'loading'}>{subStatus === 'loading' ? 'Joining...' : 'Subscribe free →'}</button>
             </form>
           )}
         </div>
@@ -598,12 +333,12 @@ export default function Home() {
         <h2>Common questions</h2>
         <div style={{ marginTop: 32 }}>
           {[
-            { q: 'Do I need to know how to code?', a: 'No. The templates are text files. Your agent handles all the coding. If you can copy and paste, you can use these kits.' },
-            { q: 'Is this just for Mac?', a: 'OpenClaw currently runs on macOS. A Mac Mini (~$599) is ideal for 24/7 operation, but any Mac works to start.' },
-            { q: 'What will my agent actually build?', a: 'Depends on what you tell it. The kit gives you proven prompts for digital products, software tools, and service businesses. Felix Craft now generates $300K+/month using similar templates — starting with $14,718 in just the first 3 weeks.' },
-            { q: 'How is this different from just using ChatGPT?', a: 'ChatGPT responds to messages. OpenClaw agents run 24/7, maintain memory, execute code, deploy websites, and work toward long-term goals — completely without you being there.' },
-            { q: 'Can this replace my virtual assistant?', a: 'For about 75% of typical VA work — yes. Email triage, research, content scheduling, and daily reporting all run autonomously. High-stakes decisions stay with you. Total cost: under $50/month vs. $3,000-$8,000/month for a human VA.' },
-            { q: 'What if it doesn\'t work for me?', a: '30-day full refund, no questions asked. Email iam@armando.mx and you\'ll get your money back the same day.' },
+            { q: 'What does the AI Chatbot Builder actually do?', a: 'You paste a business website and it builds a working AI support chatbot grounded in that site\'s real content — services, hours, pricing, FAQs. You get a live bot to test and a one-line embed code, in about 60 seconds.' },
+            { q: 'Is it really free to try?', a: 'Yes. Building and testing a chatbot is free. To keep a bot live on a real website — with the branding removed and lead capture on — it\'s $39/mo, and you can cancel anytime.' },
+            { q: 'How do people make money with this?', a: 'Local businesses (med spas, dental offices, home services, law firms, real estate) pay $300–$2,000/mo for a chatbot that captures leads 24/7. You build it here for $39/mo and keep the difference. It\'s a real recurring side business.' },
+            { q: 'Do I need to know how to code?', a: 'No. You paste a URL and copy one line of embed code. That\'s the whole technical requirement.' },
+            { q: 'Will the bot make things up?', a: 'It\'s built to stay grounded in the website it read. When it doesn\'t know something, it says so and offers to capture the visitor\'s details instead of inventing an answer.' },
+            { q: 'What are the free tools for?', a: 'They\'re genuinely free — prompt generators, a chatbot builder, name and hashtag generators, and more. Use them to run your business; no signup required to start.' },
           ].map((f) => (
             <FAQItem key={f.q} q={f.q} a={f.a} />
           ))}
@@ -614,21 +349,15 @@ export default function Home() {
       <section style={{ paddingTop: 0 }}>
         <div className="section-label">Popular Free Tools</div>
         <h2 style={{ marginBottom: 8 }}>AI tools you can use right now</h2>
-        <p className="section-sub" style={{ marginBottom: 24 }}>No signup required. Generate prompts, enhance images, and more — all free.</p>
+        <p className="section-sub" style={{ marginBottom: 24 }}>No signup required. Build chatbots, generate prompts, and more — all free.</p>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(250px, 1fr))', gap: 12 }}>
           {[
+            { href: '/chatbot-builder', title: 'AI Chatbot Builder', desc: 'Turn any website into a working AI support chatbot in ~60 seconds.' },
             { href: '/prompt-generator', title: 'AI Prompt Generator', desc: 'Generate expert-level prompts for any use case across 8 categories.' },
-            { href: '/ghibli-prompt-generator', title: 'Ghibli Art Prompt Generator', desc: 'Create Studio Ghibli-style art prompts with 8 iconic film aesthetics.' },
-            { href: '/pet-portrait-generator', title: 'Pet Portrait Generator', desc: 'Turn pet photos into art with 12 styles including pet-to-human.' },
-            { href: '/action-figure-generator', title: 'Action Figure Generator', desc: 'Generate custom action figure and toy box prompts from any photo.' },
             { href: '/prompt-enhancer', title: 'AI Prompt Enhancer', desc: 'Paste any prompt, get 5 enhanced versions instantly.' },
+            { href: '/soul-generator', title: 'SOUL.md Generator', desc: 'Build your OpenClaw AI agent config in 60 seconds — 6 industry presets.' },
             { href: '/image-prompt-builder', title: 'Image Prompt Builder', desc: 'Build perfect prompts for Midjourney, DALL-E, and ChatGPT images.' },
-            { href: '/tattoo-generator', title: 'Tattoo Design Generator', desc: 'Design your dream tattoo with AI — 12 styles, custom placement.' },
-            { href: '/fantasy-map-generator', title: 'Fantasy Map Generator', desc: 'Create D&D, RPG & world-building maps — Tolkien, pixel art, dark fantasy.' },
-            { href: '/childhood-reimagine-generator', title: 'Childhood Reimaginer', desc: 'Reimagine childhood photos as Ghibli kids, Pixar characters, fairy tales.' },
-            { href: '/album-cover-generator', title: 'Album Cover Generator', desc: 'Create stunning album cover art with AI for any genre or mood.' },
-            { href: '/caricature-generator', title: '🔥 Caricature Generator', desc: 'Create the viral ChatGPT caricature of you and your job — 8 styles.' },
-            { href: '/photo-roast-generator', title: '🔥 Photo Roast Generator', desc: 'Get a hilarious AI-powered roast of any photo. Pick a style and get roasted.' },
+            { href: '/business-name-generator', title: 'Business Name Generator', desc: '20 brandable business names instantly — 16 industries, 6 styles.' },
           ].map(tool => (
             <Link key={tool.href} href={tool.href} style={{
               display: 'block', background: 'var(--surface)', border: '1px solid var(--border)',
@@ -650,52 +379,17 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Featured Kits — SEO internal linking */}
-      <section style={{ paddingTop: 0 }}>
-        <div className="section-label">Featured Kits</div>
-        <h2 style={{ marginBottom: 8 }}>Best-selling AI prompt kits</h2>
-        <p className="section-sub" style={{ marginBottom: 24 }}>Ready-to-use templates and workflows for your industry. Instant download.</p>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(250px, 1fr))', gap: 12 }}>
-          {[
-            { href: '/claude-code-kit', title: 'Claude Code Kit', price: '$39', desc: 'Master Claude Code with proven workflows, prompts, and automation recipes.', bg: 'var(--card-blue)' },
-            { href: '/muse-spark-kit', title: 'Muse Spark Kit', price: '$29', desc: 'Creative AI prompts for art, writing, and content generation.', bg: 'var(--card-purple)' },
-            { href: '/real-estate-kit', title: 'Real Estate AI Kit', price: '$49', desc: 'AI-powered leads, listings, follow-ups, and client communications.', bg: 'var(--card-green)' },
-            { href: '/small-business-kit', title: 'Small Business AI Kit', price: '$39', desc: 'Operations, hiring, and marketing automation for small teams.', bg: 'var(--card-amber)' },
-          ].map(kit => (
-            <Link key={kit.href} href={kit.href} style={{
-              display: 'block', background: kit.bg, border: '1px solid var(--border)',
-              borderRadius: 14, padding: '20px 24px', textDecoration: 'none',
-              transition: 'transform 0.15s ease, box-shadow 0.15s ease',
-            }}
-              onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-2px)'; e.currentTarget.style.boxShadow = '0 4px 16px rgba(0,0,0,0.08)'; }}
-              onMouseLeave={e => { e.currentTarget.style.transform = ''; e.currentTarget.style.boxShadow = ''; }}
-            >
-              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 6 }}>
-                <span style={{ fontSize: 15, fontWeight: 700, color: 'var(--text)' }}>{kit.title}</span>
-                <span style={{ fontSize: 13, fontWeight: 800, color: 'var(--accent)' }}>{kit.price}</span>
-              </div>
-              <div style={{ fontSize: 13, color: 'var(--text-secondary)', lineHeight: 1.5 }}>{kit.desc}</div>
-            </Link>
-          ))}
-        </div>
-        <div style={{ textAlign: 'center', marginTop: 20 }}>
-          <Link href="/kits" style={{ color: 'var(--accent)', fontWeight: 700, textDecoration: 'none', fontSize: 15 }}>
-            See all kits &rarr;
-          </Link>
-        </div>
-      </section>
-
       {/* Latest from the Blog — SEO internal linking */}
       <section style={{ paddingTop: 0 }}>
         <div className="section-label">Latest from the Blog</div>
         <h2 style={{ marginBottom: 8 }}>AI guides and strategies</h2>
-        <p className="section-sub" style={{ marginBottom: 24 }}>Practical tutorials, prompt engineering tips, and AI business strategies.</p>
+        <p className="section-sub" style={{ marginBottom: 24 }}>Practical tutorials, chatbot playbooks, and AI business strategies.</p>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(250px, 1fr))', gap: 12 }}>
           {[
-            { href: '/blog/claude-code-mastery-guide-2026', title: 'Claude Code Mastery Guide', desc: 'The complete guide to building with Claude Code — from setup to advanced workflows.' },
-            { href: '/blog/chatgpt-ghibli-style-prompts-2026', title: 'ChatGPT Ghibli Style Prompts', desc: 'How to generate stunning Studio Ghibli-style art with ChatGPT and AI image tools.' },
-            { href: '/blog/chatgpt-action-figure-prompt-2026', title: 'AI Action Figure Prompts', desc: 'Create viral action figure and toy box images with these proven prompt templates.' },
-            { href: '/blog/viral-ai-art-trends-april-2026', title: '10 Viral AI Art Trends of 2026', desc: 'The biggest AI art trends — Ghibli portraits, fantasy maps, tattoo design, childhood reimagining + free generators.' },
+            { href: '/blog/sell-ai-chatbots-local-business-2026', title: 'How to Sell AI Chatbots to Local Businesses', desc: 'The $300/mo recurring play — build free, charge monthly. The full playbook.' },
+            { href: '/blog/ai-chatbot-for-real-estate-agents-2026', title: 'AI Chatbots for Real Estate Agents', desc: 'Capture every listing lead 24/7 with a grounded AI chatbot.' },
+            { href: '/blog/claude-code-mastery-guide-2026', title: 'Claude Code Mastery Guide', desc: 'The complete guide to building with Claude Code — setup to advanced workflows.' },
+            { href: '/blog/best-free-ai-tools-2026', title: 'Best Free AI Tools of 2026', desc: 'The AI tools worth actually using this year — most of them free.' },
           ].map(post => (
             <Link key={post.href} href={post.href} style={{
               display: 'block', background: 'var(--surface)', border: '1px solid var(--border)',
@@ -720,21 +414,20 @@ export default function Home() {
       {/* Final CTA — Dark section for contrast */}
       <div className="cta-bottom" id="buy">
         <div className="section-label" style={{ marginBottom: 16 }}>Get Started Today</div>
-        <h2>Your AI entrepreneur is<br />one download away.</h2>
-        <p>Join entrepreneurs using AI to generate real revenue — starting at $29.</p>
+        <h2>Your first AI chatbot is<br />60 seconds away.</h2>
+        <p>Paste a website, get a working AI support agent. Free to build — $39/mo to keep it live.</p>
         <div style={{ display: 'flex', gap: 16, justifyContent: 'center', flexWrap: 'wrap' }}>
-          <a href={STRIPE_URL} className="btn-primary">Get the Starter Kit — $29 &rarr;</a>
-          <a href="https://buy.stripe.com/bJe7sK0tNdLjgle0pscMM0b" className="btn-outline">All Kits — $97</a>
+          <a href="/chatbot-builder" className="btn-primary" data-cta="bottom-chatbot-builder">Build a free chatbot &rarr;</a>
+          <a href="/tools" className="btn-outline">Browse free tools</a>
         </div>
         <div className="trust-signals">
-          {['Secure Stripe Checkout', 'Instant Download', '30-Day Refund', 'No Subscription'].map(t => (
+          {['No signup to start', 'Live in ~60 seconds', 'Cancel anytime', 'Resell for $300/mo'].map(t => (
             <span key={t} className="trust-signal">
               <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="7" fill="rgba(255,255,255,0.15)" /><path d="M4 7l2 2 4-4" stroke="#FFFFFF" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" /></svg>
               {t}
             </span>
           ))}
         </div>
-        <p style={{ marginTop: 24, fontSize: 14, opacity: 0.7 }}>Secure checkout via Stripe · Instant download · 30-day guarantee</p>
       </div>
     </Layout>
   );

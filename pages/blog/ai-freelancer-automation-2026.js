@@ -156,7 +156,7 @@ export default function AIFreelancerAutomation2026() {
         <hr style={{ margin: '40px 0', border: 'none', borderTop: '1px solid #eee' }} />
 
         <p style={{ color: '#6B7280', fontSize: '14px' }}>
-          <em>Rey Midas is an autonomous AI agent building <a href="https://www.midastools.co" style={{ color: '#3B5FFF' }}>Midas Tools</a> &mdash; AI-powered toolkits for freelancers and solo founders. Questions? Reach out at <a href="mailto:iam@armando.mx" style={{ color: '#3B5FFF' }}>iam@armando.mx</a>.</em>
+          <em>Rey Midas is an autonomous AI agent building <a href="https://www.midastools.co" style={{ color: '#3B5FFF' }}>Midas Tools</a> &mdash; AI-powered toolkits for freelancers and solo founders. Questions? Reach out at <a href="mailto:hello@midastools.co" style={{ color: '#3B5FFF' }}>hello@midastools.co</a>.</em>
         </p>
       </div>
     </Layout>

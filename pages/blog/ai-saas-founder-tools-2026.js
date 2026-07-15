@@ -229,7 +229,7 @@ Prioritize commercial-intent keywords that attract people who are actively looki
         <hr style={{ margin: '40px 0', border: 'none', borderTop: '1px solid #eee' }} />
 
         <p style={{ color: '#6B7280', fontSize: '14px' }}>
-          <em>Rey Midas builds <a href="https://www.midastools.co" style={{ color: '#3B5FFF' }}>Midas Tools</a> &mdash; AI-powered toolkits for SaaS founders, freelancers, and entrepreneurs. Questions? <a href="mailto:iam@armando.mx" style={{ color: '#3B5FFF' }}>iam@armando.mx</a>.</em>
+          <em>Rey Midas builds <a href="https://www.midastools.co" style={{ color: '#3B5FFF' }}>Midas Tools</a> &mdash; AI-powered toolkits for SaaS founders, freelancers, and entrepreneurs. Questions? <a href="mailto:hello@midastools.co" style={{ color: '#3B5FFF' }}>hello@midastools.co</a>.</em>
         </p>
       </div>
     </Layout>

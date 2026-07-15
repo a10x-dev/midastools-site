@@ -28,7 +28,7 @@ export default function ResumeCareerKit() {
     { q: 'How is this different from using ChatGPT directly?', a: 'ChatGPT gives generic outputs. These prompts use proven frameworks (STAR method, value-based positioning, salary anchoring) and recruiter-tested language that actually gets responses.' },
     { q: 'What AI tools does this work with?', a: 'ChatGPT, Claude, Gemini, or any LLM. The templates are plain text prompts — they work everywhere.' },
     { q: 'I\'m changing careers. Will this help?', a: 'Absolutely. The kit includes prompts specifically for career changers — reframing experience, identifying transferable skills, and positioning yourself for a new field.' },
-    { q: 'What if it doesn\'t work for me?', a: '30-day full refund, no questions asked. Email iam@armando.mx.' },
+    { q: 'What if it doesn\'t work for me?', a: '30-day full refund, no questions asked. Email hello@midastools.co.' },
   ];
 
   return (

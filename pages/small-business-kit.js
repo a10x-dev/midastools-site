@@ -308,7 +308,7 @@ export default function SmallBusinessKit() {
             { q: 'How is this different from using ChatGPT directly?', a: 'ChatGPT gives generic outputs. These templates include industry-specific language, proven frameworks, and professional formatting designed specifically for small business workflows.' },
             { q: 'Does this replace my existing tools?', a: 'It replaces the need for separate AI subscriptions for social media, email, and content. You still need your email platform (Mailchimp, etc.) and social media accounts — these templates generate the content that goes into them.' },
             { q: 'What AI tools does this work with?', a: 'ChatGPT, Claude, Gemini, or any LLM. The templates are plain text prompts — they work everywhere.' },
-            { q: 'What if it doesn\'t work for me?', a: '30-day full refund, no questions asked. Email iam@armando.mx.' },
+            { q: 'What if it doesn\'t work for me?', a: '30-day full refund, no questions asked. Email hello@midastools.co.' },
           ].map(f => (
             <div key={f.q} style={{borderBottom:'1px solid var(--gray-800)',paddingBottom:24}}>
               <div style={{fontSize:16,fontWeight:700,marginBottom:8}}>{f.q}</div>

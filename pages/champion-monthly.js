@@ -307,7 +307,7 @@ Recommend this week:
             { q: 'What if my team is 5 people? 500?', a: 'Works for 50-1000 person B2B. Under 50: the Team Adoption Kit ($49) is enough. Over 1000: drop a line to Armando — enterprise calibration may need a custom engagement.' },
             { q: 'Do you sign NDAs / DPAs?', a: 'Yes — we are happy to sign your standard NDA before onboarding. We do not train AI models on your survey or prompt data. Reply to any drop to start the paperwork.' },
             { q: 'What\'s the difference between this and the AI Team Adoption Kit ($49)?', a: 'The $49 kit is a one-time download of 48 generic prompts + 4 frameworks + 5 onboarding guides. The $199/mo Champion is the personalized monthly cadence — every drop is calibrated to YOUR team, not a generic template.' },
-            { q: 'How is the survey data used?', a: 'Survey answers are stored in our private database, used only to calibrate your drops. Not shared with vendors, not sold, not used for training. Email iam@armando.mx for deletion at any time.' },
+            { q: 'How is the survey data used?', a: 'Survey answers are stored in our private database, used only to calibrate your drops. Not shared with vendors, not sold, not used for training. Email hello@midastools.co for deletion at any time.' },
           ].map((faq, i) => (
             <div className="cm-faq-item" key={i}>
               <div className="cm-faq-q">{faq.q}</div>
@@ -324,7 +324,7 @@ Recommend this week:
           </p>
           <a href={STRIPE_URL} className="cm-cta cm-cta-primary" style={{ fontSize: 18, padding: '18px 40px' }}>Subscribe to Champion — $199/mo</a>
           <p style={{ fontSize: 13, color: 'var(--text-secondary)', marginTop: 16 }}>
-            Cancel anytime. First-drop refund guarantee. Questions: <a href="mailto:iam@armando.mx" style={{ color: 'var(--accent)' }}>iam@armando.mx</a>
+            Cancel anytime. First-drop refund guarantee. Questions: <a href="mailto:hello@midastools.co" style={{ color: 'var(--accent)' }}>hello@midastools.co</a>
           </p>
         </div>
       </div>

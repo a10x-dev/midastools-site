@@ -94,7 +94,7 @@ export default function StarterPackDelivery() {
 
         <section style={{ padding: '24px', textAlign: 'center' }}>
           <p style={{ fontSize: 13, color: '#9CA3AF' }}>
-            Need help or want a refund? Email <a href="mailto:iam@armando.mx" style={{ color: '#6B7280' }}>iam@armando.mx</a> — we reply within 24h.
+            Need help or want a refund? Email <a href="mailto:hello@midastools.co" style={{ color: '#6B7280' }}>hello@midastools.co</a> — we reply within 24h.
           </p>
         </section>
       </div>

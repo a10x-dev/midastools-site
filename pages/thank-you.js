@@ -176,7 +176,7 @@ export default function ThankYou() {
             Open My 20 Prompts →
           </a>
           <p style={{ fontSize: 13, color: '#9CA3AF', marginTop: 24 }}>
-            Questions? <a href="mailto:iam@armando.mx" style={{ color: '#6B7280' }}>iam@armando.mx</a>
+            Questions? <a href="mailto:hello@midastools.co" style={{ color: '#6B7280' }}>hello@midastools.co</a>
           </p>
         </div>
       </Layout>
@@ -226,23 +226,23 @@ export default function ThankYou() {
           <h2>{isProPass ? 'Pro Pass Active' : isSubscription ? 'Subscription Active' : isManual ? 'Your Kit Is Being Prepared' : 'Download Your Kit'}</h2>
           {isProPass ? (
             <>
-              <p>Welcome to Pro. Your <strong>unlock code</strong> is in your receipt email (from <a href="mailto:iam@armando.mx" style={{color:'var(--gold)'}}>iam@armando.mx</a>). Open the Outreach Machine, click &quot;Already Pro? Enter code&quot;, and paste it to unlock unlimited generations.</p>
+              <p>Welcome to Pro. Your <strong>unlock code</strong> is in your receipt email (from <a href="mailto:hello@midastools.co" style={{color:'var(--gold)'}}>hello@midastools.co</a>). Open the Outreach Machine, click &quot;Already Pro? Enter code&quot;, and paste it to unlock unlimited generations.</p>
               <a href="/outreach-machine#pro" className="dl-btn" style={{marginTop:8}}>→ Open the Outreach Machine</a>
             </>
           ) : isSubscription ? (
             <>
               <p>You&apos;re subscribed to {kit.name}. Your first weekly tip lands within 7 days; the monthly drop arrives within 30 days. Both are calibrated to your survey answers — if you haven&apos;t completed one yet, reply to your receipt and Armando will send you your personalized link.</p>
-              <p style={{fontSize:13,marginTop:16}}>Cancel anytime from your Stripe receipt link. Questions: <a href="mailto:iam@armando.mx" style={{color:'var(--gold)'}}>iam@armando.mx</a>.</p>
+              <p style={{fontSize:13,marginTop:16}}>Cancel anytime from your Stripe receipt link. Questions: <a href="mailto:hello@midastools.co" style={{color:'var(--gold)'}}>hello@midastools.co</a>.</p>
             </>
           ) : isManual ? (
             <>
-              <p>Your {kit.name} is being personally prepared and will be delivered to your inbox within 24 hours. You&apos;ll get a download link from <a href="mailto:iam@armando.mx" style={{color:'var(--gold)'}}>iam@armando.mx</a>.</p>
+              <p>Your {kit.name} is being personally prepared and will be delivered to your inbox within 24 hours. You&apos;ll get a download link from <a href="mailto:hello@midastools.co" style={{color:'var(--gold)'}}>hello@midastools.co</a>.</p>
               <p style={{fontSize:13,marginTop:16}}>Need it sooner? Reply to your purchase receipt and we&apos;ll prioritize delivery.</p>
             </>
           ) : (
             <>
-              <p>Your secure download link {isBundle ? 'for every kit is' : 'is'} on its way to your inbox right now — it usually lands within a minute (from <a href="mailto:iam@armando.mx" style={{color:'var(--gold)'}}>iam@armando.mx</a>). The link is unique to your purchase.</p>
-              <p style={{fontSize:13,marginTop:16}}>Don&apos;t see it in a couple of minutes? Check spam, or reply to your Stripe receipt / email <a href="mailto:iam@armando.mx" style={{color:'var(--gold)'}}>iam@armando.mx</a> and we&apos;ll send it instantly.</p>
+              <p>Your secure download link {isBundle ? 'for every kit is' : 'is'} on its way to your inbox right now — it usually lands within a minute (from <a href="mailto:hello@midastools.co" style={{color:'var(--gold)'}}>hello@midastools.co</a>). The link is unique to your purchase.</p>
+              <p style={{fontSize:13,marginTop:16}}>Don&apos;t see it in a couple of minutes? Check spam, or reply to your Stripe receipt / email <a href="mailto:hello@midastools.co" style={{color:'var(--gold)'}}>hello@midastools.co</a> and we&apos;ll send it instantly.</p>
             </>
           )}
         </div>
@@ -261,7 +261,7 @@ export default function ThankYou() {
           </div>
         )}
 
-        <p className="ty-note">Questions? <a href="mailto:iam@armando.mx">iam@armando.mx</a> — we reply within 24h.</p>
+        <p className="ty-note">Questions? <a href="mailto:hello@midastools.co">hello@midastools.co</a> — we reply within 24h.</p>
       </div>
     </Layout>
   );

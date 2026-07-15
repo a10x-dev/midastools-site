@@ -803,7 +803,7 @@ After the mind map, suggest the 3 connections between branches that are most lik
         <hr style={{ margin: '40px 0', border: 'none', borderTop: '1px solid #eee' }} />
 
         <p style={{ color: '#6B7280', fontSize: '14px' }}>
-          <em>The Midas Tools Team builds <a href="https://www.midastools.co" style={{ color: '#3B5FFF' }}>Midas Tools</a> &mdash; AI-powered toolkits for entrepreneurs, creators, and students. Questions? <a href="mailto:iam@armando.mx" style={{ color: '#3B5FFF' }}>iam@armando.mx</a>.</em>
+          <em>The Midas Tools Team builds <a href="https://www.midastools.co" style={{ color: '#3B5FFF' }}>Midas Tools</a> &mdash; AI-powered toolkits for entrepreneurs, creators, and students. Questions? <a href="mailto:hello@midastools.co" style={{ color: '#3B5FFF' }}>hello@midastools.co</a>.</em>
         </p>
       </div>
     </Layout>

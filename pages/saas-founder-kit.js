@@ -29,7 +29,7 @@ export default function SaasFounderKit() {
     { q: 'How is this different from generic AI prompts?', a: 'These templates use SaaS-specific frameworks — AARRR metrics, cohort analysis, activation milestones, churn prevention triggers. Generic prompts give generic outputs. These give SaaS outputs.' },
     { q: 'What AI tools does this work with?', a: 'ChatGPT, Claude, Gemini, or any LLM. The templates are plain text prompts — they work everywhere.' },
     { q: 'Can I use this for a B2B and B2C SaaS?', a: 'Yes. The templates include variations for both B2B and B2C models, with different onboarding flows, pricing strategies, and churn prevention approaches for each.' },
-    { q: 'What if it doesn\'t work for me?', a: '30-day full refund, no questions asked. Email iam@armando.mx.' },
+    { q: 'What if it doesn\'t work for me?', a: '30-day full refund, no questions asked. Email hello@midastools.co.' },
   ];
 
   return (

@@ -315,7 +315,7 @@ export default function RealEstateKit() {
             { q: 'Does this work with my CRM?', a: 'The templates work with any AI tool (ChatGPT, Claude, OpenClaw). The follow-up sequences can be used in any email tool — Mailchimp, Gmail, Follow Up Boss, etc.' },
             { q: 'Is this for buyer\'s agents or listing agents?', a: 'Both. The kit includes templates for buyer lead nurture, listing descriptions, seller follow-up, and general client communication.' },
             { q: 'How is this different from the general Starter Kit?', a: 'The general kit teaches you to deploy any AI agent. This kit is pre-built specifically for real estate workflows — lead response, MLS descriptions, showing coordination, and deal-stage communication.' },
-            { q: 'What if it doesn\'t work for me?', a: '30-day full refund, no questions asked. Email iam@armando.mx.' },
+            { q: 'What if it doesn\'t work for me?', a: '30-day full refund, no questions asked. Email hello@midastools.co.' },
           ].map(f => (
             <div key={f.q} style={{borderBottom:'1px solid var(--gray-800)',paddingBottom:24}}>
               <div style={{fontSize:16,fontWeight:700,marginBottom:8}}>{f.q}</div>

@@ -351,7 +351,7 @@ export default function ChampionPage({ recipient, pack, token, monthlyUrl }) {
       {/* FOOTER */}
       <section className="champ" style={{ paddingTop: 0, paddingBottom: 80, textAlign: 'center' }}>
         <p style={{ fontSize: 13, color: 'var(--text-tertiary)', maxWidth: 540, margin: '0 auto', lineHeight: 1.6 }}>
-          Questions, or want a faster reply? Email <a href="mailto:iam@armando.mx" style={{ color: 'var(--accent)' }}>iam@armando.mx</a> — a real human reads every one. Usually back within 4 hours, weekdays.
+          Questions, or want a faster reply? Email <a href="mailto:hello@midastools.co" style={{ color: 'var(--accent)' }}>hello@midastools.co</a> — a real human reads every one. Usually back within 4 hours, weekdays.
         </p>
       </section>
     </Layout>
