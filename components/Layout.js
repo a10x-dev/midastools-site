@@ -202,11 +202,11 @@ export default function Layout({ children }) {
           <span className="logo-tools">TOOLS</span>
         </Link>
         <div className="nav-links">
+          <Link href="/chatbot-builder" className={`nav-link${path === '/chatbot-builder' ? ' active' : ''}`}>Chatbot Builder</Link>
           <Link href="/tools" className={`nav-link${path === '/tools' ? ' active' : ''}`}>Free Tools</Link>
-          <Link href="/kits" className={`nav-link${path === '/kits' || path.startsWith('/prompts') || path === '/chatgpt-prompts' ? ' active' : ''}`}>Kits</Link>
           <Link href="/for-coaches" className={`nav-link${path === '/for-coaches' || path === '/services' || path === '/ai-audit' ? ' active' : ''}`}>For Coaches</Link>
           <Link href="/blog" className={`nav-link${path.startsWith('/blog') ? ' active' : ''}`}>Blog</Link>
-          <Link href="/bundle" className="nav-cta">Get Mega Pack — $97</Link>
+          <Link href="/chatbot-builder" className="nav-cta">Build a Chatbot — Free</Link>
         </div>
         <button
           className={`hamburger${menuOpen ? ' open' : ''}`}
@@ -219,43 +219,14 @@ export default function Layout({ children }) {
 
       <div className={`mobile-menu${menuOpen ? ' open' : ''}`} onClick={() => setMenuOpen(false)}>
         <Link href="/">Home</Link>
+        <Link href="/chatbot-builder">Chatbot Builder</Link>
+        <Link href="/blog/sell-ai-chatbots-local-business-2026">Sell AI Chatbots</Link>
         <Link href="/tools">Free Tools</Link>
-        <Link href="/bundle">All Kits Bundle — $97</Link>
-        <Link href="/starter-pack">Starter Pack — $9</Link>
         <Link href="/for-coaches">For Coaches</Link>
-        <Link href="/ai-audit">AI Audit — $997</Link>
         <Link href="/services">Done For You</Link>
-        <Link href="/prompt-generator">Prompt Generator</Link>
-        <Link href="/business-name-generator">Business Name Generator</Link>
-        <Link href="/email-subject-line-tester">Subject Line Tester</Link>
-        <Link href="/hashtag-generator">Hashtag Generator</Link>
-        <Link href="/prompt-scorer">Prompt Scorer</Link>
-        <Link href="/prompt-enhancer">Prompt Enhancer</Link>
-        <Link href="/image-prompt-builder">Image Prompt Builder</Link>
-        <Link href="/prompt-roaster">Prompt Roaster</Link>
-        <Link href="/soul-generator">SOUL.md Generator</Link>
-        <Link href="/ai-income-blueprint">AI Income Blueprint</Link>
-        <Link href="/ai-job-risk">AI Job Risk Calculator</Link>
-        <Link href="/prompts">Prompt Templates</Link>
-        <Link href="/chatgpt-prompts">ChatGPT Prompts</Link>
-        <Link href="/free-prompts">Free Prompts</Link>
-        <Link href="/kits">Kits</Link>
+        <Link href="/ai-audit">AI Audit — $997</Link>
         <Link href="/blog">Blog</Link>
-        <Link href="/ai-prompt-mega-pack">Prompt Mega Pack</Link>
-        <Link href="/">Starter Kit</Link>
-        <Link href="/real-estate-kit">Real Estate Kit</Link>
-        <Link href="/content-creator-kit">Content Creator Kit</Link>
-        <Link href="/freelancer-kit">Freelancer Kit</Link>
-        <Link href="/small-business-kit">Small Business Kit</Link>
-        <Link href="/ecommerce-kit">E-commerce Kit</Link>
-        <Link href="/saas-founder-kit">SaaS Founder Kit</Link>
-        <Link href="/notion-templates-kit">Notion Templates Kit</Link>
-        <Link href="/ai-video-prompt-pack">Video Prompt Pack</Link>
-        <Link href="/resume-career-kit">Resume &amp; Career Kit</Link>
-        <Link href="/social-media-kit">Social Media Kit</Link>
-        <Link href="/email-marketing-kit">Email Marketing Kit</Link>
-        <Link href="/presentation-kit">Presentation Kit</Link>
-        <Link href="/bundle" className="mobile-cta">Get Mega Pack — $97</Link>
+        <Link href="/chatbot-builder" className="mobile-cta">Build a Chatbot — Free</Link>
       </div>
 
       <main>{children}</main>
@@ -272,7 +243,7 @@ export default function Layout({ children }) {
               <span className="logo-dot">&middot;</span>
               <span className="logo-tools">TOOLS</span>
             </Link>
-            <p>Free AI tools, expert prompts, and lifetime kits for ChatGPT, Claude, Midjourney &amp; more. No subscriptions, ever.</p>
+            <p>Turn any business website into a working AI support chatbot in ~60 seconds. Free to build, $39/mo to keep it live &mdash; or resell it to local businesses.</p>
           </div>
           <div className="footer-col">
             <h4>For Pros</h4>
@@ -283,23 +254,14 @@ export default function Layout({ children }) {
             <a href="mailto:hello@midastools.co">Contact</a>
           </div>
           <div className="footer-col">
-            <h4>Products</h4>
-            <Link href="/ai-prompt-mega-pack">Prompt Mega Pack</Link>
-            <Link href="/ai-image-prompt-pack">Image Prompt Pack</Link>
-            <Link href="/">Starter Kit</Link>
-            <Link href="/real-estate-kit">Real Estate Kit</Link>
-            <Link href="/content-creator-kit">Creator Kit</Link>
-            <Link href="/freelancer-kit">Freelancer Kit</Link>
-            <Link href="/small-business-kit">Small Business Kit</Link>
-            <Link href="/ecommerce-kit">E-commerce Kit</Link>
-            <Link href="/saas-founder-kit">SaaS Founder Kit</Link>
-            <Link href="/notion-templates-kit">Notion Templates</Link>
-            <Link href="/ai-video-prompt-pack">Video Prompt Pack</Link>
-            <Link href="/resume-career-kit">Resume &amp; Career Kit</Link>
-            <Link href="/social-media-kit">Social Media Kit</Link>
-            <Link href="/email-marketing-kit">Email Marketing Kit</Link>
-            <Link href="/presentation-kit">Presentation Kit</Link>
-            <Link href="/bundle">All Kits Bundle</Link>
+            <h4>Chatbot Builder</h4>
+            <Link href="/chatbot-builder">Build a Chatbot</Link>
+            <Link href="/blog/sell-ai-chatbots-local-business-2026">Sell AI Chatbots</Link>
+            <Link href="/blog/ai-chatbot-for-med-spas-2026">For Med Spas</Link>
+            <Link href="/blog/ai-chatbot-for-dental-practices-2026">For Dental Practices</Link>
+            <Link href="/blog/ai-chatbot-for-law-firms-2026">For Law Firms</Link>
+            <Link href="/blog/ai-chatbot-for-home-services-2026">For Home Services</Link>
+            <Link href="/blog/ai-chatbot-for-real-estate-agents-2026">For Real Estate</Link>
           </div>
           <div className="footer-col">
             <h4>Resources</h4>
