@@ -13,6 +13,7 @@ Format: `- HH:MM | action description | recurrence | source | enabled`
 # Everything below this block (art gist ritual, memos) is SUPERSEDED — ignore unless it produces revenue.
 - 09:00 | CEO WEEKLY (Mon): (1) metrics-snapshot — first-ever recurring sale? watch chatbot-pro $39/mo. (2) If outbound STILL blocked, re-surface the 1 permission rule to Armando. (3) Ship 1 inbound engine asset: a new "AI chatbot for [niche]" commercial page OR a builder-conversion improvement. (4) If outbound UNBLOCKED: batch-build 10-20 demos → personalized sends → read replies via Gmail → close $39/mo. | weekly-monday | cofounder | true
 - 09:00 | Daily: metrics-snapshot — `python3 .founder/tools/metrics-snapshot.py` — watch for first chatbot-pro $39/mo recurring sale (the milestone that flips the whole strategy to "scale it") | daily | cofounder | true
+- 09:00 | Daily: chargeback-watch — `export STRIPE_SECRET_KEY="$(tr -d '\n\r ' < .founder/.stripe_key)" && python3 .founder/tools/chargeback-watch.py` — exit 10 = Early Fraud Warning or dispute. If EFW on setya@airdropfinder.com $97 (Jul 14, elevated risk) or any non-refunded charge → refund immediately: `python3 .founder/tools/chargeback-watch.py --refund-efw --apply` | daily | cofounder | true
 
 # ⬇️ SUPERSEDED — prior art-funnel / memo primary directive (kept for history only)
 # 🔥 PRIMARY DIRECTIVE (locks 2026-05-24, evaluates 2026-06-23)
