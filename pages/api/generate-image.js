@@ -89,6 +89,11 @@ function clamp(s, n = MAX_SUBJECT) {
 }
 
 export default async function handler(req, res) {
+  // ── RETIRED 2026-07-17 — legacy free-tool endpoint disabled (CEO-era pivot to Chatbot Builder).
+  // Was unauthenticated + called paid APIs (Anthropic/Gemini/Firecrawl) = cost-bomb/abuse surface,
+  // zero strategic value. To re-enable: delete this block.
+  return res.status(410).json({ error: 'retired', message: 'This tool has been retired.' });
+
   // Readiness probe — lets the page show an honest "launching this week" state
   // (instead of a tease-then-fail) while inert, and auto-activate when the key
   // is set. No spend, no side effects.

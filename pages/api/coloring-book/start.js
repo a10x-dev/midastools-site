@@ -29,6 +29,11 @@ const AUDIENCE = {
 const clamp = (s, n) => String(s || '').trim().slice(0, n);
 
 export default async function handler(req, res) {
+  // ── RETIRED 2026-07-17 — legacy free-tool endpoint disabled (CEO-era pivot to Chatbot Builder).
+  // Was unauthenticated + called paid APIs (Anthropic/Gemini/Firecrawl) = cost-bomb/abuse surface,
+  // zero strategic value. To re-enable: delete this block.
+  return res.status(410).json({ error: 'retired', message: 'This tool has been retired.' });
+
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
 
   const theme = clamp(req.body?.theme, 120);

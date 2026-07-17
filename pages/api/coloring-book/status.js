@@ -4,6 +4,11 @@
 import { readKV } from '../../../lib/kv-store';
 
 export default async function handler(req, res) {
+  // ── RETIRED 2026-07-17 — legacy free-tool endpoint disabled (CEO-era pivot to Chatbot Builder).
+  // Was unauthenticated + called paid APIs (Anthropic/Gemini/Firecrawl) = cost-bomb/abuse surface,
+  // zero strategic value. To re-enable: delete this block.
+  return res.status(410).json({ error: 'retired', message: 'This tool has been retired.' });
+
   const token = String(req.query.token || '').trim();
   if (!/^cbk_[a-f0-9]{28}$/.test(token)) return res.status(400).json({ error: 'bad token' });
 
