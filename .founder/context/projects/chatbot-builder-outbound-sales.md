@@ -4,8 +4,8 @@ slug: chatbot_builder_outbound_sales
 name: Chatbot Builder Outbound Sales Motion — CEO-Era Flagship
 tags: [chatbot,outbound,recurring,arr,go-to-market,build-it-for-them-first]
 importance: 0.95
-last_confirmed_at: 2026-07-15T02:40:34.837233+00:00
-updated_at: 2026-07-15T02:40:34.837233+00:00
+last_confirmed_at: 2026-07-17T18:54:09.958839+00:00
+updated_at: 2026-07-17T18:54:09.958839+00:00
 ---
 
 # Chatbot Builder Outbound Sales Motion — CEO-Era Flagship
@@ -16,13 +16,19 @@ Build-it-for-them-first outbound sales motion for the Chatbot Builder ($39/mo re
 
 | Key | Value | Source | Authority | Confirmed |
 |---|---|---|---:|---|
+| subscriber_count | 219 | `session_direct` | 90 | 2026-07-17 |
+| revenue_sale_count | 4 | `session_direct` | 90 | 2026-07-17 |
+| revenue_lifetime_usd | 184 | `session_direct` | 90 | 2026-07-17 |
+| raw_plink_distribution_vector | plink_1TDwTmAdkDx8xZMkmxB9yn55_in_legacy_pages_and_welcome_emails_leaked_to_sea_telegram | `session_direct` | 90 | 2026-07-17 |
+| zero_recurring_revenue_blocker | no_chatbot_pro_39mo_sale_yet_all_4_buyers_legacy_kits_only | `session_direct` | 90 | 2026-07-17 |
+| legacy_endpoints_retired | outreach_machine_listing_machine_generate_image_buyer_radar_coloring_book_quiz_champion_survey | `session_direct` | 90 | 2026-07-17 |
+| security_cleanup_shipped | 6b1c8eb_legacy_cluster_410 | `session_direct` | 90 | 2026-07-17 |
+| subscriber_growth_daily | 4_to_5_per_day | `session_direct` | 90 | 2026-07-17 |
 | pending_decision_2026_07_15 | redirect_legacy_prompt_pages_410_or_leave_harmless | `user_direct` | 90 | 2026-07-15 |
 | security_legacy_pages_status | /bundle_/soul-generator_/prompt-generator_/ai-video-prompt-pack_still_live_delinked_from_nav_2026_07_15 | `user_direct` | 90 | 2026-07-15 |
 | homepage_status | live_chatbot_builder_focused_kit_storefront_removed | `session_direct` | 90 | 2026-07-15 |
 | homepage_deployment_commit | d4a1f95 | `session_direct` | 90 | 2026-07-15 |
 | revenue_recurring_usd | 0 | `session-direct` | 90 | 2026-07-14 |
-| revenue_sale_count | 4 | `session-direct` | 90 | 2026-07-14 |
-| revenue_lifetime_usd | 184 | `session-direct` | 90 | 2026-07-14 |
 | pitches_in_flight | 8 | `session-direct` | 90 | 2026-07-13 |
 | batch_1_follow_up_date | 2026-07-16 | `session-direct` | 90 | 2026-07-13 |
 | batch_2_follow_up_date | 2026-07-20 | `session-direct` | 90 | 2026-07-13 |
