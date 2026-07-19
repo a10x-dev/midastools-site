@@ -2,7 +2,6 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useState } from 'react';
 import EmailCapture from './EmailCapture';
-import SocialProofToast from './SocialProofToast';
 
 export const DESIGN = {
   accent: '#3B5FFF',
@@ -193,7 +192,12 @@ export default function Layout({ children }) {
 
   return (
     <>
-      <style>{globalStyles}</style>
+      {/* dangerouslySetInnerHTML emits the CSS verbatim on server + client.
+          A plain <style>{globalStyles}</style> makes React HTML-escape the
+          apostrophes in font-family:'Inter' to &#x27; on the server, but the
+          browser reads <style> as raw text and never decodes them — so server
+          HTML ≠ client HTML and every page threw a hydration error. */}
+      <style dangerouslySetInnerHTML={{ __html: globalStyles }} />
 
       <nav className="site-nav">
         <Link href="/" className="site-logo">
@@ -231,9 +235,7 @@ export default function Layout({ children }) {
 
       <main>{children}</main>
 
-      {router.pathname !== '/' && <EmailCapture />}
-
-      <SocialProofToast />
+      {router.pathname !== '/' && router.pathname !== '/chatbot-builder' && <EmailCapture />}
 
       <footer className="site-footer">
         <div className="footer-grid">

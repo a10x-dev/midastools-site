@@ -25,3 +25,7 @@ subscribers.csv
 
 # Claude Code local permission overrides (machine-local, not shared)
 .claude/settings.local.json
+
+# Playwright MCP browser artifacts
+.playwright-mcp/
+midastools-home.png

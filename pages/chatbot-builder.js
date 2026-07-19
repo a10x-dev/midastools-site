@@ -6,10 +6,14 @@ import { trackEvent } from '../lib/track';
 
 // Recurring subscription — "put your bot live + capture leads" — $39/mo.
 const PRO_SUB_URL = 'https://buy.stripe.com/bJe28q3FZgXv5GAegicMM0C'; // $39/mo (plink_1TeLMeAdkDx8xZMk6MyHUoAx)
+// Description-led example — no external URL so it can never drift/404
+// (the old example pointed a dental name at an unrelated auto-parts site).
+// The builder grounds the demo bot on this description alone; a real user
+// still sees the empty website field + placeholder inviting them to paste one.
 const EXAMPLE = {
   name: 'Brightside Dental',
-  url: 'https://www.adps.com',
-  description: 'A family & cosmetic dental clinic. New-patient exams, cleanings, whitening, Invisalign, emergency visits. Open Mon–Fri 8am–5pm. Accepts most insurance.',
+  url: '',
+  description: 'A family & cosmetic dental clinic. New-patient exams, cleanings, whitening, Invisalign, and emergency visits. Open Mon–Fri 8am–5pm. Accepts most major insurance. Located in Austin, TX.',
 };
 
 function LivePreview({ bot }) {
