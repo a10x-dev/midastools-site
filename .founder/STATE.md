@@ -13,6 +13,25 @@
 
 > **Archive note (2026-07-26):** this file had grown large enough to overflow the model context (root cause of 'Prompt is too long' session errors). Older entries — full, untrimmed — are in `.founder/STATE-archive-2026-07-26.md`. Read that file when you need deep history. Keep new entries concise; prune superseded ones.
 
+## 🎖️ SESSION 17 (Jul 28, pair) — MEASURED THE FUNNEL FOR THE FIRST TIME, THEN REMOVED THE ACTIVATION GATE (commits fe23024 + 8d65866)
+
+**First real funnel measurement (14d, Jul 14–28, first-party `/api/track-events`):**
+3,090 sessions (~220/day) · 4,776 pageviews · 592 Google organic sessions · subs 219 → **385** (+166) · 96 `subscribe_submit`.
+Chatbot funnel: 183 sessions touched a chatbot page → **68** `/chatbot-builder` views → **4** `chatbot_build` → **0 paid**.
+Stripe API direct: **zero subscriptions, ever.** Lifetime $281 / 5 sales (last $97 Jul 14).
+
+**🟢 The SEO cluster IS ranking.** `/blog/sell-ai-chatbots-local-business-2026` is the **#4 Google landing page** (106 organic landings) and Google sends traffic **straight to the live demo** (`/chat/cb_d72e5ca7c217`, 25 landings; 151 views total = most-viewed chatbot asset). Caveat: a big share of raw traffic is junk — `soul-generator` pulls 887 direct + 101 Telegram landings (leaked-link/SEA crowd). The **Google** stream is the real one.
+
+**Root cause of the 94% builder drop-off (found, fixed):** the build form demanded name + website + description + FAQs + **email** before showing anything, while the hero promised "paste a website, bot in 60 seconds." The API only ever required name + one knowledge source — the email gate was self-imposed.
+
+✅ **Shipped + live-verified:**
+1. `fe23024` — builder is now 2 fields (name + website); details/FAQs collapsed; **email no longer blocks the build**, moved to *after* the bot exists to unlock the embed code. Email-gate discipline kept (embed gated; shareable `/chat/<id>` link stays open on purpose — it carries our badge back to the builder). New `chatbot_email_captured` event.
+2. `8d65866` — extracted the whole flow into `components/ChatbotBuildWidget.js` (one source of truth) and **mounted it inline on the ranking blog post**, directly under the demo iframe, replacing the first click-out CTA. `chatbot_build` / `chatbot_email_captured` / subscribe now carry a `source` tag → blog-originated vs builder-page activations are distinguishable.
+
+**Verified in prod:** no-email build works (`cb_bdc9807ecb81`, scraped, grounded, refuses to invent); full inline build from the blog page via browser (`cb_7e247177fe85`) → share link + pitch + gated embed + `$39/mo` CTA carrying `client_reference_id`. Pay path re-verified intact: `plink_1TeLMe…` active, webhook maps → `chatbot-pro`, activates bot + emails buyer. Build clean; `/chatbot-builder` down to 1.82 kB.
+
+**NEXT:** watch `chatbot_build` by `source` (baseline: 4 per 14d) and `chatbot_email_captured`. If blog-inline out-converts the builder page, mount the widget on the 5 niche pages too (med-spa/dental/home-services/law/real-estate). **The 385-person list has never once been told the Chatbot Builder exists** — biggest unused asset, but Resend was suspended recently, so sending needs Armando's read first.
+
 ## 🎖️ SESSION 16 (Jul 8, pair) — INBOUND ENGINE BRICK #6: REAL-ESTATE NICHE PAGE + FRESH GROUNDED BROKERAGE DEMO (cb_acd798d68faa), CLUSTER NOW 6 CROSS-LINKED NODES (commit 1c06922)
 
 Pair session (co-founder chose "ship brick #6"). Ran the proven ~40-min pipeline: found a content-rich independent brokerage (**We Know Boise Real Estate**, KW affiliate; WebFetch-verified areas/services/property-types/phone before minting), minted fresh demo `cb_acd798d68faa` (`scraped:true`), **verified accurate + hallucination-resistant on prod BEFORE ship**: grounded Q → real service areas (Boise/Meridian/Kuna/Eagle/Star/Nampa) + confirms seller help + honestly declines to invent a phone it didn't scrape (offers lead capture instead); trap Q → refuses all three (no invented valuation, no guaranteed sale timeline, no direct mortgage), grounds on real capability + defers to agents + captures lead. Genuinely sellable.
