@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
+import ChatbotBuildWidget from '../../components/ChatbotBuildWidget';
 
 const BUILDER = '/chatbot-builder?utm_source=blog&utm_medium=cta&utm_campaign=sell-ai-chatbots';
 
@@ -112,10 +113,13 @@ export default function SellAIChatbotsLocalBusiness2026() {
           Widget not loading? <a href="/chat/cb_d72e5ca7c217" target="_blank" rel="noopener noreferrer" style={{ color: '#3B5FFF' }}>Open the live demo in a new tab &rarr;</a>
         </p>
 
-        <div style={ctaBox}>
-          <p style={{ margin: '0 0 14px', fontWeight: 700, fontSize: 16 }}>Build your first bot free &mdash; in about 60 seconds</p>
-          <p style={{ margin: '0 0 16px', fontSize: 15, color: '#374151', fontFamily: 'system-ui, sans-serif' }}>Paste any business website. Get a working, lead-capturing AI chatbot plus a live demo link you can send the owner. Free to build. $39/mo only when you put one live for a paying client.</p>
-          <a href={BUILDER} style={ctaBtn}>Build a chatbot free &rarr;</a>
+        {/* The builder itself, inline. This page is where the qualified search
+            traffic actually lands, so readers build here instead of spending a
+            click on /chatbot-builder — the demo above is the moment they're sold. */}
+        <div style={{ margin: '0 0 32px', fontFamily: 'system-ui, sans-serif' }}>
+          <p style={{ margin: '0 0 6px', fontWeight: 700, fontSize: 16 }}>Now build one yourself &mdash; right here, in about 60 seconds</p>
+          <p style={{ margin: '0 0 16px', fontSize: 15, color: '#374151' }}>Pick a local business you know and paste their website. You&rsquo;ll get a working, lead-capturing bot plus a live demo link you can send the owner. Free to build, no signup. $39/mo only when you put one live for a paying client.</p>
+          <ChatbotBuildWidget source="blog-sell-ai-chatbots" heading="Build a bot from any business website" />
         </div>
 
         <h2 style={h2}>Why local businesses actually pay for this</h2>
