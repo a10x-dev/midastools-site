@@ -80,6 +80,9 @@ export default function ChatbotBuilder() {
   const [copiedLink, setCopiedLink] = useState(false);
   const [copiedPitch, setCopiedPitch] = useState(false);
   const [upgraded, setUpgraded] = useState(false);
+  const [showAdvanced, setShowAdvanced] = useState(false);
+  const [emailSaved, setEmailSaved] = useState(false);
+  const [emailError, setEmailError] = useState('');
 
   useEffect(() => {
     try { if (new URLSearchParams(window.location.search).get('upgraded') === '1') setUpgraded(true); } catch {}
@@ -96,9 +99,8 @@ export default function ChatbotBuilder() {
     e.preventDefault();
     setError('');
     if (!name.trim()) { setError('Add the business name.'); return; }
-    if (!email.trim() || !/.+@.+\..+/.test(email)) { setError('Add your email — that\'s where the bot will send captured leads.'); return; }
     if (!url.trim() && !description.trim() && !faqs.some(f => f.q && f.a)) {
-      setError('Add a website URL, a short description, or one FAQ so the bot knows what to say.'); return;
+      setError('Add a website URL, or open "Add details" and describe the business, so the bot knows what to say.'); return;
     }
     setBuilding(true);
     try {
@@ -110,11 +112,25 @@ export default function ChatbotBuilder() {
       if (data.error) { setError(data.message || 'Could not build the bot. Try again.'); setBuilding(false); return; }
       setBot(data);
       trackEvent('chatbot_build', { scraped: !!data.scraped });
-      // also capture the owner as a subscriber lead
-      try { fetch('/api/subscribe', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ email, source: 'chatbot-builder' }) }); } catch {}
     } catch {
       setError('Network error — try again.');
     } finally { setBuilding(false); }
+  }
+
+  // Email is captured AFTER the bot exists — the ask is far more persuasive once
+  // they've seen their own bot answering, and it no longer blocks activation.
+  function saveEmail(e) {
+    e.preventDefault();
+    setEmailError('');
+    if (!email.trim() || !/.+@.+\..+/.test(email)) { setEmailError('Enter a valid email so leads can reach you.'); return; }
+    setEmailSaved(true);
+    trackEvent('chatbot_email_captured', { botId: bot?.id });
+    try {
+      fetch('/api/subscribe', {
+        method: 'POST', headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email, source: 'chatbot-builder' }),
+      });
+    } catch {}
   }
 
   function copyEmbed() {
@@ -181,30 +197,36 @@ export default function ChatbotBuilder() {
               <label style={label}>Business website <span style={{ color: '#9CA3AF', fontWeight: 400 }}>(we read it to train the bot)</span></label>
               <input style={inp} value={url} onChange={e => setUrl(e.target.value)} placeholder="https://example.com" />
             </div>
-            <div style={{ marginBottom: 16 }}>
-              <label style={label}>Short description <span style={{ color: '#9CA3AF', fontWeight: 400 }}>(optional — helps if there's no website)</span></label>
-              <textarea style={{ ...inp, minHeight: 70, resize: 'vertical' }} value={description} onChange={e => setDescription(e.target.value)} placeholder="What the business does, services, hours, location…" />
-            </div>
+            {/* Everything below is optional. Kept collapsed so the default path is
+                name + website → build, matching the 60-second promise in the hero. */}
+            <button type="button" onClick={() => setShowAdvanced(v => !v)}
+              style={{ background: 'transparent', border: 'none', color: '#2563EB', fontWeight: 600, fontSize: 14, cursor: 'pointer', padding: 0, marginBottom: showAdvanced ? 16 : 4 }}>
+              {showAdvanced ? '− Hide details' : '+ Add details (optional — no website? describe it instead)'}
+            </button>
 
-            <label style={label}>FAQs <span style={{ color: '#9CA3AF', fontWeight: 400 }}>(optional — the answers you want it to nail)</span></label>
-            {faqs.map((f, i) => (
-              <div key={i} style={{ display: 'grid', gridTemplateColumns: '1fr 1.4fr', gap: 8, marginBottom: 8 }}>
-                <input style={inp} value={f.q} onChange={e => setFaq(i, 'q', e.target.value)} placeholder="Question" />
-                <input style={inp} value={f.a} onChange={e => setFaq(i, 'a', e.target.value)} placeholder="Answer" />
-              </div>
-            ))}
-            {faqs.length < 5 && <button type="button" onClick={addFaq} style={{ background: 'transparent', border: 'none', color: '#2563EB', fontWeight: 600, fontSize: 14, cursor: 'pointer', padding: 0, marginBottom: 16 }}>+ Add another FAQ</button>}
+            {showAdvanced && (
+              <>
+                <div style={{ marginBottom: 16 }}>
+                  <label style={label}>Short description <span style={{ color: '#9CA3AF', fontWeight: 400 }}>(helps if there's no website)</span></label>
+                  <textarea style={{ ...inp, minHeight: 70, resize: 'vertical' }} value={description} onChange={e => setDescription(e.target.value)} placeholder="What the business does, services, hours, location…" />
+                </div>
 
-            <div style={{ marginTop: 8, marginBottom: 16 }}>
-              <label style={label}>Your email * <span style={{ color: '#9CA3AF', fontWeight: 400 }}>(where the bot sends captured leads)</span></label>
-              <input style={inp} type="email" value={email} onChange={e => setEmail(e.target.value)} placeholder="you@email.com" />
-            </div>
+                <label style={label}>FAQs <span style={{ color: '#9CA3AF', fontWeight: 400 }}>(the answers you want it to nail)</span></label>
+                {faqs.map((f, i) => (
+                  <div key={i} style={{ display: 'grid', gridTemplateColumns: '1fr 1.4fr', gap: 8, marginBottom: 8 }}>
+                    <input style={inp} value={f.q} onChange={e => setFaq(i, 'q', e.target.value)} placeholder="Question" />
+                    <input style={inp} value={f.a} onChange={e => setFaq(i, 'a', e.target.value)} placeholder="Answer" />
+                  </div>
+                ))}
+                {faqs.length < 5 && <button type="button" onClick={addFaq} style={{ background: 'transparent', border: 'none', color: '#2563EB', fontWeight: 600, fontSize: 14, cursor: 'pointer', padding: 0, marginBottom: 16 }}>+ Add another FAQ</button>}
+              </>
+            )}
 
-            {error && <p style={{ color: '#DC2626', fontSize: 14, margin: '0 0 12px' }}>{error}</p>}
+            {error && <p style={{ color: '#DC2626', fontSize: 14, margin: '12px 0 12px' }}>{error}</p>}
             <button type="submit" disabled={building} style={{ width: '100%', background: '#2563EB', color: '#fff', border: 'none', borderRadius: 12, padding: '15px', fontSize: 16, fontWeight: 800, cursor: 'pointer' }}>
               {building ? 'Building your chatbot…' : 'Build my chatbot →'}
             </button>
-            <p style={{ textAlign: 'center', color: '#9CA3AF', fontSize: 13, marginTop: 10 }}>Free to build & test. No card required.</p>
+            <p style={{ textAlign: 'center', color: '#9CA3AF', fontSize: 13, marginTop: 10 }}>Free to build &amp; test. No signup, no card required.</p>
           </form>
         ) : (
           <div>
@@ -244,12 +266,31 @@ export default function ChatbotBuilder() {
               <div>
                 <h3 style={{ fontSize: 18, fontWeight: 800, margin: '0 0 10px' }}>1. Drop it on any website</h3>
                 <p style={{ color: '#6B7280', fontSize: 14, margin: '0 0 10px' }}>Paste this one line before <code>&lt;/body&gt;</code>. The chat bubble appears automatically.</p>
-                <div style={{ background: '#0F172A', color: '#E2E8F0', borderRadius: 10, padding: 14, fontFamily: 'monospace', fontSize: 12.5, lineHeight: 1.5, wordBreak: 'break-all', marginBottom: 10 }}>
-                  {bot.embed}
-                </div>
-                <button onClick={copyEmbed} style={{ background: '#111827', color: '#fff', border: 'none', borderRadius: 10, padding: '10px 18px', fontWeight: 700, cursor: 'pointer', fontSize: 14 }}>
-                  {copied ? '✓ Copied' : 'Copy embed code'}
-                </button>
+
+                {emailSaved ? (
+                  <>
+                    <div style={{ background: '#0F172A', color: '#E2E8F0', borderRadius: 10, padding: 14, fontFamily: 'monospace', fontSize: 12.5, lineHeight: 1.5, wordBreak: 'break-all', marginBottom: 10 }}>
+                      {bot.embed}
+                    </div>
+                    <button onClick={copyEmbed} style={{ background: '#111827', color: '#fff', border: 'none', borderRadius: 10, padding: '10px 18px', fontWeight: 700, cursor: 'pointer', fontSize: 14 }}>
+                      {copied ? '✓ Copied' : 'Copy embed code'}
+                    </button>
+                  </>
+                ) : (
+                  <form onSubmit={saveEmail} style={{ background: '#F9FAFB', border: '1px dashed #D1D5DB', borderRadius: 12, padding: 18 }}>
+                    <p style={{ fontSize: 14, fontWeight: 700, color: '#111827', margin: '0 0 4px' }}>Where should your leads go?</p>
+                    <p style={{ fontSize: 13.5, color: '#6B7280', margin: '0 0 12px', lineHeight: 1.55 }}>
+                      Add your email to unlock the embed code. It’s also the inbox where this bot sends every lead it captures.
+                    </p>
+                    <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
+                      <input style={{ ...inp, flex: '1 1 200px' }} type="email" value={email} onChange={e => setEmail(e.target.value)} placeholder="you@email.com" />
+                      <button type="submit" style={{ background: '#111827', color: '#fff', border: 'none', borderRadius: 10, padding: '11px 20px', fontWeight: 700, cursor: 'pointer', fontSize: 14, whiteSpace: 'nowrap' }}>
+                        Unlock embed →
+                      </button>
+                    </div>
+                    {emailError && <p style={{ color: '#DC2626', fontSize: 13.5, margin: '10px 0 0' }}>{emailError}</p>}
+                  </form>
+                )}
 
                 <div style={{ marginTop: 28, background: '#EFF6FF', border: '1px solid #93C5FD', borderRadius: 14, padding: 22 }}>
                   <h3 style={{ fontSize: 18, fontWeight: 800, margin: '0 0 8px' }}>2. Put it live + capture leads — $39/mo</h3>
