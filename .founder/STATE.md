@@ -13,6 +13,34 @@
 
 > **Archive note (2026-07-26):** this file had grown large enough to overflow the model context (root cause of 'Prompt is too long' session errors). Older entries — full, untrimmed — are in `.founder/STATE-archive-2026-07-26.md`. Read that file when you need deep history. Keep new entries concise; prune superseded ones.
 
+## 🛑 SESSION 18 (Aug 4, SELF-REVIEW) — THE JULY SEO CLUSTER NEVER RANKED. DO NOT SHIP BRICK #7.
+
+**Read `.founder/deliverables/why-the-chatbot-seo-cluster-failed-2026-08-04.md` before any acquisition work.**
+
+Ran the first *segmented* funnel read (new tool: `.founder/tools/chatbot-funnel-read/chatbot-funnel-read.py`). It falsified the Jul-28 headline I wrote myself ("🟢 the SEO cluster IS ranking"):
+
+| Surface | Google landings Jul 14–28 | Jul 21–Aug 4 |
+|---|---|---|
+| `sell-ai-chatbots-local-business-2026` (**reseller**) | 52 | **1** |
+| all 5 `ai-chatbot-for-[vertical]` pages | **0** | **0** |
+| `/chat/` demos | 0 | 0 |
+
+**The five niche pages have never received a single Google landing.** The hub ranked ~2 weeks (new-content honeymoon) then decayed to 1. On Jul 28 I generalized one page's temporary boost into a six-page "cluster is working" conclusion and shipped five more pages on it.
+
+**Not a technical bug** — all 6 pages verified: HTTP 200, in sitemap, `robots.txt` Allow, no `noindex`, correct self-canonicals.
+
+**Root cause = keyword selection.** SERP inspection: "AI chatbot for law firms" is owned by Harvey AI / Smith.ai / LawDroid / Gideon / Intaker / Lawmatics + legal-marketing agencies. "AI chatbot for med spas" is owned by SchedulingKit / Prospyr / Hyperleap / Intellivizz + the American Med Spa Association. Those buyers expect Clio / Lawmatics / Vagaro / Boulevard / Zenoti integrations. We are a generic $39/mo builder on a domain Google has classified as **consumer AI art** (real organic winners: ghibli 153, photo-roast 136, prompt packs).
+
+**Why the reseller page worked:** "how to sell AI chatbots to local businesses" is a creator/side-hustle SERP (GrowwStacks, BotPenguin, a Medium post, **3 YouTube videos**) — low authority barrier, matches our domain shape. And the reseller charges local businesses $300–500/mo, so **$39/mo is a cost-of-goods to them, not a purchase decision.** To a law firm, $39/mo signals "toy."
+
+**Current truth:** 2,127 sessions / 460 Google organic per 14d, ~100% art-era pages. 37 signups/14d, **zero from any chatbot surface**. 4 `chatbot_build`/14d (flat vs baseline, but builder-page conversion roughly doubled 5.9%→11.1% after the Jul-28 email-gate removal — N=4, a hint not a claim). Stripe: **0 subscriptions ever**, $281 lifetime / 5 one-time sales, last sale Jul 14.
+
+**NEXT — the rule:** do NOT ship another acquisition surface without first running the funnel read and ranking existing surfaces by *Google organic landings* (skill: `rank-surfaces-before-cloning`). The only angle with evidence is the **reseller**. Chatbot PMF is **untested**, not disproven — no qualified buyer has ever reached the funnel.
+
+**Blocked on Armando:** (1) is Resend healthy enough to mail the 385 list? (2) OK to wire one daily cron pinging on first subscription? **Missing instrument:** no Search Console — cannot tell honeymoon-decay from demotion from deindexing on the one page that worked.
+
+Also this session: pruned SCHEDULE.md from 18 dead "DUE NOW" items to 6 live ones; closed 6 rotted tasks; removed 4 falsified prompt fragments.
+
 ## 🎖️ SESSION 17 (Jul 28, pair) — MEASURED THE FUNNEL FOR THE FIRST TIME, THEN REMOVED THE ACTIVATION GATE (commits fe23024 + 8d65866)
 
 **First real funnel measurement (14d, Jul 14–28, first-party `/api/track-events`):**
@@ -106,4 +134,3 @@ Page live HTTP 200 (deploy propagated attempt 3, embed + title render) · `/chat
 
 ### Continuation — ✅ UPGRADED THE HIGHEST-VALUE PAGE'S DEMO FROM LINK → INLINE EMBED (commit 0d6019e, build clean, live-verified)
 On the continue-push, refused a 5th niche page (over-ship) and more make-money bridges (S33/S34 already did the 4 bullseyes; ai-freelancer-automation deliberately held; art posts are wrong-ICP → the rest is spray). Instead found the one genuinely-distinct, zero-indexing-wait conversion lever: **the reseller money page is the HUB (highest authority + purest reseller intent + "already-indexing" per S23), yet it had the WEAKEST demo treatment on the whole cluster** — a text-link to a new tab (iframe count 0) that most readers won't click, while every niche page embeds the demo inline. Upgraded it to an inline `/chat/cb_d72e5ca7c217` iframe + open-in-new-tab fallback (same proven pattern), placed at the exact "can I actually sell this?" decision moment mid-narrative. **Net: every page in the inbound cluster now embeds a live demo inline — reseller hub ↔ med-spa ↔ dental ↔ home-services.** Build clean (6.35 kB), pushed 3f32cb6..0d6019e, live-verified 200 + iframe present. Applies the S28/S29 "make the demo visible where buyers land" logic to the one page that inexplicably lacked it. Reversible single edit, converts existing hub traffic with no indexing wait. **Genuine saturation after this** — a 3rd distinct workstream = over-ship; remaining levers are next-slot (brick #5 law) or gated (outbound/gist send-unblock).
-

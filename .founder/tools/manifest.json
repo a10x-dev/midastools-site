@@ -1,5 +1,14 @@
 [
   {
+    "name": "chatbot-funnel-read.py",
+    "description": "ONE command answering \"is the Chatbot Builder bet working?\" \u2014 sessions, Google organic sessions, chatbot-page touches, /chatbot-builder views, chatbot_build ACTIVATION split by source tag, email captures, and (--stripe) live subscription count. Prints markdown with the Jul-14-28 baseline inline for drift comparison. Exit 10 = PING-WORTHY (first paid subscription OR activation moved vs baseline); 0 = no change; 1 = measurement path broken. ENCODES THE MEASUREMENT RECIPE so it is never re-derived: PostHog does NOT hold midastools data (project 19882 = Armando OTHER apps); source is our own /api/track-events; attribution can be null (guard it); use attribution.last_touch_ms (legacy ts is broken); curl MUST use -L (midastools.co 307s to www);  the `timeout` binary is not installed in this zsh. Built 2026-08-04 self-review; its first run proved the 5 ai-chatbot-for-[vertical] pages had 0 Google landings ever and killed the niche-page strategy. Usage: python3 .founder/tools/chatbot-funnel-read/chatbot-funnel-read.py --days 14 --stripe",
+    "language": "python",
+    "path": ".founder/tools/chatbot-funnel-read/chatbot-funnel-read.py",
+    "use_count": 1,
+    "created_at": "2026-08-04",
+    "approved": true
+  },
+  {
     "name": "check-gh-token.sh",
     "description": "Definitive 1-line health probe for the GitHub PAT (.founder/.gh_gist_token or GITHUB_GIST_TOKEN env). Exits 0 only when HTTP 200 + login=manduks + scope=gist. Captures HTTP code via curl -w (never trusts empty stdout) and parses body via python3 (avoiding the cat-bat alias that ate response bodies in prior sessions). Built renderer-S26 2026-05-24 after a 14-day calibration miss where cat-bat made the working PAT appear revoked across multiple sessions. Use quiet mode (no args) in scripts; -v prints login + scope + gist count + prefix. Run BEFORE any gist publish: bash .founder/tools/check-gh-token.sh -v && bash .founder/tools/publish-gist.sh --all",
     "language": "bash",

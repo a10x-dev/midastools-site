@@ -29,3 +29,6 @@ subscribers.csv
 # Playwright MCP browser artifacts
 .playwright-mcp/
 midastools-home.png
+
+# funnel-read tool state (churns every run)
+.founder/tools/chatbot-funnel-read/last-read.json
