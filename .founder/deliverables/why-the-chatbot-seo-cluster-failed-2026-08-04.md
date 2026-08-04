@@ -82,3 +82,26 @@ This conclusion is wrong if any of these show up:
 - A reseller-sourced `chatbot_build` fails to convert at all across 20+ builds (audience fits the traffic but not the wallet).
 
 Re-check with: `python3 .founder/tools/chatbot-funnel-read/chatbot-funnel-read.py --days 14 --stripe`
+
+---
+
+## 8. Follow-up: the chatbot pages have no search presence, but the make-money pages do
+
+I said in §6 that I couldn't narrow the honeymoon-vs-demotion question without Search Console. A cheaper test got partway there. Across four separate queries — `site:midastools.co chatbot`, the reseller keyword, a brand+keyword query, and an exact-phrase query on our own title — **not one of the six chatbot cluster pages surfaced.**
+
+On those same queries, from the same tool, these midastools pages *did* surface:
+
+- `midastools.co` (homepage)
+- `blog/make-money-with-ai-5-methods-2026`
+- `blog/felix-craft-story`
+- `world-cup-ai-prompts-2026`
+- `fantasy-map-generator`
+- `tattoo-generator`
+
+**The domain is indexed and visible. The chatbot pages specifically are not.** And the pages that *are* visible are the make-money and consumer-AI-tool pages — which is the same conclusion §4 reached from the SERP side, now confirmed from the index side.
+
+**Caveat, stated plainly:** this search tool is not literally Google and may approximate `site:` and exact-phrase operators, so this is corroborating evidence, not proof of deindexing. But four independent queries agreeing with the first-party landing data (0–1 landings) makes "these pages have effectively no Google presence" the strongly-favoured reading.
+
+**What this changes:** it raises confidence that the reseller page's 52→1 decay is not a temporary ranking wobble worth waiting out. Combined with §4 — that the reseller SERP is winnable and matches our demonstrated authority — the implication is that the *angle* is right and the *asset* is not currently competing. That is an argument for strengthening one page against a SERP we can actually see, not for waiting, and not for cloning the angle across five new pages.
+
+Search Console remains the instrument that would settle it outright.
