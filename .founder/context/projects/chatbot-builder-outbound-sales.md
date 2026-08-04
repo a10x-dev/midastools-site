@@ -4,8 +4,8 @@ slug: chatbot_builder_outbound_sales
 name: Chatbot Builder Outbound Sales Motion — CEO-Era Flagship
 tags: [chatbot,outbound,recurring,arr,go-to-market,build-it-for-them-first]
 importance: 0.95
-last_confirmed_at: 2026-07-17T18:54:09.958839+00:00
-updated_at: 2026-07-17T18:54:09.958839+00:00
+last_confirmed_at: 2026-07-29T00:34:43.291766+00:00
+updated_at: 2026-07-29T00:34:43.291766+00:00
 ---
 
 # Chatbot Builder Outbound Sales Motion — CEO-Era Flagship
@@ -16,7 +16,12 @@ Build-it-for-them-first outbound sales motion for the Chatbot Builder ($39/mo re
 
 | Key | Value | Source | Authority | Confirmed |
 |---|---|---|---:|---|
-| subscriber_count | 219 | `session_direct` | 90 | 2026-07-17 |
+| subscriber_count | 385 | `user_direct` | 90 | 2026-07-29 |
+| next_lever_pending | inline_widget_niche_pages_or_email_385_list_blocked_on_resend_health | `user_direct` | 90 | 2026-07-29 |
+| activation_baseline | 4_builds_per_14d_post_email_removal | `user_direct` | 90 | 2026-07-29 |
+| google_rank_4_page | sell_ai_chatbots_local_business_2026_106_landings_25_direct_to_demo | `user_direct` | 90 | 2026-07-29 |
+| activation_blocker_resolved | email_gate_moved_post_build_form_2_fields_only | `user_direct` | 90 | 2026-07-29 |
+| funnel_14d_jul14_28 | 3090_sessions_68_builder_views_4_bots_built_0_subscriptions | `user_direct` | 90 | 2026-07-29 |
 | revenue_sale_count | 4 | `session_direct` | 90 | 2026-07-17 |
 | revenue_lifetime_usd | 184 | `session_direct` | 90 | 2026-07-17 |
 | raw_plink_distribution_vector | plink_1TDwTmAdkDx8xZMkmxB9yn55_in_legacy_pages_and_welcome_emails_leaked_to_sea_telegram | `session_direct` | 90 | 2026-07-17 |
@@ -79,6 +84,7 @@ Build-it-for-them-first outbound sales motion for the Chatbot Builder ($39/mo re
 | embed_per_niche_pipeline_runtime | 35-40_minutes | `session_jul5_2026` | 85 | 2026-07-05 |
 | next_autonomous_lever | mint + ship brick #4 (home-services or law niche) with fresh grounded demo; watch chatbot_build events + first chatbot-pro $39/mo sub milestone; weekly-verify both embedded demos (config 200) | `session_jul5_2026` | 85 | 2026-07-05 |
 | unblock_requirement_permission_rules | send-one.py + publish-gist.sh (~30 sec each to add to auto-mode classifier allowlist); both required to fire staged Cosmetiq send + publish gist #23 | `session_jul5_2026` | 85 | 2026-07-05 |
+| resend_account_status | suspended_recently_requires_armando_assessment | `user_direct` | 80 | 2026-07-29 |
 | cold_email_safety_cap | 4_5_sends_per_day | `session-direct` | 80 | 2026-07-13 |
 | hero_cta_repoint_pending | current_points_dead_Outreach_Machine_should_point_chatbot_builder_decision_ready_diff_in_STATE | `session_jul5_2026` | 80 | 2026-07-05 |
 | next_brick_slot | brick_7_auto_repair | `session-present` | 30 | 2026-07-08 |
