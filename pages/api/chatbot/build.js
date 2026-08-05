@@ -20,13 +20,32 @@ import { readKV, writeKV } from '../../../lib/kv-store';
 
 const MODEL = 'claude-haiku-4-5-20251001';
 const FIRECRAWL_SCRAPE_URL = 'https://api.firecrawl.dev/v2/scrape';
-const FREE_DAILY_BUILD_CAP = 8; // per IP per day
+const FREE_DAILY_BUILD_CAP = 8; // per IP per day (anonymous abuse guard)
+const INTERNAL_DAILY_BUILD_CAP = 50; // per day, total, for our own authenticated tools
 const MAX_SCRAPE_CHARS = 14000; // cap content sent to the LLM
 const MAX_KNOWLEDGE_CHARS = 6000; // cap stored distilled knowledge
 
 function getIp(req) {
   const fwd = req.headers['x-forwarded-for'] || '';
   return (fwd.split(',')[0] || req.socket?.remoteAddress || 'unknown').trim();
+}
+
+// Our own outbound + smoke-test tools authenticate with a shared secret so the
+// anonymous-abuse guard doesn't throttle first-party sales work (8/day per IP made
+// outbound untestable: one smoke test + seven prospects, then done for the day).
+// Fails CLOSED — with no env var set the behaviour is byte-identical to before.
+// Still hard-capped, because a leaked key must never be able to bleed money the way
+// the stray Gemini bill did.
+function isInternalRequest(req) {
+  const expected = process.env.CHATBOT_BUILD_KEY || '';
+  if (expected.length < 24) return false; // refuse unset or weak secrets
+  const got = String(req.headers['x-mt-build-key'] || '');
+  if (got.length !== expected.length) return false;
+  try {
+    return crypto.timingSafeEqual(Buffer.from(got), Buffer.from(expected));
+  } catch {
+    return false;
+  }
 }
 
 function clamp(s, n = 200) {
@@ -217,14 +236,22 @@ export default async function handler(req, res) {
     return res.status(400).json({ error: 'Add a website URL, a short description, or at least one FAQ so the bot has something to answer from.' });
   }
 
-  // Per-IP daily build cap (cost control).
+  // Daily build cap (cost control). Anonymous visitors are capped per IP; our own
+  // authenticated tools share one higher — but still finite — global budget.
+  const internal = isInternalRequest(req);
   const ip = getIp(req);
   const day = new Date().toISOString().slice(0, 10);
-  const rlKey = `cb-build-rl:${ip}:${day}`;
+  const cap = internal ? INTERNAL_DAILY_BUILD_CAP : FREE_DAILY_BUILD_CAP;
+  const rlKey = internal ? `cb-build-internal:${day}` : `cb-build-rl:${ip}:${day}`;
   let used = 0;
   try { const rl = await readKV(rlKey); used = (rl && rl.count) || 0; } catch {}
-  if (used >= FREE_DAILY_BUILD_CAP) {
-    return res.status(429).json({ error: 'daily_limit', message: `You've built ${FREE_DAILY_BUILD_CAP} bots today. Come back tomorrow or contact us to lift the limit.` });
+  if (used >= cap) {
+    return res.status(429).json({
+      error: 'daily_limit',
+      message: internal
+        ? `Internal build cap reached (${cap} today).`
+        : `You've built ${FREE_DAILY_BUILD_CAP} bots today. Come back tomorrow or contact us to lift the limit.`,
+    });
   }
 
   // 1) Read the site. Our own fetch FIRST (free, always available), Firecrawl only as
@@ -339,6 +366,6 @@ export default async function handler(req, res) {
     scraped: Boolean(scraped),
     knowledge_preview: knowledge.slice(0, 600),
     embed: `<script src="https://www.midastools.co/chatbot-widget.js" data-bot="${id}" async></script>`,
-    remaining: Math.max(0, FREE_DAILY_BUILD_CAP - used - 1),
+    remaining: Math.max(0, cap - used - 1),
   });
 }
