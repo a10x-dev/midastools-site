@@ -309,7 +309,17 @@ export default async function handler(req, res) {
     created: now,
     updated: now,
   };
-  await writeKV(`chatbot:${id}`, config);
+  // Same class of bug as the Firecrawl outage: writeKV returns {success:false} on a
+  // credential or transport failure, and ignoring it means handing the user an embed
+  // code for a bot that was never stored. Fail honestly instead.
+  const stored = await writeKV(`chatbot:${id}`, config);
+  if (stored && stored.success === false) {
+    console.error(`[chatbot/build] STORE FAILED for ${id}: ${stored.error}`);
+    return res.status(503).json({
+      error: 'store_failed',
+      message: "We built your bot but couldn't save it. Please try again in a moment — you haven't been charged and this didn't count against your daily limit.",
+    });
+  }
   try { await writeKV(rlKey, { count: used + 1 }); } catch {}
 
   // Index the build for the owner (so a future dashboard can list their bots).

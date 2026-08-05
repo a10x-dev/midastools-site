@@ -111,7 +111,14 @@ export default async function handler(req, res) {
 
   const apiKey = process.env.ANTHROPIC_API_KEY;
   if (!apiKey) {
-    return res.status(200).json({ reply: bot.greeting || 'Thanks for your message — our team will follow up shortly!' });
+    // Without a key this bot answers every question with its greeting. It looks alive
+    // and is a brick wall. `degraded` exists so the smoke test can SEE that — the
+    // Firecrawl outage taught us that a plausible 200 hides a dead product forever.
+    console.error('[chatbot/respond] DEGRADED: ANTHROPIC_API_KEY missing — every bot is answering with its greeting only');
+    return res.status(200).json({
+      reply: bot.greeting || 'Thanks for your message — our team will follow up shortly!',
+      degraded: 'no_api_key',
+    });
   }
 
   try {
@@ -122,7 +129,15 @@ export default async function handler(req, res) {
       signal: AbortSignal.timeout(30000),
     });
     if (!resp.ok) {
-      return res.status(200).json({ reply: "I'm having a little trouble right now — please leave your email and the team will get right back to you." });
+      // 401 = rotated key, 402/429 = credits or rate limit. Whatever the cause, EVERY
+      // visitor to EVERY embedded bot now gets this line, including on paid plans, and
+      // the endpoint still returns 200. Log it and flag it so it cannot rot unseen.
+      const detail = await resp.text().catch(() => '');
+      console.error(`[chatbot/respond] DEGRADED: anthropic HTTP ${resp.status} — ${detail.slice(0, 200)}`);
+      return res.status(200).json({
+        reply: "I'm having a little trouble right now — please leave your email and the team will get right back to you.",
+        degraded: `anthropic_${resp.status}`,
+      });
     }
     const data = await resp.json();
     const raw = data?.content?.[0]?.type === 'text' ? data.content[0].text : '';
@@ -148,7 +163,10 @@ export default async function handler(req, res) {
 
     return res.status(200).json({ reply: clean || "Thanks! How else can I help?", lead_captured: Boolean(lead) });
   } catch (err) {
-    console.error('[chatbot/respond] error:', err.message);
-    return res.status(200).json({ reply: "Sorry — something glitched. Please leave your email and we'll follow up!" });
+    console.error('[chatbot/respond] DEGRADED: unhandled —', err.message);
+    return res.status(200).json({
+      reply: "Sorry — something glitched. Please leave your email and we'll follow up!",
+      degraded: 'exception',
+    });
   }
 }
