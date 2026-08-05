@@ -97,7 +97,9 @@ def render(p, bot_id):
     """Short, concrete, honest. No hype, no emoji, no fake urgency."""
     first = (p.get("owner") or "").split(" ")[0] if p.get("owner") else None
     greeting = f"Hi {first}," if first else "Hi,"
-    link = CHAT_BASE + bot_id
+    # owner=1 unlocks the "Keep this assistant → $39/mo" bar on the demo page, shown
+    # only after they've actually exchanged a message. Never set on an embedded bot.
+    link = f"{CHAT_BASE}{bot_id}?owner=1"
     svc = p.get("services") or []
     svc_line = ""
     if svc:

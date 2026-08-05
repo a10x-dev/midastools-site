@@ -5,6 +5,7 @@
 import { useEffect, useRef, useState } from 'react';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
+import { PRO_SUB_URL } from '../../components/ChatbotBuildWidget';
 
 const ACCENT_FALLBACK = '#3B5FFF';
 const SUGGESTIONS = [
@@ -16,7 +17,8 @@ const SUGGESTIONS = [
 
 export default function ChatDemo() {
   const router = useRouter();
-  const { id } = router.query;
+  const { id, owner } = router.query;
+  const isOwner = owner === '1';
   const [bot, setBot] = useState(null);
   const [status, setStatus] = useState('loading'); // loading | ready | notfound
   const [messages, setMessages] = useState([]);
@@ -169,9 +171,32 @@ export default function ChatDemo() {
                 display: 'flex', alignItems: 'center', justifyContent: 'center',
               }} aria-label="Send">↑</button>
             </div>
-            <div style={{ textAlign: 'center', marginTop: 8, fontSize: 11.5, color: '#9CA3AF' }}>
-              Built by <a href="/chatbot-builder?utm_source=chat_demo" style={{ color: '#9CA3AF', fontWeight: 600, textDecoration: 'none' }}>MidasTools</a> — your 24/7 AI assistant
-            </div>
+            {/* Owner mode. Only ever set on a link we email to the business owner in
+                the build-it-for-them-first motion — a visitor to an embedded bot must
+                never see this. Held back until they've actually exchanged a message,
+                so the bot earns the ask instead of leading with it. */}
+            {isOwner && messages.length > 2 ? (
+              <div style={{
+                maxWidth: 640, margin: '10px auto 0', background: '#F5F8FF', border: '1px solid #D8E2FF',
+                borderRadius: 12, padding: '12px 14px', display: 'flex', gap: 12, alignItems: 'center', flexWrap: 'wrap',
+              }}>
+                <div style={{ flex: '1 1 240px', fontSize: 13, color: '#374151', lineHeight: 1.5 }}>
+                  This is <strong>{name}</strong>’s own assistant — built from your website, answering 24/7.
+                  Put it on your site for <strong>$39/month</strong>. One line of code, cancel anytime.
+                </div>
+                <a
+                  href={`${PRO_SUB_URL}?client_reference_id=${encodeURIComponent(id || '')}&utm_source=chat_demo_owner`}
+                  style={{
+                    background: ACCENT_FALLBACK, color: '#fff', fontWeight: 700, fontSize: 13.5,
+                    padding: '10px 16px', borderRadius: 9, textDecoration: 'none', whiteSpace: 'nowrap',
+                  }}
+                >Keep this assistant →</a>
+              </div>
+            ) : (
+              <div style={{ textAlign: 'center', marginTop: 8, fontSize: 11.5, color: '#9CA3AF' }}>
+                Built by <a href="/chatbot-builder?utm_source=chat_demo" style={{ color: '#9CA3AF', fontWeight: 600, textDecoration: 'none' }}>MidasTools</a> — your 24/7 AI assistant
+              </div>
+            )}
           </div>
         )}
       </div>
