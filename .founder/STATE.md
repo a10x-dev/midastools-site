@@ -49,6 +49,40 @@ build a bot?", never "did the bot work?". The instrument measured the funnel, no
 product. Two sessions of acquisition post-mortems reasoned about why nobody arrived,
 while the thing they'd arrive at was broken.
 
+### Continuation — audited the failure CLASS, then fixed the money path end-to-end
+
+Cap-blocked from prod verification for ~3h, so used the window on work that doesn't need it.
+
+**1. Swept every API route making an external call — the Firecrawl bug was a SHAPE, not a
+one-off. Found it twice more (`fda18dd`):**
+- `respond.js` missing `ANTHROPIC_API_KEY` → every bot answered every question with its own
+  greeting, forever, at HTTP 200. A brick wall that looks alive.
+- `respond.js` anthropic non-OK (401 rotated key / 402 credits / 429 — *exactly* how Firecrawl
+  died) → every visitor to every embedded bot gets "I'm having a little trouble", HTTP 200,
+  **and this branch didn't even log**. Both now log at error level + return a `degraded` field.
+- `build.js` discarded `writeKV`'s return → on a store failure we handed the user an embed code
+  for a bot that was never saved. Now 503 + honest message, cap not charged.
+
+**2. Built the missing instrument: `.founder/tools/product-smoke-test/product-smoke-test.py`.**
+Asserts the ARTIFACT, not the status code — scraped:true AND 120+ chars beyond the `# Name`
+heading, a grounded answer (not degraded, not the greeting, sharing real vocabulary with the
+knowledge), and a hallucination trap that must be refused. Exit 10 = broken/halt outbound,
+1 = inconclusive (never a silent pass). Verified exit 1 against today's exhausted cap.
+**Scheduled daily 08:00, before the outbound batch.**
+
+**3. Fixed the outbound money path (`8e25905`, `f73670a`) — verified live in the browser:**
+- The demo page's only conversion path was a grey "Built by MidasTools" badge → /chatbot-builder.
+  Wrong ask: an owner doesn't want to BUILD an assistant, they want to KEEP the one already
+  answering questions about their business. `?owner=1` (only on links we email) now shows
+  "Keep this assistant → $39/mo" going **straight to Stripe** with
+  `client_reference_id=<botId>`, held until they've exchanged a message. Verified on prod:
+  href = `buy.stripe.com/...?client_reference_id=cb_d72e5ca7c217`. Non-owner correctly sees
+  only the badge.
+- **Markdown was rendering raw** — replies showed literal `**Injectables:**` on BOTH the demo
+  page and the embedded widget (i.e. on a paying customer's own site). Fixed both; widget
+  escapes HTML before applying bold. Verified on prod: 0 raw asterisks, 6 `<strong>`.
+  *Caught by opening the page in a browser — not visible in the API response.*
+
 **NEXT, in order:**
 1. After 00:00 UTC: prod build against a prospect URL → assert `scraped:true` → ask
    `/respond` a grounded question → eyeball the answer.
