@@ -109,6 +109,12 @@ function htmlToText(html) {
     .replace(/&#39;|&apos;/gi, "'").replace(/&lt;/gi, '<').replace(/&gt;/gi, '>')
     .replace(/&#(\d+);/g, (_, d) => String.fromCharCode(Number(d)))
     .replace(/[ \t]+/g, ' ')
+    // Nav/menu markup collapses into long runs of empty bullets. Left in, they eat
+    // the character budget the real content needs.
+    .split('\n')
+    .map(l => l.trim())
+    .filter(l => l && l !== '-' && l !== '##' && !/^[-–—•|·\s]+$/.test(l))
+    .join('\n')
     .replace(/\n\s*\n\s*\n+/g, '\n\n')
     .trim();
 }

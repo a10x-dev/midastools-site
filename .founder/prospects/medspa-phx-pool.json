@@ -1,0 +1,164 @@
+[
+  {
+    "name": "CurateMD Skin Bar and Wellness",
+    "url": "https://curatemdskinbar.com",
+    "email": "nichole@curatemdskinbar.com",
+    "owner": "Nichole Kent",
+    "city": "Chandler, AZ",
+    "services": ["CO2 Coolpeel", "RF Microneedling"],
+    "email_source": "visible link on /contact-us/ (note: their href is malformed, address itself is real)"
+  },
+  {
+    "name": "Paradise Medspa & Wellness",
+    "url": "https://www.paradisemedspa.com",
+    "email": "feelpretty@paradisemedspa.com",
+    "owner": "Rebecca Weiss",
+    "city": "Phoenix, AZ",
+    "services": ["Morpheus 8", "AviClear"],
+    "email_source": "homepage footer + /contact/ (Cloudflare-obfuscated, decoded)"
+  },
+  {
+    "name": "Suddenly Slimmer Med Spa",
+    "url": "https://www.suddenlyslimmer.com",
+    "email": "info@suddenlyslimmer.com",
+    "owner": null,
+    "city": "Phoenix, AZ",
+    "services": ["Vivace RF MicroNeedling", "Diamond Glow"],
+    "email_source": "/contact/ visible mailto"
+  },
+  {
+    "name": "Skindale Medspa",
+    "url": "https://skindalemedspa.com",
+    "email": "mary@skindalemedspa.com",
+    "owner": "Mary McMillin",
+    "city": "Scottsdale, AZ",
+    "services": ["Cellenis Derma PRP", "the Glass Facial"],
+    "email_source": "/about/ owner bio card mailto"
+  },
+  {
+    "name": "Zona Med Spa",
+    "url": "https://zonamedspa.com",
+    "email": "info@zonamedspa.com",
+    "owner": "Michele Hunter",
+    "city": "Scottsdale, AZ",
+    "services": ["Scarlet SRF", "Emsculpt Neo"],
+    "email_source": "/privacy-policy SMS section, visible body text"
+  },
+  {
+    "name": "All About Me Medical Aesthetics",
+    "url": "https://allaboutmeaz.com",
+    "email": "info@allaboutmeAZ.com",
+    "owner": "Leslie Predmore",
+    "city": "Phoenix, AZ",
+    "services": ["PRF EZGel", "AcuPulse CO2 Laser"],
+    "email_source": "/privacy-policy/ mailto, 3 occurrences"
+  },
+  {
+    "name": "Love Aesthetics & Wellness",
+    "url": "https://www.loveaestheticswellness.com",
+    "email": "info@loveaestheticswellness.com",
+    "owner": "Cheryl Schaaf",
+    "city": "Scottsdale, AZ",
+    "services": ["the O-Shot", "Diamond Glow Facial"],
+    "email_source": "homepage footer + /contact"
+  },
+  {
+    "name": "Esthetic Solutions Med Spa",
+    "url": "https://estheticsolutions.com",
+    "email": "concierge@estheticsolutions.com",
+    "owner": "Emily Tryon",
+    "city": "Scottsdale, AZ",
+    "services": ["PDGF Tear Troughs", "Peptides & NAD+"],
+    "email_source": "/contact"
+  },
+  {
+    "name": "Blume Skin & Body",
+    "url": "https://blumeskintreatment.com",
+    "email": "skincare@blumeskintreatment.com",
+    "owner": "Sandra Caldwell",
+    "city": "Scottsdale, AZ",
+    "services": ["Ultherapy Prime", "Sciton BBL MOXI"],
+    "email_source": "/resources/faq/ cancellation section"
+  },
+  {
+    "name": "Skin Savvy Aesthetics",
+    "url": "https://skinsavvyscottsdale.com",
+    "email": "info@skinsavvyscottsdale.com",
+    "owner": "Karlee Heffner",
+    "city": "Scottsdale, AZ",
+    "services": ["Hyperdilute Radiesse", "Face Reality Acne Bootcamp"],
+    "email_source": "/contact LocalBusiness JSON-LD email field (not rendered on page)"
+  },
+  {
+    "name": "Giovanni Med Spa",
+    "url": "https://giovannimedspa.com",
+    "email": "hello@giovannimedspa.com",
+    "owner": "Brittany Lee",
+    "city": "Gilbert, AZ",
+    "services": ["Thread Lifts", "Venus Bliss"],
+    "email_source": "homepage contact block + /contact-us/ mailto + /meet-the-team/"
+  },
+  {
+    "name": "Wood Aesthetics Health & Wellness",
+    "url": "https://www.woodaestheticshealthandwellness.com",
+    "email": "info@woodahw.com",
+    "owner": "Lindsey Wood",
+    "city": "Gilbert, AZ",
+    "services": ["SkinPen microneedling", "Peptides"],
+    "email_source": "homepage footer mailto + /meet-the-team"
+  },
+  {
+    "name": "Senza Pelo Med Spa",
+    "url": "https://www.senzapelo.com",
+    "email": "info@senzapelo.com",
+    "owner": "Maria De Nicola",
+    "city": "Phoenix, AZ",
+    "services": ["Electrolysis", "Collagen Rejuvenation"],
+    "email_source": "homepage + /contact/ mailto"
+  },
+  {
+    "name": "Vida Bella Med Spa & Weight Loss Center",
+    "url": "https://vidabellamedspa.com",
+    "email": "hello@vidabellamedspa.com",
+    "owner": null,
+    "city": "Glendale, AZ",
+    "services": ["PRX DermPerfexion", "Evolve Body Contouring"],
+    "email_source": "/contact 'By Mail:' block mailto + site-wide schema"
+  },
+  {
+    "name": "The Caring Method",
+    "url": "https://www.thecaringmethod.com",
+    "email": "CariMontoyaFNP@gmail.com",
+    "owner": "Cari Montoya",
+    "city": "Peoria, AZ",
+    "services": ["PRF", "Hormone Optimization"],
+    "email_source": "/contact body block + footer mailto"
+  },
+  {
+    "name": "Baseline Tox Medspa",
+    "url": "https://baselinetoxmedspa.com",
+    "email": "info@baselinetoxmedspa.com",
+    "owner": null,
+    "city": "Phoenix (Ahwatukee), AZ",
+    "services": ["KeraLase Hair Restoration", "Glo2 Facial"],
+    "email_source": "/contact raw HTML"
+  },
+  {
+    "name": "Beautiful Aesthetics AZ",
+    "url": "https://www.beautifulaestheticsaz.com",
+    "email": "beautifulaestheticsaz@gmail.com",
+    "owner": "Martin Sobieraj",
+    "city": "Tempe, AZ",
+    "services": ["Scarlet RF Microneedling", "Waterlase Renew"],
+    "email_source": "site-wide footer 'Visit Us' block mailto"
+  },
+  {
+    "name": "Queen Creek Med Spa",
+    "url": "https://qcmedicalspa.com",
+    "email": "qcmedicalspa@gmail.com",
+    "owner": "Kara Lindsay",
+    "city": "Queen Creek, AZ",
+    "services": ["DiamondGlow facials", "Liquid Microneedling"],
+    "email_source": "site-wide footer (Cloudflare-obfuscated, decoded). NOTE: site 403s bots — scrape may need the Firecrawl backstop"
+  }
+]
