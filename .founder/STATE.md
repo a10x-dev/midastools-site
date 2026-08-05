@@ -2,7 +2,7 @@
 
 ## Current Status (auto-synced from database)
 
-**Bottleneck**: acquisition (severity 9/10) — Not a traffic-volume problem — a qualified-traffic problem. We get 2,127 sessions / 460 Google organic per 14d, but ~100% of organic landings are art/prompt-consumer pages (ghibli 153, photo-roast 136, prompt packs). The six-page chatbot SEO cluster built in July produced 0 Google landings on all five niche pages and a decayed honeymoon (52→1) on the hub. No qualified $39/mo buyer has ever reached the funnel, so chatbot PMF is untested rather than disproven. The next move is finding where these buyers actually gather — Google has answered no.
+**Bottleneck**: acquisition (severity 9/10) — Still no qualified buyer has reached a working funnel — but the diagnosis is now sharper and the prior evidence is void. The Chatbot Builder was minting empty bots in production (Firecrawl credits lapsed; failure path returned HTTP 200), so all "0 conversion" data measured a dead product, not absent demand. Product is fixed and shipped; SEO is answered-no; the one untested channel is direct outbound with a pre-built demo, now tooled and stocked with 18 verified prospects. Binding constraint: verify the fix on prod, then get demos in front of real owners.
 
 **KPIs**:
 - Conversations: 0 (target: 3, 7d: 0%)
