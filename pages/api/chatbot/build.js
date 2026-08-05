@@ -57,13 +57,128 @@ async function firecrawlScrape(url, key) {
       body: JSON.stringify({ url, formats: ['markdown'], onlyMainContent: true }),
       signal: AbortSignal.timeout(25000),
     });
-    if (!resp.ok) return '';
+    if (!resp.ok) {
+      // 402 = out of credits, 401 = bad key. Loud, because a silent '' here mints a
+      // hollow bot that looks like a successful build. That exact failure ran
+      // undetected until 2026-08-05, when 7/7 outbound demos came back empty.
+      console.error(`[chatbot/build] firecrawl HTTP ${resp.status} — falling back to direct fetch`);
+      return '';
+    }
     const json = await resp.json();
     const md = json?.data?.markdown || json?.data?.content || json?.markdown || '';
     return String(md || '').slice(0, MAX_SCRAPE_CHARS);
-  } catch {
+  } catch (err) {
+    console.error('[chatbot/build] firecrawl threw:', err.message);
     return '';
   }
+}
+
+// --- Direct fetch scraper (no paid API, no external dependency) ---------------
+// The product's core promise is "paste a website, get a grounded bot". Renting that
+// promise from a metered third party means the whole product dies the moment that
+// bill lapses — which is exactly what happened. This does it ourselves.
+
+const BLOCKED_HOST = /^(localhost$|127\.|10\.|192\.168\.|169\.254\.|172\.(1[6-9]|2\d|3[01])\.|\[?::1\]?$|.*\.internal$|.*\.local$)/i;
+
+function safeToFetch(u) {
+  // Public endpoint: never let a pasted URL reach the internal network (SSRF).
+  try {
+    const p = new URL(u);
+    if (p.protocol !== 'http:' && p.protocol !== 'https:') return false;
+    if (BLOCKED_HOST.test(p.hostname)) return false;
+    return true;
+  } catch { return false; }
+}
+
+function htmlToText(html) {
+  return String(html || '')
+    // drop everything that is not prose
+    .replace(/<script[\s\S]*?<\/script>/gi, ' ')
+    .replace(/<style[\s\S]*?<\/style>/gi, ' ')
+    .replace(/<noscript[\s\S]*?<\/noscript>/gi, ' ')
+    .replace(/<svg[\s\S]*?<\/svg>/gi, ' ')
+    .replace(/<!--[\s\S]*?-->/g, ' ')
+    // keep structure the distiller can use
+    .replace(/<\/(p|div|section|li|tr|h[1-6]|br)>/gi, '\n')
+    .replace(/<br\s*\/?>/gi, '\n')
+    .replace(/<li[^>]*>/gi, '\n- ')
+    .replace(/<h([1-6])[^>]*>/gi, '\n\n## ')
+    .replace(/<[^>]+>/g, ' ')
+    // entities + whitespace
+    .replace(/&nbsp;/gi, ' ').replace(/&amp;/gi, '&').replace(/&quot;/gi, '"')
+    .replace(/&#39;|&apos;/gi, "'").replace(/&lt;/gi, '<').replace(/&gt;/gi, '>')
+    .replace(/&#(\d+);/g, (_, d) => String.fromCharCode(Number(d)))
+    .replace(/[ \t]+/g, ' ')
+    .replace(/\n\s*\n\s*\n+/g, '\n\n')
+    .trim();
+}
+
+async function fetchPage(u) {
+  if (!safeToFetch(u)) return '';
+  try {
+    const resp = await fetch(u, {
+      headers: {
+        // Small-business sites (Wix/Squarespace/WP + Cloudflare) routinely 403 a
+        // bot-shaped UA. Identify as a real browser but stay honest about the bot
+        // in the Accept chain — we only read public marketing pages.
+        'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0 Safari/537.36',
+        Accept: 'text/html,application/xhtml+xml',
+        'Accept-Language': 'en-US,en;q=0.9',
+      },
+      redirect: 'follow',
+      signal: AbortSignal.timeout(12000),
+    });
+    if (!resp.ok) return '';
+    const ct = resp.headers.get('content-type') || '';
+    if (!/text\/html|application\/xhtml/i.test(ct)) return '';
+    const html = (await resp.text()).slice(0, 400000);
+    return htmlToText(html);
+  } catch { return ''; }
+}
+
+// Discover a few high-signal internal pages (services/about/contact) so the bot
+// knows more than whatever happens to be on the homepage.
+function candidateSubpages(html, origin) {
+  const wanted = /(service|treatment|about|contact|pricing|price|faq|menu|hours|team)/i;
+  const out = new Set();
+  const re = /href\s*=\s*["']([^"'#]+)["']/gi;
+  let m;
+  while ((m = re.exec(html)) && out.size < 40) {
+    const raw = m[1];
+    if (!wanted.test(raw)) continue;
+    try {
+      const abs = new URL(raw, origin);
+      if (abs.origin !== new URL(origin).origin) continue;
+      if (/\.(jpg|jpeg|png|gif|svg|pdf|zip|mp4|webp|css|js)$/i.test(abs.pathname)) continue;
+      abs.hash = '';
+      out.add(abs.href);
+    } catch { /* skip bad href */ }
+  }
+  return Array.from(out).slice(0, 4);
+}
+
+async function directScrape(url) {
+  if (!safeToFetch(url)) return '';
+  let homeHtml = '';
+  try {
+    const resp = await fetch(url, {
+      headers: {
+        'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0 Safari/537.36',
+        Accept: 'text/html,application/xhtml+xml',
+      },
+      redirect: 'follow',
+      signal: AbortSignal.timeout(12000),
+    });
+    if (resp.ok) homeHtml = (await resp.text()).slice(0, 400000);
+  } catch { /* fall through */ }
+  if (!homeHtml) return '';
+
+  const parts = [htmlToText(homeHtml)];
+  const subs = candidateSubpages(homeHtml, url);
+  const fetched = await Promise.all(subs.map(fetchPage));
+  fetched.forEach((t, i) => { if (t && t.length > 200) parts.push(`\n\n--- ${subs[i]} ---\n${t}`); });
+
+  return parts.join('\n').slice(0, MAX_SCRAPE_CHARS);
 }
 
 function distillSystem(name) {
@@ -106,11 +221,19 @@ export default async function handler(req, res) {
     return res.status(429).json({ error: 'daily_limit', message: `You've built ${FREE_DAILY_BUILD_CAP} bots today. Come back tomorrow or contact us to lift the limit.` });
   }
 
-  // 1) Scrape the site (graceful: optional).
-  const firecrawlKey = process.env.FIRECRAWL_API_KEY;
+  // 1) Read the site. Our own fetch FIRST (free, always available), Firecrawl only as
+  //    a backstop for JS-rendered sites. Previously this was Firecrawl-only, so when
+  //    those credits ran out every build silently produced an empty bot.
   let scraped = '';
-  if (url && firecrawlKey) {
-    scraped = await firecrawlScrape(url, firecrawlKey);
+  if (url) {
+    scraped = await directScrape(url);
+    if (scraped.length < 400) {
+      const firecrawlKey = process.env.FIRECRAWL_API_KEY;
+      if (firecrawlKey) {
+        const fc = await firecrawlScrape(url, firecrawlKey);
+        if (fc.length > scraped.length) scraped = fc;
+      }
+    }
   }
 
   // 2) Distill into a knowledge sheet with Claude (graceful fallback to raw inputs).
@@ -152,8 +275,17 @@ export default async function handler(req, res) {
     ].join('\n').slice(0, MAX_KNOWLEDGE_CHARS).trim();
   }
 
-  if (!knowledge) {
-    return res.status(200).json({ error: 'no_knowledge', message: "We couldn't read enough about this business. Add a short description or a couple of FAQs and try again." });
+  // A bot whose entire knowledge is "# Business Name" answers nothing and makes us
+  // look broken to the one visitor who tried us. Refuse to mint it. (Before this
+  // guard, a failed scrape with no description still returned HTTP 200 + a bot id.)
+  const substantive = knowledge.replace(/^#\s*.*$/m, '').replace(/\s+/g, ' ').trim();
+  if (!knowledge || substantive.length < 120) {
+    return res.status(200).json({
+      error: 'no_knowledge',
+      message: url
+        ? "We couldn't read enough from that website — some sites block automated readers. Add a short description of the business or a couple of FAQs and we'll build it from that."
+        : "We couldn't read enough about this business. Add a short description or a couple of FAQs and try again.",
+    });
   }
 
   // 3) Mint + store the bot.

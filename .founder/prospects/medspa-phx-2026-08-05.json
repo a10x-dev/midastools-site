@@ -1,0 +1,65 @@
+[
+  {
+    "name": "Moon Valley Med Spa",
+    "url": "https://www.moonvalleymedspa.com",
+    "email": "info@moonvalleymedspa.com",
+    "owner": "Randi Morris",
+    "city": "Phoenix, AZ",
+    "services": ["Morpheus8", "the Japanese Head Spa"],
+    "email_source": "homepage footer + /contact-us"
+  },
+  {
+    "name": "Arcadia Wellness Center",
+    "url": "https://arcadiawellnesscenter.com",
+    "email": "info@arcadiawellnesscenter.com",
+    "owner": "Sarah Quinn",
+    "city": "Phoenix, AZ",
+    "services": ["Titus RF Microneedling", "IPL Photo Facial"],
+    "email_source": "homepage contact block"
+  },
+  {
+    "name": "Allure Skin and Laser",
+    "url": "https://allureskinandlaser.com",
+    "email": "info@allureskinandlaser.com",
+    "owner": "Lino Ossanna",
+    "city": "Queen Creek, AZ",
+    "services": ["SmoothGlo", "SkinPen Microneedling"],
+    "email_source": "homepage footer + /contact/"
+  },
+  {
+    "name": "La Pura Vida Medspa",
+    "url": "https://lapuravidamedspa.com",
+    "email": "info@lapuravidamedspa.com",
+    "owner": "Jodi Jacobson",
+    "city": "Queen Creek, AZ",
+    "services": ["PiXel8-RF Microneedling", "Sculptra Aesthetic"],
+    "email_source": "homepage contact section"
+  },
+  {
+    "name": "Moderne Medical Aesthetics",
+    "url": "https://www.modernemedical.com",
+    "email": "support@modernemedical.com",
+    "owner": "Allison Woodworth",
+    "city": "Scottsdale, AZ",
+    "services": ["Sylfirm X", "CoolPeel Tetra CO2"],
+    "email_source": "/contact-us page contact block + homepage footer"
+  },
+  {
+    "name": "Sonoran Aesthetics & Wellness",
+    "url": "https://sonoranaesthetics.com",
+    "email": "contact@sonoranaesthetics.com",
+    "owner": "Lisa Robbins",
+    "city": "Phoenix, AZ",
+    "services": ["Microneedling + PRP", "the Plasma Pen"],
+    "email_source": "homepage footer + /contact/"
+  },
+  {
+    "name": "Torstveit Medical Aesthetics",
+    "url": "https://tmamedspa.com",
+    "email": "tmamedspa329@gmail.com",
+    "owner": "Shaw Torstveit",
+    "city": "Phoenix, AZ",
+    "services": ["Microneedling", "Laser Hair Removal"],
+    "email_source": "/contact/ page"
+  }
+]
