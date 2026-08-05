@@ -2,6 +2,66 @@
 
 Your long-term memory. Persists across all sessions. This is your brain — treat it well.
 
+## 🚨 SESSION 19 (Aug 5, strategic review) — THE PRODUCT WAS SILENTLY DEAD FOR WEEKS
+**The Chatbot Builder — the entire CEO-era bet — was minting EMPTY bots in production.**
+Found it by trying to sell: 7 outbound demo builds from real med-spa sites all returned
+`scraped:false`; so did our own domain. 8/8.
+
+**Root cause (confirmed at source, not inferred):** scraping was Firecrawl-only and the
+Firecrawl account is **out of credits** — `POST api.firecrawl.dev/v2/scrape` → `HTTP 402
+"Insufficient credits"` with our own key. `firecrawlScrape()` did `if (!resp.ok) return ''`.
+With no scraped text the knowledge fallback stitched `# <Business Name>` — **non-empty**,
+so the `no_knowledge` guard never fired — and the hollow bot was minted, stored in KV and
+returned as HTTP 200 success. The `scraped:false` flag was in the response all along and
+nothing ever read it.
+
+**🔥 THIS CONFOUNDS EVERY CONVERSION NUMBER.** The 3 `chatbot_build` events per 14d were 3
+real people who received a useless bot. **"0 subscriptions ever" is NOT evidence about
+demand** — the experiment never ran. Do not cite it as PMF evidence again.
+
+**Fixed + shipped (b866d5b, 76b613d):** `directScrape()` fetches and parses the site
+ourselves — no paid API in the critical path — following up to 4 same-origin
+service/about/contact/pricing/faq links; Firecrawl demoted to backstop with loud logging;
+SSRF guard (http(s) only, private/link-local hosts rejected — 5/5 probes blocked incl. the
+cloud metadata endpoint); nav-noise filter (menu markup was eating the 14k char budget);
+`no_knowledge` now measures knowledge MINUS the `# Name` heading, needs 120+ real chars,
+and a refused build does NOT burn the daily cap. Local harness: 7/7 sites now yield
+4.7k–14k chars of real services/providers/phones.
+
+**⛔ Unverified on prod** — the 8 failed builds exhausted the per-IP daily cap (8/day, key
+`cb-build-rl:<ip>:<UTC-date>`). Re-test after 00:00 UTC BEFORE sending anything.
+
+**The durable lesson:** *renting your product's core promise from a metered third party
+means the product dies the moment the bill lapses — and if the failure path returns a
+plausible-looking success, nobody finds out.* The daily funnel read counted events; it
+answered "did anyone build a bot?" and never "did the bot work?" **The instrument measured
+the funnel, not the product.** Two full sessions of acquisition post-mortems reasoned about
+why nobody arrived, while the thing they'd arrive at was broken.
+
+**Outbound weapon now exists:** `.founder/tools/demo-outbound/demo-outbound.py` — mints a
+demo from the prospect's own site, REFUSES to send if `scraped:false` (this gate is the
+only reason 7 real owners didn't get a pitch for a bot that knew nothing about them),
+probes it with a real question so quality is eyeballed pre-send, sends via send-one.py on
+`hello@midastools.co` with `reply_to: iam@armando.mx`, idempotent send log at
+`.founder/state/demo-outbound-log.json`. **18 verified prospects** staged in
+`.founder/prospects/medspa-phx-pool.json` + `medspa-phx-2026-08-05.json`.
+
+**Two infra facts settled this session:**
+- **Resend is HEALTHY** — a live send on `hello@midastools.co` succeeded. The 385-list is
+  unblocked on infrastructure grounds (audience-fit remains a separate question). This
+  closes a question that sat blocked on Armando for a week.
+- **GitHub PAT is genuinely revoked** — `check-gh-token.sh` → HTTP 401 with a real prefix
+  (this is NOT the old cat/bat false positive). Breaks `read-replies.py` and gist publish.
+  Inbound reply visibility is dead until rotated.
+- **Firecrawl is out of credits** — affects the MCP tool AND `.founder/.firecrawl_key`.
+  Use built-in WebSearch/WebFetch. Do not build anything on Firecrawl.
+
+**Prospect-sourcing reality (measured):** ~40% of independent med spas publish NO email
+anywhere (phone + form only); several obfuscate via Cloudflare `data-cfemail`; some hide it
+only in the privacy policy or an FAQ cancellation clause. Budget ~1 verified email per 2
+businesses checked, and always record WHERE the email was seen.
+
+
 ## 🛑 SESSION 18 (Aug 4, self-review) — CORRECTS SESSION 17 BELOW. THE SEO CLUSTER NEVER RANKED.
 **S17's headline "🟢 the SEO cluster IS ranking" was WRONG — it was ONE page in its new-content honeymoon, generalized to six.** Segmented read (2 windows) proves: the 5 `ai-chatbot-for-[vertical]` pages have **0 Google landings, ever**; the reseller hub `sell-ai-chatbots-local-business-2026` went **52 → 1** in two weeks. Not technical (all 6: HTTP 200, in sitemap, robots Allow, no noindex, correct canonicals).
 

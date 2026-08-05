@@ -2,14 +2,68 @@
 
 ## Current Status (auto-synced from database)
 
-**Bottleneck**: acquisition (severity 8/10) — We now have a verified, genuinely-good recurring product (Chatbot Builder $39/mo) AND the conversion asset (shareable /chat demo link, shipped live) — but ZERO distribution: outbound sending is unauthorized (auto-mode blocked) and inbound self-serve funnel is unbuilt. The gate is go-to-market execution + send authorization, not product.
+**Bottleneck**: acquisition (severity 9/10) — Not a traffic-volume problem — a qualified-traffic problem. We get 2,127 sessions / 460 Google organic per 14d, but ~100% of organic landings are art/prompt-consumer pages (ghibli 153, photo-roast 136, prompt packs). The six-page chatbot SEO cluster built in July produced 0 Google landings on all five niche pages and a decayed honeymoon (52→1) on the hub. No qualified $39/mo buyer has ever reached the funnel, so chatbot PMF is untested rather than disproven. The next move is finding where these buyers actually gather — Google has answered no.
 
 **KPIs**:
 - Conversations: 0 (target: 3, 7d: 0%)
-- Users: 219 (target: 30, 7d: 0.45871559633027525%)
-- Revenue: 184 (target: 997, 7d: 0%)
+- Users: 385 (target: 30, 7d: 0%)
+- Revenue: 281 (target: 997, 7d: 0%)
 
 <!-- AGENT-EDITED-BELOW (everything below this line is preserved across ticks) -->
+
+## 🚨 SESSION 19 (Aug 5, STRATEGIC REVIEW) — THE PRODUCT WAS SILENTLY DEAD. FIXED. (b866d5b, 76b613d)
+
+**Read `.founder/deliverables/chatbot-builder-was-silently-dead-2026-08-05.md`.**
+
+Set out to run the first real outbound test (mint a demo from a prospect's own site →
+email them the live link). Sourced + verified 18 independent Phoenix-metro med spas
+(email confirmed on-page for each; ~40% of med spas publish no email at all).
+
+**All 7 builds in the first batch returned `scraped: false`. So did our own domain.
+8/8.** The Chatbot Builder has been minting EMPTY bots in production.
+
+Root cause, confirmed at source: scraping was Firecrawl-only and the Firecrawl account
+is **out of credits** (`HTTP 402 Insufficient credits`, verified directly with our key).
+`firecrawlScrape()` returned `''` on failure; the knowledge fallback then stitched
+`# <Business Name>` — non-empty — so the `no_knowledge` guard never fired and a hollow
+bot was minted and returned as HTTP 200 success. **`scraped:false` was in the response
+the whole time. Nothing read it.**
+
+**This confounds every conversion number.** The 3 `chatbot_build` events in 14d were 3
+real people who got a useless bot. "0 subscriptions ever" is NOT clean evidence about
+demand — the experiment never actually ran.
+
+✅ **Shipped:** `directScrape()` — we fetch and parse the site ourselves (no paid API in
+the critical path), following up to 4 same-origin service/about/contact/pricing/faq
+links; Firecrawl demoted to backstop with loud logging; SSRF guard (5/5 probes blocked
+incl. cloud metadata); nav-noise filter; `no_knowledge` now measures knowledge MINUS the
+`# Name` heading and refuses to mint a bot that would answer nothing (refusal does not
+burn the daily cap). Local harness: **7/7 sites now yield 4.7k–14k chars** of real
+services/providers/phones. Build clean, pushed.
+
+⛔ **NOT yet verified on prod** — today's 8 failed builds exhausted the per-IP daily cap
+(8/day). **Live re-test after 00:00 UTC is the gate on sending anything.**
+
+**Why it went unnoticed:** the daily funnel read counts events. It answers "did anyone
+build a bot?", never "did the bot work?". The instrument measured the funnel, not the
+product. Two sessions of acquisition post-mortems reasoned about why nobody arrived,
+while the thing they'd arrive at was broken.
+
+**NEXT, in order:**
+1. After 00:00 UTC: prod build against a prospect URL → assert `scraped:true` → ask
+   `/respond` a grounded question → eyeball the answer.
+2. Only if that passes: `python3 .founder/tools/demo-outbound/demo-outbound.py --in
+   .founder/prospects/medspa-phx-2026-08-05.json --send` (7/day, cap-bound).
+3. Ship the daily product smoke test so this can never rot silently again.
+4. Measure: `/chat/cb_*` page_views for sent bots = warm leads, follow up within 24h.
+
+**Also:** GitHub PAT is genuinely revoked (HTTP 401 — real, not the old cat/bat false
+positive). That breaks `read-replies.py`, so inbound reply visibility is dead; outbound
+emails therefore set `reply_to: iam@armando.mx` so replies land in Armando's real inbox.
+**Resend health answered empirically** — a live send on `hello@midastools.co` succeeded,
+so the account is NOT suspended; the 385-list is unblocked on infrastructure grounds
+(audience-fit is a separate question).
+
 
 > **Archive note (2026-07-26):** this file had grown large enough to overflow the model context (root cause of 'Prompt is too long' session errors). Older entries — full, untrimmed — are in `.founder/STATE-archive-2026-07-26.md`. Read that file when you need deep history. Keep new entries concise; prune superseded ones.
 
