@@ -8,6 +8,21 @@ import { useRouter } from 'next/router';
 import { PRO_SUB_URL } from '../../components/ChatbotBuildWidget';
 
 const ACCENT_FALLBACK = '#3B5FFF';
+
+// The model answers in markdown, so replies were rendering literal "**Botox**" to
+// every visitor — including, in the outbound motion, the business owner we are asking
+// for $39/month. Render bold as bold. Built as React nodes rather than innerHTML so
+// model output can never inject markup.
+function renderRich(text) {
+  return String(text || '')
+    .split(/(\*\*[^*]+\*\*)/g)
+    .filter(Boolean)
+    .map((part, i) =>
+      part.startsWith('**') && part.endsWith('**') && part.length > 4
+        ? <strong key={i}>{part.slice(2, -2)}</strong>
+        : <span key={i}>{part}</span>
+    );
+}
 const SUGGESTIONS = [
   'What services do you offer?',
   'How do I book an appointment?',
@@ -126,7 +141,7 @@ export default function ChatDemo() {
                   ...(m.role === 'user'
                     ? { background: accent, color: '#fff', borderBottomRightRadius: 5 }
                     : { background: '#fff', color: '#1F2937', border: '1px solid #EAECEF', borderBottomLeftRadius: 5, boxShadow: '0 1px 3px rgba(0,0,0,.04)' }),
-                }}>{m.content}</div>
+                }}>{m.role === 'assistant' ? renderRich(m.content) : m.content}</div>
               </div>
             ))}
             {sending && (

@@ -24,6 +24,16 @@
 
   function el(tag, css, txt) { var e = document.createElement(tag); if (css) e.style.cssText = css; if (txt != null) e.textContent = txt; return e; }
 
+  // The model answers in markdown, so bubbles were showing literal "**Botox**" to
+  // every visitor on a paying customer's own website. Escape first (never trust model
+  // output into innerHTML), then render bold.
+  function setRich(node, text) {
+    var esc = String(text == null ? '' : text)
+      .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+    node.innerHTML = esc.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
+  }
+
   // --- build DOM ---
   var root = el('div', 'position:fixed;bottom:20px;right:20px;z-index:2147483600;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;');
   var bubble = el('button', 'width:60px;height:60px;border-radius:50%;border:none;cursor:pointer;box-shadow:0 6px 20px rgba(0,0,0,.25);background:' + ACCENT + ';color:#fff;font-size:26px;display:flex;align-items:center;justify-content:center;transition:transform .15s;');
@@ -107,7 +117,7 @@
       .then(function (r) { return r.json(); })
       .then(function (d) {
         var reply = (d && d.reply) || 'Thanks! Our team will follow up shortly.';
-        typing.textContent = reply;
+        setRich(typing, reply);
         messages.push({ role: 'assistant', content: reply });
       })
       .catch(function () { typing.textContent = "Sorry — please try again or leave your email and we'll follow up."; })
