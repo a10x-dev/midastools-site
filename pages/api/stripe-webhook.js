@@ -1,5 +1,6 @@
 import Stripe from 'stripe';
 import nodemailer from 'nodemailer';
+import { Resend } from 'resend';
 import crypto from 'crypto';
 import { decodeAttributionFromClientRef } from '../../lib/stripe-attribution';
 import { readKV, writeKV } from '../../lib/kv-store';
@@ -14,6 +15,35 @@ const transporter = nodemailer.createTransport({
     pass: process.env.GMAIL_APP_PASSWORD,
   },
 });
+
+// The $39/mo confirmation is the single most important email this company sends —
+// it is the only thing a new subscriber receives. Sending it solely over Gmail SMTP
+// means an unset GMAIL_ADDRESS leaves a paying customer with nothing at all. Resend
+// is the channel with proven deliverability, so it goes first and Gmail is the backup.
+const resendClient = new Resend(process.env.RESEND_API_KEY);
+
+async function sendCriticalMail({ to, subject, html, replyTo }) {
+  if (process.env.RESEND_API_KEY) {
+    try {
+      await resendClient.emails.send({
+        from: 'MidasTools <hello@midastools.co>', to, subject, html,
+        replyTo: replyTo || 'iam@armando.mx',
+      });
+      return true;
+    } catch (err) { console.error('[mail] Resend failed:', err.message); }
+  }
+  if (process.env.GMAIL_ADDRESS) {
+    try {
+      await transporter.sendMail({
+        from: `"Midas Tools" <${process.env.GMAIL_ADDRESS}>`, to, subject, html,
+        replyTo: replyTo || 'iam@armando.mx',
+      });
+      return true;
+    } catch (err) { console.error('[mail] Gmail failed:', err.message); }
+  }
+  console.error(`[mail] CRITICAL: no working channel — "${subject}" never reached ${to}`);
+  return false;
+}
 
 // Map Stripe checkout URLs to kit info
 // Each Stripe Payment Link has a unique ID embedded in the URL
@@ -527,6 +557,12 @@ async function handleChatbotProActivation(session, email, name) {
       if (bot) {
         bot.plan = 'pro';
         bot.sub_email = email || bot.owner_email;
+        // Bots minted by the outbound tool are built from {name, url} only, so
+        // owner_email is null on every one of them. emailLeadToOwner() bails when
+        // it is missing — which means a buyer from that cohort would pay $39/mo,
+        // be told "captured leads are emailed to you instantly", and never receive
+        // a single one. The buyer's Stripe email IS the owner email.
+        if (!bot.owner_email && email) bot.owner_email = email;
         bot.updated = new Date().toISOString();
         await writeKV(`chatbot:${botId}`, bot);
         botName = bot.name || '';
@@ -544,30 +580,39 @@ async function handleChatbotProActivation(session, email, name) {
 
   if (email) {
     try {
-      await transporter.sendMail({
-        from: `"Midas Tools" <${process.env.GMAIL_ADDRESS}>`,
+      // A buyer who came from the outbound demo never passed through the builder, so
+      // they have NEVER seen the embed code. Telling them to "reply if you need it
+      // again" hands a paying customer a bot they cannot install. Ship the snippet.
+      const embed = botId
+        ? `&lt;script src="https://www.midastools.co/chatbot-widget.js" data-bot="${botId}" async&gt;&lt;/script&gt;`
+        : '';
+      await sendCriticalMail({
         to: email,
-        subject: '👑 Your chatbot is live — leads now come straight to your inbox',
+        subject: '👑 Your chatbot is live — here is your install code',
         html: `<div style="font-family:Inter,sans-serif;max-width:560px;margin:0 auto;background:#fff;color:#111827;padding:40px;border-radius:16px;border:1px solid #E5E7EB;">
           <h1 style="font-size:26px;font-weight:900;color:#2563EB;margin-bottom:8px;">You're live! 🎉</h1>
           <p style="color:#374151;font-size:16px;margin-bottom:24px;">Thanks${name ? `, ${name}` : ''} — your ${botName ? `<strong>${botName}</strong> ` : ''}chatbot is now on the Pro plan.</p>
+          ${embed ? `<p style="color:#111827;font-size:15px;font-weight:700;margin:0 0 8px;">Put it on your site — paste this before &lt;/body&gt;:</p>
+          <pre style="background:#0F172A;color:#E2E8F0;padding:16px;border-radius:10px;font-size:12px;line-height:1.6;overflow-x:auto;white-space:pre-wrap;word-break:break-all;margin:0 0 10px;">${embed}</pre>
+          <p style="color:#6B7280;font-size:13px;margin:0 0 24px;">On WordPress, Squarespace, Wix or Shopify, paste it into the "custom code / footer" box. Not sure where? Reply to this email and we'll do it for you.</p>` : ''}
           <div style="background:#EFF6FF;border:1px solid #93C5FD;border-radius:12px;padding:20px;margin-bottom:24px;">
             <ul style="color:#374151;font-size:15px;padding-left:18px;line-height:1.8;margin:0;">
               <li>Your embed stays live on any site</li>
-              <li><strong>Captured leads are emailed to you instantly</strong></li>
+              <li><strong>Captured leads are emailed to ${email} instantly</strong></li>
               <li>The "Powered by MidasTools" badge is removed (white-label)</li>
               <li>Build &amp; run unlimited bots — resell to local businesses</li>
             </ul>
           </div>
-          <p style="color:#6B7280;font-size:14px;">Need the embed code again or want to tweak the bot? Reply to this email anytime. $39/mo, cancel whenever.</p>
+          <p style="color:#6B7280;font-size:14px;">Questions, or want the bot tweaked? Reply to this email anytime. $39/mo, cancel whenever.</p>
         </div>`,
       });
     } catch (err) { console.error('[chatbot-pro] confirmation email failed:', err.message); }
 
     try {
-      await transporter.sendMail({
-        from: process.env.GMAIL_ADDRESS,
-        to: process.env.GMAIL_ADDRESS,
+      // First recurring sale in company history is the milestone that flips strategy.
+      // It must not be the one email that silently fails.
+      await sendCriticalMail({
+        to: 'iam+midas@armando.mx',
         subject: `🔁 RECURRING SALE: Chatbot Builder Pro — ${email}`,
         html: `<h2>New $39/mo subscriber</h2><p><strong>Email:</strong> ${email}</p><p><strong>Bot:</strong> ${botId} ${botName ? `(${botName})` : ''}</p><p><strong>Subscription:</strong> ${session.subscription || 'n/a'}</p>`,
       });
