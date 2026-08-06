@@ -123,16 +123,24 @@ def main():
                 hits[bot].append(row)
 
     opened = {b: h for b, h in hits.items() if h}
+    # A conversation is the real buying signal — an owner who ASKED their own bot
+    # questions is qualitatively different from one who glanced at the page and left.
+    msgs = {b: [x for x in h if x["event"] == "chatbot_message"] for b, h in hits.items()}
+    engaged = {b: m for b, m in msgs.items() if m}
 
     print(f"# Outbound read — {len(sent)} prospects emailed\n")
-    print("| Prospect | Opened | Events | Sessions | Owner-link |")
-    print("|---|---|---|---|---|")
-    for bot, (email, meta) in sorted(by_bot.items(), key=lambda kv: -len(hits[kv[0]])):
+    print("| Prospect | Opened | Msgs | Events | Sessions | Owner-link |")
+    print("|---|---|---|---|---|---|")
+    for bot, (email, meta) in sorted(
+        by_bot.items(), key=lambda kv: (-len(msgs[kv[0]]), -len(hits[kv[0]]))
+    ):
         h = hits[bot]
         sessions = len({x["session"] for x in h if x["session"]})
         owner = "yes" if any("owner=1" in (x["path"] or "") for x in h) else ""
+        nmsg = len(msgs[bot])
         print(
-            f"| {meta['name']} | {'✓' if h else '·'} | {len(h)} | {sessions} | {owner} |"
+            f"| {meta['name']} | {'✓' if h else '·'} | {nmsg if nmsg else '·'} | "
+            f"{len(h)} | {sessions} | {owner} |"
         )
 
     if excluded:
@@ -140,12 +148,25 @@ def main():
         for nm, why in excluded[:10]:
             print(f"  - {nm} ({why})")
 
-    print(f"\n**{len(opened)} of {len(sent)} prospects opened their demo.**")
-    if opened:
-        print("\nWARM LEADS — follow up within 24h:")
-        for bot in opened:
+    print(
+        f"\n**{len(opened)} of {len(sent)} prospects opened their demo. "
+        f"{len(engaged)} held a conversation with it.**"
+    )
+    if engaged:
+        print("\nHOT — they talked to their own bot. Reply TODAY:")
+        for bot in engaged:
             email, meta = by_bot[bot]
-            print(f"  - {meta['name']} <{email}> — {meta['demo']}?owner=1")
+            print(
+                f"  - {meta['name']} <{email}> — {len(engaged[bot])} messages "
+                f"— {meta['demo']}?owner=1"
+            )
+    if opened:
+        warm = [b for b in opened if b not in engaged]
+        if warm:
+            print("\nWARM — opened but did not talk. Follow up within 24h:")
+            for bot in warm:
+                email, meta = by_bot[bot]
+                print(f"  - {meta['name']} <{email}> — {meta['demo']}?owner=1")
         return 10
     print("\nNo opens recorded yet. Not a failure this early — re-run in a few hours.")
     return 0

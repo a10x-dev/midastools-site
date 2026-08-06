@@ -6,6 +6,7 @@ import { useEffect, useRef, useState } from 'react';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 import { PRO_SUB_URL } from '../../components/ChatbotBuildWidget';
+import { trackEvent } from '../../lib/track';
 
 const ACCENT_FALLBACK = '#3B5FFF';
 
@@ -75,6 +76,16 @@ export default function ChatDemo() {
       });
       const data = await res.json();
       setMessages([...next, { role: 'assistant', content: data.reply || 'Thanks! Our team will follow up with you shortly.' }]);
+      // The buying signal is the CONVERSATION, not the pageview. Without this, a
+      // prospect who opened their demo and asked five questions is indistinguishable
+      // from one who bounced — and the Conversations KPI is unmeasurable by construction.
+      trackEvent('chatbot_message', {
+        botId: bot.id,
+        owner: isOwner ? 1 : 0,
+        turn: next.filter((m) => m.role === 'user').length,
+        lead_captured: data.lead_captured ? 1 : 0,
+        degraded: data.degraded ? 1 : 0,
+      });
     } catch {
       setMessages([...next, { role: 'assistant', content: 'Hmm, something glitched — please try again.' }]);
     } finally {

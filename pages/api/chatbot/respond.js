@@ -33,6 +33,30 @@ async function emailLeadToOwner(bot, lead) {
   } catch (err) { console.error('[chatbot/respond] lead email failed:', err.message); }
 }
 
+// A lead captured on a FREE bot used to be written to KV and told to nobody — not the
+// owner (paid feature), not us. During the outbound motion that is the hottest signal
+// we can get: a business owner engaged their own demo far enough to hand over contact
+// details. Route it to the founder inbox so it can be answered inside the 24h SLA.
+async function notifyFounderOfDemoLead(bot, lead) {
+  if (bot.plan === 'pro' || !process.env.GMAIL_ADDRESS) return;
+  try {
+    await mailer.sendMail({
+      from: `"MidasTools Demo Lead" <${process.env.GMAIL_ADDRESS}>`,
+      to: process.env.GMAIL_ADDRESS,
+      replyTo: 'iam@armando.mx',
+      subject: `🔥 DEMO LEAD — someone gave contact details to ${bot.name}'s bot`,
+      html: `<div style="font-family:Inter,sans-serif;max-width:560px;margin:0 auto;padding:32px;border:1px solid #E5E7EB;border-radius:14px;">
+        <h2 style="color:#B45309;margin:0 0 6px;">Demo lead captured</h2>
+        <p style="font-size:14px;color:#6B7280;margin:0 0 18px;">Bot <strong>${bot.id}</strong> — ${bot.name} (plan: ${bot.plan || 'free'})</p>
+        <p style="font-size:15px;color:#374151;margin:0 0 6px;"><strong>Name:</strong> ${lead.name || '—'}</p>
+        <p style="font-size:15px;color:#374151;margin:0 0 6px;"><strong>Contact:</strong> ${lead.contact || '—'}</p>
+        <p style="font-size:15px;color:#374151;margin:0 0 16px;"><strong>They want:</strong> ${lead.note || '—'}</p>
+        <p style="font-size:13px;color:#9CA3AF;margin:0;">Bot owner on file: ${bot.owner_email || '—'}. If this bot came from an outbound batch, the person on the other end is a qualified buyer — follow up today.</p>
+      </div>`,
+    });
+  } catch (err) { console.error('[chatbot/respond] founder demo-lead notify failed:', err.message); }
+}
+
 const MODEL = 'claude-haiku-4-5-20251001';
 const FREE_DAILY_MSG_CAP = 40;   // per bot per day on free
 const PRO_DAILY_MSG_CAP = 1000;  // per bot per day on pro
@@ -156,9 +180,11 @@ export default async function handler(req, res) {
         ].slice(-200);
         await writeKV(leadsKey, store);
       } catch (e) { console.error('[chatbot/respond] lead store failed:', e.message); }
-      await emailLeadToOwner(bot, {
+      const cleanLead = {
         name: clamp(lead.name, 120), contact: clamp(lead.contact, 160), note: clamp(lead.note, 400),
-      });
+      };
+      await emailLeadToOwner(bot, cleanLead);
+      await notifyFounderOfDemoLead(bot, cleanLead);
     }
 
     return res.status(200).json({ reply: clean || "Thanks! How else can I help?", lead_captured: Boolean(lead) });
