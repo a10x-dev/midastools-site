@@ -28,6 +28,23 @@ HOT (talked to their bot) from WARM (opened only), and reports opens against **R
 prospects. Current: **0 of 17 opened, 0 conversations, 1 undeliverable.** The QA-exclusion
 guard held for the new event type (5 HeadlessChrome events printed, 0 counted).
 
+**🩸 THE $39/mo PURCHASE WOULD NOT HAVE DELIVERED (fixed, `3cb85b0`).** Prior sessions verified
+the money path *mechanically* (plink live, regex passes, webhook registered, KV keys agree) and
+called it done. Nobody checked what the buyer *receives*:
+- `demo-outbound.py` builds bots from `{name, url}` only ⇒ **`owner_email` is null on all 18
+  cohort bots**. `emailLeadToOwner()` bails without it and the webhook only set `sub_email`.
+  A buyer pays $39/mo, is told "captured leads are emailed to you instantly", and gets **none**.
+  Webhook now backfills `owner_email` from the Stripe email.
+- The confirmation email **never included the embed code** — and an outbound buyer never passed
+  through the builder, so they'd never seen it. Now shipped in the email + install guidance.
+- Confirmation AND the first-recurring-sale alert both went **only** over Gmail SMTP. New
+  `sendCriticalMail()` = Resend first, Gmail fallback, loud error if neither.
+- Verified `midastools.co/chatbot-widget.js` → HTTP 200, 7,286 bytes (the snippet resolves).
+
+**Rule: mechanical verification is not experiential verification.** "The webhook fires and flips
+a flag" and "the customer gets something they can use" are different claims. Only the second is
+the product. Walk the buyer's path as the buyer.
+
 **The pattern, now three times in three days:** every measurement that looked green was
 counting the wrong thing — `scraped:false` nobody read, an instrument that counted itself,
 and acceptance mistaken for delivery. **Before trusting any number, ask what it would look

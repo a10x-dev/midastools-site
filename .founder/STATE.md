@@ -62,6 +62,37 @@ Current honest read: **0 of 17 reachable opened. 0 conversations. 1 undeliverabl
 
 Commits: `e3b9be0`, `0b8c851`, `58d721c`. Build clean, pushed, prod-verified.
 
+### Continuation — the $39/mo purchase would NOT have delivered what it promises
+
+Having made the read valid, I traced what a Phoenix owner actually *receives* after paying.
+Previous sessions verified the money path **mechanically** (plink live, regex passes, webhook
+registered, KV keys agree). Nobody had checked the **experience**. Three defects, all landing
+on exactly the 18 people being sold to (`3cb85b0`):
+
+1. **🩸 The paid feature was dead for this entire cohort.** `demo-outbound.py` builds bots
+   from `{name, url}` only — **`owner_email` is null on all 18**. `emailLeadToOwner()` bails
+   when it is missing, and the webhook only ever set `sub_email`, never `owner_email`. So a
+   Phoenix owner pays $39/mo, reads *"Captured leads are emailed to you instantly"* in the
+   confirmation, and **never receives a single lead**. The core value proposition, dead on
+   arrival, for precisely the cohort we are selling to. Webhook now backfills `owner_email`
+   from the Stripe email.
+2. **The confirmation email never contained the embed code.** An outbound buyer never passed
+   through the builder, so they had *never seen it* — and the email said "reply if you need
+   the embed code again." A paying customer would receive a bot they cannot install. The
+   snippet now ships in the email, with where-to-paste guidance for
+   WordPress/Squarespace/Wix/Shopify and an offer to install it for them.
+3. **Both the confirmation and the first-recurring-sale alert went solely over Gmail SMTP** —
+   the same unverified `GMAIL_ADDRESS` channel. Unset ⇒ a new subscriber gets *nothing* and
+   the milestone is invisible. Added `sendCriticalMail()`: Resend first, Gmail fallback, loud
+   error naming subject + recipient if neither works.
+
+Verified `https://www.midastools.co/chatbot-widget.js` → **HTTP 200, 7,286 bytes**, so the
+install snippet we now ship actually resolves. Build clean, pushed, deployed.
+
+**This is the same lesson a third time in one session: mechanical verification is not
+experiential verification.** "The webhook fires and flips a flag" and "the customer gets
+something they can use" are different claims, and only the second one is the product.
+
 **NEXT unchanged:** 24h read (~Aug 7 00:00 UTC), 72h verdict. HOLD new batches and new
 metros. If 0 opens at 72h, suspect the email (subject/sender) — the artifact is verified
 good on all 18 and delivery is now confirmed on 17.
