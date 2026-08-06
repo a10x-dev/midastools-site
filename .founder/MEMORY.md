@@ -1,5 +1,38 @@
 # Memory
 
+## 🔬 SESSION 21 (Aug 6) — THE COHORT IS N=17, NOT 18. THREE MEASUREMENT BLIND SPOTS CLOSED.
+
+**🚨 CORRECTS SESSION 20 BELOW: "18/18 delivered" was wrong.** That number came from Resend
+returning **202 = accepted**, not delivered. **`mary@skindalemedspa.com` HARD-BOUNCED** —
+Skindale's owner never received anything. **The cohort is N=17 reachable.**
+
+**🔧 NEW CAPABILITY — Resend has a list endpoint.** `GET https://api.resend.com/emails?limit=100`
+with `.founder/.resend_key` returns per-message `last_event` (delivered / bounced /
+delivery_delayed / scheduled). **We can verify our own deliverability.** First check whenever
+any send-based experiment reads zero: did the email actually arrive? Now wired into
+`outbound-read.py`.
+
+**Two silent holes in the running experiment, both fixed (`e3b9be0`, `0b8c851`, `58d721c`):**
+1. **The demo page fired no event on a message exchange.** An owner who asked her bot five
+   questions looked identical to a bounce, and the Conversations KPI was unmeasurable by
+   construction. `/chat/[id]` now fires `chatbot_message` {botId, owner, turn, lead_captured,
+   degraded}. Verified landing on prod.
+2. **Demo-bot leads were told to nobody.** `emailLeadToOwner` bails unless `plan==='pro'`;
+   all 18 demos are `free`. A prospect handing over name+phone inside her own demo — the
+   hottest possible signal — was written to `chatbot-leads:<id>` and died in KV. Now alerts
+   the founder inbox via **Resend** (verified live) with Gmail fallback and a loud error log
+   if neither exists. **Verified end-to-end on prod: lead_captured → Resend → `delivered`.**
+
+`outbound-read.py` now reports Delivered · Opened · Msgs, ranks by conversation depth, splits
+HOT (talked to their bot) from WARM (opened only), and reports opens against **REACHABLE**
+prospects. Current: **0 of 17 opened, 0 conversations, 1 undeliverable.** The QA-exclusion
+guard held for the new event type (5 HeadlessChrome events printed, 0 counted).
+
+**The pattern, now three times in three days:** every measurement that looked green was
+counting the wrong thing — `scraped:false` nobody read, an instrument that counted itself,
+and acceptance mistaken for delivery. **Before trusting any number, ask what it would look
+like if the thing it measures were broken.** If the answer is "the same", it is not a metric.
+
 ## 🚀 SESSION 20 (Aug 6) — PRODUCT VERIFIED ON PROD, THEN 18/18 OUTBOUND DEMOS SENT
 **The fix works in production.** Smoke test 00:05 UTC: `cb_90d1e9fdc3cc` scraped:true,
 grounded answer with the clinic's real service menu, and it REFUSED the hallucination trap.

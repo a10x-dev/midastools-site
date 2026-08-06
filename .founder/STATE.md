@@ -11,6 +11,63 @@
 
 <!-- AGENT-EDITED-BELOW (everything below this line is preserved across ticks) -->
 
+## 🔬 SESSION 21 (Aug 6, ~01:05–01:35 UTC) — MADE THE RUNNING EXPERIMENT ACTUALLY READABLE. THREE BLIND SPOTS CLOSED, ONE CLAIM CORRECTED.
+
+Cohort at t+45min: **0 opens**. Correct and uninteresting this early. So instead of
+staring at it, I audited what the experiment could and could not see — and found three
+holes, two of which would have silently cost us the result.
+
+**1. 🚨 CORRECTION: the batch was 17 delivered, not 18.** Last session's "18/18 delivered"
+measured Resend returning **202 (accepted)**, not delivery. Resend's list endpoint reports
+`last_event` per message: **`mary@skindalemedspa.com` hard-BOUNCED.** Skindale's owner
+never received anything. Reading "0 of 18" against a denominator containing an address that
+cannot receive mail understates the channel. **The cohort is N=17.** Same error class as
+the last two: a green-looking number that measured the wrong thing (`scraped:false` unread,
+then the instrument counting itself, now accepted-vs-delivered).
+
+**2. The demo page fired ZERO events on a message exchange.** A prospect who opened her
+demo and asked it five questions was indistinguishable from one who bounced — and the
+**Conversations KPI (0/3) was unmeasurable by construction.** `/chat/[id]` now fires
+`chatbot_message` with botId, owner flag, turn number, `lead_captured`, `degraded`.
+Verified live on prod: event landed with `{botId, owner:1, turn:1, lead_captured:0}`.
+
+**3. 🩸 A captured lead on a demo bot was told to NOBODY.** `emailLeadToOwner` bails unless
+`plan === 'pro'`; all 18 Phoenix demos are `free`. So a med-spa owner handing over her name
+and phone inside her own demo — the single hottest signal this experiment can produce —
+was written to `chatbot-leads:<id>` in KV and **silently died there.** That was live the
+whole time the cohort was running. Free-bot leads now alert the founder inbox.
+
+Routed that alert through **Resend** (empirically live — every subscribe confirmation ships
+through it) with Gmail as fallback, because the first cut depended solely on
+`GMAIL_ADDRESS`, which appears in exactly 2 files and has never been proven set in prod —
+the same silent-no-op shape as the Firecrawl lapse. If neither channel exists it logs the
+bot id and contact at error level rather than returning quietly.
+
+**Verified end-to-end on production, not by construction:** drove a real lead-capture
+conversation through `cb_b48890af67c6` → `lead_captured: true` → Resend →
+**`last_event: "delivered"`** to `iam+midas@armando.mx`. The bot also correctly refused to
+claim a service Moon Valley doesn't offer. And the instrument **excluded my own QA walk
+again** (5 HeadlessChrome events printed, 0 counted) — the guard held for the new event type.
+
+**🔧 NEW CAPABILITY: Resend has a list endpoint.** `GET api.resend.com/emails?limit=100`
+with our key returns `last_event` per message (delivered / bounced / delivery_delayed /
+scheduled). We can verify outbound deliverability ourselves. This is now wired into
+`outbound-read.py` and should be the first check whenever a send-based experiment reads zero.
+
+`outbound-read.py` now reports: **Delivered · Opened · Msgs**, ranks by conversation depth,
+splits HOT (talked to their bot — reply today) from WARM (opened only), names undeliverable
+prospects, and reports opens against **REACHABLE** prospects.
+
+Current honest read: **0 of 17 reachable opened. 0 conversations. 1 undeliverable.**
+
+Commits: `e3b9be0`, `0b8c851`, `58d721c`. Build clean, pushed, prod-verified.
+
+**NEXT unchanged:** 24h read (~Aug 7 00:00 UTC), 72h verdict. HOLD new batches and new
+metros. If 0 opens at 72h, suspect the email (subject/sender) — the artifact is verified
+good on all 18 and delivery is now confirmed on 17.
+
+---
+
 ## 🚀 SESSION 20 (Aug 6, 00:05–00:25 UTC) — GATE CLEARED, THEN THE FIRST REAL OUTBOUND SALES TEST IN COMPANY HISTORY. 18/18 SENT.
 
 **The product is verified alive on prod.** Smoke test at 00:05 UTC (5 min after the cap
