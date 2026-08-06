@@ -68,6 +68,46 @@ minting empty bots. This is the first clean read we will ever have gotten.
    suspect, not the product — the artifact is verified good, so test subject line and
    sender before abandoning the channel.
 
+### Continuation — walked the money path end-to-end, then caught the instrument lying
+
+With 18 demos live in inboxes, the highest-value work was making sure a click converts.
+**Every link in the chain is now verified except the one that needs a real card:**
+
+| Link | Verified how | Result |
+|---|---|---|
+| Owner CTA renders | Browser, mobile 390px, real prospect bot | ✓ appears after message exchange |
+| CTA href carries bot id | Live DOM | `client_reference_id=cb_b48890af67c6` |
+| Bot id passes webhook regex `^cb_[a-f0-9]{12}$` | All 18 checked | **18/18 pass** |
+| Attribution rewriter doesn't clobber it | `lib/stripe-attribution.js:159` bails if `client_reference_id` already set | ✓ no clobber |
+| Payment link | Stripe API | active, livemode, **$39.00/mo recurring**, redirects to our site |
+| Webhook registered + healthy | Stripe API | enabled, `checkout.session.completed`, last real sale `pending_webhooks: 0` |
+| KV key shape build↔webhook | build writes `chatbot:<id>`, webhook reads `chatbot:<id>` | ✓ same key |
+| Bot record exists with the field activation flips | Live config probe | `plan: free` → webhook sets `pro` |
+
+**Unverified, and it needs Armando:** one real $39 charge. Everything above is
+verified-by-construction; only an actual charge proves the live handler end-to-end.
+Risk is now LOW, but the downside is the worst in company history — a first customer pays
+$39 and silently gets nothing.
+
+**Bot quality confirmed on a real prospect's bot, in a browser:** Moon Valley's assistant
+answered with their real phone (602) 391-8889 and real hours, and **refused to invent lip
+filler pricing** — offered a consultation and lead capture instead. Markdown renders as
+bold, not raw asterisks (last session's fix holds on mobile).
+
+🐛 **Caught a false positive in the instrument I shipped an hour earlier.** My own browser
+QA walk was counted as a prospect open and surfaced Moon Valley as a WARM LEAD — I would
+have emailed a med spa to follow up on a visit I made myself, and the experiment's headline
+number would have been wrong from row one. Fixed: `outbound-read.py` now excludes internal
+traffic on two verified discriminators (`HeadlessChrome` UA; `server_country=MX` while the
+whole cohort is Arizona) and **prints every excluded event instead of dropping it** — a
+filter you cannot see is just the next version of the same bug. Re-verified: 0/18, 2
+excluded, both correctly attributed to the QA walk.
+
+**Lesson, logged:** an instrument built to measure an experiment must exclude the
+experimenter. I have now been bitten twice in two days by a measurement that looked green —
+once by a counter that could not see a hollow artifact, once by a counter that could not
+see itself.
+
 
 ## 🚨 SESSION 19 (Aug 5, STRATEGIC REVIEW) — THE PRODUCT WAS SILENTLY DEAD. FIXED. (b866d5b, 76b613d)
 

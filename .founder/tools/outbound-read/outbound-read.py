@@ -43,6 +43,32 @@ LOG = ROOT / ".founder" / "state" / "demo-outbound-log.json"
 EVENTS = "https://www.midastools.co/api/track-events?key=mt-outreach-2026&limit=5000"
 
 
+# Our own QA walks land in the same event stream as real prospects. On 2026-08-06 a
+# browser check of one prospect's demo was counted as an "open" and surfaced that
+# prospect as a warm lead — a false positive that would have had me emailing a med spa
+# to follow up on a visit I made myself. Two clean discriminators, both verified in the
+# raw events: our QA browser reports HeadlessChrome, and we operate from MX while every
+# prospect in this cohort is in Arizona. Excluded rows are PRINTED, never dropped
+# silently — a filter you cannot see is the next version of the same bug.
+INTERNAL_UA = ("headlesschrome", "playwright", "puppeteer", "python-", "curl/",
+               "bot", "crawler", "spider")
+HOME_COUNTRY = "MX"
+
+
+def why_internal(e):
+    ua = (e.get("user_agent") or "").lower()
+    for m in INTERNAL_UA:
+        if m in ua:
+            return f"UA~{m}"
+    if (e.get("server_country") or "") == HOME_COUNTRY:
+        return f"country={HOME_COUNTRY} (ours, cohort is US)"
+    return ""
+
+
+def is_internal(e):
+    return bool(why_internal(e))
+
+
 def fetch_events():
     req = urllib.request.Request(EVENTS, headers={"User-Agent": "midastools-outbound-read"})
     with urllib.request.urlopen(req, timeout=60) as r:
@@ -76,21 +102,25 @@ def main():
     by_bot = {v["bot"]: (email, v) for email, v in sent.items()}
 
     hits = {b: [] for b in by_bot}
+    excluded = []
     for e in events:
         path = e.get("page_path") or ""
         if "/chat/" not in path:
             continue
         for bot in by_bot:
-            if bot in path:
-                attr = e.get("attribution") or {}
-                hits[bot].append(
-                    {
-                        "event": e.get("event"),
-                        "ms": attr.get("last_touch_ms"),
-                        "session": e.get("session_id"),
-                        "path": path,
-                    }
-                )
+            if bot not in path:
+                continue
+            attr = e.get("attribution") or {}
+            row = {
+                "event": e.get("event"),
+                "ms": attr.get("last_touch_ms"),
+                "session": e.get("session_id"),
+                "path": path,
+            }
+            if is_internal(e):
+                excluded.append((by_bot[bot][1]["name"], why_internal(e)))
+            else:
+                hits[bot].append(row)
 
     opened = {b: h for b, h in hits.items() if h}
 
@@ -104,6 +134,11 @@ def main():
         print(
             f"| {meta['name']} | {'✓' if h else '·'} | {len(h)} | {sessions} | {owner} |"
         )
+
+    if excluded:
+        print(f"\n_Excluded {len(excluded)} internal/QA event(s) — not counted as opens:_")
+        for nm, why in excluded[:10]:
+            print(f"  - {nm} ({why})")
 
     print(f"\n**{len(opened)} of {len(sent)} prospects opened their demo.**")
     if opened:
