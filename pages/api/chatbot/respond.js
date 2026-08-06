@@ -7,7 +7,15 @@
 // money. Pro bots (active subscription) get a much higher cap.
 
 import nodemailer from 'nodemailer';
+import { Resend } from 'resend';
 import { readKV, writeKV } from '../../../lib/kv-store';
+
+// Resend is the site's verified-live channel (every subscribe confirmation goes
+// through it). GMAIL_ADDRESS is used in only two files and has never been proven
+// set in production — so the hot-lead alert must not depend on it alone.
+const resend = new Resend(process.env.RESEND_API_KEY);
+const FROM_EMAIL = 'MidasTools <hello@midastools.co>';
+const FOUNDER_EMAIL = 'iam+midas@armando.mx';
 
 const mailer = nodemailer.createTransport({
   service: 'gmail',
@@ -38,23 +46,36 @@ async function emailLeadToOwner(bot, lead) {
 // we can get: a business owner engaged their own demo far enough to hand over contact
 // details. Route it to the founder inbox so it can be answered inside the 24h SLA.
 async function notifyFounderOfDemoLead(bot, lead) {
-  if (bot.plan === 'pro' || !process.env.GMAIL_ADDRESS) return;
-  try {
-    await mailer.sendMail({
-      from: `"MidasTools Demo Lead" <${process.env.GMAIL_ADDRESS}>`,
-      to: process.env.GMAIL_ADDRESS,
-      replyTo: 'iam@armando.mx',
-      subject: `🔥 DEMO LEAD — someone gave contact details to ${bot.name}'s bot`,
-      html: `<div style="font-family:Inter,sans-serif;max-width:560px;margin:0 auto;padding:32px;border:1px solid #E5E7EB;border-radius:14px;">
-        <h2 style="color:#B45309;margin:0 0 6px;">Demo lead captured</h2>
-        <p style="font-size:14px;color:#6B7280;margin:0 0 18px;">Bot <strong>${bot.id}</strong> — ${bot.name} (plan: ${bot.plan || 'free'})</p>
-        <p style="font-size:15px;color:#374151;margin:0 0 6px;"><strong>Name:</strong> ${lead.name || '—'}</p>
-        <p style="font-size:15px;color:#374151;margin:0 0 6px;"><strong>Contact:</strong> ${lead.contact || '—'}</p>
-        <p style="font-size:15px;color:#374151;margin:0 0 16px;"><strong>They want:</strong> ${lead.note || '—'}</p>
-        <p style="font-size:13px;color:#9CA3AF;margin:0;">Bot owner on file: ${bot.owner_email || '—'}. If this bot came from an outbound batch, the person on the other end is a qualified buyer — follow up today.</p>
-      </div>`,
-    });
-  } catch (err) { console.error('[chatbot/respond] founder demo-lead notify failed:', err.message); }
+  if (bot.plan === 'pro') return;
+  const html = `<div style="font-family:Inter,sans-serif;max-width:560px;margin:0 auto;padding:32px;border:1px solid #E5E7EB;border-radius:14px;">
+    <h2 style="color:#B45309;margin:0 0 6px;">Demo lead captured</h2>
+    <p style="font-size:14px;color:#6B7280;margin:0 0 18px;">Bot <strong>${bot.id}</strong> — ${bot.name} (plan: ${bot.plan || 'free'})</p>
+    <p style="font-size:15px;color:#374151;margin:0 0 6px;"><strong>Name:</strong> ${lead.name || '—'}</p>
+    <p style="font-size:15px;color:#374151;margin:0 0 6px;"><strong>Contact:</strong> ${lead.contact || '—'}</p>
+    <p style="font-size:15px;color:#374151;margin:0 0 16px;"><strong>They want:</strong> ${lead.note || '—'}</p>
+    <p style="font-size:13px;color:#9CA3AF;margin:0;">Bot owner on file: ${bot.owner_email || '—'}. If this bot came from an outbound batch, the person on the other end is a qualified buyer — follow up today.</p>
+  </div>`;
+  const subject = `🔥 DEMO LEAD — someone gave contact details to ${bot.name}'s bot`;
+
+  if (process.env.RESEND_API_KEY) {
+    try {
+      await resend.emails.send({ from: FROM_EMAIL, to: FOUNDER_EMAIL, replyTo: 'iam@armando.mx', subject, html });
+      return;
+    } catch (err) {
+      console.error('[chatbot/respond] demo-lead notify via Resend FAILED:', err.message);
+    }
+  }
+  if (process.env.GMAIL_ADDRESS) {
+    try {
+      await mailer.sendMail({ from: `"MidasTools Demo Lead" <${process.env.GMAIL_ADDRESS}>`, to: process.env.GMAIL_ADDRESS, replyTo: 'iam@armando.mx', subject, html });
+      return;
+    } catch (err) {
+      console.error('[chatbot/respond] demo-lead notify via Gmail FAILED:', err.message);
+    }
+  }
+  // Never let this fail silently: the lead is already safe in KV, but an
+  // un-notified hot lead is the same as a lost one.
+  console.error(`[chatbot/respond] DEMO LEAD UNNOTIFIED bot=${bot.id} contact=${lead.contact || '—'} — no working email channel configured`);
 }
 
 const MODEL = 'claude-haiku-4-5-20251001';
