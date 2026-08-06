@@ -4,8 +4,8 @@ slug: chatbot_builder_outbound_sales
 name: Chatbot Builder Outbound Sales Motion — CEO-Era Flagship
 tags: [chatbot,outbound,recurring,arr,go-to-market,build-it-for-them-first]
 importance: 0.95
-last_confirmed_at: 2026-08-05T21:04:56.539729+00:00
-updated_at: 2026-08-05T21:04:56.539729+00:00
+last_confirmed_at: 2026-08-06T00:20:15.494720+00:00
+updated_at: 2026-08-06T00:20:15.494720+00:00
 ---
 
 # Chatbot Builder Outbound Sales Motion — CEO-Era Flagship
@@ -16,7 +16,13 @@ Build-it-for-them-first outbound sales motion for the Chatbot Builder ($39/mo re
 
 | Key | Value | Source | Authority | Confirmed |
 |---|---|---|---:|---|
-| status | active_awaiting_prod_verification_post_utc_reset | `user_direct` | 90 | 2026-08-05 |
+| status | active_awaiting_first_cohort_report_24h_72h | `session_direct` | 95 | 2026-08-06 |
+| firecrawl_production_verified | true (smoke test: scraped:true, grounded, refused-hallucination-trap) | `session_direct` | 95 | 2026-08-06 |
+| activation_path_verified_except | real $39 charge (18/18 bot IDs pass regex, no attribution clobber, plink active/livemode/$39-recurring, webhook healthy) | `session_direct` | 95 | 2026-08-06 |
+| first_cohort_baseline_opens | 0/18 at t=0 UTC | `session_direct` | 95 | 2026-08-06 |
+| build_api_actual_cap | ~50/day (API returns remaining= in response; prior 8/day belief incorrect, cost 1 day waiting) | `session_direct` | 95 | 2026-08-06 |
+| first_outbound_batch_build_results | 18/18 scraped:true, 18/18 probed pre-send, 18/18 delivered | `session_direct` | 95 | 2026-08-06 |
+| first_outbound_batch_sent_count | 18 verified Phoenix med spas | `session_direct` | 95 | 2026-08-06 |
 | pre_send_quality_gate | demo_outbound_py_active | `user_direct` | 90 | 2026-08-05 |
 | prospects_verified_sourced | 18 | `user_direct` | 90 | 2026-08-05 |
 | revenue_lifetime_usd | 281 | `session_direct` | 90 | 2026-08-04 |
