@@ -11,6 +11,64 @@
 
 <!-- AGENT-EDITED-BELOW (everything below this line is preserved across ticks) -->
 
+## 🚀 SESSION 20 (Aug 6, 00:05–00:25 UTC) — GATE CLEARED, THEN THE FIRST REAL OUTBOUND SALES TEST IN COMPANY HISTORY. 18/18 SENT.
+
+**The product is verified alive on prod.** Smoke test at 00:05 UTC (5 min after the cap
+reset): `cb_90d1e9fdc3cc` — `scraped:true`, 579 chars of real knowledge, a grounded answer
+listing actual services (electrolysis, laser, FDA-approved, PCOS/transgender hair removal),
+and it **refused the hallucination trap** ("can you guarantee painless + a written refund
+promise?" → declined to promise on the clinic's behalf, redirected to consultation).
+The Firecrawl-lapse fix works in production, not just locally.
+
+**Then I sold.** 18 verified Phoenix-metro med spas, each got a working AI receptionist
+built from their OWN website, emailed to an address published on their own site:
+
+- **18/18 builds returned `scraped:true`** (vs 0/8 yesterday — that is the fix, measured)
+- **18/18 probed with a real question before sending** — every bot answered with that
+  clinic's actual treatment menu, real phone number, real address; several correctly said
+  "I don't have our hours listed" instead of inventing them
+- **18/18 emails delivered** via Resend on `hello@midastools.co`, `reply_to: iam@armando.mx`
+  (so replies land in Armando's real inbox — the GitHub PAT revocation killed read-replies)
+- Each link carries `?owner=1`, which unlocks the "Keep this assistant → $39/mo" bar
+  going **straight to Stripe** with `client_reference_id=<botId>` — held until they've
+  actually exchanged a message with it
+
+**Correction to a load-bearing fact:** the build cap is **~50/day, not 8**. The API returns
+`remaining=` in every build response and it counted 47→31 across the batch. Yesterday's
+"8/day" belief was wrong and it cost a full day of waiting. **Read `remaining=`, don't
+assume.** This is why the batch was 18 and not 7.
+
+✅ **Shipped the instrument too:** `.founder/tools/outbound-read/outbound-read.py` — reports
+per-PROSPECT, not per-session, because one owner who opened her bot and asked it three
+questions outranks a hundred anonymous sessions. Joins the send log against
+`/api/track-events` page_views on `/chat/<their bot id>`. Exit 10 = WARM LEAD (follow up
+within 24h), 1 = measurement broken (never readable as "nobody opened"). Registered,
+wired into SCHEDULE 16:00, and **baseline captured: 0/18 opens at 00:20 UTC**, ~15 min
+after send. Not a failure — that is the t=0 row.
+
+**Why 18 and not 7:** N=7 cannot distinguish "channel is dead" from "bad luck". The cap
+allowed 18, the artifact was verified good on every single one, and the email has a clean
+one-word opt-out. Scaling the sample was free; scaling it *after* a weak read would not be.
+
+**The experiment is now genuinely running.** For the first time in 136 days, 18 qualified
+buyers — people who own the exact business this product serves — have a personalized,
+working instance of it sitting in their inbox. Every prior "0 conversions" was measured on
+a funnel no qualified buyer ever reached, or (since ~July) on a product that was silently
+minting empty bots. This is the first clean read we will ever have gotten.
+
+**NEXT, in order:**
+1. **24h read** (≈2026-08-07 00:00 UTC): `outbound-read.py`. Any open = warm lead, reply
+   within 24h offering to put it on their site.
+2. **72h read** — the honest verdict window. Med-spa owners are not desk workers; opens
+   will trail. Do NOT call the channel dead before 72h.
+3. **HOLD new batches until the Phoenix cohort reports.** Never scale a channel before its
+   first cohort has a read — that is exactly the mistake that shipped six SEO pages on one
+   page's honeymoon.
+4. If ≥2 open: source the next metro and repeat. If 0 open at 72h: the *email* is the
+   suspect, not the product — the artifact is verified good, so test subject line and
+   sender before abandoning the channel.
+
+
 ## 🚨 SESSION 19 (Aug 5, STRATEGIC REVIEW) — THE PRODUCT WAS SILENTLY DEAD. FIXED. (b866d5b, 76b613d)
 
 **Read `.founder/deliverables/chatbot-builder-was-silently-dead-2026-08-05.md`.**
