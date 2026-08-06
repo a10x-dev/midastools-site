@@ -75,6 +75,31 @@ def fetch_events():
         return json.loads(r.read().decode()).get("events", [])
 
 
+# "Sent" is not "delivered". The first batch was recorded as 18/18 sent because the
+# Resend API returned 202 for each — but one address hard-bounced and that owner never
+# saw anything. Reading 0 opens against a denominator that includes undeliverable
+# addresses understates the channel. Resend exposes last_event per message; use it.
+def fetch_delivery():
+    key_file = ROOT / ".founder" / ".resend_key"
+    if not key_file.exists():
+        return {}, "no .founder/.resend_key — delivery status unavailable"
+    key = key_file.read_text().strip()
+    req = urllib.request.Request(
+        "https://api.resend.com/emails?limit=100",
+        headers={"Authorization": f"Bearer {key}", "User-Agent": "midastools-outbound-read"},
+    )
+    try:
+        with urllib.request.urlopen(req, timeout=60) as r:
+            rows = json.loads(r.read().decode()).get("data", [])
+    except Exception as e:
+        return {}, f"Resend delivery lookup failed: {e}"
+    status = {}
+    for row in rows:
+        for addr in row.get("to") or []:
+            status.setdefault(addr.lower(), row.get("last_event"))
+    return status, ""
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--days", type=int, default=14)
@@ -128,9 +153,16 @@ def main():
     msgs = {b: [x for x in h if x["event"] == "chatbot_message"] for b, h in hits.items()}
     engaged = {b: m for b, m in msgs.items() if m}
 
+    delivery, delivery_note = fetch_delivery()
+    undelivered = [
+        (by_bot[b][1]["name"], by_bot[b][0], delivery.get(by_bot[b][0].lower()))
+        for b in by_bot
+        if delivery.get(by_bot[b][0].lower()) not in (None, "delivered", "opened", "clicked")
+    ]
+
     print(f"# Outbound read — {len(sent)} prospects emailed\n")
-    print("| Prospect | Opened | Msgs | Events | Sessions | Owner-link |")
-    print("|---|---|---|---|---|---|")
+    print("| Prospect | Delivered | Opened | Msgs | Events | Sessions | Owner-link |")
+    print("|---|---|---|---|---|---|---|")
     for bot, (email, meta) in sorted(
         by_bot.items(), key=lambda kv: (-len(msgs[kv[0]]), -len(hits[kv[0]]))
     ):
@@ -138,18 +170,29 @@ def main():
         sessions = len({x["session"] for x in h if x["session"]})
         owner = "yes" if any("owner=1" in (x["path"] or "") for x in h) else ""
         nmsg = len(msgs[bot])
+        dstat = delivery.get(email.lower(), "?")
+        dcell = "✓" if dstat in ("delivered", "opened", "clicked") else dstat
         print(
-            f"| {meta['name']} | {'✓' if h else '·'} | {nmsg if nmsg else '·'} | "
+            f"| {meta['name']} | {dcell} | {'✓' if h else '·'} | {nmsg if nmsg else '·'} | "
             f"{len(h)} | {sessions} | {owner} |"
         )
+
+    if delivery_note:
+        print(f"\n_⚠ {delivery_note} — treat the Delivered column as unknown._")
+    if undelivered:
+        print(f"\n_{len(undelivered)} prospect(s) NEVER RECEIVED the email — exclude from the denominator:_")
+        for nm, addr, st in undelivered:
+            print(f"  - {nm} <{addr}> — {st}")
 
     if excluded:
         print(f"\n_Excluded {len(excluded)} internal/QA event(s) — not counted as opens:_")
         for nm, why in excluded[:10]:
             print(f"  - {nm} ({why})")
 
+    reachable = len(sent) - len(undelivered)
     print(
-        f"\n**{len(opened)} of {len(sent)} prospects opened their demo. "
+        f"\n**{len(opened)} of {reachable} REACHABLE prospects opened their demo "
+        f"({len(sent)} emailed, {len(undelivered)} undeliverable). "
         f"{len(engaged)} held a conversation with it.**"
     )
     if engaged:
